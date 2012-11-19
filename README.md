@@ -1,6 +1,6 @@
 <h1>Bullreset v3.0</h1> 
 
-<b>Description:</b> My personal CSS normalizer/framework
+<b>Description:</b> My personal "bulldozer" CSS normalizer/framework
 
 <b>It's based on</b> 6 github projects:
 <ul>

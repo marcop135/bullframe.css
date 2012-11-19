@@ -6,10 +6,6 @@ It's based on normalize.css by Nicolas Gallagher, Formalize by Nathan Smith and 
   
 Last update: 06-22-2012 (mm/dd/yyyy) ...new updates are coming soon...	
 
-Author: Marco Pontili 
-Author URI: http://135design.com 
-Twitter: @135design
-
 License: none (public domain)
 
 ========================================== */

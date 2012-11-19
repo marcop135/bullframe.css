@@ -24,5 +24,5 @@
 
 <hr>
 
-<i>New repo coming soon...check now the JS Bin instead http://jsbin.com/oyasux/1/edit</i>
+<i>New repo coming soon...check now the JS Bin instead <b>http://jsbin.com/oyasux/1/edit</b></i>
 

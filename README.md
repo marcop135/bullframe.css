@@ -14,8 +14,6 @@
 
 <b>It's includes</b> also useful styles for cross-browsing, responsive web design, wordpress core styles, better typography, better forms, better links and useful tips&tricks.
 
-<b>Last update:</b> 11-19-2012 (mm/dd/yyyy)	
-
 <p><b>Author:</b> Marco Pontili<br>
 <b>Author URI:</b> http://135design.com<br>
 <b>Author Twitter:</b> @m135_</p>
@@ -24,5 +22,5 @@
 
 <hr>
 
-<i>New repo coming soon...check now the JS Bin instead <b>http://jsbin.com/oyasux/10.css</b></i>
+<i>New repo coming soon...check now the JS Bin instead <b>http://jsbin.com/oyasux/14.css</b></i>
 

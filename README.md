@@ -25,7 +25,7 @@ License: none (public domain)
 
 <hr>
 
-<i>New repo coming soon...check now the JS Bin instead <b>http://jsbin.com/oyasux/25.css</b></i>
+<i>New repo coming soon...check now the JS Bin instead <b>http://jsbin.com/oyasux/25/edit</b></i>
 
 <hr>
 

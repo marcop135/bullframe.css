@@ -1,7 +1,7 @@
 <h1>Bullframe v1.0.1</h1>
 
-Description:<br>
-My personal CSS Reset/Framework<br>
+Description: My personal CSS Reset/Framework<br>
+<br>
 It's based on 7 github projects:
 - Normalize.css by Nicolas Gallagher https://github.com/necolas/normalize.css 
 - Formalize by Nathan Smith https://github.com/nathansmith/formalize

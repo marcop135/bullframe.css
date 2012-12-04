@@ -16,10 +16,10 @@ and random tips&tricks.
 
 Last update: 12-02-2012 (mm/dd/yyyy)  
 
-Author: Marco Pontili
-Author URI: http://135design.com
-Author Twitter: @m135_
- 
+Author: Marco Pontili<br>
+Author URI: http://135design.com<br>
+Author Twitter: @m135_<br>
+<br> 
 License: none (public domain)
 
 <hr>

@@ -14,8 +14,6 @@ It's includes useful tips for cross-browsing, responsive web design,
 wordpress core, better typography, better forms, better links 
 and random tips&tricks.
 
-Last update: 12-02-2012 (mm/dd/yyyy)  
-
 Author: Marco Pontili<br>
 Author URI: http://135design.com<br>
 Author Twitter: @m135_<br>

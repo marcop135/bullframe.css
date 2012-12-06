@@ -1,4 +1,4 @@
-<h1>Bullframe</h1>
+<h1>Bullframe CSS</h1>
 My personal CSS Reset/Framework<br>
 <br>
 It's based on 7 github projects:

@@ -16,6 +16,6 @@ and random tips&tricks.
 
 <hr>
 
-<i>Check now the JSBin <b>http://jsbin.com/oyasux/39/edit</b></i>
+<i>Live demo is on JSBin <b>http://jsbin.com/oyasux/39/edit</b></i>
 
 

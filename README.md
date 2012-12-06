@@ -1,4 +1,4 @@
-<h1>Bullframe v1.0.1</h1>
+<h1>Bullframe</h1>
 My personal CSS Reset/Framework<br>
 <br>
 It's based on 7 github projects:
@@ -24,6 +24,6 @@ License: none (public domain)
 
 <hr>
 
-<i>New repo coming soon...check now the JS Bin instead <b>http://jsbin.com/oyasux/37/edit</b></i>
+<i>Check now the JS Bin instead <b>http://jsbin.com/oyasux/37/edit</b></i>
 
 

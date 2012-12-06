@@ -14,12 +14,6 @@ It's includes useful tips for cross-browsing, responsive web design,
 wordpress core, better typography, better forms, better links 
 and random tips&tricks.
 
-Author: Marco Pontili<br>
-Author URI: http://135design.com<br>
-Author Twitter: @m135_<br>
-<br> 
-License: none (public domain)
-
 <hr>
 
 <i>Check now the JS Bin instead <b>http://jsbin.com/oyasux/37/edit</b></i>

@@ -16,6 +16,6 @@ and random tips&tricks.
 
 <hr>
 
-<i>Check now the JS Bin instead <b>http://jsbin.com/oyasux/37/edit</b></i>
+<i>Check now the JSBin <b>http://jsbin.com/oyasux/37/edit</b></i>
 
 

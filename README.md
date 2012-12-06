@@ -14,8 +14,4 @@ It's includes useful tips for cross-browsing, responsive web design,
 wordpress core, better typography, better forms, better links 
 and random tips&tricks.
 
-<hr>
-
-<i>Live demo is on JSBin <b>http://jsbin.com/oyasux/39/edit</b></i>
-
 

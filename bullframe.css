@@ -1,6 +1,6 @@
 /*!==========================================
  * 
- * Bullframe CSS
+ * BULLFRAME CSS
  * 
  *
  * This is my personal CSS Reset/Framework.
@@ -20,15 +20,12 @@
  * 
  * Author: Marco Pontili
  * Author URI: http://135design.com
- * Author Twitter: @m135_
- * 
- * License: none (public domain)
  * 
 ========================================== */
 
 
 
-/* $ Maximize flexibility
+/* $ future-friendly @viewport rule
 ========================================== */
 
 @-o-viewport { 
@@ -46,12 +43,6 @@
 @viewport { 
     width: device-width;
 }
-*,
-*:after,
-*:before {
-    word-wrap: break-word;
-} 
-
 
 
 
@@ -59,7 +50,7 @@
 ========================================== */
 
 /* 1. why use it: http://goo.gl/jJfVf 
-..and when NOT use it: http://goo.gl/An6J1 */
+..and when NOT to use it: http://goo.gl/An6J1 */
 html {
     overflow-y: scroll; /* 1 */
     font-size: 100%;
@@ -89,6 +80,17 @@ summary {
 
 
 
+/* $ increases the flexibility of texts
+========================================== */
+
+*,
+*:after,
+*:before {
+    word-wrap: break-word;
+}
+
+
+
 /* $ Lists
 ========================================== */
 
@@ -106,21 +108,6 @@ ol,
 ul {
     padding: 0 0 0 40px;
 }
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-    margin-bottom: 0;
-}
-ul.unstyled,
-ol.unstyled {
-    margin-left: 0;
-    list-style: none;
-} 
-li > ul,
-li > ol { 
-    margin-bottom: 0; 
-}
 nav ul,
 nav ol {
     margin: 0;
@@ -128,12 +115,19 @@ nav ol {
     list-style: none;
     list-style-image: none; /* IE7 */
 }
-.nav > li,
-.nav > li > a {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-}
+ul.unstyled,
+ol.unstyled,
+ul.unstyled ul,
+ol.unstyled ol,
+ul.unstyled ol,
+ol.unstyled ul { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none; /* IE7 */
+} 
+
+
 	
 
 	
@@ -146,30 +140,52 @@ video {
     *display: inline;
     *zoom: 1;
 } 
-audio,
-video {
-	max-width: 100%;
-	height: auto;
-}
 audio:not([controls]) { 
     display: none;
     height: 0;
 }
-iframe {
-	max-width: 100%;
-}
 [hidden] { 
     display: none;
 }
+audio,
+video,
+iframe,
+object,
+embed {
+    max-width: 100%;
+}
+.flex-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.flex-video-container iframe,  
+.flex-video-container object,  
+.flex-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 
+ * wraps videos via jQuery example:
+ * 
+ * <script>
+ * $(function() {
+ *    $('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
+ * });
+ * </script>
+ * 
+*/
 svg:not(:root) { 
     overflow: hidden;
 }
 figure {
     margin: 0;
 }
-figure > img { 
-    display: block;
-} 
 img {
     width: auto\9;
     height: auto;
@@ -179,6 +195,7 @@ img {
     color: #f00; /* red */
     -ms-interpolation-mode: bicubic;
 }
+/* google maps fix */
 #map_canvas img,
 .google-maps img {
     max-width: none;
@@ -205,7 +222,7 @@ h3,
 h4, 
 h5, 
 h6 {
-	font-family: inherit;
+    font-family: inherit;
     font-weight: bold;
     color: inherit;
     -webkit-font-smoothing: antialiased;
@@ -321,6 +338,7 @@ xmp {
     font-size: 1em;
 }
 pre {
+    overflow-x: auto;
     word-break: break-all;
     word-wrap: break-word;
     white-space: pre;
@@ -400,8 +418,6 @@ a:active {
 
 
 /* $ Forms
-   (based on normalize.css http://necolas.github.com/normalize.css/
-   and formalize.css https://formalize.me )  
 ========================================== */
 
 form {
@@ -434,7 +450,8 @@ button,
 input { 
     line-height: normal;
 }
-/* responsive */
+
+/* makes flexible forms (but do not touch the buttons) */
 input[type="color"], 
 input[type="email"], 
 input[type="file"],
@@ -447,6 +464,7 @@ input[type="date"],
 input[type="datetime"], 
 input[type="datetime-local"],
 input[type="month"], 
+input[type="range"],
 input[type="time"], 
 input[type="week"], 
 input[type="time"], 
@@ -456,7 +474,7 @@ textarea {
     width: 100%;
     max-width: 100%;
 }
-button, 
+
 input[type="color"], 
 input[type="email"], 
 input[type="image"], 
@@ -473,26 +491,18 @@ input[type="month"],
 input[type="time"], 
 input[type="week"], 
 input[type="time"], 
-input[type="url"], 
-input[type="reset"], 
-input[type="submit"], 
-input[type="button"],
+input[type="url"],
 select, 
 textarea {
     border: 1px solid #999;
-	-webkit-border-radius: 0;
+    -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
 }
 button,
-html input[type="button"], /* 1 */
+html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-    background-color: #e5e5e5; /* gray */
-    -webkit-background-clip: padding;
-    -moz-background-clip: padding;
-    -o-background-clip: padding-box;
-    background-clip: padding-box;
     cursor: pointer;
     *overflow: visible;
     -webkit-appearance: button;
@@ -528,7 +538,7 @@ input[type="email"],
 input[type="image"], 
 input[type="number"],
 input[type="password"], 
-input[type="search"], 
+input[type="search"],
 input[type="search"]::-webkit-search-decoration, 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="tel"], 
@@ -541,7 +551,7 @@ textarea {
 input[type="search"] {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
-	box-sizing: content-box;
+    box-sizing: content-box;
 }
 input[type="radio"], 
 input[type="checkbox"] {
@@ -590,8 +600,6 @@ textarea[disabled],
 input[readonly], 
 select[readonly], 
 textarea[readonly] {
-    background-color: #f5f5f5; /* very light gray */
-    border-color: #ddd; /* light gray */
     cursor: default;
     cursor: not-allowed;
 }
@@ -603,20 +611,34 @@ textarea[readonly] {
 
 table {
     width: 100%;
-	max-width: 100%;
-	border-collapse: collapse;
+    max-width: 100%;
+    border-collapse: collapse;
     border-spacing: 0;
-	background-color: transparent;
+    background-color: transparent;
 } 
+.table-overflow-container {
+    overflow-x: scroll;
+    max-width: 100%;
+}
+/* 
+ * wraps table via jQuery example:
+ * 
+ * <script>
+ * $(function() {
+ *   $('.content table').wrap('<div class="table-overflow-container"></div>');
+ * });
+ * </script>
+ * 
+*/
 thead th {
-	vertical-align: bottom;
+    vertical-align: bottom;
 }
 th,
 td { 
     vertical-align: top;
 }
 th {
-  font-weight: bold;
+    font-weight: bold;
 }
 th,
 caption { 
@@ -628,7 +650,7 @@ caption {
 /* $ Helper classes
 ========================================== */
 
-/* image replacement */
+/* image replacement ---------------- */
 .img-r { 
     display: block;
     border: 0; 
@@ -651,7 +673,7 @@ caption {
     border: 0;
 }
 
-/* clearfix */ 
+/* micro-clearfix ---------------- */ 
 .clearfix:before, 
 .clearfix:after { 
     content: ""; 
@@ -665,7 +687,7 @@ caption {
     *zoom: 1;
 }
 
-/* layout */
+/* layout display ---------------- */
 .input-block-level {
     display: block;
     width: 100%;
@@ -678,17 +700,37 @@ caption {
     display: block;
     width: 100%;
 }
-.hidden {
-    display: none;
+.hide {
+    display: none !important; 
+    visibility: hidden;
+}
+/* hide on screenreaders */
+.screen-reader-text,
+.assistive-text {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.invisible {
     visibility: hidden;
 }
 .show {
-    display: block;
+    display: block !important;
     visibility: visible;
 }
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
+.visible-phone {
+    display: none !important;
+}
+.visible-tablet {
+    display: none !important;
+}
+.hidden-desktop {
+    display: none !important;
+}
+.visible-desktop {
+    display: inherit !important;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -712,16 +754,8 @@ caption {
     position: static;
     width: auto;
 }
-.invisible {
-    visibility: hidden;
-}
-/* hide on screen readers */
-.screen-reader-text,
-.assistive-text {
-	position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-}
+
+/* layout positioning ---------------- */
 .pull-right {
     float: right;
 }
@@ -731,11 +765,16 @@ caption {
 .affix {
     position: fixed;
 }
+
+/* margin/padding ---------------- */
 .no-margin {
     margin: 0 !important;
 }
 .no-margin-left {
     margin-left: 0 !important;
+}
+.no-margin-right {
+    margin-right: 0 !important;
 }
 .no-padding {
     padding: 0 !important;
@@ -744,56 +783,31 @@ caption {
     border: 0 !important;
 }
 
-/* chrome frame */
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* responsive */
-.flex-video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
-.flex-video-container iframe,  
-.flex-video-container object,  
-.flex-video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+/* responsive ---------------- */
 .flex-bg-container {
   /* The background image must be 800px wide */
   max-width: 800px;
 }
-.flex-bg-container .flex-bg-element {
+.flex-bg-container .my-bg-element {
   padding-top: 56.25%;  /* bg image example: 450px/800px = 0.5625 */
   /* background-image: url(); */
   -moz-background-size: cover;  /* Firefox 3.6 */
   background-size: cover;
   background-position: center;  /* Internet Explorer 7/8 */
 }
-.visible-phone {
-    display: none !important;
-}
-.visible-tablet {
-    display: none !important;
-}
-.hidden-desktop {
-    display: none !important;
-}
-.visible-desktop {
-    display: inherit !important;
+
+/* miscellaneous ---------------- */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 #edit-with-js-bin {
     display: none;
+}
+.typekit-badge {
+    display: none !important;
 }
 
 

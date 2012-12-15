@@ -2,9 +2,8 @@
  * 
  * BULLFRAME CSS
  * 
- *
+ * Description:
  * This is my personal CSS Reset/Framework.
- *
  * It's based on 7 github projects:
  * - Normalize.css by Nicolas Gallagher https://github.com/necolas/normalize.css 
  * - Formalize by Nathan Smith https://github.com/nathansmith/formalize
@@ -13,14 +12,20 @@
  * - 320 and Up by Andy Clarke https://github.com/malarkey/320andup/
  * - Inuit CSS by Harry Roberts https://github.com/csswizardry/inuit.css
  * - YUI3 CSS Grids by Yahoo! https://github.com/yui/yui3
- *
- * It's includes useful tips for cross-browsing, responsive web design, 
- * wordpress core, better typography, better forms, better links 
+ * It includes useful tips for cross-browsing, responsive web design, 
+ * wordpress core styling, flexible and rich typography, flexible forms, accessible links 
  * and random tips&tricks.
  * 
+ * Browser Compatibility:
+ * IE 7+, Firefox 4+, Safari 5+, Safari Mobile, Opera, Chrome, Android
+ *
  * Author: Marco Pontili
  * Author URI: http://135design.com
+ * Author Twitter: @m135_
  * 
+ * License:
+ * https://github.com/marco135/bullframe.css/blob/master/license.md
+ *
 ========================================== */
 
 
@@ -195,7 +200,10 @@ img {
 .google-maps img {
     max-width: none;
 }
-
+/* Override the Twitter embed fixed width */
+.twitter-tweet-rendered {
+    max-width: 100% !important;
+}
 
 
 

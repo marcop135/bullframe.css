@@ -109,12 +109,7 @@ ul {
     padding: 0 0 0 40px;
 }
 nav ul,
-nav ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    list-style-image: none; /* IE7 */
-}
+nav ol,
 ul.unstyled,
 ol.unstyled,
 ul.unstyled ul,

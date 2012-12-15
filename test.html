@@ -5,16 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 
-  <title>Bullframe CSS demo page</title>
+  <title>Bullframe CSS demo page </title>
+ <meta name="description" content="https://github.com/marco135/bullframe.css/"> 
 </head>
 
 <body>
-  <!-- overwrite jsbin embedded css -->
+	<!-- this styles overwrite jsbin embedded css -->
 	<style>
+		/* just for demo */
 		body {
 			width: 92%;
 			margin: auto;
 			max-width: 940px;
+		}
+		.table-overflow-container table {
+			background: #fbfbe9;
+		}
+		.table-overflow-container table th,
+		.table-overflow-container table td {
+			padding: .5em;
+			border: 1px solid #ccc;
 		}
 	</style>
 
@@ -137,7 +147,7 @@
     <iframe width="560" height="315" src="http://www.youtube.com/embed/4EVBg1pNdtc" frameborder="0" allowfullscreen></iframe>
   </div>
   
-  <h3>YouTube Video (object)</h3>
+  <h3>YouTube Video  (object)</h3>
   <div class="flex-video-container">
     <object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
  </div>
@@ -147,7 +157,7 @@
     <iframe src="http://player.vimeo.com/video/27243869?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
  </div>
   
-  <h3>Google Maps</h3>
+  <h3>Google Map</h3>
   <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=roma&amp;aq=&amp;sll=41.908558,12.535998&amp;sspn=0.360261,0.701065&amp;ie=UTF8&amp;hq=&amp;hnear=Roma,+Lazio&amp;ll=41.908409,12.536087&amp;spn=0.360299,0.701065&amp;t=m&amp;z=11&amp;output=embed"></iframe>
 
   <h1>Interactive content</h1>
@@ -212,7 +222,27 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
       <li>list item 1</li>
   </ol>
 
-  <h3>unordered list</h3>
+<h3>Unstyled-ordered list</h3>
+  <ol class="unstyled">
+      <li>list item 1</li>
+      <li>list item 1
+          <ol>
+              <li>list item 2</li>
+              <li>list item 2
+                  <ol>
+                      <li>list item 3</li>
+                      <li>list item 3</li>
+                  </ol>
+              </li>
+              <li>list item 2</li>
+              <li>list item 2</li>
+          </ol>
+      </li>
+      <li>list item 1</li>
+      <li>list item 1</li>
+  </ol>
+
+  <h3>Unordered list</h3>
   <ul>
       <li>list item 1</li>
       <li>list item 1
@@ -232,7 +262,27 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
       <li>list item 1</li>
   </ul>
 
-  <h3>description list</h3>
+<h3>Unstyled-unordered list</h3>
+  <ul class="unstyled">
+      <li>list item 1</li>
+      <li>list item 1
+          <ul>
+              <li>list item 2</li>
+              <li>list item 2
+                  <ul>
+                      <li>list item 3</li>
+                      <li>list item 3</li>
+                  </ul>
+              </li>
+              <li>list item 2</li>
+              <li>list item 2</li>
+          </ul>
+      </li>
+      <li>list item 1</li>
+      <li>list item 1</li>
+  </ul>
+
+<h3>description list</h3>
   <dl>
       <dt>Description name</dt>
       <dd>Description value</dd>
@@ -252,7 +302,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
       </figcaption>
   </figure>
 
-  <h1>Tabular data</h1>
+<h1>Simple tabular data</h1>
   <table>
       <caption>
           Jimi Hendrix - albums
@@ -294,6 +344,69 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
           </tr>
       </tbody>
   </table>
+
+<h1>Complex tabular data</h1>
+<div class="table-overflow-container">
+  <table>
+      <caption>
+          Jimi Hendrix - albums
+      </caption>
+      <thead>
+          <tr>
+              <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+			  <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+          </tr>
+      </thead>
+      <tfoot>
+          <tr>
+              <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+			  <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+          </tr>
+      </tfoot>
+      <tbody>
+          <tr>
+              <td>Are You Experienced</td>
+              <td>1967</td>
+              <td>$10.00</td>
+  			  <td>Are You Experienced</td>
+              <td>1967</td>
+              <td>$10.00</td>
+          </tr>
+          <tr>
+              <td>Axis: Bold as Love</td>
+              <td>1967</td>
+              <td>$12.00</td>
+			  <td>Axis: Bold as Love</td>
+              <td>1967</td>
+              <td>$12.00</td>
+          </tr>
+          <tr>
+              <td>Electric Ladyland</td>
+              <td>1968</td>
+              <td>$10.00</td>
+			    <td>Electric Ladyland</td>
+              <td>1968</td>
+              <td>$10.00</td>
+          </tr>
+          <tr>
+              <td>Band of Gypsys</td>
+              <td>1970</td>
+              <td>$12.00</td>
+			  <td>Band of Gypsys</td>
+              <td>1970</td>
+              <td>$12.00</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
   <h1>Forms</h1>
 
@@ -431,7 +544,7 @@ Textarea text
               <input type="radio">
           </div>
           <div>
-              <input type="checkbox">
+              <input type="checkbox"> 
           </div>
           <div>
               <select>
@@ -445,7 +558,7 @@ Textarea text
           </div>
           <div>
               <textarea cols="30" rows="5">
-                Textarea text
+              Textarea text
               </textarea>
           </div>
           <div>

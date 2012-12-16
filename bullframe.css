@@ -897,11 +897,10 @@ a img.aligncenter {
 
 
 /*
- * YUI 3.8.0 (build 5744)
- * Copyright 2012 Yahoo! Inc. All rights reserved.
- * Licensed under the BSD License.
- * http://yuilibrary.com/license/
- * http://yui.yahooapis.com/3.8.0/build/cssgrids/grids.css
+ * Modified YUI 3.8.0 
+ *
+ * Original docs: http://yuilibrary.com/yui/docs/cssgrids/
+ * Original source: http://yui.yahooapis.com/3.8.0/build/cssgrids/grids.css
 ========================================== */
 
 .grid-g {

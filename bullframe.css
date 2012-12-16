@@ -156,6 +156,7 @@ iframe,
 object,
 embed {
     max-width: 100%;
+    margin-bottom: 1em;
 }
 .flex-video-container {
     position: relative;
@@ -163,6 +164,7 @@ embed {
     padding-top: 30px;
     height: 0;
     overflow: hidden;
+    margin-bottom: 1em;
 }
 .flex-video-container iframe,  
 .flex-video-container object,  
@@ -172,6 +174,7 @@ embed {
     left: 0;
     width: 100%;
     height: 100%;
+    margin-bottom: 0;
 }
 /* 
  * how to wraps videos via jQuery:
@@ -339,7 +342,7 @@ kbd,
 tt, 
 samp, 
 xmp {
-    font-family: Inconsolata, Monaco, Consolas,"Andale Mono",
+    font-family: Monaco, Consolas,"Andale Mono",
     "Bitstream Vera Sans Mono","Courier New", Courier, monospace; 
     font-size: 1em;
 }
@@ -451,12 +454,18 @@ textarea {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 100%;
-    margin: 0;
+    margin: 0 0 1em 0;
     padding: .3em;
     vertical-align: baseline;
     *vertical-align: middle;
     *padding-left: 0;
     *padding-right: 0;
+}
+p button,
+p input,
+p select,
+p textarea {
+    margin-bottom: 0;
 }
 button, 
 input { 
@@ -608,7 +617,7 @@ button[readonly],
 input[readonly], 
 select[readonly], 
 textarea[readonly] {
-	opacity: .65;
+    opacity: .5;
     cursor: default;
     cursor: not-allowed;
 }
@@ -624,10 +633,15 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     background-color: transparent;
+    margin-bottom: 1em;
 } 
 .table-overflow-container {
     overflow-x: scroll;
     max-width: 100%;
+    margin-bottom: 1em;
+}
+.table-overflow-container table {
+    margin-bottom: 0;
 }
 /* 
  * wraps table via jQuery example:
@@ -1076,10 +1090,24 @@ a img.aligncenter {
 
 }
 
+
+/* 800px */
+@media only screen and (max-width: 50em) {
+
+}
+
+
 /* 768px */
 @media only screen and (max-width: 48em) {
 
 }
+
+
+/* 640 */
+@media only screen and (max-width: 40em) {
+
+}
+
 
 /* 480px */
 @media only screen and (max-width: 30em) {
@@ -1090,6 +1118,9 @@ a img.aligncenter {
 @media only screen and (max-width: 20em) {
 
 }
+
+
+
 
 /* high resolution devices (retina)
  * http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/ 

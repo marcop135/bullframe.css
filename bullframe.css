@@ -437,10 +437,6 @@ legend {
     white-space: normal;
     *margin-left: -7px;
 }
-legend span {
-    white-space: normal;
-    word-wrap: normal;
-}
 label { 
     cursor: pointer;
 }

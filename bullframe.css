@@ -96,6 +96,9 @@ summary {
 *:before {
     word-wrap: break-word;
 }
+body { 
+	hyphens: auto;
+}
 
 
 
@@ -156,6 +159,11 @@ iframe,
 object,
 embed {
     max-width: 100%;
+}
+audio,
+video,
+iframe,
+object {
     margin-bottom: 1em;
 }
 .flex-video-container {
@@ -331,6 +339,21 @@ del,
 strike, 
 s { 
     text-decoration: line-through;
+}
+code, 
+var, 
+kbd, 
+samp, 
+tt, 
+dir, 
+listing, 
+plaintext, 
+xmp,
+abbr, 
+acronym, 
+blockquote, 
+q {
+	hyphens: none;
 }
 p,
 pre {

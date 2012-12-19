@@ -473,15 +473,13 @@ textarea {
     *padding-left: 0;
     *padding-right: 0;
 }
+input[type="file"] {
+	padding-left: 0;
+	padding-right: 0;
+}
 button, 
 input { 
     line-height: normal;
-}
-p button,
-p input,
-p select,
-p textarea {
-    margin-bottom: 0;
 }
 /* makes flexible forms (but do not touch the buttons) */
 input[type="color"], 

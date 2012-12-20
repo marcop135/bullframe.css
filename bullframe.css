@@ -353,10 +353,9 @@ xmp {
     font-size: 1em;
 }
 pre {
-    word-break: break-all;
-    word-wrap: break-word;
     white-space: pre;
     white-space: pre-wrap;
+    word-wrap: break-word;
 }
 strong, 
 b { 
@@ -495,7 +494,6 @@ input[type="date"],
 input[type="datetime"], 
 input[type="datetime-local"],
 input[type="month"], 
-input[type="range"],
 input[type="time"], 
 input[type="week"], 
 input[type="time"], 

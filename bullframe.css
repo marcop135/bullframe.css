@@ -38,7 +38,7 @@
 /* $ future-friendly @viewport rule
 ========================================== */
 
-@-o-viewport { 
+@-webkit-viewport { 
     width: device-width;
 }
 @-moz-viewport { 
@@ -47,7 +47,7 @@
 @-ms-viewport { 
     width: device-width;
 }
-@-webkit-viewport { 
+@-o-viewport { 
     width: device-width;
 }
 @viewport { 
@@ -192,7 +192,7 @@ img {
 .google-maps img {
     max-width: none;
 }
-/* Override the Twitter embed fixed width */
+/* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
     max-width: 100% !important;
 }
@@ -271,10 +271,10 @@ h1 small {
 h2 small {
     font-size: 1.06em;
 }
-h3 small {
-    font-size: 0.87em;
-}
-h4 small {
+h3 small,
+h4 small,
+h5 small,
+h6 small {
     font-size: 0.87em;
 }
 hr {
@@ -316,9 +316,9 @@ q {
 }
 address {
     display: block;
-    margin-bottom: 1.25em;
-    font-style: normal;
-    line-height: 1.25em;
+	font-style: italic;
+    margin-bottom: 1em;
+    line-height: 1.4;
 }
 blockquote { 
     margin: 1em 40px;
@@ -348,8 +348,7 @@ kbd,
 tt, 
 samp, 
 xmp {
-    font-family: Monaco, Consolas,"Andale Mono",
-    "Bitstream Vera Sans Mono","Courier New", Courier, monospace; 
+    font-family: Monaco, Consolas, "Courier New", Courier, monospace; 
     font-size: 1em;
 }
 pre {
@@ -476,10 +475,6 @@ input[type="file"] {
 	padding-left: 0;
 	padding-right: 0;
 }
-button, 
-input { 
-    line-height: normal;
-}
 /* makes flexible forms (but do not touch the buttons) */
 input[type="color"], 
 input[type="email"], 
@@ -573,6 +568,10 @@ input[type="checkbox"] {
     border-radius: 0;
 }
 /* normalize buttons */
+button, 
+input { 
+    line-height: normal;
+}
 button,
 html input[type="button"], 
 input[type="reset"],
@@ -876,18 +875,6 @@ caption {
     display: block !important;
     visibility: visible;
 }
-.visible-phone {
-    display: none !important;
-}
-.visible-tablet {
-    display: none !important;
-}
-.hidden-desktop {
-    display: none !important;
-}
-.visible-desktop {
-    display: inherit !important;
-}
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
     border: 0;
@@ -924,7 +911,7 @@ caption {
     position: fixed;
 }
 
-/* margin/padding ---------------- */
+/* resets margin/padding ---------------- */
 .no-margin {
     margin: 0 !important;
 }
@@ -996,13 +983,6 @@ caption {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
-}
-/* uses instead urls tip '/quiet' like this 'http://jsbin.com/example/11/quiet'
-#edit-with-js-bin {
-    display: none;
-}*/
-.typekit-badge {
-    display: none !important;
 }
 
 
@@ -1094,6 +1074,11 @@ a img.aligncenter {
 /* =============================================================
    Author's custom styles (if necessary a single css file)
    ========================================================== */
+
+
+
+
+
 
 
 

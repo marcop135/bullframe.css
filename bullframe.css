@@ -209,8 +209,7 @@ button,
 input, 
 select, 
 textarea {
-    font-family: "HelveticaNeue", "Helvetica Neue", 
-				 Helvetica, Arial, Verdana, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
     color: #222;
 }
 h1, 
@@ -222,7 +221,6 @@ h6 {
     font-family: inherit;
     font-weight: bold;
     color: inherit;
-    -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
 }
 h1,
@@ -254,28 +252,6 @@ h6,
 .h6 {
     font-size: 0.75em;
     margin: 2.33em 0;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-    font-weight: normal;
-    line-height: 1;
-    color: #999;
-}
-h1 small {
-    font-size: 1.5em;
-}
-h2 small {
-    font-size: 1.06em;
-}
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-    font-size: 0.87em;
 }
 hr {
     display: block;
@@ -637,143 +613,6 @@ textarea[readonly] {
 
 
 
-/*
- * Modified YUI 3.8.0 CSS grid system
- *
- * Original docs: http://yuilibrary.com/yui/docs/cssgrids/
- * Original source: http://yui.yahooapis.com/3.8.0/build/cssgrids/grids.css
-========================================== */
-
-.grid-g {
-    letter-spacing: -0.31em; /* webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    word-spacing: -0.43em; /* IE < 8 && gecko: collapse white-space between units */
-}
-.grid-u,
-.grid-u-1,
-.grid-u-1-2,
-.grid-u-1-3,
-.grid-u-2-3,
-.grid-u-1-4,
-.grid-u-3-4,
-.grid-u-1-5,
-.grid-u-2-5,
-.grid-u-3-5,
-.grid-u-4-5,
-.grid-u-1-6,
-.grid-u-5-6,
-.grid-u-1-8,
-.grid-u-3-8,
-.grid-u-5-8,
-.grid-u-7-8,
-.grid-u-1-12,
-.grid-u-5-12,
-.grid-u-7-12,
-.grid-u-11-12,
-.grid-u-1-24,
-.grid-u-5-24,
-.grid-u-7-24,
-.grid-u-11-24,
-.grid-u-13-24,
-.grid-u-17-24,
-.grid-u-19-24,
-.grid-u-23-24 {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1; 
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-}
-.grid-u-1 {
-    display: block;
-}
-.grid-u-1-2 {
-    width: 50%;
-}
-.grid-u-1-3 {
-    width: 33.33333%;
-}
-.grid-u-2-3 {
-    width: 66.66666%;
-}
-.grid-u-1-4 {
-    width: 25%;
-}
-.grid-u-3-4 {
-    width: 75%;
-}
-.grid-u-1-5 {
-    width: 20%;
-}
-.grid-u-2-5 {
-    width: 40%;
-}
-.grid-u-3-5 {
-    width: 60%;
-}
-.grid-u-4-5 {
-    width: 80%;
-}
-.grid-u-1-6 {
-    width: 16.656%;
-}
-.grid-u-5-6 {
-    width: 83.33%;
-}
-.grid-u-1-8 {
-    width: 12.5%;
-}
-.grid-u-3-8 {
-    width: 37.5%;
-}
-.grid-u-5-8 {
-    width: 62.5%;
-}
-.grid-u-7-8 {
-    width: 87.5%;
-}
-.grid-u-1-12 {
-    width: 8.3333%;
-}
-.grid-u-5-12 {
-    width: 41.6666%;
-}
-.grid-u-7-12 {
-    width: 58.3333%;
-}
-.grid-u-11-12 {
-    width: 91.6666%;
-}
-.grid-u-1-24 {
-    width: 4.1666%;
-}
-.grid-u-5-24 {
-    width: 20.8333%;
-}
-.grid-u-7-24 {
-    width: 29.1666%;
-}
-.grid-u-11-24 {
-    width: 45.8333%;
-}
-.grid-u-13-24 {
-    width: 54.1666%;
-}
-.grid-u-17-24 {
-    width: 70.8333%;
-}
-.grid-u-19-24 {
-    width: 79.1666%;
-}
-.grid-u-23-24 {
-    width: 95.8333%;
-}
-
-
-
-
-
 /* $ Tables
 ========================================== */
 
@@ -782,7 +621,6 @@ table {
     max-width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    background-color: transparent;
     margin-bottom: 1em;
 } 
 thead th {
@@ -798,6 +636,143 @@ th {
 th,
 caption { 
     text-align: left;
+}
+
+
+
+
+
+/*
+ * Modified YUI 3.8.0 CSS grid system
+ *
+ * Original docs: http://yuilibrary.com/yui/docs/cssgrids/
+ * Original source: http://yui.yahooapis.com/3.8.0/build/cssgrids/grids.css
+========================================== */
+
+.grid {
+    letter-spacing: -0.31em; /* webkit: collapse white-space between units */
+    *letter-spacing: normal; /* reset IE < 8 */
+    word-spacing: -0.43em; /* IE < 8 && gecko: collapse white-space between units */
+}
+.unit,
+.unit-1,
+.unit-1-2,
+.unit-1-3,
+.unit-2-3,
+.unit-1-4,
+.unit-3-4,
+.unit-1-5,
+.unit-2-5,
+.unit-3-5,
+.unit-4-5,
+.unit-1-6,
+.unit-5-6,
+.unit-1-8,
+.unit-3-8,
+.unit-5-8,
+.unit-7-8,
+.unit-1-12,
+.unit-5-12,
+.unit-7-12,
+.unit-11-12,
+.unit-1-24,
+.unit-5-24,
+.unit-7-24,
+.unit-11-24,
+.unit-13-24,
+.unit-17-24,
+.unit-19-24,
+.unit-23-24 {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; 
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+}
+.unit-1 {
+    display: block;
+}
+.unit-1-2 {
+    width: 50%;
+}
+.unit-1-3 {
+    width: 33.33333%;
+}
+.unit-2-3 {
+    width: 66.66666%;
+}
+.unit-1-4 {
+    width: 25%;
+}
+.unit-3-4 {
+    width: 75%;
+}
+.unit-1-5 {
+    width: 20%;
+}
+.unit-2-5 {
+    width: 40%;
+}
+.unit-3-5 {
+    width: 60%;
+}
+.unit-4-5 {
+    width: 80%;
+}
+.unit-1-6 {
+    width: 16.656%;
+}
+.unit-5-6 {
+    width: 83.33%;
+}
+.unit-1-8 {
+    width: 12.5%;
+}
+.unit-3-8 {
+    width: 37.5%;
+}
+.unit-5-8 {
+    width: 62.5%;
+}
+.unit-7-8 {
+    width: 87.5%;
+}
+.unit-1-12 {
+    width: 8.3333%;
+}
+.unit-5-12 {
+    width: 41.6666%;
+}
+.unit-7-12 {
+    width: 58.3333%;
+}
+.unit-11-12 {
+    width: 91.6666%;
+}
+.unit-1-24 {
+    width: 4.1666%;
+}
+.unit-5-24 {
+    width: 20.8333%;
+}
+.unit-7-24 {
+    width: 29.1666%;
+}
+.unit-11-24 {
+    width: 45.8333%;
+}
+.unit-13-24 {
+    width: 54.1666%;
+}
+.unit-17-24 {
+    width: 70.8333%;
+}
+.unit-19-24 {
+    width: 79.1666%;
+}
+.unit-23-24 {
+    width: 95.8333%;
 }
 
 
@@ -1086,6 +1061,9 @@ a img.aligncenter {
 
 
 
+
+
+
 /* 
  * $ (Proportional) Media Queries  
  * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
@@ -1147,11 +1125,6 @@ a img.aligncenter {
        (min-resolution: 1.5dppx) {
 
 }
-
-
-
-
-
 
 
 

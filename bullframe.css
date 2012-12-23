@@ -71,9 +71,9 @@ html {
 }
 body {
     width: 92%;
-	min-width: 0;
+    min-width: 0;
     max-width: 940px;
-	margin: auto;
+    margin: auto;
     padding: 0 10px;
     line-height: 1.4;
     font-size: 1em;

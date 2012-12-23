@@ -70,14 +70,14 @@ html {
     -ms-text-size-adjust: 100%;
 }
 body {
-    width: 92%;
-    min-width: 0;
-    max-width: 940px;
-    margin: auto;
-    padding: 0 10px;
-    line-height: 1.4;
-    font-size: 1em;
-    background: #fff;
+	min-width: 0;
+	width: 92%;
+	max-width: 940px;
+	margin: auto;
+	padding: 0 10px;
+	line-height: 1.4;
+	font-size: 1em;
+	background: #fff;
 }
 article,
 aside,

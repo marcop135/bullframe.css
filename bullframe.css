@@ -162,6 +162,7 @@ audio:not([controls]) {
 [hidden] { 
     display: none;
 }
+canvas,
 audio,
 video,
 iframe,

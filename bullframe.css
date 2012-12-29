@@ -1054,9 +1054,43 @@ a img.aligncenter {
 
 /* =============================================================
    Author's custom styles (if necessary a single css file)
-   ========================================================== */
+   ========================================================== 
 
+/* colors 
+html,
+button,
+input,
+select,
+textarea {
+    color: #XXX;
+}
+body {
+    background-color: #XXX;
+}
+::-moz-selection {
+    background: #XXX;
+}
 
+::selection {
+    background: #XXX;
+}
+*/
+
+/* vertical ritm 
+p,
+ul,
+ol,
+dl,
+blockquote,
+hr,
+pre,
+hgroup,
+table,
+form,
+fieldset {
+  margin-bottom: XXem;
+}
+*/
 
 
 

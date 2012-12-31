@@ -271,7 +271,7 @@ address {
     line-height: 1.4;
 }
 blockquote { 
-    margin: 1.25em 0 1.25em 40px;
+    margin: 1.25em 0 1.25em 1.55em;
 	padding-left: 1.25em;
     border-left: 2px solid #ccc;
 }

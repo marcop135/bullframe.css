@@ -154,7 +154,7 @@ img {
 .fb-comments, 
 .fb-comments span, 
 .fb-comments iframe {
-	width: 100% !important;
+	  width: 100% !important;
 }
 /* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
@@ -175,7 +175,7 @@ img {
     word-wrap: break-word;
 }
 body { 
-	hyphens: auto;
+	  hyphens: auto;
 }
 
 body, 
@@ -251,7 +251,7 @@ abbr,
 acronym, 
 blockquote, 
 q {
-	hyphens: none;
+	  hyphens: none;
 }
 abbr[title], 
 acronym { 
@@ -381,7 +381,7 @@ p a {
     text-decoration: none;
 }
 p a {
-	line-height: inherit;
+	  line-height: inherit;
 }
 a { 
     -webkit-tap-highlight-color: rgba(20, 103, 255, 0.5); /* 50% blue */
@@ -430,10 +430,10 @@ dd {
     padding: 0 0 0 40px;
 }
 dl dt {
-	font-weight: bold;
+	  font-weight: bold;
 }
 dl dd {
-	padding-left: 0;
+	  padding-left: 0;
 }
 
 
@@ -478,8 +478,8 @@ textarea {
     *padding-right: 0;
 }
 input[type="file"] {
-	padding-left: 0;
-	padding-right: 0;
+	  padding-left: 0;
+	  padding-right: 0;
 }
 /* makes flexible forms (but do not touch the buttons) */
 input[type="color"], 
@@ -659,8 +659,8 @@ thead th {
 th,
 td { 
     vertical-align: top;
-	padding: .5em;
-	border: 1px solid #999;
+	  padding: .5em;
+	  border: 1px solid #999;
 }
 th {
     font-weight: bold;
@@ -811,6 +811,83 @@ caption {
 
 
 
+/* $ Wordpress Core
+ *
+ * http://codex.wordpress.org/CSS
+   ============================================================= */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+
+
+
+
 /* $ Helper classes
 ========================================== */
 
@@ -853,12 +930,12 @@ caption {
 
 /* image positioning ---------------- */
 .img-left {
-  float: left;
-  margin: 0 1.25em 1.25em 0;
+    float: left;
+    margin: 0 1.25em 1.25em 0;
 }
 .img-right {
-  float: right;
-  margin: 0 0 1.25em 1.25em;
+    float: right;
+    margin: 0 0 1.25em 1.25em;
 }
 
 /* layout display ---------------- */
@@ -1019,83 +1096,6 @@ caption {
 
 
 
-/* $ Wordpress Core
- *
- * http://codex.wordpress.org/CSS
-   ============================================================= */
-
-.alignnone {
-    margin: 5px 20px 20px 0;
-}
-.aligncenter,
-div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-.alignright {
-    float:right;
-    margin: 5px 0 20px 20px;
-}
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-a img.alignnone {
-    margin: 5px 20px 20px 0;
-}
-a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-.wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
-}
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
-.wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
-}
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
-}
-
-
-
-
-
 
 
 
@@ -1125,38 +1125,38 @@ body {
     background: #XXX;
 }
 a {
-	color: #XXX;
+	  color: #XXX;
 }
 a:hover,
 a:active,
 a:focus {
-	color: #XXX;
+	  color: #XXX;
 } 
 */
 
 /* vertical rhythm
 body {
-	margin: ;
-	padding: ;
-	line-height: ;
+	  margin: ;
+	  padding: ;
+	  line-height: ;
 }
 h1, .h1 {
-	margin: ;
+	  margin: ;
 }
 h2, .h2 {
-	margin: ;
+	  margin: ;
 }
 h3, .h3 {
-	margin: ;
+	  margin: ;
 }
 h4, .h4 {
-	margin: ;
+	  margin: ;
 }
 h5, .h5 {
-	margin: ;
+	  margin: ;
 }
 h6, .h6 {
-	margin: ;
+	  margin: ;
 }
 p,
 ul,
@@ -1170,7 +1170,7 @@ kbd,
 tt, 
 samp, 
 xmp {
-	margin-top: ;
+	  margin-top: ;
 }
 p,
 ul,
@@ -1196,7 +1196,7 @@ select,
 textarea,
 table,
 .table-overflow-container {
-	margin-bottom: ;
+	  margin-bottom: ;
 }
 */
 
@@ -1237,8 +1237,6 @@ textarea {
 
 
 
-
-
 /* 
  * $ (Proportional) Media Queries  
  * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
@@ -1249,11 +1247,11 @@ textarea {
  * http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/ 
  */
 @media (min--moz-device-pixel-ratio: 1.5),
-       (-o-min-device-pixel-ratio: 3/2),
-       (-webkit-min-device-pixel-ratio: 1.5),
-       (min-device-pixel-ratio: 1.5),
-       (min-resolution: 144dpi),
-       (min-resolution: 1.5dppx) {
+    (-o-min-device-pixel-ratio: 3/2),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
 
 }
 
@@ -1300,6 +1298,9 @@ textarea {
 @media only screen and (max-width: 20em) {
 
 }
+
+
+
 
 
 

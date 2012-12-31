@@ -1,4 +1,4 @@
-/*!==========================================
+|/*!==========================================
  * 
  * BULLFRAME CSS
  * 
@@ -35,7 +35,7 @@
 
 
 
-/* $ future-friendly @viewport rule
+/* $ Future-friendly @viewport rule
 ========================================== */
 
 @-webkit-viewport { 
@@ -58,7 +58,7 @@
 
 
 
-/* $ Global containers
+/* $ Reinforce the structure
 ========================================== */
 
 /* 1. why use it: http://goo.gl/jJfVf 
@@ -70,14 +70,14 @@ html {
     -ms-text-size-adjust: 100%;
 }
 body {
-	min-width: 0;
-	width: 92%;
-	max-width: 940px;
-	margin: auto;
-	padding: 10px;
-	line-height: 1.4;
-	font-size: 1em;
-	background: #fff;
+    min-width: 0;
+    width: 92%;
+    max-width: 940px;
+    margin: auto;
+    padding: 1.25em .625em; /* 20px 10px */
+    line-height: 1.4;
+    font-size: 1em;
+    background: #fff;
 }
 article,
 aside,
@@ -96,57 +96,8 @@ summary {
 
 
 
-
-/* $ increases the flexibility of texts
-========================================== */
-
-*,
-*:after,
-*:before {
-    word-wrap: break-word;
-}
-body { 
-	hyphens: auto;
-}
-
-
-
-
-
-/* $ Lists
-========================================== */
-
-menu,
-ol,
-ul,
-dl{
-    margin: 1em 0;
-}
-menu,
-ol,
-ul,
-dd {
-    padding: 0 0 0 40px;
-}
-nav ul,
-nav ol,
-ul.unstyled,
-ol.unstyled,
-ul.unstyled ul,
-ol.unstyled ol,
-ul.unstyled ol,
-ol.unstyled ul { 
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    list-style-image: none; /* IE7 */
-} 
-
-
 	
-
-	
-/* $ Media
+/* $ Flex media content
 ========================================== */
 
 canvas, 
@@ -155,6 +106,9 @@ video {
     *display: inline;
     *zoom: 1;
 } 
+video {
+    height: auto;
+}
 audio:not([controls]) { 
     display: none;
     height: 0;
@@ -174,7 +128,7 @@ audio,
 video,
 iframe,
 object {
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
 }
 svg:not(:root) { 
     overflow: hidden;
@@ -196,6 +150,12 @@ img {
 .google-maps img {
     max-width: none;
 }
+/* override the Facebook comments embed fixed width */
+.fb-comments, 
+.fb-comments span, 
+.fb-comments iframe {
+	width: 100% !important;
+}
 /* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
     max-width: 100% !important;
@@ -205,8 +165,18 @@ img {
 
 
 
-/* $ Global Typography
+/* $ Typography
 ========================================== */
+
+/* increase the flexibility of texts */
+*,
+*:after,
+*:before {
+    word-wrap: break-word;
+}
+body { 
+	hyphens: auto;
+}
 
 body, 
 button, 
@@ -262,7 +232,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: 1.25em 0;
     padding: 0;
 }
 /* where to avoid css hyphenation 
@@ -297,11 +267,13 @@ q {
 address {
     display: block;
 	font-style: italic;
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
     line-height: 1.4;
 }
 blockquote { 
-    margin: 1em 40px;
+    margin: 1.25em 0 1.25em 40px;
+	padding-left: 1.25em;
+    border-left: 2px solid #ccc;
 }
 ins { 
     background: #ff9; /* light yellow */
@@ -320,7 +292,7 @@ s {
 }
 p,
 pre {
-    margin: 1em 0;
+    margin: 1.25em 0;
 }
 pre, 
 code, 
@@ -335,6 +307,20 @@ pre {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
+}
+kbd {
+    padding: 0 6px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    border-radius: 4px;
+	-webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #ffffff inset;
+	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #ffffff inset;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #ffffff inset;
+    background-color: #fafafa;
+    border-color: #ccc #ccc white;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    white-space: nowrap;
 }
 strong, 
 b { 
@@ -415,6 +401,46 @@ a:active {
 
 
 
+/* $ Lists
+========================================== */
+
+nav ul,
+nav ol,
+ul.unstyled,
+ol.unstyled,
+ul.unstyled ul,
+ol.unstyled ol,
+ul.unstyled ol,
+ol.unstyled ul { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none; /* IE7 */
+} 
+menu,
+ol,
+ul,
+dl{
+    margin: 1.25em 0;
+}
+menu,
+ol,
+ul,
+dd {
+    padding: 0 0 0 40px;
+}
+dl dt {
+	font-weight: bold;
+}
+dl dd {
+	padding-left: 0;
+}
+
+
+
+
+
+
 /* $ Forms
 ========================================== */
 
@@ -444,7 +470,7 @@ textarea {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 100%;
-    margin: 0 0 1em 0;
+    margin: 0 0 1.25em 0;
     padding: .3em;
     vertical-align: baseline;
     *vertical-align: middle;
@@ -625,7 +651,7 @@ table {
     max-width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
 } 
 thead th {
     vertical-align: bottom;
@@ -634,7 +660,7 @@ th,
 td { 
     vertical-align: top;
 	padding: .5em;
-	border: 1px solid #ccc;
+	border: 1px solid #999;
 }
 th {
     font-weight: bold;
@@ -788,6 +814,20 @@ caption {
 /* $ Helper classes
 ========================================== */
 
+/* micro-clearfix ---------------- */ 
+.clearfix:before, 
+.clearfix:after { 
+    content: ""; 
+    display: table;
+    line-height: 0; 
+}
+.clearfix:after { 
+    clear: both;
+}  
+.clearfix { 
+    *zoom: 1;
+}
+
 /* image replacement ---------------- */
 .img-r { 
     display: block;
@@ -811,18 +851,14 @@ caption {
     border: 0;
 }
 
-/* micro-clearfix ---------------- */ 
-.clearfix:before, 
-.clearfix:after { 
-    content: ""; 
-    display: table;
-    line-height: 0; 
+/* image positioning ---------------- */
+.img-left {
+  float: left;
+  margin: 0 1.25em 1.25em 0;
 }
-.clearfix:after { 
-    clear: both;
-}  
-.clearfix { 
-    *zoom: 1;
+.img-right {
+  float: right;
+  margin: 0 0 1.25em 1.25em;
 }
 
 /* layout display ---------------- */
@@ -880,6 +916,15 @@ caption {
     position: static;
     width: auto;
 }
+.width-33 {
+    width: 33%;
+}
+.width-50 {
+    width: 50%;
+}
+.width-100 {
+    width: 100%;
+}
 
 /* layout positioning ---------------- */
 .pull-right {
@@ -899,8 +944,12 @@ caption {
 .no-margin-left {
     margin-left: 0 !important;
 }
+.last,
 .no-margin-right {
     margin-right: 0 !important;
+}
+.end {
+   margin-bottom: 0 !important;
 }
 .no-padding {
     padding: 0 !important;
@@ -916,7 +965,7 @@ caption {
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
 }
 .flex-video-container iframe,  
 .flex-video-container object,  
@@ -942,7 +991,7 @@ caption {
 .table-overflow-container {
     overflow-x: scroll;
     max-width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
 }
 .table-overflow-container table {
     margin-bottom: 0;
@@ -1056,7 +1105,8 @@ a img.aligncenter {
    Author's custom styles (if necessary a single css file)
    ========================================================== */
 
-/* colors 
+
+/* change skin
 html,
 button,
 input,
@@ -1074,23 +1124,108 @@ body {
 ::selection {
     background: #XXX;
 }
+a {
+	color: #XXX;
+}
+a:hover,
+a:active,
+a:focus {
+	color: #XXX;
+} 
 */
 
-/* vertical ritm 
+/* vertical rhythm
+body {
+	margin: ;
+	padding: ;
+	line-height: ;
+}
+h1, .h1 {
+	margin: ;
+}
+h2, .h2 {
+	margin: ;
+}
+h3, .h3 {
+	margin: ;
+}
+h4, .h4 {
+	margin: ;
+}
+h5, .h5 {
+	margin: ;
+}
+h6, .h6 {
+	margin: ;
+}
 p,
 ul,
 ol,
 dl,
 blockquote,
 hr,
-pre,
-hgroup,
+pre, 
+code, 
+kbd, 
+tt, 
+samp, 
+xmp {
+	margin-top: ;
+}
+p,
+ul,
+ol,
+dl,
+blockquote,
+hr,
+pre, 
+code, 
+kbd, 
+tt, 
+samp, 
+xmp, 
+audio,
+video,
+iframe,
+object,
+.flex-video-container,
 table,
-form,
-fieldset {
-  margin-bottom: XXem;
+button, 
+input, 
+select, 
+textarea,
+table,
+.table-overflow-container {
+	margin-bottom: ;
 }
 */
+
+/* forms
+button,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+}
+input[type="color"], 
+input[type="email"], 
+input[type="image"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select, 
+textarea {
+    border: ;
+}
 
 
 
@@ -1109,6 +1244,18 @@ fieldset {
  * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
  *
 ========================================== */
+
+/* high resolution devices (retina)
+ * http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/ 
+ */
+@media (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (-webkit-min-device-pixel-ratio: 1.5),
+       (min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi),
+       (min-resolution: 1.5dppx) {
+
+}
 
 /* 1200px */
 @media only screen and (max-width: 75em) {
@@ -1154,17 +1301,7 @@ fieldset {
 
 }
 
-/* high resolution devices (retina)
- * http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/ 
- */
-@media (min--moz-device-pixel-ratio: 1.5),
-       (-o-min-device-pixel-ratio: 3/2),
-       (-webkit-min-device-pixel-ratio: 1.5),
-       (min-device-pixel-ratio: 1.5),
-       (min-resolution: 144dpi),
-       (min-resolution: 1.5dppx) {
 
-}
 
 
 

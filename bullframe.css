@@ -435,7 +435,7 @@ menu,
 ol,
 ul,
 dd {
-    padding: 0 0 0 40px;
+    padding: 0 0 0 2.5em;
 }
 dl dt {
     font-weight: bold;

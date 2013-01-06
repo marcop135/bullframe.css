@@ -1,5 +1,5 @@
 <h1>Bullframe CSS</h1>
-My personal CSS Reset/Framework<br>
+My personal "bulldozer" responsive CSS framework<br>
 <br>
 It's based on 7 github projects:
 - Normalize.css by Nicolas Gallagher https://github.com/necolas/normalize.css 

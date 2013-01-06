@@ -91,74 +91,6 @@ summary {
 
 
 
-	
-/* $ Flex media content
-========================================== */
-
-canvas, 
-video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-} 
-video {
-    height: auto;
-}
-audio:not([controls]) { 
-    display: none;
-    height: 0;
-}
-[hidden] { 
-    display: none;
-}
-canvas,
-audio,
-video,
-iframe,
-object,
-embed {
-    max-width: 100%;
-}
-audio,
-video,
-iframe,
-object {
-    margin-bottom: 1.25em;
-}
-svg:not(:root) { 
-    overflow: hidden;
-}
-figure {
-    margin: 0;
-}
-img {
-    width: auto\9; /* IE8 */
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-    border: 0;
-    color: #f00; /* red */
-    -ms-interpolation-mode: bicubic;
-}
-/* google maps fix */
-#map_canvas img,
-.google-maps img {
-    max-width: none;
-}
-/* override the Facebook comments embed fixed width */
-.fb-comments, 
-.fb-comments span, 
-.fb-comments iframe {
-    width: 100% !important;
-}
-/* override the Twitter embed fixed width */
-.twitter-tweet-rendered {
-    max-width: 100% !important;
-}
-
-
-
-
 
 /* $ Typography
 ========================================== */
@@ -425,6 +357,74 @@ dl dd {
     padding-left: 0;
 }
 
+
+
+
+
+
+/* $ Flex media content
+========================================== */
+
+canvas, 
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+} 
+video {
+    height: auto;
+}
+audio:not([controls]) { 
+    display: none;
+    height: 0;
+}
+[hidden] { 
+    display: none;
+}
+canvas,
+audio,
+video,
+iframe,
+object,
+embed {
+    max-width: 100%;
+}
+audio,
+video,
+iframe,
+object {
+    margin-bottom: 1.25em;
+}
+svg:not(:root) { 
+    overflow: hidden;
+}
+figure {
+    margin: 0;
+}
+img {
+    width: auto\9; /* IE8 */
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    color: #f00; /* red */
+    -ms-interpolation-mode: bicubic;
+}
+/* google maps fix */
+#map_canvas img,
+.google-maps img {
+    max-width: none;
+}
+/* override the Facebook comments embed fixed width */
+.fb-comments, 
+.fb-comments span, 
+.fb-comments iframe {
+    width: 100% !important;
+}
+/* override the Twitter embed fixed width */
+.twitter-tweet-rendered {
+    max-width: 100% !important;
+}
 
 
 

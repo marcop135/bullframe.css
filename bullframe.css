@@ -61,10 +61,7 @@
 /* $ Reinforce the structure
 ========================================== */
 
-/* 1. why use it: http://goo.gl/jJfVf 
-..and when NOT to use it: http://goo.gl/An6J1 */
 html {
-    overflow-y: scroll; /* 1 */
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -177,13 +174,12 @@ body {
     line-height: 1.4;
     hyphens: auto;
 }
-
 body, 
 button, 
 input, 
 select, 
 textarea {
-    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    font-family: Arial, Verdana, sans-serif;
     color: #222;
 }
 h1,
@@ -232,7 +228,7 @@ h5,
 }
 h6,
 .h6 {
-    font-size: 0.75em;
+    font-size: 0.67em;
     margin: 2.33em 0;
 }
 hr {
@@ -316,20 +312,6 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
-kbd {
-    padding: 0 6px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #ffffff inset;
-    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #ffffff inset;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #ffffff inset;
-    background-color: #fafafa;
-    border-color: #ccc #ccc white;
-    border-style: solid solid none;
-    border-width: 1px 1px medium;
-    white-space: nowrap;
-}
 strong, 
 b { 
     font-weight: bold;
@@ -383,8 +365,7 @@ big {
 /* $ Links
 ========================================== */
 
-a, 
-p a { 
+a { 
     color: #1467ff; /* blue */
     text-decoration: none;
 }
@@ -435,7 +416,7 @@ menu,
 ol,
 ul,
 dd {
-    padding: 0 0 0 40px;
+    padding: 0 0 0 2.5em;
 }
 dl dt {
     font-weight: bold;
@@ -479,16 +460,21 @@ textarea {
     box-sizing: border-box;
     font-size: 100%;
     margin: 0 0 1.25em 0;
-    padding: .3em;
-    vertical-align: baseline;
-    *vertical-align: middle;
+    padding: 0.3em;
     *padding-left: 0;
     *padding-right: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+button, 
+input { 
+    line-height: normal;
 }
 input[type="file"] {
     padding-left: 0;
     padding-right: 0;
 }
+
 /* makes flexible forms (but do not touch the buttons) */
 input[type="color"], 
 input[type="email"], 
@@ -513,6 +499,7 @@ textarea {
     width: 100%;
     max-width: 100%;
 }
+
 /* normalize borders and border-radius */
 input[type="color"], 
 input[type="email"], 
@@ -537,6 +524,7 @@ textarea {
     -moz-border-radius: 0;
     border-radius: 0;
 }
+
 /* normalize box-shadow */
 button:focus, 
 input:focus, 
@@ -569,6 +557,7 @@ input[type="url"],
 textarea { 
     -webkit-appearance: none;
 }
+
 /* normalize checkbox and radio inputs */
 input[type="radio"], 
 input[type="checkbox"] {
@@ -580,11 +569,6 @@ input[type="checkbox"] {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-}
-/* normalize buttons */
-button, 
-input { 
-    line-height: normal;
 }
 button,
 html input[type="button"], 
@@ -667,7 +651,7 @@ thead th {
 th,
 td { 
     vertical-align: top;
-    padding: .5em;
+    padding: 0.5em;
     border: 1px solid #999;
 }
 th {
@@ -850,6 +834,19 @@ caption {
 }
 .img-r br { 
     display: none;
+}
+/* h5bp class */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px; /* IE 6/7 fallback */
+}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
 }
 .hide-text {
     font: 0/0 a;
@@ -1078,7 +1075,6 @@ a img.aligncenter {
 .wp-caption.alignnone {
     margin: 5px 20px 20px 0;
 }
-
 .wp-caption.alignleft {
     margin: 5px 20px 20px 0;
 }
@@ -1114,32 +1110,31 @@ a img.aligncenter {
    ========================================================== */
 
 
-/* change skin
-html,
+/* skin
+body,
 button,
 input,
 select,
 textarea {
-    color: #XXX;
+    color: ;
 }
 body {
-    background-color: #XXX;
+    background-color: ;
 }
+a {
+    color: ;
+}
+a:hover,
+a:active {
+    color: ;
+} 
 ::-moz-selection {
-    background: #XXX;
+    background: ;
 }
 
 ::selection {
-    background: #XXX;
+    background: ;
 }
-a {
-    color: #XXX;
-}
-a:hover,
-a:active,
-a:focus {
-    color: #XXX;
-} 
 */
 
 /* vertical rhythm
@@ -1224,9 +1219,13 @@ table,
 
 /* forms
 button,
-html input[type="button"], 
+input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
+    color: ;
+    background-color: ;
+    padding: ;
+    *padding: ;
 }
 input[type="color"], 
 input[type="email"], 

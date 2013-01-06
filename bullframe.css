@@ -470,6 +470,9 @@ button,
 input { 
     line-height: normal;
 }
+input[type="image"] {
+    padding: 0;
+}
 input[type="file"] {
     padding-left: 0;
     padding-right: 0;
@@ -498,12 +501,12 @@ select,
 textarea {
     width: 100%;
     max-width: 100%;
+    display: block;
 }
 
 /* normalize borders and border-radius */
 input[type="color"], 
 input[type="email"], 
-input[type="image"], 
 input[type="number"], 
 input[type="password"], 
 input[type="tel"], 
@@ -553,7 +556,7 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="tel"], 
 input[type="text"], 
 input[type="week"], 
-input[type="url"],	
+input[type="url"],    
 textarea { 
     -webkit-appearance: none;
 }
@@ -561,6 +564,9 @@ textarea {
 /* normalize checkbox and radio inputs */
 input[type="radio"], 
 input[type="checkbox"] {
+    margin-left: 5px;
+    margin-right: 5px;
+    *margin-bottom: 0;
     padding: 0;
     *width: 13px;
     *height: 13px;
@@ -1206,7 +1212,7 @@ video,
 iframe,
 object,
 .flex-video-container,
-table,
+legend
 button, 
 input, 
 select, 

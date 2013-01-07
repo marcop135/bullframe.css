@@ -445,40 +445,16 @@ fieldset {
 legend { 
     border: 0;
     padding: 0;
-    display: table; /* Enable line-wrapping in IE8+ */
     white-space: normal;
+    display: table; /* Enable line-wrapping in IE8+ */
+	*display: block;
+	*overflow-x: auto;
+	*min-height: 40px;
     *margin-left: -7px;
 }
 label { 
     cursor: pointer;
 }
-button, 
-input, 
-select, 
-textarea {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 100%;
-    margin: 0 0 1.25em 0;
-    padding: 0.3em;
-    *padding-left: 0;
-    *padding-right: 0;
-    vertical-align: baseline;
-    *vertical-align: middle;
-}
-button, 
-input { 
-    line-height: normal;
-}
-input[type="image"] {
-    padding: 0;
-}
-input[type="file"] {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 /* makes flexible forms (but do not touch the buttons) */
 input[type="color"], 
 input[type="email"], 
@@ -501,8 +477,58 @@ input[type="url"],
 select, 
 textarea {
     width: 100%;
+    *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
     max-width: 100%;
     display: block;
+}
+button, 
+input, 
+select, 
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 100%;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+button, 
+input { 
+    line-height: normal;
+}
+button,
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"] {
+    margin: 0 0 1.25em 0;
+    padding: 0.3em;
+}
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="file"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="range"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"], 
+select, 
+textarea {
+    margin: 0 0 1.25em 0;
+    padding: 0.3em;
+	*padding: 0.3em 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+}
+input[type="file"],
+input[type="image"] {
+    margin: 0 0 1.25em 0;
 }
 
 /* normalize borders and border-radius */
@@ -557,18 +583,18 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="tel"], 
 input[type="text"], 
 input[type="week"], 
-input[type="url"],    
+input[type="url"],	
 textarea { 
     -webkit-appearance: none;
 }
-
+input[type="file"] {
+    cursor: pointer;
+}
 /* normalize checkbox and radio inputs */
 input[type="radio"], 
 input[type="checkbox"] {
-    margin-left: 5px;
-    margin-right: 5px;
-    *margin-bottom: 0;
     padding: 0;
+    margin: 0 5px;
     *width: 13px;
     *height: 13px;
 }
@@ -583,8 +609,6 @@ input[type="reset"],
 input[type="submit"] {
     cursor: pointer;
     *overflow: visible;
-    *padding-left: .3em;
-    *padding-right: .3em;
     -webkit-appearance: button;
 }
 button::-moz-focus-inner, 
@@ -637,7 +661,6 @@ textarea[readonly] {
     cursor: default;
     cursor: not-allowed;
 }
-
 
 
 
@@ -1005,6 +1028,12 @@ caption {
     max-width: 100%;
     margin-bottom: 1.25em;
 }
+@media (min-width: 58.75em) { /* 940px */
+   /* hide scrollbar */
+  .table-overflow-container {
+      overflow-x: auto;
+  }
+}  
 .table-overflow-container table {
     margin-bottom: 0;
 }

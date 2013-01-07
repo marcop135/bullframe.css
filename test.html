@@ -252,9 +252,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 
 
-<h2 class="title">Images</h2>
+<h2 class="title">Embedded content</h2>
 
-<h3>figure</h3>
+<h3>figure + img + figcaption</h3>
 <figure>
     <img alt="" src="http://lorempixel.com/400/200">
     <figcaption>
@@ -264,23 +264,43 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 <h3>img</h3>
 <img alt="" src="http://lorempixel.com/500/250"> 
+
 <h3>linked image</h3>
 <a href="#"> <img alt="" src="http://lorempixel.com/300/250"></a>
 
+<h3>Canvas</h3>
+<canvas id="myCanvas" width="300" height="100">
+Fallback content, in case the browser does not support Canvas.
+</canvas>
+<script>
+// Get a reference to the element.
+var elem = document.getElementById('myCanvas');
 
+// Always check for properties and methods, to make sure your code doesn't break 
+// in other browsers.
+if (elem && elem.getContext) {
+  // Get the 2d context.
+  // Remember: you can only initialize one context per element.
+  var context = elem.getContext('2d');
+  if (context) {
+    // You are done! Now you can draw your first rectangle.
+    // You only need to provide the (x,y) coordinates, followed by the width and 
+    // height dimensions.
+    context.fillRect(0, 0, 250, 100);
+  }
+}
+</script>
 
-
-
-<h2 class="title">svg</h2>
-<svg width="100px" height="100px">
-  <circle cx="100" cy="100" r="100" fill="#ff0000" />
+<h3>svg</h3>
+<svg width="200px" height="200px">
+  <circle cx="200" cy="200" r="200" fill="#ff0000" />
 </svg>
 
 
 
 
 
-<h2 class="title">Interactive content</h2>
+<h2 class="title">Interactive embedded content</h2>
 
 <h3>details + summary</h3>
 <details>

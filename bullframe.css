@@ -389,6 +389,7 @@ object,
 embed {
     max-width: 100%;
 }
+canvas,
 audio,
 video,
 iframe,
@@ -1207,12 +1208,12 @@ kbd,
 tt, 
 samp, 
 xmp, 
+canvas,
 audio,
 video,
 iframe,
 object,
 .flex-video-container,
-legend
 button, 
 input, 
 select, 

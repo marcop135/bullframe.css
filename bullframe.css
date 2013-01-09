@@ -122,6 +122,7 @@ h3,
 .h3
 h4,
 .h4 
+
 h5,
 .h5 
 h6,
@@ -408,13 +409,19 @@ img {
     max-width: 100%;
     vertical-align: middle;
     border: 0;
-    color: #f00; /* red */
     -ms-interpolation-mode: bicubic;
 }
 /* google maps fix */
 #map_canvas img,
 .google-maps img {
     max-width: none;
+}
+#mapCanvas img { 
+    max-width: none;
+}
+#mapCanvas label { 
+    width: auto; 
+    display: inline;
 }
 /* override the Facebook comments embed fixed width */
 .fb-comments, 
@@ -445,7 +452,8 @@ fieldset {
 legend { 
     border: 0;
     padding: 0;
-    white-space: normal;
+    margin: 0;
+	white-space: normal;
     display: table; /* Enable line-wrapping in IE8+ */
 	*display: block;
 	*overflow-x: auto;
@@ -524,7 +532,7 @@ select,
 textarea {
     margin: 0 0 1.25em 0;
     padding: 0.3em;
-	*padding: 0.3em 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+    *padding: 0.3em 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
 input[type="file"],
 input[type="image"] {
@@ -832,234 +840,6 @@ caption {
 
 
 
-
-/* $ Helper classes
-========================================== */
-
-/* micro-clearfix ---------------- */ 
-.clearfix:before, 
-.clearfix:after { 
-    content: ""; 
-    display: table;
-    line-height: 0; 
-}
-.clearfix:after { 
-    clear: both;
-}  
-.clearfix { 
-    *zoom: 1;
-}
-
-/* image replacement ---------------- */
-.img-r { 
-    display: block;
-    border: 0; 
-    text-indent: -999em; 
-    overflow: hidden; 
-    background-color: transparent; 
-    background-repeat: no-repeat; 
-    text-align: left; 
-    direction: ltr;
-    *line-height: 0;
-}
-.img-r br { 
-    display: none;
-}
-/* h5bp class */
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px; /* IE 6/7 fallback */
-}
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-.hide-text {
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
-}
-
-/* image positioning ---------------- */
-.img-left {
-    float: left;
-    margin: 0 1.25em 1.25em 0;
-}
-.img-right {
-    float: right;
-    margin: 0 0 1.25em 1.25em;
-}
-
-/* layout display ---------------- */
-.input-block-level {
-    display: block;
-    width: 100%;
-    min-height: 30px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.block {
-    display: block;
-    width: 100%;
-}
-.hide {
-    display: none !important; 
-    visibility: hidden;
-}
-/* hide on screenreaders */
-.screen-reader-text,
-.assistive-text {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-}
-.invisible {
-    visibility: hidden;
-}
-.show {
-    display: block !important;
-    visibility: visible;
-}
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-.width-33 {
-    width: 33%;
-}
-.width-50 {
-    width: 50%;
-}
-.width-100 {
-    width: 100%;
-}
-
-/* layout positioning ---------------- */
-.pull-right {
-    float: right;
-}
-.pull-left {
-    float: left;
-}
-.affix {
-    position: fixed;
-}
-
-/* resets margin/padding ---------------- */
-.no-margin {
-    margin: 0 !important;
-}
-.no-margin-left {
-    margin-left: 0 !important;
-}
-.last,
-.no-margin-right {
-    margin-right: 0 !important;
-}
-.end {
-   margin-bottom: 0 !important;
-}
-.no-padding {
-    padding: 0 !important;
-}
-.no-border {
-    border: 0 !important;
-}
-
-/* responsive ---------------- */
-.flex-video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 1.25em;
-}
-.flex-video-container iframe,  
-.flex-video-container object,  
-.flex-video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0;
-}
-/* 
- * how to wraps videos via jQuery:
- * 
-   <script>
-
-   $(function() {
-      $('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
-   });
-   </script>
- * 
-*/
-.table-overflow-container {
-    overflow-x: scroll;
-    max-width: 100%;
-    margin-bottom: 1.25em;
-}
-@media (min-width: 58.75em) { /* 940px */
-   /* hide scrollbar */
-  .table-overflow-container {
-      overflow-x: auto;
-  }
-}  
-.table-overflow-container table {
-    margin-bottom: 0;
-}
-/* 
- * how to wraps table via jQuery:
- * 
-   <script>
-   $(function() {
-     $('.content table').wrap('<div class="table-overflow-container"></div>');
-   });
-   </script>
- * 
-*/
-
-/* miscellaneous ---------------- */
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-
-
-
-
 /* $ Wordpress Core
  *
  * http://codex.wordpress.org/CSS
@@ -1145,6 +925,15 @@ a img.aligncenter {
    Author's custom styles (if necessary a single css file)
    ========================================================== */
 
+/* box-sizing (support: IE8+, compliant browser)
+*, 
+*:before, 
+*:after { 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+*/
 
 /* skin
 body,
@@ -1243,6 +1032,7 @@ video,
 iframe,
 object,
 .flex-video-container,
+legend,
 button, 
 input, 
 select, 
@@ -1290,6 +1080,283 @@ textarea {
 
 
 
+
+
+
+
+
+
+/* $ Helper classes
+========================================== */
+
+/* micro-clearfix ---------------- */ 
+.clearfix:before, 
+.clearfix:after { 
+    content: ""; 
+    display: table;
+    line-height: 0; 
+}
+.clearfix:after { 
+    clear: both;
+}  
+.clearfix { 
+    *zoom: 1;
+}
+
+/* image replacement ---------------- */
+.img-r { 
+    display: block;
+    border: 0; 
+    text-indent: -999em; 
+    overflow: hidden; 
+    background-color: transparent; 
+    background-repeat: no-repeat; 
+    text-align: left; 
+    direction: ltr;
+    *line-height: 0;
+}
+.img-r br { 
+    display: none;
+}
+/* h5bp class */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px; /* IE 6/7 fallback */
+}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+/* image positioning ---------------- */
+.img-left {
+    float: left;
+    margin: 0 1.25em 1.25em 0;
+}
+.img-right {
+    float: right;
+    margin: 0 0 1.25em 1.25em;
+}
+
+/* layout display ---------------- */
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.block {
+    display: block;
+    width: 100%;
+}
+.width-33 {
+    width: 33%;
+}
+.width-50 {
+    width: 50%;
+}
+.width-100 {
+    width: 100%;
+}
+.hide,
+.hidden {
+    display: none !important; 
+    visibility: hidden;
+}
+/* hide on screenreaders */
+.screen-reader-text,
+.assistive-text {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.invisible {
+    visibility: hidden;
+}
+.show {
+    display: block !important;
+    visibility: visible;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+.visible-phone {
+    display: none !important;
+}
+.visible-tablet {
+    display: none !important;
+}
+.hidden-desktop {
+    display: none !important;
+}
+.visible-desktop {
+    display: inherit !important;
+}
+@media (min-width: 601px) and (max-width: 979px) {
+    .hidden-desktop {
+        display: inherit !important;
+    }
+    .visible-desktop {
+        display: none !important ;
+    }
+    .visible-tablet {
+        display: inherit !important;
+    }
+    .hidden-tablet {
+        display: none !important;
+    }
+}
+@media (max-width: 600px) {
+    .hidden-desktop {
+        display: inherit !important;
+    }
+    .visible-desktop {
+        display: none !important;
+    }
+    .visible-phone {
+        display: inherit !important;
+    }
+    .hidden-phone {
+        display: none !important;
+    }
+}
+
+/* layout positioning ---------------- */
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
+.affix {
+    position: fixed;
+}
+
+/* resets margin/padding ---------------- */
+.no-margin {
+    margin: 0 !important;
+}
+.no-margin-left {
+    margin-left: 0 !important;
+}
+.last,
+.no-margin-right {
+    margin-right: 0 !important;
+}
+.first,
+.no-margin-top {
+    margin-top: 0 !important;
+}
+.end {
+   margin-bottom: 0 !important;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.no-border {
+    border: 0 !important;
+}
+
+/* responsive ---------------- */
+.flex-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.25em;
+}
+.flex-video-container iframe,  
+.flex-video-container object,  
+.flex-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+}
+/* 
+ * how to wraps videos via jQuery:
+ * 
+   <script>
+
+   $(function() {
+      $('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
+   });
+   </script>
+ * 
+*/
+.table-overflow-container {
+    overflow-x: scroll;
+    max-width: 100%;
+    margin-bottom: 1.25em;
+}
+@media (min-width: 58.75em) { /* 940px */
+   /* hide scrollbar */
+  .table-overflow-container {
+      overflow-x: auto;
+  }
+}  
+.table-overflow-container table {
+    margin-bottom: 0;
+}
+/* 
+ * how to wraps table via jQuery:
+ * 
+   <script>
+   $(function() {
+     $('.content table').wrap('<div class="table-overflow-container"></div>');
+   });
+   </script>
+ * 
+*/
+
+/* miscellaneous ---------------- */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+.print-only { 
+    display: none !important; 
+    visibility: hidden;
+}
 
 
 
@@ -1415,4 +1482,8 @@ textarea {
   h3 {
       page-break-after: avoid;
   }
+  .print-only { 
+      display: block !important; 
+  }
+
 }

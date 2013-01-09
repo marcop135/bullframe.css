@@ -1,6 +1,6 @@
 |/*!==========================================
  * 
- * BULLFRAME CSS
+ * BULLFRAME CSS 2.0
  * 
  * Description:
  * This is a "bulldozer" responsive CSS framework.
@@ -17,7 +17,7 @@
  * and random tips&tricks.
  * 
  * Browser Compatibility:
- * IE 7+, Firefox 4+, Safari 5+, Safari Mobile, Opera, Chrome, Android
+ * IE 7+, Firefox 4+, Safari 5+, Opera, Chrome, Android browser, Safari Mobile
  *
  * Author: Marco Pontili
  * Author URI: http://135design.com
@@ -450,15 +450,15 @@ fieldset {
     padding: 0;
 }
 legend { 
+    display: block;
+    width: 100%; /* enable line-wrapping in IE8+ */
     border: 0;
     padding: 0;
-    margin: 0;
-	white-space: normal;
-    display: table; /* Enable line-wrapping in IE8+ */
-	*display: block;
-	*overflow-x: auto;
-	*min-height: 40px;
+    margin-bottom: 1.25em;
     *margin-left: -7px;
+    *overflow-x: auto; /* create alternative to line-wrapping */
+    *margin-bottom: 0;
+    *min-height: 40px;
 }
 label { 
     cursor: pointer;
@@ -496,6 +496,7 @@ textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0 0 1.25em 0;
     font-size: 100%;
     vertical-align: baseline;
     *vertical-align: middle;
@@ -503,13 +504,6 @@ textarea {
 button, 
 input { 
     line-height: normal;
-}
-button,
-input[type="button"], 
-input[type="submit"], 
-input[type="reset"] {
-    margin: 0 0 1.25em 0;
-    padding: 0.3em;
 }
 input[type="color"], 
 input[type="email"], 
@@ -527,18 +521,19 @@ input[type="month"],
 input[type="time"], 
 input[type="week"], 
 input[type="time"], 
-input[type="url"], 
+input[type="url"],
 select, 
 textarea {
-    margin: 0 0 1.25em 0;
     padding: 0.3em;
-    *padding: 0.3em 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+    *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+    *padding-right: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
-input[type="file"],
-input[type="image"] {
-    margin: 0 0 1.25em 0;
+button,
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"] {
+    padding: 0.3em;
 }
-
 /* normalize borders and border-radius */
 input[type="color"], 
 input[type="email"], 
@@ -562,7 +557,6 @@ textarea {
     -moz-border-radius: 0;
     border-radius: 0;
 }
-
 /* normalize box-shadow */
 button:focus, 
 input:focus, 
@@ -602,7 +596,9 @@ input[type="file"] {
 input[type="radio"], 
 input[type="checkbox"] {
     padding: 0;
-    margin: 0 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    *margin-bottom: 0;
     *width: 13px;
     *height: 13px;
 }
@@ -925,7 +921,7 @@ a img.aligncenter {
    Author's custom styles (if necessary a single css file)
    ========================================================== */
 
-/* box-sizing (support: IE8+, compliant browser)
+/* box-model (no IE7 support)
 *, 
 *:before, 
 *:after { 
@@ -948,6 +944,7 @@ body {
 }
 a {
     color: ;
+    -webkit-tap-highlight-color: ;
 }
 a:hover,
 a:active {
@@ -955,14 +952,16 @@ a:active {
 } 
 ::-moz-selection {
     background: ;
+    color: ;
 }
 
 ::selection {
     background: ;
+    color: ;
 }
 */
 
-/* vertical rhythm
+/* body and headings 
 body {
     margin: ;
     padding: ;
@@ -1000,6 +999,9 @@ h6, .h6 {
     font-size: ;
     margin: 
 }
+*/
+
+/* vertical rhythm
 p,
 ul,
 ol,
@@ -1044,15 +1046,6 @@ table,
 */
 
 /* forms
-button,
-input[type="button"], 
-input[type="reset"],
-input[type="submit"] {
-    color: ;
-    background-color: ;
-    padding: ;
-    *padding: ;
-}
 input[type="color"], 
 input[type="email"], 
 input[type="image"], 
@@ -1071,8 +1064,30 @@ input[type="time"],
 input[type="url"],
 select, 
 textarea {
-    border: ;
+    border-color: ;
 }
+button,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+    padding: ;
+    *padding-left: ;
+    *padding-right: ;
+    color: ;
+    background-color: ;
+}
+button:hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+input[type="button"]:focus, 
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+    color: ;
+    background-color: ;
+}
+
 
 
 
@@ -1323,7 +1338,6 @@ textarea {
 */
 .table-overflow-container {
     overflow-x: scroll;
-    max-width: 100%;
     margin-bottom: 1.25em;
 }
 @media (min-width: 58.75em) { /* 940px */

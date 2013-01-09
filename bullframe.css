@@ -29,6 +29,8 @@
  * License:
  * https://github.com/marco135/bullframe.css/blob/master/license.md
  *
+ * Latest update: 01/09/2013
+ *
 ========================================== */
 
 
@@ -585,7 +587,7 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="tel"], 
 input[type="text"], 
 input[type="week"], 
-input[type="url"],	
+input[type="url"],    
 textarea { 
     -webkit-appearance: none;
 }

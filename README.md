@@ -1,4 +1,4 @@
-<h1>Bullframe CSS 2.0</h1>
+<h1>Bullframe CSS</h1>
 My personal "bulldozer" responsive CSS framework<br>
 <br>
 It's based on 7 github projects:

@@ -10,7 +10,7 @@ It's based on 7 github projects:
 - Inuit CSS by Harry Roberts https://github.com/csswizardry/inuit.css
 - YUI3 CSS Grids by Yahoo! https://github.com/yui/yui3
  
-It's includes useful tips for cross-browsing, responsive web design, 
+It includes useful tips for cross-browsing, responsive web design, 
 wordpress core, better typography, better forms, better links 
 and random tips&tricks.
 

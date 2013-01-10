@@ -1,17 +1,11 @@
-<h1>Bullframe CSS</h1>
-My personal "bulldozer" responsive CSS framework<br>
-<br>
-It's based on 7 github projects:
-- Normalize.css by Nicolas Gallagher https://github.com/necolas/normalize.css 
-- Formalize by Nathan Smith https://github.com/nathansmith/formalize
-- HTML5 Boilerplate CSS https://github.com/h5bp/html5-boilerplate
-- Bootstrap framework by Twitter https://github.com/twitter/bootstrap
-- 320 and Up by Andy Clarke https://github.com/malarkey/320andup/
-- Inuit CSS by Harry Roberts https://github.com/csswizardry/inuit.css
-- YUI3 CSS Grids by Yahoo! https://github.com/yui/yui3
- 
-It includes useful tips for cross-browsing, responsive web design, 
-wordpress core, better typography, better forms, better links 
-and random tips&tricks.
+<h1>BULLFRAME CSS</h1>
 
+This is the "bulldozer" CSS framework.
+It provides responsive web design starting-point and it includes flexible and rich typography, flexible cross-browser HTML5 forms, flexible grid system, 
+wordpress core styling, several helper classes and random tips&tricks.
+It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplate,Bootstrap, 320 and Up, Inuit CSS and YUI3 CSS Grids.
 
+Test the demo on JSBin: http://jsbin.com/oyasux/263/edit
+
+Browser Compatibility:
+Internet Explorer 7+, Firefox 4+, Safari 5+, Opera, Chrome, Safari Mobile, Android browser, IE Mobile

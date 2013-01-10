@@ -103,7 +103,7 @@ summary {
 }
 body { 
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.5;
     hyphens: auto;
 }
 body, 
@@ -129,7 +129,7 @@ h6,
 .h6 {
     font-family: inherit;
     font-weight: bold;
-    line-height: 1.4;
+    line-height: 1.5;
     color: inherit;
     text-rendering: optimizelegibility;
 
@@ -169,7 +169,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1.25em 0;
+    margin: 1.5em 0;
     padding: 0;
 }
 /* where to avoid css hyphenation 
@@ -204,11 +204,11 @@ q {
 address {
     display: block;
     font-style: italic;
-    margin-bottom: 1.25em;
-    line-height: 1.4;
+    margin-bottom: 1.5em;
+    line-height: 1.5;
 }
 blockquote { 
-    margin: 1.25em 0 1.25em 1.55em;
+    margin: 1.25em 0 1.5em 1.55em;
     padding-left: 1.25em;
     border-left: 2px solid #ccc;
 }
@@ -229,7 +229,7 @@ s {
 }
 p,
 pre {
-    margin: 1.25em 0;
+    margin: 1.5em 0;
 }
 pre, 
 code, 
@@ -343,7 +343,7 @@ menu,
 ol,
 ul,
 dl{
-    margin: 1.25em 0;
+    margin: 1.5em 0;
 }
 menu,
 ol,
@@ -395,7 +395,7 @@ audio,
 video,
 iframe,
 object {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
 }
 svg:not(:root) { 
     overflow: hidden;
@@ -454,7 +454,7 @@ legend {
     width: 100%; /* enable line-wrapping in IE8+ */
     border: 0;
     padding: 0;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
     *margin-left: -7px;
     *overflow-x: auto; /* create alternative to line-wrapping */
     *margin-bottom: 0;
@@ -496,7 +496,7 @@ textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0 0 1.25em 0;
+    margin: 0 0 1.5em 0;
     font-size: 100%;
     vertical-align: baseline;
     *vertical-align: middle;
@@ -677,7 +677,7 @@ table {
     max-width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
 } 
 thead th {
     vertical-align: bottom;
@@ -1157,11 +1157,11 @@ input[type="submit"]:focus {
 /* image positioning ---------------- */
 .img-left {
     float: left;
-    margin: 0 1.25em 1.25em 0;
+    margin: 0 1.5em 1.5em 0;
 }
 .img-right {
     float: right;
-    margin: 0 0 1.25em 1.25em;
+    margin: 0 0 1.5em 1.5em;
 }
 
 /* layout display ---------------- */
@@ -1313,7 +1313,7 @@ input[type="submit"]:focus {
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
 }
 .flex-video-container iframe,  
 .flex-video-container object,  
@@ -1338,7 +1338,7 @@ input[type="submit"]:focus {
 */
 .table-overflow-container {
     overflow-x: scroll;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
 }
 @media (min-width: 58.75em) { /* 940px */
    /* hide scrollbar */

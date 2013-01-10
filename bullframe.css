@@ -229,7 +229,7 @@ s {
 }
 p,
 pre {
-    margin: 1.25em 0;
+    margin: 0 0 1.25em 0;
 }
 pre, 
 code, 
@@ -1007,34 +1007,24 @@ h6, .h6 {
 */
 
 /* vertical rhythm
-p,
-pre,
+address,
+menu,
 ul,
 ol,
 dl,
 blockquote,
-hr,
-pre, 
-code, 
-kbd, 
-tt, 
-samp, 
-xmp {
+hr {
     margin-top: ;
 }
 p,
 pre,
+menu,
 ul,
 ol,
 dl,
 blockquote,
 hr,
-pre, 
-code, 
-kbd, 
-tt, 
-samp, 
-xmp, 
+pre,  
 canvas,
 audio,
 video,

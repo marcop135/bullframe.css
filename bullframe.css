@@ -102,8 +102,8 @@ summary {
     word-wrap: break-word;
 }
 body { 
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 1em; /* 16px */
+    line-height: 1.5; /* 24px */
     hyphens: auto;
 }
 body, 
@@ -121,8 +121,7 @@ h2,
 h3, 
 .h3
 h4,
-.h4 
-
+.h4,
 h5,
 .h5 
 h6,
@@ -229,7 +228,7 @@ s {
 }
 p,
 pre {
-    margin: 1.5em 0;
+    margin: 0 0 1.5em 0;
 }
 pre, 
 code, 
@@ -1001,46 +1000,31 @@ h6, .h6 {
 }
 */
 
-/* vertical rhythm
-p,
+/* preserve vertical rhythm
 ul,
 ol,
 dl,
 blockquote,
-hr,
-pre, 
-code, 
-kbd, 
-tt, 
-samp, 
-xmp {
+hr {
     margin-top: ;
 }
 p,
+pre, 
 ul,
 ol,
 dl,
 blockquote,
 hr,
-pre, 
-code, 
-kbd, 
-tt, 
-samp, 
-xmp, 
-canvas,
 audio,
 video,
 iframe,
 object,
-.flex-video-container,
 legend,
 button, 
 input, 
 select, 
 textarea,
-table,
-.table-overflow-container {
+table {
     margin-bottom: ;
 }
 */

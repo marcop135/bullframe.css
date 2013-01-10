@@ -1,33 +1,24 @@
-|/*!==========================================
+/*!==========================================
  * 
  * BULLFRAME CSS
  * 
- * Description:
- * This is a "bulldozer" responsive CSS framework.
- * It's based on 7 gitbhub projects:
- * - Normalize.css by Nicolas Gallagher https://github.com/necolas/normalize.css 
- * - Formalize by Nathan Smith https://github.com/nathansmith/formalize
- * - HTML5 Boilerplate CSS https://github.com/h5bp/html5-boilerplate
- * - Bootstrap framework by Twitter https://github.com/twitter/bootstrap
- * - 320 and Up by Andy Clarke https://github.com/malarkey/320andup/
- * - Inuit CSS by Harry Roberts https://github.com/csswizardry/inuit.css
- * - YUI3 CSS Grids by Yahoo! https://github.com/yui/yui3
- * It includes useful tips for cross-browsing, responsive web design, 
- * wordpress core styling, flexible and rich typography, flexible forms, accessible links 
- * and random tips&tricks.
+ * This is the "bulldozer" CSS framework.
+ * It provides responsive web design starting-point and it includes flexible and 
+ * rich typography, flexible cross-browser HTML5 forms, flexible grid system, 
+ * wordpress core styling, several helper classes and random tips&tricks.
+ * It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplate,
+ * Bootstrap, 320 and Up, Inuit CSS and YUI3 CSS Grids.
+ *
+ * Author: Marco Pontili - http://135design.com - @m135_
  * 
+ * Fork the project on Github: https://github.com/marco135/bullframe.css
+ * Test the demo on JSBin: http://jsbin.com/oyasux/263/edit
+ *
  * Browser Compatibility:
- * IE 7+, Firefox 4+, Safari 5+, Opera, Chrome, Android browser, Safari Mobile
+ * Internet Explorer 7+, Firefox 4+, Safari 5+, Opera, Chrome, 
+ * Safari Mobile, Android browser, IE Mobile
  *
- * Author: Marco Pontili
- * Author URI: http://135design.com
- * Author Twitter: @m135_
- * 
- * Github:
- * https://github.com/marco135/bullframe.css
- *
- * License:
- * https://github.com/marco135/bullframe.css/blob/master/license.md
+ * License: https://github.com/marco135/bullframe.css/blob/master/license.md
  *
 ========================================== */
 
@@ -58,21 +49,15 @@
 
 
 
-/* $ Reinforce the structure
+/* $ Basic structure
 ========================================== */
 
-html {
-    font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
 body {
-    min-width: 0;
     width: 92%;
     max-width: 960px;
     margin: auto;
     padding: 1.5em 10px 0 10px;
-    background: #fff;
+    background-color: #fff;
 }
 article,
 aside,
@@ -95,16 +80,19 @@ summary {
 /* $ Typography
 ========================================== */
 
-/* increase the flexibility of texts */
 *,
 *:after,
 *:before {
     word-wrap: break-word;
 }
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
 body { 
     font-size: 1em; /* 16px */
-    line-height: 1.5; /* 24px is the magic number (6px X 4) */
-    hyphens: auto;
+    line-height: 1.5; /* 24px is the magic number (6px * 4) */
 }
 body, 
 button, 
@@ -132,7 +120,6 @@ h6,
     line-height: 1.5;
     color: inherit;
     text-rendering: optimizelegibility;
-
 }
 h1,
 .h1 {
@@ -164,64 +151,35 @@ h6,
     font-size: 0.875em;
     margin-bottom: 1.5em;
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1.5em 0;
-    padding: 0;
-}
-/* where to avoid css hyphenation 
- * http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation/ 
-*/
-code, 
-var, 
-kbd, 
-samp, 
-tt, 
-dir, 
-listing, 
-plaintext, 
-xmp,
-abbr, 
-acronym, 
-blockquote, 
-q {
-    hyphens: none;
-}
 abbr[title], 
 acronym { 
     border-bottom: 1px dotted;
     cursor: help;
 }
-q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
-}
-q {
-    *quotes: none;
-}
-address {
-    display: block;
-    font-style: italic;
-    font-size: 0.875em;
-    margin-bottom: 1.5em;
-    line-height: 1.5;
-}
 blockquote { 
-    margin: 0 0 1.5em 1.55em;
+    margin: 0 0 1.5em 1.5em;
     padding-left: 1.25em;
     border-left: 2px solid #ccc;
 }
-ins { 
-    background: #ff9; /* light yellow */
-    color: #000; 
-    text-decoration: none;
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+   *content: '';
+   *content: none;
 }
 mark { 
     background: #ff0; /* yellow */
     color: #000;
     font-weight: bold;
+}
+ins { 
+    background: #ff9; /* light yellow */
+    color: #000; 
+    text-decoration: none;
 }
 del, 
 strike, 
@@ -236,9 +194,10 @@ p {
     font-size: 1em;
 }
 pre {
+    word-break: break-all;
+    word-wrap: break-word;
     white-space: pre;
     white-space: pre-wrap;
-    word-wrap: break-word;
 }
 pre, 
 code, 
@@ -283,6 +242,21 @@ small {
 }
 big { 
     font-size: 115%;
+}
+address {
+    display: block;
+    margin-bottom: 1.5em;
+    line-height: 1.5;
+    font-style: normal;
+    font-size: 1em;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1.5em 0;
+    padding: 0;
 }
 ::selection { 
     background: #b3d4fc; /* azure */
@@ -330,6 +304,30 @@ a:active {
 /* $ Lists
 ========================================== */
 
+menu {
+	margin: 0;
+}
+ol,
+ul,
+dl {
+    margin: 0 0 1.5em 0;
+}
+ul,
+ol {
+    margin: 0 0 1.5em 1.5em;
+    padding: 0 0 0 1.5em;
+}
+li ul,
+li ol {
+    margin: 0;
+}
+dd {
+    margin-left: 2.5em;
+}
+dt {
+    font-weight: bold;
+}
+/* reset */
 nav ol,
 nav ul,
 ul.unstyled,
@@ -343,39 +341,13 @@ ol.unstyled ul {
     list-style: none;
     list-style-image: none; /* IE7 */
 } 
-menu,
-ol,
-ul,
-dl {
-    margin: 1.5em 0;
-}
-menu,
-ol,
-ul,
-dd {
-    padding: 0 0 0 2.5em;
-}
-ul,
-ol {
-    margin: 0 0 1.5em 0;
-}
-li ul,
-li ol {
-    margin: 0;
-}
-dl dt {
-    font-weight: bold;
-}
-dl dd {
-    padding-left: 0;
-}
 
 
 
 
 
 
-/* $ Flex media content
+/* $ Flex media
 ========================================== */
 
 canvas, 
@@ -426,8 +398,8 @@ figure {
 figure img {
     margin-bottom: 1.5em;
 }
-figure figcaption {
-    margin-top: -1.5em;
+figcaption {
+	margin-top: -1.5em;
     margin-bottom: 1.5em;
 }
 /* google maps fix */
@@ -513,8 +485,8 @@ input,
 select, 
 textarea {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0 0 1.5em 0;
     font-size: 100%;
     vertical-align: baseline;
@@ -524,6 +496,66 @@ button,
 input { 
     line-height: normal;
 }
+
+/* normalization */
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select, 
+textarea {
+    border: 1px solid #999;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+}
+button:focus, 
+input:focus, 
+input[type="file"]:focus, 
+input[type="radio"]:focus, 
+input[type="checkbox"]:focus,
+input[type="file"]:active, 
+input[type="radio"]:active, 
+input[type="checkbox"]:active,
+select:focus, 
+textarea:focus,
+:invalid  {
+    -webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+            box-shadow: none;
+}
+input[type="color"], 
+input[type="email"], 
+input[type="image"], 
+input[type="number"],
+input[type="password"], 
+input[type="search"],
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="tel"], 
+input[type="text"], 
+input[type="week"], 
+input[type="url"],    
+textarea { 
+    -webkit-appearance: none;
+}
+input[type="checkbox"] {
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+}
+
 input[type="color"], 
 input[type="email"], 
 input[type="number"], 
@@ -547,71 +579,9 @@ textarea {
     *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
     *padding-right: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
-button,
-input[type="button"], 
-input[type="submit"], 
-input[type="reset"] {
-    padding: 0.3em;
-}
-/* normalize borders and border-radius */
-input[type="color"], 
-input[type="email"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="search"],
-input[type="text"], 
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
-input[type="url"],
-select, 
-textarea {
-    border: 1px solid #999;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
-/* normalize box-shadow */
-button:focus, 
-input:focus, 
-input[type="file"]:focus, 
-input[type="radio"]:focus, 
-input[type="checkbox"]:focus,
-input[type="file"]:active, 
-input[type="radio"]:active, 
-input[type="checkbox"]:active,
-select:focus, 
-textarea:focus,
-:invalid  {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-/* normalize webkit browsers appearance */
-input[type="color"], 
-input[type="email"], 
-input[type="image"], 
-input[type="number"],
-input[type="password"], 
-input[type="search"],
-input[type="search"]::-webkit-search-decoration, 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="tel"], 
-input[type="text"], 
-input[type="week"], 
-input[type="url"],    
-textarea { 
-    -webkit-appearance: none;
-}
 input[type="file"] {
     cursor: pointer;
 }
-/* normalize checkbox and radio inputs */
 input[type="radio"], 
 input[type="checkbox"] {
     padding: 0;
@@ -621,16 +591,12 @@ input[type="checkbox"] {
     *width: 13px;
     *height: 13px;
 }
-input[type="checkbox"] {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
 button,
 html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-    cursor: pointer;
+    padding: 0.3em;
+	cursor: pointer;
     *overflow: visible;
     -webkit-appearance: button;
 }
@@ -701,12 +667,6 @@ table {
 thead th {
     vertical-align: bottom;
 }
-th,
-td { 
-    vertical-align: top;
-    padding: 0.5em;
-    border: 1px solid #999;
-}
 th {
     font-weight: bold;
 }
@@ -714,13 +674,19 @@ th,
 caption { 
     text-align: left;
 }
+th,
+td { 
+    vertical-align: top;
+    padding: 0.5em;
+    border: 1px solid #999;
+}
 
 
 
 
 
 /*
- * Modified YUI 3.8.0 CSS grid system
+ * $ Modified YUI 3.8.0 CSS grid system
  *
  * Original docs: http://yuilibrary.com/yui/docs/cssgrids/
  * Original source: http://yui.yahooapis.com/3.8.0/build/cssgrids/grids.css
@@ -935,12 +901,11 @@ a img.aligncenter {
 
 
 
-
 /* =============================================================
-   Author's custom styles (if necessary a single css file)
+   $ Author's custom styles
    ========================================================== */
 
-/* box-model (no IE7 support)
+/* box-model (no IE7 support) ----------------
 *, 
 *:before, 
 *:after { 
@@ -950,7 +915,14 @@ a img.aligncenter {
 }
 */
 
-/* skin
+/* body ----------------
+body {
+    margin: ;
+    padding: ;
+}
+*/
+
+/* skin ----------------
 body,
 button,
 input,
@@ -973,57 +945,70 @@ a:active {
     background: ;
     color: ;
 }
-
 ::selection {
     background: ;
     color: ;
 }
 */
 
-/* body and headings 
+/* text ----------------
 body {
-    margin: ;
-    padding: ;
-    line-height: ;
+	font-size: ;
 }
 h1, .h1 {
     font-size: ;
-    margin-bottom: ;
 }
 h2, .h2 {
     font-size: ;
-    margin-bottom: ;
 }
 h3, .h3 {
     font-size: ;
-    margin-bottom: ;
 }
 h4, .h4 {
     font-size: ;
-    margin-bottom: ;
 }
 h5, .h5 {
     font-size: ;
-    margin-bottom: ;
 }
 h6, .h6 {
     font-size: ;
-    margin-bottom: ;
+}
+p {
 }
 */
 
 /* preserve vertical rhythm
-menu,
-ol,
-ul,
-dl,
-hr {
-    margin-top: ;
+body {
+    line-height: ;
+}
+h1, .h1 {
+	line-height: ;
+    margin-bottom: ;
+}
+h2, .h2 {
+	line-height: ;
+    margin-bottom: ;
+}
+h3, .h3 {
+	line-height: ;
+    margin-bottom: ;
+}
+h4, .h4 {
+	line-height: ;
+    margin-bottom: ;
+}
+h5, .h5 {
+	line-height: ;
+    margin-bottom: ;
+}
+h6, .h6 {
+	line-height: ;
+    margin-bottom: ;
 }
 p,
 pre, 
-ul,
 ol,
+ul,
 dl,
 blockquote,
 hr,
@@ -1031,12 +1016,14 @@ audio,
 video,
 iframe,
 object,
+.flex-video-container,
 legend,
 button, 
 input, 
 select, 
 textarea,
-table {
+table,
+.table-overflow-container {
     margin-bottom: ;
 }
 */
@@ -1083,10 +1070,6 @@ input[type="submit"]:focus {
     color: ;
     background-color: ;
 }
-
-
-
-
 
 
 
@@ -1339,7 +1322,7 @@ input[type="submit"]:focus {
 @media (min-width: 58.75em) { /* 940px */
    /* hide scrollbar */
   .table-overflow-container {
-      overflow-x: auto;
+		overflow-x: auto;
   }
 }  
 .table-overflow-container table {
@@ -1372,16 +1355,10 @@ input[type="submit"]:focus {
 
 
 
-
-/* 
- * $ (Proportional) Media Queries  
- * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
- *
+/* $ High resolution devices (retina)
+ * http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/ 
 ========================================== */
 
-/* high resolution devices (retina)
- * http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/ 
- */
 @media (min--moz-device-pixel-ratio: 1.5),
        (-o-min-device-pixel-ratio: 3/2),
        (-webkit-min-device-pixel-ratio: 1.5),
@@ -1391,45 +1368,44 @@ input[type="submit"]:focus {
 
 }
 
+
+
+
+
+/* 
+ * $ (Proportional) Media Queries  
+ * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
+========================================== */
+
 /* 1200px */
 @media only screen and (max-width: 75em) {
 
 }
-
 /* 1024px */
 @media only screen and (max-width: 64em) {
 
 }
-
 /* 960px */
 @media only screen and (max-width: 60em) {
 
 }
 
-
 /* 800px */
 @media only screen and (max-width: 50em) {
 
 }
-
-
 /* 768px */
 @media only screen and (max-width: 48em) {
 
 }
-
-
 /* 640 */
 @media only screen and (max-width: 40em) {
 
 }
-
-
 /* 480px */
 @media only screen and (max-width: 30em) {
 
 }
-
 /* 320px */
 @media only screen and (max-width: 20em) {
 
@@ -1438,8 +1414,8 @@ input[type="submit"]:focus {
 
 
 
-
-
+/* $ Print
+========================================== */
 
 @media print {
   * {

@@ -9,3 +9,4 @@ It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplat
 
 <b>Browser Compatibility:</b><br>
 Internet Explorer 7+, Firefox 4+, Safari 5+, Opera, Chrome, Safari Mobile, Android browser, IE Mobile
+ 

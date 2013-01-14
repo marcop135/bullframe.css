@@ -1287,6 +1287,20 @@ input[type="submit"]:focus {
     border: 0 !important;
 }
 
+/* text utilities */
+.text-truncate {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.text-break {
+    word-break: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
 /* responsive ---------------- */
 .flex-video-container {
     position: relative;

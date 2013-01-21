@@ -301,9 +301,7 @@ a:active {
 /* $ Lists
 ========================================== */
 
-menu {
-	margin: 0;
-}
+menu,
 ol,
 ul,
 dl {
@@ -1020,7 +1018,8 @@ h6, .h6 {
     margin-bottom: ;
 }
 p,
-pre, 
+pre,
+menu, 
 ol,
 ul,
 dl,

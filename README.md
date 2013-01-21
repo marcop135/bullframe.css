@@ -5,7 +5,7 @@ It provides <b>responsive web design</b> starting-point and it includes flexible
 wordpress core styling, several helper classes and random tips&tricks.<br>
 It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplate,Bootstrap, 320 and Up, Inuit CSS and YUI3 CSS Grids.</p>
 
-<p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/284/edit</p>
+<p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/287/edit</p>
 
 <b>Browser Compatibility</b>
 <ul>

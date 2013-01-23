@@ -417,6 +417,15 @@ figcaption {
 .twitter-tweet-rendered {
     max-width: 100% !important;
 }
+/* prevent phone numbers looking twice as large and having a Skype highlight 
+ * https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
+ */
+span.skype_pnh_container {
+    display: none !important;
+}
+span.skype_pnh_print_container {
+    display: inline !important;
+}
 
 
 

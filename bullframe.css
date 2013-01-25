@@ -23,10 +23,11 @@
 ========================================== */
 
 
-
+ 
 
 
 /* $ Future-friendly @viewport rule
+ * read more: http://menacingcloud.com/?c=cssViewportOrMetaTag
 ========================================== */
 
 @-webkit-viewport { 
@@ -36,10 +37,10 @@
     width: device-width;
 }
 @-ms-viewport { 
-    width: device-width;
+    width: device-width; /* IE10+ (Win Phone 8 and Win 8 'snap mode') */
 }
 @-o-viewport { 
-    width: device-width;
+    width: device-width; /* Opera Mobile 11+ */
 }
 @viewport { 
     width: device-width;

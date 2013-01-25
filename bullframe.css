@@ -258,15 +258,21 @@ hr {
     margin: 1.5em 0;
     padding: 0;
 }
-::selection { 
+::-moz-selection {
     background: #b3d4fc; /* azure */
+    color: #000;
+    text-shadow: none;
+}
+::selection { 
+    background: #b3d4fc; 
     color: #000; 
     text-shadow: none;
 }
-::-moz-selection {
-    background: #b3d4fc; 
-    color: #000;
-    text-shadow: none;
+img::-moz-selection { 
+    background-color: transparent; 
+}
+img::selection  { 
+    background-color: transparent;      
 }
 
 

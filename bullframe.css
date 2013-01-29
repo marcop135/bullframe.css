@@ -1,26 +1,11 @@
 /*!========================================== 
- * 
  * BULLFRAME CSS
- * 
- * This is the "bulldozer" CSS framework.
- * It provides responsive web design starting-point and it includes flexible and 
- * rich typography, flexible cross-browser HTML5 forms, flexible grid system, 
- * wordpress core styling, several helper classes and random tips&tricks.
- * It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplate,
- * Bootstrap, 320 and Up, Inuit CSS and YUI3 CSS Grids.
+ * The "bulldozer" CSS framework.
  *
+ * More info: https://raw.github.com/marco135/bullframe.css/
  * Author: Marco Pontili - http://135design.com - @m135_
- * 
- * Fork the project on Github: https://github.com/marco135/bullframe.css
- * Test the demo on JSBin: http://jsbin.com/oyasux/263/edit
- *
- * Browser Compatibility:
- * Internet Explorer 7+, Firefox 4+, Safari 5+, Opera, Chrome, 
- * Safari Mobile, Android browser, IE Mobile
- *
  * License: https://github.com/marco135/bullframe.css/blob/master/license.md
- *
-========================================== */
+ ========================================== */
 
 
  
@@ -50,15 +35,15 @@
 
 
 
-/* $ Basic structure
+/* $ The basics
 ========================================== */
 
 body {
-    width: 92%;
-    max-width: 960px;
-    margin: auto;
-    padding: 1.5em 10px 0 10px;
-    background-color: #fff;
+  width: 92%;
+  max-width: 960px;
+  margin: auto;
+  padding: 1.5em 10px 0 10px;
+  background-color: #fff;
 }
 article,
 aside,
@@ -72,9 +57,18 @@ main,
 nav,
 section,
 summary { 
-    display: block;
+  display: block;
 }
-
+canvas, 
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+} 
+audio:not([controls]) { 
+  display: none;
+  height: 0;
+}
 
 
 
@@ -85,24 +79,24 @@ summary {
 *,
 *:after,
 *:before {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 html {
-    font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 }
 body { 
-    font-size: 1em; /* 16px */
-    line-height: 1.5; /* 24px is the magic number */
+  font-size: 1em; /* 16px */
+  line-height: 1.5; /* 24px is the magic number */
 }
 body, 
 button, 
 input, 
 select, 
 textarea {
-    font-family: Arial, Verdana, sans-serif;
-    color: #222;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  color: #222;
 }
 h1,
 .h1, 
@@ -116,89 +110,87 @@ h5,
 .h5 
 h6,
 .h6 {
-    font-family: inherit;
-    font-weight: bold;
-    margin-top: 0;
-    line-height: 1.5;
-    color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 1.5;
+  color: inherit;
 }
 h1,
 .h1 {
-    font-size: 2em;
-    margin-bottom: 0.75em;
+  font-size: 2em;
+  margin-bottom: 0.75em;
 }
 h2,
 .h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.75em;
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
 }
 h3,
 .h3 {
-    font-size: 1.3125em;
-    margin-bottom: 1em;
+  font-size: 1.3125em;
+  margin-bottom: 1em;
 }
 h4,
 .h4 {
-    font-size: 1.125em;
-    margin-bottom: 1.5em;
+  font-size: 1.125em;
+  margin-bottom: 1.5em;
 }
 h5,
 .h5  {
-    font-size: 1em;
-    margin-bottom: 1.5em;
+  font-size: 1em;
+  margin-bottom: 1.5em;
 }
 h6,
 .h6  {
-    font-size: 0.875em;
-    margin-bottom: 1.5em;
+  font-size: 0.875em;
+  margin-bottom: 1.5em;
 }
 abbr[title], 
 acronym { 
-    border-bottom: 1px dotted;
-    cursor: help;
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 blockquote { 
-    margin: 0 0 1.5em 1.5em;
-    padding-left: 1.25em;
-    border-left: 2px solid #ccc;
+  margin: 0 0 1.5em 1.5em;
+  padding-left: 1.25em;
+  border-left: 2px solid #ccc;
 }
 q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
-blockquote:before,
-blockquote:after,
 q:before,
 q:after {
-   *content: '';
-   *content: none;
+  *content: '';
+  *content: none;
 }
 mark { 
-    background: #ff0; /* yellow */
-    color: #000;
-    font-weight: bold;
+  background: #ff0; /* yellow */
+  color: #000;
+  font-weight: bold;
 }
 ins { 
-    background: #ff9; /* light yellow */
-    color: #000; 
-    text-decoration: none;
+  background: #ff9; /* light yellow */
+  color: #000; 
+  text-decoration: none;
 }
 del, 
 strike, 
 s { 
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 p,
 pre {
-    margin: 0 0 1.5em 0;
+  margin: 0 0 1.5em 0;
 }
 p {
-    font-size: 1em;
+  font-size: 1em;
 }
 pre {
-    word-break: break-all;
-    word-wrap: break-word;
-    white-space: pre;
-    white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
 }
 pre, 
 code, 
@@ -206,12 +198,12 @@ kbd,
 tt, 
 samp, 
 xmp {
-    font-family: Monaco, Consolas, "Courier New", Courier, monospace; 
-    font-size: 1em;
+  font-family: Monaco, Consolas, "Courier New", Courier, monospace; 
+  font-size: 1em;
 }
 strong, 
 b { 
-    font-weight: bold;
+  font-weight: bold;
 }
 address, 
 em, 
@@ -220,60 +212,60 @@ cite,
 dfn, 
 dfn[title], 
 var { 
-    font-style: italic;
+  font-style: italic;
 }
 u { 
-    text-decoration: underline;
+  text-decoration: underline;
 }
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 small {
-    font-size: 85%;
+  font-size: 85%;
 }
 big { 
-    font-size: 115%;
+  font-size: 115%;
 }
 address {
-    display: block;
-    margin-bottom: 1.5em;
-    line-height: 1.5;
-    font-style: normal;
-    font-size: 1em;
+  display: block;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+  font-style: normal;
+  font-size: 1em;
 }
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1.5em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.5em 0;
+  padding: 0;
 }
 ::-moz-selection {
-    background: #b3d4fc; /* azure */
-    color: #000;
-    text-shadow: none;
+  background: #b3d4fc; /* azure */
+  color: #000;
+  text-shadow: none;
 }
 ::selection { 
-    background: #b3d4fc; 
-    color: #000; 
-    text-shadow: none;
+  background: #b3d4fc; 
+  color: #000; 
+  text-shadow: none;
 }
 img::-moz-selection { 
-    background-color: transparent; 
+  background-color: transparent; 
 }
 img::selection  { 
-    background-color: transparent;      
+  background-color: transparent;      
 }
 
 
@@ -284,21 +276,19 @@ img::selection  {
 ========================================== */
 
 a { 
-    color: #1467ff; /* blue */
-    text-decoration: none;
-}
-a { 
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5); /* 50% black */
+  color: #1467ff; /* blue */
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); /* 35% black */
 }
 a:focus { 
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color; /* webkit */
-    outline-offset: -2px;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color; /* webkit */
+  outline-offset: -2px;
 } 
 a:hover, 
 a:active { 
-    color: #002b7a; /* dark blue */
-    outline: 0;
+  color: #002b7a; /* dark blue */
+  outline: 0;
 }
 
 
@@ -312,21 +302,22 @@ menu,
 ol,
 ul,
 dl {
-    margin: 0 0 1.5em 0;
+  margin: 0 0 1.5em 0;
 }
 ul,
 ol {
-    margin: 0 0 1.5em 1.5em;
-    padding: 0 0 0 1.5em;
+  margin: 0 0 1.5em 1.5em;
+  padding: 0 0 0 1.5em;
 }
 li ul,
 li ol,
 dd {
-    margin: 0;
+  margin: 0;
 }
 dt {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 /* reset */
 nav ol,
 nav ul,
@@ -336,10 +327,10 @@ ul.unstyled ul,
 ol.unstyled ol,
 ul.unstyled ol,
 ol.unstyled ul { 
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    list-style-image: none; /* IE7 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-image: none; /* lte-IE8 */
 } 
 
 
@@ -347,91 +338,91 @@ ol.unstyled ul {
 
 
 
-/* $ Flex media
+/* $ Flexible media
 ========================================== */
 
-canvas, 
+img {
+  width: auto\9; /* IE8 */
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+img,
 video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-} 
-video {
-    height: auto;
+  height: auto !important; /* just in case, to force correct aspet ratio */
 }
-audio:not([controls]) { 
-    display: none;
-    height: 0;
+audio {
+  width: 100%;
 }
-[hidden] { 
-    display: none;
-}
+img,
 canvas,
 audio,
 video,
 iframe,
 object,
 embed {
-    max-width: 100%;
+  max-width: 100%;
 }
 canvas,
 audio,
 video,
 iframe,
 object {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 svg:not(:root) { 
-    overflow: hidden;
+  overflow: hidden;
 }
-img {
-    width: auto\9; /* IE8 */
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-}
-figure {
-    margin: 0;
-}
-figure img {
-    margin-bottom: 1.5em;
-}
-figcaption {
-    margin-top: -1.5em;
-    margin-bottom: 1.5em;
-}
+
 /* google maps fix */
 #map_canvas img,
+#mapCanvas img,
 .google-maps img {
-    max-width: none;
-}
-#mapCanvas img { 
-    max-width: none;
+  max-width: none;
 }
 #mapCanvas label { 
-    width: auto; 
-    display: inline;
+  width: auto; 
+  display: inline;
 }
+
 /* override the Facebook comments embed fixed width */
 .fb-comments, 
 .fb-comments span, 
 .fb-comments iframe {
-    width: 100% !important;
+  width: 100% !important;
 }
+
 /* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
-    max-width: 100% !important;
+  max-width: 100% !important;
 }
+
 /* prevent phone numbers looking twice as large and having a Skype highlight 
  * https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
  */
 span.skype_pnh_container {
-    display: none !important;
+  display: none !important;
 }
 span.skype_pnh_print_container {
-    display: inline !important;
+  display: inline !important;
+}
+
+
+
+
+
+/* $ Figures
+========================================== */
+
+figure {
+  margin: 0;
+}
+figure img {
+  margin-bottom: 1.5em;
+}
+figcaption {
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
 }
 
 
@@ -442,24 +433,24 @@ span.skype_pnh_print_container {
 ========================================== */
 
 form {
-    margin: 0;
+  margin: 0;
 }
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 legend { 
-    display: block;
-    width: 100%; /* enable line-wrapping in IE8+ */
-    border: 0;
-    padding: 0;
-    *margin-left: -7px;
-    *overflow-x: auto; /* create alternative to line-wrapping */
-    *min-height: 40px;
+  display: block;
+  width: 100%; /* enable line-wrapping in IE8+ */
+  border: 0;
+  padding: 0;
+  *margin-left: -7px;
+  *overflow-x: auto; /* create alternative to line-wrapping */
+  *min-height: 40px;
 }
 label { 
-    cursor: pointer;
+  cursor: pointer;
 }
 /* makes flexible forms (but do not touch the buttons) */
 input[type="color"], 
@@ -482,22 +473,22 @@ input[type="time"],
 input[type="url"], 
 select, 
 textarea {
-    width: 100%;
-    *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
-    max-width: 100%;
-    display: block;
+  display: block;
+  width: 100%;
+  *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
+  max-width: 100%;
 }
 button, 
 input, 
 select, 
 textarea {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0 0 1.5em 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    *vertical-align: middle;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 0 1.5em 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  *vertical-align: middle;
 }
 
 /* normalization */
@@ -518,10 +509,10 @@ input[type="time"],
 input[type="url"],
 select, 
 textarea {
-    border: 1px solid #999;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
+  border: 1px solid #999;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 input[type="color"], 
 input[type="email"], 
@@ -536,12 +527,12 @@ input[type="text"],
 input[type="week"], 
 input[type="url"],    
 textarea { 
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 input[type="checkbox"] {
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 input[type="color"], 
 input[type="email"], 
@@ -562,42 +553,42 @@ input[type="time"],
 input[type="url"],
 select, 
 textarea {
-    padding: 0.3em;
-    *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
-    *padding-right: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  padding: 0.3em;
+  *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
 input[type="file"] {
-    cursor: pointer;
+  cursor: pointer;
 }
 input[type="radio"], 
 input[type="checkbox"] {
-    padding: 0;
-    margin-left: 5px;
-    margin-right: 5px;
-    *margin-bottom: 0;
-    *width: 13px;
-    *height: 13px;
+  padding: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  *margin-bottom: 0;
+  *width: 13px;
+  *height: 13px;
 }
 button,
 html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-    padding: 0.3em;
-    cursor: pointer;
-    *overflow: visible;
-    -webkit-appearance: button;
+  padding: 0.3em;
+  cursor: pointer;
+  *overflow: visible;
+  -webkit-appearance: button;
 }
 button, 
 input { 
-    line-height: normal;
+  line-height: normal;
 }
 button {
-    text-transform: none;
+  text-transform: none;
 }
 button::-moz-focus-inner, 
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }	
 button:focus, 
 input:focus, 
@@ -610,45 +601,45 @@ input[type="checkbox"]:active,
 select:focus, 
 textarea:focus,
 :invalid  {
-    -webkit-box-shadow: none;
-	     -moz-box-shadow: none;
-            box-shadow: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 }	
 button:focus, 
 input:focus, 
 select:focus, 
 textarea:focus {
-    z-index: 1;
+  z-index: 1;
 }
 select {
-    text-transform: none;
+  text-transform: none;
 }
 select[size], 
 select[multiple] { 
-    height: auto;
+  height: auto;
 }
 textarea {
-    height: auto;
-    min-height: 40px;
-    overflow: auto;
-    vertical-align: top;
-    resize: vertical;
+  height: auto;
+  min-height: 40px;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
 }
 input:invalid, 
 textarea:invalid { 
-    background-color: #f0dddd; /* light pink */
+  background-color: #f0dddd; /* light pink */
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #888; /* gray */
+  color: #888; /* gray */
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-    color: #888;
+  color: #888;
 }
 input:placeholder,
 textarea:placeholder {
-    color: #888;
+  color: #888;
 }
 button[disabled],
 html input[disabled], 
@@ -658,9 +649,12 @@ button[readonly],
 input[readonly], 
 select[readonly], 
 textarea[readonly] {
-    opacity: 0.5;
-    cursor: default;
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: default;
+  cursor: not-allowed;
+}
+[hidden] { 
+  display: none;
 }
 
 
@@ -670,27 +664,27 @@ textarea[readonly] {
 ========================================== */
 
 table {
-    width: 100%;
-    max-width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin-bottom: 1.5em;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1.5em;
 } 
 thead th {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 th {
-    font-weight: bold;
+  font-weight: bold;
 }
 th,
 caption { 
-    text-align: left;
+  text-align: left;
 }
 th,
 td { 
-    vertical-align: top;
-    padding: 0.5em;
-    border: 1px solid #999;
+  vertical-align: top;
+  padding: 0.5em;
+  border: 1px solid #999;
 }
 
 
@@ -698,16 +692,16 @@ td {
 
 
 /*
- * $ Modified YUI 3.8.0 CSS grid system
+ * $ Modified YUI 3.8.1 CSS grid system
  *
- * Original docs: http://yuilibrary.com/yui/docs/cssgrids/
- * Original source: http://yui.yahooapis.com/3.8.0/build/cssgrids/grids.css
+ * YUI docs: http://yuilibrary.com/yui/docs/cssgrids/
+ * YUI source code: http://yui.yahooapis.com/3.8.1/build/cssgrids/grids.css
 ========================================== */
 
 .y-grid {
-    letter-spacing: -0.31em; /* webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    word-spacing: -0.43em; /* IE < 8 && gecko: collapse white-space between units */
+  letter-spacing: -0.31em; /* webkit: collapse white-space between units */
+  *letter-spacing: normal;
+  word-spacing: -0.43em; /* lte-IE8 && gecko: collapse white-space between units */
 }
 .y-unit,
 .y-unit-1,
@@ -738,171 +732,170 @@ td {
 .y-unit-17-24,
 .y-unit-19-24,
 .y-unit-23-24 {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1; 
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; 
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
 }
 .y-unit-1 {
-    display: block;
+  display: block;
 }
 .y-unit-1-2 {
-    width: 50%;
+  width: 50%;
 }
 .y-unit-1-3 {
-    width: 33.33333%;
+  width: 33.33333%;
 }
 .y-unit-2-3 {
-    width: 66.66666%;
+  width: 66.66666%;
 }
 .y-unit-1-4 {
-    width: 25%;
+  width: 25%;
 }
 .y-unit-3-4 {
-    width: 75%;
+  width: 75%;
 }
 .y-unit-1-5 {
-    width: 20%;
+  width: 20%;
 }
 .y-unit-2-5 {
-    width: 40%;
+  width: 40%;
 }
 .y-unit-3-5 {
-    width: 60%;
+  width: 60%;
 }
 .y-unit-4-5 {
-    width: 80%;
+  width: 80%;
 }
 .y-unit-1-6 {
-    width: 16.656%;
+  width: 16.656%;
 }
 .y-unit-5-6 {
-    width: 83.33%;
+  width: 83.33%;
 }
 .y-unit-1-8 {
-    width: 12.5%;
+  width: 12.5%;
 }
 .y-unit-3-8 {
-    width: 37.5%;
+  width: 37.5%;
 }
 .y-unit-5-8 {
-    width: 62.5%;
+  width: 62.5%;
 }
 .y-unit-7-8 {
-    width: 87.5%;
+  width: 87.5%;
 }
 .y-unit-1-12 {
-    width: 8.3333%;
+  width: 8.3333%;
 }
 .y-unit-5-12 {
-    width: 41.6666%;
+  width: 41.6666%;
 }
 .y-unit-7-12 {
-    width: 58.3333%;
+  width: 58.3333%;
 }
 .y-unit-11-12 {
-    width: 91.6666%;
+  width: 91.6666%;
 }
 .y-unit-1-24 {
-    width: 4.1666%;
+  width: 4.1666%;
 }
 .y-unit-5-24 {
-    width: 20.8333%;
+  width: 20.8333%;
 }
 .y-unit-7-24 {
-    width: 29.1666%;
+  width: 29.1666%;
 }
 .y-unit-11-24 {
-    width: 45.8333%;
+  width: 45.8333%;
 }
 .y-unit-13-24 {
-    width: 54.1666%;
+  width: 54.1666%;
 }
 .y-unit-17-24 {
-    width: 70.8333%;
+  width: 70.8333%;
 }
 .y-unit-19-24 {
-    width: 79.1666%;
+  width: 79.1666%;
 }
 .y-unit-23-24 {
-    width: 95.8333%;
+  width: 95.8333%;
 }
 
 
 
 
 /* $ Wordpress Core
- *
  * http://codex.wordpress.org/CSS
    ============================================================= */
 
 .alignnone {
-    margin: 5px 20px 20px 0;
+  margin: 5px 20px 20px 0;
 }
 .aligncenter,
 div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+  display: block;
+  margin: 5px auto 5px auto;
 }
 .alignright {
-    float:right;
-    margin: 5px 0 20px 20px;
+  float:right;
+  margin: 5px 0 20px 20px;
 }
 .alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+  float: left;
+  margin: 5px 20px 20px 0;
 }
 .aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+  display: block;
+  margin: 5px auto 5px auto;
 }
 a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
+  float: right;
+  margin: 5px 0 20px 20px;
 }
 a img.alignnone {
-    margin: 5px 20px 20px 0;
+  margin: 5px 20px 20px 0;
 }
 a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+  float: left;
+  margin: 5px 20px 20px 0;
 }
 a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 .wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
 }
 .wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
+  margin: 5px 20px 20px 0;
 }
 .wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
+  margin: 5px 20px 20px 0;
 }
 .wp-caption.alignright {
-    margin: 5px 0 20px 20px;
+  margin: 5px 0 20px 20px;
 }
 .wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
 }
 .wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
 }
 
 
@@ -921,18 +914,18 @@ a img.aligncenter {
 *, 
 *:before, 
 *:after { 
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box; 
 }
 */
 
 /* body ----------------
 body {
-    width: ;
-    max-width: ;
-    margin: ;
-    padding: ;
+  width: ;
+  max-width: ;
+  margin: ;
+  padding: ;
 }
 */
 
@@ -942,50 +935,56 @@ button,
 input,
 select,
 textarea {
-    color: ;
+  color: ;
 }
 body {
-    background-color: ;
+  background-color: ;
 }
 a {
-    color: ;
-    -webkit-tap-highlight-color: ;
+  color: ;
+  -webkit-tap-highlight-color: ;
 }
 a:hover,
 a:active {
-    color: ;
+  color: ;
 } 
 ::-moz-selection {
-    background: ;
-    color: ;
+  background: ;
+  color: ;
 }
 ::selection {
-    background: ;
-    color: ;
+  background: ;
+  color: ;
 }
 */
 
 /* font-sizing ----------------
 body {
-    font-size: ;
+  font-size: ;
 }
-h1, .h1 {
-    font-size: ;
+h1, 
+.h1 {
+  font-size: ;
 }
-h2, .h2 {
-    font-size: ;
+h2, 
+.h2 {
+  font-size: ;
 }
-h3, .h3 {
-    font-size: ;
+h3, 
+.h3 {
+  font-size: ;
 }
-h4, .h4 {
-    font-size: ;
+h4, 
+.h4 {
+  font-size: ;
 }
-h5, .h5 {
-    font-size: ;
+h5, 
+.h5 {
+  font-size: ;
 }
-h6, .h6 {
-    font-size: ;
+h6, 
+.h6 {
+  font-size: ;
 }
 p,
 pre, 
@@ -995,43 +994,49 @@ tt,
 samp, 
 xmp,
 address {
-    font-size: ;
+  font-size: ;
 }
 button, 
 input, 
 select, 
 textarea { 
-    font-size: ;
+  font-size: ;
 }
 */
 
 /* vertical rhythm ---------------- 
 body {
-    line-height: ;
+   line-height: ;
 }
-h1, .h1 {
-    line-height: ;
-    margin-bottom: ;
+h1, 
+.h1 {
+  line-height: ;
+  margin-bottom: ;
 }
-h2, .h2 {
-    line-height: ;
-    margin-bottom: ;
+h2, 
+.h2 {
+  line-height: ;
+  margin-bottom: ;
 }
-h3, .h3 {
-    line-height: ;
-    margin-bottom: ;
+h3, 
+.h3 {
+  line-height: ;
+  margin-bottom: ;
 }
-h4, .h4 {
-    line-height: ;
-    margin-bottom: ;
+h4, 
+.h4 {
+  line-height: ;
+  margin-bottom: ;
 }
-h5, .h5 {
-    line-height: ;
-    margin-bottom: ;
+h5, 
+.h5 {
+  line-height: ;
+  margin-bottom: ;
 }
-h6, .h6 {
-    line-height: ;
-    margin-bottom: ;
+h6, 
+.h6 {
+  line-height: ;
+  margin-bottom: ;
 }
 p,
 pre,
@@ -1054,7 +1059,7 @@ select,
 textarea,
 table,
 .table-overflow-container {
-    margin-bottom: ;
+  margin-bottom: ;
 }
 */
 
@@ -1077,17 +1082,17 @@ input[type="time"],
 input[type="url"],
 select, 
 textarea {
-    border-color: ;
+  border-color: ;
 }
 button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-    padding: ;
-    *padding-left: ;
-    *padding-right: ;
-    color: ;
-    background-color: ;
+  padding: ;
+  *padding-left: ;
+  *padding-right: ;
+  color: ;
+  background-color: ;
 }
 button:hover,
 input[type="button"]:hover, 
@@ -1097,8 +1102,8 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-    color: ;
-    background-color: ;
+  color: ;
+  background-color: ;
 }
 
 
@@ -1116,114 +1121,114 @@ input[type="submit"]:focus {
 /* micro-clearfix ---------------- */ 
 .clearfix:before, 
 .clearfix:after { 
-    content: ""; 
-    display: table;
-    line-height: 0; 
+  content: ""; 
+  display: table;
+  line-height: 0; 
 }
 .clearfix:after { 
-    clear: both;
+  clear: both;
 }  
 .clearfix { 
-    *zoom: 1;
+  *zoom: 1;
 }
 
 /* image replacement ---------------- */
 .img-r { 
-    display: block;
-    border: 0; 
-    text-indent: -999em; 
-    overflow: hidden; 
-    background-color: transparent; 
-    background-repeat: no-repeat; 
-    text-align: left; 
-    direction: ltr;
-    *line-height: 0;
+  display: block;
+  border: 0; 
+  text-indent: -9999px; 
+  overflow: hidden; 
+  background-color: transparent; 
+  background-repeat: no-repeat; 
+  text-align: left; 
+  direction: ltr;
+  *line-height: 0;
 }
 .img-r br { 
-    display: none;
+  display: none;
 }
 /* h5bp class */
 .ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px; /* IE 6/7 fallback */
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; /* IE 7 fallback */
 }
 .ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 .hide-text {
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 /* image positioning ---------------- */
 .img-left {
-    float: left;
-    margin: 0 1.5em 1.5em 0;
+  float: left;
+  margin: 0 1.5em 1.5em 0;
 }
 .img-right {
-    float: right;
-    margin: 0 0 1.5em 1.5em;
+  float: right;
+  margin: 0 0 1.5em 1.5em;
 }
 
 /* layout display ---------------- */
 .input-block-level {
-    display: block;
-    width: 100%;
-    min-height: 30px;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .block {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 .width-33 {
-    width: 33%;
+  width: 33%;
 }
 .width-50 {
-    width: 50%;
+  width: 50%;
 }
 .width-100 {
-    width: 100%;
+  width: 100%;
 }
 .hide,
 .hidden {
-    display: none !important; 
-    visibility: hidden;
+  display: none !important; 
+  visibility: hidden;
 }
 /* hide on screenreaders */
 .screen-reader-text,
 .assistive-text {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 .show {
-    display: block !important;
-    visibility: visible;
+  display: block !important;
+  visibility: visible;
 }
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 /*
  * Extends the .visuallyhidden class to allow the element to be focusable
@@ -1231,153 +1236,153 @@ input[type="submit"]:focus {
  */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
-.visible-phone {
-    display: none !important;
+.visible-phone { 
+  display: none !important;
 }
 .visible-tablet {
-    display: none !important;
+  display: none !important;
 }
 .hidden-desktop {
-    display: none !important;
+  display: none !important;
 }
 .visible-desktop {
-    display: inherit !important;
+  display: inherit !important;
 }
 @media (min-width: 601px) and (max-width: 979px) {
-    .hidden-desktop {
-        display: inherit !important;
-    }
-    .visible-desktop {
-        display: none !important ;
-    }
-    .visible-tablet {
-        display: inherit !important;
-    }
-    .hidden-tablet {
-        display: none !important;
-    }
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important ;
+  }
+  .visible-tablet {
+    display: inherit !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
 }
 @media (max-width: 600px) {
-    .hidden-desktop {
-        display: inherit !important;
-    }
-    .visible-desktop {
-        display: none !important;
-    }
-    .visible-phone {
-        display: inherit !important;
-    }
-    .hidden-phone {
-        display: none !important;
-    }
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
 }
 
 /* layout positioning ---------------- */
 .pull-right {
-    float: right;
+  float: right;
 }
 .pull-left {
-    float: left;
+  float: left;
 }
 .affix {
-    position: fixed;
+  position: fixed;
 }
 
-/* resets margin/padding ---------------- */
+/* reset margin/padding ---------------- */
 .no-margin {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 .no-margin-left {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 .last,
 .no-margin-right {
-    margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 .first,
 .no-margin-top {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 .end {
-   margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 .no-padding {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 .no-border {
-    border: 0 !important;
+  border: 0 !important;
 }
 
 /* text utilities */
 .text-truncate {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 .text-break {
-    word-break: break-all;
-    word-break: break-word;
-    word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 /* responsive ---------------- */
 .flex-video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 1.5em;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.5em;
 }
 .flex-video-container iframe,  
 .flex-video-container object,  
 .flex-video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
 }
 /* 
  * how to wraps videos via jQuery:
  * 
    <script>
-
    $(function() {
-      $('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
+      $('.content iframe, .content object, .content embed')
+      .wrap('<div class="flex-video-container"></div>');
    });
    </script>
  * 
 */
 .table-overflow-container {
-    overflow-x: scroll;
-    margin-bottom: 1.5em;
+  overflow-x: scroll;
+  margin-bottom: 1.5em;
 }
 @media (min-width: 58.75em) { /* 940px */
-   /* hide scrollbar */
   .table-overflow-container {
-		overflow-x: auto;
+	overflow-x: auto;
   }
 }  
 .table-overflow-container table {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 /* 
  * how to wraps table via jQuery:
  * 
    <script>
    $(function() {
-     $('.content table').wrap('<div class="table-overflow-container"></div>');
+     $('.content table')
+     .wrap('<div class="table-overflow-container"></div>');
    });
    </script>
  * 
@@ -1385,14 +1390,14 @@ input[type="submit"]:focus {
 
 /* miscellaneous ---------------- */
 .chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 1.5em 0;
+  background-color: red;
+  color: #fff;
+  padding: 0.5em 0;
 }
 .print-only { 
-    display: none !important; 
-    visibility: hidden;
+  display: none !important; 
+  visibility: hidden;
 }
 
 
@@ -1400,16 +1405,13 @@ input[type="submit"]:focus {
 
 
 /* $ High resolution devices (retina)
- * http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/ 
+ * http://goo.gl/JkDAi (H5BP repo)
 ========================================== */
 
-@media (min--moz-device-pixel-ratio: 1.5),
-       (-o-min-device-pixel-ratio: 3/2),
-       (-webkit-min-device-pixel-ratio: 1.5),
-       (min-device-pixel-ratio: 1.5),
-       (min-resolution: 144dpi),
-       (min-resolution: 1.5dppx) {
-
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
 }
 
 
@@ -1417,43 +1419,33 @@ input[type="submit"]:focus {
 
 
 /* 
- * $ (Proportional) Media Queries  
+ * $ (Proportional) Media queries reference
  * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
 ========================================== */
 
 /* 1200px */
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 75em) { }
 
-}
 /* 1024px */
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 64em) { }
 
-}
 /* 960px */
-@media only screen and (max-width: 60em) {
-
-}
+@media only screen and (max-width: 60em) { }
 
 /* 800px */
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 50em) { }
 
-}
 /* 768px */
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 48em) { }
 
-}
 /* 640 */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 40em) { }
 
-}
 /* 480px */
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 30em) { }
 
-}
 /* 320px */
-@media only screen and (max-width: 20em) {
-
-}
+@media only screen and (max-width: 20em) { }
 
 
 
@@ -1463,58 +1455,58 @@ input[type="submit"]:focus {
 
 @media print {
   * {
-      background: transparent !important;
-      color: #000 !important;
-      box-shadow: none !important;
-      text-shadow: none !important;
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
   a,
   a:visited {
-      text-decoration: underline;
+    text-decoration: underline;
   }
-  /* hide urls
+  /* print URLs
   a[href]:after {
-      content: " (" attr(href) ")";
+    content: " (" attr(href) ")";
   }
   abbr[title]:after {
-      content: " (" attr(title) ")";
+    content: " (" attr(title) ")";
   } 
   .img-r a:after,
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
-      content: "";
+    content: "";
   } */
   pre,
   blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
+    border: 1px solid #999;
+    page-break-inside: avoid;
   }
   thead {
-      display: table-header-group; 
+    display: table-header-group; 
   }
   tr,
   img {
-      page-break-inside: avoid;
+    page-break-inside: avoid;
   }
   img {
-      max-width: 100% !important;
+    max-width: 100% !important;
   }
   @page {
-      margin: 0.5cm;
+    margin: 0.5cm;
   }
   p,
   h2,
   h3 {
-      orphans: 3;
-      widows: 3;
+    orphans: 3;
+    widows: 3;
   }
   h2,
   h3 {
-      page-break-after: avoid;
+    page-break-after: avoid;
   }
   .print-only { 
-      display: block !important; 
+    display: block !important; 
+    visibility: visible;
   }
-
 }

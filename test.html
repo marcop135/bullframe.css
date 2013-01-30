@@ -1,38 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bullframe CSS demo page </title>
+  
+<title>Bullframe CSS demo page</title>
 <meta name="description" content="https://github.com/marco135/bullframe.css/">
+  
 <link rel="stylesheet" href="bullframe.css">
 <!-- pretty demo --> 
 <style>
-  h1.title,
-  h2.title {
-    font-family: Georgia, serif;
-    color: #fff;
-    padding: .3em;
-    text-transform: uppercase;
-  }
-  h1.title {
-    margin: 0;
-    background-color: #333;
-  }
-  h2.title {
-    background-color: #1b558c;
-	margin-top: 3em;
-  }
-  h1.title + h2 {
-	margin-top: 1em;
-  }
+  .headline, .title { font-family: Georgia, serif;  color: #fff; padding: .3em; text-transform: uppercase; }
+  .headline { margin: 0; background-color: #222; }
+  .title:before { content: "$"; font-family: sans-serif; font-weight: normal; padding-right: .5em; color: #b5e7e7; }
+  .title { background-color: #1b558c; margin-top: 4em; }
+  .headline + .title {margin-top: 1em; }
 </style>
+  
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 </head>
 
 <body>
-<h1 class="title">Bullframe CSS demo page</h1>
-
+<h1 class="headline">Bullframe CSS demo page</h1>
+  
 
 <h2 class="title">Text elements</h2>
 
@@ -85,18 +76,14 @@
 
 <p hidden="">This should be hidden in all browsers, apart from IE6</p>
 
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
-ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum
-dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
-<p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages.</p>
-
 <address>
     Address: somewhere, world
 </address>
+  
+<h3>hr</h3>
+<hr>
 
+<h3>Inline text elements</h3>
 <p>The <a href="#">a element</a> example<br>
 The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element
 with title</abbr> examples<br>
@@ -124,9 +111,14 @@ The <sup>sup element</sup> example<br>
 The <span style="text-decoration: underline">u element</span> example<br>
 The <var>var element</var> example</p>
 
-<h3>Paragraph</h3>
+<h3>Paragraphs</h3>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
+ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum
+dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+<p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages.</p>
 
 <h3>pre</h3>
 <pre>
@@ -525,7 +517,7 @@ if (elem && elem.getContext) {
               <th>Album</th>
               <th>Year</th>
               <th>Price</th>
-			  <th>Album</th>
+        <th>Album</th>
               <th>Year</th>
               <th>Price</th>
           </tr>
@@ -535,7 +527,7 @@ if (elem && elem.getContext) {
               <th>Album</th>
               <th>Year</th>
               <th>Price</th>
-			  <th>Album</th>
+        <th>Album</th>
               <th>Year</th>
               <th>Price</th>
           </tr>
@@ -545,7 +537,7 @@ if (elem && elem.getContext) {
               <td>Are You Experienced</td>
               <td>1967</td>
               <td>$10.00</td>
-  			  <td>Are You Experienced</td>
+          <td>Are You Experienced</td>
               <td>1967</td>
               <td>$10.00</td>
           </tr>
@@ -553,7 +545,7 @@ if (elem && elem.getContext) {
               <td>Axis: Bold as Love</td>
               <td>1967</td>
               <td>$12.00</td>
-			  <td>Axis: Bold as Love</td>
+        <td>Axis: Bold as Love</td>
               <td>1967</td>
               <td>$12.00</td>
           </tr>
@@ -561,7 +553,7 @@ if (elem && elem.getContext) {
               <td>Electric Ladyland</td>
               <td>1968</td>
               <td>$10.00</td>
-			    <td>Electric Ladyland</td>
+          <td>Electric Ladyland</td>
               <td>1968</td>
               <td>$10.00</td>
           </tr>
@@ -569,7 +561,7 @@ if (elem && elem.getContext) {
               <td>Band of Gypsys</td>
               <td>1970</td>
               <td>$12.00</td>
-			  <td>Band of Gypsys</td>
+        <td>Band of Gypsys</td>
               <td>1970</td>
               <td>$12.00</td>
           </tr>

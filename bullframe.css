@@ -1,11 +1,7 @@
-/*!========================================== 
- * BULLFRAME CSS
- * The "bulldozer" CSS framework.
- *
- * More info: https://raw.github.com/marco135/bullframe.css/
- * Author: Marco Pontili - http://135design.com - @m135_
- * License: https://github.com/marco135/bullframe.css/blob/master/license.md
- ========================================== */
+/*!=========================================================================
+ * BULLFRAME CSS 
+ * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
+ =========================================================================== */
 
 
  
@@ -902,219 +898,6 @@ a img.aligncenter {
 
 
 
-
-
-
-
-/* =============================================================
-   $ Author's custom styles
-   ========================================================== */
-
-/* box-model (no IE7 support) ----------------
-*, 
-*:before, 
-*:after { 
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
-  box-sizing: border-box; 
-}
-*/
-
-/* body ----------------
-body {
-  width: ;
-  max-width: ;
-  margin: ;
-  padding: ;
-}
-*/
-
-/* skin ----------------
-body,
-button,
-input,
-select,
-textarea {
-  color: ;
-}
-body {
-  background-color: ;
-}
-a {
-  color: ;
-  -webkit-tap-highlight-color: ;
-}
-a:hover,
-a:active {
-  color: ;
-} 
-::-moz-selection {
-  background: ;
-  color: ;
-}
-::selection {
-  background: ;
-  color: ;
-}
-*/
-
-/* font-sizing ----------------
-body {
-  font-size: ;
-}
-h1, 
-.h1 {
-  font-size: ;
-}
-h2, 
-.h2 {
-  font-size: ;
-}
-h3, 
-.h3 {
-  font-size: ;
-}
-h4, 
-.h4 {
-  font-size: ;
-}
-h5, 
-.h5 {
-  font-size: ;
-}
-h6, 
-.h6 {
-  font-size: ;
-}
-p,
-pre, 
-code, 
-kbd, 
-tt, 
-samp, 
-xmp,
-address {
-  font-size: ;
-}
-button, 
-input, 
-select, 
-textarea { 
-  font-size: ;
-}
-*/
-
-/* vertical rhythm ---------------- 
-body {
-   line-height: ;
-}
-h1, 
-.h1 {
-  line-height: ;
-  margin-bottom: ;
-}
-h2, 
-.h2 {
-  line-height: ;
-  margin-bottom: ;
-}
-h3, 
-.h3 {
-  line-height: ;
-  margin-bottom: ;
-}
-h4, 
-.h4 {
-  line-height: ;
-  margin-bottom: ;
-}
-h5, 
-.h5 {
-  line-height: ;
-  margin-bottom: ;
-}
-h6, 
-.h6 {
-  line-height: ;
-  margin-bottom: ;
-}
-p,
-pre,
-menu, 
-ol,
-ul,
-dl,
-blockquote,
-hr,
-audio,
-video,
-iframe,
-object,
-.flex-video-container,
-figure img,
-figcaption,
-button, 
-input, 
-select, 
-textarea,
-table,
-.table-overflow-container {
-  margin-bottom: ;
-}
-*/
-
-/* forms ---------------- 
-input[type="color"], 
-input[type="email"], 
-input[type="image"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="search"],
-input[type="text"], 
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
-input[type="url"],
-select, 
-textarea {
-  border-color: ;
-}
-button,
-input[type="button"], 
-input[type="reset"],
-input[type="submit"] {
-  padding: ;
-  *padding-left: ;
-  *padding-right: ;
-  color: ;
-  background-color: ;
-}
-button:hover,
-input[type="button"]:hover, 
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-button:focus,
-input[type="button"]:focus, 
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  color: ;
-  background-color: ;
-}
-*/
-
-
-
-
-
-
-
-
-
 /* $ Helper classes
 ========================================== */
 
@@ -1370,7 +1153,7 @@ input[type="submit"]:focus {
 }
 @media (min-width: 58.75em) { /* 940px */
   .table-overflow-container {
-	overflow-x: auto;
+  overflow-x: auto;
   }
 }  
 .table-overflow-container table {
@@ -1404,15 +1187,213 @@ input[type="submit"]:focus {
 
 
 
-/* $ High resolution devices (retina)
- * http://goo.gl/JkDAi (H5BP repo)
-========================================== */
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+
+
+
+
+/* =============================================================
+ *
+ * $ Author's custom styles
+ *
+ ============================================================= */
+
+/* box-model (no IE7 support) ----------------
+*, 
+*:before, 
+*:after { 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box; 
 }
+*/
+
+/* body ----------------
+body {
+  width: ;
+  max-width: ;
+  margin: ;
+  padding: ;
+}
+*/
+
+/* skin ----------------
+body,
+button,
+input,
+select,
+textarea {
+  color: ;
+}
+body {
+  background-color: ;
+}
+a {
+  color: ;
+  -webkit-tap-highlight-color: ;
+}
+a:hover,
+a:active {
+  color: ;
+} 
+::-moz-selection {
+  background: ;
+  color: ;
+}
+::selection {
+  background: ;
+  color: ;
+}
+*/
+
+/* font-sizing ----------------
+body {
+  font-size: ;
+}
+h1, 
+.h1 {
+  font-size: ;
+}
+h2, 
+.h2 {
+  font-size: ;
+}
+h3, 
+.h3 {
+  font-size: ;
+}
+h4, 
+.h4 {
+  font-size: ;
+}
+h5, 
+.h5 {
+  font-size: ;
+}
+h6, 
+.h6 {
+  font-size: ;
+}
+p,
+pre, 
+code, 
+kbd, 
+tt, 
+samp, 
+xmp,
+address {
+  font-size: ;
+}
+button, 
+input, 
+select, 
+textarea { 
+  font-size: ;
+}
+*/
+
+/* vertical rhythm ---------------- 
+body {
+   line-height: ;
+}
+h1, 
+.h1 {
+  line-height: ;
+  margin-bottom: ;
+}
+h2, 
+.h2 {
+  line-height: ;
+  margin-bottom: ;
+}
+h3, 
+.h3 {
+  line-height: ;
+  margin-bottom: ;
+}
+h4, 
+.h4 {
+  line-height: ;
+  margin-bottom: ;
+}
+h5, 
+.h5 {
+  line-height: ;
+  margin-bottom: ;
+}
+h6, 
+.h6 {
+  line-height: ;
+  margin-bottom: ;
+}
+p,
+pre,
+menu, 
+ol,
+ul,
+dl,
+blockquote,
+hr,
+audio,
+video,
+iframe,
+object,
+.flex-video-container,
+figure img,
+figcaption,
+button, 
+input, 
+select, 
+textarea,
+table,
+.table-overflow-container {
+  margin-bottom: ;
+}
+*/
+
+/* forms ---------------- 
+input[type="color"], 
+input[type="email"], 
+input[type="image"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select, 
+textarea {
+  border-color: ;
+}
+button,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  padding: ;
+  *padding-left: ;
+  *padding-right: ;
+  color: ;
+  background-color: ;
+}
+button:hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+input[type="button"]:focus, 
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  color: ;
+  background-color: ;
+}
+*/
 
 
 
@@ -1423,90 +1404,40 @@ input[type="submit"]:focus {
  * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
 ========================================== */
 
-/* 1200px */
-@media only screen and (max-width: 75em) { }
+/* 1200px 
+@media only screen and (max-width: 75em) { } */
 
-/* 1024px */
-@media only screen and (max-width: 64em) { }
+/* 1024px 
+@media only screen and (max-width: 64em) { } */
 
-/* 960px */
-@media only screen and (max-width: 60em) { }
+/* 960px 
+@media only screen and (max-width: 60em) { } */
 
-/* 800px */
-@media only screen and (max-width: 50em) { }
+/* 800px 
+@media only screen and (max-width: 50em) { } */
 
-/* 768px */
-@media only screen and (max-width: 48em) { }
+/* 768px 
+@media only screen and (max-width: 48em) { } */
 
-/* 640 */
-@media only screen and (max-width: 40em) { }
+/* 640 
+@media only screen and (max-width: 40em) { } */
 
-/* 480px */
-@media only screen and (max-width: 30em) { }
+/* 480px 
+@media only screen and (max-width: 30em) { } */
 
-/* 320px */
-@media only screen and (max-width: 20em) { }
-
-
+/* 320px 
+@media only screen and (max-width: 20em) { } */
 
 
-/* $ Print
-========================================== */
 
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  /* print URLs
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  } 
-  .img-r a:after,
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  } */
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  thead {
-    display: table-header-group; 
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  @page {
-    margin: 0.5cm;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-  .print-only { 
-    display: block !important; 
-    visibility: visible;
-  }
+
+/* $ High resolution devices (retina)
+ * http://goo.gl/JkDAi (H5BP repo)
+========================================== 
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
 }
+*/

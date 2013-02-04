@@ -338,10 +338,14 @@ ol.unstyled ul {
 ========================================== */
 
 img {
-  width: auto\9; /* IE8 and below */
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+}
+@media \0screen {
+  img { 
+    width: auto; /* IE8 */
+  }
 }
 img,
 video {

@@ -72,15 +72,11 @@ audio:not([controls]) {
 /* $ Typography
 ========================================== */
 
-*,
-*:after,
-*:before {
-  word-wrap: break-word;
-}
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+  word-wrap: break-word;
 }
 body { 
   font-size: 1em; /* 16px */
@@ -90,8 +86,16 @@ body,
 button, 
 input, 
 select, 
+optgroup,
 textarea {
   font-family: Arial, Helvetica, Verdana, sans-serif;
+  color: #222;
+}
+body, 
+button, 
+input, 
+select, 
+textarea {
   color: #222;
 }
 h1,
@@ -441,13 +445,14 @@ fieldset {
   padding: 0;
 }
 legend { 
-  display: block;
-  width: 100%; /* enable line-wrapping in IE8+ */
+  max-width: 100%; /* enable line-wrapping in IE8+ */
   border: 0;
   padding: 0;
   *margin-left: -7px;
-  *overflow-x: auto; /* create alternative to line-wrapping */
-  *min-height: 40px;
+  /* create alternative to line-wrapping in IE7 */
+  *overflow-x: auto; 
+  *overflow-y: hidden;
+  *min-height: 3em;
 }
 label { 
   cursor: pointer;
@@ -589,7 +594,7 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
-}	
+} 
 button:focus, 
 input:focus, 
 input[type="file"]:focus, 
@@ -604,7 +609,7 @@ textarea:focus,
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
-}	
+} 
 button:focus, 
 input:focus, 
 select:focus, 
@@ -633,6 +638,11 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #888; /* gray */
 }
+/* FF bug: 
+ * "If one change the text color of input fields, FF will change 
+ * the default color of placeholders too!"
+ * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150 
+ */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #888;
@@ -1287,10 +1297,18 @@ body {
 */
 
 /* skin ----------------
-body,
-button,
-input,
-select,
+body, 
+button, 
+input, 
+select, 
+optgroup,
+textarea {
+  font-family: ;
+}
+body, 
+button, 
+input, 
+select, 
 textarea {
   color: ;
 }
@@ -1516,18 +1534,18 @@ input[type="submit"]:focus {
 
 
 /* $ Safe CSS hacks for Internet Explorer 7, 8 and 9+
- * http://jsbin.com/atefes/4/quiet
+ * http://jsbin.com/atefes/5/quiet
 ========================================== */
 
 /* IE7
-p { *color: green} */
+p { *color: red } */
 
 /* IE8
 @media \0screen {
-    p { color: green}
+  p { color: green }
 } */
 
 /* IE9+
 @media screen and (min-width:0\0) {
-    p { color: red}
+  p { color: blue }
 } */

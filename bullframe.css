@@ -1510,3 +1510,24 @@ input[type="submit"]:focus {
        (min-resolution: 120dpi) {
 }
 */
+
+
+
+
+
+/* $ Safe CSS hack for Internet Explorer 7, 8 and 9+
+ * http://jsbin.com/atefes/4/quiet
+========================================== */
+
+/* IE7
+p { *color: green} */
+
+/* IE8
+@media \0screen {
+    p { color: green}
+} */
+
+/* IE9+
+@media screen and (min-width:0\0) {
+    p { color: red}
+} */

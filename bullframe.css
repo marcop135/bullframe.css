@@ -8,14 +8,14 @@
 
 
 /* $ Future-friendly @viewport rule
- * read more: http://menacingcloud.com/?c=cssViewportOrMetaTag
+ * read more: http://dev.w3.org/csswg/css-device-adapt/#the-atviewport-rule
 ========================================== */
 
 @-webkit-viewport { 
-    width: device-width;
+    width: device-width; /* future-proof */
 }
 @-moz-viewport { 
-    width: device-width;
+    width: device-width; /* future-proof */
 }
 @-ms-viewport { 
     width: device-width; /* IE10+ (Win Phone 8 and Win 8 'snap mode') */
@@ -24,7 +24,7 @@
     width: device-width; /* Opera Mobile 11+ */
 }
 @viewport { 
-    width: device-width;
+    width: device-width; /* standard */
 }
 
 

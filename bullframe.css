@@ -1251,14 +1251,14 @@ a img.aligncenter {
  *
  ============================================================= */
 
-/* @viewport rule (only for RWD) ----------------
+/* @viewport rule (for responsive websites) ----------------
+ * Fix IE 10 on Windows Phone 8 Viewport with JavaScript http://goo.gl/ryjPF
 @-webkit-viewport { 
     width: device-width;
 }
 @-moz-viewport { 
     width: device-width;
 }
-/* Fix IE 10 on Windows Phone 8 Viewport with JavaScript http://goo.gl/ryjPF
 @-ms-viewport { 
     width: device-width;
 }

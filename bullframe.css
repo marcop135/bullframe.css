@@ -4,32 +4,6 @@
  =========================================================================== */
 
 
- 
-
-
-/* $ Future-friendly @viewport rule
- * read more: http://dev.w3.org/csswg/css-device-adapt/#the-atviewport-rule
-========================================== */
-
-@-webkit-viewport { 
-    width: device-width; /* future-proof */
-}
-@-moz-viewport { 
-    width: device-width; /* future-proof */
-}
-@-ms-viewport { 
-    width: device-width; /* IE10+ (Win Phone 8 and Win 8 'snap mode') */
-}
-@-o-viewport { 
-    width: device-width; /* Opera Mobile 11+ */
-}
-@viewport { 
-    width: device-width; /* standard */
-}
-
-
-
-
 
 /* $ The basics
 ========================================== */
@@ -1277,22 +1251,24 @@ a img.aligncenter {
  *
  ============================================================= */
 
-/* non-responsive websites ----------------
+/* @viewport rule (only for RWD) ----------------
 @-webkit-viewport { 
-    width: XXXpx;
+    width: device-width;
 }
 @-moz-viewport { 
-    width: XXXpx;
+    width: device-width;
 }
+/* Fix IE 10 on Windows Phone 8 Viewport with JavaScript http://goo.gl/ryjPF
 @-ms-viewport { 
-    width: XXXpx;
+    width: device-width;
 }
 @-o-viewport { 
-    width: XXXpx;
+    width: device-width;
 }
 @viewport { 
-    width: XXXpx;
+    width: device-width;
 }
+*/
 
 /* box-model (no IE7 support) ----------------
 *, 

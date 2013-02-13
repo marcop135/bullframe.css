@@ -1277,6 +1277,23 @@ a img.aligncenter {
  *
  ============================================================= */
 
+/* non-responsive websites ----------------
+@-webkit-viewport { 
+    width: XXXpx;
+}
+@-moz-viewport { 
+    width: XXXpx;
+}
+@-ms-viewport { 
+    width: XXXpx;
+}
+@-o-viewport { 
+    width: XXXpx;
+}
+@viewport { 
+    width: XXXpx;
+}
+
 /* box-model (no IE7 support) ----------------
 *, 
 *:before, 

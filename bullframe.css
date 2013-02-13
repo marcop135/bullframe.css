@@ -1301,15 +1301,8 @@ body,
 button, 
 input, 
 select, 
-optgroup,
 textarea {
   font-family: ;
-}
-body, 
-button, 
-input, 
-select, 
-textarea {
   color: ;
 }
 body {

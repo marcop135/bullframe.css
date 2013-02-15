@@ -24,4 +24,8 @@ It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplat
 </ul>
 
 <h2>Test it now</h2>
+<<<<<<< HEAD
 <p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/360/edit</p>
+=======
+<p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/362/quiet</p>
+>>>>>>> no more 'width: 100%' for <audio> element

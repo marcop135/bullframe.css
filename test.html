@@ -2,23 +2,28 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 <title>Bullframe CSS demo page</title>
 <meta name="description" content="https://github.com/marco135/bullframe.css/">
   
 <link rel="stylesheet" href="bullframe.css">
-<!-- pretty demo --> 
+  
+<!-- demo's custom styles --> 
 <style>
   .headline, .title { font-family: Georgia, serif;  color: #fff; padding: .3em; text-transform: uppercase; }
   .headline { margin: 0; background-color: #222; }
   .title:before { content: "$"; font-family: sans-serif; font-weight: normal; padding-right: .5em; color: #b5e7e7; }
   .title { background-color: #1b558c; margin-top: 4em; }
-  .headline + .title {margin-top: 1em; }
+  .headline + .title {margin-top: 1em; } 
+  h3 { margin-top: 1.5em !important; padding: .3em; background-color: #aee8ef }
+  .headings h3 { margin-top: 0 !important; padding: 0; background-color: transparent }
 </style>
-  
+    
+<!--[if IE]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 </head>
 
 <body>
@@ -27,55 +32,57 @@
 
 <h2 class="title">Text elements</h2>
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-
-<h1><a href="#">Heading 1</a></h1>
-<h2><a href="#">Heading 2</a></h2>
-<h3><a href="#">Heading 3</a></h3>
-<h4><a href="#">Heading 4</a></h4>
-<h5><a href="#">Heading 5</a></h5>
-<h6><a href="#">Heading 6</a></h6>
-
-<section>
-    <h1>Heading 1 (in section)</h1>
-    <h2>Heading 2 (in section)</h2>
-    <h3>Heading 3 (in section)</h3>
-    <h4>Heading 4 (in section)</h4>
-    <h5>Heading 5 (in section)</h5>
-    <h6>Heading 6 (in section)</h6>
-</section>
-
-<article>
-    <h1>Heading 1 (in article)</h1>
-    <h2>Heading 2 (in article)</h2>
-    <h3>Heading 3 (in article)</h3>
-    <h4>Heading 4 (in article)</h4>
-    <h5>Heading 5 (in article)</h5>
-    <h6>Heading 6 (in article)</h6>
-</article>
-
+<div class="headings">
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+  
+  <h1><a href="#">Heading 1</a></h1>
+  <h2><a href="#">Heading 2</a></h2>
+  <h3><a href="#">Heading 3</a></h3>
+  <h4><a href="#">Heading 4</a></h4>
+  <h5><a href="#">Heading 5</a></h5>
+  <h6><a href="#">Heading 6</a></h6>
+  
+  <section>
+      <h1>Heading 1 (in section)</h1>
+      <h2>Heading 2 (in section)</h2>
+      <h3>Heading 3 (in section)</h3>
+      <h4>Heading 4 (in section)</h4>
+      <h5>Heading 5 (in section)</h5>
+      <h6>Heading 6 (in section)</h6>
+  </section>
+  
+  <article>
+      <h1>Heading 1 (in article)</h1>
+      <h2>Heading 2 (in article)</h2>
+      <h3>Heading 3 (in article)</h3>
+      <h4>Heading 4 (in article)</h4>
+      <h5>Heading 5 (in article)</h5>
+      <h6>Heading 6 (in article)</h6>
+  </article>
+</div>
+  
 <header>
     <hgroup>
         <h1>Heading 1 (in hgroup)</h1>
         <h2>Heading 2 (in hgroup)</h2>
     </hgroup>
-
-    <nav>
+  
+    <nav> 
         <ul>
             <li><a href="#">navigation item #1</a></li>
             <li><a href="#">navigation item #2</a></li>
             <li><a href="#">navigation item #3</a></li>
         </ul>
     </nav>
-</header>
+</header> 
 
 <p hidden="">This should be hidden in all browsers, apart from IE6</p>
-
+ 
 <address>
     Address: somewhere, world
 </address>
@@ -131,7 +138,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 &lt;head&gt;
 &lt;/head&gt;
     &lt;body&gt;
-      &lt;div class="main"&gt; &lt;/div&gt;
+&lt;div class="main"&gt; &lt;/div&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
@@ -522,7 +529,7 @@ if (elem && elem.getContext) {
               <th>Price</th>
           </tr>
       </thead>
-      <tfoot>
+      <tfoot> 
           <tr>
               <th>Album</th>
               <th>Year</th>

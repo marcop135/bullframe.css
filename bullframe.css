@@ -120,8 +120,7 @@ h6,
   font-size: 0.875em;
   margin-bottom: 1.5em;
 }
-abbr[title], 
-acronym { 
+abbr[title] { 
   border-bottom: 1px dotted;
   cursor: help;
 }
@@ -169,9 +168,7 @@ pre {
 pre, 
 code, 
 kbd, 
-tt, 
-samp, 
-xmp {
+samp {
   font-family: Monaco, Consolas, "Courier New", Courier, monospace; 
   font-size: 1em;
 }
@@ -181,11 +178,8 @@ b {
 }
 address, 
 em, 
-i, 
-cite, 
-dfn, 
-dfn[title], 
-var { 
+i,  
+dfn { 
   font-style: italic;
 }
 u { 
@@ -340,13 +334,6 @@ iframe,
 object,
 embed {
   max-width: 100%;
-}
-canvas,
-audio,
-video,
-iframe,
-object {
-  margin-bottom: 1.5em;
 }
 svg:not(:root) { 
   overflow: hidden;
@@ -1413,10 +1400,6 @@ select,
 textarea,
 table,
 
-audio,
-video,
-iframe,
-object,
 .flex-video-container,
 figure img,
 figcaption,
@@ -1520,7 +1503,7 @@ input[type="submit"]:focus {
 
 
 
-/* $ Safe CSS hacks for Internet Explorer 7, 8 and 9+
+/* $ Safe CSS hacks for Internet Explorer 7, 8 and 9+ reference
  * http://jsbin.com/atefes/5/quiet
 ========================================== */
 

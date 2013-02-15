@@ -10,13 +10,13 @@ It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplat
 <b>Tested and compatible with:</b>
 <ul>
   <li>Internet Explorer 7-10</li>
-  <li>Chrome (latest version)</li>
-  <li>Firefox 6+</li>
-  <li>Safari (latest version)</li>
-  <li>Opera (latest version)</li>
+  <li>Chrome</li>
+  <li>Firefox 4+</li>
+  <li>Safari 4-5</li>
+  <li>Opera 10-12</li>
 </ul>
 <ul>
-  <li>Safari Mobile (latest version)</li>
+  <li>Safari Mobile iOS 6</li>
   <li>Android browser (latest version)</li>
   <li>Opera Mobile (latest version)</li>
   <li>IE Mobile 7</li>
@@ -24,4 +24,4 @@ It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplat
 </ul>
 
 <h2>Test it now</h2>
-<p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/332/edit</p>
+<p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/360/edit</p>

@@ -419,7 +419,8 @@ fieldset {
   padding: 0;
 }
 legend { 
-  max-width: 100%; /* enable line-wrapping in IE8+ */
+  display: table; /* enable line-wrapping in IE8+ */
+  white-space: normal; /* enable line-wrapping in FF4-5 */
   border: 0;
   padding: 0;
   *margin-left: -7px;
@@ -1135,7 +1136,8 @@ a img.aligncenter {
    </script>
  * 
 */
-.table-overflow-container {
+/* not working properly on Opera 10-11 and Opera Mini */
+.table-overflow-container { 
   overflow-x: scroll;
   margin-bottom: 1.5em;
 }
@@ -1294,6 +1296,7 @@ body,
 button, 
 input, 
 select, 
+optgroup,
 textarea {
   font-family: ;
   color: ;
@@ -1320,6 +1323,9 @@ a:active {
 */
 
 /* font-sizing ----------------
+html {
+  font-size: ;
+}
 body {
   font-size: ;
 }
@@ -1355,12 +1361,6 @@ tt,
 samp, 
 xmp,
 address {
-  font-size: ;
-}
-button, 
-input, 
-select, 
-textarea { 
   font-size: ;
 }
 */
@@ -1407,6 +1407,12 @@ ul,
 dl,
 blockquote,
 hr,
+button, 
+input, 
+select, 
+textarea,
+table,
+
 audio,
 video,
 iframe,
@@ -1414,11 +1420,6 @@ object,
 .flex-video-container,
 figure img,
 figcaption,
-button, 
-input, 
-select, 
-textarea,
-table,
 .table-overflow-container {
   margin-bottom: ;
 }

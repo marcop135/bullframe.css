@@ -39,6 +39,10 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
+[hidden] { 
+  display: none;
+}
+
 
 
 
@@ -52,11 +56,7 @@ html {
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
 }
-body { 
-  font-size: 1em; /* 16px */
-  line-height: 1.5; /* 24px is the magic number */
-}
-body, 
+html, 
 button, 
 input, 
 select, 
@@ -65,12 +65,9 @@ textarea {
   font-family: Arial, Helvetica, Verdana, sans-serif;
   color: #222;
 }
-body, 
-button, 
-input, 
-select, 
-textarea {
-  color: #222;
+body { 
+  font-size: 1em; /* 16px */
+  line-height: 1.5; /* 24px is the magic number */
 }
 h1,
 .h1, 
@@ -182,9 +179,6 @@ i,
 dfn { 
   font-style: italic;
 }
-u { 
-  text-decoration: underline;
-}
 sub,
 sup {
   font-size: 75%;
@@ -200,9 +194,6 @@ sub {
 }
 small {
   font-size: 85%;
-}
-big { 
-  font-size: 115%;
 }
 address {
   display: block;
@@ -256,6 +247,7 @@ a:focus {
 a:hover, 
 a:active { 
   color: #002b7a; /* dark blue */
+  text-decoration: underline;
   outline: 0;
 }
 
@@ -414,12 +406,12 @@ legend {
   /* create alternative to line-wrapping in IE7 */
   *overflow-x: auto; 
   *overflow-y: hidden;
-  *min-height: 3em;
+  *min-height: 3em; /* 48px */
 }
 label { 
   cursor: pointer;
 }
-/* makes flexible forms (but do not touch the buttons) */
+/* make flexible forms (but do not touch the buttons) */
 input[type="color"], 
 input[type="email"], 
 input[type="file"],
@@ -600,7 +592,7 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #888; /* gray */
 }
-/* FF bug: 
+/* FF placeholder bug: 
  * "If one change the text color of input fields, FF will change 
  * the default color of placeholders too!"
  * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150 
@@ -625,9 +617,7 @@ textarea[readonly] {
   cursor: default;
   cursor: not-allowed;
 }
-[hidden] { 
-  display: none;
-}
+
 
 
 
@@ -798,6 +788,7 @@ td {
 
 
 
+
 /* $ Wordpress Core
  * http://codex.wordpress.org/CSS
    ============================================================= */
@@ -937,14 +928,6 @@ a img.aligncenter {
 }
 
 /* layout display ---------------- */
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
 .block {
   display: block;
   width: 100%;
@@ -1149,10 +1132,10 @@ a img.aligncenter {
 
 /* miscellaneous ---------------- */
 .chromeframe {
-  margin: 1.5em 0;
-  background-color: red;
-  color: #fff;
-  padding: 0.5em 0;
+  margin: 0 0 1.5em 0;
+  padding: 0.75em;
+  background-color: #e0e0e0;
+  color: #000;
 }
 .print-only { 
   display: none !important; 
@@ -1278,7 +1261,7 @@ body {
 */
 
 /* skin ----------------
-body, 
+html, 
 button, 
 input, 
 select, 
@@ -1292,11 +1275,13 @@ body {
 }
 a {
   color: ;
+  text-decoration: ;
   -webkit-tap-highlight-color: ;
 }
 a:hover,
 a:active {
   color: ;
+  text-decoration: ;
 } 
 ::-moz-selection {
   background: ;

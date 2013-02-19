@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS 
+ * BULLFRAME CSS v1.0.0
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -234,23 +234,25 @@ img::selection  {
 /* $ Links
 ========================================== */
 
-a { 
+a,
+a:hover,
+a:active { 
   color: #1467ff; /* blue */
+}
+a {
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); /* 35% black */
+}
+a:hover, 
+a:active { 
+  text-decoration: underline;
+  outline: 0;
 }
 a:focus { 
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
 } 
-a:hover, 
-a:active { 
-  color: #002b7a; /* dark blue */
-  text-decoration: underline;
-  outline: 0;
-}
-
 
 
 
@@ -386,7 +388,7 @@ figcaption {
 
 
 
-/* $ Forms
+/* $ Flexible forms
 ========================================== */
 
 form {
@@ -411,7 +413,6 @@ legend {
 label { 
   cursor: pointer;
 }
-/* make flexible forms (but do not touch the buttons) */
 input[type="color"], 
 input[type="email"], 
 input[type="file"],
@@ -789,7 +790,7 @@ td {
 
 
 
-/* $ Wordpress Core
+/* $ Wordpress Core CSS
  * http://codex.wordpress.org/CSS
    ============================================================= */
 
@@ -1105,7 +1106,7 @@ a img.aligncenter {
    </script>
  * 
 */
-/* not working properly on Opera 10-11 and Opera Mini */
+/* Note: issues on Opera 10-11 and Opera Mini */
 .table-overflow-container { 
   overflow-x: scroll;
   margin-bottom: 1.5em;
@@ -1219,6 +1220,7 @@ a img.aligncenter {
 /* =============================================================
  *
  * $ Author's custom styles
+ * Uncomment and customize the following starting code
  *
  ============================================================= */
 
@@ -1473,7 +1475,7 @@ input[type="submit"]:focus {
 
 
 /* $ High resolution devices (retina)
- * http://goo.gl/JkDAi (H5BP repo)
+ * H5BP repo http://goo.gl/JkDAi
 ========================================== 
 
 @media print,
@@ -1487,8 +1489,8 @@ input[type="submit"]:focus {
 
 
 
-/* $ Safe CSS hacks for Internet Explorer 7, 8 and 9+ reference
- * http://jsbin.com/atefes/5/quiet
+/* $ 'Safe' CSS hacks for Internet Explorer 7, 8 and 9+ reference
+ * Test the demo http://jsbin.com/atefes/5/edit
 ========================================== */
 
 /* IE7

@@ -3,7 +3,7 @@
 <h2>Description</h2>
 <p>This is the "bulldozer" CSS framework.<br>
 It provides <b>responsive web design</b> starting-point and it includes flexible and rich typography, flexible <b>cross-browser HTML5 forms</b>, flexible grid system, 
-wordpress core styling, several helper classes and random tips&tricks.<br>
+wordpress core styling, several helper classes and random tips and tricks.<br>
 It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplate,Bootstrap, 320 and Up, Inuit CSS and YUI3 CSS Grids.</p>
 
 <h2>Browser support</h2>

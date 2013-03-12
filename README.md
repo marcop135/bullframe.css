@@ -24,4 +24,4 @@ It's based on 7 open-source projects: Normalize.css, Formalize, HTML5 Boilerplat
 </ul>
 
 <h2>Test it now</h2>
-<p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/403/quiet</p>
+<p><b>Test the demo</b> on JSBin: http://jsbin.com/oyasux/378/quiet</p>

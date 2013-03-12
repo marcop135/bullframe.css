@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.0.0
+ * BULLFRAME CSS v1.0.1
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -1250,6 +1250,26 @@ a img.aligncenter {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
   box-sizing: border-box; 
+}
+*/
+
+
+/* extend grid system ----------------
+ * demo http://jsbin.com/anezew/2/quiet
+[class*="y-u"] .container {
+  margin-left: 1.5em;
+}
+[class*="y-u"]:first-child .container {
+  margin-left: 0;
+} */
+/* 640px
+@media only screen and (max-width: 40em) { 
+  [class*="y-u"] {
+    width: 100%;
+  }
+  [class*="y-u"] .container {
+    margin-left: 0;
+  }
 }
 */
 

@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.0.1
+ * BULLFRAME CSS v1.0.2
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -156,11 +156,18 @@ pre {
 p {
   font-size: 1em;
 }
+pre code {
+  white-space: pre;
+  white-space: pre-wrap;
+}
 pre {
-  word-break: break-all;
+  word-break: break-all; /* webkit */
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
+}
+code {
+  white-space: nowrap;
 }
 pre, 
 code, 
@@ -422,21 +429,28 @@ input[type="tel"],
 input[type="file"], 
 input[type="search"],
 input[type="text"], 
-input[type="date"], 
 input[type="range"], 
-input[type="datetime"], 
-input[type="datetime-local"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
 input[type="time"], 
 input[type="url"], 
 select, 
 textarea {
   display: block;
+}
+input, 
+select, 
+textarea {
   width: 100%;
   *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
   max-width: 100%;
+}
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  *width: auto;
 }
 button, 
 input, 
@@ -467,7 +481,7 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
-select, 
+/* select, */ /* avoid arrow disappearing in android browser v4.1.2 */
 textarea {
   border: 1px solid #999;
   -webkit-border-radius: 0;
@@ -499,11 +513,9 @@ input[type="email"],
 input[type="number"], 
 input[type="password"], 
 input[type="tel"], 
-input[type="file"], 
 input[type="search"],
 input[type="text"], 
 input[type="date"], 
-input[type="range"], 
 input[type="datetime"], 
 input[type="datetime-local"],
 input[type="month"], 
@@ -519,6 +531,7 @@ textarea {
 }
 input[type="file"] {
   cursor: pointer;
+  padding: 0.3em 0;
 }
 input[type="radio"], 
 input[type="checkbox"] {
@@ -550,27 +563,6 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 } 
-button:focus, 
-input:focus, 
-input[type="file"]:focus, 
-input[type="radio"]:focus, 
-input[type="checkbox"]:focus,
-input[type="file"]:active, 
-input[type="radio"]:active, 
-input[type="checkbox"]:active,
-select:focus, 
-textarea:focus,
-:invalid  {
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-} 
-button:focus, 
-input:focus, 
-select:focus, 
-textarea:focus {
-  z-index: 1;
-}
 select {
   text-transform: none;
 }
@@ -600,6 +592,10 @@ textarea::-webkit-input-placeholder {
  */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
+  color: #888;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   color: #888;
 }
 input:placeholder,
@@ -984,46 +980,6 @@ a img.aligncenter {
   overflow: visible;
   position: static;
   width: auto;
-}
-.visible-phone { 
-  display: none !important;
-}
-.visible-tablet {
-  display: none !important;
-}
-.hidden-desktop {
-  display: none !important;
-}
-.visible-desktop {
-  display: inherit !important;
-}
-@media (min-width: 601px) and (max-width: 979px) {
-  .hidden-desktop {
-    display: inherit !important;
-  }
-  .visible-desktop {
-    display: none !important ;
-  }
-  .visible-tablet {
-    display: inherit !important;
-  }
-  .hidden-tablet {
-    display: none !important;
-  }
-}
-@media (max-width: 600px) {
-  .hidden-desktop {
-    display: inherit !important;
-  }
-  .visible-desktop {
-    display: none !important;
-  }
-  .visible-phone {
-    display: inherit !important;
-  }
-  .hidden-phone {
-    display: none !important;
-  }
 }
 
 /* layout positioning ---------------- */
@@ -1431,8 +1387,8 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
-select, 
-textarea {
+select, */ /* double-check android browser appearance */
+/* textarea {
   border-color: ;
 }
 button,

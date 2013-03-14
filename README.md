@@ -24,7 +24,8 @@ You can copy-and-paste it quickly or just reference it when you build cool websi
 
 
 <h2>Test it now</h2>
-<p><b>Test the demo</b> on JSBin: <a href="http://jsbin.com/oyasux/406/quiet" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/406/quiet</a></p>
+<p><b><a href="http://jsbin.com/oyasux/406/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
+Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/406/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/406/edit</a></p>
 
 
 <h2>How to use it</h2>
@@ -37,12 +38,12 @@ You can copy-and-paste it quickly or just reference it when you build cool websi
 &lt;head>
 ...
 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-<mark>&lt;link rel="stylesheet" src="bullframe.min.css"></mark>
+&lt;link rel="stylesheet" src="bullframe.min.css"></mark>
 &lt;link rel="stylesheet" src="your-styles.css">
+...
 ...</code></pre>
   </li>
 </ul>
-<br>
 <ul>
   <li>
     <p>2) <b>Write your styles inside the framework</b></p>
@@ -50,7 +51,6 @@ You can copy-and-paste it quickly or just reference it when you build cool websi
 "Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
   </li>
 </ul>
-<br>
 <ul>
   <li>
     <p>3) <b>Just reference <code>bullframe.css</code> when coding websites.</b></p>
@@ -77,19 +77,6 @@ You can copy-and-paste it quickly or just reference it when you build cool websi
 </ul>
 
 
-<h2>Acknowledgements</h2>
-bullframe.css incorporates some of the styles found on:
-<ul>
-  <li>Normalize.css <a href="https://github.com/necolas/normalize.css" title="">https://github.com/necolas/normalize.css</a></li>
-  <li>HTML5 Boilerplate <a href="https://github.com/h5bp/html5-boilerplate" title="">https://github.com/h5bp/html5-boilerplate</a></li>
-  <li>Bootstrap <a href="https://github.com/twitter/bootstrap" title="">https://github.com/twitter/bootstrap</a></li>
-  <li>320 and up <a href="https://github.com/malarkey/320andup" title="">https://github.com/malarkey/320andup</a></li>
-  <li>Formalize <a href="https://github.com/nathansmith/formalize" title="">https://github.com/nathansmith/formalize</a></li>
-  <li>Inuit CSS <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
-  <li>YUI3 CSS Grids <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
-</ul>
-
-
 <h2>License</h2>
 <p>The MIT License (MIT)
 <br><br>
@@ -97,3 +84,16 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 <br><br>
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </p>
+
+
+<h2>Acknowledgements</h2>
+bullframe.css incorporates some of the styles found on:
+<ul>
+  <li>Normalize.css - <a href="https://github.com/necolas/normalize.css" title="">https://github.com/necolas/normalize.css</a></li>
+  <li>HTML5 Boilerplate - <a href="https://github.com/h5bp/html5-boilerplate" title="">https://github.com/h5bp/html5-boilerplate</a></li>
+  <li>Bootstrap - <a href="https://github.com/twitter/bootstrap" title="">https://github.com/twitter/bootstrap</a></li>
+  <li>320 and up - <a href="https://github.com/malarkey/320andup" title="">https://github.com/malarkey/320andup</a></li>
+  <li>Formalize - <a href="https://github.com/nathansmith/formalize" title="">https://github.com/nathansmith/formalize</a></li>
+  <li>Inuit CSS - <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
+  <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
+</ul>

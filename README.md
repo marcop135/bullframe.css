@@ -34,15 +34,16 @@ It's intended to be used as an alternative to CSS resets and as a starting-point
 </ul>
 <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles 
 like this:</p>
-<code>...
+```html
+<!doctype html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Your title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" src="bullframe.min.css">
-  <link rel="stylesheet" src="your-styles.css">
-</head>
-...</code>
+...
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" src="bullframe.min.css">
+<link rel="stylesheet" src="your-styles.css">
+...
+```
 <ul>
   <li><b>Option 2:</b>
     Write your styles <i>inside</i> the framework</li>

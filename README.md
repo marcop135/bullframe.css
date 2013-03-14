@@ -37,7 +37,7 @@ You can copy-and-paste it quickly or just reference it when you build cool websi
 &lt;head>
 ...
 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-&lt;link rel="stylesheet" src="bullframe.min.css">
+<mark>&lt;link rel="stylesheet" src="bullframe.min.css"></mark>
 &lt;link rel="stylesheet" src="your-styles.css">
 ...</code></pre>
   </li>
@@ -48,6 +48,13 @@ You can copy-and-paste it quickly or just reference it when you build cool websi
     <p>2) <b>Write your styles inside the framework</b></p>
   <p>Scroll down the code and start to uncomment/customize/add styles <i>inside</i>
 "Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
+  </li>
+</ul>
+<br>
+<ul>
+  <li>
+    <p>3) <b>Just reference <code>bullframe.css</code> when coding websites.</b></p>
+  <p>The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just reference CSS tricks and best practices.</p>
   </li>
 </ul>
 

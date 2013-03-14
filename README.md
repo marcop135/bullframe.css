@@ -12,13 +12,10 @@ You can copy-and-paste it quickly or just reference it when you build cool websi
   <li>Responsive Web Design ready</li>
   <li>Wordpress ready</li>
   <li>Flexible and rich typography</li>
-  <li>Vertical rhythm and baseline grid starting-point</li>
   <li>Flexible images and media</li>
   <li>Fluid and cross-browser HTML5 forms</li>
   <li>Fluid grid system</li>
   <li>IE7+ and mobile browsers support</li>
-  <li>Non-semantic helper classes (clearfix, layout display, text utilities, ecc...)</li>
-  <li>Proportional Media Queries reference</li>
   <li>Browser CSS hacks reference</li>
 </ul>
 
@@ -65,25 +62,26 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/406/edit" titl
   <li>Internet Explorer 7-10</li>
   <li>Chrome</li>
   <li>Firefox 4+</li>
-  <li>Safari 4-5</li>
-  <li>Opera 10-12</li>
+  <li>Safari 4+</li>
+  <li>Opera 10+</li>
 </ul>
 <ul>
   <li>Safari Mobile iOS 6</li>
-  <li>Android browser (latest version)</li>
-  <li>Opera Mobile (latest version)</li>
-  <li>IE Mobile 7</li>
-  <li>Firefox Mobile (latest version)</li>
+  <li>Android browser</li>
+  <li>Opera Mobile</li>
+  <li>IE 7-7.5 Mobile</li>
+  <li>Firefox Mobile</li>
+</ul>
+<b><i>TODO:</i></b>
+<ul>
+  <li>Safari Mobile iOS 4.3+</li>
+  <li>Opera Mini</li>
+  <li>IE 8 Mobile</li>
 </ul>
 
 
 <h2>License</h2>
-<p>The MIT License (MIT)
-<br><br>
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-<br><br>
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-</p>
+<p>The MIT License (MIT) - <a href="http://opensource.org/licenses/MIT" title="The MIT License">http://opensource.org/licenses/MIT</a></p>
 
 
 <h2>Acknowledgements</h2>

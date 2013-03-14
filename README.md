@@ -34,7 +34,6 @@ It's intended to be used as an alternative to CSS resets and as a starting-point
     <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles like this:</p>
   </li>
 </ul>
-    ```html
     <!doctype html>
     <html>
     <head>
@@ -43,7 +42,6 @@ It's intended to be used as an alternative to CSS resets and as a starting-point
     <link rel="stylesheet" src="bullframe.min.css">
     <link rel="stylesheet" src="your-styles.css">
     ...
-    ```
 <ul>
   <li>
     <p>2) <b>Write your styles <i>inside</i> the framework</b></p>

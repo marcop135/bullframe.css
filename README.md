@@ -34,7 +34,7 @@ It's intended to be used as an alternative to CSS resets and as a starting-point
 </ul>
 <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles 
 like this:</p>
-<pre>...
+<code>...
 <head>
   <meta charset="utf-8">
   <title>Your title</title>
@@ -42,7 +42,7 @@ like this:</p>
   <link rel="stylesheet" src="bullframe.min.css">
   <link rel="stylesheet" src="your-styles.css">
 </head>
-...</pre>
+...</code>
 <ul>
   <li><b>Option 2:</b>
     Write your styles <i>inside</i> the framework</li>

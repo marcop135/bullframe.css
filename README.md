@@ -32,6 +32,8 @@ It's intended to be used as an alternative to CSS resets and as a starting-point
   <li>
     <p>1) <b>Write your styles without ever touch the framework (like Bootstrap)</b></p>
     <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles like this:</p>
+  </li>
+</ul>
     ```html
     <!doctype html>
     <html>
@@ -42,11 +44,9 @@ It's intended to be used as an alternative to CSS resets and as a starting-point
     <link rel="stylesheet" src="your-styles.css">
     ...
     ```
-  </li>
-</ul>
 <ul>
   <li>
-    <p>2) <b>Write your styles <i>inside</i> the framework</p>
+    <p>2) <b>Write your styles <i>inside</i> the framework</b></p>
   <p>Scroll down the code and start to uncomment/customize/add styles inside
 <i>'Author's custom styles'</i> section (like HTML5 Boilerplate main.css)</p>
   </li>

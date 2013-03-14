@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.0.2
+ * BULLFRAME CSS v1.1.0
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -84,7 +84,7 @@ h6,
   font-family: inherit;
   font-weight: bold;
   margin-top: 0;
-  line-height: 1.5;
+  line-height: 1.2;
   color: inherit;
 }
 h1,
@@ -180,7 +180,6 @@ strong,
 b { 
   font-weight: bold;
 }
-address, 
 em, 
 i,  
 dfn { 
@@ -207,7 +206,6 @@ address {
   margin-bottom: 1.5em;
   line-height: 1.5;
   font-style: normal;
-  font-size: 1em;
 }
 hr {
   display: block;
@@ -450,7 +448,6 @@ input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
-  *width: auto;
 }
 button, 
 input, 
@@ -781,80 +778,20 @@ td {
 .y-unit-23-24 {
   width: 95.8333%;
 }
-
-
-
-
-
-/* $ Wordpress Core CSS
- * http://codex.wordpress.org/CSS
-   ============================================================= */
-
-.alignnone {
-  margin: 5px 20px 20px 0;
+/* create gutter and adapt for smarthphones */
+[class*="y-u"] .container {
+  margin-left: 1.5em;
 }
-.aligncenter,
-div.aligncenter {
-  display: block;
-  margin: 5px auto 5px auto;
-}
-.alignright {
-  float:right;
-  margin: 5px 0 20px 20px;
-}
-.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-.aligncenter {
-  display: block;
-  margin: 5px auto 5px auto;
-}
-a img.alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
-}
-a img.alignnone {
-  margin: 5px 20px 20px 0;
-}
-a img.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-a img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
-}
-.wp-caption {
-  background: #fff;
-  border: 1px solid #f0f0f0;
-  max-width: 96%; /* Image does not overflow the content area */
-  padding: 5px 3px 10px;
-  text-align: center;
-}
-.wp-caption.alignnone {
-  margin: 5px 20px 20px 0;
-}
-.wp-caption.alignleft {
-  margin: 5px 20px 20px 0;
-}
-.wp-caption.alignright {
-  margin: 5px 0 20px 20px;
-}
-.wp-caption img {
-  border: 0 none;
-  height: auto;
-  margin: 0;
-  max-width: 98.5%;
-  padding: 0;
-  width: auto;
-}
-.wp-caption p.wp-caption-text {
-  font-size: 11px;
-  line-height: 17px;
-  margin: 0;
-  padding: 0 4px 5px;
+[class*="y-u"]:first-child .container {
+  margin-left: 0;
+} 
+@media only screen and (max-width: 40em) { /* 640px */
+  [class*="y-u"] {
+    width: 100%;
+  }
+  [class*="y-u"] .container {
+    margin-left: 0;
+  }
 }
 
 
@@ -1031,6 +968,13 @@ a img.aligncenter {
   word-break: break-word;
   word-wrap: break-word;
 }
+.justify {
+  text-align: justify;                
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 
 /* responsive ---------------- */
 .flex-video-container {
@@ -1086,6 +1030,74 @@ a img.aligncenter {
    </script>
  * 
 */
+
+/* $ Wordpress Core CSS ---------------- */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+.alignright {
+  float:right;
+  margin: 5px 0 20px 20px;
+}
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
 
 /* miscellaneous ---------------- */
 .chromeframe {

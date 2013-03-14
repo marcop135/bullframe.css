@@ -29,28 +29,28 @@ It's intended to be used as an alternative to CSS resets and as a starting-point
 
 <h2>How to use it</h2>
 <ul>
-  <li>Option 1: 
-    Write your styles without ever touch the framework (like Bootstrap)</li>
+  <li>
+    <p>1) <b>Write your styles without ever touch the framework (like Bootstrap)</b></p>
+    <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles like this:</p>
+    ```html
+    <!doctype html>
+    <html>
+    <head>
+    ...
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="bullframe.min.css">
+    <link rel="stylesheet" src="your-styles.css">
+    ...
+    ```
+  </li>
 </ul>
-<p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles 
-like this:</p>
-```html
-<!doctype html>
-<html>
-<head>
-...
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" src="bullframe.min.css">
-<link rel="stylesheet" src="your-styles.css">
-...
-```
 <ul>
-  <li><b>Option 2:</b>
-    Write your styles <i>inside</i> the framework</li>
-</ul>
-<p>Scroll down the code and start to uncomment/customize/add styles inside
+  <li>
+    <p>2) <b>Write your styles <i>inside</i> the framework</p>
+  <p>Scroll down the code and start to uncomment/customize/add styles inside
 <i>'Author's custom styles'</i> section (like HTML5 Boilerplate main.css)</p>
-
+  </li>
+</ul>
 
 <h2>Browser support</h2>
 <b>Tested and compatible with:</b>

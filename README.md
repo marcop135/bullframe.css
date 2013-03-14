@@ -1,6 +1,6 @@
 <h1>BULLFRAME CSS v1.1.0</h1>
 <p>Bullframe CSS is the "bulldozer" CSS file.<br>
-It's intended to be used as an alternative to CSS resets. It works great with <b>Responsive Web Design</b>.</p>
+It's intended to be used as an alternative to CSS resets and as a starting-point for Responsive Web Design.</p>
 <p>Personally I don't like so much some heavy and stylish front-end framework like Twitter Bootstrap or Zurb Foundation. So I create a little framework <b>style-agnostic and mobile-first</b> with several small tips and tricks to copy-and-paste or just reference quickly.
 
 
@@ -34,18 +34,15 @@ It's intended to be used as an alternative to CSS resets. It works great with <b
 </ul>
 <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles 
 like this:</p>
-<pre><code><!doctype html>
-<html>
+<pre>...
 <head>
   <meta charset="utf-8">
+  <title>Your title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>...</title>
   <link rel="stylesheet" src="bullframe.min.css">
   <link rel="stylesheet" src="your-styles.css">
-  </head>
-<body>
-</body>
-</html></code></pre>
+</head>
+...</pre>
 <ul>
   <li><b>Option 2:</b>
     Write your styles <i>inside</i> the framework</li>

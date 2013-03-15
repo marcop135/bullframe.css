@@ -13,6 +13,7 @@ body {
   max-width: 960px;
   margin: auto;
   padding: 1.5em 10px 0 10px;
+  position: relative;
   background-color: #fff;
 }
 article,
@@ -87,6 +88,18 @@ h6,
   line-height: 1.2;
   color: inherit;
 }
+.tera {
+  font-size: 3.5em;
+  margin-bottom: 0.35em;
+}
+.giga {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.mega {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
 h1,
 .h1 {
   font-size: 2em;
@@ -155,6 +168,9 @@ pre {
 }
 p {
   font-size: 1em;
+}
+p.lead {
+  font-size: 125%;
 }
 pre code {
   white-space: pre;
@@ -285,6 +301,50 @@ dt {
   font-weight: bold;
 }
 
+ul.square li ul, 
+ul.circle li ul, 
+ul.disc li ul {
+  list-style: inherit; 
+}
+ul.square {
+  list-style-type: square; 
+}
+ul.circle {
+  list-style-type: circle; 
+}
+ul.disc {
+  list-style-type: disc; 
+}
+
+/* inline definitions (IE8+) */
+.inline-def dt,
+.inline-def dd {
+  display: inline;
+  margin: 0;
+  *display: block;
+}
+.inline-def dl {
+  *margin-bottom: 1.5em;
+}
+.inline-def dt + dt:before,
+.inline-def dd + dt:before {
+  content: "\A";
+  white-space: pre;
+  *content: "";
+  *white-space: normal;
+}
+.inline-def dd + dd:before {
+  content: ", ";
+  *content: "";
+}
+.inline-def dd:before {
+  content: ": ";
+  font-weight: bold;
+  margin-left: -0.25em;
+  *content: "";
+  *margin-left: 0;
+}
+
 /* reset */
 nav ol,
 nav ul,
@@ -299,7 +359,6 @@ ol.unstyled ul {
   list-style: none;
   list-style-image: none; /* lte-IE8 */
 } 
-
 
 
 
@@ -340,13 +399,12 @@ svg:not(:root) {
 
 /* google maps fix */
 #map_canvas img,
-#mapCanvas img,
-.google-maps img {
-  max-width: none;
-}
-#mapCanvas label { 
-  width: auto; 
-  display: inline;
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; 
 }
 
 /* override the Facebook comments embed fixed width */
@@ -450,6 +508,7 @@ input[type="checkbox"] {
   width: auto;
 }
 button, 
+.button,
 input, 
 select, 
 textarea {
@@ -540,6 +599,7 @@ input[type="checkbox"] {
   *height: 13px;
 }
 button,
+.button,
 html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
@@ -979,11 +1039,14 @@ td {
 /* responsive ---------------- */
 .flex-video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 30px;
+  padding-bottom: 67.5%; /* 4:3; */
+  padding-top: 1.5625em;
   height: 0;
   overflow: hidden;
   margin-bottom: 1.5em;
+}
+.flex-video-container.widescreen {
+  padding-bottom: 56.25%; /* 16:9 */
 }
 .flex-video-container iframe,  
 .flex-video-container object,  
@@ -993,7 +1056,6 @@ td {
   left: 0;
   width: 100%;
   height: 100%;
-  margin-bottom: 0;
 }
 /* 
  * how to wraps videos via jQuery:
@@ -1477,12 +1539,14 @@ input[type="submit"]:focus {
 
 
 
-/* $ 'Safe' CSS hacks for Internet Explorer 7, 8 and 9+ reference
- * Test the demo http://jsbin.com/atefes/5/edit
+/* $ 'Safe' CSS hacks reference
+ * Test the demo http://jsbin.com/atefes/6/quiet
 ========================================== */
 
 /* IE7
-p { *color: red } */
+p { 
+  *color: red 
+} */
 
 /* IE8
 @media \0screen {
@@ -1492,4 +1556,16 @@ p { *color: red } */
 /* IE9+
 @media screen and (min-width:0\0) {
   p { color: blue }
+} */
+
+/* Firefox 3+ 
+@-moz-document url-prefix() {
+  p { 
+    color: brown;
+  } 
+} */
+
+/* Opera 9.5+ 
+noindex:-o-prefocus, p { 
+  color: pink;
 } */

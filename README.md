@@ -1,7 +1,7 @@
 <h1>BULLFRAME CSS v1.1.0</h1>
-<p>bullframe.css is a CSS file intended to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Responsive Web Design</b>.</p>
-<p>Personally I don't like so much some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a small <b>style-agnostic mobile-first</b> CSS-only framework.<br>
-You can copy-and-paste it quickly or just reference it when you build cool websites!
+<p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Responsive Web Design</b>.</p>
+<p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a small <b>style-agnostic mobile-first</b> CSS-only framework.<br>
+You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
 <h2>Best features</h2>
@@ -44,14 +44,14 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/406/edit" titl
 <ul>
   <li>
     <p>2) <b>Write your styles inside the framework</b></p>
-  <p>Scroll down the code and start to uncomment/customize/add styles <i>inside</i>
+  <p>Scroll down the code and start to uncomment/customize/add/remove styles <i>inside</i>
 "Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
   </li>
 </ul>
 <ul>
   <li>
-    <p>3) <b>Just reference <code>bullframe.css</code> when coding websites.</b></p>
-  <p>The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just reference CSS tricks and best practices.</p>
+    <p>3) <b>Just watch <code>bullframe.css</code> when coding websites.</b></p>
+  <p>The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.</p>
   </li>
 </ul>
 
@@ -94,4 +94,5 @@ bullframe.css incorporates some of the styles found on:
   <li>Formalize - <a href="https://github.com/nathansmith/formalize" title="">https://github.com/nathansmith/formalize</a></li>
   <li>Inuit CSS - <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
   <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
+  <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
 </ul>

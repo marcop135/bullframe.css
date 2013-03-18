@@ -53,17 +53,10 @@ audio:not([controls]) {
 
 html {
   font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
-}
-html, 
-button, 
-input, 
-select, 
-optgroup,
-textarea {
-  font-family: Arial, Helvetica, Verdana, sans-serif;
   color: #222;
 }
 body { 
@@ -262,7 +255,7 @@ a:active {
 }
 a {
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); /* 35% black */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* transparent */
 }
 a:hover, 
 a:active { 
@@ -345,6 +338,21 @@ ul.disc {
   *margin-left: 0;
 }
 
+/* inline list (navigation) */
+.inline-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  list-style-image: none;
+  overflow: hidden;
+}
+.inline-list > li {
+  float: left;
+}
+.inline-list li + li {
+  margin-left: 1.5em;
+}
+
 /* reset */
 nav ol,
 nav ul,
@@ -393,6 +401,43 @@ object,
 embed {
   max-width: 100%;
 }
+
+/* flex videos */
+.flex-video-container {
+  position: relative;
+  padding-bottom: 67.5%; /* 4:3; */
+  padding-top: 1.5625em;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+.flex-video-container.widescreen {
+  padding-bottom: 56.25%; /* 16:9 */
+}
+.flex-video-container.vimeo {
+  padding-top: 0; /* no extra-padding for controls */
+}
+.flex-video-container iframe,  
+.flex-video-container object,  
+.flex-video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 
+ * how to wraps videos via jQuery:
+ * 
+   <script>
+   $(function() {
+      $('.content iframe, .content object, .content embed')
+      .wrap('<div class="flex-video-container"></div>');
+   });
+   </script>
+ * 
+*/
+
 svg:not(:root) { 
   overflow: hidden;
 }
@@ -508,6 +553,14 @@ input[type="checkbox"] {
   width: auto;
 }
 button, 
+input, 
+select, 
+optgroup, /* fix FF issue https://github.com/nathansmith/formalize/issues/41 */
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+}
+button, 
 .button,
 input, 
 select, 
@@ -537,7 +590,7 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
-/* select, */ /* avoid arrow disappearing in android browser v4.1.2 */
+select,
 textarea {
   border: 1px solid #999;
   -webkit-border-radius: 0;
@@ -622,10 +675,26 @@ input::-moz-focus-inner {
 } 
 select {
   text-transform: none;
+  background-color: #fff;
+}
+/* replace select arrow down in webkit (Safari, Android, Chrome, ecc... */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select {
+    -webkit-appearance: none;
+    background-image: url(data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MSA2NC4xNDA5NDksIDIwMTAvMTIvMDctMTA6NTc6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdGRTg2MUZEOEY2NzExRTJBOEUyODcwQjhBMUY0QzYzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdGRTg2MUZFOEY2NzExRTJBOEUyODcwQjhBMUY0QzYzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6N0ZFODYxRkI4RjY3MTFFMkE4RTI4NzBCOEExRjRDNjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6N0ZFODYxRkM4RjY3MTFFMkE4RTI4NzBCOEExRjRDNjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgICAgICAgICAgIDAwMDAwMDAwMDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAKABMDAREAAhEBAxEB/8QAYgABAAMAAAAAAAAAAAAAAAAACAAFCgEBAAAAAAAAAAAAAAAAAAAAABAAAAUDAgMJAAAAAAAAAAAAAgQFBgcBAwgANyITFDRkNVUWZzgJChEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Aqv0I4b5ZY95uMqQMbZAnlQi3OB4WExispoyC8i5JtZFLCkUIrsXoqeRXbRNOKvU4ol1dFsioXtjEaPFrAKWU8VaBss+ufExSwrxFiqDXQ9F+RpHIJVHLLT6cbhV3McccnuS0XOOu4QUloxfN+nEYwACYlA4K0TiNgQw84VwQgcOgNuQ3jeNWxPySa++Ha9v5M2R99vJ+49foEloJoP/Z);
+    /* small arrow 
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==); */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
 }
 select[size], 
 select[multiple] { 
   height: auto;
+}
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 textarea {
   height: auto;
@@ -660,10 +729,12 @@ textarea:placeholder {
   color: #888;
 }
 button[disabled],
+.button[disabled],
 html input[disabled], 
 select[disabled], 
 textarea[disabled],
 button[readonly],
+.button[readonly],
 input[readonly], 
 select[readonly], 
 textarea[readonly] {
@@ -702,6 +773,35 @@ td {
   border: 1px solid #999;
 }
 
+/* Responsive Tables
+ * Note: issues on Opera 10-11 and Opera Mini 
+ */
+.table-overflow-container { 
+  overflow-x: scroll;
+  margin-bottom: 1.5em;
+}
+.table-overflow-container table { 
+  width: 100%;
+}
+@media only screen and (min-width: 58.75em) { /* 940px */
+  .table-overflow-container {
+    overflow-x: auto;
+  }
+}  
+.table-overflow-container table {
+  margin-bottom: 0;
+}
+/* 
+ * how to wraps table via jQuery:
+ * 
+   <script>
+   $(function() {
+     $('.content table')
+     .wrap('<div class="table-overflow-container"></div>');
+   });
+   </script>
+ * 
+*/
 
 
 
@@ -954,30 +1054,6 @@ td {
   display: block !important;
   visibility: visible;
 }
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
 
 /* layout positioning ---------------- */
 .pull-right {
@@ -1036,94 +1112,39 @@ td {
   hyphens: auto;
 }
 
-/* responsive ---------------- */
-.flex-video-container {
-  position: relative;
-  padding-bottom: 67.5%; /* 4:3; */
-  padding-top: 1.5625em;
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 1.5em;
-}
-.flex-video-container.widescreen {
-  padding-bottom: 56.25%; /* 16:9 */
-}
-.flex-video-container iframe,  
-.flex-video-container object,  
-.flex-video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* 
- * how to wraps videos via jQuery:
- * 
-   <script>
-   $(function() {
-      $('.content iframe, .content object, .content embed')
-      .wrap('<div class="flex-video-container"></div>');
-   });
-   </script>
- * 
-*/
-/* Note: issues on Opera 10-11 and Opera Mini */
-.table-overflow-container { 
-  overflow-x: scroll;
-  margin-bottom: 1.5em;
-}
-@media (min-width: 58.75em) { /* 940px */
-  .table-overflow-container {
-  overflow-x: auto;
-  }
-}  
-.table-overflow-container table {
-  margin-bottom: 0;
-}
-/* 
- * how to wraps table via jQuery:
- * 
-   <script>
-   $(function() {
-     $('.content table')
-     .wrap('<div class="table-overflow-container"></div>');
-   });
-   </script>
- * 
-*/
 
-/* $ Wordpress Core CSS ---------------- */
+
+/* $ Wordpress Core CSS http://codex.wordpress.org/CSS ---------------- */
 .alignnone {
-  margin: 5px 20px 20px 0;
+  margin: 0.5em 1.5em 1.5em 0;
 }
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 5px auto 5px auto;
+  margin: 0.5em auto 0.5em auto;
 }
 .alignright {
   float:right;
-  margin: 5px 0 20px 20px;
+  margin: 0.5em 0 1.5em 1.5em;
 }
 .alignleft {
   float: left;
-  margin: 5px 20px 20px 0;
+  margin: 0.5em 1.5em 1.5em 0;
 }
 .aligncenter {
   display: block;
-  margin: 5px auto 5px auto;
+  margin: 0.5em auto 0.5em auto;
 }
 a img.alignright {
   float: right;
-  margin: 5px 0 20px 20px;
+  margin: 0.5em 0 1.5em 1.5em;
 }
 a img.alignnone {
-  margin: 5px 20px 20px 0;
+  margin: 0.5em 1.5em 1.5em 0;
 }
 a img.alignleft {
   float: left;
-  margin: 5px 20px 20px 0;
+  margin: 0.5em 1.5em 1.5em 0;
 }
 a img.aligncenter {
   display: block;
@@ -1131,20 +1152,20 @@ a img.aligncenter {
   margin-right: auto
 }
 .wp-caption {
-  background: #fff;
-  border: 1px solid #f0f0f0;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
   max-width: 96%; /* Image does not overflow the content area */
-  padding: 5px 3px 10px;
+  padding: 0.5em 0.5em 0.75em;
   text-align: center;
 }
 .wp-caption.alignnone {
-  margin: 5px 20px 20px 0;
+  margin: 0.5em 1.5em 1.5em 0;
 }
 .wp-caption.alignleft {
-  margin: 5px 20px 20px 0;
+  margin: 0.5em 1.5em 1.5em 0;
 }
 .wp-caption.alignright {
-  margin: 5px 0 20px 20px;
+  margin: 0.5em 0 1.5em 1.5em;
 }
 .wp-caption img {
   border: 0 none;
@@ -1155,10 +1176,9 @@ a img.aligncenter {
   width: auto;
 }
 .wp-caption p.wp-caption-text {
-  font-size: 11px;
-  line-height: 17px;
-  margin: 0;
-  padding: 0 4px 5px;
+  font-size: 0.75em;
+  margin: 0.75em 0 0 0;
+  padding: 0;
 }
 
 /* miscellaneous ---------------- */
@@ -1236,6 +1256,9 @@ a img.aligncenter {
     display: block !important; 
     visibility: visible;
   }
+  .hide-on-print { 
+    display: none !important; 
+  }
 }
 
 
@@ -1284,21 +1307,18 @@ a img.aligncenter {
 */
 
 
-/* extend grid system ----------------
+/* customize grid system ----------------
  * demo http://jsbin.com/anezew/2/quiet
 [class*="y-u"] .container {
-  margin-left: 1.5em;
+  margin-left: XXXem;
 }
-[class*="y-u"]:first-child .container {
-  margin-left: 0;
-} */
 /* 640px
-@media only screen and (max-width: 40em) { 
+@media only screen and (max-width: XXem) { 
   [class*="y-u"] {
-    width: 100%;
+    width: XXX%;
   }
   [class*="y-u"] .container {
-    margin-left: 0;
+    margin-left: XXXem;
   }
 }
 */
@@ -1309,6 +1329,7 @@ body {
   max-width: ;
   margin: ;
   padding: ;
+  position: ;
 }
 */
 
@@ -1317,7 +1338,6 @@ html,
 button, 
 input, 
 select, 
-optgroup,
 textarea {
   font-family: ;
   color: ;
@@ -1328,7 +1348,7 @@ body {
 a {
   color: ;
   text-decoration: ;
-  -webkit-tap-highlight-color: ;
+  -webkit-tap-highlight-color: rgba(XXX, XXX, XXX, X.XX);
 }
 a:hover,
 a:active {
@@ -1350,6 +1370,15 @@ html {
   font-size: ;
 }
 body {
+  font-size: ;
+}
+.tera {
+  font-size: ;
+}
+.giga {
+  font-size: ;
+}
+.mega {
   font-size: ;
 }
 h1, 
@@ -1391,6 +1420,18 @@ address {
 /* vertical rhythm ---------------- 
 body {
    line-height: ;
+}
+.tera {
+  line-height: ;
+  margin-bottom: ;
+}
+.giga {
+  line-height: ;
+  margin-bottom: ;
+}
+.mega {
+  line-height: ;
+  margin-bottom: ;
 }
 h1, 
 .h1 {
@@ -1435,7 +1476,6 @@ input,
 select, 
 textarea,
 table,
-
 .flex-video-container,
 figure img,
 figcaption,
@@ -1461,11 +1501,12 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
-select, */ /* double-check android browser appearance */
+select,
 /* textarea {
   border-color: ;
 }
 button,
+.button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
@@ -1476,10 +1517,12 @@ input[type="submit"] {
   background-color: ;
 }
 button:hover,
+.button:hover;
 input[type="button"]:hover, 
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 button:focus,
+.button:focus;
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
@@ -1496,6 +1539,36 @@ input[type="submit"]:focus {
  * $ (Proportional) Media queries reference
  * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
 ========================================== */
+
+
+/* mobile first */
+
+/* 320px 
+@media only screen and (max-width: 20em) { } */
+
+/* 480px 
+@media only screen and (max-width: 30em) { } */
+
+/* 640 
+@media only screen and (max-width: 40em) { } */
+
+/* 768px 
+@media only screen and (max-width: 48em) { } */
+
+/* 800px 
+@media only screen and (max-width: 50em) { } */
+
+/* 960px 
+@media only screen and (max-width: 60em) { } */
+
+/* 1024px 
+@media only screen and (max-width: 64em) { } */
+
+/* 1200px 
+@media only screen and (max-width: 75em) { } */
+
+
+/* desktop > mobile */
 
 /* 1200px 
 @media only screen and (max-width: 75em) { } */
@@ -1520,6 +1593,7 @@ input[type="submit"]:focus {
 
 /* 320px 
 @media only screen and (max-width: 20em) { } */
+
 
 
 

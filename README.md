@@ -1,4 +1,4 @@
-<h1>BULLFRAME CSS v1.1.0</h1>
+<h1>BULLFRAME CSS</h1>
 <p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Responsive Web Design</b>.</p>
 <p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a small <b>style-agnostic mobile-first</b> CSS-only framework.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -15,14 +15,14 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Flexible images and media</li>
   <li>Fluid and cross-browser HTML5 forms</li>
   <li>Fluid grid system</li>
+  <li>Several helper classes (like '.clearfix' and text utilities)</li>
   <li>IE7+ and mobile browsers support</li>
-  <li>Browser CSS hacks reference</li>
 </ul>
 
 
 <h2>Test it now</h2>
 <p><b><a href="http://jsbin.com/oyasux/406/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
-Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/406/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/406/edit</a></p>
+Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/406/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/415/edit</a></p>
 
 
 <h2>How to use it</h2>
@@ -44,13 +44,13 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/406/edit" titl
 <ul>
   <li>
     <p>2) <b>Write your styles inside the framework</b></p>
-  <p>Scroll down the code and start to uncomment/customize/add/remove styles <i>inside</i>
+  <p>Open <code>bullframe.css</code> file, scroll down the code and start to add styles <i>inside</i>
 "Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
   </li>
 </ul>
 <ul>
   <li>
-    <p>3) <b>Just watch <code>bullframe.css</code> when coding websites.</b></p>
+    <p>3) <b>Just watch <code>bullframe.css</code> when coding websites</b></p>
   <p>The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.</p>
   </li>
 </ul>

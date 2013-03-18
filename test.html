@@ -1,578 +1,878 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-     
-<title>BULLFRAME CSS demo page</title>
-<meta name="description" content="https://github.com/marco135/bullframe.css/">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BULLFRAME CSS demo page</title>
+  <meta content="https://github.com/marco135/bullframe.css/" name=
+  "description">
+  <link href="bullframe.css" rel="stylesheet">
   
-<link rel="stylesheet" href="bullframe.css"> 
-      
-<!-- demo's custom styles --> 
-<style>
-  .headline, .title { font-family: Georgia, serif;  color: #fff; padding: .3em; text-transform: uppercase; }
-  .headline { margin: 0; background-color: #222; }
-  .title:before { content: "$"; font-family: sans-serif; font-weight: normal; padding-right: .5em; color: #b5e7e7; }
-  .title { background-color: #1b558c; margin-top: 4em; }
-  .headline + .title {margin-top: 1em; } 
-  h3 { margin-top: 1.5em !important; padding: .3em; background-color: #aee8ef }
-  .headings h3 { margin-top: 0 !important; padding: 0; background-color: transparent }
-</style>     
-    
-<!--[if IE]>
+  <!-- just for demo -->
+  <style>
+.headline { color: #fff; padding: .5em; text-transform: uppercase; margin: 0 0 .5em 0; background-color: #3399ff; }
+    .title { margin-top: 2em !important; padding: .5em; color: #fff !important; background-color: #777; }
+  </style><!--[if IE]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 
 <body>
-<h1 class="headline">BULLFRAME CSS demo page</h1>
-  
- 
-<h2 class="title">Text elements</h2>
+  <h1 class="headline">BULLFRAME CSS demo page</h1>
 
-<div class="headings">
+  <h1 class="tera">Tera heading</h1>
+
+  <h1 class="giga">Giga heading</h1>
+
+  <h1 class="mega">Mega heading</h1>
+
   <h1>Heading 1</h1>
+
   <h2>Heading 2</h2>
+
   <h3>Heading 3</h3>
+
   <h4>Heading 4</h4>
+
   <h5>Heading 5</h5>
+
   <h6>Heading 6</h6>
-  
+
   <h1><a href="#">Heading 1</a></h1>
+
   <h2><a href="#">Heading 2</a></h2>
+
   <h3><a href="#">Heading 3</a></h3>
+
   <h4><a href="#">Heading 4</a></h4>
+
   <h5><a href="#">Heading 5</a></h5>
+
   <h6><a href="#">Heading 6</a></h6>
-  
+
   <section>
-      <h1>Heading 1 (in section)</h1>
-      <h2>Heading 2 (in section)</h2>
-      <h3>Heading 3 (in section)</h3>
-      <h4>Heading 4 (in section)</h4>
-      <h5>Heading 5 (in section)</h5>
-      <h6>Heading 6 (in section)</h6>
+    <h1>Heading 1 (in section)</h1>
+
+    <h2>Heading 2 (in section)</h2>
+
+    <h3>Heading 3 (in section)</h3>
+
+    <h4>Heading 4 (in section)</h4>
+
+    <h5>Heading 5 (in section)</h5>
+
+    <h6>Heading 6 (in section)</h6>
   </section>
-  
+
   <article>
-      <h1>Heading 1 (in article)</h1>
-      <h2>Heading 2 (in article)</h2>
-      <h3>Heading 3 (in article)</h3>
-      <h4>Heading 4 (in article)</h4>
-      <h5>Heading 5 (in article)</h5>
-      <h6>Heading 6 (in article)</h6>
+    <h1>Heading 1 (in article)</h1>
+
+    <h2>Heading 2 (in article)</h2>
+
+    <h3>Heading 3 (in article)</h3>
+
+    <h4>Heading 4 (in article)</h4>
+
+    <h5>Heading 5 (in article)</h5>
+
+    <h6>Heading 6 (in article)</h6>
   </article>
-</div>
-  
-<header>
+
+  <header>
     <hgroup>
-        <h1>Heading 1 (in hgroup)</h1>
-        <h2>Heading 2 (in hgroup)</h2>
+      <h1>Heading 1 (in hgroup)</h1>
+
+      <h2>Heading 2 (in hgroup)</h2>
     </hgroup>
-  
-    <nav> 
-        <ul>
-            <li><a href="#">navigation item #1</a></li>
-            <li><a href="#">navigation item #2</a></li>
-            <li><a href="#">navigation item #3</a></li>
-        </ul>
+
+    <nav>
+      <ul>
+        <li><a href="#">navigation item #1</a></li>
+
+        <li><a href="#">navigation item #2</a></li>
+
+        <li><a href="#">navigation item #3</a></li>
+      </ul>
     </nav>
-</header> 
+  </header>
 
-<p hidden="">This should be hidden in all browsers, apart from IE6</p>
- 
-<address>
+  <p hidden="">This should be hidden in all browsers, apart from IE6</p>
+
+  <address>
     Address: somewhere, world
-</address>
-  
-<h3>hr</h3>
-<hr>
+  </address>
 
-<h3>Inline text elements</h3>
-<p>The <a href="#">a element</a> example<br>
-The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element
-with title</abbr> examples<br>
-The <strong>b element</strong> example<br>
-The <cite>cite element</cite> example<br>
-The <code>code element</code> example<br>
-The <del>del element</del> example<br>
-The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with
-title</dfn> examples<br>
-The <em>em element</em> example<br>
-The <em>i element</em> example<br>
-The img element <img alt="" src="http://lorempixel.com/16/16"> example<br>
-The <ins>ins element</ins> example<br>
-The <kbd>kbd element</kbd> example<br>
-The <mark>mark element</mark> example<br>
-The <q>q element <q>inside</q> a q element</q> example<br>
-The <span style="text-decoration: line-through">s element</span>
-example<br>
-The <samp>samp element</samp> example<br>
-The <small>small element</small> example<br>
-The <span>span element</span> example<br>
-The <strong>strong element</strong> example<br>
-The <sub>sub element</sub> example<br>
-The <sup>sup element</sup> example<br>
-The <span style="text-decoration: underline">u element</span> example<br>
-The <var>var element</var> example</p>
+  <h3>hr</h3>
+  <hr>
 
-<h3>Paragraphs</h3>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
-ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum
-dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
-<p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages.</p>
+  <h3>Inline text elements</h3>
 
-<h3>pre</h3>
-<pre>
+  <p>The <a href="#">a element</a> example<br>
+  The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with
+  title</abbr> examples<br>
+  The <strong>b element</strong> example<br>
+  The <cite>cite element</cite> example<br>
+  The <code>code element</code> example<br>
+  The <del>del element</del> example<br>
+  The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with
+  title</dfn> examples<br>
+  The <em>em element</em> example<br>
+  The <em>i element</em> example<br>
+  The img element <img alt="" src="http://lorempixel.com/16/16"> example<br>
+  The <ins>ins element</ins> example<br>
+  The <kbd>kbd element</kbd> example<br>
+  The <mark>mark element</mark> example<br>
+  The <q>q element <q>inside</q> a q element</q> example<br>
+  The <span style="text-decoration: line-through">s element</span> example<br>
+  The <samp>samp element</samp> example<br>
+  The <small>small element</small> example<br>
+  The <span>span element</span> example<br>
+  The <strong>strong element</strong> example<br>
+  The <sub>sub element</sub> example<br>
+  The <sup>sup element</sup> example<br>
+  The <span style="text-decoration: underline">u element</span> example<br>
+  The <var>var element</var> example</p>
+
+  <h3>Paragraphs</h3>
+
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
+  ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+  eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum
+  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+  dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+
+  <p>The European languages are members of the same family. Their separate
+  existence is a myth. For science, music, sport, etc, Europe uses the same
+  vocabulary. The languages only differ in their grammar, their pronunciation
+  and their most common words. Everyone realizes why a new common language
+  would be desirable: one could refuse to pay expensive translators. To achieve
+  this, it would be necessary to have uniform grammar, pronunciation and more
+  common words. If several languages coalesce, the grammar of the resulting
+  language is more simple and regular than that of the individual languages.
+  The new common language will be more simple and regular than the existing
+  European languages.</p>
+
+  <h3>pre</h3>
+  <pre>
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.
 </pre>
 
-<h3>pre + code</h3>
-<pre><code>&lt;!doctype html>
+  <h3>pre + code</h3>
+  <pre>
+<code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;/head&gt;
     &lt;body&gt;
 &lt;div class="main"&gt; &lt;/div&gt;
     &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</code>
+</pre>
 
-<h3>kbd</h3>
-<kbd>Cmd + Shift + i</kbd>
+  <h3>kbd</h3><kbd>Cmd + Shift + i</kbd>
 
-<h3>blockquotes</h3>
-<blockquote>
-  <p>Some sort of famous witty quote marked up with a &lt;blockquote&gt;
-  and a child &lt;p&gt; element.</p>
-</blockquote>
-<blockquote>
-    Even better philosophical quote marked up with just a
-    &lt;blockquote&gt; element.
-</blockquote>
+  <h3>blockquotes</h3>
 
-<h3>Ordered list</h3>
-<ol>
+  <blockquote>
+    <p>Some sort of famous witty quote marked up with a &lt;blockquote&gt; and
+    a child &lt;p&gt; element.</p>
+  </blockquote>
+
+  <blockquote>
+    Even better philosophical quote marked up with just a &lt;blockquote&gt;
+    element.
+  </blockquote>
+
+  <h3>Ordered list</h3>
+
+  <ol>
     <li>list item 1</li>
+
     <li>list item 1
-        <ol>
-            <li>list item 2</li>
-            <li>list item 2
-                <ol>
-                    <li>list item 3</li>
 
-                    <li>list item 3</li>
-                </ol>
-            </li>
-            <li>list item 2</li>
-            <li>list item 2</li>
-        </ol>
+      <ol>
+        <li>list item 2</li>
+
+        <li>list item 2
+
+          <ol>
+            <li>list item 3</li>
+
+            <li>list item 3</li>
+          </ol>
+        </li>
+
+        <li>list item 2</li>
+
+        <li>list item 2</li>
+      </ol>
     </li>
-    <li>list item 1</li>
-    <li>list item 1</li>
-</ol>
 
-<h3>Ordered list with 'unstyled' class</h3>
-<ol class="unstyled">
     <li>list item 1</li>
+
+    <li>list item 1</li>
+  </ol>
+
+  <h3>Ordered list with 'unstyled' class</h3>
+
+  <ol class="unstyled">
+    <li>list item 1</li>
+
     <li>list item 1
-        <ol>
-            <li>list item 2</li>
-            <li>list item 2
-                <ol>
-                    <li>list item 3</li>
 
-                    <li>list item 3</li>
-                </ol>
-            </li>
-            <li>list item 2</li>
-            <li>list item 2</li>
-        </ol>
+      <ol>
+        <li>list item 2</li>
+
+        <li>list item 2
+
+          <ol>
+            <li>list item 3</li>
+
+            <li>list item 3</li>
+          </ol>
+        </li>
+
+        <li>list item 2</li>
+
+        <li>list item 2</li>
+      </ol>
     </li>
-    <li>list item 1</li>
-    <li>list item 1</li>
-</ol>
 
-<h3>Unordered list</h3>
-<ul>
     <li>list item 1</li>
+
+    <li>list item 1</li>
+  </ol>
+
+  <h3>Unordered list</h3>
+
+  <ul>
+    <li>list item 1</li>
+
     <li>list item 1
-        <ul>
-            <li>list item 2</li>
-            <li>list item 2
-                <ul>
-                    <li>list item 3</li>
-                    <li>list item 3</li>
-                </ul>
-            </li>
-            <li>list item 2</li>
-            <li>list item 2</li>
-        </ul>
-    </li>
-    <li>list item 1</li>
-    <li>list item 1</li>
-</ul>
 
-<h3>unordered list with 'unstyled' class</h3>
-<ul class="unstyled">
+      <ul>
+        <li>list item 2</li>
+
+        <li>list item 2
+
+          <ul>
+            <li>list item 3</li>
+
+            <li>list item 3</li>
+          </ul>
+        </li>
+
+        <li>list item 2</li>
+
+        <li>list item 2</li>
+      </ul>
+    </li>
+
     <li>list item 1</li>
+
+    <li>list item 1</li>
+  </ul>
+
+  <h3>Inline list</h3>
+
+  <ul class="inline-list">
+    <li><a href="#">list item 1</a></li>
+
+    <li><a href="#">list item 2</a></li>
+
+    <li><a href="#">list item 3</a></li>
+
+    <li><a href="#">list item 4</a></li>
+
+    <li><a href="#">list item 5</a></li>
+  </ul>
+
+  <h3>unordered list with 'unstyled' class</h3>
+
+  <ul class="unstyled">
+    <li>list item 1</li>
+
     <li>list item 1
-        <ul>
-            <li>list item 2</li>
-            <li>list item 2
-                <ul>
-                    <li>list item 3</li>
-                    <li>list item 3</li>
-                </ul>
-            </li>
-            <li>list item 2</li>
-            <li>list item 2</li>
-        </ul>
-    </li>
-    <li>list item 1</li>
-    <li>list item 1</li>
-</ul>
 
-<h3>description list</h3>
-<dl>
+      <ul>
+        <li>list item 2</li>
+
+        <li>list item 2
+
+          <ul>
+            <li>list item 3</li>
+
+            <li>list item 3</li>
+          </ul>
+        </li>
+
+        <li>list item 2</li>
+
+        <li>list item 2</li>
+      </ul>
+    </li>
+
+    <li>list item 1</li>
+
+    <li>list item 1</li>
+  </ul>
+
+  <h3>definition list</h3>
+
+  <dl>
     <dt>Description name</dt>
+
     <dd>Description value</dd>
+
     <dt>Description name</dt>
+
     <dd>Description value</dd>
+
     <dt>Description name</dt>
+
     <dd>Description value</dd>
-</dl>
+  </dl>
 
+  <h3>inline definition list</h3>
 
+  <div class="inline-def">
+    <dl>
+      <dt>Description name</dt>
 
-<h2 class="title">Embedded content</h2>
+      <dd>Description value</dd>
 
-<h3>figure + img + figcaption</h3>
-<figure>
+      <dd>Description value</dd>
+
+      <dd>Description value</dd>
+
+      <dd>Description value</dd>
+
+      <dt>Description name</dt>
+
+      <dd>Description value</dd>
+
+      <dd>Description value</dd>
+
+      <dt>Description name</dt>
+
+      <dd>Description value</dd>
+    </dl>
+  </div>
+
+  <h2 class="title">Embedded content</h2>
+
+  <h3>figure + img + figcaption</h3>
+
+  <figure>
     <img alt="" src="http://lorempixel.com/400/200">
+
     <figcaption>
-        Figcaption content
+      Figcaption content
     </figcaption>
-</figure>
+  </figure>
 
-<h3>img</h3>
-<img alt="" src="http://lorempixel.com/500/250"> 
+  <h3>img</h3><img alt="" src="http://lorempixel.com/500/250">
 
-<h3>linked image</h3>
-<a href="#"> <img alt="" src="http://lorempixel.com/300/250"></a>
+  <h3>linked image</h3><a href="#"><img alt="" src=
+  "http://lorempixel.com/300/250"></a>
 
-<h3>Canvas</h3>
-<canvas id="myCanvas" width="300" height="100">
-Fallback content, in case the browser does not support Canvas.
-</canvas>
-<script>
+  <h3>Canvas</h3><canvas height="100" id="myCanvas" width="300">Fallback
+  content, in case the browser does not support Canvas.</canvas> <script>
 // Get a reference to the element.
-var elem = document.getElementById('myCanvas');
+    var elem = document.getElementById('myCanvas');
 
-// Always check for properties and methods, to make sure your code doesn't break 
-// in other browsers.
-if (elem && elem.getContext) {
-  // Get the 2d context.
-  // Remember: you can only initialize one context per element.
-  var context = elem.getContext('2d');
-  if (context) {
+    // Always check for properties and methods, to make sure your code doesn't break 
+    // in other browsers.
+    if (elem && elem.getContext) {
+    // Get the 2d context.
+    // Remember: you can only initialize one context per element.
+    var context = elem.getContext('2d');
+    if (context) {
     // You are done! Now you can draw your first rectangle.
     // You only need to provide the (x,y) coordinates, followed by the width and 
     // height dimensions.
     context.fillRect(0, 0, 250, 100);
-  }
-}
-</script>
+    }
+    }
+  </script>
 
-<h3>svg</h3>
-<svg width="200px" height="200px">
-  <circle cx="200" cy="200" r="200" fill="#ff0000" />
-</svg>
+  <h3>svg</h3>
 
+  <h2 class="title">Interactive embedded content</h2>
 
+  <h3>details + summary</h3>
 
-
-
-<h2 class="title">Interactive embedded content</h2>
-
-<h3>details + summary</h3>
-<details>
+  <details>
     <summary>
-        More info
+      More info
     </summary>
+
     <p>Additional information</p>
+
     <ul>
-        <li>Point 1</li>
-        <li>Point 2</li>
+      <li>Point 1</li>
+
+      <li>Point 2</li>
     </ul>
-</details>
+  </details>
 
-<h3>audio</h3>
-<audio controls></audio>
+  <h3>audio</h3>
 
-<h3>HTML5 video</h3>
-<video controls></video>
+  <h3>HTML5 video</h3>
 
-<h3>YouTube video iframe with 'flex-video-container' class</h3>  
-<div class="flex-video-container">
-  <iframe width="560" height="315" src="http://www.youtube.com/embed/4EVBg1pNdtc" frameborder="0" allowfullscreen></iframe>
-</div>
+  <h3>YouTube video iframe (4:3)</h3>
 
-<h3>YouTube Video object with 'flex-video-container' class</h3>
-<div class="flex-video-container">
-  <object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-</div>
-
-<h3>Vimeo Video iframe with 'flex-video-container' class</h3>
-<div class="flex-video-container">
-  <iframe src="http://player.vimeo.com/video/27243869?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-</div>
-
-<h3>Google Map</h3>
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=roma&amp;sll=41.908558,12.535998&amp;sspn=0.344931,0.727158&amp;ie=UTF8&amp;hq=&amp;hnear=Roma,+Lazio&amp;t=m&amp;ll=41.960511,12.471542&amp;spn=0.178708,0.291824&amp;z=11&amp;iwloc=A&amp;output=embed"></iframe>
-
-<h3>Facebook comments</h3>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=200093550120274";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-comments" data-href="http://example.com" data-width="470" data-num-posts="1"></div>
-
-<h3>Twitter embed</h3>
-<blockquote class="twitter-tweet" lang="it"><p>Four more years. <a href="http://t.co/bAJE6Vom" title="http://twitter.com/BarackObama/status/266031293945503744/photo/1">twitter.com/BarackObama/st…</a></p>&mdash; Barack Obama (@BarackObama) <a href="https://twitter.com/BarackObama/status/266031293945503744">Novembre 7, 2012</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-
-<h2 class="title">HTML5 Forms</h2>
-
-<h3>Inputs</h3> 
-<form>
-<fieldset>
-  <legend>Inputs as descendents of labels (form legend). This doubles up as a long legend that can test word wrapping.</legend>
-  <label>Text input<input type="text" value="default value that goes on and on without stopping or punctuation"></label> 
-  <label>Email input<input type="email"></label>
-  <div><label><input type="radio" name="rad">Radio input</label></div>  
-  <div><label><input type="checkbox">Checkbox input</label></div> 
-</fieldset>
-<fieldset>
-  <legend>Inputs as siblings of labels</legend>
-  <div><label>Radio input</label><input type="radio" name="rad"></div>
-  <div><label>Checkbox input</label><input type="checkbox"></div>
-  <label>Text input</label><input type="text" value="default value that goes on and on without stopping or punctuation">
-  <label>Email input</label><input type="email">
-  <label>Number input</label> <input type="number" id="in" min="0" max="10" value="5">
-  <label>Tel input</label><input type="tel">
-  <label>URL input</label><input type="url">
-  <label>Date input</label><input type="date" id="idd" value="1970-01-01">
-  <label>Month input</label><input type="month" id="idm" value="1970-01">
-  <label>Week input</label><input type="week" id="idw" value="1970-W01">
-  <label>Datetime input</label> <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">  
-  <label>Datetime-local input</label><input type="datetime-local" id="idtl" value="1970-01-01T00:00">
-  <label>Color input</label><input type="color" id="ic" value="#000000">
-  <label>Range input</label><input type="range" id="ir" value="10">
-  <label>Password input</label><input type="password" value="password">
-  <label>Search input</label><input type="search" id="search" name="search">
-  <label>File input</label><input type="file">
-</fieldset>
-
-<h3>Selects</h3>
-<fieldset>
-  <div>
-    <label for="s">Select field</label> 
-      <select id="s">
-        <option>Option 01</option>
-        <option>Option 02</option>
-      </select>
+  <div class="flex-video-container">
+    <iframe frameborder="0" height="315" src=
+    "http://www.youtube.com/embed/4EVBg1pNdtc" width="560"></iframe>
   </div>
-  <label for="select_dd">
-    Select drop-down
-  </label>
-  <select id="select_dd" name="select_dd">
-    <optgroup label="Group 1">
-      <option value="1">Some text goes here</option>
-      <option value="2">Another choice could be here</option>
-      <option value="3">Yet another item to be chosen</option>
-    </optgroup>
-    <optgroup label="Group 2">
-      <option value="4">Some text goes here</option>
-      <option value="5">Another choice could be here</option>
-      <option value="6">Yet another item to be chosen</option>
-    </optgroup>
-    <optgroup label="Group 3">
-      <option value="7">Some text goes here</option>
-      <option value="8">Another choice could be here</option>
-      <option value="9">Yet another item to be chosen</option>
-    </optgroup>
-  </select>
 
-  <label for="select_multi">
-    Select multiple
-  </label>
-  <select id="select_multi" name="select_multi" multiple="multiple" size="10">
-    <optgroup label="Group 1">
-      <option value="1">Some text goes here</option>
-      <option value="2">Another choice could be here</option>
-      <option value="3">Yet another item to be chosen</option>
-    </optgroup>
-    <optgroup label="Group 2">
-      <option value="4">Some text goes here</option>
-      <option value="5">Another choice could be here</option>
-      <option value="6">Yet another item to be chosen</option>
-    </optgroup>
-    <optgroup label="Group 3">
-      <option value="7">Some text goes here</option>
-      <option value="8">Another choice could be here</option>
-      <option value="9">Yet another item to be chosen</option>
-    </optgroup>
-  </select>
-</fieldset>
+  <h3>YouTube Video object (4:3)</h3>
 
-<h3>Textareas</h3>
-<fieldset>
-  <label>Textarea <textarea cols="30" rows="5" >Textarea text</textarea></label> 
-  <label>Textarea placeholder<textarea id="textarea" name="textarea" rows="5" placeholder="This is an example of HTML5 placeholder text."></textarea></label>
-</fieldset>
+  <div class="flex-video-container">
+    <object height="315" width="560">
+      <param name="movie" value=
+      "http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT">
+      <param name="allowFullScreen" value="true">
+      <param name="allowscriptaccess" value="always">
+      <embed allowfullscreen="true" allowscriptaccess="always" height="315"
+      src="http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT" type=
+      "application/x-shockwave-flash" width="560">
+    </object>
+  </div>
 
-<h3>Clickable inputs</h3>
-<fieldset>
-  <div><input type="image" src="http://lorempixel.com/90/24" alt="Image (input)"></div>
-  <div><input type="reset" value="Reset (input)"></div>
-  <div><input type="button" value="Button (input)"></div>
-  <div><input type="submit" value="Submit (input)"></div>
-  <div><input type="submit" value="Disabled (input)" disabled></div>
-</fieldset>
+  <h3>Vimeo Video iframe (16:9)</h3>
 
-<h3>Buttons</h3>
-<fieldset>
-  <div><button type="reset">Reset (button)</button></div>
-  <div><button type="button">Button (button)</button></div>
-  <div><button type="submit">Submit (button)</button></div>
-  <div><button type="submit" disabled>Disabled (button)</button></div>
-</fieldset>
-</form>
+  <div class="flex-video-container widescreen vimeo">
+    <iframe frameborder="0" height="281" src=
+    "http://player.vimeo.com/video/27243869?badge=0&amp;color=ffffff" width=
+    "500"></iframe>
+  </div>
 
+  <h3>Google Map</h3><iframe frameborder="0" height="350" marginheight="0"
+  marginwidth="0" scrolling="no" src=
+  "https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=roma&amp;sll=41.908558,12.535998&amp;sspn=0.344931,0.727158&amp;ie=UTF8&amp;hq=&amp;hnear=Roma,+Lazio&amp;t=m&amp;ll=41.960511,12.471542&amp;spn=0.178708,0.291824&amp;z=11&amp;iwloc=A&amp;output=embed"
+  width="425"></iframe>
 
+  <h3>Facebook comments</h3>
 
+  <div id="fb-root"></div><script>
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=200093550120274";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
+  <div class="fb-comments" data-href="http://example.com" data-num-posts="1"
+  data-width="470"></div>
 
-<h2 class="title">Tables</h2>
+  <h3>Twitter embed</h3>
 
-<h3>Tabular data</h3>
+  <blockquote class="twitter-tweet" lang="it">
+    <p>Four more years. <a href="http://t.co/bAJE6Vom" title=
+    "http://twitter.com/BarackObama/status/266031293945503744/photo/1">twitter.com/BarackObama/st…</a></p>—
+    Barack Obama (@BarackObama) <a href=
+    "https://twitter.com/BarackObama/status/266031293945503744">Novembre 7,
+    2012</a>
+  </blockquote><script async="" charset="utf-8" src=
+  "//platform.twitter.com/widgets.js"></script>
+
+  <h2 class="title">HTML5 Forms</h2>
+
+  <h3>Inputs</h3>
+
+  <form>
+    <fieldset>
+      <legend>Inputs as descendents of labels (form legend). This doubles up as
+      a long legend that can test word wrapping.</legend> <label>Text
+      input<input type="text" value=
+      "default value that goes on and on without stopping or punctuation"></label>
+      <label>Email input<input type="email"></label>
+
+      <div>
+        <label><input name="rad" type="radio">Radio input</label>
+      </div>
+
+      <div>
+        <label><input type="checkbox">Checkbox input</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Inputs as siblings of labels</legend>
+
+      <div>
+        <label>Radio input</label><input name="rad" type="radio">
+      </div>
+
+      <div>
+        <label>Checkbox input</label><input type="checkbox">
+      </div><label>Text input</label><input type="text" value=
+      "default value that goes on and on without stopping or punctuation">
+      <label>Email input</label><input type="email"> <label>Number
+      input</label> <input id="in" max="10" min="0" type="number" value="5">
+      <label>Tel input</label><input type="tel"> <label>URL
+      input</label><input type="url">
+
+      <div>
+        <label>Date input</label><input id="idd" type="date" value=
+        "1970-01-01">
+      </div>
+
+      <div>
+        <label>Month input</label><input id="idm" type="month" value="1970-01">
+      </div>
+
+      <div>
+        <label>Week input</label><input id="idw" type="week" value="1970-W01">
+      </div>
+
+      <div>
+        <label>Datetime input</label> <input id="idt" type="datetime" value=
+        "1970-01-01T00:00:00Z">
+      </div>
+
+      <div>
+        <label>Datetime-local input</label><input id="idtl" type=
+        "datetime-local" value="1970-01-01T00:00">
+      </div><label>Color input</label><input id="ic" type="color" value=
+      "#000000"> <label>Range input</label><input id="ir" type="range" value=
+      "10"> <label>Password input</label><input type="password" value=
+      "password"> <label>Search input</label><input id="search" name="search"
+      type="search"> <label>File input</label><input type="file">
+    </fieldset>
+
+    <h3>Selects</h3>
+
+    <fieldset>
+      <div>
+        <label for="s">Select field</label> <select id="s">
+          <option>
+            Option 01
+          </option>
+
+          <option>
+            Option 02
+          </option>
+        </select>
+      </div><label for="select_dd">Select drop-down</label> <select id=
+      "select_dd" name="select_dd">
+        <optgroup label="Group 1">
+          <option value="1">
+            Some text goes here
+          </option>
+
+          <option value="2">
+            Another choice could be here
+          </option>
+
+          <option value="3">
+            Yet another item to be chosen
+          </option>
+        </optgroup>
+
+        <optgroup label="Group 2">
+          <option value="4">
+            Some text goes here
+          </option>
+
+          <option value="5">
+            Another choice could be here
+          </option>
+
+          <option value="6">
+            Yet another item to be chosen
+          </option>
+        </optgroup>
+
+        <optgroup label="Group 3">
+          <option value="7">
+            Some text goes here
+          </option>
+
+          <option value="8">
+            Another choice could be here
+          </option>
+
+          <option value="9">
+            Yet another item to be chosen
+          </option>
+        </optgroup>
+      </select> <label for="select_multi">Select multiple</label> <select id=
+      "select_multi" multiple="multiple" name="select_multi" size="10">
+        <optgroup label="Group 1">
+          <option value="1">
+            Some text goes here
+          </option>
+
+          <option value="2">
+            Another choice could be here
+          </option>
+
+          <option value="3">
+            Yet another item to be chosen
+          </option>
+        </optgroup>
+
+        <optgroup label="Group 2">
+          <option value="4">
+            Some text goes here
+          </option>
+
+          <option value="5">
+            Another choice could be here
+          </option>
+
+          <option value="6">
+            Yet another item to be chosen
+          </option>
+        </optgroup>
+
+        <optgroup label="Group 3">
+          <option value="7">
+            Some text goes here
+          </option>
+
+          <option value="8">
+            Another choice could be here
+          </option>
+
+          <option value="9">
+            Yet another item to be chosen
+          </option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <h3>Textareas</h3>
+
+    <fieldset>
+      <label>Textarea 
+      <textarea cols="30" rows="5">
+Textarea text
+</textarea></label> <label>Textarea placeholder 
+      <textarea id="textarea" name="textarea" placeholder=
+      "This is an example of HTML5 placeholder text." rows="5">
+</textarea></label>
+    </fieldset>
+
+    <h3>Clickable inputs</h3>
+
+    <fieldset>
+      <div>
+        <input alt="Image (input)" src="http://lorempixel.com/90/24" type=
+        "image">
+      </div>
+
+      <div>
+        <input type="reset" value="Reset (input)">
+      </div>
+
+      <div>
+        <input type="button" value="Button (input)">
+      </div>
+
+      <div>
+        <input type="submit" value="Submit (input)">
+      </div>
+
+      <div>
+        <a class="btn" href="#" title="button link">Button (link)</a>
+      </div>
+
+      <div>
+        <input disabled type="submit" value="Disabled (input)">
+      </div>
+    </fieldset>
+
+    <h3>Buttons</h3>
+
+    <fieldset>
+      <div>
+        <button type="reset">Reset (button)</button>
+      </div>
+
+      <div>
+        <button type="button">Button (button)</button>
+      </div>
+
+      <div>
+        <button type="submit">Submit (button)</button>
+      </div>
+
+      <div>
+        <button disabled type="submit">Disabled (button)</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <h2 class="title">Tables</h2>
+
+  <h3>Tabular data</h3>
+
   <table>
-      <caption>
-          Jimi Hendrix - albums
-      </caption>
-      <thead>
-          <tr>
-              <th>Album</th>
-              <th>Year</th>
-              <th>Price</th>
-          </tr>
-      </thead>
-      <tfoot>
-          <tr>
-              <th>Album</th>
-              <th>Year</th>
-              <th>Price</th>
-          </tr>
-      </tfoot>
-      <tbody>
-          <tr>
-              <td>Are You Experienced</td>
-              <td>1967</td>
-              <td>$10.00</td>
-          </tr>
-          <tr>
-              <td>Axis: Bold as Love</td>
-              <td>1967</td>
-              <td>$12.00</td>
-          </tr>
-          <tr>
-              <td>Electric Ladyland</td>
-              <td>1968</td>
-              <td>$10.00</td>
-          </tr>
-          <tr>
-              <td>Band of Gypsys</td>
-              <td>1970</td>
-              <td>$12.00</td>
-          </tr>
-      </tbody>
-  </table>
+    <caption>
+      Jimi Hendrix - albums
+    </caption>
 
-<h3>Tabular data with 'table-overflow-container' class</h3>
-<div class="table-overflow-container">
-  <table>
-      <caption>
-          Jimi Hendrix - albums
-      </caption>
-      <thead>
-          <tr>
-              <th>Album</th>
-              <th>Year</th>
-              <th>Price</th>
+    <thead>
+      <tr>
         <th>Album</th>
-              <th>Year</th>
-              <th>Price</th>
-          </tr>
-      </thead>
-      <tfoot> 
-          <tr>
-              <th>Album</th>
-              <th>Year</th>
-              <th>Price</th>
+
+        <th>Year</th>
+
+        <th>Price</th>
+      </tr>
+    </thead>
+
+    <tfoot>
+      <tr>
         <th>Album</th>
-              <th>Year</th>
-              <th>Price</th>
-          </tr>
-      </tfoot>
-      <tbody>
-          <tr>
-              <td>Are You Experienced</td>
-              <td>1967</td>
-              <td>$10.00</td>
-          <td>Are You Experienced</td>
-              <td>1967</td>
-              <td>$10.00</td>
-          </tr>
-          <tr>
-              <td>Axis: Bold as Love</td>
-              <td>1967</td>
-              <td>$12.00</td>
+
+        <th>Year</th>
+
+        <th>Price</th>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <tr>
+        <td>Are You Experienced</td>
+
+        <td>1967</td>
+
+        <td>$10.00</td>
+      </tr>
+
+      <tr>
         <td>Axis: Bold as Love</td>
-              <td>1967</td>
-              <td>$12.00</td>
-          </tr>
-          <tr>
-              <td>Electric Ladyland</td>
-              <td>1968</td>
-              <td>$10.00</td>
-          <td>Electric Ladyland</td>
-              <td>1968</td>
-              <td>$10.00</td>
-          </tr>
-          <tr>
-              <td>Band of Gypsys</td>
-              <td>1970</td>
-              <td>$12.00</td>
+
+        <td>1967</td>
+
+        <td>$12.00</td>
+      </tr>
+
+      <tr>
+        <td>Electric Ladyland</td>
+
+        <td>1968</td>
+
+        <td>$10.00</td>
+      </tr>
+
+      <tr>
         <td>Band of Gypsys</td>
-              <td>1970</td>
-              <td>$12.00</td>
-          </tr>
-      </tbody>
+
+        <td>1970</td>
+
+        <td>$12.00</td>
+      </tr>
+    </tbody>
   </table>
-</div>
+
+  <h3>Tabular data with 'table-overflow-container' class</h3>
+
+  <div class="table-overflow-container">
+    <table>
+      <caption>
+        Jimi Hendrix - albums
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Album</th>
+
+          <th>Year</th>
+
+          <th>Price</th>
+
+          <th>Album</th>
+
+          <th>Year</th>
+
+          <th>Price</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <th>Album</th>
+
+          <th>Year</th>
+
+          <th>Price</th>
+
+          <th>Album</th>
+
+          <th>Year</th>
+
+          <th>Price</th>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <td>Are You Experienced</td>
+
+          <td>1967</td>
+
+          <td>$10.00</td>
+
+          <td>Are You Experienced</td>
+
+          <td>1967</td>
+
+          <td>$10.00</td>
+        </tr>
+
+        <tr>
+          <td>Axis: Bold as Love</td>
+
+          <td>1967</td>
+
+          <td>$12.00</td>
+
+          <td>Axis: Bold as Love</td>
+
+          <td>1967</td>
+
+          <td>$12.00</td>
+        </tr>
+
+        <tr>
+          <td>Electric Ladyland</td>
+
+          <td>1968</td>
+
+          <td>$10.00</td>
+
+          <td>Electric Ladyland</td>
+
+          <td>1968</td>
+
+          <td>$10.00</td>
+        </tr>
+
+        <tr>
+          <td>Band of Gypsys</td>
+
+          <td>1970</td>
+
+          <td>$12.00</td>
+
+          <td>Band of Gypsys</td>
+
+          <td>1970</td>
+
+          <td>$12.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>

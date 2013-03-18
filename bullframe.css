@@ -663,38 +663,41 @@ input[type="submit"] {
   *zoom: 1;
   text-align: center;
   padding: 0.5em;
+  *padding: 0.4em;
   cursor: pointer;
   *overflow: visible;
   -webkit-appearance: none;
-  border: 1px solid #999;
   text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   -webkit-background-clip: padding-box;   
   background-clip: padding-box;
-  background: #efefef;
+}
+/* Everything but IE 6/7/8 */
+:root *> button,
+.btn,
+:root *> input[type="button"], 
+:root *> input[type="reset"],
+:root *> input[type="submit"] {
+  border: 1px solid #999;
+  background: #dbdbdb;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZWNlY2UiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(top, #efefef 0%, #cecece 100%);  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#cecece));
   background: -webkit-linear-gradient(top, #efefef 0%,#cecece 100%); 
   background: -o-linear-gradient(top, #efefef 0%,#cecece 100%);
   background: -ms-linear-gradient(top, #efefef 0%,#cecece 100%);
   background: linear-gradient(to bottom, #efefef 0%,#cecece 100%);
-  *background: #dbdbdb none;
-}
-/* IE8 */
-@media \0screen {
-  button,
-  .btn,
-  html input[type="button"], 
-  input[type="reset"],
-  input[type="submit"] {
-    background: #dbdbdb none;
-  }
 }
 .btn {
   padding-top: 0.35em;
   padding-bottom: 0.35em;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  color: #222;
+  text-decoration: none;
 }
 button, 
 input { 
@@ -708,19 +711,18 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 } 
-button:hover,
+/* Everything but IE 6/7/8 */
+:root *> button:hover,
 .btn:hover,
-html input[type="button"]:hover, 
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-button:focus,
+:root *> input[type="button"]:hover, 
+:root *> input[type="reset"]:hover,
+:root *> input[type="submit"]:hover,
+:root *> button:focus,
 .btn:focus,
-html input[type="button"]:focus, 
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  text-decoration: none;
-  color: #222;
-  background: #e0e0e0;
+:root *> input[type="button"]:focus, 
+:root *> input[type="reset"]:focus,
+:root *> input[type="submit"]:focus {
+  background: #bcbcbc;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UwZTBlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYWFhYWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(top,  #e0e0e0 0%, #aaaaaa 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e0e0), color-stop(100%,#aaaaaa));
@@ -728,50 +730,18 @@ input[type="submit"]:focus {
   background: -o-linear-gradient(top,  #e0e0e0 0%,#aaaaaa 100%);
   background: -ms-linear-gradient(top,  #e0e0e0 0%,#aaaaaa 100%);
   background: linear-gradient(to bottom,  #e0e0e0 0%,#aaaaaa 100%);
-  *background: #bcbcbc none;
-  *border-color: #222;
 }
-/* IE8 */
-@media \0screen {
-  button:hover,
-  .btn:hover,
-  html input[type="button"]:hover, 
-  input[type="reset"]:hover,
-  input[type="submit"]:hover,
-  button:focus,
-  .btn:focus,
-  html input[type="button"]:focus, 
-  input[type="reset"]:focus,
-  input[type="submit"]:focus {
-    background: #bcbcbc none;
-    border-color: #222;
-  }
-}
-button:active,
+/* Everything but IE 6/7/8 */
+:root *> button:active,
 .btn:active,
-html input[type="button"]:active, 
-input[type="reset"]:active,
-input[type="submit"]:active {
-  text-decoration: none;
-  color: #222;
-  background: #e0e0e0 none;
-  *background-color: #bcbcbc;
-  *border-color: #222;
+:root *> input[type="button"]:active, 
+:root *> input[type="reset"]:active,
+:root *> input[type="submit"]:active {
+  background: #bcbcbc none;
   outline: 0;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-/* IE 8 */
-@media \0screen {
-  button:active,
-  .btn:active,
-  html input[type="button"]:active, 
-  input[type="reset"]:active,
-  input[type="submit"]:active {
-    background-color: #bcbcbc;
-    border-color: #222;
-  }
 }
 select {
   text-transform: none;
@@ -829,53 +799,23 @@ textarea:placeholder {
 }
 button[disabled],
 .btn.disabled,
-html input[disabled], 
+input[disabled], 
 select[disabled], 
-textarea[disabled],
-button[readonly],
-.btn.readonly,
-input[readonly], 
-select[readonly], 
-textarea[readonly],
-button[disabled]:hover,
-.btn.disabled:hover,
-html input[disabled]:hover, 
-select[disabled]:hover, 
-textarea[disabled]:hover,
-button[readonly]:hover,
-.btn.readonly:hover,
-input[readonly]:hover, 
-select[readonly]:hover, 
-textarea[readonly]:hover,
-button[disabled]:focus,
-.btn.disabled:focus,
-html input[disabled]:focus, 
-select[disabled]:focus, 
-textarea[disabled]:focus,
-button[readonly]:focus,
-.btn.readonly:focus,
-input[readonly]:focus, 
-select[readonly]:focus, 
-textarea[readonly]:focus,
-button[disabled]:active,
-.btn.disabled:active,
-html input[disabled]:active, 
-select[disabled]:active, 
-textarea[disabled]:active,
-button[readonly]:active,
-.btn.readonly:active,
-input[readonly]:active, 
-select[readonly]:active, 
-textarea[readonly]:active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
-  filter: alpha(opacity=50);
+textarea[disabled] {
   opacity: 0.5;
   cursor: default;
   cursor: not-allowed;
-  color: #222;
-  background-color: #efefef;
-  background-image: none;
-  background-position: left 0;
+}
+:root *> button[disabled]:hover,
+.btn.disabled:hover,
+:root *> input[disabled]:hover,
+:root *> button[disabled]:focus,
+.btn.disabled:focus,
+:root *> input[disabled]:focus,
+:root *> button[disabled]:active,
+.btn.disabled:active,
+:root *> input[disabled]:active {
+  background: #f0f0f0 none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;

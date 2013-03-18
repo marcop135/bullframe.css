@@ -1618,9 +1618,7 @@ input[type="submit"]:focus {
 ========================================== */
 
 /* IE7
-p { 
-  *color: red 
-} */
+p { *color: red } */
 
 /* IE8
 @media \0screen {
@@ -1632,14 +1630,17 @@ p {
   p { color: blue }
 } */
 
+/* Webkit (Safari, Android, Chrome, ecc...
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  p { color: cyan; } 
+} */  
+
 /* Firefox 3+ 
 @-moz-document url-prefix() {
-  p { 
-    color: brown;
-  } 
+  p { color: magenta; } 
 } */
 
 /* Opera 9.5+ 
 noindex:-o-prefocus, p { 
-  color: pink;
+  color: yellow;
 } */

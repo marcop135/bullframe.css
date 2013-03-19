@@ -10,9 +10,9 @@
 
 body {
   width: 92%;
-  max-width: 960px;
+  max-width: 960px; 
   margin: auto;
-  padding: 1.5em 10px 0 10px;
+  padding: 1.5em 10px 0 10px; /* 10px + 960px + 10px = 980px */
   position: relative;
   background-color: #fff;
 }
@@ -59,9 +59,12 @@ html {
   word-wrap: break-word;
   color: #222;
 }
+/* 1.5em (24px) is 'the magic number'
+ * http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/
+ */
 body { 
   font-size: 1em; /* 16px */
-  line-height: 1.5; /* 24px is the magic number */
+  line-height: 1.5; /* 24px */
 }
 h1,
 .h1, 
@@ -78,20 +81,23 @@ h6,
   font-family: inherit;
   font-weight: bold;
   margin-top: 0;
-  line-height: 1.2;
+  line-height: 1.2; /* reduce base line-height for better display */
   color: inherit;
 }
 .tera {
   font-size: 3.5em;
   margin-bottom: 0.35em;
+  line-height: 1;
 }
 .giga {
   font-size: 3em;
   margin-bottom: 0.5em;
+  line-height: 1;
 }
 .mega {
   font-size: 2.5em;
   margin-bottom: 0.5em;
+  line-height: 1;
 }
 h1,
 .h1 {
@@ -294,6 +300,7 @@ dt {
   font-weight: bold;
 }
 
+/* quickly choose style type */
 ul.square li ul, 
 ul.circle li ul, 
 ul.disc li ul {
@@ -338,7 +345,7 @@ ul.disc {
   *margin-left: 0;
 }
 
-/* inline list (navigation) */
+/* inline list (IE7/8 buggy) */
 .inline-list {
   margin-left: 0;
   padding-left: 0;
@@ -348,12 +355,14 @@ ul.disc {
 }
 .inline-list > li {
   float: left;
+  margin-right: 1.5em;
 }
-.inline-list li + li {
-  margin-left: 1.5em;
+/* IE9+ */
+.inline-list li:last-child { 
+  margin-right: 0;
 }
 
-/* reset */
+/* reset list */
 nav ol,
 nav ul,
 ul.unstyled,
@@ -365,7 +374,7 @@ ol.unstyled ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  list-style-image: none; /* lte-IE8 */
+  list-style-image: none; /* IE7/8 */
 } 
 
 
@@ -405,7 +414,7 @@ embed {
 /* flex videos */
 .flex-video-container {
   position: relative;
-  padding-bottom: 67.5%; /* 4:3; */
+  padding-bottom: 67.5%; /* 4:3 standard */
   padding-top: 1.5625em;
   height: 0;
   overflow: hidden;
@@ -509,11 +518,11 @@ fieldset {
 }
 legend { 
   display: table; /* enable line-wrapping in IE8+ */
-  white-space: normal; /* enable line-wrapping in FF4-5 */
+  white-space: normal; /* enable line-wrapping in FF4/5 */
   border: 0;
   padding: 0;
   *margin-left: -7px;
-  /* create alternative to line-wrapping in IE7 */
+  /* force IE7 to line-wrapping using 'overflow' */
   *overflow-x: auto; 
   *overflow-y: hidden;
   *min-height: 3em; /* 48px */
@@ -541,7 +550,7 @@ input,
 select, 
 textarea {
   width: 100%;
-  *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
   max-width: 100%;
 }
 input[type="image"],
@@ -570,9 +579,14 @@ textarea {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 0 1.5em 0;
-  font-size: 100%;
   vertical-align: baseline;
   *vertical-align: middle;
+}
+button, 
+input, 
+select, 
+textarea {
+  font-size: 100%;
 }
 
 /* normalization */
@@ -598,6 +612,12 @@ textarea {
      -moz-border-radius: 0;
           border-radius: 0;
 }
+input[type="image"],
+input[type="checkbox"] {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
 input[type="color"], 
 input[type="email"], 
 input[type="image"], 
@@ -612,12 +632,6 @@ input[type="week"],
 input[type="url"],    
 textarea { 
   -webkit-appearance: none;
-}
-input[type="image"],
-input[type="checkbox"] {
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
 }
 input[type="color"], 
 input[type="email"], 
@@ -637,8 +651,13 @@ input[type="url"],
 select, 
 textarea {
   padding: 0.3em;
-  *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
-  *padding-right: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-left: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
+}
+/* normalize textarea padding on IE7 */
+textarea {
+  *padding-top: 1.25%;
+  *padding-bottom: 1.25%;
 }
 input[type="file"] {
   cursor: pointer;
@@ -655,58 +674,6 @@ input[type="checkbox"] {
 }
 html input[type="button"] {
   -webkit-appearance: button;
-  cursor: pointer;
-}
-button,
-.btn,
-input[type="button"], 
-input[type="reset"],
-input[type="submit"] {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  text-align: center;
-  padding: 0.5em;
-  cursor: pointer;
-  *overflow: visible;
-  -webkit-appearance: none;
-  border: 1px solid #888;
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.85);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-background-clip: padding-box;   
-  background-clip: padding-box;
-  background: #dbdbdb;
-  background: -moz-linear-gradient(top, #efefef 0%, #cecece 100%);  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#cecece));
-  background: -webkit-linear-gradient(top, #efefef 0%,#cecece 100%); 
-  background: -o-linear-gradient(top, #efefef 0%,#cecece 100%);
-  background: -ms-linear-gradient(top, #efefef 0%,#cecece 100%);
-  background: linear-gradient(to bottom, #efefef 0%,#cecece 100%);
-  -webkit-transition: border-color .3s linear;
-  -moz-transition: border-color .3s linear;
-  -o-transition: border-color .3s linear;
-  -ms-transition: border-color .3s linear;
-  transition: border-color .3s linear;
-}
-/* IE9+ */
-@media screen and (min-width:0\0) {
-  button,
-  .btn,
-  input[type="button"], 
-  input[type="reset"],
-  input[type="submit"] {
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZWNlY2UiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  }
-}
-.btn,
-.btn:active,
-.btn:hover,
-.btn:focus {
-  padding-top: 0.35em;
-  padding-bottom: 0.35em;
-  text-decoration: none;
-  color: #222;
 }
 button, 
 input { 
@@ -720,6 +687,38 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 } 
+button,
+.btn,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  *overflow: visible;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.85);
+  padding: 0.5em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: 1px solid #999;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;   
+  background-clip: padding-box;
+  background-color: #dbdbdb;
+}
+/* fake button */
+.btn,
+.btn:active,
+.btn:hover,
+.btn:focus {
+  padding-top: 0.35em;
+  padding-bottom: 0.35em;
+  text-decoration: none;
+  color: #222;
+}
 button:hover,
 .btn:hover,
 input[type="button"]:hover, 
@@ -738,14 +737,14 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
   border-color: #666;
-  background: #d1d1d1 none;
+  background-color: #d1d1d1;
 }
 button:active,
 .btn:active,
 input[type="button"]:active, 
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background: #c1c1c1 none;
+  background-color: #c1c1c1;
   border-color: #666;
   outline: 0 none;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -760,7 +759,7 @@ select {
   select {
     -webkit-appearance: none;
     background-image: url(data:image/gif;base64,R0lGODlhEwAKAJEAAP///ygoKJCQkM7OziH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4NEEzMzczNjhGQ0UxMUUyQjQxOUQzOTA2OUM2Mjg0NCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4NEEzMzczNThGQ0UxMUUyQjQxOUQzOTA2OUM2Mjg0NCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdGRTg2MUZEOEY2NzExRTJBOEUyODcwQjhBMUY0QzYzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdGRTg2MUZFOEY2NzExRTJBOEUyODcwQjhBMUY0QzYzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAABMACgAAAiCcjgnLLAEjFK0+Gau+cug6YMG3daQWUScIeWsVqO+sFQA7);
-    /* small arrow 
+    /* just in case, small arrow data-uri
     background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==); */
     background-repeat: no-repeat;
     background-position: right center;
@@ -828,7 +827,7 @@ input[disabled]:active {
   cursor: default;
   cursor: not-allowed;
   border-color: #999;
-  background: #efefef none;
+  background-color: #efefef;
   text-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -877,7 +876,7 @@ td {
 }
 @media only screen and (min-width: 58.75em) { /* 940px */
   .table-overflow-container {
-    overflow-x: auto;
+    overflow-x: auto; /* hide default scrollbar */
   }
 }  
 .table-overflow-container table {
@@ -1034,6 +1033,7 @@ td {
 [class*="y-u"] .container {
   margin-left: 1.5em;
 }
+/* reset gutter */
 [class*="y-u"]:first-child .container {
   margin-left: 0;
 } 
@@ -1196,7 +1196,8 @@ td {
   hyphens: auto;
 }
 
-/* $ Wordpress Core CSS http://codex.wordpress.org/CSS ---------------- */
+/* $ Wordpress Core CSS (relative units)
+ * http://codex.wordpress.org/CSS ---------------- */
 .alignnone {
   margin: 0.5em 1.5em 1.5em 0;
 }
@@ -1390,17 +1391,16 @@ a img.aligncenter {
 
 
 /* customize and extend grid system ----------------
- * demo http://jsbin.com/anezew/2/quiet
 [class*="y-u"] .container {
   margin-left: XXXem;
-}
-/* 640px
-@media only screen and (max-width: XXem) { 
+} */
+/* reset grid to one-column layout
+@media only screen and (max-width: 640px) { 
   [class*="y-u"] {
-    width: XXX%;
+    width: 100%;
   }
   [class*="y-u"] .container {
-    margin-left: XXXem;
+    margin-left: 0;
   }
 }
 */
@@ -1419,7 +1419,8 @@ body {
 html, 
 button, 
 input, 
-select, 
+select,
+optgroup, 
 textarea {
   font-family: ;
   color: ;
@@ -1491,10 +1492,10 @@ p,
 pre, 
 code, 
 kbd, 
-tt, 
-samp, 
-xmp,
-address {
+samp {
+  font-size: ;
+}
+p.lead {
   font-size: ;
 }
 */
@@ -1597,8 +1598,9 @@ input[type="submit"] {
   *padding-right: ;
   color: ;
   border: ;
-  background-color: ;
-}
+  background: ;
+*/
+/* linear gradient in IE9+
 @media screen and (min-width:0\0) {
   button,
   .btn,
@@ -1626,6 +1628,8 @@ button:active,
 .btn:active;
 input[type="button"]:active, 
 input[type="reset"]:active {
+  color: ;
+  border: ;
   background-color: ;
 }
 */
@@ -1634,9 +1638,7 @@ input[type="reset"]:active {
 
 
 
-/* 
- * $ (Proportional) Media queries reference
- * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
+/* $ Media queries reference
 ========================================== */
 
 
@@ -1648,7 +1650,7 @@ input[type="reset"]:active {
 /* 480px 
 @media only screen and (max-width: 30em) { } */
 
-/* 640 
+/* 640px
 @media only screen and (max-width: 40em) { } */
 
 /* 768px 
@@ -1665,6 +1667,7 @@ input[type="reset"]:active {
 
 /* 1200px 
 @media only screen and (max-width: 75em) { } */
+
 
 
 /* desktop > mobile */
@@ -1684,7 +1687,7 @@ input[type="reset"]:active {
 /* 768px 
 @media only screen and (max-width: 48em) { } */
 
-/* 640 
+/* 640px 
 @media only screen and (max-width: 40em) { } */
 
 /* 480px 
@@ -1695,25 +1698,20 @@ input[type="reset"]:active {
 
 
 
-
-
-/* $ High resolution devices (retina)
- * H5BP repo http://goo.gl/JkDAi
-========================================== 
+/* High resolution devices (retina)
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
-}
-*/
+} */
 
 
 
 
 
 /* $ 'Safe' CSS hacks reference
- * Test the demo http://jsbin.com/atefes/6/quiet
+ * Check out the demo http://jsbin.com/atefes/8/quiet
 ========================================== */
 
 /* IE7

@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.1.0
+ * BULLFRAME CSS v1.1.1
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -261,7 +261,7 @@ a:active {
 }
 a {
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* transparent */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); /* 35% black */
 }
 a:hover, 
 a:active { 
@@ -768,6 +768,7 @@ select {
 select[size], 
 select[multiple] { 
   height: auto;
+  background-image: none;
 }
 optgroup::-moz-focus-inner {
   border: 0;

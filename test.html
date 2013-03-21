@@ -18,7 +18,7 @@ h3 { background: #eaeaea; }
 </style>
 
 <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 
@@ -55,21 +55,15 @@ h3 { background: #eaeaea; }
   <h6><a href="#">Heading 6</a></h6>
 </div>
 
-<header>
-  <hgroup>
-    <h1>Heading 1 in hgroup</h1>
-    <h2>Heading 2 in hgroup</h2>
-  </hgroup>
 
-  <h3>Nav ul list</h3>
-  <nav>
-    <ul>
-      <li><a href="#">navigation item #1</a></li>
-      <li><a href="#">navigation item #2</a></li>
-      <li><a href="#">navigation item #3</a></li>
-    </ul>
-  </nav>
-</header>
+<h3>Nav ul list</h3>
+<nav>
+  <ul>
+    <li><a href="#">navigation item #1</a></li>
+    <li><a href="#">navigation item #2</a></li>
+    <li><a href="#">navigation item #3</a></li>
+  </ul>
+</nav>
 
 
 <h3>hidden attribute</h3>
@@ -117,20 +111,13 @@ The <var>var element</var> example</p>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
 ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
 ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum
-dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+eget dolor.</p>
 
 <p>The European languages are members of the same family. Their separate
 existence is a myth. For science, music, sport, etc, Europe uses the same
 vocabulary. The languages only differ in their grammar, their pronunciation
 and their most common words. Everyone realizes why a new common language
-would be desirable: one could refuse to pay expensive translators. To achieve
-this, it would be necessary to have uniform grammar, pronunciation and more
-common words. If several languages coalesce, the grammar of the resulting
-language is more simple and regular than that of the individual languages.
-The new common language will be more simple and regular than the existing
-European languages.</p>
+would be desirable.</p>
 
 
 <h3>pre</h3>
@@ -152,16 +139,11 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 </pre>
 
 
-<h3>kbd</h3>
-<kbd>Cmd + Shift + i</kbd>
-
-
 <h3>blockquotes</h3>
 <blockquote>
   <p>Some sort of famous witty quote marked up with a &lt;blockquote&gt; and
   a child &lt;p&gt; element.</p>
 </blockquote>
-
 <blockquote>
   Even better philosophical quote marked up with just a &lt;blockquote&gt;
   element.
@@ -170,27 +152,6 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 <h3>Ordered list</h3>
 <ol>
-  <li>list item 1</li>
-  <li>list item 1
-    <ol>
-      <li>list item 2</li>
-      <li>list item 2
-        <ol>
-          <li>list item 3</li>
-          <li>list item 3</li>
-        </ol>
-      </li>
-      <li>list item 2</li>
-      <li>list item 2</li>
-    </ol>
-  </li>
-  <li>list item 1</li>
-  <li>list item 1</li>
-</ol>
-
-
-<h3>Unstyled ol list</h3>
-<ol class="unstyled">
   <li>list item 1</li>
   <li>list item 1
     <ol>
@@ -241,7 +202,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 </ul>
 
 
-<h3>Unstyled ul list</h3>
+<h3>Unstyled list</h3>
 <ul class="unstyled">
   <li>list item 1</li>
   <li>list item 1
@@ -296,16 +257,12 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 <h2 class="title">Embedded content</h2>
 
 <h3>img</h3>
-<img alt="" src="http://lorempixel.com/500/250">
-
-
-<h3>&lt;a> img</h3>
-<a href="#"><img alt="" src="http://lorempixel.com/300/250"></a>
+<a href="#"><img alt="" src="http://lorempixel.com/600/350/sports/1"></a>
 
 
 <h3>figure img figcaption</h3>
 <figure>
-  <img alt="" src="http://lorempixel.com/400/200">
+  <img alt="" src="http://lorempixel.com/400/200/sports/2">
   <figcaption>Figcaption content</figcaption>
 </figure>
 
@@ -367,30 +324,13 @@ content, in case the browser does not support Canvas.</canvas>
 
 <h3>YouTube video iframe (4:3)</h3>
 <div class="flex-video-container">
-  <iframe frameborder="0" height="315" src=
-  "http://www.youtube.com/embed/4EVBg1pNdtc" width="560"></iframe>
-</div>
-
-
-<h3>YouTube Video object (4:3)</h3>
-<div class="flex-video-container">
-  <object height="315" width="560">
-    <param name="movie" value=
-    "http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT">
-    <param name="allowFullScreen" value="true">
-    <param name="allowscriptaccess" value="always">
-    <embed allowfullscreen="true" allowscriptaccess="always" height="315"
-    src="http://www.youtube.com/v/4GwFFPMq9g4?version=3&amp;hl=it_IT" type=
-    "application/x-shockwave-flash" width="560">
-  </object>
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
 <h3>Vimeo Video iframe (16:9)</h3>
 <div class="flex-video-container widescreen vimeo">
-  <iframe frameborder="0" height="281" src=
-  "http://player.vimeo.com/video/27243869?badge=0&amp;color=ffffff" width=
-  "500"></iframe>
+  <iframe src="http://player.vimeo.com/video/27243869?color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </div>
 
 
@@ -432,6 +372,7 @@ data-width="470"></div>
 
 <h3>Inputs</h3>
 <form>
+
   <fieldset>
     <legend>Inputs as descendents of labels (form legend). This doubles up as
     a long legend that can test word wrapping.</legend> 
@@ -562,6 +503,7 @@ data-width="470"></div>
     <div><button type="submit">Submit (button)</button></div>
     <div><button disabled type="submit">Disabled (button)</button></div>
   </fieldset>
+
 </form>
 
 
@@ -667,7 +609,7 @@ data-width="470"></div>
       </tr>
     </tbody>
   </table>
-</div>
+</div><!-- /.table-overflow-containter -->
   
 </body>
 </html>

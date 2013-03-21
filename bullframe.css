@@ -901,16 +901,22 @@ td {
 /*
  * $ Modified YUI 3.9.0 (build 5827) CSS grid system
  *
- * Docs http://yuilibrary.com/yui/docs/cssgrids/
- * Source code http://yui.yahooapis.com/3.9.0/build/cssgrids-responsive/cssgrids-responsive.css
- * License http://yuilibrary.com/license/
+ * YUI docs: http://yuilibrary.com/yui/docs/cssgrids/
+ * YUI source code: http://yui.yahooapis.com/3.9.0/build/cssgrids/grids.css
 ========================================== */
 
 .y-grid {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset */
-    *word-spacing: -0.43em; /* collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes 'text-rendering: optimizeLegibility' */
+    *letter-spacing: normal; /* reset IE7 */
+    *word-spacing: -0.43em; /* IE7: collapse white-space between units */
+}
+/* Webkit: fixes 'text-rendering: optimizeLegibility' 
+ * https://github.com/robertpiira/ingrid/issues/5 
+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .y-grid {
+      text-rendering: optimizespeed; 
+  }
 }
 /* Opera as of 12 on Windows needs word-spacing.
    The ".opera-only" selector is used to prevent actual prefocus styling
@@ -920,7 +926,15 @@ td {
 .y-grid {
     word-spacing: -0.43em;
 }
-.y-unit,
+.y-unit {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
 .y-unit-1,
 .y-unit-1-2,
 .y-unit-1-3,

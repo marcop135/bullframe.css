@@ -901,22 +901,16 @@ td {
 /*
  * $ Modified YUI 3.9.0 (build 5827) CSS grid system
  *
- * YUI docs: http://yuilibrary.com/yui/docs/cssgrids/
- * YUI source code: http://yui.yahooapis.com/3.9.0/build/cssgrids/grids.css
+ * Docs http://yuilibrary.com/yui/docs/cssgrids/
+ * Source code http://yui.yahooapis.com/3.9.0/build/cssgrids-responsive/cssgrids-responsive.css
+ * License http://yuilibrary.com/license/
 ========================================== */
 
 .y-grid {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE7 */
-    *word-spacing: -0.43em; /* IE7: collapse white-space between units */
-}
-/* Webkit: fixes 'text-rendering: optimizeLegibility' 
- * https://github.com/robertpiira/ingrid/issues/5 
- */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  .y-grid {
-      text-rendering: optimizespeed; 
-  }
+    *letter-spacing: normal; /* reset */
+    *word-spacing: -0.43em; /* collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes 'text-rendering: optimizeLegibility' */
 }
 /* Opera as of 12 on Windows needs word-spacing.
    The ".opera-only" selector is used to prevent actual prefocus styling
@@ -926,15 +920,7 @@ td {
 .y-grid {
     word-spacing: -0.43em;
 }
-.y-unit {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-}
+.y-unit,
 .y-unit-1,
 .y-unit-1-2,
 .y-unit-1-3,
@@ -1064,16 +1050,30 @@ td {
 ========================================== */
 
 /* micro-clearfix ---------------- */ 
-.clearfix:before, 
-.clearfix:after { 
-  content: ""; 
-  display: table;
-  line-height: 0; 
+/*
+ * Source: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of 'table' rather than 'block' is only necessary if using
+ *    ':before' to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
-.clearfix:after { 
+.clearfix:after {
   clear: both;
-}  
-.clearfix { 
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
   *zoom: 1;
 }
 

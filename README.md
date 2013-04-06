@@ -1,28 +1,30 @@
-<h1>BULLFRAME CSS v1.1.2</h1>
-<p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Responsive Web Design</b>.</p>
-<p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a small <b>style-agnostic mobile-first</b> CSS-only framework.<br>
+<h1>BULLFRAME CSS v1.2.0</h1>
+<p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
+<p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only framework.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
 <h2>Best features</h2>
 <ul>
-  <li>Normalize styles for a wide range of elements across browsers (like 
+  <li>Normalized styles for a wide range of elements across browsers (like 
   <a href="https://github.com/necolas/normalize.css/tree/v1.1.0" title="normalize.css">normalize.css v1.1.0</a>)</li>
-  <li>Mobile First ready</li>
+  <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
+  <li>Style-agnostic</li>
   <li>Wordpress ready</li>
-  <li>Flexible and rich typography</li>
-  <li>Flexible images and media</li>
-  <li>Fluid and cross-browser HTML5 forms</li>
   <li>Fluid grid system</li>
-  <li>Several helper classes (like '.clearfix' and text utilities)</li>
+  <li>Flexible and rich typography</li>
+  <li>Flexible images and media (video, audio, iframe, embed, FB comments, Twitter embeds)</li>
+  <li>Flexible, cross-browser HTML5 forms</li>
+  <li>Flexible tables</li>
+  <li>Several helper classes (like '.clearfix' or text utilities)</li>
   <li>IE7+ and mobile browsers support</li>
 </ul>
 
 
 <h2>Test it now</h2>
-<p><b><a href="http://jsbin.com/oyasux/518/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
-Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/518/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/518/edit</a></p>
+<p><b><a href="http://jsbin.com/oyasux/552/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
+Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/552/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/552/edit</a></p>
 
 
 <h2>How to use it</h2>
@@ -69,13 +71,14 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/518/edit" titl
   <li>Safari Mobile iOS 6</li>
   <li>Android browser</li>
   <li>Opera Mobile</li>
+  <li>Opera Mini (buggy)</li>
   <li>IE 7-7.5 Mobile</li>
   <li>Firefox Mobile</li>
+  <li>Blackberry browser OS 5</li>
 </ul>
 <b><i>TODO:</i></b>
 <ul>
-  <li>Safari Mobile iOS 4.3+</li>
-  <li>Opera Mini</li>
+  <li>Safari Mobile iOS 4+</li>
   <li>IE 8 Mobile</li>
 </ul>
 

@@ -7,7 +7,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>Best features</h2>
 <ul>
   <li>Normalized styles for a wide range of elements across browsers (like 
-  <a href="https://github.com/necolas/normalize.css/tree/v1.1.0" title="normalize.css">normalize.css v1.1.0</a> do)</li>
+  <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> do)</li>
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
@@ -72,7 +72,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/558/edit" titl
   <li>Latest Android browser</li>
   <li>Latest Opera Mobile</li>
   <li>Opera Mini (buggy, responsive video and tables trick not working)</li>
-  <li>IE 7-7.5 Mobile</li>
+  <li>Internet Explorer 7 Mobile</li>
   <li>Latest Mobile Firefox</li>
   <li>Blackberry browser OS 5</li>
   <li>Kindle Touch browser</li>

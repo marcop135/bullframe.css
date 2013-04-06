@@ -1,20 +1,25 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.1.2
+ * BULLFRAME CSS v1.2.0
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
 
 
 /* $ The basics
-========================================== */
+============================================================================ */
 
+html {
+  background-color: #fff;
+  color: #222;
+  -webkit-overflow-scrolling: touch;
+}
 body {
   width: 92%;
   max-width: 960px; 
+  padding: 1.4em 10px 0 10px; /* 10px + 960px + 10px = 980px */
   margin: auto;
-  padding: 1.5em 10px 0 10px; /* 10px + 960px + 10px = 980px */
   position: relative;
-  background-color: #fff;
+  background-color: transparent;
 }
 article,
 aside,
@@ -49,7 +54,7 @@ audio:not([controls]) {
 
 
 /* $ Typography
-========================================== */
+============================================================================ */
 
 html {
   font-size: 100%;
@@ -57,47 +62,60 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
-  color: #222;
 }
-/* 1.5em (24px) is 'the magic number'
+/* 1.4 (21px) is 'the magic number'
  * http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/
  */
 body { 
-  font-size: 1em; /* 16px */
-  line-height: 1.5; /* 24px */
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.4; /* 21px */
 }
+.tera,
+.giga,
+.gamma,
 h1,
 .h1, 
 h2, 
 .h2,
 h3, 
-.h3
+.h3,
 h4,
 .h4,
 h5,
 .h5, 
 h6,
 .h6 {
-  font-family: inherit;
   font-weight: bold;
   margin-top: 0;
   line-height: 1.2; /* reduce base line-height for better display */
+}
+h1, 
+h2,
+h3,
+h4,
+h5, 
+h6 {
+  font-family: inherit; 
   color: inherit;
+}
+.tera,
+.giga,
+.mega {
+  display: block;
+  line-height: 1;
 }
 .tera {
   font-size: 3.5em;
   margin-bottom: 0.35em;
-  line-height: 1;
 }
 .giga {
   font-size: 3em;
   margin-bottom: 0.5em;
-  line-height: 1;
 }
 .mega {
   font-size: 2.5em;
   margin-bottom: 0.5em;
-  line-height: 1;
 }
 h1,
 .h1 {
@@ -106,7 +124,7 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-bottom: 0.75em;
 }
 h3,
@@ -117,24 +135,24 @@ h3,
 h4,
 .h4 {
   font-size: 1.125em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 h5,
 .h5  {
   font-size: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 h6,
 .h6  {
   font-size: 0.875em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 abbr[title] { 
   border-bottom: 1px dotted;
   cursor: help;
 }
 blockquote { 
-  margin: 0 0 1.5em 1.5em;
+  margin: 0 0 1.4em 1.4em;
   padding-left: 1.25em;
   border-left: 2px solid #ccc;
 }
@@ -163,10 +181,7 @@ s {
 }
 p,
 pre {
-  margin: 0 0 1.5em 0;
-}
-p {
-  font-size: 1em;
+  margin: 0 0 1.4em 0;
 }
 p.lead {
   font-size: 125%;
@@ -189,7 +204,8 @@ code,
 kbd, 
 samp {
   font-family: Monaco, Consolas, "Courier New", Courier, monospace; 
-  font-size: 1em;
+  font-size: 15px;
+  font-size: 0.9375rem;
 }
 strong, 
 b { 
@@ -218,8 +234,8 @@ small {
 }
 address {
   display: block;
-  margin-bottom: 1.5em;
-  line-height: 1.5;
+  margin-bottom: 1.4em;
+  line-height: 1.4;
   font-style: normal;
 }
 hr {
@@ -227,7 +243,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-  margin: 1.5em 0;
+  margin: 1.4em 0;
   padding: 0;
 }
 ::-moz-selection {
@@ -252,7 +268,7 @@ img::selection  {
 
 
 /* $ Links
-========================================== */
+============================================================================ */
 
 a,
 a:hover,
@@ -277,19 +293,20 @@ a:focus {
 
 
 
+
 /* $ Lists
-========================================== */
+============================================================================ */
 
 menu,
 ol,
 ul,
 dl {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1.4em 0;
 }
 ul,
 ol {
-  margin: 0 0 1.5em 1.5em;
-  padding: 0 0 0 1.5em;
+  margin: 0 0 1.4em 1.4em;
+  padding: 0 0 0 1.4em;
 }
 li ul,
 li ol,
@@ -300,7 +317,6 @@ dt {
   font-weight: bold;
 }
 
-/* quickly choose style type */
 ul.square li ul, 
 ul.circle li ul, 
 ul.disc li ul {
@@ -324,7 +340,7 @@ ul.disc {
   *display: block;
 }
 .inline-def dl {
-  *margin-bottom: 1.5em;
+  *margin-bottom: 1.4em;
 }
 .inline-def dt + dt:before,
 .inline-def dd + dt:before {
@@ -345,17 +361,25 @@ ul.disc {
   *margin-left: 0;
 }
 
-/* inline list (IE7/8 buggy) */
+/* navigation inline list (IE7/8 buggy) */
 .inline-list {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
   list-style-image: none;
-  overflow: hidden;
+  *zoom: 1;
+}
+.inline-list:before,
+.inline-list:after {
+  content: " ";
+  display: table;
+}
+.inline-list:after {
+  clear: both;
 }
 .inline-list > li {
   float: left;
-  margin-right: 1.5em;
+  margin-right: 1.4em;
 }
 /* IE9+ */
 .inline-list li:last-child { 
@@ -381,8 +405,8 @@ ol.unstyled ul {
 
 
 
-/* $ Flexible media
-========================================== */
+/* $ Images and media
+============================================================================ */
 
 img {
   vertical-align: middle;
@@ -410,6 +434,10 @@ object,
 embed {
   max-width: 100%;
 }
+audio,
+video {
+  margin-bottom: 1.4em;
+}
 
 /* flex videos */
 .flex-video-container {
@@ -418,7 +446,7 @@ embed {
   padding-top: 1.5625em;
   height: 0;
   overflow: hidden;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 .flex-video-container.widescreen {
   padding-bottom: 56.25%; /* 16:9 */
@@ -439,10 +467,10 @@ embed {
  * how to wraps videos via jQuery:
  * 
    <script>
-   $(function() {
-      $('.content iframe, .content object, .content embed')
-      .wrap('<div class="flex-video-container"></div>');
-   });
+     jQuery(function() {
+        jQuery('.content iframe, .content object, .content embed')
+        .wrap('<div class="flex-video-container"></div>');
+     });
    </script>
  * 
 */
@@ -488,25 +516,25 @@ span.skype_pnh_print_container {
 
 
 /* $ Figures
-========================================== */
+============================================================================ */
 
 figure {
   margin: 0;
 }
 figure img {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 figcaption {
-  margin-top: -1.5em;
-  margin-bottom: 1.5em;
+  margin-top: -1.4em;
+  margin-bottom: 1.4em;
 }
 
 
 
 
 
-/* $ Flexible forms
-========================================== */
+/* $ Forms
+============================================================================ */
 
 form {
   margin: 0;
@@ -525,10 +553,25 @@ legend {
   /* force IE7 to line-wrapping using 'overflow' */
   *overflow-x: auto; 
   *overflow-y: hidden;
-  *min-height: 3em; /* 48px */
+  *min-height: 2.8em; /* 44.8px */
 }
 label { 
   cursor: pointer;
+}
+input, 
+select, 
+textarea {
+  width: 100%;
+  *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  max-width: 100%;
+}
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
 }
 input[type="color"], 
 input[type="email"], 
@@ -545,21 +588,6 @@ input[type="url"],
 select, 
 textarea {
   display: block;
-}
-input, 
-select, 
-textarea {
-  width: 100%;
-  *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
-  max-width: 100%;
-}
-input[type="image"],
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
 }
 button, 
 .btn,
@@ -578,7 +606,7 @@ textarea {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1.4em 0;
   vertical-align: baseline;
   *vertical-align: middle;
 }
@@ -609,13 +637,11 @@ select,
 textarea {
   border: 1px solid #999;
   -webkit-border-radius: 0;
-     -moz-border-radius: 0;
           border-radius: 0;
 }
 input[type="image"],
 input[type="checkbox"] {
   -webkit-border-radius: 0;
-     -moz-border-radius: 0;
           border-radius: 0;
 }
 input[type="color"], 
@@ -654,7 +680,6 @@ textarea {
   *padding-left: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
   *padding-right: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
-/* normalize textarea padding on IE7 */
 textarea {
   *padding-top: 1.25%;
   *padding-bottom: 1.25%;
@@ -666,11 +691,17 @@ input[type="file"] {
 input[type="radio"], 
 input[type="checkbox"] {
   padding: 0;
-  margin-left: 5px;
-  margin-right: 5px;
-  *margin-bottom: 0;
+  margin-bottom: 0;
   *width: 13px;
   *height: 13px;
+}
+label input[type="radio"], 
+label input[type="checkbox"] {
+  margin-right: 5px;
+}
+label + input[type="radio"], 
+label + input[type="checkbox"] {
+  margin-left: 5px;
 }
 html input[type="button"] {
   -webkit-appearance: button;
@@ -703,7 +734,6 @@ input[type="submit"] {
   -webkit-appearance: none;
   border: 1px solid #999;
   -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   -webkit-background-clip: padding-box;   
   background-clip: padding-box;
@@ -747,19 +777,20 @@ input[type="submit"]:active {
   background-color: #c1c1c1;
   border-color: #666;
   outline: 0 none;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
-     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 
+                      0 1px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 
+                      0 1px 2px rgba(0, 0, 0, 0.15);
 }
 select {
   text-transform: none;
 }
-/* replace select arrow-down in webkit (Safari, Android, Chrome, ecc... */
+/* replace select arrow-down in webkit (Safari, Android, Chrome, ecc...) */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   select {
     -webkit-appearance: none;
-    background-image: url(data:image/gif;base64,R0lGODlhEwAKAJEAAP///ygoKJCQkM7OziH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4NEEzMzczNjhGQ0UxMUUyQjQxOUQzOTA2OUM2Mjg0NCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4NEEzMzczNThGQ0UxMUUyQjQxOUQzOTA2OUM2Mjg0NCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdGRTg2MUZEOEY2NzExRTJBOEUyODcwQjhBMUY0QzYzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdGRTg2MUZFOEY2NzExRTJBOEUyODcwQjhBMUY0QzYzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAABMACgAAAiCcjgnLLAEjFK0+Gau+cug6YMG3daQWUScIeWsVqO+sFQA7);
-    /* just in case, small arrow data-uri
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAIAAADZ6/LIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTEzNjg2MzE5RTA2MTFFMjgxRDA4NkUwNDMzQ0IwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTEzNjg2MzI5RTA2MTFFMjgxRDA4NkUwNDMzQ0IwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxMTM2ODYyRjlFMDYxMUUyODFEMDg2RTA0MzNDQjBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxMTM2ODYzMDlFMDYxMUUyODFEMDg2RTA0MzNDQjBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqcH7aoAAADQSURBVHjaYvz//z8DWYAFQp0+fXru3LmvXr1iY2ODy/3+/ZuPj6+oqEhXVxenTgEBgWvXrt24cYOXlxfiCkZGxhcvXsTExKioqGC1kwlCycvLl5SUqKqqMjMzc4IBUNDR0bGmpgbCxqkT6EhXV1cFBQWgC+FOVVNTk5WVxenR/0jg0KFDpqamqmDg7+//+vXr/7gBE7Iptra21tbWQAYHB0dmZqaIiAi+wEUz6evXrzo6Or6+vu/evfuPFzBgCk2ZMuX8+fP/CQFGslMCQIABAFTix2ccC9NgAAAAAElFTkSuQmCC);
+    /* just in case, a smaller arrow
     background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==); */
     background-repeat: no-repeat;
     background-position: right center;
@@ -768,7 +799,6 @@ select {
 select[size], 
 select[multiple] { 
   height: auto;
-  background-image: none;
 }
 optgroup::-moz-focus-inner {
   border: 0;
@@ -776,7 +806,7 @@ optgroup::-moz-focus-inner {
 }
 textarea {
   height: auto;
-  min-height: 40px;
+  min-height: 2.5em; /* 40px */
   overflow: auto;
   vertical-align: top;
   resize: vertical;
@@ -810,16 +840,20 @@ button[disabled],
 .btn[disabled],
 .btn.disabled,
 input[disabled], 
+
 select[disabled], 
 textarea[disabled],
+
 button[disabled]:hover,
 .btn.disabled:hover,
 .btn[disabled]:hover,
 input[disabled]:hover,
+
 button[disabled]:focus,
 .btn.disabled:focus,
 .btn[disabled]:focus,
 input[disabled]:focus,
+
 button[disabled]:active,
 .btn.disabled:active,
 .btn[disabled]:active,
@@ -831,7 +865,6 @@ input[disabled]:active {
   background-color: #efefef;
   text-shadow: none;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -840,13 +873,13 @@ input[disabled]:active {
 
 
 /* $ Tables
-========================================== */
+============================================================================ */
 
 table {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 } 
 thead th {
   vertical-align: bottom;
@@ -870,12 +903,26 @@ td {
  */
 .table-overflow-container { 
   overflow-x: scroll;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
+}
+/* force to show and customize webkit scrollbar */
+.table-overflow-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 11px;
+  height: 11px
+}
+.table-overflow-container::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+.table-overflow-container::-webkit-scrollbar-track {
+  background-color: #eaeaea;
+  color: #999; 
 }
 .table-overflow-container table { 
   width: 100%;
 }
-@media only screen and (min-width: 58.75em) { /* 940px */
+
+@media only screen and (min-width: 980px) {
   .table-overflow-container {
     overflow-x: auto; /* hide default scrollbar */
   }
@@ -887,10 +934,10 @@ td {
  * how to wraps table via jQuery:
  * 
    <script>
-   $(function() {
-     $('.content table')
-     .wrap('<div class="table-overflow-container"></div>');
-   });
+     jQuery(function() {
+       jQuery('.content table')
+       .wrap('<div class="table-overflow-container"></div>');
+     });
    </script>
  * 
 */
@@ -898,186 +945,114 @@ td {
 
 
 
-/*
- * $ Modified YUI 3.9.0 (build 5827) CSS grid system
- *
- * Docs http://yuilibrary.com/yui/docs/cssgrids/
- * Source code http://yui.yahooapis.com/3.9.0/build/cssgrids-responsive/cssgrids-responsive.css
- * License http://yuilibrary.com/license/
-========================================== */
 
-.y-grid {
-    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset */
-    *word-spacing: -0.43em; /* collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes 'text-rendering: optimizeLegibility' */
+/* $ Fluid grid system
+============================================================================ */
+
+.y-grid,
+.y-row {
+  width: 102%;
+  margin-left: -2%;
+  *zoom: 1;
 }
-/* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
-*/
-.opera-only :-o-prefocus,
-.y-grid {
-    word-spacing: -0.43em;
+.y-grid:before,
+.y-row:before,
+.y-grid:after,
+.y-row:after {
+  content: " ";
+  display: table;
 }
-.y-unit,
+.y-grid:after,
+.y-row:after {
+  clear: both;
+}
 .y-unit-1,
 .y-unit-1-2,
 .y-unit-1-3,
-.y-unit-2-3,
 .y-unit-1-4,
-.y-unit-3-4,
 .y-unit-1-5,
-.y-unit-2-5,
-.y-unit-3-5,
-.y-unit-4-5,
 .y-unit-1-6,
-.y-unit-5-6,
 .y-unit-1-8,
-.y-unit-3-8,
-.y-unit-5-8,
-.y-unit-7-8,
 .y-unit-1-12,
-.y-unit-5-12,
-.y-unit-7-12,
-.y-unit-11-12,
-.y-unit-1-24,
-.y-unit-5-24,
-.y-unit-7-24,
-.y-unit-11-24,
-.y-unit-13-24,
-.y-unit-17-24,
-.y-unit-19-24,
-.y-unit-23-24 {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+.y-unit-1-24 {
+  float: left;
+  margin-left: 2%;
 }
 .y-unit-1 {
-    display: block;
+  width: 100%;
 }
 .y-unit-1-2 {
-    width: 50%;
+  width: 48%;
 }
 .y-unit-1-3 {
-    width: 33.33333%;
-}
-.y-unit-2-3 {
-    width: 66.66666%;
+  width: 31.3333333333%;
 }
 .y-unit-1-4 {
-    width: 25%;
-}
-.y-unit-3-4 {
-    width: 75%;
+  width: 23%;
 }
 .y-unit-1-5 {
-    width: 20%;
-}
-.y-unit-2-5 {
-    width: 40%;
-}
-.y-unit-3-5 {
-    width: 60%;
-}
-.y-unit-4-5 {
-    width: 80%;
+  width: 18%;
 }
 .y-unit-1-6 {
-    width: 16.656%;
-}
-.y-unit-5-6 {
-    width: 83.33%;
+  width: 14.6666666667%;
 }
 .y-unit-1-8 {
-    width: 12.5%;
-}
-.y-unit-3-8 {
-    width: 37.5%;
-}
-.y-unit-5-8 {
-    width: 62.5%;
-}
-.y-unit-7-8 {
-    width: 87.5%;
+  width: 10.5%;
 }
 .y-unit-1-12 {
-    width: 8.3333%;
-}
-.y-unit-5-12 {
-    width: 41.6666%;
-}
-.y-unit-7-12 {
-    width: 58.3333%;
-}
-.y-unit-11-12 {
-    width: 91.6666%;
+  width: 6.33333333333%;
 }
 .y-unit-1-24 {
-    width: 4.1666%;
+  width: 2.16666666667%;
 }
-.y-unit-5-24 {
-    width: 20.8333%;
+/* responsive 
+@media only screen and (max-width: 767px) { 
+  .y-grid.responsive,
+  .y-row.responsive >,
+  .y-grid.responsive > [class^="y-u"],
+  .y-row.responsive > [class^="y-u"] {
+    width: 100%;
+    margin-left: 0;
+  }
 }
-.y-unit-7-24 {
-    width: 29.1666%;
-}
-.y-unit-11-24 {
-    width: 45.8333%;
-}
-.y-unit-13-24 {
-    width: 54.1666%;
-}
-.y-unit-17-24 {
-    width: 70.8333%;
-}
-.y-unit-19-24 {
-    width: 79.1666%;
-}
-.y-unit-23-24 {
-    width: 95.8333%;
-}
-
+*/
 
 
 
 
 /* $ Helper classes
-========================================== */
+============================================================================ */
 
-/* micro-clearfix ---------------- */ 
-/*
- * Source: http://nicolasgallagher.com/micro-clearfix-hack/
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of 'table' rather than 'block' is only necessary if using
- *    ':before' to contain the top-margins of child elements.
- */
+/* clearfix --------------------------------------------------------------- */ 
+/* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+  content: " ";
+  display: table;
 }
 .clearfix:after {
   clear: both;
 }
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
 .clearfix {
   *zoom: 1;
 }
+/* Better float containment in IE using CSS expressions
+ * http://nicolasgallagher.com/better-float-containment-in-ie/ */
+.super-clearfix {
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
+  *zoom: 1;
+}
+.super-clearfix:before,
+.super-clearfix:after {
+  content: "";
+  display: table;
+}
+.super-clearfix:after {
+  clear: both;
+}
 
-/* image replacement ---------------- */
+/* image replacement ------------------------------------------------------- */
 .img-r { 
   display: block;
   border: 0; 
@@ -1113,29 +1088,58 @@ td {
   border: 0;
 }
 
-/* image positioning ---------------- */
+/* image positioning ------------------------------------------------------- */
 .img-left {
   float: left;
-  margin: 0 1.5em 1.5em 0;
+  margin: 0 1.4em 1.4em 0;
 }
 .img-right {
   float: right;
-  margin: 0 0 1.5em 1.5em;
+  margin: 0 0 1.4em 1.4em;
 }
 
-/* layout display ---------------- */
+/* layout display ---------------------------------------------------------- */
 .block {
   display: block;
   width: 100%;
 }
-.width-33 {
-  width: 33%;
+.width-1-6 {
+  width: 16.6666666667%;
 }
-.width-50 {
+.width-1-5 {
+  width: 20%;
+}
+.width-1-4 {
+  width: 25%;
+}
+.width-1-3 {
+  width: 333.3333333333%;
+}
+.width-1-2 {
   width: 50%;
 }
-.width-100 {
-  width: 100%;
+.inline-block-container {
+  letter-spacing: -0.31em; /* webkit */
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed; /* fixe text-rendering in webkit */
+}
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+opera-only :-o-prefocus,
+.inline-block-container {
+  word-spacing: -0.43em;
+}
+.inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  letter-spacing: auto;
+  word-spacing: auto;
+  text-rendering: auto;
 }
 .hide,
 .hidden {
@@ -1157,7 +1161,7 @@ td {
   visibility: visible;
 }
 
-/* layout positioning ---------------- */
+/* layout positioning ------------------------------------------------------ */
 .pull-right {
   float: right;
 }
@@ -1168,7 +1172,7 @@ td {
   position: fixed;
 }
 
-/* reset margin/padding ---------------- */
+/* reset margin/padding ---------------------------------------------------- */
 .no-margin {
   margin: 0 !important;
 }
@@ -1193,7 +1197,7 @@ td {
   border: 0 !important;
 }
 
-/* text utilities */
+/* text utilities ---------------------------------------------------------- */
 .text-truncate {
   max-width: 100%;
   overflow: hidden;
@@ -1215,9 +1219,9 @@ td {
 }
 
 /* $ Wordpress Core CSS (relative units)
- * http://codex.wordpress.org/CSS ---------------- */
+ * http://codex.wordpress.org/CSS ------------------------------------------ */
 .alignnone {
-  margin: 0.5em 1.5em 1.5em 0;
+  margin: 0.5em 1.4em 1.4em 0;
 }
 .aligncenter,
 div.aligncenter {
@@ -1226,11 +1230,11 @@ div.aligncenter {
 }
 .alignright {
   float:right;
-  margin: 0.5em 0 1.5em 1.5em;
+  margin: 0.5em 0 1.4em 1.4em;
 }
 .alignleft {
   float: left;
-  margin: 0.5em 1.5em 1.5em 0;
+  margin: 0.5em 1.4em 1.4em 0;
 }
 .aligncenter {
   display: block;
@@ -1238,14 +1242,14 @@ div.aligncenter {
 }
 a img.alignright {
   float: right;
-  margin: 0.5em 0 1.5em 1.5em;
+  margin: 0.5em 0 1.4em 1.4em;
 }
 a img.alignnone {
-  margin: 0.5em 1.5em 1.5em 0;
+  margin: 0.5em 1.4em 1.4em 0;
 }
 a img.alignleft {
   float: left;
-  margin: 0.5em 1.5em 1.5em 0;
+  margin: 0.5em 1.4em 1.4em 0;
 }
 a img.aligncenter {
   display: block;
@@ -1260,13 +1264,13 @@ a img.aligncenter {
   text-align: center;
 }
 .wp-caption.alignnone {
-  margin: 0.5em 1.5em 1.5em 0;
+  margin: 0.5em 1.4em 1.4em 0;
 }
 .wp-caption.alignleft {
-  margin: 0.5em 1.5em 1.5em 0;
+  margin: 0.5em 1.4em 1.4em 0;
 }
 .wp-caption.alignright {
-  margin: 0.5em 0 1.5em 1.5em;
+  margin: 0.5em 0 1.4em 1.4em;
 }
 .wp-caption img {
   border: 0 none;
@@ -1282,9 +1286,9 @@ a img.aligncenter {
   padding: 0;
 }
 
-/* miscellaneous ---------------- */
+/* miscellaneous ----------------------------------------------------------- */
 .chromeframe {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1.4em 0;
   padding: 0.75em;
   background-color: #e0e0e0;
   color: #000;
@@ -1299,7 +1303,7 @@ a img.aligncenter {
 
 
 /* $ Print
-========================================== */
+============================================================================ */
 
 @media print {
   * {
@@ -1312,19 +1316,18 @@ a img.aligncenter {
   a:visited {
     text-decoration: underline;
   }
-  /* print URLs
   a[href]:after {
     content: " (" attr(href) ")";
   }
   abbr[title]:after {
     content: " (" attr(title) ")";
-  } 
-  .img-r a:after,
+  }
+  /* Don't show links for images, or javascript/internal links */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
-  } */
+  }
   pre,
   blockquote {
     border: 1px solid #999;
@@ -1371,33 +1374,21 @@ a img.aligncenter {
 
 
 
-/* =============================================================
+/* ============================================================================
  *
  * $ Author's custom styles
  * Uncomment and customize the following starting code
  *
- ============================================================= */
+ =========================================================================== */
 
-/* @viewport rule (for responsive websites) ----------------
+/* @viewport rule (for responsive websites) --------------------------------
  * Fix IE 10 on Windows Phone 8 Viewport with JavaScript http://goo.gl/ryjPF
-@-webkit-viewport { 
-    width: device-width;
-}
-@-moz-viewport { 
-    width: device-width;
-}
 @-ms-viewport { 
-    width: device-width;
-}
-@-o-viewport { 
-    width: device-width;
-}
-@viewport { 
-    width: device-width;
+  width: device-width;
 }
 */
 
-/* box-model (no IE7 support) ----------------
+/* box-model (no IE7 support) ----------------------------------------------
 *, 
 *:before, 
 *:after { 
@@ -1407,16 +1398,7 @@ a img.aligncenter {
 }
 */
 
-/* customize and extend grid system ----------------
-/* reset grid to one-column layout
-@media only screen and (max-width: XXem) { 
-  [class*="y-u"] {
-    width: 100%;
-  }
-}
-*/
-
-/* body ----------------
+/* body --------------------------------------------------------------------
 body {
   width: ;
   max-width: ;
@@ -1426,7 +1408,7 @@ body {
 }
 */
 
-/* skin ----------------
+/* skin --------------------------------------------------------------------
 html, 
 button, 
 input, 
@@ -1436,7 +1418,7 @@ textarea {
   font-family: ;
   color: ;
 }
-body {
+html {
   background-color: ;
 }
 a {
@@ -1459,7 +1441,7 @@ a:active {
 }
 */
 
-/* font-sizing ----------------
+/* font-sizing -------------------------------------------------------------
 html {
   font-size: ;
 }
@@ -1499,21 +1481,17 @@ h6,
 .h6 {
   font-size: ;
 }
-p,
 pre, 
 code, 
 kbd, 
 samp {
   font-size: ;
 }
-p.lead {
-  font-size: ;
-}
 */
 
-/* vertical rhythm ---------------- 
+/* vertical rhythm --------------------------------------------------------
 body {
-   line-height: ;
+  line-height: ;
 }
 .tera {
   line-height: ;
@@ -1566,19 +1544,22 @@ dl,
 blockquote,
 hr,
 button, 
+.btn,
 input, 
 select, 
 textarea,
-table,
-.flex-video-container,
 figure img,
 figcaption,
+audio,
+video,
+.flex-video-container,
+table,
 .table-overflow-container {
   margin-bottom: ;
 }
 */
 
-/* forms ---------------- 
+/* forms ----------------------------------------------------------------- 
 input[type="color"], 
 input[type="email"], 
 input[type="image"], 
@@ -1622,12 +1603,12 @@ input[type="submit"] {
   }
 }
 button:hover,
-.btn:hover;
+.btn:hover,
 input[type="button"]:hover, 
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 button:focus,
-.btn:focus;
+.btn:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
@@ -1636,7 +1617,7 @@ input[type="submit"]:focus {
   background-color: ;
 }
 button:active,
-.btn:active;
+.btn:active,
 input[type="button"]:active, 
 input[type="reset"]:active {
   color: ;
@@ -1650,72 +1631,43 @@ input[type="reset"]:active {
 
 
 /* $ Media queries reference
-========================================== */
-
-
-/* mobile first */
+============================================================================ */
 
 /* 320px 
-@media only screen and (max-width: 20em) { } */
-
+@media only screen and (min-width: 320px) { } 
+*/
 /* 480px 
-@media only screen and (max-width: 30em) { } */
-
+@media only screen and (min-width: 480px) { } 
+*/
 /* 640px
-@media only screen and (max-width: 40em) { } */
-
+@media only screen and (min-width: 640px) { } 
+*/
+/* 767px 
+@media only screen and (min-width: 767px) { } 
+*/
 /* 768px 
-@media only screen and (max-width: 48em) { } */
-
+@media only screen and (min-width: 768px) { } 
+*/
 /* 800px 
-@media only screen and (max-width: 50em) { } */
-
+@media only screen and (min-width: 800px) { } 
+*/
 /* 960px 
-@media only screen and (max-width: 60em) { } */
-
-/* 1024px 
-@media only screen and (max-width: 64em) { } */
-
+@media only screen and (min-width: 960px) { } 
+*/
+/* 979px 
+@media only screen and (min-width: 979px) { } 
+*/
 /* 1200px 
-@media only screen and (max-width: 75em) { } */
-
-
-
-/* desktop > mobile */
-
-/* 1200px 
-@media only screen and (max-width: 75em) { } */
-
-/* 1024px 
-@media only screen and (max-width: 64em) { } */
-
-/* 960px 
-@media only screen and (max-width: 60em) { } */
-
-/* 800px 
-@media only screen and (max-width: 50em) { } */
-
-/* 768px 
-@media only screen and (max-width: 48em) { } */
-
-/* 640px 
-@media only screen and (max-width: 40em) { } */
-
-/* 480px 
-@media only screen and (max-width: 30em) { } */
-
-/* 320px 
-@media only screen and (max-width: 20em) { } */
-
-
+@media only screen and (min-width: 1200px) { } 
+*/
 
 /* High resolution devices (retina)
-
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
-} */
+} 
+*/
 
 
 
@@ -1723,22 +1675,22 @@ input[type="reset"]:active {
 
 /* $ 'Safe' CSS hacks reference
  * Check out the demo http://jsbin.com/atefes/9/quiet
-========================================== */
+============================================================================ */
 
 /* IE7
-p { *color: red } */
+p { *color: red; } */
 
 /* IE8
 @media \0screen {
-  p { color: green }
+  p { color: green; }
 } */
 
 /* IE9+
 @media screen and (min-width:0\0) {
-  p { color: blue }
+  p { color: blue; }
 } */
 
-/* Webkit (Safari, Android, Chrome, ecc...
+/* Webkit (Safari, Android, Chrome, ecc...)
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   p { color: cyan; } 
 } */  

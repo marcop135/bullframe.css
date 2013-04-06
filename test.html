@@ -6,32 +6,33 @@
   
 <title>BULLFRAME CSS demo page</title>
 <meta content="https://github.com/marco135/bullframe.css/" name="description">
-
+ 
 <link href="bullframe.css" rel="stylesheet">
 <!-- just for demo -->
 <style>
-.headline { color: #fff; padding: 1em; margin: 0 0 1.5em 0; background-color: #3399ff; }
+[role="banner"],
+.download { color: #fff; padding: 1em; margin: 0 0 1.5em 0; background-color: #3399ff; }
+.download { margin-top: 3em; }
 .title, h3 { margin-top: 2em !important; padding: .5em; }
 .title { color: #fff !important; background: #777; }
 h3 { background: #eaeaea; }
 .headings h3 { background-color: transparent; padding: 0; color: #222 !important; margin-top: 0 !important; } 
 </style>
-
+ 
 <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 
-<body>
+<body> 
 
-<div class="headline">
-  <h1 class="mega">BULLFRAME CSS demo page</h1>
-  <small><b>Fork me on GitHub</b> - <a style="color: #fff" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></small>
-</div>
+<header role="banner">
+<h1 class="mega">BULLFRAME CSS demo page</h1>
+<small><b>Fork me on GitHub</b> - <a style="color: #fff" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></small>
+</header>
 
 
-
-<h2 class="title">Text elements</h2>
+<h2 id="text-elements" class="title">Text elements</h2>
 
 
 <h3>Headings</h3>
@@ -254,7 +255,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 
 
-<h2 class="title">Embedded content</h2>
+<h2 id="embedded-content" class="title">Embedded content</h2>
 
 <h3>img</h3>
 <a href="#"><img alt="" src="http://lorempixel.com/600/350/sports/1"></a>
@@ -296,7 +297,7 @@ content, in case the browser does not support Canvas.</canvas>
 
 
 
-<h2 class="title">Interactive embedded content</h2>
+<h2 id="interactive-embedded-content" class="title">Interactive embedded content</h2>
 
 
 <h3>Details + summary</h3>
@@ -313,13 +314,19 @@ content, in case the browser does not support Canvas.</canvas>
 
 
 <h3>Audio</h3>
-<audio controls></audio>
 <audio></audio>
 
+  
+<h3>Audio with controls</h3>  
+<audio controls></audio>
 
+   
 <h3>HTML5 video</h3>
-<video controls></video>
 <video></video>
+  
+  
+<h3>HTML5 video with controls</h3>
+<video controls></video>
 
 
 <h3>YouTube video iframe (4:3)</h3>
@@ -334,23 +341,8 @@ content, in case the browser does not support Canvas.</canvas>
 </div>
 
 
-<h3>Google Map</h3>
-<iframe frameborder="0" height="350" marginheight="0"
-marginwidth="0" scrolling="no" src=
-"https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=roma&amp;sll=41.908558,12.535998&amp;sspn=0.344931,0.727158&amp;ie=UTF8&amp;hq=&amp;hnear=Roma,+Lazio&amp;t=m&amp;ll=41.960511,12.471542&amp;spn=0.178708,0.291824&amp;z=11&amp;iwloc=A&amp;output=embed"
-width="425"></iframe>
-
-
 <h3>Facebook comments</h3>
-<div id="fb-root"></div><script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=200093550120274";
-  fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
+<div id="fb-root"></div>
 <div class="fb-comments" data-href="http://example.com" data-num-posts="1"
 data-width="470"></div>
 
@@ -362,12 +354,11 @@ data-width="470"></div>
   Barack Obama (@BarackObama) <a href=
   "https://twitter.com/BarackObama/status/266031293945503744">Novembre 7,
   2012</a>
-</blockquote><script async="" charset="utf-8" src=
-"//platform.twitter.com/widgets.js"></script>
+</blockquote>
 
 
 
-<h2 class="title">HTML5 Forms</h2>
+<h2 id="html5-forms" class="title">HTML5 Forms</h2>
 
 
 <h3>Inputs</h3>
@@ -439,7 +430,7 @@ data-width="470"></div>
     </div>
 
     <label for="select_dd">Select drop-down</label> 
-    <select id="select_dd" name="select_dd">
+    <select id="select_dd" name="select_dd" size="3">
       <optgroup label="Group 1">
         <option value="1">Some text goes here</option>
         <option value="2">Another choice could be here</option>
@@ -508,7 +499,7 @@ data-width="470"></div>
 
 
 
-<h2 class="title">Tables</h2>
+<h2 id="tables" class="title">Tables</h2>
 <h3>Tabular data</h3>
 <table>
   <caption>Jimi Hendrix - albums</caption>
@@ -610,6 +601,35 @@ data-width="470"></div>
     </tbody>
   </table>
 </div><!-- /.table-overflow-containter -->
+   
   
+<div id="download" class="download">
+  <h2 class="h1">Download on GitHub</h2>
+  <small><a style="color: #fff" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></small>
+</div>
+ 
+<p class="back-to-top"><a href="#" title="back-to-top"><span class="h4">&uarr;</span> back to top</a></p>
+ 
+
+
+
+
+<!-- social scripts https://gist.github.com/necolas/1025811 -->
+<script>
+(function(d, u) {
+    var s = d.scripts[0],
+        i = u.length, g;
+    while (i--) {
+        g = d.createElement('script');
+        g.src = '//' + u[i] + '.js';
+        s.parentNode.insertBefore(g, s);
+    }
+}(document, [
+    // Facebook SDK
+    '//connect.facebook.net/it_IT/all.js#xfbml=1&appId=200093550120274',
+    // Twitter SDK
+    'platform.twitter.com/widgets'
+]));
+</script>
 </body>
 </html>

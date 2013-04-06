@@ -7,7 +7,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>Best features</h2>
 <ul>
   <li>Normalized styles for a wide range of elements across browsers (like 
-  <a href="https://github.com/necolas/normalize.css/tree/v1.1.0" title="normalize.css">normalize.css v1.1.0</a>)</li>
+  <a href="https://github.com/necolas/normalize.css/tree/v1.1.0" title="normalize.css">normalize.css v1.1.0</a> do)</li>
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
@@ -17,7 +17,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Flexible images and media (video, audio, iframe, embed, FB comments, Twitter embeds)</li>
   <li>Flexible, cross-browser HTML5 forms</li>
   <li>Flexible tables</li>
-  <li>Several helper classes (like '.clearfix' or text utilities)</li>
+  <li>Several helper classes (like '.clearfix' or '.hide-text')</li>
   <li>IE7+ and mobile browsers support</li>
 </ul>
 
@@ -62,23 +62,24 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/558/edit" titl
 <b>Tested and compatible with:</b>
 <ul>
   <li>Internet Explorer 7-10</li>
-  <li>Chrome</li>
+  <li>Latest Chrome</li>
   <li>Firefox 4+</li>
   <li>Safari 4+</li>
   <li>Opera 10+</li>
 </ul>
 <ul>
-  <li>Safari Mobile iOS 6</li>
-  <li>Android browser</li>
-  <li>Opera Mobile</li>
-  <li>Opera Mini (buggy)</li>
+  <li>Latest Mobile Safari</li>
+  <li>Latest Android browser</li>
+  <li>Latest Opera Mobile</li>
+  <li>Opera Mini (buggy, responsive video and tables trick not working)</li>
   <li>IE 7-7.5 Mobile</li>
-  <li>Firefox Mobile</li>
+  <li>Latest Mobile Firefox</li>
   <li>Blackberry browser OS 5</li>
+  <li>Kindle Touch browser</li>
 </ul>
 <b><i>TODO:</i></b>
 <ul>
-  <li>Safari Mobile iOS 4+</li>
+  <li>Mobile Safari iOS 4+</li>
   <li>IE 8 Mobile</li>
 </ul>
 

@@ -616,7 +616,6 @@ select,
 textarea {
   font-size: 100%;
 }
-
 /* normalization */
 input[type="color"], 
 input[type="email"], 
@@ -903,32 +902,27 @@ td {
  */
 .table-overflow-container { 
   overflow-x: scroll;
+  /* reset 'overflow-scrolling' force to show scrollbars */
+  -webkit-overflow-scrolling: auto; 
   margin-bottom: 1.4em;
 }
-/* force to show and customize webkit scrollbar */
+/* customize webkit scrollbars */
 .table-overflow-container::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 11px;
-  height: 11px
+  width: 12px;
+  height: 12px
+}
+.table-overflow-container::-webkit-scrollbar-track{
+  background-color: #dbdbdb; 
 }
 .table-overflow-container::-webkit-scrollbar-thumb {
-  background-color: #999;
+  background-color: #999; 
 }
-.table-overflow-container::-webkit-scrollbar-track {
-  background-color: #eaeaea;
-  color: #999; 
+.table-overflow-container::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #f0f0f0; 
 }
-.table-overflow-container table { 
-  width: 100%;
-}
-
-@media only screen and (min-width: 980px) {
-  .table-overflow-container {
-    overflow-x: auto; /* hide default scrollbar */
-  }
-}  
 .table-overflow-container table {
   margin-bottom: 0;
+  width: 100%;
 }
 /* 
  * how to wraps table via jQuery:
@@ -1559,7 +1553,15 @@ table,
 }
 */
 
-/* forms ----------------------------------------------------------------- 
+/* forms ----------------------------------------------------------------- */ 
+/* avoid auto-zooming form controls on iPhone and iPod
+ * http://www.456bereastreet.com/archive/201212/ios_webkit_browsers_and_auto-zooming_form_controls/
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  font-size: 16px;
+} */
+/*
 input[type="color"], 
 input[type="email"], 
 input[type="image"], 

@@ -956,6 +956,7 @@ td {
   clear: both;
 }
 [class*="y-unit-"] {
+  display: block;
   float: left;
 }
 .y-unit-1 {

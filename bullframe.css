@@ -43,10 +43,6 @@ video {
   *display: inline;
   *zoom: 1;
 } 
-audio:not([controls]) { 
-  display: none;
-  height: 0;
-}
 [hidden] { 
   display: none;
 }
@@ -338,6 +334,10 @@ object,
 embed {
   max-width: 100%;
 }
+img,
+video {
+  height: auto !important;
+}
 img {
   width: auto;
   vertical-align: middle;
@@ -347,16 +347,16 @@ img {
 /* just in case, to force correct aspet ratio 
  * if necessary, override this rule with 'max-height: XXXpx'  
  */
-img,
-video {
-  height: auto !important;
-}
 audio,
 video {
   margin-bottom: 1.4em;
 }
+audio:not([controls]) { 
+  display: none;
+  height: 0;
+}
 
-/* flex videos */
+/* flex videos ------------------------------------------------------------- */
 .flex-video-container {
   position: relative;
   padding-bottom: 67.5%; /* 4:3 standard */
@@ -396,6 +396,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+/* vendor styles ----------------------------------------------------------- */
 /* google maps fix */
 #map_canvas img,
 #map_canvas embed,
@@ -405,19 +406,16 @@ svg:not(:root) {
 .map_canvas object {
   max-width: none !important; 
 }
-
 /* override the Facebook comments embed fixed width */
 .fb-comments, 
 .fb-comments span, 
 .fb-comments iframe {
   width: 100% !important;
 }
-
 /* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
   max-width: 100% !important;
 }
-
 /* prevent phone numbers looking twice as large and having a Skype highlight 
  * https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
  */
@@ -450,7 +448,7 @@ figcaption {
 
 
 
-/* $ Forms
+/* $ Forms (enter the madness)
 ============================================================================ */
 
 form {
@@ -816,8 +814,8 @@ td {
   border: 1px solid #999;
 }
 
-/* Responsive Tables
- * Note: issues on Opera 10-11 and Opera Mini 
+/* Responsive Tables --------------------------------------------------------
+ * Note: issues on Opera 10-11, Opera Mobile and Opera Mini 
  */
 .table-overflow-container { 
   overflow-x: auto;
@@ -984,39 +982,26 @@ td {
 }
 
 /* image replacement ------------------------------------------------------- */
-.img-r { 
-  display: block;
-  border: 0; 
-  text-indent: -9999px; 
-  overflow: hidden; 
-  background-color: transparent; 
-  background-repeat: no-repeat; 
-  text-align: left; 
-  direction: ltr;
-  *line-height: 0;
-}
-.img-r br { 
-  display: none;
-}
-/* h5bp class */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  *text-indent: -9999px; /* IE 7 fallback */
-}
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
 .hide-text {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
+}
+.img-r,
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; /* IE 7 fallback */
+}
+.img-r:before
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
 /* image positioning ------------------------------------------------------- */
@@ -1056,8 +1041,8 @@ td {
   text-rendering: optimizespeed; /* fixe text-rendering in webkit */
 }
 /* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
+ * The ".opera-only" selector is used to prevent actual prefocus styling
+ * and is not required in markup.
 */
 opera-only :-o-prefocus,
 .inline-block-container {
@@ -1157,7 +1142,7 @@ opera-only :-o-prefocus,
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 0.5em auto 0.5em auto;
+  margin: 0.5em auto;
 }
 .alignright {
   float:right;
@@ -1169,7 +1154,7 @@ div.aligncenter {
 }
 .aligncenter {
   display: block;
-  margin: 0.5em auto 0.5em auto;
+  margin: 0.5em auto;
 }
 a img.alignright {
   float: right;
@@ -1221,7 +1206,7 @@ a img.aligncenter {
 .chromeframe {
   margin: 0 0 1.4em 0;
   padding: 0.75em;
-  background-color: #e0e0e0;
+  background-color: #e0e0e0; /* grey */
   color: #000;
 }
 .print-only { 
@@ -1308,7 +1293,7 @@ a img.aligncenter {
 /* ============================================================================
  *
  * $ Author's custom styles
- * Uncomment and customize the following starting code
+ * Customize as you want the following starting code
  *
  =========================================================================== */
 
@@ -1416,93 +1401,11 @@ kbd,
 samp {
   font-size: 1em;
 }
-
-.tera {
-  font-size: ;
-}
-.giga {
-  font-size: ;
-}
-.mega {
-  font-size: ;
-}
-h1, 
-.h1 {
-  font-size: ;
-}
-h2, 
-.h2 {
-  font-size: ;
-}
-h3, 
-.h3 {
-  font-size: ;
-}
-h4, 
-.h4 {
-  font-size: ;
-}
-h5, 
-.h5 {
-  font-size: ;
-}
-h6, 
-.h6 {
-  font-size: ;
-}
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: ;
-}
 */
 
 /* vertical rhythm --------------------------------------------------------
 body {
-  line-height: ;
-}
-.tera {
-  line-height: ;
-  margin-bottom: ;
-}
-.giga {
-  line-height: ;
-  margin-bottom: ;
-}
-.mega {
-  line-height: ;
-  margin-bottom: ;
-}
-h1, 
-.h1 {
-  line-height: ;
-  margin-bottom: ;
-}
-h2, 
-.h2 {
-  line-height: ;
-  margin-bottom: ;
-}
-h3, 
-.h3 {
-  line-height: ;
-  margin-bottom: ;
-}
-h4, 
-.h4 {
-  line-height: ;
-  margin-bottom: ;
-}
-h5, 
-.h5 {
-  line-height: ;
-  margin-bottom: ;
-}
-h6, 
-.h6 {
-  line-height: ;
-  margin-bottom: ;
+  padding-top: ;
 }
 p,
 pre,

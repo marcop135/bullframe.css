@@ -11,20 +11,22 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
-  <li>Wordpress ready</li>
   <li>Fluid grid system</li>
+  <li>IE7+ support</li>
+</ul>
+<ul>
+  <li>Vertical rhythm setting a flexible baseline grid</li>
   <li>Flexible and rich typography</li>
   <li>Flexible images and media (video, audio, iframe, embed, FB comments, Twitter embeds)</li>
   <li>Flexible, cross-browser HTML5 forms</li>
   <li>Flexible tables</li>
   <li>Several helper classes (like '.clearfix' or '.hide-text')</li>
-  <li>IE7+ and mobile browsers support</li>
 </ul>
 
 
 <h2>Test it now</h2>
-<p><b><a href="http://jsbin.com/oyasux/587/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
-Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/587/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/587/edit</a></p>
+<p><b><a href="http://jsbin.com/oyasux/588/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
+Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/588/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/588/edit</a></p>
 
 
 <h2>How to use it</h2>
@@ -65,15 +67,15 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/587/edit" titl
   <li>Latest Chrome</li>
   <li>Firefox 4+</li>
   <li>Safari 4+</li>
-  <li>Opera 10+ (responsive tables not working in v10-11)</li>
+  <li>Opera 10+ (responsive tables trick not working in v10-11)</li>
 </ul>
 <ul>
   <li>Latest Mobile Safari</li>
   <li>Latest Android browser</li>
-  <li>Latest Opera Mobile</li>
-  <li>Opera Mini (responsive video and tables trick not working)</li>
+  <li>Latest Opera Mobile (responsive tables trick not working)</li>
+  <li>Opera Mini (mark element is buggy and responsive videos and tables trick not working)</li>
   <li>Internet Explorer 7 Mobile</li>
-  <li>Latest Mobile Firefox</li>
+  <li>Latest Mobile Firefox (Fennec)</li>
   <li>Blackberry browser OS 5</li>
   <li>Kindle Touch browser</li>
 </ul>
@@ -99,4 +101,5 @@ bullframe.css incorporates some of the styles found on:
   <li>Inuit CSS - <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
   <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
   <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
+  <li>Nyan - <a href="http://www.youtube.com/watch?v=QH2-TGUlwu4" title="">http://www.youtube.com/watch?v=QH2-TGUlwu4</a></li>
 </ul>

@@ -23,8 +23,8 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
 <h2>Test it now</h2>
-<p><b><a href="http://jsbin.com/oyasux/583/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
-Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/583/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/583/edit</a></p>
+<p><b><a href="http://jsbin.com/oyasux/587/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
+Play with HTML/CSS code on JSBin <a href="http://jsbin.com/oyasux/587/edit" title="bullframe demo page - JSBin">http://jsbin.com/oyasux/587/edit</a></p>
 
 
 <h2>How to use it</h2>

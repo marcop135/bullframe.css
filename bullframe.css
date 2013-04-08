@@ -14,8 +14,11 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 body {
+  /* 10px + 960px + 10px = 980px */
   max-width: 960px; 
-  padding: 1.4em 10px 0 10px; /* 10px + 960px + 10px = 980px */
+  padding-top: 1.4em;
+  padding-right: 10px;
+  padding-left: 10px;
   margin: auto;
   position: relative;
   background-color: transparent;
@@ -62,13 +65,9 @@ html {
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
 }
-/* 1.4 (21px) is 'the magic number'
- * http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/
- */
 body { 
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 1.4; /* 21px */
+  font-size: 1em;
+  line-height: 1.4;
 }
 .tera,
 .giga,
@@ -196,8 +195,7 @@ code,
 kbd, 
 samp {
   font-family: Monaco, Consolas, "Courier New", Courier, monospace; 
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1em;
 }
 strong, 
 b { 
@@ -795,6 +793,7 @@ input[disabled]:active {
 ============================================================================ */
 
 table {
+  font-size: 1em;
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
@@ -861,7 +860,7 @@ td {
 
 
 
-/* $ Fluid grid system
+/* $ Fluid grid system (12 columns)
 ============================================================================ */
 
 .row {
@@ -877,9 +876,9 @@ td {
 .row:after {
   clear: both;
 }
-[class*="col-"] {
-  display: block;
+[class^="col-"] {
   float: left;
+  min-height: 1;
 }
 .col-1 {
   display: block;
@@ -888,7 +887,7 @@ td {
   width: 50%;
 }
 .col-1-3 {
-    width: 33.33333%;
+  width: 33.33333%;
 }
 .col-2-3 {
   width: 66.66666%;
@@ -941,7 +940,13 @@ td {
 .col-11-12 {
   width: 91.6666%;
 }
-
+/* responsive */
+@media only screen and (max-width: 767px) { 
+  .row.responsive [class^="col-"] {
+    width: 100%;
+    float: none;
+  }
+}
 
 
 
@@ -1367,12 +1372,51 @@ a:active {
 */
 
 /* font-sizing -------------------------------------------------------------
-html {
-  font-size: ;
-}
+/* 15px 
 body {
-  font-size: ;
+  font-size: 0.9375em;
 }
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+/* 14px 
+body {
+  font-size: 0.875em;
+}
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+/* 13px 
+body {
+  font-size: 0.8125em;
+}
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+/* 12px 
+body {
+  font-size: 0.75em;
+}
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
 .tera {
   font-size: ;
 }
@@ -1569,27 +1613,35 @@ input[type="reset"]:active {
 /* 320px 
 @media only screen and (min-width: 320px) { } 
 */
+
 /* 480px 
 @media only screen and (min-width: 480px) { } 
 */
+
 /* 640px
 @media only screen and (min-width: 640px) { } 
 */
+
 /* 767px 
 @media only screen and (min-width: 767px) { } 
 */
+
 /* 768px 
 @media only screen and (min-width: 768px) { } 
 */
+
 /* 800px 
 @media only screen and (min-width: 800px) { } 
 */
+
 /* 960px 
 @media only screen and (min-width: 960px) { } 
 */
+
 /* 979px 
 @media only screen and (min-width: 979px) { } 
 */
+
 /* 1200px 
 @media only screen and (min-width: 1200px) { } 
 */

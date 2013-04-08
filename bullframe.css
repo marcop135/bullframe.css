@@ -14,12 +14,11 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 body {
-  /* 10px + 960px + 10px = 980px */
-  max-width: 960px; 
-  padding-top: 1.4em;
+  /* 10px + 940px + 10px = 960px */
+  max-width: 940px; 
   padding-right: 10px;
   padding-left: 10px;
-  margin: auto;
+  margin: auto; /* center */
   position: relative;
   background-color: transparent;
 }
@@ -64,6 +63,7 @@ html {
 body { 
   font-size: 1em;
   line-height: 1.4;
+  padding-top: 1.4em;
 }
 .tera,
 .giga,

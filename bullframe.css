@@ -63,7 +63,7 @@ html {
 body { 
   font-size: 1em;
   line-height: 1.4;
-  padding-top: 1.4em;
+  margin-top: 1.4em;
 }
 .tera,
 .giga,
@@ -291,7 +291,7 @@ dl {
 }
 ul,
 ol {
-  margin: 0 0 1.4em 1.4em;
+  margin: 0 0 1.4em 0;
   padding: 0 0 0 1.4em;
 }
 li ul,
@@ -704,11 +704,7 @@ select {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   select {
     -webkit-appearance: none;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAIAAADZ6/LIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTEzNjg2MzE5RTA2MTFFMjgxRDA4NkUwNDMzQ0IwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTEzNjg2MzI5RTA2MTFFMjgxRDA4NkUwNDMzQ0IwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxMTM2ODYyRjlFMDYxMUUyODFEMDg2RTA0MzNDQjBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxMTM2ODYzMDlFMDYxMUUyODFEMDg2RTA0MzNDQjBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqcH7aoAAADQSURBVHjaYvz//z8DWYAFQp0+fXru3LmvXr1iY2ODy/3+/ZuPj6+oqEhXVxenTgEBgWvXrt24cYOXlxfiCkZGxhcvXsTExKioqGC1kwlCycvLl5SUqKqqMjMzc4IBUNDR0bGmpgbCxqkT6EhXV1cFBQWgC+FOVVNTk5WVxenR/0jg0KFDpqamqmDg7+//+vXr/7gBE7Iptra21tbWQAYHB0dmZqaIiAi+wEUz6evXrzo6Or6+vu/evfuPFzBgCk2ZMuX8+fP/CQFGslMCQIABAFTix2ccC9NgAAAAAElFTkSuQmCC);
-    /* just in case, a smaller arrow
-    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==); */
-    background-repeat: no-repeat;
-    background-position: right center;
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkU0NjlCN0ZBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkU0NjlCODBBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRTQ2OUI3REExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRTQ2OUI3RUExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pnd57P8AAAD/SURBVHjarFIxioRAEOxeD08DxcALRQM10tBNxMDAUPyAHzAVQ59hargfMTwDM/EJomBmcBj07SwIy7J3a7ANBTVMU101PUhE8K762EnbtlTXNUzT9M3z/M9907Ztn7Isn/M8B9d18aWYoijQ9z0Mw3CWJAl2x4gI4zhCmqZgmua/zk470XUdiqIAy7KA4zgQRfEGVmEYQlmW7IyHxK7RMIoiMAyDxbqPCLZtXzRNw5ePxuLco2ka8jxvujokhiRJaJ5neux7htOjeBAE6Pv+F+OCIECWZaCqKh5a57MJ67qS4zgUxzEty3LI1W1hf11UVUVd1x0WYsB3ftpfAQYAXo7XO6GWzfUAAAAASUVORK5CYII=) no-repeat right center;
   }
 }
 select[size], 
@@ -800,18 +796,18 @@ table {
 thead th {
   vertical-align: bottom;
 }
-th {
-  font-weight: bold;
-}
-th,
-caption { 
-  text-align: left;
-}
 th,
 td { 
   vertical-align: top;
   padding: 0.5em;
   border: 1px solid #999;
+}
+th,
+caption { 
+  text-align: left;
+}
+th {
+  font-weight: bold;
 }
 
 /* Responsive Tables --------------------------------------------------------
@@ -1239,6 +1235,8 @@ a img.aligncenter {
     content: " (" attr(title) ")";
   }
   /* Don't show links for images, or javascript/internal links */
+  .hide-text:after, 
+  .img-r a:after,
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
@@ -1405,7 +1403,7 @@ samp {
 
 /* vertical rhythm --------------------------------------------------------
 body {
-  padding-top: ;
+  margin-top: ;
 }
 p,
 pre,

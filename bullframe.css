@@ -368,7 +368,8 @@ audio:not([controls]) {
 .flex-video-container.widescreen {
   padding-bottom: 56.25%; /* 16:9 */
 }
-.flex-video-container.vimeo {
+.flex-video-container.vimeo,
+.flex-video-container iframe[src*="player.vimeo.com"] {
   padding-top: 0; /* no extra-padding for controls */
 }
 .flex-video-container iframe,  
@@ -1464,22 +1465,18 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   padding: ;
-  *padding-left: ;
-  *padding-right: ;
   color: ;
   border: ;
   background: ;
 */
-/* linear gradient in IE9+
-@media screen and (min-width:0\0) {
-  button,
-  .btn,
-  input[type="button"], 
-  input[type="reset"],
-  input[type="submit"] {
-    background: url(data:image/svg...);
-  }
-}
+ /* linear gradient in IE9+ (note the '\9' at the end)
+button:nth-of-type(1n),
+.btn:nth-of-type(1n),
+input[type="button"]:nth-of-type(1n), 
+input[type="reset"]:nth-of-type(1n) {
+  background: url(data:image/svg+xml;base64.....)\9;
+} */
+/*
 button:hover,
 .btn:hover,
 input[type="button"]:hover, 

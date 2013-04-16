@@ -660,8 +660,8 @@ input[type="submit"] {
 .btn:active,
 .btn:hover,
 .btn:focus {
-  padding-top: 0.35em;
-  padding-bottom: 0.35em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
   text-decoration: none;
   color: #222;
 }
@@ -1477,8 +1477,15 @@ input[type="submit"] {
   color: ;
   border: ;
   background: ;
+}
+.btn,
+.btn:active,
+.btn:hover,
+.btn:focus {
+  padding: ;
+}
 */
- /* linear gradient in IE9+ (note the '\9' at the end)
+/* linear gradient in IE9+ (note the '\9' at the end)
 button:nth-of-type(1n),
 .btn:nth-of-type(1n),
 input[type="button"]:nth-of-type(1n), 

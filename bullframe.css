@@ -368,8 +368,7 @@ audio:not([controls]) {
 .flex-video-container.widescreen {
   padding-bottom: 56.25%; /* 16:9 */
 }
-.flex-video-container.vimeo,
-.flex-video-container iframe[src*="player.vimeo.com"] {
+.flex-video-container.vimeo {
   padding-top: 0; /* no extra-padding for controls */
 }
 .flex-video-container iframe,  

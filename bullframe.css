@@ -172,7 +172,9 @@ strike,
 s { 
   text-decoration: line-through;
 }
-p,
+p {
+  margin: 0 0 1.4em 0;
+}
 pre {
   margin: 1.4em 0;
 }

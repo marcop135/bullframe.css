@@ -10,14 +10,79 @@
 <meta content="https://github.com/marco135/bullframe.css/" name="description">
   
 <link href="bullframe.css" rel="stylesheet">
-<style>
+<style> 
+/* Add vertical rhythm 
+  * Note: '!important' overrides bullframe styles that jsbin 
+  * moves below by default. You don't need this trick in 
+  * your pages.
+  */
+body,
+hr {
+  margin-top: 1.4em !important;
+}
+.tera,
+.giga,
+.gamma,
+h1,
+.h1, 
+h2, 
+.h2,
+h3, 
+.h3,
+h4,
+.h4,
+h5,
+.h5, 
+h6,
+.h6,
+p,
+pre,
+menu, 
+ol,
+ul,
+dl,
+blockquote {
+  margin-top: 0 !important;
+}
+p,
+pre,
+menu, 
+ol,
+ul,
+dl,
+blockquote,
+hr,
+figure img,
+figcaption,
+address, 
+audio,
+video,
+.flex-video-container,
+table,
+.table-overflow-container,
+button, 
+.btn,
+input, 
+select, 
+textarea {
+  margin-bottom: 1.4em !important;
+}
+li ul,
+li ol {
+  margin-bottom: 0 !important;
+}
+figure img + figcaption {
+  margin-top: -1.4em;
+}
+  
+/* styles for header, section titles and footer */
 [role="banner"],
-.download { color: #fff; padding: 0.1em 1em 1em 1em; margin: 0 0 2.8em 0; background-color: #ff8051; }
+.download { color: #fff; padding: 1em !important; margin: 0 0 2.8em 0; background-color: #ff8051; }
 .download { margin-top: 2.8em; }
 .title, h3 { padding: .5em; }
 .title { color: #fff !important; background: #777; }
 h3 { background: #eaeaea; }
-.headings h3 { background-color: transparent; padding: 0; color: #222 !important; } 
+.headings h3 { background-color: transparent; padding: 0; color: #222 !important; }   
 </style>
   
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -601,7 +666,7 @@ data-width="470"></div>
  
 <p class="back-to-top"><a href="#" title="back-to-top"><span class="h4">&uarr;</span> back to top</a></p>
   
-
+ 
 
 
 <!-- social scripts https://gist.github.com/necolas/1025811 -->
@@ -618,7 +683,7 @@ data-width="470"></div>
     // Facebook SDK
     '//connect.facebook.net/it_IT/all.js#xfbml=1&appId=200093550120274',
     // Twitter SDK
-    'platform.twitter.com/widgets'
+ '//platform.twitter.com/widgets'
 ]));
 </script>
 </body>

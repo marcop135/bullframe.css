@@ -14,10 +14,10 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 body {
-  /* 10px + 940px + 10px = 960px */
+  /* 20px + 940px + 20px = 980px */
   max-width: 940px; 
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: auto; /* center */
   position: relative;
   background-color: transparent;
@@ -81,7 +81,6 @@ h5,
 h6,
 .h6 {
   font-weight: bold;
-  margin-top: 0;
   line-height: 1.2; /* reduce base line-height for better display */
 }
 h1, 
@@ -101,45 +100,45 @@ h6 {
 }
 .tera {
   font-size: 3.5em;
-  margin-bottom: 0.35em;
+  margin: 0.35em 0;
 }
 .giga {
   font-size: 3em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 .mega {
   font-size: 2.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 h1,
 .h1 {
   font-size: 2em;
-  margin-bottom: 0.75em;
+  margin: 0.75em 0;
 }
 h2,
 .h2 {
   font-size: 1.4em;
-  margin-bottom: 0.75em;
+  margin: 0.75em 0;
 }
 h3,
 .h3 {
   font-size: 1.3125em;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 h4,
 .h4 {
   font-size: 1.125em;
-  margin-bottom: 1.4em;
+  margin: 1.4em 0;
 }
 h5,
 .h5  {
   font-size: 1em;
-  margin-bottom: 1.4em;
+  margin: 1.4em 0;
 }
 h6,
 .h6  {
   font-size: 0.875em;
-  margin-bottom: 1.4em;
+  margin: 1.4em 0;
 }
 abbr[title] { 
   border-bottom: 1px dotted;
@@ -175,7 +174,7 @@ s {
 }
 p,
 pre {
-  margin: 0 0 1.4em 0;
+  margin: 1.4em 0;
 }
 p.lead {
   font-size: 125%;
@@ -287,11 +286,10 @@ menu,
 ol,
 ul,
 dl {
-  margin: 0 0 1.4em 0;
+  margin: 1.4em 0;
 }
 ul,
 ol {
-  margin: 0 0 1.4em 0;
   padding: 0 0 0 1.4em;
 }
 li ul,
@@ -347,10 +345,6 @@ img {
 /* just in case, to force correct aspet ratio 
  * if necessary, override this rule with 'max-height: XXXpx'  
  */
-audio,
-video {
-  margin-bottom: 1.4em;
-}
 audio:not([controls]) { 
   display: none;
   height: 0;
@@ -363,7 +357,6 @@ audio:not([controls]) {
   padding-top: 1.5625em;
   height: 0;
   overflow: hidden;
-  margin-bottom: 1.4em;
 }
 .flex-video-container.widescreen {
   padding-bottom: 56.25%; /* 16:9 */
@@ -436,13 +429,7 @@ span.skype_pnh_print_container {
 figure {
   margin: 0;
 }
-figure img {
-  margin-bottom: 1.4em;
-}
-figcaption {
-  margin-top: -1.4em;
-  margin-bottom: 1.4em;
-}
+
 
 
 
@@ -512,8 +499,14 @@ input,
 select, 
 optgroup, /* fix FF issue https://github.com/nathansmith/formalize/issues/41 */
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
+}
+button, 
+input, 
+select, 
+optgroup, 
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 button, 
 .btn,
@@ -523,7 +516,7 @@ textarea {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 0 1.4em 0;
+  margin: 0;
   vertical-align: baseline;
   *vertical-align: middle;
 }
@@ -622,10 +615,6 @@ label + input[type="checkbox"] {
 html input[type="button"] {
   -webkit-appearance: button;
 }
-button, 
-input { 
-  line-height: normal;
-}
 button {
   text-transform: none;
 }
@@ -642,27 +631,27 @@ input[type="submit"] {
   display: inline-block;
   *display: inline;
   *zoom: 1;
+  line-height: 1.4;
   *overflow: visible;
   text-align: center;
-  padding: 0.3em;
+  padding: 0.6em;
   cursor: pointer;
   -webkit-appearance: none;
-  border: 1px solid #999;
+  border: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
   -webkit-background-clip: padding-box;   
   background-clip: padding-box;
-  background-color: #dbdbdb;
+  color: #fff;
+  background-color: #3399ff; /* cyan */
 }
 /* fake button */
 .btn,
-.btn:active,
-.btn:hover,
-.btn:focus {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+.btn:hover {
+  color: #fff;
+}
+.btn:hover {
   text-decoration: none;
-  color: #222;
 }
 button:hover,
 .btn:hover,
@@ -681,28 +670,16 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  border-color: #666;
-  background-color: #d1d1d1;
-}
-button:active,
-.btn:active,
-input[type="button"]:active, 
-input[type="reset"]:active,
-input[type="submit"]:active {
-  background-color: #c1c1c1;
-  border-color: #666;
-  outline: 0 none;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 
-                      0 1px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 
-                      0 1px 2px rgba(0, 0, 0, 0.15);
+  background-color: #0075ea; /* dark blue */
 }
 select {
   text-transform: none;
   -webkit-appearance: none;
+  /* use a custom dropdown image */
   background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkU0NjlCN0ZBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkU0NjlCODBBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRTQ2OUI3REExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRTQ2OUI3RUExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pnd57P8AAAD/SURBVHjarFIxioRAEOxeD08DxcALRQM10tBNxMDAUPyAHzAVQ59hargfMTwDM/EJomBmcBj07SwIy7J3a7ANBTVMU101PUhE8K762EnbtlTXNUzT9M3z/M9907Ztn7Isn/M8B9d18aWYoijQ9z0Mw3CWJAl2x4gI4zhCmqZgmua/zk470XUdiqIAy7KA4zgQRfEGVmEYQlmW7IyHxK7RMIoiMAyDxbqPCLZtXzRNw5ePxuLco2ka8jxvujokhiRJaJ5neux7htOjeBAE6Pv+F+OCIECWZaCqKh5a57MJ67qS4zgUxzEty3LI1W1hf11UVUVd1x0WYsB3ftpfAQYAXo7XO6GWzfUAAAAASUVORK5CYII=) no-repeat right center;
 }
-/* FF 2+ hack */
+/* FF 2+ hack 
+ * hide dropdown image */
 select, x:-moz-any-link {
   background-image: none;
 }
@@ -710,13 +687,16 @@ select[size],
 select[multiple] { 
   height: auto;
 }
+optgroup {
+  font-style: normal;
+}
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 textarea {
   height: auto;
-  min-height: 2.5em; /* 40px */
+  min-height: 2.8em;
   overflow: auto;
   vertical-align: top;
   resize: vertical;
@@ -738,6 +718,10 @@ input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #888;
 }
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #888;
+}
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #888;
@@ -752,7 +736,11 @@ button[disabled],
 input[disabled], 
 
 select[disabled], 
-textarea[disabled],
+textarea[disabled] {
+  opacity: 0.5;
+  cursor: default;
+  cursor: not-allowed;
+}
 
 button[disabled]:hover,
 .btn.disabled:hover,
@@ -762,20 +750,8 @@ input[disabled]:hover,
 button[disabled]:focus,
 .btn.disabled:focus,
 .btn[disabled]:focus,
-input[disabled]:focus,
-
-button[disabled]:active,
-.btn.disabled:active,
-.btn[disabled]:active,
-input[disabled]:active {
-  opacity: 0.5;
-  cursor: default;
-  cursor: not-allowed;
-  border-color: #999;
-  background-color: #efefef;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+input[disabled]:focus {
+  background-color: #3399ff;
 }
 
 
@@ -790,7 +766,6 @@ table {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.4em;
 } 
 thead th {
   vertical-align: bottom;
@@ -815,7 +790,6 @@ th {
 .table-overflow-container { 
   overflow-x: auto;
   *overflow-x: scroll;
-  margin-bottom: 1.4em;
 }
 /* force and customize webkit scrollbars appearance */
 .table-overflow-container.scrollbar {
@@ -835,7 +809,6 @@ th {
   background-color: #f0f0f0; 
 }
 .table-overflow-container table {
-  margin-bottom: 0;
   width: 100%;
 }
 /* 
@@ -1410,8 +1383,33 @@ samp {
 */
 
 /* vertical rhythm --------------------------------------------------------
-body {
-  margin-top: ;
+body,
+hr {
+  margin-top: 1.4em;
+}
+.tera,
+.giga,
+.gamma,
+h1,
+.h1, 
+h2, 
+.h2,
+h3, 
+.h3,
+h4,
+.h4,
+h5,
+.h5, 
+h6,
+.h6,
+p,
+pre,
+menu, 
+ol,
+ul,
+dl,
+blockquote {
+  margin-top: 0;
 }
 p,
 pre,
@@ -1431,9 +1429,10 @@ figcaption,
 audio,
 video,
 .flex-video-container,
+address,
 table,
 .table-overflow-container {
-  margin-bottom: ;
+  margin-bottom: 1.4em;
 }
 */
 

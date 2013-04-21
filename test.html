@@ -20,7 +20,6 @@
   h3 { background-color: #eaeaea; }
   .headings h3 { background-color: transparent; padding: 0; }   
   /* styles for clickable inpunts and buttons */
-  button, .btn, input[type="button"], input[type="reset"], input[type="submit"] { margin-bottom: 4px; }
 </style>
   
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -435,21 +434,21 @@ http:// Get a reference to the element.
 
   <h3>Clickable inputs</h3>
   <fieldset>
-    <input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image">
-    <input type="reset" value="Reset (input)">
-    <input type="button" value="Button (input)">
-    <input type="submit" value="Submit (input)">
-    <a class="btn" href="#" title="button link">Button (link)</a>
-    <input disabled type="submit" value="Disabled (input)">
+    <div><input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image"></div>
+    <div><input type="reset" value="Reset (input)"></div>
+    <div><input type="button" value="Button (input)"></div>
+    <div><input type="submit" value="Submit (input)"></div>
+    <div><a class="btn" href="#" title="button link">Button (link)</a></div>
+    <div><input disabled type="submit" value="Disabled (input)"></div>
   </fieldset>
 
 
   <h3>Buttons</h3>
   <fieldset>
-    <button type="reset">Reset (button)</button>
-    <button type="button">Button (button)</button>
-    <button type="submit">Submit (button)</button>
-    <button disabled type="submit">Disabled (button)</button>
+    <div><button type="reset">Reset (button)</button></div>
+    <div><button type="button">Button (button)</button></div>
+    <div><button type="submit">Submit (button)</button></div>
+    <div><button disabled type="submit">Disabled (button)</button></div>
   </fieldset>
 
 </form>

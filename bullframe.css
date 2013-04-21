@@ -462,6 +462,7 @@ input,
 textarea {
   *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
+input[type="file"],
 input[type="image"],
 input[type="submit"],
 input[type="reset"],
@@ -724,25 +725,37 @@ textarea:placeholder {
   color: #888;
 }
 button[disabled],
-.btn[disabled],
 .btn.disabled,
-input[disabled], 
-
-select[disabled], 
-textarea[disabled] {
-  opacity: 0.5;
-  cursor: default;
-  cursor: not-allowed;
-}
+input[disabled],
+select[disabled],
+textarea[disabled],
+button[readonly],
+.btn.readonly
+input[readonly],
+select[readonly],
+textarea[readonly],
+fieldset[disabled] button,
+fieldset[disabled] .btn,
+fieldset[disabled] input,
+fieldset[disabled] select,
+fieldset[disabled] textarea,
 button[disabled]:hover,
 .btn.disabled:hover,
-.btn[disabled]:hover,
 input[disabled]:hover,
 button[disabled]:focus,
 .btn.disabled:focus,
 .btn[disabled]:focus,
 input[disabled]:focus {
-  background-color: #1467ff;
+  cursor: default;
+  background-color: #e2e2e2; /* light grey */
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly],
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+  background-color: transparent;
 }
 
 

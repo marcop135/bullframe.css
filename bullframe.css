@@ -14,7 +14,7 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 body {
-  /* 20px + 940px + 20px = 980px */
+  /* 20px + 940px + 20px = 1000px */
   max-width: 940px; 
   padding-left: 20px;
   padding-right: 20px;
@@ -63,7 +63,6 @@ html {
 body { 
   font-size: 1em;
   line-height: 1.4;
-  margin-top: 1.4em;
 }
 .tera,
 .giga,
@@ -146,7 +145,7 @@ abbr[title] {
 }
 blockquote { 
   margin: 0 0 1.4em 0;
-  padding-left: 1.25em;
+  padding-left: 1.4em;
   border-left: 2px solid #ccc;
 }
 q {
@@ -221,8 +220,6 @@ small {
 }
 address {
   display: block;
-  margin-bottom: 1.4em;
-  line-height: 1.4;
   font-style: normal;
 }
 hr {
@@ -400,12 +397,6 @@ svg:not(:root) {
 .map_canvas embed,
 .map_canvas object {
   max-width: none !important; 
-}
-/* override the Facebook comments embed fixed width */
-.fb-comments, 
-.fb-comments span, 
-.fb-comments iframe {
-  width: 100% !important;
 }
 /* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
@@ -645,7 +636,7 @@ input[type="submit"] {
   -webkit-background-clip: padding-box;   
   background-clip: padding-box;
   color: #fff;
-  background-color: #3399ff; /* cyan */
+  background-color: #1467ff; /* cyan */
 }
 /* fake button */
 .btn,
@@ -672,7 +663,7 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  background-color: #0075ea; /* dark blue */
+  background-color: #0048cc; /* dark blue */
 }
 select {
   text-transform: none;
@@ -743,17 +734,15 @@ textarea[disabled] {
   cursor: default;
   cursor: not-allowed;
 }
-
 button[disabled]:hover,
 .btn.disabled:hover,
 .btn[disabled]:hover,
 input[disabled]:hover,
-
 button[disabled]:focus,
 .btn.disabled:focus,
 .btn[disabled]:focus,
 input[disabled]:focus {
-  background-color: #3399ff;
+  background-color: #1467ff;
 }
 
 
@@ -1089,46 +1078,39 @@ opera-only :-o-prefocus,
   -ms-hyphens: auto;
   hyphens: auto;
 }
-.no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
 
 /* $ Wordpress Core CSS (relative units)
  * http://codex.wordpress.org/CSS ------------------------------------------ */
 .alignnone {
-  margin: 0.5em 1.4em 1.4em 0;
+  margin: 0.7em 1.4em 1.4em 0;
 }
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 0.5em auto;
+  margin: 0.7em auto;
 }
 .alignright {
-  float:right;
-  margin: 0.5em 0 1.4em 1.4em;
+  float: right;
+  margin: 0.7em 0 1.4em 1.4em;
 }
 .alignleft {
   float: left;
-  margin: 0.5em 1.4em 1.4em 0;
+  margin: 0.7em 1.4em 1.4em 0;
 }
 .aligncenter {
   display: block;
-  margin: 0.5em auto;
+  margin: 0.7em auto;
 }
 a img.alignright {
   float: right;
-  margin: 0.5em 0 1.4em 1.4em;
+  margin: 0.7em 0 1.4em 1.4em;
 }
 a img.alignnone {
-  margin: 0.5em 1.4em 1.4em 0;
+  margin: 0.7em 1.4em 1.4em 0;
 }
 a img.alignleft {
   float: left;
-  margin: 0.5em 1.4em 1.4em 0;
+  margin: 0.7em 1.4em 1.4em 0;
 }
 a img.aligncenter {
   display: block;
@@ -1139,29 +1121,25 @@ a img.aligncenter {
   background: #f4f4f4;
   border: 1px solid #ccc;
   max-width: 96%; /* Image does not overflow the content area */
-  padding: 0.5em 0.5em 0.75em;
+  padding: 0.7em 0.7em 0.7em;
   text-align: center;
 }
 .wp-caption.alignnone {
-  margin: 0.5em 1.4em 1.4em 0;
+  margin: 0.7em 1.4em 1.4em 0;
 }
 .wp-caption.alignleft {
-  margin: 0.5em 1.4em 1.4em 0;
+  margin: 0.7em 1.4em 1.4em 0;
 }
 .wp-caption.alignright {
-  margin: 0.5em 0 1.4em 1.4em;
+  margin: 0.7em 0 1.4em 1.4em;
 }
 .wp-caption img {
-  border: 0 none;
-  height: auto;
   margin: 0;
   max-width: 98.5%;
-  padding: 0;
-  width: auto;
 }
 .wp-caption p.wp-caption-text {
-  font-size: 0.75em;
-  margin: 0.75em 0 0 0;
+  font-size: 0.875em;
+  margin: 0.7em 0 0 0;
   padding: 0;
 }
 
@@ -1384,11 +1362,8 @@ samp {
 }
 */
 
-/* vertical rhythm --------------------------------------------------------
-body,
-hr {
-  margin-top: 1.4em;
-}
+/* compose to a vertical rhythm ----------------------------------------------
+ * in use: 1.4em, 16px * 1.4 = 22.4px), customize as you want! 
 .tera,
 .giga,
 .gamma,
@@ -1413,6 +1388,21 @@ dl,
 blockquote {
   margin-top: 0;
 }
+.flex-video-container video,
+.table-overflow-container table,
+ol ul,
+ul ul,
+ol ol,
+ul ol {
+  margin-bottom: 0;
+}
+body,
+hr {
+  margin-top: 1.4em;
+}
+figure img + figcaption {
+  margin-top: -1.4em;
+}
 p,
 pre,
 menu, 
@@ -1433,19 +1423,41 @@ button,
 .btn,
 input, 
 select, 
-textarea {
+textarea,
+.img-left,
+.img-right,
+.alignnone,
+.alignright,
+.alignleft,
+a img.alignright,
+a img.alignnone,
+a img.alignleft,
+a img.aligncenter,
+.wp-caption.alignnone,
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.chromeframe {
   margin-bottom: 1.4em;
 }
-.flex-video-container video,
-.table-overflow-container table,
-ol ul,
-ul ul,
-ol ol,
-ul ol {
-  margin-bottom: 0;
+ul,
+ol,
+blockquote {
+  padding-left: 1.4em;
 }
-figure img + figcaption {
-  margin-top: -1.4em;
+.img-left,
+.alignright,
+a img.alignright,
+.wp-caption.alignright {
+  margin-left: 1.4em;
+}
+.img-right,
+.alignnone,
+.alignleft,
+a img.alignnone,
+a img.alignleft,
+.wp-caption.alignnone,
+.wp-caption.alignleft {
+  margin-right: 1.4em;
 }
 */
 
@@ -1483,26 +1495,8 @@ button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-  padding: ;
-  color: ;
-  border: ;
-  background: ;
+  background-color: ;
 }
-.btn,
-.btn:active,
-.btn:hover,
-.btn:focus {
-  padding: ;
-}
-*/
-/* linear gradient in IE9+ (note the '\9' at the end)
-button:nth-of-type(1n),
-.btn:nth-of-type(1n),
-input[type="button"]:nth-of-type(1n), 
-input[type="reset"]:nth-of-type(1n) {
-  background: url(data:image/svg+xml;base64.....)\9;
-} */
-/*
 button:hover,
 .btn:hover,
 input[type="button"]:hover, 
@@ -1513,19 +1507,24 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  color: ;
-  border: ;
-  background-color: ;
-}
-button:active,
-.btn:active,
-input[type="button"]:active, 
-input[type="reset"]:active {
-  color: ;
-  border: ;
   background-color: ;
 }
 */
+/* linear gradient in IE9+ (note the '\9' at the end)
+button:nth-of-type(1n),
+.btn:nth-of-type(1n),
+input[type="button"]:nth-of-type(1n), 
+input[type="reset"]:nth-of-type(1n) {
+  background: url(data:image/svg+xml;base64.....)\9;
+} */
+
+/* misc ----------------------------------------------------------------- */
+/* override the Facebook comments embed fixed width
+.fb-comments, 
+.fb-comments span, 
+.fb-comments iframe {
+  width: 100% !important;
+} */
 
 
 
@@ -1596,7 +1595,7 @@ p { *color: red; } */
 
 /* IE9+
 p:nth-of-type(1n) {
- p { color: blue\9; }
+ p { color: blue\9; } */ /* (note the '\9' at the end)
 */
 
 /* Webkit (Safari, Android, Chrome, ecc...)

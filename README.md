@@ -17,7 +17,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 </ul>
 <ul>
   <li>Flexible and rich typography</li>
-  <li>Flexible images and media (video, audio, iframe, embed, FB comments, Twitter embeds)</li>
+  <li>Flexible images and media (video, audio, iframe, embed)</li>
   <li>Flexible, cross-browser HTML5 forms</li>
   <li>Flexible tables</li>
   <li>Several helper classes (like '.clearfix' or '.hide-text')</li>

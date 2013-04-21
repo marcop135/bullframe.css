@@ -724,30 +724,32 @@ input:placeholder,
 textarea:placeholder {
   color: #888;
 }
-button[disabled],
-.btn.disabled,
-input[disabled],
-select[disabled],
-textarea[disabled],
 button[readonly],
-.btn.readonly
 input[readonly],
 select[readonly],
 textarea[readonly],
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled],
 fieldset[disabled] button,
 fieldset[disabled] .btn,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
 button[disabled]:hover,
-.btn.disabled:hover,
-input[disabled]:hover,
 button[disabled]:focus,
-.btn.disabled:focus,
-.btn[disabled]:focus,
+input[disabled]:hover,
 input[disabled]:focus {
   cursor: default;
-  background-color: #e2e2e2; /* light grey */
+  background-color: #eee; /* very light grey */
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: default;
+  filter: opacity(opacity=65);
+  opacity: 0.65;
 }
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],

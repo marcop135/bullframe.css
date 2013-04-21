@@ -10,85 +10,20 @@
 <meta content="https://github.com/marco135/bullframe.css/" name="description">
   
 <link href="bullframe.css" rel="stylesheet">
-<style> 
-/* Add vertical rhythm 
-  * Note: '!important' overrides bullframe styles that jsbin 
-  * moves below by default. You don't need this trick in 
-  * your pages.
-  */
-body,
-hr {
-  margin-top: 1.4em !important;
-}
-.tera,
-.giga,
-.gamma,
-h1,
-.h1, 
-h2, 
-.h2,
-h3, 
-.h3,
-h4,
-.h4,
-h5,
-.h5, 
-h6,
-.h6,
-pre,
-menu, 
-ol,
-ul,
-dl,
-blockquote {
-  margin-top: 0 !important;
-}
-p,
-pre,
-menu, 
-ol,
-ul,
-dl,
-blockquote,
-hr,
-figure img,
-figcaption,
-address, 
-audio,
-video,
-.flex-video-container,
-table,
-.table-overflow-container,
-button, 
-.btn,
-input, 
-select, 
-textarea {
-  margin-bottom: 1.4em !important;
-}
-.flex-video-container video,
-.table-overflow-container table,
-ol ul,
-ul ul,
-ol ol,
-ul ol {
-  margin-bottom: 0 !important;
-}
-figure img + figcaption {
-  margin-top: -1.4em !important;
-}
-  
-/* styles for header, section titles and footer */
-[role="banner"],
-.download { color: #fff; padding: 1em !important; margin: 0 0 2.8em 0; background-color: #ff8051; }
-.download { margin-top: 2.8em; }
-.title, h3 { padding: .5em; }
-.title { color: #fff !important; background: #777; }
-h3 { background: #eaeaea; }
-.headings h3 { background-color: transparent; padding: 0; color: #222 !important; }   
+<style>  
+  /* styles for header, section titles and footer */
+  [role="banner"], .download { color: #fff; padding: 1em; margin-bottom: 2.8em; background-color: #ff8051; }
+  [role="banner"] .mega, .download .mega { margin-top: 0; }
+  .download { margin: 2.8em 0 1.4em 0; }
+  .title, h3 { padding: .3em; }
+  .title { color: #fff; background-color: #777; }
+  h3 { background-color: #eaeaea; }
+  .headings h3 { background-color: transparent; padding: 0; }   
+  /* styles for clickable inpunts and buttons */
+  button, .btn, input[type="button"], input[type="reset"], input[type="submit"] { margin-bottom: 4px; }
 </style>
   
-<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 </head>
 
 <body> 
@@ -164,14 +99,14 @@ The <ins>ins element</ins> example<br>
 The <kbd>kbd element</kbd> example<br>
 The <mark>mark element</mark> example<br>
 The <q>q element <q>inside</q> a q element</q> example<br>
-The <span style="text-decoration: line-through">s element</span> example<br>
+The <s>s element</s> example<br>
 The <samp>samp element</samp> example<br>
 The <small>small element</small> example<br>
 The <span>span element</span> example<br>
 The <strong>strong element</strong> example<br>
 The <sub>sub element</sub> example<br>
 The <sup>sup element</sup> example<br>
-The <span style="text-decoration: underline">u element</span> example<br>
+The <u>u element</u> example<br>
 The <var>var element</var> example</p>
 
 
@@ -311,18 +246,18 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 <canvas height="100" id="myCanvas" width="300">Fallback
 content, in case the browser does not support Canvas.</canvas> 
 <script>
-// Get a reference to the element.
+http:// Get a reference to the element.
   var elem = document.getElementById('myCanvas');
-  // Always check for properties and methods, to make sure your code doesn't break 
-  // in other browsers.
+  http:// Always check for properties and methods, to make sure your code doesn't break 
+  http:// in other browsers.
   if (elem && elem.getContext) {
-  // Get the 2d context.
-  // Remember: you can only initialize one context per element.
+  http:// Get the 2d context.
+  http:// Remember: you can only initialize one context per element.
   var context = elem.getContext('2d');
   if (context) {
-  // You are done! Now you can draw your first rectangle.
-  // You only need to provide the (x,y) coordinates, followed by the width and 
-  // height dimensions.
+  http:// You are done! Now you can draw your first rectangle.
+  http:// You only need to provide the (x,y) coordinates, followed by the width and 
+  http:// height dimensions.
   context.fillRect(0, 0, 250, 100);
   }
 }
@@ -378,23 +313,6 @@ content, in case the browser does not support Canvas.</canvas>
 <div class="flex-video-container widescreen vimeo">
   <iframe src="http://player.vimeo.com/video/27243869?color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </div>
-
-
-<h3>Facebook comments</h3>
-<div id="fb-root"></div>
-<div class="fb-comments" data-href="http://example.com" data-num-posts="1"
-data-width="470"></div>
-
-
-<h3>Twitter embed</h3>
-<blockquote class="twitter-tweet" lang="it">
-  <p>Four more years. <a href="http://t.co/bAJE6Vom" title=
-  "http://twitter.com/BarackObama/status/266031293945503744/photo/1">twitter.com/BarackObama/st…</a></p>—
-  Barack Obama (@BarackObama) <a href=
-  "https://twitter.com/BarackObama/status/266031293945503744">Novembre 7,
-  2012</a>
-</blockquote>
-
 
 
 <h2 id="forms" class="title">HTML5 Forms</h2>
@@ -517,21 +435,21 @@ data-width="470"></div>
 
   <h3>Clickable inputs</h3>
   <fieldset>
-    <div><input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image"></div>
-    <div><input type="reset" value="Reset (input)"></div>
-    <div><input type="button" value="Button (input)"></div>
-    <div><input type="submit" value="Submit (input)"></div>
-    <div><a class="btn" href="#" title="button link">Button (link)</a></div>
-    <div><input disabled type="submit" value="Disabled (input)"></div>
+    <input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image">
+    <input type="reset" value="Reset (input)">
+    <input type="button" value="Button (input)">
+    <input type="submit" value="Submit (input)">
+    <a class="btn" href="#" title="button link">Button (link)</a>
+    <input disabled type="submit" value="Disabled (input)">
   </fieldset>
 
 
   <h3>Buttons</h3>
   <fieldset>
-    <div><button type="reset">Reset (button)</button></div>
-    <div><button type="button">Button (button)</button></div>
-    <div><button type="submit">Submit (button)</button></div>
-    <div><button disabled type="submit">Disabled (button)</button></div>
+    <button type="reset">Reset (button)</button>
+    <button type="button">Button (button)</button>
+    <button type="submit">Submit (button)</button>
+    <button disabled type="submit">Disabled (button)</button>
   </fieldset>
 
 </form>
@@ -671,23 +589,5 @@ data-width="470"></div>
   
  
 
-
-<!-- social scripts https://gist.github.com/necolas/1025811 -->
-<script>
-(function(d, u) {
-    var s = d.scripts[0],
-        i = u.length, g;
-    while (i--) {
-        g = d.createElement('script');
-        g.src = '//' + u[i] + '.js';
-        s.parentNode.insertBefore(g, s);
-    }
-}(document, [
-    // Facebook SDK
-    '//connect.facebook.net/it_IT/all.js#xfbml=1&appId=200093550120274',
-    // Twitter SDK
- '//platform.twitter.com/widgets'
-]));
-</script>
 </body>
 </html>

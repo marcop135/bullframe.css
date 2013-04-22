@@ -16,6 +16,7 @@ html {
 body {
   /* 20px + 940px + 20px = 1000px */
   max-width: 940px; 
+  *width: 940px; /* fixed width in IE7 */
   padding-left: 20px;
   padding-right: 20px;
   margin: auto; /* center */
@@ -335,15 +336,15 @@ img,
 video {
   height: auto !important;
 }
+/* just in case, to force correct aspet ratio 
+ * if necessary, override this rule with 'max-height: XXXpx'  
+ */
 img {
   width: auto;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-/* just in case, to force correct aspet ratio 
- * if necessary, override this rule with 'max-height: XXXpx'  
- */
 audio:not([controls]) { 
   display: none;
   height: 0;
@@ -438,29 +439,26 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 legend { 
   display: table; /* enable line-wrapping in IE8+ */
   white-space: normal; /* enable line-wrapping in FF4/5 */
   border: 0;
   padding: 0;
-  /* IE7: fix margin-left bug and force to line-wrapping using 'overflow' */
   *margin-left: -7px;
-  *overflow-x: auto; 
-  *min-height: 2.8em;
 }
 label { 
   cursor: pointer;
+  display: block;
 }
 input, 
 select, 
 textarea {
   width: 100%;
   max-width: 100%;
-}
-input, 
-textarea {
   *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  display: inline-block;
 }
 input[type="file"],
 input[type="image"],
@@ -470,22 +468,6 @@ input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
-}
-input[type="color"], 
-input[type="email"], 
-input[type="file"],
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="file"], 
-input[type="search"],
-input[type="text"], 
-input[type="range"], 
-input[type="time"], 
-input[type="url"], 
-select, 
-textarea {
-  display: block;
 }
 button, 
 .btn,
@@ -581,7 +563,7 @@ select,
 textarea {
   padding: 0.3em;
   *padding-left: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
-  *padding-right: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 1.25%;
 }
 textarea {
   *padding-top: 1.25%;
@@ -681,12 +663,12 @@ select[size],
 select[multiple] { 
   height: auto;
 }
-optgroup {
-  font-style: normal;
-}
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+optgroup {
+  font-style: normal;
 }
 textarea {
   height: auto;
@@ -729,6 +711,8 @@ input[readonly],
 select[readonly],
 textarea[readonly],
 button[disabled],
+.btn[disabled],
+.btn.disabled,
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -737,18 +721,17 @@ fieldset[disabled] .btn,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
+.btn[disabled]:hover,
 button[disabled]:hover,
-button[disabled]:focus,
 input[disabled]:hover,
+.btn[disabled]:focus,
+button[disabled]:focus,
 input[disabled]:focus {
   cursor: default;
-  background-color: #eee; /* very light grey */
-}
-.btn.disabled,
-.btn[disabled],
-fieldset[disabled] .btn {
-  cursor: default;
-  filter: opacity(opacity=65);
+  cursor: not-allowed;
+  background-color: #e2e2e2; /* very light grey */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=65)";
+  filter: alpha(opacity=65); /* for IE6-IE8 */
   opacity: 0.65;
 }
 input[type="radio"][disabled],
@@ -832,14 +815,25 @@ th {
 
 
 
-
-/* $ Fluid grid system (12 columns)
+/* $ Fluid grid system (12 columns in %) 
+ * demo http://jsbin.com/fluidgridsystem/2/quiet
 ============================================================================ */
 
+/*
+ * body as main wrapper:
+  body {
+    max-width: 940px;
+    *width: 940px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+ } 
+ */
 .row {
-  width: 100%;
   display: block;
+  margin-bottom: 1.4em;
   *zoom: 1;
+  *width: 940px;
 }
 .row:before,
 .row:after {
@@ -849,76 +843,109 @@ th {
 .row:after {
   clear: both;
 }
+/* fix sub-pixel rendering issue in IE7 serving fixed widths
+ * http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+ */ 
 [class^="col-"] {
   float: left;
+  position: relative;
   min-height: 1;
+  margin-left: 2%;
+  *margin-left: 20px;
+}
+[class^="col-"]:first-child {
+  margin-left: 0;
 }
 .col-1 {
-  display: block;
+  width: 100%;
 }
 .col-1-2 {
-  width: 50%;
+  width: 49%;
+  *width: 460px;
 }
 .col-1-3 {
-  width: 33.33333%;
+  width: 32%;
+  *width: 300px;
 }
 .col-2-3 {
-  width: 66.66666%;
-}
+  width: 66%;
+  *width: 620px;
+} 
 .col-1-4 {
-  width: 25%;
+  width: 23.5%;
+  *width: 220px;
 }
 .col-3-4 {
-  width: 75%;
-}
+  width: 74.5%;
+  *width: 700px;
+} 
 .col-1-5 {
-  width: 20%;
+  width: 18.4%;
+  *width: 172px;
 }
 .col-2-5 {
-  width: 40%;
+  width: 38.8%;
+  *width: 364px;
 }
 .col-3-5 {
-  width: 60%;
+  width: 59.2%;
+  *width: 556px;
 }
 .col-4-5 {
-  width: 80%;
+  width: 79.6%;
+  *width: 748px;
 }
 .col-1-6 {
-  width: 16.656%;
+  width: 15%;
+  *width: 140px;
 }
 .col-5-6 {
-  width: 83.33%;
+  width: 83%;
+  *width: 780px;
 }
 .col-1-8 {
-  width: 12.5%;
+  width: 10.75%;
+  *width: 100px;
 }
 .col-3-8 {
-  width: 37.5%;
+  width: 36.25%;
+  *width: 340px;
 }
 .col-5-8 {
-  width: 62.5%;
+  width: 61.75%;
+  *width: 580px;
 }
 .col-7-8 {
-  width: 87.5%;
+  width: 87.25%;
+  *width: 820px;
 }
 .col-1-12 {
-  width: 8.3333%;
+  width: 6.5%;
+  *width: 60px;
 }
 .col-5-12 {
-  width: 41.6666%;
+  width: 40.5%;
+  *width: 380px;
 }
 .col-7-12 {
-  width: 58.3333%;
+  width: 57.5%;
+  *width: 540px;
 }
 .col-11-12 {
-  width: 91.6666%;
+  width: 91.5%;
+  *width: 860px;
 }
-/* responsive */
-@media only screen and (max-width: 767px) { 
-  .row.responsive [class^="col-"] {
+/* responsive grid */
+@media screen and (max-width: 40em) { /* 640px */
+  .responsive-grid .row {
+    margin-bottom: 0;
+  }
+  .responsive-grid [class^="col-"] {
     width: 100%;
     float: none;
-  }
+    margin-left: 0;
+    margin-bottom: 1.4em;
+  } 
 }
 
 
@@ -954,9 +981,9 @@ th {
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  *text-indent: -9999px; /* IE 7 fallback */
+  *text-indent: -9999px; /* IE7 fallback */
 }
-.img-r:before
+.img-r:before,
 .ir:before {
   content: "";
   display: block;
@@ -1004,7 +1031,7 @@ th {
  * The ".opera-only" selector is used to prevent actual prefocus styling
  * and is not required in markup.
 */
-opera-only :-o-prefocus,
+opera-only :-o-prefocus, /* this hack affect also IE7 */
 .inline-block-container {
   word-spacing: -0.43em;
 }
@@ -1291,6 +1318,7 @@ a img.aligncenter {
 /* body --------------------------------------------------------------------
 body {
   max-width: ;
+  *width: ;
   margin: ;
   padding: ;
   position: ;
@@ -1439,6 +1467,7 @@ button,
 input, 
 select, 
 textarea,
+.row,
 .img-left,
 .img-right,
 .alignnone,
@@ -1453,6 +1482,11 @@ a img.aligncenter,
 .wp-caption.alignright,
 .chromeframe {
   margin-bottom: 1.4em;
+}
+@media screen and (max-width: 40em) { 
+  .responsive-grid [class^="col-"] {
+    margin-bottom: 1.4em;
+  } 
 }
 ul,
 ol,
@@ -1556,24 +1590,8 @@ input[type="reset"]:nth-of-type(1n) {
 @media only screen and (min-width: 480px) { } 
 */
 
-/* 640px
-@media only screen and (min-width: 640px) { } 
-*/
-
 /* 767px 
 @media only screen and (min-width: 767px) { } 
-*/
-
-/* 768px 
-@media only screen and (min-width: 768px) { } 
-*/
-
-/* 800px 
-@media only screen and (min-width: 800px) { } 
-*/
-
-/* 960px 
-@media only screen and (min-width: 960px) { } 
 */
 
 /* 979px 

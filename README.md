@@ -39,7 +39,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/22/edit"
 &lt;head>
 ...
 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-<mark>&lt;link rel="stylesheet" src="bullframe.min.css"></mark>
+&lt;link rel="stylesheet" src="bullframe.min.css">
 &lt;link rel="stylesheet" src="your-styles.css">
 ...
 ...</code></pre>
@@ -70,7 +70,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/22/edit"
   <li>Opera 10+ (responsive tables trick not working in v10-11)</li>
 </ul>
 <ul>
-  <li>Latest Mobile Safari</li>
+  <li>Mobile Safari 5+</li>
   <li>Android browser 2.3+</li>
   <li>Latest Opera Mobile (responsive tables trick not working)</li>
   <li>Opera Mini (mark element is buggy and responsive videos and tables trick not working)</li>

@@ -332,15 +332,15 @@ object,
 embed {
   max-width: 100%;
 }
-img,
-video {
-  height: auto !important;
-}
 /* just in case, to force correct aspet ratio 
  * if necessary, override this rule with 'max-height: XXXpx'  
  */
-img {
+img,
+video {
+  height: auto !important;
   width: auto;
+}
+img {
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -460,7 +460,6 @@ textarea {
   *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
   display: inline-block;
 }
-input[type="file"],
 input[type="image"],
 input[type="submit"],
 input[type="reset"],
@@ -572,6 +571,8 @@ textarea {
 input[type="file"] {
   cursor: pointer;
   padding: 0.3em 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 input[type="radio"], 
 input[type="checkbox"] {
@@ -729,10 +730,10 @@ button[disabled]:focus,
 input[disabled]:focus {
   cursor: default;
   cursor: not-allowed;
-  background-color: #e2e2e2; /* very light grey */
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=65)";
-  filter: alpha(opacity=65); /* for IE6-IE8 */
-  opacity: 0.65;
+  background-color: #eaeaea; /* very light grey */
+  border-color: #ccc;
+  color: #888;
+  opacity: 1;
 }
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],

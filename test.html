@@ -242,28 +242,6 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 </figure>
 
 
-<h3>Canvas</h3>
-<canvas height="100" id="myCanvas" width="300">Fallback
-content, in case the browser does not support Canvas.</canvas> 
-<script>
-http:// Get a reference to the element.
-  var elem = document.getElementById('myCanvas');
-  http:// Always check for properties and methods, to make sure your code doesn't break 
-  http:// in other browsers.
-  if (elem && elem.getContext) {
-  http:// Get the 2d context.
-  http:// Remember: you can only initialize one context per element.
-  var context = elem.getContext('2d');
-  if (context) {
-  http:// You are done! Now you can draw your first rectangle.
-  http:// You only need to provide the (x,y) coordinates, followed by the width and 
-  http:// height dimensions.
-  context.fillRect(0, 0, 250, 100);
-  }
-}
-</script>
-
-
 <h3>SVG</h3>
 <svg width="200px" height="200px">
   <circle cx="200" cy="200" r="200" fill="#ff0000" />
@@ -333,11 +311,6 @@ http:// Get a reference to the element.
   <fieldset>
     <legend>Inputs as siblings of labels</legend>
 
-    <div><label>Radio input</label>
-    <input name="rad" type="radio"></div>
-
-    <div><label>Checkbox input</label>
-    <input type="checkbox"></div>
 
     <div><label>Text input</label>
     <input type="text" value="default value that goes on and on without stopping or punctuation"></div>
@@ -385,10 +358,10 @@ http:// Get a reference to the element.
     <input type="file"></div>
   </fieldset>
 
-
+  
 
   <h3>Selects</h3>
-  <fieldset >
+  <fieldset>
     <div>
       <label for="s">Select field</label> 
       <select id="s">
@@ -443,7 +416,12 @@ http:// Get a reference to the element.
     <label>Textarea placeholder<textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
   </fieldset>
 
-
+ <h3>Textareas (disabled)</h3>
+  <fieldset disabled>
+    <label>Textarea<textarea cols="30" rows="5">Textarea text</textarea></label>
+    <label>Textarea placeholder<textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
+  </fieldset>
+  
   <h3>Clickable inputs</h3>
   <fieldset>
     <div><input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image"></div>
@@ -953,7 +931,7 @@ http:// Get a reference to the element.
       <div class="container">1-12
       </div><!-- /.container -->
     </div><!-- /col -->
-      
+        
   </div><!-- /row --> 
       
   <div class="row"> 
@@ -986,7 +964,7 @@ http:// Get a reference to the element.
 
 </div><!-- /.grid-system.responsive-grid -->
 
-
+  
 
   
 <div id="download" class="download">

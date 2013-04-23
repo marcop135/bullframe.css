@@ -25,8 +25,8 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
 <h2>Test it now</h2>
-<p><b><a href="http://jsbin.com/bullframecss/latest/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
-Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/edit" title="bullframe demo page - JSBin">http://jsbin.com/bullframecss/latest/edit</a></p>
+<p><b><a href="http://jsbin.com/bullframecss/22/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b><br>
+Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/22/edit" title="bullframe demo page - JSBin">http://jsbin.com/bullframecss/22/edit</a></p>
 
 
 <h2>How to use it</h2>
@@ -39,7 +39,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
 &lt;head>
 ...
 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-&lt;link rel="stylesheet" src="bullframe.min.css"></mark>
+<mark>&lt;link rel="stylesheet" src="bullframe.min.css"></mark>
 &lt;link rel="stylesheet" src="your-styles.css">
 ...
 ...</code></pre>
@@ -71,7 +71,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
 </ul>
 <ul>
   <li>Latest Mobile Safari</li>
-  <li>Latest Android browser</li>
+  <li>Android browser 2.3+</li>
   <li>Latest Opera Mobile (responsive tables trick not working)</li>
   <li>Opera Mini (mark element is buggy and responsive videos and tables trick not working)</li>
   <li>Internet Explorer 7 Mobile</li>
@@ -79,12 +79,6 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
   <li>Blackberry browser OS 5</li>
   <li>Kindle Touch browser</li>
 </ul>
-<b><i>TODO:</i></b>
-<ul>
-  <li>Mobile Safari iOS 4+</li>
-  <li>IE 8 Mobile</li>
-</ul>
-
 
 <h2>License</h2>
 <p>The MIT License (MIT) - <a href="http://opensource.org/licenses/MIT" title="The MIT License">http://opensource.org/licenses/MIT</a></p>

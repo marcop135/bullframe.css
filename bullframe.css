@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.2.0
+ * BULLFRAME CSS v1.2.1
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -847,14 +847,14 @@ th {
 /* fix sub-pixel rendering issue in IE7 serving fixed widths
  * http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
  */ 
-[class^="col-"] {
+[class*="col-"] {
   float: left;
   position: relative;
   min-height: 1;
   margin-left: 2%;
   *margin-left: 20px;
 }
-[class^="col-"]:first-child {
+[class*="col-"]:first-child {
   margin-left: 0;
 }
 .col-1 {
@@ -941,7 +941,7 @@ th {
   .responsive-grid .row {
     margin-bottom: 0;
   }
-  .responsive-grid [class^="col-"] {
+  .responsive-grid [class*="col-"] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -1485,7 +1485,7 @@ a img.aligncenter,
   margin-bottom: 1.4em;
 }
 @media screen and (max-width: 40em) { 
-  .responsive-grid [class^="col-"] {
+  .responsive-grid [class*="col-"] {
     margin-bottom: 1.4em;
   } 
 }

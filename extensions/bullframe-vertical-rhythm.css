@@ -65,6 +65,9 @@ address,
 audio,
 video,
 .flex-video-container,
+iframe[src*="youtube.com"],
+iframe[src*="vimeo.com"],
+embed[src*="youtube.com"],
 table,
 .table-overflow-container,
 button,
@@ -93,6 +96,12 @@ a img.aligncenter,
   .responsive-grid [class*="col-"] {
     margin-bottom: 1.4em
   }
+}
+
+.flex-video-container iframe[src*="youtube.com"],
+.flex-video-container iframe[src*="vimeo.com"],
+.flex-video-container embed[src*="youtube.com"] {
+  margin-bottom: 0;
 }
 
 ul,

@@ -1409,24 +1409,27 @@ samp {
 
 /* compose to a vertical rhythm ----------------------------------------------
  * in use: 1.4em, 16px * 1.4 = 22.4px), customize as you want! 
+body {
+  padding-top: 1.4em;
+}
 .tera,
 .giga,
 .gamma,
 h1,
-.h1, 
-h2, 
+.h1,
+h2,
 .h2,
-h3, 
+h3,
 .h3,
 h4,
 .h4,
 h5,
-.h5, 
+.h5,
 h6,
 .h6,
 p,
 pre,
-menu, 
+menu,
 ol,
 ul,
 dl,
@@ -1441,16 +1444,15 @@ ol ol,
 ul ol {
   margin-bottom: 0;
 }
-body,
 hr {
   margin-top: 1.4em;
 }
-figure img + figcaption {
+figure img+figcaption {
   margin-top: -1.4em;
 }
 p,
 pre,
-menu, 
+menu,
 ol,
 ul,
 dl,
@@ -1458,7 +1460,7 @@ blockquote,
 hr,
 figure img,
 figcaption,
-address, 
+address,
 audio,
 video,
 .flex-video-container,
@@ -1467,10 +1469,10 @@ iframe[src*="vimeo.com"],
 embed[src*="youtube.com"],
 table,
 .table-overflow-container,
-button, 
+button,
 .btn,
-input, 
-select, 
+input,
+select,
 textarea,
 .row,
 .img-left,
@@ -1488,10 +1490,10 @@ a img.aligncenter,
 .chromeframe {
   margin-bottom: 1.4em;
 }
-@media screen and (max-width: 40em) { 
+@media screen and (max-width:40em) { 
   .responsive-grid [class*="col-"] {
-    margin-bottom: 1.4em;
-  } 
+    margin-bottom: 1.4em
+  }
 }
 .flex-video-container iframe[src*="youtube.com"],
 .flex-video-container iframe[src*="vimeo.com"],

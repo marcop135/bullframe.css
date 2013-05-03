@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.2.1
+ * BULLFRAME CSS v1.2.2
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -450,7 +450,6 @@ legend {
 }
 label { 
   cursor: pointer;
-  display: block;
 }
 input, 
 select, 
@@ -577,7 +576,6 @@ input[type="file"] {
 input[type="radio"], 
 input[type="checkbox"] {
   padding: 0;
-  margin-bottom: 0;
   *width: 13px;
   *height: 13px;
 }
@@ -612,6 +610,7 @@ input[type="submit"] {
   *overflow: visible;
   text-align: center;
   padding: 0.6em;
+  min-width: 5.625em; /* 90px */
   cursor: pointer;
   -webkit-appearance: none;
   border: 0;
@@ -1463,6 +1462,9 @@ address,
 audio,
 video,
 .flex-video-container,
+iframe[src*="youtube.com"],
+iframe[src*="vimeo.com"],
+embed[src*="youtube.com"],
 table,
 .table-overflow-container,
 button, 
@@ -1490,6 +1492,11 @@ a img.aligncenter,
   .responsive-grid [class*="col-"] {
     margin-bottom: 1.4em;
   } 
+}
+.flex-video-container iframe[src*="youtube.com"],
+.flex-video-container iframe[src*="vimeo.com"],
+.flex-video-container embed[src*="youtube.com"] {
+  margin-bottom: 0;
 }
 ul,
 ol,

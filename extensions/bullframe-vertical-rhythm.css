@@ -1,5 +1,5 @@
-/*! BULLFRAME CSS v1.2.2 extension 
- * Follow baseline magic number 1.4em and compose to a vertical rhythm
+/*! BULLFRAME CSS v1.3.0 extension 
+ * Follow baseline number '1.4em' and compose to a vertical rhythm
  *
  * https://github.com/marco135/bullframe.css
  * MIT License
@@ -34,20 +34,11 @@ blockquote {
   margin-top: 0;
 }
 
-.flex-video-container video,
-.table-overflow-container table,
-ol ul,
-ul ul,
-ol ol,
-ul ol {
-  margin-bottom: 0;
-}
-
 hr {
   margin-top: 1.4em;
 }
 
-figure img+figcaption {
+figure img + figcaption {
   margin-top: -1.4em;
 }
 
@@ -98,16 +89,14 @@ a img.aligncenter,
   }
 }
 
+ol ul,
+ul ul,
+ol ol,
+ul ol,
 .flex-video-container iframe[src*="youtube.com"],
 .flex-video-container iframe[src*="vimeo.com"],
 .flex-video-container embed[src*="youtube.com"] {
   margin-bottom: 0;
-}
-
-ul,
-ol,
-blockquote {
-	padding-left: 1.4em;
 }
 
 .img-left,
@@ -125,4 +114,10 @@ a img.alignleft,
 .wp-caption.alignnone,
 .wp-caption.alignleft {
 	margin-right: 1.4em;
+}
+
+ul,
+ol,
+blockquote {
+  padding-left: 1.4em;
 }

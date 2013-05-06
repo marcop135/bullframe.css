@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.2.2
+ * BULLFRAME CSS v1.3.0
  * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
  =========================================================================== */
 
@@ -320,7 +320,7 @@ ol.unstyled ul {
 
 
 
-/* $ Images and media
+/* $ Images and media elements
 ============================================================================ */
 
 img,
@@ -432,6 +432,7 @@ figure {
 /* $ Forms (enter the madness)
 ============================================================================ */
 
+/* major normalization ---------------------------------------------------- */
 form {
   margin: 0;
 }
@@ -439,7 +440,6 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 legend { 
   display: table; /* enable line-wrapping in IE8+ */
@@ -454,26 +454,18 @@ label {
 input, 
 select, 
 textarea {
-  width: 100%;
-  max-width: 100%;
-  *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
   display: inline-block;
+  margin: 0 0 1.4em 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
 }
-input[type="image"],
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
-}
+
+/* normalize texts -------------------------------------------------------- */
 button, 
-.btn,
 input, 
 select, 
-optgroup, /* fix FF issue https://github.com/nathansmith/formalize/issues/41 */
 textarea {
-  color: #222;
+  font-size: 100%;
 }
 button, 
 input, 
@@ -487,46 +479,21 @@ button,
 input, 
 select, 
 textarea {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0 0 1.4em 0;
-  vertical-align: baseline;
-  *vertical-align: middle;
+  color: #222;
 }
-button, 
-input, 
-select, 
-textarea {
-  font-size: 100%;
-}
-/* normalization */
-input[type="color"], 
-input[type="email"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="search"],
-input[type="text"], 
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
-input[type="url"],
+
+/* normalize appearance --------------------------------------------------- */
+button,
+input,
 select,
 textarea {
-  border: 1px solid #999;
   -webkit-border-radius: 0;
           border-radius: 0;
 }
-input[type="image"],
-input[type="checkbox"] {
-  -webkit-border-radius: 0;
-          border-radius: 0;
-}
+button,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"],
 input[type="color"], 
 input[type="email"], 
 input[type="image"], 
@@ -557,27 +524,72 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
+select,
+textarea {
+  border: 1px solid #999;
+}
+
+/* responsiveness ---------------------------------------------------------- */
+input, 
+select, 
+textarea {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+}
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
 select, 
 textarea {
   padding: 0.3em;
   *padding-left: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
   *padding-right: 1.25%;
 }
+input[type="file"] {
+  *width: 100%;
+}
 textarea {
   *padding-top: 1.25%;
   *padding-bottom: 1.25%;
 }
-input[type="file"] {
-  cursor: pointer;
-  padding: 0.3em 0;
-  -webkit-border-radius: 0;
-          border-radius: 0;
-}
+  
+/* radios and checkboxes --------------------------------------------------- */
 input[type="radio"], 
 input[type="checkbox"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
+  *margin-bottom: 0;
   *width: 13px;
   *height: 13px;
+}
+input[type="radio"] {
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
 }
 label input[type="radio"], 
 label input[type="checkbox"] {
@@ -587,9 +599,8 @@ label + input[type="radio"],
 label + input[type="checkbox"] {
   margin-left: 5px;
 }
-html input[type="button"] {
-  -webkit-appearance: button;
-}
+
+/* buttons ----------------------------------------------------------------- */
 button {
   text-transform: none;
 }
@@ -603,37 +614,48 @@ button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   display: inline-block;
   *display: inline;
   *zoom: 1;
   line-height: 1.4;
-  *overflow: visible;
   text-align: center;
   padding: 0.6em;
   min-width: 5.625em; /* 90px */
   cursor: pointer;
-  -webkit-appearance: none;
   border: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
   -webkit-background-clip: padding-box;   
   background-clip: padding-box;
   color: #fff;
   background-color: #1467ff; /* cyan */
+  margin: 0 0 1.4em 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  *overflow: visible;
 }
-/* fake button */
-.btn,
-.btn:hover {
-  color: #fff;
+button,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  *padding-top: 0.45em;
+  *padding-bottom: 0.45em;
 }
-.btn:hover {
-  text-decoration: none;
+.btn {
+  *padding-top: 0.55em;
+  *padding-bottom: 0.55em;
 }
 button:hover,
 .btn:hover,
 input[type="button"]:hover, 
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button:active,
+.btn:active,
+input[type="button"]:active, 
+input[type="reset"]:active,
+input[type="submit"]:active {
   outline: 0 none;
 }
 button:hover,
@@ -648,14 +670,21 @@ input[type="reset"]:focus,
 input[type="submit"]:focus {
   background-color: #0048cc; /* dark blue */
 }
+.btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* selects ----------------------------------------------------------------- */
 select {
   text-transform: none;
   -webkit-appearance: none;
   /* use a custom dropdown image */
   background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkU0NjlCN0ZBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkU0NjlCODBBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRTQ2OUI3REExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRTQ2OUI3RUExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pnd57P8AAAD/SURBVHjarFIxioRAEOxeD08DxcALRQM10tBNxMDAUPyAHzAVQ59hargfMTwDM/EJomBmcBj07SwIy7J3a7ANBTVMU101PUhE8K762EnbtlTXNUzT9M3z/M9907Ztn7Isn/M8B9d18aWYoijQ9z0Mw3CWJAl2x4gI4zhCmqZgmua/zk470XUdiqIAy7KA4zgQRfEGVmEYQlmW7IyHxK7RMIoiMAyDxbqPCLZtXzRNw5ePxuLco2ka8jxvujokhiRJaJ5neux7htOjeBAE6Pv+F+OCIECWZaCqKh5a57MJ67qS4zgUxzEty3LI1W1hf11UVUVd1x0WYsB3ftpfAQYAXo7XO6GWzfUAAAAASUVORK5CYII=) no-repeat right center;
+  background-image: none\9; /* IE7+ */
+  *width: 100%;
 }
-/* FF 2+ hack 
- * hide dropdown image */
+/* FF2+ */
 select, x:-moz-any-link {
   background-image: none;
 }
@@ -670,6 +699,8 @@ optgroup::-moz-focus-inner {
 optgroup {
   font-style: normal;
 }
+
+/* textareas --------------------------------------------------------------- */
 textarea {
   height: auto;
   min-height: 2.8em;
@@ -677,17 +708,21 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-input:invalid, 
-textarea:invalid { 
-  background-color: #f0dddd; /* light pink */
+
+/* invalid, placeholder, disabled, readonly -------------------------------- */
+input:focus:invalid, 
+select:focus:invalid,
+textarea:focus:invalid { 
+  color: #b94a48; /* dark red */
+  border-color: #ee5f5b; /* red */
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #888; /* gray */
 }
-/* FF placeholder bug: 
- * "If one change the text color of input fields, FF will change 
- * the default color of placeholders too!"
+/* FF placeholder bug
+ * Issue: If one change the text color of input fields, FF will change 
+ * the default color of placeholders too!
  * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150 
  */
 input:-moz-placeholder,
@@ -843,98 +878,96 @@ th {
 .row:after {
   clear: both;
 }
-/* fix sub-pixel rendering issue in IE7 serving fixed widths
+/* avoid sub-pixel rendering issue in IE7 serving fixed width to columns
  * http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
  */ 
 [class*="col-"] {
   float: left;
   position: relative;
   min-height: 1;
-  padding-left: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  margin-left: 2%;
+  *margin-left: 20px;
 }
 [class*="col-"]:first-child {
-  padding-left: 0;
+  margin-left: 0;
 }
 .col-1 {
   width: 100%;
 }
 .col-1-2 {
-  width: 50%;
+  width: 49%;
   *width: 460px;
 }
 .col-1-3 {
-  width: 33.333333333%;
+  width: 32%;
   *width: 300px;
 }
 .col-2-3 {
-  width: 66.666666666%;
+  width: 66%;
   *width: 620px;
 } 
 .col-1-4 {
-  width: 25%;
+  width: 23.5%;
   *width: 220px;
 }
 .col-3-4 {
-  width: 75%;
+  width: 74.5%;
   *width: 700px;
 } 
 .col-1-5 {
-  width: 20%;
+  width: 18.4%;
   *width: 172px;
 }
 .col-2-5 {
-  width: 40%;
+  width: 38.8%;
   *width: 364px;
 }
 .col-3-5 {
-  width: 60%;
+  width: 59.2%;
   *width: 556px;
 }
 .col-4-5 {
-  width: 80%;
+  width: 79.6%;
   *width: 748px;
 }
 .col-1-6 {
-  width: 16.656%;
+  width: 15%;
   *width: 140px;
 }
 .col-5-6 {
-  width: 83.3333333%;
+  width: 83%;
   *width: 780px;
 }
 .col-1-8 {
-  width: 12.5%;
+  width: 10.75%;
   *width: 100px;
 }
 .col-3-8 {
-  width: 37.5%;
+  width: 36.25%;
   *width: 340px;
 }
 .col-5-8 {
-  width: 62.5%;
+  width: 61.75%;
   *width: 580px;
 }
 .col-7-8 {
-  width: 87.5%;
+  width: 87.25%;
   *width: 820px;
 }
 .col-1-12 {
-  width: 8.3333333%;
+  width: 6.5%;
   *width: 60px;
 }
 .col-5-12 {
-  width: 41.666666%;
+  width: 40.5%;
   *width: 380px;
 }
 .col-7-12 {
-  width: 58.333333%;
+  width: 57.5%;
   *width: 540px;
 }
 .col-11-12 {
-  width: 91.666666%;
+  width: 91.5%;
   *width: 860px;
 }
 /* responsive grid */
@@ -945,7 +978,7 @@ th {
   .responsive-grid [class*="col-"] {
     width: 100%;
     float: none;
-    padding-left: 0;
+    margin-left: 0;
     margin-bottom: 1.4em;
   } 
 }
@@ -1332,7 +1365,7 @@ html,
 button, 
 input, 
 select,
-optgroup, 
+optgroup,
 textarea {
   font-family: ;
   color: ;
@@ -1408,7 +1441,7 @@ samp {
 */
 
 /* compose to a vertical rhythm ----------------------------------------------
- * in use: 1.4em, 16px * 1.4 = 22.4px), customize as you want! 
+ * (16px * 1.4 = 22.4px), customize as you want! 
 body {
   padding-top: 1.4em;
 }
@@ -1436,18 +1469,10 @@ dl,
 blockquote {
   margin-top: 0;
 }
-.flex-video-container video,
-.table-overflow-container table,
-ol ul,
-ul ul,
-ol ol,
-ul ol {
-  margin-bottom: 0;
-}
 hr {
   margin-top: 1.4em;
 }
-figure img+figcaption {
+figure img + figcaption {
   margin-top: -1.4em;
 }
 p,
@@ -1495,15 +1520,14 @@ a img.aligncenter,
     margin-bottom: 1.4em
   }
 }
+ol ul,
+ul ul,
+ol ol,
+ul ol,
 .flex-video-container iframe[src*="youtube.com"],
 .flex-video-container iframe[src*="vimeo.com"],
 .flex-video-container embed[src*="youtube.com"] {
   margin-bottom: 0;
-}
-ul,
-ol,
-blockquote {
-  padding-left: 1.4em;
 }
 .img-left,
 .alignright,
@@ -1519,6 +1543,11 @@ a img.alignleft,
 .wp-caption.alignnone,
 .wp-caption.alignleft {
   margin-right: 1.4em;
+}
+ul,
+ol,
+blockquote {
+  padding-left: 1.4em;
 }
 */
 
@@ -1627,28 +1656,43 @@ input[type="reset"]:nth-of-type(1n) {
 
 
 /* $ 'Safe' CSS hacks reference
- * Check out the demo http://jsbin.com/iketil/5/quiet
+ * Check out the demo http://jsbin.com/css-hacks/4/quiet
 ============================================================================ */
 
 /* IE7
-p { *color: red; } */
+p { 
+  *color: darkred; 
+} */
 
 /* IE8
 @media \0screen {
-  p { color: green; }
+  p { 
+    color: green; 
+  }
 } */
 
 /* IE9+
 p:nth-of-type(1n) {
- p { color: blue\9; } */ /* (note the '\9' at the end)
-*/
+  color: blue\9;
+} */ /* (note the '\9' at the end) */
+
+/* IE10
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  p {
+    color: orange;
+  }
+} */
 
 /* Webkit (Safari, Android, Chrome, ecc...)
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  p { color: cyan; } 
+  p { 
+    color: cyan; 
+  } 
 } */  
 
 /* Firefox 3+ 
 @-moz-document url-prefix() {
-  p { color: magenta; } 
+  p { 
+    color: magenta; 
+  } 
 } */

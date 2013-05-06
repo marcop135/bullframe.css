@@ -1,4 +1,4 @@
-<h1>BULLFRAME CSS v1.2.2</h1>
+<h1>BULLFRAME CSS v1.3.0</h1>
 <p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only framework.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -49,7 +49,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
   <li>
     <p>2) <b>Write your styles inside the framework</b></p>
   <p>Open <code>bullframe.css</code> file, scroll down the code and start to add styles <i>inside</i>
-"Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
+"Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
   </li>
 </ul>
 <ul>
@@ -74,7 +74,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
   <li>Android browser 2.3+</li>
   <li>Latest Opera Mobile (responsive tables trick not working)</li>
   <li>Opera Mini (mark element is buggy and responsive videos and tables trick not working)</li>
-  <li>Internet Explorer 7 Mobile</li>
+  <li>Internet Explorer 9/10 Mobile</li>
   <li>Latest Mobile Firefox (Fennec)</li>
   <li>Blackberry browser OS 5</li>
   <li>Kindle Touch browser</li>

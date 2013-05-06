@@ -172,11 +172,12 @@ strike,
 s { 
   text-decoration: line-through;
 }
-p {
-  margin: 0 0 1.4em 0;
-}
+p,
 pre {
   margin: 1.4em 0;
+}
+p + p {
+  margin-top: 0;
 }
 p.lead {
   font-size: 125%;

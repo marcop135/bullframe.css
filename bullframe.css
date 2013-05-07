@@ -691,10 +691,6 @@ select {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAMAAABhV5WtAAAAeFBMVEVNTU1OTk5wcHAxMTFTU1MAAABnZ2cVFRUKCgpgYGA6Ojo9PT3KysogICDS0tJmZmZLS0sdHR3a2tqxsbFaWlri4uL5+flPT0/CwsLr6+twcHAtLS24uLj19fUsLCxNTU3u7u6UlJTPz88hISH29vYiIiIqKiolJSWRpaVZAAAABnRSTlPT06b8ywDIia5xAAAAUElEQVR42mXINQLAIAAEsNrV3d2w//+wbBTIGAc2eXnoBJKblOraLGKEsLii6sYuFZyzeoA60L7gvPHwP8y+ENOiH1ax7TDuOK/bPDwvtLN87LQHPq6PMuAAAAAASUVORK5CYII=); 
   } 
 }  
-/* FF2+ */
-select, x:-moz-any-link {
-  background-image: none;
-}
 select[size], 
 select[multiple] { 
   height: auto;

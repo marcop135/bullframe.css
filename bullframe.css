@@ -569,7 +569,8 @@ textarea {
   *padding-left: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
   *padding-right: 1.25%;
 }
-input[type="file"] {
+input[type="file"],
+select {
   *width: 100%;
 }
 textarea {
@@ -682,8 +683,12 @@ select {
   -webkit-appearance: none;
   /* use a custom dropdown image */
   background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkU0NjlCN0ZBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkU0NjlCODBBMTVFMTFFMjlDNDVGOUFGNDVCODRGMEQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRTQ2OUI3REExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRTQ2OUI3RUExNUUxMUUyOUM0NUY5QUY0NUI4NEYwRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pnd57P8AAAD/SURBVHjarFIxioRAEOxeD08DxcALRQM10tBNxMDAUPyAHzAVQ59hargfMTwDM/EJomBmcBj07SwIy7J3a7ANBTVMU101PUhE8K762EnbtlTXNUzT9M3z/M9907Ztn7Isn/M8B9d18aWYoijQ9z0Mw3CWJAl2x4gI4zhCmqZgmua/zk470XUdiqIAy7KA4zgQRfEGVmEYQlmW7IyHxK7RMIoiMAyDxbqPCLZtXzRNw5ePxuLco2ka8jxvujokhiRJaJ5neux7htOjeBAE6Pv+F+OCIECWZaCqKh5a57MJ67qS4zgUxzEty3LI1W1hf11UVUVd1x0WYsB3ftpfAQYAXo7XO6GWzfUAAAAASUVORK5CYII=) no-repeat right center;
-  background-image: none\9; /* IE7+ */
-  *width: 100%;
+}
+/* desktop/mobile IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  select {
+    background-image: none;
+  }
 }
 /* FF2+ */
 select, x:-moz-any-link {
@@ -1657,7 +1662,7 @@ input[type="reset"]:nth-of-type(1n) {
 
 
 /* $ 'Safe' CSS hacks reference
- * Check out the demo http://jsbin.com/css-hacks/4/quiet
+ * Check out the demo http://jsbin.com/css-hacks/5/quiet
 ============================================================================ */
 
 /* IE7
@@ -1677,7 +1682,7 @@ p:nth-of-type(1n) {
   color: blue\9;
 } */ /* (note the '\9' at the end) */
 
-/* IE10
+/* desktop/mobile IE10+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   p {
     color: orange;

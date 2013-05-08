@@ -482,15 +482,12 @@ select,
 textarea {
   color: #222;
 }
+button,
+input {
+  line-height: 1.4;
+}
 
 /* normalize appearance --------------------------------------------------- */
-button,
-input,
-select,
-textarea {
-  -webkit-border-radius: 0;
-          border-radius: 0;
-}
 button,
 input[type="button"], 
 input[type="reset"],
@@ -506,9 +503,16 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="tel"], 
 input[type="text"], 
 input[type="week"], 
-input[type="url"],    
+input[type="url"], 
+select,   
 textarea { 
   -webkit-appearance: none;
+}
+input,
+select,
+textarea {
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 input[type="color"], 
 input[type="email"], 
@@ -622,7 +626,6 @@ input[type="submit"] {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  line-height: 1.4;
   text-align: center;
   padding: 0.6em;
   min-width: 5.625em; /* 90px */
@@ -680,7 +683,6 @@ input[type="submit"]:focus {
 /* selects ----------------------------------------------------------------- */
 select {
   text-transform: none;
-  -webkit-appearance: none;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
@@ -1445,6 +1447,11 @@ samp {
 
 /* compose to a vertical rhythm ----------------------------------------------
  * (16px * 1.4 = 22.4px), customize as you want! 
+body,
+button,
+input {
+  line-height: 1.4;
+}
 body {
   padding-top: 1.4em;
 }

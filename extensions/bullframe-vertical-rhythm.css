@@ -4,6 +4,12 @@
  * https://github.com/marco135/bullframe.css
  * MIT License
  */
+ 
+body,
+button,
+input {
+  line-height: 1.4;
+}
 
 body {
   padding-top: 1.4em;

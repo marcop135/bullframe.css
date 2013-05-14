@@ -1084,8 +1084,8 @@ opera-only :-o-prefocus, /* this hack affect also IE7 */
   *display: inline;
   *zoom: 1;
   vertical-align: top;
-  letter-spacing: auto;
-  word-spacing: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
   text-rendering: auto;
 }
 .hide,

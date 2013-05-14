@@ -1,4 +1,4 @@
-<h1>BULLFRAME CSS v1.3.0</h1>
+<h1>BULLFRAME CSS v1.3.1</h1>
 <p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only framework.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -38,8 +38,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
 &lt;html>
 &lt;head>
 ...
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-&lt;link rel="stylesheet" src="bullframe.min.css">
+<mark>&lt;link rel="stylesheet" src="bullframe.min.css"></mark>
 &lt;link rel="stylesheet" src="your-styles.css">
 ...
 ...</code></pre>
@@ -63,21 +62,21 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
 <h2>Browser support</h2>
 <b>Tested and compatible with:</b>
 <ul>
-  <li>Internet Explorer 7-10</li>
-  <li>Latest Chrome</li>
-  <li>Firefox 4+</li>
-  <li>Safari 4+</li>
-  <li>Opera 10+ (responsive tables trick not working in v10-11)</li>
+  <li>Internet Explorer 7-10 <small><i>(fully compatible)</i></small></li>
+  <li>Latest Chrome <small><i>(fully compatible)</i></small></li>
+  <li>Firefox 4+ <small><i>(fully compatible)</i></small></li>
+  <li>Safari 4+ <small><i>(fully compatible)</i></small></li>
+  <li>Opera 10+ <small><i>(responsive tables not working in v10-11)</i></small></li>
 </ul>
 <ul>
-  <li>Mobile Safari 5+</li>
-  <li>Android browser 2.3+</li>
-  <li>Latest Opera Mobile (responsive tables trick not working)</li>
-  <li>Opera Mini (mark element is buggy and responsive videos and tables trick not working)</li>
-  <li>Internet Explorer 9/10 Mobile</li>
-  <li>Latest Mobile Firefox (Fennec)</li>
-  <li>Blackberry browser OS 5</li>
-  <li>Kindle Touch browser</li>
+  <li>Mobile Safari 5+ <small><i>(fully compatible)</i></small></li>
+  <li>Android browser 2.3+ <small><i>(fully compatible)</i></small></li>
+  <li>Latest Opera Mobile <small><i>(responsive tables not working)</i></small></li>
+  <li>Opera Mini <small><i>(mark element is buggy and responsive videos/tables not working)</i></small></li>
+  <li>Internet Explorer 9/10 Mobile <small><i>(fully compatible)</i></small></li>
+  <li>Latest Mobile Firefox (Fennec) <small><i>(fully compatible)</i></small></li>
+  <li>Blackberry browser OS 5 <small><i>(fully compatible)</i></small></li>
+  <li>Kindle Touch browser <small><i>(fully compatible)</i></small></li>
 </ul>
 
 <h2>License</h2>

@@ -1,4 +1,4 @@
-/*! BULLFRAME CSS v1.3.0 extension 
+/*! BULLFRAME CSS v1.3.1 extension 
  * Follow baseline number '1.4em' and compose to a vertical rhythm
  *
  * https://github.com/marco135/bullframe.css
@@ -10,11 +10,9 @@ button,
 input {
   line-height: 1.4;
 }
-
 body {
   padding-top: 1.4em;
 }
-
 .tera,
 .giga,
 .gamma,
@@ -39,15 +37,12 @@ dl,
 blockquote {
   margin-top: 0;
 }
-
 hr {
   margin-top: 1.4em;
 }
-
 figure img + figcaption {
   margin-top: -1.4em;
 }
-
 p,
 pre,
 menu,
@@ -88,13 +83,11 @@ a img.aligncenter,
 .chromeframe {
   margin-bottom: 1.4em;
 }
-
-@media screen and (max-width:40em) { 
+@media screen and (max-width: 40em) { 
   .responsive-grid [class*="col-"] {
     margin-bottom: 1.4em
   }
 }
-
 ol ul,
 ul ul,
 ol ol,
@@ -104,14 +97,12 @@ ul ol,
 .flex-video-container embed[src*="youtube.com"] {
   margin-bottom: 0;
 }
-
 .img-left,
 .alignright,
 a img.alignright,
 .wp-caption.alignright {
 	margin-left: 1.4em;
 }
-
 .img-right,
 .alignnone,
 .alignleft,
@@ -121,7 +112,6 @@ a img.alignleft,
 .wp-caption.alignleft {
 	margin-right: 1.4em;
 }
-
 ul,
 ol,
 blockquote {

@@ -1,6 +1,7 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.3.0
- * https://github.com/marco135/bullframe.css/ - @m135_ - MIT License 
+ * BULLFRAME CSS v1.3.1
+ * https://github.com/marco135/bullframe.css/
+ * MIT License 
  =========================================================================== */
 
 
@@ -258,15 +259,11 @@ img::selection  {
 
 a,
 a:hover,
-a:active { 
+a:focus { 
   color: #1467ff; /* blue */
 }
-a {
-  text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); /* 35% black */
-}
 a:hover, 
-a:active { 
+a:focus { 
   text-decoration: underline;
   outline: 0;
 }
@@ -275,7 +272,10 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
 } 
-
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); /* 35% black */
+}
 
 
 
@@ -379,13 +379,11 @@ audio:not([controls]) {
  * 
    <script>
      jQuery(function() {
-        jQuery('.content iframe, .content object, .content embed')
-        .wrap('<div class="flex-video-container"></div>');
+        jQuery('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
      });
    </script>
  * 
 */
-
 svg:not(:root) { 
   overflow: hidden;
 }
@@ -403,15 +401,6 @@ svg:not(:root) {
 /* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
   max-width: 100% !important;
-}
-/* prevent phone numbers looking twice as large and having a Skype highlight 
- * https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
- */
-span.skype_pnh_container {
-  display: none !important;
-}
-span.skype_pnh_print_container {
-  display: inline !important;
 }
 
 
@@ -432,6 +421,7 @@ figure {
 
 /* $ Forms (enter the madness)
 ============================================================================ */
+
 
 /* major normalization ---------------------------------------------------- */
 form {
@@ -461,6 +451,7 @@ textarea {
   *vertical-align: middle;
 }
 
+
 /* normalize texts -------------------------------------------------------- */
 button, 
 input, 
@@ -486,6 +477,7 @@ button,
 input {
   line-height: 1.4;
 }
+
 
 /* normalize appearance --------------------------------------------------- */
 button,
@@ -533,6 +525,7 @@ select,
 textarea {
   border: 1px solid #999;
 }
+
 
 /* responsiveness ---------------------------------------------------------- */
 input, 
@@ -582,6 +575,7 @@ textarea {
   *padding-bottom: 1.25%;
 }
   
+
 /* radios and checkboxes --------------------------------------------------- */
 input[type="radio"], 
 input[type="checkbox"] {
@@ -605,6 +599,7 @@ label + input[type="radio"],
 label + input[type="checkbox"] {
   margin-left: 5px;
 }
+
 
 /* buttons ----------------------------------------------------------------- */
 button {
@@ -631,7 +626,6 @@ input[type="submit"] {
   min-width: 5.625em; /* 90px */
   cursor: pointer;
   border: 0;
-  -webkit-background-clip: padding-box;   
   background-clip: padding-box;
   color: #fff;
   background-color: #1467ff; /* cyan */
@@ -680,6 +674,7 @@ input[type="submit"]:focus {
   text-decoration: none;
 }
 
+
 /* selects ----------------------------------------------------------------- */
 select {
   text-transform: none;
@@ -690,7 +685,9 @@ select {
 /* use a custom dropdown arrow in Webkit browsers (Safari, Android, Chrome, ecc...) */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   select { 
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAMAAABhV5WtAAAAeFBMVEVNTU1OTk5wcHAxMTFTU1MAAABnZ2cVFRUKCgpgYGA6Ojo9PT3KysogICDS0tJmZmZLS0sdHR3a2tqxsbFaWlri4uL5+flPT0/CwsLr6+twcHAtLS24uLj19fUsLCxNTU3u7u6UlJTPz88hISH29vYiIiIqKiolJSWRpaVZAAAABnRSTlPT06b8ywDIia5xAAAAUElEQVR42mXINQLAIAAEsNrV3d2w//+wbBTIGAc2eXnoBJKblOraLGKEsLii6sYuFZyzeoA60L7gvPHwP8y+ENOiH1ax7TDuOK/bPDwvtLN87LQHPq6PMuAAAAAASUVORK5CYII=); 
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAPCAMAAADAkV+TAAAAS1BMVEUcHCEbGyEaGyAcHCEaGyATFCMVFiIWFyIZGSAUFSMUFCMVFiMUFSMVFiMXFyESEyMZGiATFCMWFyIXGCETFCMSEyMAAAAcHCEjIyNZdFtbAAAAF3RSTlP+/P3+/jOqufhhTYxqgMYM+zi+4RcGAOuPur8AAABaSURBVHjalc85DsAgDAVRiux7AH9x/5NGIRbCyCBl2leNQaMXr5A3SbwF9hIxZjagQDLJOioRc8IFAmOO7YCC/jNzaog14gYFedZBQ571NYQNO6pIFipy//ABbzAjzNQ/SfwAAAAASUVORK5CYII=); /* @2x image */
+    -webkit-background-size: 19px 10px;
+    background-size: 19px 10px;
   } 
 }  
 select[size], 
@@ -705,6 +702,7 @@ optgroup {
   font-style: normal;
 }
 
+
 /* textareas --------------------------------------------------------------- */
 textarea {
   height: auto;
@@ -714,6 +712,7 @@ textarea {
   resize: vertical;
 }
 
+
 /* invalid, placeholder, disabled, readonly -------------------------------- */
 input:focus:invalid, 
 select:focus:invalid,
@@ -721,6 +720,7 @@ textarea:focus:invalid {
   color: #b94a48; /* dark red */
   border-color: #ee5f5b; /* red */
 }
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #888; /* gray */
@@ -746,6 +746,7 @@ input:placeholder,
 textarea:placeholder {
   color: #888;
 }
+
 button[readonly],
 input[readonly],
 select[readonly],
@@ -813,6 +814,7 @@ th {
   font-weight: bold;
 }
 
+
 /* Responsive Tables --------------------------------------------------------
  * Note: issues on Opera 10-11, Opera Mobile and Opera Mini 
  */
@@ -845,8 +847,7 @@ th {
  * 
    <script>
      jQuery(function() {
-       jQuery('.content table')
-       .wrap('<div class="table-overflow-container"></div>');
+       jQuery('.content table').wrap('<div class="table-overflow-container"></div>');
      });
    </script>
  * 
@@ -860,14 +861,13 @@ th {
 ============================================================================ */
 
 /*
- * body as main wrapper:
+ * body element is set as main grid wrapper:
   body {
     max-width: 940px;
     *width: 940px;
     margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
- } 
+    padding: 0 20px;
+  } 
  */
 .row {
   display: block;
@@ -994,6 +994,7 @@ th {
 /* $ Helper classes
 ============================================================================ */
 
+
 /* clearfix --------------------------------------------------------------- */ 
 /* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
@@ -1007,6 +1008,7 @@ th {
 .clearfix {
   *zoom: 1;
 }
+
 
 /* image replacement ------------------------------------------------------- */
 .hide-text {
@@ -1031,6 +1033,7 @@ th {
   height: 150%;
 }
 
+
 /* image positioning ------------------------------------------------------- */
 .img-left {
   float: left;
@@ -1040,6 +1043,7 @@ th {
   float: right;
   margin: 0 0 1.4em 1.4em;
 }
+
 
 /* layout display ---------------------------------------------------------- */
 .block {
@@ -1104,6 +1108,7 @@ opera-only :-o-prefocus, /* this hack affect also IE7 */
   visibility: visible;
 }
 
+
 /* layout positioning ------------------------------------------------------ */
 .pull-right {
   float: right;
@@ -1115,35 +1120,24 @@ opera-only :-o-prefocus, /* this hack affect also IE7 */
   position: fixed;
 }
 
+
 /* reset margin/padding ---------------------------------------------------- */
-.no-margin {
-  margin: 0 !important;
+.last-margin {
+  margin-right: 0;
 }
-.no-margin-left {
-  margin-left: 0 !important;
+.last-padding {
+  padding-right: 0;
 }
-.last,
-.no-margin-right {
-  margin-right: 0 !important;
+.last-border {
+  border: 0;
 }
-.first,
-.no-margin-top {
-  margin-top: 0 !important;
-}
-.end {
-  margin-bottom: 0 !important;
-}
-.no-padding {
-  padding: 0 !important;
-}
-.no-border {
-  border: 0 !important;
-}
+
 
 /* text utilities ---------------------------------------------------------- */
 .text-truncate {
   max-width: 100%;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
@@ -1160,6 +1154,13 @@ opera-only :-o-prefocus, /* this hack affect also IE7 */
   -ms-hyphens: auto;
   hyphens: auto;
 }
+.no-select {
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;          
+}
+
 
 /* $ Wordpress Core CSS (relative units)
  * http://codex.wordpress.org/CSS ------------------------------------------ */
@@ -1224,6 +1225,7 @@ a img.aligncenter {
   margin: 0.7em 0 0 0;
   padding: 0;
 }
+
 
 /* miscellaneous ----------------------------------------------------------- */
 .chromeframe {
@@ -1356,6 +1358,7 @@ a img.aligncenter {
 */
 
 /* body --------------------------------------------------------------------
+ * TIPS: reset body styles if you use modal windows like fancybox
 body {
   max-width: ;
   *width: ;
@@ -1384,7 +1387,7 @@ a {
   -webkit-tap-highlight-color: rgba(XXX, XXX, XXX, X.XX);
 }
 a:hover,
-a:active {
+a:focus {
   color: ;
   text-decoration: ;
 } 
@@ -1525,7 +1528,7 @@ a img.aligncenter,
 .chromeframe {
   margin-bottom: 1.4em;
 }
-@media screen and (max-width:40em) { 
+@media screen and (max-width: 40em) { 
   .responsive-grid [class*="col-"] {
     margin-bottom: 1.4em
   }
@@ -1610,7 +1613,7 @@ input[type="submit"]:focus {
   background-color: ;
 }
 */
-/* linear gradient in IE9+ (note the '\9' at the end)
+/* linear gradient in IE9+ (note the '\9' at the end of the value)
 button:nth-of-type(1n),
 .btn:nth-of-type(1n),
 input[type="button"]:nth-of-type(1n), 
@@ -1619,12 +1622,21 @@ input[type="reset"]:nth-of-type(1n) {
 } */
 
 /* misc ----------------------------------------------------------------- */
-/* override the Facebook comments embed fixed width
+/* responsive Facebook comments embed
 .fb-comments, 
 .fb-comments span, 
 .fb-comments iframe {
   width: 100% !important;
 } */
+/* prevent phone numbers looking twice as large and having a Skype highlight 
+ * https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
+span.skype_pnh_container {
+  display: none !important;
+}
+span.skype_pnh_print_container {
+  display: inline !important;
+}
+*/
 
 
 

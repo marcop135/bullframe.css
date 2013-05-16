@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.3.1
+ * BULLFRAME CSS v1.3.2
  * https://github.com/marco135/bullframe.css/
  * MIT License 
  =========================================================================== */
@@ -679,21 +679,29 @@ input[type="submit"]:focus {
 select {
   text-transform: none;
   background-color: #fff;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: right center;
 }
+select[size], 
+select[multiple] { 
+  height: auto;
+}
 /* use a custom dropdown arrow in Webkit browsers (Safari, Android, Chrome, ecc...) */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  select { 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select[size],
+  select[multiple] {
+    background-image: none;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+  }
+  select,
+  select[size="0"],
+  select[size="1"] { 
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAPCAMAAADAkV+TAAAAS1BMVEUcHCEbGyEaGyAcHCEaGyATFCMVFiIWFyIZGSAUFSMUFCMVFiMUFSMVFiMXFyESEyMZGiATFCMWFyIXGCETFCMSEyMAAAAcHCEjIyNZdFtbAAAAF3RSTlP+/P3+/jOqufhhTYxqgMYM+zi+4RcGAOuPur8AAABaSURBVHjalc85DsAgDAVRiux7AH9x/5NGIRbCyCBl2leNQaMXr5A3SbwF9hIxZjagQDLJOioRc8IFAmOO7YCC/jNzaog14gYFedZBQ571NYQNO6pIFipy//ABbzAjzNQ/SfwAAAAASUVORK5CYII=); /* @2x image */
     -webkit-background-size: 19px 10px;
     background-size: 19px 10px;
   } 
 }  
-select[size], 
-select[multiple] { 
-  height: auto;
-}
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -1046,43 +1054,69 @@ th {
 
 
 /* layout display ---------------------------------------------------------- */
-.block {
-  display: block;
+/* super-simple grid system 
+ * demo http://jsbin.com/super-simple-css-grid/3/quiet
+ */
+.width-1 {
   width: 100%;
-}
-.width-1-6 {
-  width: 16.6666666667%;
-}
-.width-1-5 {
-  width: 20%;
-}
-.width-1-4 {
-  width: 25%;
-}
-.width-1-3 {
-  width: 33.3333333333%;
 }
 .width-1-2 {
   width: 50%;
+  *width: 49.9469%;
+}
+.width-1-3 {
+  width: 33.3333333333%;
+  *width: 33.2802333333%;
+}
+.width-1-4 {
+  width: 25%;
+  *width: 24.9469%;
+}
+.width-1-5 {
+  width: 20%;
+  *width: 19.9469%;
+}
+.width-1-6 {
+  width: 16.6666666667%;
+  *width: 16.6135666667%;
+}
+
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
 }
 .inline-block-container {
-  letter-spacing: -0.31em; /* webkit */
-  *letter-spacing: normal;
-  *word-spacing: -0.43em;
-  text-rendering: optimizespeed; /* fixe text-rendering in webkit */
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
 /* Opera as of 12 on Windows needs word-spacing.
  * The ".opera-only" selector is used to prevent actual prefocus styling
  * and is not required in markup.
 */
-opera-only :-o-prefocus, /* this hack affect also IE7 */
+.opera-only :-o-prefocus, /* this hack affect also IE7 */
 .inline-block-container {
   word-spacing: -0.43em;
 }
+/* how to use:
+ *
+   <nav role="navigation">
+     <ul class="inline-block-container unstyled">
+       <li class="inline"><a href="#" class="inline-block">Home</a></li>
+       <li class="inline"><a href="#" class="inline-block">Works</a></li>
+       <li class="inline"><a href="#" class="inline-block">About</a></li>
+       <li class="inline"><a href="#" class="inline-block">Contact</a></li>
+     </ul>
+   </nav>
+ *
+ */
 .inline-block {
   display: inline-block;
   *display: inline;
-  *zoom: 1;
+  zoom: 1;
   vertical-align: top;
   letter-spacing: normal;
   word-spacing: normal;

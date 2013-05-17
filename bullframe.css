@@ -679,7 +679,7 @@ input[type="submit"]:focus {
 select {
   text-transform: none;
   background-color: #fff;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: right center;
 }
 select[size], 

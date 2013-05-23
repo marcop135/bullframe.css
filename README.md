@@ -62,21 +62,21 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss-1.4.0-br
 <h2>Browser support</h2>
 Tested and compatible with:
 <ul>
-  <li><b>Internet Explorer 7-10</b>
-  <li><b>Latest Chrome</b>
-  <li><b>Firefox 4+</b>
-  <li><b>Safari 4+</b>
-  <li><b>Opera 10+</b> <i>(responsive tables not working in v10-11)</i></li>
+  <li>Internet Explorer 7-10
+  <li>Latest Chrome
+  <li>Firefox 4+
+  <li>Safari 4+
+  <li>Opera 10+ <i>(responsive tables not working in v10-11)</i></li>
 </ul>
 <ul>
-  <li><b>Mobile Safari 5+</b>
-  <li><b>Android browser 2.3+</b>
-  <li><b>Latest Opera Mobile</b> <i>(responsive tables not working)</i></li>
-  <li><b>Opera Mini</b> <i>(mark element is buggy and responsive videos/tables not working)</i></li>
-  <li><b>Internet Explorer 9/10 Mobile</b>
-  <li><b>Latest Mobile Firefox (Fennec)</b>
-  <li><b>Blackberry browser OS 5</b>
-  <li><b>Kindle Touch browser</b>
+  <li>Mobile Safari 5+
+  <li>Android browser 2.3+
+  <li>Latest Opera Mobile <i>(responsive tables not working)</i></li>
+  <li>Opera Mini <i>(mark element is buggy and responsive videos/tables not working)</i></li>
+  <li>Internet Explorer 9/10 Mobile
+  <li>Latest Mobile Firefox (Fennec)
+  <li>Blackberry browser OS 5
+  <li>Kindle Touch browser
 </ul>
 
 <h2>License</h2>

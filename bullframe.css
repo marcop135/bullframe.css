@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME CSS v1.3.2
+ * BULLFRAME CSS v1.4.0
  * https://github.com/marco135/bullframe.css/
  * MIT License 
  =========================================================================== */
@@ -190,12 +190,16 @@ pre {
   white-space: -moz-pre-wrap; /* fennec */
   white-space: pre-wrap;
   white-space: pre\9; /* IE7+ */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
-pre, 
+​pre,  
 code, 
 kbd, 
 samp {
-  font-family: Monaco, Consolas, "Courier New", Courier, monospace; 
+ ​​ font-family: Consolas,​ ​​"DejaVu Sans Mono", ​"Courier New", Courier, monospace; 
   font-size: 1em;
 }
 strong, 
@@ -270,7 +274,7 @@ a:focus {
   outline: 0;
 }
 a:focus { 
-  outline: thin dotted;
+  outline: 1px dotted #222;
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
 } 
@@ -527,6 +531,26 @@ select,
 textarea {
   border: 1px solid #999;
 }
+input[type="color"]:focus, 
+input[type="email"]:focus, 
+input[type="number"]:focus, 
+input[type="password"]:focus, 
+input[type="tel"]:focus, 
+input[type="search"]:focus,
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus,
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="time"]:focus, 
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  outline: 0 none;
+  border-color: #1467ff; /* blue links */
+}
 
 
 /* responsiveness ---------------------------------------------------------- */
@@ -647,16 +671,16 @@ input[type="submit"] {
   *padding-top: 0.55em;
   *padding-bottom: 0.55em;
 }
-button:hover,
-.btn:hover,
-input[type="button"]:hover, 
-input[type="reset"]:hover,
-input[type="submit"]:hover,
 button:active,
 .btn:active,
 input[type="button"]:active, 
 input[type="reset"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active,
+button:focus,
+.btn:focus,
+input[type="button"]:focus, 
+input[type="reset"]:focus,
+input[type="submit"]:focus {
   outline: 0 none;
 }
 button:hover,
@@ -669,9 +693,10 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  background-color: #0048cc; /* dark blue */
+  background-color: #0039a3; /* dark blue */
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
   color: #fff;
   text-decoration: none;
 }
@@ -699,9 +724,12 @@ select[multiple] {
   select,
   select[size="0"],
   select[size="1"] { 
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAPCAMAAADAkV+TAAAAS1BMVEUcHCEbGyEaGyAcHCEaGyATFCMVFiIWFyIZGSAUFSMUFCMVFiMUFSMVFiMXFyESEyMZGiATFCMWFyIXGCETFCMSEyMAAAAcHCEjIyNZdFtbAAAAF3RSTlP+/P3+/jOqufhhTYxqgMYM+zi+4RcGAOuPur8AAABaSURBVHjalc85DsAgDAVRiux7AH9x/5NGIRbCyCBl2leNQaMXr5A3SbwF9hIxZjagQDLJOioRc8IFAmOO7YCC/jNzaog14gYFedZBQ571NYQNO6pIFipy//ABbzAjzNQ/SfwAAAAASUVORK5CYII=); /* @2x image */
-    -webkit-background-size: 19px 10px;
-    background-size: 19px 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAMAAADImI+JAAAAYFBMVEUiIiIjIyMjIyMjIyMjIyMiIiIjIyMhISEjIyMhISEhISEjIyMjIyMjIyMhISEjIyMjIyMhISEjIyMjIyMiIiIhISEjIyMjIyMjIyMjIyMjIyMAAAAgICAiIiIhISEjIyMhy2aOAAAAHHRSTlO2YGYhOaOE22/M5gyQMNB7KsVsY73IBnIbJAMAG+nIGQAAAH5JREFUeNq9zdkOgjAUAFFUcMFdWUqH0v//Sw0YG+xyeXKeTzIZC5tgZf2yEFSD53oVgqw9uCIIqX9cRQR28/mgYpB2Bp9Eob5Y15045GbceJOCXL/wQRI2u4+rSUPOZhp3EmQ7wj0ibMq3O2gZkptxLENOtmURPBZagK6/wRfIUlUi1KWf7AAAAABJRU5ErkJggg==);
+    /* @2x image
+    -webkit-background-size: 40px 20px;
+    background-size: 40px 20px; */
+    -webkit-background-size: 20px 10px;
+    background-size: 20px 10px;
   } 
 }  
 optgroup::-moz-focus-inner {
@@ -1129,19 +1157,46 @@ th {
   display: none !important; 
   visibility: hidden;
 }
-/* hide on screenreaders */
-.screen-reader-text,
-.assistive-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
 .invisible {
   visibility: hidden;
 }
 .show {
   display: block !important;
   visibility: visible;
+}
+
+
+/* screenreaders ----------------------------------------------------------- */
+/* Hide text for non-screenreaders */
+.screen-reader-text,
+.assistive-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
 
 
@@ -1179,9 +1234,16 @@ th {
   word-wrap: normal;
 }
 .text-break {
-  word-break: break-all;
-  word-break: break-word;
+  word-break: break-all; /* webkit */
   word-wrap: break-word;
+  white-space: pre;
+  white-space: -moz-pre-wrap; /* fennec */
+  white-space: pre-wrap;
+  white-space: pre\9; /* IE7+ */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 .justify {
   text-align: justify;                
@@ -1629,11 +1691,31 @@ select,
 textarea {
   border-color: ;
 }
+input[type="color"]:focus, 
+input[type="email"]:focus, 
+input[type="number"]:focus, 
+input[type="password"]:focus, 
+input[type="tel"]:focus, 
+input[type="search"]:focus,
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus,
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="time"]:focus, 
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  border-color: ;
+}
 button,
 .btn,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
+  color: ;
   background-color: ;
 }
 button:hover,
@@ -1646,6 +1728,7 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
+  color: ;
   background-color: ;
 }
 */

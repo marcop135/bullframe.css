@@ -688,7 +688,7 @@ input[type="submit"] {
   *display: inline;
   *zoom: 1;
   text-align: center;
-  padding: 0.6em;
+  padding: 0.375em 0.6em;
   min-width: 5.625em; /* 90px */
   cursor: pointer;
   border: 0;
@@ -704,12 +704,8 @@ button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-  *padding-top: 0.45em;
-  *padding-bottom: 0.45em;
-}
-.btn {
-  *padding-top: 0.55em;
-  *padding-bottom: 0.55em;
+  *padding-top: 0.2em;
+  *padding-bottom: 0.2em;
 }
 button:active,
 .btn:active,

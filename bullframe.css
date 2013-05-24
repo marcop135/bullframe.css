@@ -199,7 +199,7 @@ pre {
 code, 
 kbd, 
 samp {
- ​​ font-family: Consolas,​ ​​"DejaVu Sans Mono", ​"Courier New", Courier, monospace; 
+ ​​ font-family: Consolas,​ ​​"DejaVu Sans Mono", ​Monaco, "Courier New", Courier, monospace; 
   font-size: 1em;
 }
 strong, 
@@ -548,9 +548,41 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8); /* light blue */
+  *border-color: #52a8ec;
+  -webkit-box-shadow: 
+    inset 0 1px 1px rgba(0, 0, 0, 0.075), 
+    0 0 5px rgba(82, 168, 236, 0.6);
+  box-shadow: 
+    inset 0 1px 1px rgba(0, 0, 0, 0.075), 
+    0 0 5px rgba(82, 168, 236, 0.6);
   outline: 0 none;
-  border-color: #1467ff; /* blue links */
+  *outline: 1px solid #52a8ec;
 }
+/* IE8 */
+@media \0screen {
+  input[type="color"]:focus, 
+  input[type="email"]:focus, 
+  input[type="number"]:focus, 
+  input[type="password"]:focus, 
+  input[type="tel"]:focus, 
+  input[type="search"]:focus,
+  input[type="text"]:focus, 
+  input[type="date"]:focus, 
+  input[type="datetime"]:focus, 
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus, 
+  input[type="time"]:focus, 
+  input[type="week"]:focus, 
+  input[type="time"]:focus, 
+  input[type="url"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #52a8ec;
+    outline: 1px solid #52a8ec;
+  }
+}
+
 
 
 /* responsiveness ---------------------------------------------------------- */
@@ -616,6 +648,12 @@ input[type="checkbox"] {
 input[type="radio"] {
   -webkit-border-radius: 7px;
           border-radius: 7px;
+}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 1px dotted #222;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 label input[type="radio"], 
 label input[type="checkbox"] {
@@ -758,6 +796,13 @@ textarea:focus:invalid {
   color: #b94a48; /* dark red */
   border-color: #ee5f5b; /* red */
 }
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+          box-shadow: 0 0 6px #f8b9b7;
+}
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -811,6 +856,8 @@ input[disabled]:focus {
   background-color: #eaeaea; /* very light grey */
   border-color: #ccc;
   color: #888;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   opacity: 1;
 }
 input[type="radio"][disabled],
@@ -1690,25 +1737,30 @@ input[type="url"],
 select,
 textarea {
   border-color: ;
+  -webkit-box-shadow: ;
+  box-shadow: ;
 }
-input[type="color"]:focus, 
-input[type="email"]:focus, 
-input[type="number"]:focus, 
-input[type="password"]:focus, 
-input[type="tel"]:focus, 
-input[type="search"]:focus,
-input[type="text"]:focus, 
-input[type="date"]:focus, 
-input[type="datetime"]:focus, 
-input[type="datetime-local"]:focus,
-input[type="month"]:focus, 
-input[type="time"]:focus, 
-input[type="week"]:focus, 
-input[type="time"]:focus, 
-input[type="url"]:focus,
-select:focus,
-textarea:focus {
-  border-color: ;
+@media \0screen {
+  input[type="color"]:focus, 
+  input[type="email"]:focus, 
+  input[type="number"]:focus, 
+  input[type="password"]:focus, 
+  input[type="tel"]:focus, 
+  input[type="search"]:focus,
+  input[type="text"]:focus, 
+  input[type="date"]:focus, 
+  input[type="datetime"]:focus, 
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus, 
+  input[type="time"]:focus, 
+  input[type="week"]:focus, 
+  input[type="time"]:focus, 
+  input[type="url"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: ;
+    outline: 1px solid ;
+  }
 }
 button,
 .btn,

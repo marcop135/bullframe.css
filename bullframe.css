@@ -593,7 +593,7 @@ textarea {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  *width: 97.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *width: 99%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
 input[type="image"],
 input[type="submit"],
@@ -621,16 +621,18 @@ input[type="url"],
 select, 
 textarea {
   padding: 0.3em;
-  *padding-left: 1.25%; /* IE7 doesn't support CSS3 'box-sizing' */
-  *padding-right: 1.25%;
+  *padding-left: 0.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 0.5%;
+  height: 2.125em;
+  *height: 1.33375em;
 }
 input[type="file"],
 select {
   *width: 100%;
 }
 textarea {
-  *padding-top: 1.25%;
-  *padding-bottom: 1.25%;
+  *padding-top: 0.5%;
+  *padding-bottom: 0.5%;
 }
   
 
@@ -766,8 +768,8 @@ select[multiple] {
     /* @2x image
     -webkit-background-size: 40px 20px;
     background-size: 40px 20px; */
-    -webkit-background-size: 20px 10px;
-    background-size: 20px 10px;
+    -webkit-background-size: 1.25em 0.625em;
+    background-size: 1.25em 0.625em;
   } 
 }  
 optgroup::-moz-focus-inner {
@@ -782,6 +784,7 @@ optgroup {
 /* textareas --------------------------------------------------------------- */
 textarea {
   height: auto;
+  *height: auto;
   min-height: 2.8em;
   overflow: auto;
   vertical-align: top;
@@ -1761,6 +1764,27 @@ textarea {
     border-color: ;
     outline: 1px solid ;
   }
+}
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select {
+  padding: ;
+  *padding: ;
+  height: ;
+  *height: ;
 }
 button,
 .btn,

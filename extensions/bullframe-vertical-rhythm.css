@@ -1,10 +1,14 @@
-/*! BULLFRAME CSS v1.3.2 extension 
- * Follow baseline number '1.4em' and compose to a vertical rhythm
+/*! Vertical rhythm - BULLFRAME CSS v1.4.0 extension 
+ * 
+ * Follow baseline number '1.4' and compose to a vertical rhythm
+ * ..or use the number you want.
  *
- * https://github.com/marco135/bullframe.css
+ * https://github.com/marco135/bullframe.css/tree/master/extensions
  * MIT License
  */
  
+
+
 body,
 button,
 input {

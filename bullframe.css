@@ -195,11 +195,11 @@ pre {
   -ms-hyphens: none;
   hyphens: none;
 }
-​pre,  
+pre,  
 code, 
 kbd, 
 samp {
- ​​ font-family: Consolas,​ ​​"DejaVu Sans Mono", ​Monaco, "Courier New", Courier, monospace; 
+  font-family: Consolas, "DejaVu Sans Mono", Monaco, "Courier New", Courier, monospace; 
   font-size: 1em;
 }
 strong, 
@@ -529,6 +529,7 @@ input[type="time"],
 input[type="url"],
 select,
 textarea {
+  background-color: #fff;
   border: 1px solid #999;
 }
 input[type="color"]:focus, 
@@ -548,39 +549,8 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8); /* light blue */
-  *border-color: #52a8ec;
-  -webkit-box-shadow: 
-    inset 0 1px 1px rgba(0, 0, 0, 0.075), 
-    0 0 5px rgba(82, 168, 236, 0.6);
-  box-shadow: 
-    inset 0 1px 1px rgba(0, 0, 0, 0.075), 
-    0 0 5px rgba(82, 168, 236, 0.6);
-  outline: 0 none;
-  *outline: 1px solid #52a8ec;
-}
-/* IE8 */
-@media \0screen {
-  input[type="color"]:focus, 
-  input[type="email"]:focus, 
-  input[type="number"]:focus, 
-  input[type="password"]:focus, 
-  input[type="tel"]:focus, 
-  input[type="search"]:focus,
-  input[type="text"]:focus, 
-  input[type="date"]:focus, 
-  input[type="datetime"]:focus, 
-  input[type="datetime-local"]:focus,
-  input[type="month"]:focus, 
-  input[type="time"]:focus, 
-  input[type="week"]:focus, 
-  input[type="time"]:focus, 
-  input[type="url"]:focus,
-  select:focus,
-  textarea:focus {
-    border-color: #52a8ec;
-    outline: 1px solid #52a8ec;
-  }
+  border-color: #52a8ec; /* light blue */
+  outline: 1px solid #52a8ec;
 }
 
 
@@ -593,7 +563,7 @@ textarea {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  *width: 99%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *width: 98%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
 input[type="image"],
 input[type="submit"],
@@ -621,18 +591,32 @@ input[type="url"],
 select, 
 textarea {
   padding: 0.3em;
-  *padding-left: 0.5%; /* IE7 doesn't support CSS3 'box-sizing' */
-  *padding-right: 0.5%;
+  *padding-left: 1%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 1%;
+}
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"] {
   height: 2.125em;
   *height: 1.33375em;
 }
-input[type="file"],
 select {
   *width: 100%;
 }
 textarea {
-  *padding-top: 0.5%;
-  *padding-bottom: 0.5%;
+  *padding: 1%;
 }
   
 
@@ -741,7 +725,6 @@ input[type="submit"]:focus {
 /* selects ----------------------------------------------------------------- */
 select {
   text-transform: none;
-  background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
 }
@@ -767,7 +750,7 @@ select[multiple] {
     -webkit-background-size: 1.25em 0.625em;
     background-size: 1.25em 0.625em;
   } 
-}  
+} 
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -780,7 +763,6 @@ optgroup {
 /* textareas --------------------------------------------------------------- */
 textarea {
   height: auto;
-  *height: auto;
   min-height: 2.8em;
   overflow: auto;
   vertical-align: top;
@@ -794,13 +776,13 @@ select:focus:invalid,
 textarea:focus:invalid { 
   color: #b94a48; /* dark red */
   border-color: #ee5f5b; /* red */
+  outline: 1px solid #ee5f5b; 
 }
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus {
   border-color: #e9322d;
-  -webkit-box-shadow: 0 0 6px #f8b9b7;
-          box-shadow: 0 0 6px #f8b9b7;
+  outline: 1px solid #e9322d;
 }
 
 input::-webkit-input-placeholder,
@@ -1451,461 +1433,3 @@ a img.aligncenter {
     display: none !important; 
   }
 }
-
-
-
-
-
-
-
-
-
-
-/* ============================================================================
- *
- * $ Author's custom styles
- * Customize as you want the following starting code
- *
- =========================================================================== */
-
-/* @viewport rule (for responsive websites) --------------------------------
- * Fix IE 10 on Windows Phone 8 Viewport with JavaScript http://goo.gl/ryjPF
-@-ms-viewport { 
-  width: device-width;
-}
-*/
-
-/* box-model (no IE7 support) ----------------------------------------------
-*, 
-*:before, 
-*:after { 
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
-  box-sizing: border-box; 
-}
-*/
-
-/* Better float containment in IE7 using CSS expressions
- * http://nicolasgallagher.com/better-float-containment-in-ie/
-.super-clearfix {
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  *zoom: 1;
-}
-.super-clearfix:before,
-.super-clearfix:after {
-  content: "";
-  display: table;
-}
-.super-clearfix:after {
-  clear: both;
-}  
-*/
-
-/* body --------------------------------------------------------------------
- * TIPS: reset body styles if you use modal windows like fancybox
-body {
-  max-width: ;
-  *width: ;
-  margin: ;
-  padding: ;
-  position: ;
-}
-*/
-
-/* skin --------------------------------------------------------------------
-html, 
-button, 
-input, 
-select,
-optgroup,
-textarea {
-  font-family: ;
-  color: ;
-}
-html {
-  background-color: ;
-}
-a {
-  color: ;
-  text-decoration: ;
-  -webkit-tap-highlight-color: rgba(XXX, XXX, XXX, X.XX);
-}
-a:hover,
-a:focus {
-  color: ;
-  text-decoration: ;
-} 
-::-moz-selection {
-  background: ;
-  color: ;
-}
-::selection {
-  background: ;
-  color: ;
-}
-*/
-
-/* font-sizing -------------------------------------------------------------
-/* 15px 
-body {
-  font-size: 0.9375em;
-}
-table,
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-/* 14px 
-body {
-  font-size: 0.875em;
-}
-table,
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-/* 13px 
-body {
-  font-size: 0.8125em;
-}
-table,
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-/* 12px 
-body {
-  font-size: 0.75em;
-}
-table,
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-*/
-
-/* compose to a vertical rhythm ----------------------------------------------
- * (16px * 1.4 = 22.4px), customize as you want! 
-body,
-button,
-input {
-  line-height: 1.4;
-}
-body {
-  padding-top: 1.4em;
-}
-.tera,
-.giga,
-.gamma,
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6,
-p,
-pre,
-menu,
-ol,
-ul,
-dl,
-blockquote {
-  margin-top: 0;
-}
-hr {
-  margin-top: 1.4em;
-}
-figure img + figcaption {
-  margin-top: -1.4em;
-}
-p,
-pre,
-menu,
-ol,
-ul,
-dl,
-blockquote,
-hr,
-figure img,
-figcaption,
-address,
-audio,
-video,
-.flex-video-container,
-iframe[src*="youtube.com"],
-iframe[src*="vimeo.com"],
-embed[src*="youtube.com"],
-table,
-.table-overflow-container,
-button,
-.btn,
-input,
-select,
-textarea,
-.row,
-.img-left,
-.img-right,
-.alignnone,
-.alignright,
-.alignleft,
-a img.alignright,
-a img.alignnone,
-a img.alignleft,
-a img.aligncenter,
-.wp-caption.alignnone,
-.wp-caption.alignleft,
-.wp-caption.alignright,
-.chromeframe {
-  margin-bottom: 1.4em;
-}
-@media screen and (max-width: 40em) { 
-  .responsive-grid [class*="col-"] {
-    margin-bottom: 1.4em
-  }
-}
-ol ul,
-ul ul,
-ol ol,
-ul ol,
-.flex-video-container iframe[src*="youtube.com"],
-.flex-video-container iframe[src*="vimeo.com"],
-.flex-video-container embed[src*="youtube.com"] {
-  margin-bottom: 0;
-}
-.img-left,
-.alignright,
-a img.alignright,
-.wp-caption.alignright {
-  margin-left: 1.4em;
-}
-.img-right,
-.alignnone,
-.alignleft,
-a img.alignnone,
-a img.alignleft,
-.wp-caption.alignnone,
-.wp-caption.alignleft {
-  margin-right: 1.4em;
-}
-ul,
-ol,
-blockquote {
-  padding-left: 1.4em;
-}
-*/
-
-/* forms ----------------------------------------------------------------- */ 
-/* avoid auto-zooming form controls on iPhone and iPod
- * http://www.456bereastreet.com/archive/201212/ios_webkit_browsers_and_auto-zooming_form_controls/
-input[type="text"]:focus,
-textarea:focus,
-select:focus {
-  font-size: 16px;
-} */
-/*
-input[type="color"], 
-input[type="email"], 
-input[type="image"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="search"],
-input[type="text"], 
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
-input[type="url"],
-select,
-textarea {
-  border-color: ;
-  -webkit-box-shadow: ;
-  box-shadow: ;
-}
-@media \0screen {
-  input[type="color"]:focus, 
-  input[type="email"]:focus, 
-  input[type="number"]:focus, 
-  input[type="password"]:focus, 
-  input[type="tel"]:focus, 
-  input[type="search"]:focus,
-  input[type="text"]:focus, 
-  input[type="date"]:focus, 
-  input[type="datetime"]:focus, 
-  input[type="datetime-local"]:focus,
-  input[type="month"]:focus, 
-  input[type="time"]:focus, 
-  input[type="week"]:focus, 
-  input[type="time"]:focus, 
-  input[type="url"]:focus,
-  select:focus,
-  textarea:focus {
-    border-color: ;
-    outline: 1px solid ;
-  }
-}
-input[type="color"], 
-input[type="email"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="search"],
-input[type="text"], 
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
-input[type="url"],
-select {
-  padding: ;
-  *padding: ;
-  height: ;
-  *height: ;
-}
-button,
-.btn,
-input[type="button"], 
-input[type="reset"],
-input[type="submit"] {
-  color: ;
-  background-color: ;
-}
-button:hover,
-.btn:hover,
-input[type="button"]:hover, 
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-button:focus,
-.btn:focus,
-input[type="button"]:focus, 
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  color: ;
-  background-color: ;
-}
-*/
-/* linear gradient in IE9+ (note the '\9' at the end of the value)
-button:nth-of-type(1n),
-.btn:nth-of-type(1n),
-input[type="button"]:nth-of-type(1n), 
-input[type="reset"]:nth-of-type(1n) {
-  background: url(data:image/svg+xml;base64.....)\9;
-} */
-
-/* misc ----------------------------------------------------------------- */
-/* responsive Facebook comments embed
-.fb-comments, 
-.fb-comments span, 
-.fb-comments iframe {
-  width: 100% !important;
-} */
-/* prevent phone numbers looking twice as large and having a Skype highlight 
- * https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
-span.skype_pnh_container {
-  display: none !important;
-}
-span.skype_pnh_print_container {
-  display: inline !important;
-}
-*/
-
-
-
-
-
-/* $ Media queries reference
-============================================================================ */
-
-/* 320px 
-@media only screen and (min-width: 320px) { } 
-*/
-
-/* 480px 
-@media only screen and (min-width: 480px) { } 
-*/
-
-/* 767px 
-@media only screen and (min-width: 767px) { } 
-*/
-
-/* 979px 
-@media only screen and (min-width: 979px) { } 
-*/
-
-/* 1200px 
-@media only screen and (min-width: 1200px) { } 
-*/
-
-/* High resolution devices (retina)
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-} 
-*/
-
-
-
-
-
-/* $ 'Safe' CSS hacks reference
- * Check out the demo http://jsbin.com/css-hacks/5/quiet
-============================================================================ */
-
-/* IE7
-p { 
-  *color: darkred; 
-} */
-
-/* IE8
-@media \0screen {
-  p { 
-    color: green; 
-  }
-} */
-
-/* IE9+
-p:nth-of-type(1n) {
-  color: blue\9;
-} */ /* (note the '\9' at the end) */
-
-/* desktop/mobile IE10+
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  p {
-    color: orange;
-  }
-} */
-
-/* Webkit (Safari, Android, Chrome, ecc...)
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  p { 
-    color: cyan; 
-  } 
-} */  
-
-/* Firefox 3+ 
-@-moz-document url-prefix() {
-  p { 
-    color: magenta; 
-  } 
-} */

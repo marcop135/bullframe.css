@@ -1,0 +1,133 @@
+/*! Form elements - BULLFRAME CSS v1.4.0 extension 
+ *
+ * Customize as you want the following code
+ *
+ * https://github.com/marco135/bullframe.css/tree/master/extensions
+ * MIT License
+============================================================================ */
+
+
+/*
+input[type="color"], 
+input[type="email"], 
+input[type="image"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select,
+textarea {
+  border-color: ;
+}
+input[type="color"]:focus, 
+input[type="email"]:focus, 
+input[type="number"]:focus, 
+input[type="password"]:focus, 
+input[type="tel"]:focus, 
+input[type="search"]:focus,
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus,
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="time"]:focus, 
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  outline: ;
+}
+
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select {
+  padding: ;
+  *padding: ;
+}
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+input[type="file"] {
+  height: ;
+  *height: ;
+}
+
+
+button,
+.btn,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  color: ;
+  background-color: ;
+}
+button:hover,
+.btn:hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+.btn:focus,
+input[type="button"]:focus, 
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  color: ;
+  background-color: ;
+}
+
+
+ * Useful tips
+ *
+ * linear gradient in IE9+ (note the '\9' at the end of the value)
+ *
+button:nth-of-type(1n),
+.btn:nth-of-type(1n),
+input[type="button"]:nth-of-type(1n), 
+input[type="reset"]:nth-of-type(1n) {
+  background: url(data:image/svg+xml;base64.....)\9;
+} 
+ *
+ *
+ * avoid auto-zooming form controls on iPhone and iPod http://goo.gl/DExZO
+ *
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  font-size: 16px;
+}
+*/

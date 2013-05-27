@@ -1,0 +1,295 @@
+/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.0 extension 
+ *
+ * Customize as you want the following code
+ *
+ * https://github.com/marco135/bullframe.css/tree/master/extensions
+ * MIT License
+============================================================================ */
+
+
+
+/* Use @viewport rule ------------------------------------------------------
+
+ * Fix IE 10 on Windows Phone 8 Viewport with JavaScript http://goo.gl/ryjPF
+@-ms-viewport { 
+  width: device-width;
+} 
+*/
+
+
+
+
+
+/* Change box-model (no IE7 support) ---------------------------------------
+
+*, 
+*:before, 
+*:after { 
+  -webkit-box-sizing: border-box !important; 
+  -moz-box-sizing: border-box !important; 
+  box-sizing: border-box !important; 
+}
+*/
+
+
+
+
+
+/* Customize <body> element ------------------------------------------------
+ * TIPS: reset body styles if you use modal windows (e.g. fancybox)
+
+body {
+  max-width: ;
+  *width: ;
+  margin: ;
+  padding: ;
+  position: ;
+}
+*/
+
+
+
+
+
+/* Change skin -------------------------------------------------------------
+
+html, 
+button, 
+input, 
+select,
+optgroup,
+textarea {
+  font-family: ;
+  color: ;
+}
+html {
+  background-color: ;
+}
+
+
+a {
+  color: ;
+  text-decoration: ;
+  -webkit-tap-highlight-color: rgba(XXX, XXX, XXX, X.XX);
+}
+a:hover,
+a:focus {
+  color: ;
+  text-decoration: ;
+} 
+
+
+::-moz-selection {
+  background: ;
+  color: ;
+}
+::selection {
+  background: ;
+  color: ;
+}
+*/
+
+
+
+
+
+/* Change base font-size ---------------------------------------------------
+
+/* 15px 
+
+body {
+  font-size: 0.9375em;
+}
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 14px 
+
+body {
+  font-size: 0.875em;
+}
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 13px 
+
+body {
+  font-size: 0.8125em;
+}
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 12px 
+
+body {
+  font-size: 0.75em;
+}
+table,
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+*/
+
+
+
+
+
+/* Compose to a vertical rhythm --------------------------------------------
+ *
+ * reference to 'bullframe-vertical-rhythm.css' file
+ * https://github.com/marco135/bullframe.css/tree/master/extensions
+*/
+
+
+
+
+
+/* Customize <form> elements -----------------------------------------------
+ *
+ * reference to 'bullframe-forms.css' file
+ * https://github.com/marco135/bullframe.css/tree/master/extensions
+*/
+
+
+
+
+
+/* Miscellaneous -----------------------------------------------------------
+
+ * responsive Facebook comments embed
+
+.fb-comments, 
+.fb-comments span, 
+.fb-comments iframe {
+  width: 100% !important;
+}
+
+
+* prevent phone numbers looking twice as large and having a Skype highlight 
+* https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
+
+span.skype_pnh_container {
+  display: none !important;
+}
+span.skype_pnh_print_container {
+  display: inline !important;
+}
+
+
+* Better float containment in IE7 using CSS expressions
+* http://nicolasgallagher.com/better-float-containment-in-ie/
+
+.super-clearfix {
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  *zoom: 1;
+}
+.super-clearfix:before,
+.super-clearfix:after {
+  content: "";
+  display: table;
+}
+.super-clearfix:after {
+  clear: both;
+} 
+
+*/
+
+
+
+
+
+/* Flexible media queries reference ----------------------------------------
+
+/* 320px */ 
+@media only screen and (min-width: 20em) { } 
+
+
+/* 480px */ 
+@media only screen and (min-width: 30em) { } 
+
+
+/* 767px */ 
+@media only screen and (min-width: 47.9375em) { } 
+
+
+/* 979px */ 
+@media only screen and (min-width: 61.1875em) { } 
+
+
+/* 1200px */ 
+@media only screen and (min-width: 75em) { } 
+
+
+/* High resolution devices (retina) */
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+} 
+
+
+
+
+
+
+/* $ 'Safe' CSS hacks reference --------------------------------------------
+ * Check out the demo http://jsbin.com/css-hacks/5/quiet
+
+/* IE7 */
+.safe-css-hack { 
+  *color: darkred; 
+}
+
+/* IE8 */
+@media \0screen {
+  .safe-css-hack { 
+    color: green; 
+  }
+}
+
+/* IE9+ */
+.safe-css-hack:nth-of-type(1n) {
+  color: blue\9; /* note the '\9' at the end */
+} 
+
+/* desktop/mobile IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .safe-css-hack {
+    color: orange;
+  }
+}
+
+/* Webkit browsers (Safari, Android, Chrome, etc...) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .safe-css-hack { 
+    color: cyan; 
+  } 
+}  
+
+/* Firefox 3+ */
+@-moz-document url-prefix() {
+  .safe-css-hack { 
+    color: magenta; 
+  } 
+}

@@ -57,7 +57,6 @@ html,
 button, 
 input, 
 select,
-optgroup,
 textarea {
   font-family: ;
   color: ;
@@ -246,6 +245,12 @@ input[type="reset"],
 input[type="submit"] {
   color: ;
   background-color: ;
+  padding: ;
+  height: ;
+  min-width: ;
+}
+.btn {
+  *height: ;
 }
 button:hover,
 .btn:hover,

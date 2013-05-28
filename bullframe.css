@@ -682,6 +682,7 @@ input[type="submit"] {
   text-align: center;
   padding: 0.3em 0.75em;
   height: 2.125em; /* 34px */
+  line-height: 1.525em; /* 2.125 - (0.3 * 2) = 1.525 */
   min-width: 6.25em; /* 100px */
   cursor: pointer;
   border: 0;
@@ -694,7 +695,7 @@ input[type="submit"] {
   *overflow: visible;
 }
 .btn {
-  *height: 1.33375em;
+  *height: 1.525em;
 }
 button:active,
 .btn:active,

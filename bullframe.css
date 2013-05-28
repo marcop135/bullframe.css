@@ -189,7 +189,7 @@ pre {
   white-space: pre;
   white-space: -moz-pre-wrap; /* fennec */
   white-space: pre-wrap;
-  white-space: pre\9; /* IE7+ */
+  white-space: pre \9; /* IE7+ */
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -440,6 +440,7 @@ fieldset {
 }
 legend { 
   display: block;
+  display: table \9; /* enable line-wrapping in IE8+ */
   width: 100%;
   white-space: normal; /* enable line-wrapping in FF4/5 */
   border: 0;
@@ -447,13 +448,14 @@ legend {
   font-weight: bold;
   *margin-left: -7px;
 }
-/* IE8 */
-@media \0screen {
-  legend { 
-    display: table; /* enable line-wrapping in IE8+ */
-  } 
-}
-label { 
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
   cursor: pointer;
 }
 input, 
@@ -472,12 +474,6 @@ input,
 select, 
 textarea {
   font-size: 100%;
-}
-button, 
-input, 
-select, 
-optgroup, 
-textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 button, 
@@ -490,6 +486,15 @@ textarea {
 button,
 input {
   line-height: 1.4;
+}
+button,
+select {
+  text-transform: none;
+}
+optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
 }
 
 
@@ -658,9 +663,6 @@ label + input[type="checkbox"] {
 
 
 /* buttons ----------------------------------------------------------------- */
-button {
-  text-transform: none;
-}
 button::-moz-focus-inner, 
 input::-moz-focus-inner {
   border: 0;
@@ -671,15 +673,16 @@ button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   display: inline-block;
   *display: inline;
   *zoom: 1;
   text-align: center;
-  padding: 0.375em 0.6em;
-  min-width: 5.625em; /* 90px */
+  padding: 0.3em 0.75em;
+  height: 2.125em; /* 34px */
+  min-width: 6.25em; /* 100px */
   cursor: pointer;
   border: 0;
   background-clip: padding-box;
@@ -690,12 +693,8 @@ input[type="submit"] {
   *vertical-align: middle;
   *overflow: visible;
 }
-button,
-input[type="button"], 
-input[type="reset"],
-input[type="submit"] {
-  *padding-top: 0.2em;
-  *padding-bottom: 0.2em;
+.btn {
+  *height: 1.33375em;
 }
 button:active,
 .btn:active,
@@ -730,7 +729,6 @@ input[type="submit"]:focus {
 
 /* selects ----------------------------------------------------------------- */
 select {
-  text-transform: none;
   background-repeat: no-repeat;
   background-position: right center;
 }
@@ -760,9 +758,6 @@ select[multiple] {
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-optgroup {
-  font-style: normal;
 }
 
 
@@ -875,7 +870,7 @@ thead th {
 th,
 td { 
   vertical-align: top;
-  padding: 0.5em;
+  padding: 0.466666666em;
   border-bottom: 1px solid #999;
 }
 th,
@@ -1273,7 +1268,7 @@ th {
   white-space: pre;
   white-space: -moz-pre-wrap; /* fennec */
   white-space: pre-wrap;
-  white-space: pre\9; /* IE7+ */
+  white-space: pre \9; /* IE7+ */
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;

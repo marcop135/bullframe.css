@@ -92,6 +92,9 @@ a img.aligncenter,
     margin-bottom: 1.4em
   }
 }
+legend {
+  padding-bottom: 1.4em;
+}
 ol ul,
 ul ul,
 ol ol,

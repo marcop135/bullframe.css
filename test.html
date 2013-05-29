@@ -5,25 +5,76 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-      
+        
 <title>BULLFRAME CSS demo page</title>
 <meta content="https://github.com/marco135/bullframe.css/" name="description">
          
 <link href="bullframe.css" rel="stylesheet">
-<style>  
-  /* styles for header, section titles and footer */
-  [role="banner"], .download { color: #fff; padding: 1em; margin-bottom: 2.8em; background-color: #ff8051; }
-  [role="banner"] .mega, .download .mega { margin-top: 0; }
-  .download { margin: 2.8em 0 1.4em 0; }
-  .title, h3 { padding: .3em; }
-  .title { color: #fff; background-color: #222; margin-top: 2.8em; }
-  h3 { background-color: #eaeaea; }
-  .headings h3 { background-color: transparent; padding: 0; } 
-  /* styles for grid system example */
-  .grid-system .container { background: #999; min-height: 100px; line-height: 100px;  color: #fff; font-size: 0.875em; text-align: center; }   
+<style> 
+/* styles for header, section titles and footer */
+[role="banner"], .download {
+  color: #fff;
+  padding: 1em;
+  margin-bottom: 2.8em;
+  background-color: #ff8051;
+}
+[role="banner"] .mega, .download .mega {
+  margin-top: 0;
+}
+.download {
+  margin: 2.8em 0 1.4em 0;
+}
+.title, h3 {
+  padding: .3em;
+}
+.title {
+  color: #fff;
+  background-color: #222;
+  margin-top: 2.8em;
+}
+h3 {
+  background-color: #eaeaea;
+}
+.headings h3 {
+  background-color: transparent;
+  padding: 0;
+} 
+  
+  
+/* styles for grid system example */
+@media screen and (max-width: 29.9375em ) {
+ /* 479px */
+  .grid-system .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .grid-system [class*="col-"] {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    *margin-left: 0;
+    margin-bottom: 1.4em;
+  };
+}
+.grid-system .container {
+  background: #999;
+  min-height: 75px;
+  line-height: 75px;
+  color: #fff;
+  font-size: 0.875em;
+  text-align: center;
+}   
+  
+  
+/* hide jsbin edit button in live preview */
+.touch #edit-with-js-bin {
+  display: none !important
+}
 </style>
   
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 </head>
 
 <body> 
@@ -575,7 +626,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 <h2 id="grid-system" class="title">Fluid grid system</h2>
 <h3>12 fluid columns (%)</h3>  
-<div class="grid-system responsive-grid">  
+<div class="grid-system">  
         
  <!-- 1-1 --> 
   <div class="row"> 

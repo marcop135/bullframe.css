@@ -104,6 +104,8 @@ ul ol,
 .flex-video-container embed[src*="//www.youtube.com"] {
   margin-bottom: 0;
 }
+ul,
+ol,
 .img-left,
 .alignright,
 a img.alignright,
@@ -119,8 +121,6 @@ a img.alignleft,
 .wp-caption.alignleft {
 	margin-right: 1.4em;
 }
-ul,
-ol,
 blockquote {
   padding-left: 1.4em;
 }

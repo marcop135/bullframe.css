@@ -1,6 +1,7 @@
 /*!=========================================================================
- * BULLFRAME.CSS v1.4.0
+ * BULLFRAME.CSS v1.4.0 no-ie7
  *
+ * Browser support: IE8+
  * Source: https://github.com/marco135/bullframe.css/
  * MIT License 
  =========================================================================== */
@@ -18,7 +19,6 @@ html {
 body {
   /* 20px + 940px + 20px = 980px */
   max-width: 940px; 
-  *min-width: 940px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
   padding-left: 20px;
   padding-right: 20px;
   margin: auto; /* center */
@@ -42,8 +42,6 @@ summary {
 canvas, 
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 } 
 [hidden] { 
   display: none;
@@ -171,11 +169,6 @@ blockquote {
 }
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
-}
-q:before,
-q:after {
-  *content: '';
-  *content: none;
 }
 mark { 
   background: #ff0; /* yellow */
@@ -378,7 +371,6 @@ video {
 img {
   vertical-align: middle;
   border: 0;
-  -ms-interpolation-mode: bicubic;
 }
 audio:not([controls]) { 
   display: none;
@@ -474,7 +466,6 @@ legend {
   border: 0;
   padding: 0 0 1.4em 0;
   font-weight: bold;
-  *margin-left: -7px;
 }
 label,
 select,
@@ -496,15 +487,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 input, 
 select, 
 textarea {
   margin: 0 0 1.4em 0;
   vertical-align: baseline;
-  *vertical-align: middle;
 }
 
 
@@ -629,10 +617,6 @@ input,
 select,
 textarea {
   width: 100%;
-  *width: 99%; /* IE7 doesn't support CSS3 'box-sizing' */
-}
-select {
-  *width: 100%;
 }
 input[type="image"],
 input[type="submit"],
@@ -658,11 +642,6 @@ input[type="url"],
 select, 
 textarea {
   padding: 0.3em;
-  *padding-left: 0.5%; /* IE7 doesn't support CSS3 'box-sizing' */
-  *padding-right: 0.5%;
-}
-textarea {
-  *padding: 0.5%;
 }
 input[type="color"], 
 input[type="email"], 
@@ -678,7 +657,6 @@ input[type="week"],
 input[type="time"], 
 input[type="url"] {
   height: 2.125em;
-  *height: 1.33375em;
 }
   
 
@@ -686,9 +664,6 @@ input[type="url"] {
 input[type="radio"], 
 input[type="checkbox"] {
   padding: 0;
-  *margin-bottom: 0;
-  *width: 13px;
-  *height: 13px;
 }
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -728,11 +703,6 @@ input[type="submit"] {
   background-color: #1467ff; /* cyan */
   margin: 0 0 1.4em 0;
   vertical-align: baseline;
-  *vertical-align: middle;
-  *overflow: visible;
-}
-.btn {
-  *height: 1.525em;
 }
 button:active,
 .btn:active,
@@ -926,7 +896,6 @@ th {
  */
 .table-overflow-container { 
   overflow-x: auto;
-  *overflow-x: scroll;
 }
 /* force and customize webkit scrollbars appearance */
 .table-overflow-container.scrollbar {
@@ -981,12 +950,7 @@ th {
  *
  * 3. IE8+: ok
  *
- * 4. IE7: ok
- * Avoid sub-pixel layouts-breaking and emulate box-sizing using CSS Expressions
- * http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
- * http://www.maratz.com/blog/archives/2012/08/01/emulate-box-sizing-in-ie7/
- *
- * 5. Opera and Safari round the numbers down. 
+ * 4. Opera and Safari round the numbers down. 
  * No fix :(
  * A discussion about Opera on GitHub https://github.com/jokjus/centage/issues/1
  * A discussion about Bootstrap fluid grid system on StackOverflow
@@ -1001,7 +965,6 @@ th {
  *
     body {
       max-width: 940px;
-      *min-width: 940px;
     } 
  *
  */
@@ -1009,7 +972,6 @@ th {
   display: block;
   margin-left: -10px;
   margin-right: -10px;
-  *zoom: 1;
 }
 .row:before,
 .row:after {
@@ -1031,83 +993,63 @@ th {
 }
 .col-1 {
   width: 100%;
-  *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-2 {
   width: 50%;
-  *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-3 {
   width: 33.33333%;
-  *width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-2-3 {
   width: 66.66666%;
-  *width: expression((this.parentNode.clientWidth/3*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
 .col-1-4 {
   width: 25%;
-  *width: expression((this.parentNode.clientWidth/4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-3-4 {
   width: 75%;
-  *width: expression((this.parentNode.clientWidth/4*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
 .col-1-5 {
   width: 20%;
-  *width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-2-5 {
   width: 40%;
-  *width: expression((this.parentNode.clientWidth/5*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-3-5 {
   width: 60%;
-  *width: expression((this.parentNode.clientWidth/5*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-4-5 {
   width: 80%;
-  *width: expression((this.parentNode.clientWidth/5*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-6 {
   width: 16.656%;
-  *width: expression((this.parentNode.clientWidth/6 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-5-6 {
   width: 83.33%;
-  *width: expression((this.parentNode.clientWidth/6*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-8 {
   width: 12.5%;
-  *width: expression((this.parentNode.clientWidth/8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-3-8 {
   width: 37.5%;
-  *width: expression((this.parentNode.clientWidth/8*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-5-8 {
   width: 62.5%;
-  *width: expression((this.parentNode.clientWidth/8*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-7-8 {
   width: 87.5%;
-  *width: expression((this.parentNode.clientWidth/8*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-12 {
   width: 8.3333%;
-  *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-5-12 {
   width: 41.6666%;
-  *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-7-12 {
   width: 58.3333%;
-  *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-11-12 {
   width: 91.6666%;
-  *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 /* responsive grid */
 @media screen and (max-width: 640px) {
@@ -1117,7 +1059,6 @@ th {
   }
   .responsive-grid [class*="col-"] {
     width: 100%;
-    *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
     float: none;
     padding-left: 0;
     padding-right: 0;
@@ -1167,25 +1108,6 @@ th {
 .clearfix:after {
   clear: both;
 }
-.clearfix {
-  *zoom: 1;
-}
-/*
- * Better float containment in IE7 using CSS expressions
- * http://nicolasgallagher.com/better-float-containment-in-ie/ 
- */
-.super-clearfix:before,
-.super-clearfix:after {
-  content: "";
-  display: table;
-}
-.super-clearfix:after {
-  clear: both;
-} 
-.super-clearfix {
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  *zoom: 1; /* non-JS fallback */
-}
 
 
 /* image replacement ------------------------------------------------------- */
@@ -1201,7 +1123,6 @@ th {
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  *text-indent: -9999px; /* IE7 fallback */
 }
 .img-r:before,
 .ir:before {
@@ -1232,23 +1153,18 @@ th {
 }
 .width-1-2 {
   width: 50% !important;
-  *width: 49.9469% !important;
 }
 .width-1-3 {
   width: 33.3333333333% !important;
-  *width: 33.2802333333% !important;
 }
 .width-1-4 {
   width: 25% !important;
-  *width: 24.9469% !important;
 }
 .width-1-5 {
   width: 20% !important;
-  *width: 19.9469% !important;
 }
 .width-1-6 {
   width: 16.6666666667% !important;
-  *width: 16.6135666667% !important;
 }
 
 .block {
@@ -1259,8 +1175,6 @@ th {
 }
 .inline-block-container {
   letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-  *letter-spacing: normal; /* reset IE < 8 */
-  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
   text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
 /* Opera as of 12 on Windows needs word-spacing.
@@ -1285,8 +1199,6 @@ th {
  */
 .inline-block {
   display: inline-block !important;
-  *display: inline !important;
-  *zoom: 1 !important;
   vertical-align: top;
   letter-spacing: normal;
   word-spacing: normal;
@@ -1311,7 +1223,6 @@ th {
 .screen-reader-text,
 .assistive-text {
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */

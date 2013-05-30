@@ -40,7 +40,7 @@
 
 body {
   max-width: ;
-  *width: ;
+  *min-width: ;
   margin: ;
   padding: ;
   position: ;
@@ -315,22 +315,6 @@ input[type="submit"]:focus {
       display: inline !important;
     }
 
-
-* Better float containment in IE7 using CSS expressions
-* http://nicolasgallagher.com/better-float-containment-in-ie/
-
-    .super-clearfix {
-      *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-      *zoom: 1;
-    }
-    .super-clearfix:before,
-    .super-clearfix:after {
-      content: "";
-      display: table;
-    }
-    .super-clearfix:after {
-      clear: both;
-    } 
 
 */
 

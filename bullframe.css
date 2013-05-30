@@ -17,7 +17,7 @@ html {
 body {
   /* 20px + 940px + 20px = 980px */
   max-width: 940px; 
-  *width: 940px; /* fixed width in IE7 */
+  *min-width: 940px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
   padding-left: 20px;
   padding-right: 20px;
   margin: auto; /* center */
@@ -100,6 +100,7 @@ h5 small,
 h6 small,
 .h6 small {
   font-weight: 400;
+  line-height: 1.1;
 }
 h1, 
 h2,
@@ -971,20 +972,20 @@ th {
  * Unfortunately, there’s no silver bullet.
  * Read on.
  *
- * FF4+: ok
+ * 1. FF4+: ok
  *
- * WebKit is ok since 3 May, 2013 
+ * 2. WebKit is ok since 3 May, 2013 
  * http://css-tricks.com/percentage-bugs-in-webkit/
  * http://trac.webkit.org/changeset/116009
  *
- * IE8+: ok
+ * 3. IE8+: ok
  *
- * IE7: no %, use fixed grid
- * "The only way to prevent layouts from breaking in IE6/7 is to fractionally 
- * reduce the percentages so that they add up to just under 100%."
- * - http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+ * 4. IE7: ok
+ * Avoid sub-pixel layouts-breaking and emulate box-sizing using CSS Expressions
+ * http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+ * http://www.maratz.com/blog/archives/2012/08/01/emulate-box-sizing-in-ie7/
  *
- * Opera and Safari round the numbers down. 
+ * 5. Opera and Safari round the numbers down. 
  * No fix :(
  * A discussion about Opera on GitHub https://github.com/jokjus/centage/issues/1
  * A discussion about Bootstrap fluid grid system on StackOverflow
@@ -999,7 +1000,7 @@ th {
  *
     body {
       max-width: 940px;
-      *width: 940px;
+      *min-width: 940px;
     } 
  *
  */
@@ -1008,9 +1009,6 @@ th {
   margin-left: -10px;
   margin-right: -10px;
   margin-bottom: 1.4em;
-  *margin-left: 0;
-  *margin-right: 0;
-  *width: 940px;
   *zoom: 1;
 }
 .row:before,
@@ -1030,94 +1028,90 @@ th {
   min-height: 1;
   padding-left: 10px;
   padding-right: 10px;  
-  *padding-left: 0;
-  *padding-right: 0;
-  *margin-left: 20px;
-}
-[class*="col-"]:first-child {
-  *margin-left: 0;
 }
 .col-1 {
   width: 100%;
+  *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-2 {
   width: 50%;
-  *width: 460px;
+  *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-3 {
   width: 33.33333%;
-  *width: 300px;
+  *width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-2-3 {
   width: 66.66666%;
-  *width: 620px;
+  *width: expression((this.parentNode.clientWidth/3*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
 .col-1-4 {
   width: 25%;
-  *width: 220px;
+  *width: expression((this.parentNode.clientWidth/4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-3-4 {
   width: 75%;
-  *width: 700px;
+  *width: expression((this.parentNode.clientWidth/4*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
 .col-1-5 {
   width: 20%;
-  *width: 172px;
+  *width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-2-5 {
   width: 40%;
-  *width: 364px;
+  *width: expression((this.parentNode.clientWidth/5*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-3-5 {
   width: 60%;
-  *width: 556px;
+  *width: expression((this.parentNode.clientWidth/5*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-4-5 {
   width: 80%;
-  *width: 748px;
+  *width: expression((this.parentNode.clientWidth/5*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-6 {
   width: 16.656%;
-  *width: 140px;
+  *width: expression((this.parentNode.clientWidth/6 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-5-6 {
   width: 83.33%;
-  *width: 780px;
+  *width: expression((this.parentNode.clientWidth/6*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-8 {
   width: 12.5%;
-  *width: 100px;
+  *width: expression((this.parentNode.clientWidth/8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-3-8 {
   width: 37.5%;
-  *width: 340px;
+  *width: expression((this.parentNode.clientWidth/8*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-5-8 {
   width: 62.5%;
-  *width: 580px;
+  *width: expression((this.parentNode.clientWidth/8*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-7-8 {
   width: 87.5%;
-  *width: 820px;
+  *width: expression((this.parentNode.clientWidth/8*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-1-12 {
   width: 8.3333%;
-  *width: 60px;
+  *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+  *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-5-12 {
   width: 41.6666%;
-  *width: 380px;
+  *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-7-12 {
   width: 58.3333%;
-  *width: 540px;
+  *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 .col-11-12 {
   width: 91.6666%;
-  *width: 860px;
+  *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 /* responsive grid */
-@media screen and (max-width: 40em) { /* 640px */
+@media screen and (max-width: 640px) {
   .responsive-grid .row {
     margin-left: 0;
     margin-right: 0;
@@ -1125,10 +1119,10 @@ th {
   }
   .responsive-grid [class*="col-"] {
     width: 100%;
+    *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
     float: none;
     padding-left: 0;
     padding-right: 0;
-    *margin-left: 0;
     margin-bottom: 1.4em;
   } 
 }
@@ -1152,6 +1146,22 @@ th {
 }
 .clearfix {
   *zoom: 1;
+}
+/*
+ * Better float containment in IE7 using CSS expressions
+ * http://nicolasgallagher.com/better-float-containment-in-ie/ 
+ */
+.super-clearfix:before,
+.super-clearfix:after {
+  content: "";
+  display: table;
+}
+.super-clearfix:after {
+  clear: both;
+} 
+.super-clearfix {
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  *zoom: 1; /* non-JS fallback */
 }
 
 

@@ -478,7 +478,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
     <label>Textarea placeholder<textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
   </fieldset>
   
-  <h3>Clickable inputs</h3>
+  <h3>Clickable inputs (default)</h3>
   <fieldset>
     <div><input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image"></div>
     <div><input type="reset" value="Reset (input)"></div>
@@ -489,7 +489,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
   </fieldset>
 
 
-  <h3>Buttons</h3>
+  <h3>Buttons (default)</h3>
   <fieldset>
     <div><button type="reset">Reset (button)</button></div>
     <div><button type="button">Button (button)</button></div>
@@ -497,13 +497,73 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
     <div><button disabled type="submit">Disabled (button)</button></div>
   </fieldset>
 
+  <h3>Clickable inputs (primary)</h3>
+  <fieldset>
+    <div><input class="btn-primary" type="reset" value="Reset (input)"></div>
+    <div><input class="btn-primary" type="button" value="Button (input)"></div>
+    <div><input class="btn-primary" type="submit" value="Submit (input)"></div>
+    <div><a class="btn-primary" href="#" title="button link">Button (link)</a></div>
+    <div><input class="btn-primary" disabled type="submit" value="Disabled (input)"></div>
+  </fieldset>
+
+
+  <h3>Buttons (primary)</h3>
+  <fieldset>
+    <div><button class="btn-primary" type="reset">Reset (button)</button></div>
+    <div><button class="btn-primary" type="button">Button (button)</button></div>
+    <div><button class="btn-primary" type="submit">Submit (button)</button></div>
+    <div><button class="btn-primary" disabled type="submit">Disabled (button)</button></div>
+  </fieldset>
+
 </form>
 
 
-
 <h2 id="tables" class="title">Tables</h2>
-<h3>Tabular data</h3>
+  
+<h3>Tabular data unstyled</h3>
 <table>
+  <caption>Jimi Hendrix - albums</caption>
+  <thead>
+    <tr>
+      <th>Album</th>
+      <th>Year</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Album</th>
+      <th>Year</th>
+      <th>Price</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Are You Experienced</td>
+      <td>1967</td>
+      <td>$10.00</td>
+    </tr>
+    <tr>
+      <td>Axis: Bold as Love</td>
+      <td>1967</td>
+      <td>$12.00</td>
+    </tr>
+    <tr>
+      <td>Electric Ladyland</td>
+      <td>1968</td>
+      <td>$10.00</td>
+    </tr>
+    <tr>
+      <td>Band of Gypsys</td>
+      <td>1970</td>
+      <td>$12.00</td>
+    </tr>
+  </tbody>
+</table>
+  
+  
+<h3>Tabular data</h3>
+<table class="table">
   <caption>Jimi Hendrix - albums</caption>
   <thead>
     <tr>
@@ -545,7 +605,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 <h3>Responsive tabular data</h3>
 <div class="table-overflow-container scrollbar">
-<table>
+<table class="table">
   <caption>Caption goes here</caption>
   <thead>
     <tr>

@@ -1,4 +1,4 @@
-/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.0 extension 
+/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.1 extension 
  *
  * Customize as you want the following code
  *
@@ -282,7 +282,7 @@ input[type="submit"]:focus {
  *
  * avoid auto-zooming form controls on iPhone and iPod http://goo.gl/DExZO
  *
-    input[type="text"]:focus,
+    input:focus,
     textarea:focus,
     select:focus {
       font-size: 16px;

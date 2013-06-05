@@ -1,4 +1,4 @@
-/*! Vertical rhythm - BULLFRAME CSS v1.4.0 extension 
+/*! Vertical rhythm - BULLFRAME CSS v1.4.1 extension 
  * 
  * Follow baseline number '1.4' and compose to a vertical rhythm
  * ..or use the number you want.
@@ -68,6 +68,7 @@ table,
 .table-overflow-container,
 button,
 .btn,
+.btn-primary,
 input,
 select,
 textarea,
@@ -106,13 +107,13 @@ ul ol,
 }
 ul,
 ol,
-.img-left,
+.img-right,
 .alignright,
 a img.alignright,
 .wp-caption.alignright {
 	margin-left: 1.4em;
 }
-.img-right,
+.img-left,
 .alignnone,
 .alignleft,
 a img.alignnone,

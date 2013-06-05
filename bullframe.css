@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME.CSS v1.4.0
+ * BULLFRAME.CSS v1.4.1
  *
  * Source: https://github.com/marco135/bullframe.css/
  * MIT License 
@@ -84,24 +84,6 @@ h6,
 .h6 {
   font-weight: 700;
   line-height: 1.2; /* reduce base line-height for better display */
-}
-.tera small,
-.giga small,
-.gamma small,
-h1 small,
-.h1 small, 
-h2 small, 
-.h2 small,
-h3 small, 
-.h3 small,
-h4 small,
-.h4 small,
-h5 small,
-.h5 small, 
-h6 small,
-.h6 small {
-  font-weight: 400;
-  line-height: 1.1;
 }
 h1, 
 h2,
@@ -384,40 +366,6 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-
-/* flex videos ------------------------------------------------------------- */
-.flex-video-container {
-  position: relative;
-  padding-bottom: 67.5%; /* 4:3 standard */
-  padding-top: 1.5625em;
-  height: 0;
-  overflow: hidden;
-}
-.flex-video-container.widescreen {
-  padding-bottom: 56.25%; /* 16:9 */
-}
-.flex-video-container.vimeo {
-  padding-top: 0; /* no extra-padding for controls */
-}
-.flex-video-container iframe,  
-.flex-video-container object,  
-.flex-video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* 
- * how to wraps videos via jQuery:
- * 
-   <script>
-     jQuery(function() {
-        jQuery('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
-     });
-   </script>
- * 
-*/
 svg:not(:root) { 
   overflow: hidden;
 }
@@ -492,6 +440,7 @@ select,
 textarea,
 button,
 .btn,
+.btn-primary,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
@@ -620,7 +569,8 @@ input[type="submit"],
 select, 
 textarea,
 button,
-.btn {
+.btn,
+.btn-primary {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -629,8 +579,9 @@ input,
 select,
 textarea {
   width: 100%;
-  *width: 99%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *width: 98%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
+input[type="file"],
 select {
   *width: 100%;
 }
@@ -658,11 +609,11 @@ input[type="url"],
 select, 
 textarea {
   padding: 0.3em;
-  *padding-left: 0.5%; /* IE7 doesn't support CSS3 'box-sizing' */
-  *padding-right: 0.5%;
+  *padding-left: 1%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 1%;
 }
 textarea {
-  *padding: 0.5%;
+  *padding: 1%;
 }
 input[type="color"], 
 input[type="email"], 
@@ -714,6 +665,7 @@ input::-moz-focus-inner {
 } 
 button,
 .btn,
+.btn-primary,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
@@ -724,23 +676,29 @@ input[type="submit"] {
   cursor: pointer;
   border: 0;
   background-clip: padding-box;
-  color: #fff;
-  background-color: #1467ff; /* cyan */
+  background-color: #ccc;
   margin: 0 0 1.4em 0;
   vertical-align: baseline;
   *vertical-align: middle;
   *overflow: visible;
 }
-.btn {
+.btn,
+.btn-primary {
   *height: 1.525em;
+}
+button.btn,
+button.btn-primary {
+  *height: 2.125em; /* 34px */
 }
 button:active,
 .btn:active,
+.btn-primary:active,
 input[type="button"]:active, 
 input[type="reset"]:active,
 input[type="submit"]:active,
 button:focus,
 .btn:focus,
+.btn-primary:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
@@ -756,12 +714,38 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  background-color: #0039a3; /* dark blue */
+  background-color: #adadad; /* grey */
 }
 .btn:hover,
-.btn:focus {
-  color: #fff;
+.btn:focus,
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #222;
   text-decoration: none;
+}
+
+/* primary buttons */
+button.btn-primary,
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+input.btn-primary[type="button"], 
+input.btn-primary[type="reset"],
+input.btn-primary[type="submit"] {
+  color: #fff;
+  background-color: #1467ff; /* cyan */
+}
+button.btn-primary:hover,
+.btn-primary:hover,
+input.btn-primary[type="button"]:hover, 
+input.btn-primary[type="reset"]:hover,
+input.btn-primary[type="submit"]:hover,
+button.btn-primary:focus,
+.btn-primary:focus,
+input.btn-primary[type="button"]:focus, 
+input.btn-primary[type="reset"]:focus,
+input.btn-primary[type="submit"]:focus {
+  background-color: #0039a3; /* dark blue */
 }
 
 
@@ -824,6 +808,7 @@ select:focus:invalid:focus {
   outline: 1px solid #e9322d;
 }
 
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #888; /* gray */
@@ -849,43 +834,86 @@ input:placeholder,
 textarea:placeholder {
   color: #888;
 }
+input.placeholder,
+textarea.placeholder {
+  color: #888;
+}
 
-button[readonly],
-input[readonly],
-select[readonly],
-textarea[readonly],
 button[disabled],
 .btn[disabled],
-.btn.disabled,
+.btn-primary[disabled],
 input[disabled],
 select[disabled],
 textarea[disabled],
+
 fieldset[disabled] button,
 fieldset[disabled] .btn,
+fieldset[disabled] .btn-primary,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
-.btn[disabled]:hover,
-button[disabled]:hover,
-input[disabled]:hover,
-.btn[disabled]:focus,
-button[disabled]:focus,
-input[disabled]:focus {
+
+button:hover[disabled],
+.btn:hover[disabled],
+.btn-primary:hover[disabled],
+input:hover[disabled],
+select:hover[disabled],
+textarea:hover[disabled],
+
+button:focus[disabled],
+.btn:focus[disabled],
+.btn-primary:focus[disabled],
+input:focus[disabled],
+select:focus[disabled],
+textarea:focus[disabled],
+
+button.disabled,
+.btn.disabled,
+.btn-primary.disabled,
+input.disabled,
+select.disabled,
+textarea.disabled,
+
+fieldset.disabled button,
+fieldset.disabled .btn,
+fieldset.disabled .btn-primary,
+fieldset.disabled input,
+fieldset.disabled select,
+fieldset.disabled textarea,
+
+button.disabled:hover,
+.btn.disabled:hover,
+.btn-primary.disabled:hover,
+input.disabled:hover,
+select.disabled:hover,
+textarea.disabled:hover,
+
+button.disabled:focus,
+.btn.disabled:focus,
+.btn-primary.disabled:focus,
+input.disabled:focus,
+select.disabled:focus,
+textarea.disabled:focus {
   cursor: default;
   cursor: not-allowed;
-  background-color: #eaeaea; /* very light grey */
+  background: #efefef none !important; /* very light grey */
   border-color: #ccc;
-  color: #888;
+  color: #adadad;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
+  text-shadow: none;
   opacity: 1;
 }
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
-input[type="radio"][readonly],
-input[type="checkbox"][readonly],
 fieldset[disabled] input[type="radio"],
-fieldset[disabled] input[type="checkbox"] {
+fieldset[disabled] input[type="checkbox"],
+
+input[type="radio"].disabled,
+input[type="checkbox"].disabled,
+fieldset.disabled input[type="radio"],
+fieldset.disabled input[type="checkbox"] {
   background-color: transparent;
 }
 
@@ -909,6 +937,9 @@ thead th {
 th,
 td { 
   vertical-align: top;
+}
+.table th,
+.table td {
   padding: 0.466666666em;
   border-bottom: 1px solid #999;
 }
@@ -919,45 +950,6 @@ caption {
 th {
   font-weight: bold;
 }
-
-
-/* Responsive Tables --------------------------------------------------------
- * Note: issues on Opera 10-11, Opera Mobile and Opera Mini 
- */
-.table-overflow-container { 
-  overflow-x: auto;
-  *overflow-x: scroll;
-}
-/* force and customize webkit scrollbars appearance */
-.table-overflow-container.scrollbar {
-  -webkit-overflow-scrolling: auto; 
-}
-.table-overflow-container.scrollbar::-webkit-scrollbar {
-  width: 12px;
-  height: 12px
-}
-.table-overflow-container.scrollbar::-webkit-scrollbar-track{
-  background-color: #dbdbdb; 
-}
-.table-overflow-container.scrollbar::-webkit-scrollbar-thumb {
-  background-color: #999; 
-}
-.table-overflow-container.scrollbar::-webkit-scrollbar-thumb:window-inactive {
-  background-color: #f0f0f0; 
-}
-.table-overflow-container table {
-  width: 100%;
-}
-/* 
- * how to wraps table via jQuery:
- * 
-   <script>
-     jQuery(function() {
-       jQuery('.content table').wrap('<div class="table-overflow-container"></div>');
-     });
-   </script>
- * 
-*/
 
 
 
@@ -1385,6 +1377,15 @@ th {
   -ms-hyphens: none;
   hyphens: none;
 }
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
 .justify {
   text-align: justify;                
   -webkit-hyphens: auto;
@@ -1400,8 +1401,95 @@ th {
 }
 
 
-/* $ Wordpress Core CSS (relative units)
- * http://codex.wordpress.org/CSS ------------------------------------------ */
+/* responsive tables --------------------------------------------------------
+ * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini 
+ */
+.table-overflow-container { 
+  overflow-x: auto;
+  *overflow-x: scroll;
+}
+/* force and customize webkit scrollbars appearance */
+.table-overflow-container.scrollbar {
+  -webkit-overflow-scrolling: auto; 
+}
+.table-overflow-container.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px
+}
+.table-overflow-container.scrollbar::-webkit-scrollbar-track{
+  padding: 0.2em;
+  background-color: transparent; 
+}
+.table-overflow-container.scrollbar::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #999; 
+}
+.table-overflow-container.scrollbar::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #ccc; 
+}
+.table-overflow-container table {
+  width: 100%;
+  margin-bottom: 0.4666666em;
+}
+/* 
+ * how to wraps table via jQuery:
+ * 
+   <script>
+     jQuery(function() {
+       jQuery('.content table').wrap('<div class="table-overflow-container"></div>');
+     });
+   </script>
+ * 
+*/
+
+
+/* flex videos ------------------------------------------------------------- */
+.flex-video-container {
+  position: relative;
+  padding-bottom: 67.5%; /* 4:3 standard */
+  padding-top: 1.5625em;
+  height: 0;
+  overflow: hidden;
+}
+.flex-video-container.widescreen {
+  padding-bottom: 56.25%; /* 16:9 */
+}
+.flex-video-container.vimeo {
+  padding-top: 0; /* no extra-padding for controls */
+}
+.flex-video-container iframe,  
+.flex-video-container object,  
+.flex-video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 
+ * how to wraps videos via jQuery:
+ * 
+   <script>
+     jQuery(function() {
+        jQuery('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
+     });
+   </script>
+ * 
+*/
+
+
+/* WordPress Core CSS (relative units)
+ * http://codex.wordpress.org/CSS 
+ *
+ * - WordPress generated classes
+ * Several classes for aligning images and block elements (div, p, table etc.)
+ * were introduced in WordPress 2.5: aligncenter, alignleft and alignright. 
+ * In addition the class alignnone is added to images that are not aligned, 
+ * so they can be styled differently if needed.
+ * The same classes are used to align images that have a caption (as of
+ * WordPress 2.6).
+ * ------------------------------------------------------------------------ */
 .alignnone {
   margin: 0.7em 1.4em 1.4em 0;
 }
@@ -1467,9 +1555,9 @@ a img.aligncenter {
 
 /* miscellaneous ----------------------------------------------------------- */
 .chromeframe {
-  margin: 0 0 1.4em 0;
-  padding: 0.75em;
-  background-color: #e0e0e0; /* grey */
+  margin: 0.466666em;
+  padding: 0.466666em;
+  background-color: #e0e0e0; /* light grey */
   color: #000;
 }
 .print-only { 

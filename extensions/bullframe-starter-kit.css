@@ -250,7 +250,12 @@ input[type="submit"] {
   height: ;
   min-width: ;
 }
-.btn {
+.btn,
+.btn-primary {
+  *height: ;
+}
+button.btn,
+button.btn-primary {
   *height: ;
 }
 button:hover,

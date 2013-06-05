@@ -839,66 +839,78 @@ textarea.placeholder {
   color: #888;
 }
 
-button[disabled],
-.btn[disabled],
-.btn-primary[disabled],
-input[disabled],
-select[disabled],
-textarea[disabled],
-
-fieldset[disabled] button,
 fieldset[disabled] .btn,
 fieldset[disabled] .btn-primary,
+fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
 
-button:hover[disabled],
+.btn[disabled],
+.btn-primary[disabled],
+button[disabled],
+button.btn-primary[disabled],
+input[disabled],
+input.btn-primary[disabled],
+select[disabled],
+textarea[disabled],
+
 .btn:hover[disabled],
 .btn-primary:hover[disabled],
+button:hover[disabled],
+button.btn-primary:hover[disabled],
 input:hover[disabled],
+input.btn-primary:hover[disabled],
 select:hover[disabled],
 textarea:hover[disabled],
 
-button:focus[disabled],
 .btn:focus[disabled],
 .btn-primary:focus[disabled],
+button:focus[disabled],
+button.btn-primary:focus[disabled],
 input:focus[disabled],
+input.btn-primary:focus[disabled],
 select:focus[disabled],
 textarea:focus[disabled],
 
-button.disabled,
-.btn.disabled,
-.btn-primary.disabled,
-input.disabled,
-select.disabled,
-textarea.disabled,
-
-fieldset.disabled button,
 fieldset.disabled .btn,
 fieldset.disabled .btn-primary,
+fieldset.disabled button,
 fieldset.disabled input,
 fieldset.disabled select,
 fieldset.disabled textarea,
 
-button.disabled:hover,
-.btn.disabled:hover,
-.btn-primary.disabled:hover,
-input.disabled:hover,
-select.disabled:hover,
-textarea.disabled:hover,
+.btn.disabled,
+.btn-primary.disabled,
+button.disabled,
+button.btn-primary.disabled,
+input.disabled,
+input.btn-primary.disabled,
+select.disabled,
+textarea.disabled,
 
-button.disabled:focus,
-.btn.disabled:focus,
-.btn-primary.disabled:focus,
-input.disabled:focus,
-select.disabled:focus,
-textarea.disabled:focus {
+.btn:hover.disabled,
+.btn-primary:hover.disabled,
+button:hover.disabled,
+button.btn-primary:hover.disabled,
+input:hover.disabled,
+input.btn-primary:hover.disabled,
+select:hover.disabled,
+textarea:hover.disabled,
+
+.btn:focus.disabled,
+.btn-primary:focus.disabled,
+button:focus.disabled,
+button.btn-primary:focus.disabled,
+input:focus.disabled,
+input.btn-primary:focus.disabled,
+select:focus.disabled,
+textarea:focus.disabled {
   cursor: default;
   cursor: not-allowed;
-  background: #efefef none !important; /* very light grey */
+  background: #efefef none; /* very light grey */
   border-color: #ccc;
-  color: #adadad;
+  color: #999;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1181,26 +1193,19 @@ th {
 
 
 /* image replacement ------------------------------------------------------- */
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
+.ir,
+.img-r {
+  display: block; 
+  border: 0; 
+  text-indent: -9999px; 
+  overflow: hidden; 
+  background-repeat: no-repeat; 
+  text-align: left; 
+  direction: ltr; 
 }
-.img-r,
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  *text-indent: -9999px; /* IE7 fallback */
-}
-.img-r:before,
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
+.ir br,
+.img-r br { 
+  display: none;
 }
 
 
@@ -1345,18 +1350,37 @@ th {
 
 
 /* reset margin/padding ---------------------------------------------------- */
-.last-margin {
-  margin-right: 0;
+.no-margin {
+  margin: 0;
 }
-.last-padding {
-  padding-right: 0;
+.no-padding {
+  padding: 0;
 }
-.last-border {
+.no-border {
   border: 0;
 }
 
 
 /* text utilities ---------------------------------------------------------- */
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;                
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
 .text-truncate {
   max-width: 100%;
   overflow: hidden;
@@ -1377,27 +1401,21 @@ th {
   -ms-hyphens: none;
   hyphens: none;
 }
-.text-align-left {
-  text-align: left;
-}
-.text-align-center {
-  text-align: center;
-}
-.text-align-right {
-  text-align: right;
-}
-.justify {
-  text-align: justify;                
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-}
 .no-select {
   -webkit-user-select: none; 
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;          
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hide-text-indent {
+  text-indent: -9999px;
 }
 
 

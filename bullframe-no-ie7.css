@@ -416,9 +416,9 @@ legend {
   font-weight: bold;
 }
 label,
-select,
 button,
 .btn,
+.btn-primary,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -437,11 +437,17 @@ input[type="reset"],
 input[type="submit"] {
   display: inline-block;
 }
+button,
 input, 
 select, 
 textarea {
   margin: 0 0 1.4em 0;
+}
+input, 
+select, 
+textarea {
   vertical-align: baseline;
+  *vertical-align: middle;
 }
 
 
@@ -461,8 +467,10 @@ textarea {
   color: #222;
 }
 button,
+.btn,
+.btn-primary,
 input {
-  line-height: 1.4;
+  line-height: normal;
 }
 button,
 select {
@@ -589,24 +597,11 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
-select, 
 textarea {
   padding: 0.3em;
 }
-input[type="color"], 
-input[type="email"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="search"],
-input[type="text"], 
-input[type^="date"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
-input[type="url"] {
-  height: 2.125em;
+select {
+  padding: 0.25em;
 }
   
 
@@ -636,7 +631,7 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
-} 
+}
 button,
 .btn,
 .btn-primary,
@@ -644,14 +639,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   text-align: center;
-  padding: 0.3em 0.75em;
-  height: 2.125em; /* 34px */
-  line-height: 1.525em; /* 2.125 - (0.3 * 2) = 1.525 */
-  cursor: pointer;
-  border: 0;
+  padding: 0.3em 0.9em;
+  margin: 0 0 1.4em 0;
+  border: 1px solid #ccc;
   background-clip: padding-box;
   background-color: #ccc;
-  margin: 0 0 1.4em 0;
   vertical-align: baseline;
 }
 button:active,
@@ -679,6 +671,7 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
   background-color: #adadad; /* grey */
+  border-color: #adadad;
 }
 .btn:hover,
 .btn:focus,
@@ -698,6 +691,7 @@ input.btn-primary[type="reset"],
 input.btn-primary[type="submit"] {
   color: #fff;
   background-color: #1467ff; /* cyan */
+  border-color: #1467ff;
 }
 button.btn-primary:hover,
 .btn-primary:hover,
@@ -710,6 +704,7 @@ input.btn-primary[type="button"]:focus,
 input.btn-primary[type="reset"]:focus,
 input.btn-primary[type="submit"]:focus {
   background-color: #0039a3; /* dark blue */
+  border-color: #0039a3;
 }
 
 
@@ -873,8 +868,8 @@ textarea:focus.disabled {
   cursor: default;
   cursor: not-allowed;
   background: #efefef none; /* very light grey */
-  border-color: #ccc;
-  color: #999;
+  border-color: #dbdbdb;
+  color: #a8a8a8;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1146,24 +1141,57 @@ th {
 /* layout display ---------------------------------------------------------- */
 /* super-simple grid system 
  * demo http://jsbin.com/super-simple-css-grid/3/quiet
+ *
+ * IE7 needs a fix (as always)
+ * read more: http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+ * correction level = 0.0531% (assuming that the main container is 940px)
  */
 .width-1 {
   width: 100% !important;
 }
 .width-1-2 {
   width: 50% !important;
+  *width: 49.9469% !important;
 }
 .width-1-3 {
   width: 33.3333333333% !important;
+  *width: 33.2802333333% !important;
+}
+.width-2-3 {
+  width: 66.6666666666% !important;
+  *width: 66.6135666666% !important;
 }
 .width-1-4 {
   width: 25% !important;
+  *width: 24.9469% !important;
+}
+.width-3-4 {
+  width: 75% !important;
+  *width: 74.9469% !important;
 }
 .width-1-5 {
   width: 20% !important;
+  *width: 19.9469% !important;
+}
+.width-2-5 {
+  width: 40% !important;
+  *width: 39.9469% !important;
+}
+.width-3-5 {
+  width: 60% !important;
+  *width: 59.9469% !important;
+}
+.width-4-5 {
+  width: 80% !important;
+  *width: 79.9469% !important;
 }
 .width-1-6 {
   width: 16.6666666667% !important;
+  *width: 16.6135666667% !important;
+}
+.width-5-6 {
+  width: 83.33% !important;
+  *width: 83.2769% !important;
 }
 
 .block {
@@ -1174,6 +1202,7 @@ th {
 }
 .inline-block-container {
   letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
   *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
   text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
@@ -1199,6 +1228,8 @@ th {
  */
 .inline-block {
   display: inline-block !important;
+  *display: inline !important;
+  *zoom: 1 !important;
   vertical-align: top;
   letter-spacing: normal;
   word-spacing: normal;

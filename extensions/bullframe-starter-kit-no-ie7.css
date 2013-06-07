@@ -1,4 +1,6 @@
-/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.1 extension 
+/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.1 no-ie7 extension 
+ *
+ * Browser support: IE8+
  *
  * Customize as you want the following code
  *
@@ -40,7 +42,6 @@
 
 body {
   max-width: ;
-  *min-width: ;
   margin: ;
   padding: ;
   position: ;

@@ -438,6 +438,8 @@ input[type="submit"] {
   display: inline-block;
 }
 button,
+.btn,
+.btn-primary,
 input, 
 select, 
 textarea {
@@ -640,7 +642,9 @@ input[type="reset"],
 input[type="submit"] {
   text-align: center;
   padding: 0.3em 0.9em;
-  margin: 0 0 1.4em 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   border: 1px solid #ccc;
   background-clip: padding-box;
   background-color: #ccc;

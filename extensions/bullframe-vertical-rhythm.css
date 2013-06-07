@@ -9,12 +9,8 @@
  
 
 
-body,
-button,
-input {
-  line-height: 1.4;
-}
 body {
+  line-height: 1.4;
   padding-top: 1.4em;
 }
 .tera,

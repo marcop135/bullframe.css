@@ -1,4 +1,4 @@
-<h1>BULLFRAME CSS v1.4.0</h1>
+<h1>BULLFRAME CSS v1.4.1</h1>
 <p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only framework.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -14,6 +14,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Fluid grid system</li>
   <li>Flexible vertical grid</li>
   <li>IE7+ support</li>
+  <li>Starter-kit custom styles</li>
 </ul>
 <ul>
   <li>Flexible and rich typography</li>
@@ -94,5 +95,6 @@ bullframe.css incorporates some of the styles found on:
   <li>Inuit CSS - <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
   <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
   <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
+  <li>Pure CSS <a href="https://github.com/yui/pure" title="">https://github.com/yui/pure</a></li>
   <li>Nyan - <a href="http://www.youtube.com/watch?v=QH2-TGUlwu4" title="">http://www.youtube.com/watch?v=QH2-TGUlwu4</a></li>
 </ul>

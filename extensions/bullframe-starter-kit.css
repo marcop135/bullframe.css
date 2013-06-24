@@ -1,4 +1,4 @@
-/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.1 extension 
+/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.2 extension 
  *
  * Customize as you want the following code
  *
@@ -199,7 +199,28 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-  outline: ;
+  border-color: ;
+  -webkit-box-shadow: ;
+  box-shadow: ;
+}
+@media \0screen {
+  input[type="color"]:focus, 
+  input[type="email"]:focus, 
+  input[type="number"]:focus, 
+  input[type="password"]:focus, 
+  input[type="tel"]:focus, 
+  input[type="search"]:focus,
+  input[type="text"]:focus, 
+  input[type^="date"]:focus,
+  input[type="month"]:focus, 
+  input[type="time"]:focus, 
+  input[type="week"]:focus, 
+  input[type="time"]:focus, 
+  input[type="url"]:focus,
+  select:focus,
+  textarea:focus {
+    outline-color: ;
+  }
 }
 
 input[type="color"], 
@@ -217,6 +238,34 @@ input[type="time"],
 input[type="url"],
 select {
   padding: ;
+  *padding: ;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  select[size="0"],
+  select[size="1"] { 
+    padding-right: ;
+  } 
+} 
+textarea {
+  *padding: ;
+}
+button,
+.btn,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  padding: ;
+}
+button,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"],
+button.btn,
+input[type="button"].btn, 
+input[type="reset"].btn,
+input[type="submit"].btn {
+  *padding: ;
 }
 
 button,
@@ -226,8 +275,7 @@ input[type="reset"],
 input[type="submit"] {
   color: ;
   border-color: ;
-  background-color: ;
-  padding: ;
+  background: ;
 } 
 button:hover,
 .btn:hover,
@@ -241,21 +289,11 @@ input[type="reset"]:focus,
 input[type="submit"]:focus {
   color: ;
   border-color: ;
-  background-color: ;
+  background: ;
 }
 
 
- * Useful tips
- *
- * linear gradient in IE9+ (note the '\9' at the end of the value)
- *
-    button:nth-of-type(1n),
-    .btn:nth-of-type(1n),
-    input[type="button"]:nth-of-type(1n), 
-    input[type="reset"]:nth-of-type(1n) {
-      background: url(data:image/svg+xml;base64.....)\9;
-    } 
- *
+ * Useful tip
  *
  * avoid auto-zooming form controls on iPhone and iPod http://goo.gl/DExZO
  *

@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME.CSS v1.4.1
+ * BULLFRAME.CSS v1.4.2
  *
  * Source: https://github.com/marco135/bullframe.css/
  * MIT License 
@@ -562,9 +562,31 @@ input[type="url"]:focus,
 select:focus,
 textarea:focus {
   border-color: #52a8ec; /* light blue */
-  outline: 1px solid #52a8ec;
+  outline: 0 none;
+  *outline: 1px solid #52a8ec;
+  -webkit-box-shadow: 0 0 5px rgba(82, 168, 236, 0.6);
+  box-shadow: 0 0 5px rgba(82, 168, 236, 0.6);
 }
-
+/* IE8 */
+@media \0screen {
+  input[type="color"]:focus, 
+  input[type="email"]:focus, 
+  input[type="number"]:focus, 
+  input[type="password"]:focus, 
+  input[type="tel"]:focus, 
+  input[type="search"]:focus,
+  input[type="text"]:focus, 
+  input[type^="date"]:focus,
+  input[type="month"]:focus, 
+  input[type="time"]:focus, 
+  input[type="week"]:focus, 
+  input[type="time"]:focus, 
+  input[type="url"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: 1px solid #52a8ec;
+  }
+}
 
 
 /* responsiveness ---------------------------------------------------------- */
@@ -623,6 +645,13 @@ textarea {
 select {
   padding: 0.25em;
 }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  select[size="0"],
+  select[size="1"] { 
+    padding-right: 1.25em;
+  } 
+} 
 textarea {
   *padding: 1%;
 }
@@ -660,20 +689,29 @@ input::-moz-focus-inner {
 }
 button,
 .btn,
-.btn-primary,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-  text-align: center;
   padding: 0.3em 0.9em;
+  text-align: center;
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
-  border: 1px solid #ccc;
   background-clip: padding-box;
-  background-color: #ccc;
   vertical-align: baseline;
   *overflow: visible;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+  border: 1px solid #c1c1c1;
+  /* IE7-9 */
+  background: #d6d6d6;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.15)));
+  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.05) 0%, rgba(0,0,0, 0.15));
+  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
+  background: -o-linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
+  background: linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
 }
 /* to reduce IE7's oversized button text */
 button,
@@ -683,26 +721,13 @@ input[type="submit"],
 button.btn,
 input[type="button"].btn, 
 input[type="reset"].btn,
-input[type="submit"].btn,
-button.btn-primary,
-input[type="button"].btn-primary, 
-input[type="reset"].btn-primary,
-input[type="submit"].btn-primary {
+input[type="submit"].btn {
   *padding: 0.2em 0.6em;
 }
-button:active,
-.btn:active,
-.btn-primary:active,
-input[type="button"]:active, 
-input[type="reset"]:active,
-input[type="submit"]:active,
-button:focus,
-.btn:focus,
-.btn-primary:focus,
-input[type="button"]:focus, 
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  outline: 0 none;
+.btn:hover,
+.btn:focus {
+  color: #222;
+  text-decoration: none;
 }
 button:hover,
 .btn:hover,
@@ -714,18 +739,16 @@ button:focus,
 input[type="button"]:focus, 
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  background-color: #adadad; /* grey */
-  border-color: #adadad;
+  outline: 0 none;
+  border-color: #939393;
+  background: #c4c4c4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.25)));
+  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
+  background: -moz-linear-gradient(top, rgba(0,0,0, 0.1) 0%, rgba(0,0,0, 0.25));
+  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
+  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
+  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
 }
-.btn:hover,
-.btn:focus,
-.btn-primary:hover,
-.btn-primary:focus {
-  color: #222;
-  text-decoration: none;
-}
-
-/* primary buttons */
 button.btn-primary,
 .btn-primary,
 .btn-primary:hover,
@@ -734,8 +757,8 @@ input.btn-primary[type="button"],
 input.btn-primary[type="reset"],
 input.btn-primary[type="submit"] {
   color: #fff;
-  background-color: #1467ff; /* cyan */
-  border-color: #1467ff;
+  border-color: #005aff;
+  background-color: #005aff;
 }
 button.btn-primary:hover,
 .btn-primary:hover,
@@ -747,10 +770,39 @@ button.btn-primary:focus,
 input.btn-primary[type="button"]:focus, 
 input.btn-primary[type="reset"]:focus,
 input.btn-primary[type="submit"]:focus {
-  background-color: #0039a3; /* dark blue */
-  border-color: #0039a3;
+  border-color: #00318e;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.4)));
+  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
+  background: -moz-linear-gradient(top, rgba(0,0,0, 0.1) 0%, rgba(0,0,0, 0.4));
+  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
+  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
+  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
+  background-color: #004bd6;
 }
-
+button:active,
+.btn:active,
+input[type="button"]:active, 
+input[type="reset"]:active,
+input[type="submit"]:active {
+    -webkit-box-shadow: 
+      0 0 0 1px rgba(0,0,0, 0.15) inset, 
+      0 0 6px rgba(0,0,0, 0.20) inset;
+    box-shadow: 
+      0 0 0 1px rgba(0,0,0, 0.15) inset, 
+      0 0 6px rgba(0,0,0, 0.20) inset;
+}
+.btn-xsmall {
+  font-size: 70%;
+}
+.btn-small {
+  font-size: 85%;
+}
+.btn-large {
+  font-size: 110%;
+}
+.btn-xlarge {
+  font-size: 125%;
+} 
 
 /* selects ----------------------------------------------------------------- */
 select {
@@ -802,15 +854,23 @@ select:focus:invalid,
 textarea:focus:invalid { 
   color: #b94a48; /* dark red */
   border-color: #ee5f5b; /* red */
-  outline: 1px solid #ee5f5b; 
 }
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus {
-  border-color: #e9322d;
-  outline: 1px solid #e9322d;
+  border-color: #e9322d; /* red */
+  outline: 0 none;
+  *outline: 1px solid #e9322d;
+  -webkit-box-shadow: 0 0 5px #f8b9b7;
+  box-shadow: 0 0 5px #f8b9b7;
 }
-
+@media \0screen {
+  input:focus:invalid:focus,
+  textarea:focus:invalid:focus,
+  select:focus:invalid:focus {
+    outline: 1px solid #e9322d;
+  }
+}
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {

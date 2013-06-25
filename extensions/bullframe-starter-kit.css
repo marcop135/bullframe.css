@@ -236,9 +236,11 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
+textarea {
+  padding: ;
+}
 select {
   padding: ;
-  *padding: ;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select,

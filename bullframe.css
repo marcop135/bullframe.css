@@ -349,6 +349,11 @@ object,
 embed {
   max-width: 100%;
 }
+img,
+audio,
+video {
+  vertical-align: middle;
+}
 /* just in case, to force correct aspet ratio 
  * if necessary, override this rule with 'max-height: XXXpx'  
  */
@@ -358,7 +363,6 @@ video {
   width: auto;
 }
 img {
-  vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
@@ -369,6 +373,7 @@ audio:not([controls]) {
 svg:not(:root) { 
   overflow: hidden;
 }
+
 
 /* vendor styles ----------------------------------------------------------- */
 /* google maps fix */
@@ -427,7 +432,6 @@ legend {
 label,
 button,
 .btn,
-.btn-primary,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -435,13 +439,12 @@ input[type="radio"],
 input[type="checkbox"] {
   cursor: pointer;
 }
-input, 
+html input, 
 select, 
 textarea,
 button,
 .btn,
-.btn-primary,
-input[type="button"], 
+html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
   display: inline-block;
@@ -497,8 +500,9 @@ optgroup {
 
 
 /* normalize appearance --------------------------------------------------- */
+ 
 button,
-input[type="button"], 
+html input[type="button"], 
 input[type="reset"],
 input[type="submit"],
 input[type="color"], 
@@ -564,8 +568,8 @@ textarea:focus {
   border-color: #52a8ec; /* light blue */
   outline: 0 none;
   *outline: 1px solid #52a8ec;
-  -webkit-box-shadow: 0 0 5px rgba(82, 168, 236, 0.6);
-  box-shadow: 0 0 5px rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: 0 0 0 1px #52a8ec;
+  box-shadow: 0 0 0 1px #52a8ec;
 }
 /* IE8 */
 @media \0screen {
@@ -606,7 +610,7 @@ button,
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-input,
+html input,
 select,
 textarea {
   width: 100%;
@@ -619,7 +623,7 @@ select {
 input[type="image"],
 input[type="submit"],
 input[type="reset"],
-input[type="button"],
+html input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
@@ -638,18 +642,18 @@ input[type="week"],
 input[type="time"], 
 input[type="url"],
 textarea {
-  padding: 0.3em;
+  padding: 0.4em;
   *padding-left: 1%; /* IE7 doesn't support CSS3 'box-sizing' */
   *padding-right: 1%;
 }
 select {
-  padding: 0.25em;
+  padding: 0.365em;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select,
   select[size="0"],
   select[size="1"] { 
-    padding-right: 1.25em;
+    padding-right: 1.365em;
   } 
 } 
 textarea {
@@ -692,7 +696,7 @@ button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-  padding: 0.3em 0.9em;
+  padding: 0.4em 1em;
   text-align: center;
   margin-top: 0;
   margin-left: 0;
@@ -702,16 +706,17 @@ input[type="submit"] {
   *overflow: visible;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  text-shadow: 1px 1px rgba(255,255,255,.5);
 
-  border: 1px solid #c1c1c1;
+  border: 1px solid #999;
   /* IE7-9 */
   background: #d6d6d6;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.15)));
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.05) 0%, rgba(0,0,0, 0.15));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
-  background: -o-linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
-  background: linear-gradient(transparent, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.15));
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.2)));
+  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
+  background: -moz-linear-gradient(top, rgba(0,0,0, 0.1) 0%, rgba(0,0,0, 0.2));
+  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
+  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
+  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
 }
 /* to reduce IE7's oversized button text */
 button,
@@ -722,7 +727,7 @@ button.btn,
 input[type="button"].btn, 
 input[type="reset"].btn,
 input[type="submit"].btn {
-  *padding: 0.2em 0.6em;
+  *padding: 0.3em 0.7em;
 }
 .btn:hover,
 .btn:focus {
@@ -740,14 +745,14 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
   outline: 0 none;
-  border-color: #939393;
+  border-color: #666;
   background: #c4c4c4;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.25)));
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
-  background: -moz-linear-gradient(top, rgba(0,0,0, 0.1) 0%, rgba(0,0,0, 0.25));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
-  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
-  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25));
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.2)), to(rgba(0,0,0,0.3)));
+  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
+  background: -moz-linear-gradient(top, rgba(0,0,0, 0.2) 0%, rgba(0,0,0, 0.3));
+  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
+  background: -o-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
+  background: linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
 }
 button.btn-primary,
 .btn-primary,
@@ -757,8 +762,9 @@ input.btn-primary[type="button"],
 input.btn-primary[type="reset"],
 input.btn-primary[type="submit"] {
   color: #fff;
-  border-color: #005aff;
-  background-color: #005aff;
+  text-shadow: none;
+  border-color: #0d51be;
+  background-color: #1a6bee;
 }
 button.btn-primary:hover,
 .btn-primary:hover,
@@ -770,14 +776,8 @@ button.btn-primary:focus,
 input.btn-primary[type="button"]:focus, 
 input.btn-primary[type="reset"]:focus,
 input.btn-primary[type="submit"]:focus {
-  border-color: #00318e;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.4)));
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
-  background: -moz-linear-gradient(top, rgba(0,0,0, 0.1) 0%, rgba(0,0,0, 0.4));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
-  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
-  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4));
-  background-color: #004bd6;
+  border-color: #012e87;
+  background-color: #154cd4;
 }
 button:active,
 .btn:active,
@@ -803,6 +803,8 @@ input[type="submit"]:active {
 .btn-xlarge {
   font-size: 125%;
 } 
+
+
 
 /* selects ----------------------------------------------------------------- */
 select {
@@ -861,8 +863,8 @@ select:focus:invalid:focus {
   border-color: #e9322d; /* red */
   outline: 0 none;
   *outline: 1px solid #e9322d;
-  -webkit-box-shadow: 0 0 5px #f8b9b7;
-  box-shadow: 0 0 5px #f8b9b7;
+  -webkit-box-shadow: 0 0 0 1px #f8b9b7;
+  box-shadow: 0 0 0 1px #f8b9b7;
 }
 @media \0screen {
   input:focus:invalid:focus,
@@ -1522,16 +1524,16 @@ th {
   -webkit-overflow-scrolling: auto; 
 }
 .table-overflow-container.scrollbar::-webkit-scrollbar {
-  width: 10px;
-  height: 10px
+  width: 0.625em;
+  height: 0.625em;
 }
 .table-overflow-container.scrollbar::-webkit-scrollbar-track{
   padding: 0.2em;
   background-color: transparent; 
 }
 .table-overflow-container.scrollbar::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 0.625em;
+  border-radius: 0.625em;
   background-color: #999; 
 }
 .table-overflow-container.scrollbar::-webkit-scrollbar-thumb:window-inactive {
@@ -1663,12 +1665,6 @@ a img.aligncenter {
 
 
 /* miscellaneous ----------------------------------------------------------- */
-.chromeframe {
-  margin: 0.466666em;
-  padding: 0.466666em;
-  background-color: #e0e0e0; /* light grey */
-  color: #000;
-}
 .print-only { 
   display: none !important; 
   visibility: hidden;

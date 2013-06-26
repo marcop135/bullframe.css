@@ -83,6 +83,7 @@ Tested and compatible with:
 <p>* <b>Responsive tables not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug</b>.<br>
 When the viewport is too narrow, content that overflows is hidden. <a href="http://barrow.io/overflow-scrolling" title="overflow scrolling">Get more info</a>.</p>
 
+
 <h2>License</h2>
 <p>The MIT License (MIT) - <a href="http://opensource.org/licenses/MIT" title="The MIT License">http://opensource.org/licenses/MIT</a></p>
 

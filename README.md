@@ -1,4 +1,4 @@
-<h1>BULLFRAME CSS v1.4.2</h1>
+<h1>BULLFRAME.CSS v1.4.2</h1>
 <p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only framework.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -11,6 +11,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
+  <li>EM unit instead of PX</li>
   <li>Fluid grid system</li>
   <li>Flexible vertical grid</li>
   <li>IE7+ support</li>
@@ -67,18 +68,20 @@ Tested and compatible with:
   <li>Latest Chrome</li>
   <li>Firefox 4+</li>
   <li>Safari 4+</li>
-  <li><b>Opera 10+</b> <i>(responsive tables not working in v10-11)</i></li>
+  <li>Opera 10+</li>
 </ul>
 <ul>
   <li>Mobile Safari iOS5+</li>
-  <li>Android browser 2.3+</li>
-  <li><b>Latest Opera Mobile</b> <i>(responsive tables not working)</i></li>
-  <li><b>Opera Mini</b> <i>(mark element is buggy and responsive videos/tables not working)</i></li>
+  <li>Android browser 2.3.2+ *</li>
+  <li>Latest Opera Mobile (Presto and Webkit) *</li>
+  <li>Opera Mini *</li>
   <li>Internet Explorer Mobile 9-10</li>
   <li>Latest Mobile Firefox (Fennec)</li>
   <li>Blackberry browser OS5</li>
   <li>Kindle Touch browser</li>
 </ul>
+<small>* Responsive tables not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug.<br>  
+When the viewport is too narrow, content that overflows is hidden.</small>
 
 <h2>License</h2>
 <p>The MIT License (MIT) - <a href="http://opensource.org/licenses/MIT" title="The MIT License">http://opensource.org/licenses/MIT</a></p>

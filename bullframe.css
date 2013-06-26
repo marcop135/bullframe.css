@@ -58,7 +58,7 @@ video {
 
 html {
   font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
@@ -453,7 +453,6 @@ input[type="submit"] {
 }
 button,
 .btn,
-.btn-primary,
 input, 
 select, 
 textarea {
@@ -473,10 +472,12 @@ input,
 select, 
 textarea {
   font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 button, 
 .btn,
+.btn:hover,
+.btn:focus,
 input, 
 select, 
 textarea {
@@ -484,7 +485,6 @@ textarea {
 }
 button,
 .btn,
-.btn-primary,
 input {
   line-height: normal;
 }
@@ -604,8 +604,7 @@ input[type="submit"],
 select, 
 textarea,
 button,
-.btn,
-.btn-primary {
+.btn {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -686,11 +685,6 @@ label + input[type="checkbox"] {
 
 
 /* buttons ----------------------------------------------------------------- */
-button::-moz-focus-inner, 
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
 button,
 .btn,
 input[type="button"], 
@@ -704,12 +698,15 @@ input[type="submit"] {
   background-clip: padding-box;
   vertical-align: baseline;
   *overflow: visible;
+  -webkit-user-drag: none;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  text-shadow: 1px 1px rgba(255,255,255,.5);
-
+  text-shadow: 1px 1px rgba(255,255,255,0.5);
   border: 1px solid #999;
-  /* IE7-9 */
   background: #d6d6d6;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.2)));
   background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
@@ -717,6 +714,12 @@ input[type="submit"] {
   background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
   background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
   background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
+}
+/* Firefox: Get rid of the inner focus border */
+button::-moz-focus-inner, 
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }
 /* to reduce IE7's oversized button text */
 button,
@@ -729,11 +732,6 @@ input[type="reset"].btn,
 input[type="submit"].btn {
   *padding: 0.3em 0.7em;
 }
-.btn:hover,
-.btn:focus {
-  color: #222;
-  text-decoration: none;
-}
 button:hover,
 .btn:hover,
 input[type="button"]:hover, 
@@ -745,6 +743,7 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
   outline: 0 none;
+  text-decoration: none;
   border-color: #666;
   background: #c4c4c4;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.2)), to(rgba(0,0,0,0.3)));
@@ -763,8 +762,8 @@ input.btn-primary[type="reset"],
 input.btn-primary[type="submit"] {
   color: #fff;
   text-shadow: none;
-  border-color: #0d51be;
-  background-color: #1a6bee;
+  border-color: #357ae8;
+  background-color: #357ae8;
 }
 button.btn-primary:hover,
 .btn-primary:hover,
@@ -776,20 +775,16 @@ button.btn-primary:focus,
 input.btn-primary[type="button"]:focus, 
 input.btn-primary[type="reset"]:focus,
 input.btn-primary[type="submit"]:focus {
-  border-color: #012e87;
-  background-color: #154cd4;
+  border-color: #1964db;
+  background-color: #1964db;
 }
 button:active,
 .btn:active,
 input[type="button"]:active, 
 input[type="reset"]:active,
 input[type="submit"]:active {
-    -webkit-box-shadow: 
-      0 0 0 1px rgba(0,0,0, 0.15) inset, 
-      0 0 6px rgba(0,0,0, 0.20) inset;
-    box-shadow: 
-      0 0 0 1px rgba(0,0,0, 0.15) inset, 
-      0 0 6px rgba(0,0,0, 0.20) inset;
+  -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
 }
 .btn-xsmall {
   font-size: 70%;
@@ -1474,6 +1469,12 @@ th {
 .text-uppercase {
   text-transform: uppercase;
 }
+.text-sans-serif {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.text-serif {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
 .text-truncate {
   max-width: 100%;
   overflow: hidden;
@@ -1495,6 +1496,7 @@ th {
   hyphens: none;
 }
 .no-select {
+  -webkit-user-drag: none;
   -webkit-user-select: none; 
   -moz-user-select: none;
   -ms-user-select: none;

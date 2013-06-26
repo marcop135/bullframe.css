@@ -1,4 +1,4 @@
-/*! Author's custom styles starting-point - BULLFRAME CSS v1.4.2 extension 
+/*! Author's custom styles starting-point - BULLFRAME.CSS v1.4.2 extension 
  *
  * Customize as you want the following code
  *
@@ -59,6 +59,15 @@ input,
 select,
 textarea {
   font-family: ;
+}
+html, 
+button, 
+.btn,
+.btn:hover,
+.btn:focus,
+input, 
+select,
+textarea {
   color: ;
 }
 html {

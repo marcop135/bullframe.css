@@ -1,4 +1,4 @@
-<h1>BULLFRAME.CSS v1.4.2</h1>
+ <h1>BULLFRAME.CSS v1.4.2</h1>
 <p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only framework.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -80,8 +80,8 @@ Tested and compatible with:
   <li>Blackberry browser OS5</li>
   <li>Kindle Touch browser</li>
 </ul>
-<small>* Responsive tables not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug.<br>  
-When the viewport is too narrow, content that overflows is hidden.</small>
+<p>* <b>Responsive tables not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug</b>.<br>
+When the viewport is too narrow, content that overflows is hidden. <a href="http://barrow.io/overflow-scrolling" title="overflow scrolling">Get more info</a>.</p>
 
 <h2>License</h2>
 <p>The MIT License (MIT) - <a href="http://opensource.org/licenses/MIT" title="The MIT License">http://opensource.org/licenses/MIT</a></p>

@@ -20,7 +20,9 @@
 
 
 
-/* Change box-model (no IE7 support) ---------------------------------------
+/* Change box-model 
+ * (no IE7 support. just in case, use box-sizing polyfill) 
+ * https://github.com/Schepp/box-sizing-polyfill --------------------------
 
 *, 
 *:before, 
@@ -210,7 +212,7 @@ select:focus,
 textarea:focus {
   border-color: ;
   -webkit-box-shadow: ;
-  box-shadow: ;
+          box-shadow: ;
 }
 @media \0screen {
   input[type="color"]:focus, 

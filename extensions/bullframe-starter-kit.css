@@ -18,6 +18,17 @@
 
 
 
+/* Scalable <img> and <video> elements ------------------------------------
+
+ * just in case, to force correct aspet ratio 
+ * if necessary, override this rule with 'max-height: XXXpx'  
+
+img,
+video {
+  height: auto !important;
+}
+*/
+
 
 
 /* Change box-model 
@@ -110,7 +121,6 @@ a:focus {
 body {
   font-size: 0.9375em;
 }
-table,
 pre, 
 code, 
 kbd, 
@@ -124,7 +134,6 @@ samp {
 body {
   font-size: 0.875em;
 }
-table,
 pre, 
 code, 
 kbd, 
@@ -138,7 +147,6 @@ samp {
 body {
   font-size: 0.8125em;
 }
-table,
 pre, 
 code, 
 kbd, 
@@ -152,7 +160,6 @@ samp {
 body {
   font-size: 0.75em;
 }
-table,
 pre, 
 code, 
 kbd, 
@@ -170,7 +177,6 @@ samp {
  * reference to 'bullframe-vertical-rhythm.css' file
  * https://github.com/marco135/bullframe.css/tree/master/extensions
 */
-
 
 
 

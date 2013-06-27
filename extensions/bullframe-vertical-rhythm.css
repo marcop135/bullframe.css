@@ -78,8 +78,7 @@ a img.alignleft,
 a img.aligncenter,
 .wp-caption.alignnone,
 .wp-caption.alignleft,
-.wp-caption.alignright,
-.chromeframe {
+.wp-caption.alignright {
   margin-bottom: 1.4em;
 }
 @media screen and (max-width: 40em) { 

@@ -14,7 +14,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>EM unit instead of PX</li>
   <li>Fluid grid system</li>
   <li>Flexible vertical grid</li>
-  <li>IE7+ support</li>
+  <li>IE7+ support <small>(if you really need it...)</small></li>
   <li>Starter-kit custom styles</li>
 </ul>
 <ul>
@@ -40,7 +40,7 @@ Play with HTML/CSS code on JSBin <a href="http://jsbin.com/bullframecss/latest/e
 &lt;html>
 &lt;head>
 &lt;meta charset="utf-8">
-  &lt;link rel="stylesheet" src="bullframe.min.css">
+  &lt;link rel="stylesheet" src="bullframe-no-ie7.min.css">
 &lt;link rel="stylesheet" src="your-styles.css">
 &lt;/head>
 ...</code></pre>

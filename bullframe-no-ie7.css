@@ -431,6 +431,7 @@ button,
 html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
+  margin: 0;
   display: inline-block;
 }
 input, 
@@ -654,6 +655,7 @@ input[type="submit"] {
   margin-right: 0;
   background-clip: padding-box;
   vertical-align: baseline;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-drag: none;
   -webkit-user-select: none; 
  		 -moz-user-select: none;

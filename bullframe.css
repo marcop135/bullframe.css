@@ -440,6 +440,7 @@ button,
 html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
+  margin: 0;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -681,6 +682,7 @@ input[type="submit"] {
   background-clip: padding-box;
   vertical-align: baseline;
   *overflow: visible;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-drag: none;
   -webkit-user-select: none; 
      -moz-user-select: none;

@@ -422,6 +422,30 @@ legend {
   font-weight: bold;
   *margin-left: -7px;
 }
+html input, 
+select, 
+textarea,
+button,
+.btn,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+button,
+html input, 
+select, 
+textarea {
+  margin: 0;
+}
+input, 
+select, 
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
 label,
 button,
 .btn,
@@ -431,25 +455,6 @@ input[type="submit"],
 input[type="radio"],
 input[type="checkbox"] {
   cursor: pointer;
-}
-html input, 
-select, 
-textarea,
-button,
-.btn,
-html input[type="button"], 
-input[type="reset"],
-input[type="submit"] {
-  margin: 0;
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-input, 
-select, 
-textarea {
-  vertical-align: baseline;
-  *vertical-align: middle;
 }
 
 
@@ -487,7 +492,6 @@ optgroup {
 
 
 /* normalize appearance --------------------------------------------------- */
- 
 button,
 html input[type="button"], /* avoid destroying native android audio/video players */
 input[type="reset"],
@@ -611,7 +615,6 @@ input[type="radio"],
 input[type="checkbox"] {
   width: auto;
 }
-input[type="color"], 
 input[type="email"], 
 input[type="number"], 
 input[type="password"], 
@@ -882,84 +885,52 @@ input.placeholder,
 textarea.placeholder {
   color: #888;
 }
-
+/* disable groups */
 fieldset[disabled] .btn,
-fieldset[disabled] .btn-primary,
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
-
-.btn[disabled],
-.btn-primary[disabled],
-button[disabled],
-button.btn-primary[disabled],
-input[disabled],
-input.btn-primary[disabled],
-select[disabled],
-textarea[disabled],
-
-.btn:hover[disabled],
-.btn-primary:hover[disabled],
-button:hover[disabled],
-button.btn-primary:hover[disabled],
-input:hover[disabled],
-input.btn-primary:hover[disabled],
-select:hover[disabled],
-textarea:hover[disabled],
-
-.btn:focus[disabled],
-.btn-primary:focus[disabled],
-button:focus[disabled],
-button.btn-primary:focus[disabled],
-input:focus[disabled],
-input.btn-primary:focus[disabled],
-select:focus[disabled],
-textarea:focus[disabled],
-
 fieldset.disabled .btn,
-fieldset.disabled .btn-primary,
 fieldset.disabled button,
 fieldset.disabled input,
 fieldset.disabled select,
 fieldset.disabled textarea,
-
+/* disable singles */
+.btn[disabled],
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled],
 .btn.disabled,
-.btn-primary.disabled,
 button.disabled,
-button.btn-primary.disabled,
 input.disabled,
-input.btn-primary.disabled,
 select.disabled,
 textarea.disabled,
-
-.btn:hover.disabled,
-.btn-primary:hover.disabled,
-button:hover.disabled,
-button.btn-primary:hover.disabled,
-input:hover.disabled,
-input.btn-primary:hover.disabled,
-select:hover.disabled,
-textarea:hover.disabled,
-
-.btn:focus.disabled,
-.btn-primary:focus.disabled,
-button:focus.disabled,
-button.btn-primary:focus.disabled,
-input:focus.disabled,
-input.btn-primary:focus.disabled,
-select:focus.disabled,
-textarea:focus.disabled {
-  cursor: default;
-  cursor: not-allowed;
-  background: #efefef none; /* very light grey */
-  border-color: #dbdbdb;
-  color: #a8a8a8;
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-  text-shadow: none;
-  opacity: 1;
+/* disable active singles */
+button.disabled:active,
+.btn.disabled:active,
+input.disabled:active,
+button:active[disabled],
+.btn:active[disabled],
+input:active[disabled] {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  background: #efefef none !important; /* very light grey */
+  border-color: #dbdbdb !important;
+  color: #b2b2b2 !important;
+  text-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+fieldset[disabled] .btn-primary
+fieldset.disabled .btn-primary,
+.btn.btn-primary[disabled],
+.btn.btn-primary.disabled {
+  background: #bed4f7 none !important; /* very light blue */
+  color: #fff !important;
 }
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],

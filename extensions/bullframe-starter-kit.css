@@ -1,4 +1,4 @@
-/*! Author's custom styles starting-point - BULLFRAME.CSS v1.4.2 extension 
+/*! Author's custom styles starting-point - BULLFRAME.CSS v1.4.3 extension 
  *
  * Customize as you want the following code
  *
@@ -168,6 +168,82 @@ samp {
 }
 */
 
+
+
+
+/* WordPress Core CSS (relative units in use)
+ * http://codex.wordpress.org/CSS 
+ *
+ * - WordPress generated classes
+ * Several classes for aligning images and block elements (div, p, table etc.)
+ * were introduced in WordPress 2.5: aligncenter, alignleft and alignright. 
+ * In addition the class alignnone is added to images that are not aligned, 
+ * so they can be styled differently if needed.
+ * The same classes are used to align images that have a caption (as of
+ * WordPress 2.6).
+ * ------------------------------------------------------------------------
+.alignnone {
+  margin: 0.7em 1.4em 1.4em 0;
+}
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 0.7em auto;
+}
+.alignright {
+  float: right;
+  margin: 0.7em 0 1.4em 1.4em;
+}
+.alignleft {
+  float: left;
+  margin: 0.7em 1.4em 1.4em 0;
+}
+.aligncenter {
+  display: block;
+  margin: 0.7em auto;
+}
+a img.alignright {
+  float: right;
+  margin: 0.7em 0 1.4em 1.4em;
+}
+a img.alignnone {
+  margin: 0.7em 1.4em 1.4em 0;
+}
+a img.alignleft {
+  float: left;
+  margin: 0.7em 1.4em 1.4em 0;
+}
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.wp-caption {
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  max-width: 96%;
+  padding: 0.7em 0.7em 0.7em;
+  text-align: center;
+}
+.wp-caption.alignnone {
+  margin: 0.7em 1.4em 1.4em 0;
+}
+.wp-caption.alignleft {
+  margin: 0.7em 1.4em 1.4em 0;
+}
+.wp-caption.alignright {
+  margin: 0.7em 0 1.4em 1.4em;
+}
+.wp-caption img {
+  margin: 0;
+  max-width: 98.5%;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 0.875em;
+  margin: 0.7em 0 0 0;
+  padding: 0;
+}
+ */
 
 
 
@@ -379,9 +455,14 @@ input[type="submit"]:focus {
 
 /* High resolution devices (retina)
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+  only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (   -moz-min-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    
 } */
 
 
@@ -389,7 +470,7 @@ input[type="submit"]:focus {
 
 
 /* $ 'Safe' CSS hacks reference --------------------------------------------
- * http://browserhacks.com/
+ * More hacks on http://browserhacks.com/
 
 /* IE7
 .safe-css-hack { 

@@ -1,6 +1,6 @@
 <h1>BULLFRAME.CSS v1.4.3</h1>
 <p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
-<p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only framework.<br>
+<p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
@@ -32,7 +32,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>How to use it</h2>
 <ul>
   <li>
-    <p>1) <b>Write your styles without ever touch the framework</b></p>
+    <p>1) <b>Write your styles without ever touch the boilerplate</b></p>
     <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles like this:</p>
 <pre><code>&lt;!doctype html>
 &lt;html>
@@ -46,7 +46,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 </ul>
 <ul>
   <li>
-    <p>2) <b>Write your styles inside the framework</b></p>
+    <p>2) <b>Write your styles inside the boilerplate</b></p>
   <p>Open <code>bullframe.css</code> file, scroll down the code and start to add styles <i>inside</i>
 "Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
   </li>

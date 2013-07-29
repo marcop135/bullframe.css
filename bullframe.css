@@ -306,6 +306,10 @@ ul,
 ol {
   margin-left: 1.4em;
 }
+nav {
+  list-style: none;
+  list-style-image: none;
+} 
 dt {
   font-weight: bold;
 }
@@ -701,12 +705,12 @@ input[type="submit"] {
   text-shadow: 1px 1px rgba(255,255,255,0.5);
   border: 1px solid #999;
   background: #d6d6d6;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.2)));
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0, 0.2));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
-  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
-  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2));
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.1)));
+  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0, 0.1));
+  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
 }
 /* Firefox: Get rid of the inner focus border */
 button::-moz-focus-inner, 
@@ -739,12 +743,12 @@ input[type="submit"]:focus {
   text-decoration: none;
   border-color: #666;
   background: #c4c4c4;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.2)), to(rgba(0,0,0,0.3)));
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
-  background: -moz-linear-gradient(top, rgba(0,0,0, 0.2) 0%, rgba(0,0,0, 0.3));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
-  background: -o-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
-  background: linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3));
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.2)), to(rgba(0,0,0,0.2)));
+  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+  background: -moz-linear-gradient(top, rgba(0,0,0, 0.2) 0%, rgba(0,0,0, 0.2));
+  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+  background: -o-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+  background: linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
 }
 button.btn-primary,
 .btn-primary,
@@ -753,8 +757,8 @@ input.btn-primary[type="reset"],
 input.btn-primary[type="submit"] {
   color: #fff;
   text-shadow: none;
-  border-color: #357ae8;
-  background-color: #357ae8;
+  border-color: #0078e7;
+  background-color: #0078e7;
 }
 button.btn-primary:hover,
 .btn-primary:hover,
@@ -767,8 +771,8 @@ input.btn-primary[type="button"]:focus,
 input.btn-primary[type="reset"]:focus,
 input.btn-primary[type="submit"]:focus {
   color: #fff;
-  border-color: #1964db;
-  background-color: #1964db;
+  border-color: #0067c6;
+  background-color: #0067c6;
 }
 button:active,
 .btn:active,

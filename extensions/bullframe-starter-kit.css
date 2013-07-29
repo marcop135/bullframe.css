@@ -492,11 +492,9 @@ input[type="submit"]:focus {
 } 
 */
 
-/* desktop/mobile IE10+
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .safe-css-hack {
-    color: orange;
-  }
+/* IE10+
+_::-ms-reveal, p {
+  color: orange;
 }
 */
 

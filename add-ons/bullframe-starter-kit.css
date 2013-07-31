@@ -1,8 +1,8 @@
-/*! Author's custom styles starting-point - BULLFRAME.CSS v1.4.3 extension 
+/*! Author's custom styles starting-point - BULLFRAME.CSS v1.4.3 add-on
  *
  * Customize as you want the following code
  *
- * https://github.com/marco135/bullframe.css/tree/master/extensions
+ * https://github.com/marco135/bullframe.css/tree/master/add-ons
  * MIT License
 ============================================================================ */
 
@@ -251,7 +251,7 @@ a img.aligncenter {
 /* Compose to a vertical rhythm --------------------------------------------
  *
  * reference to 'bullframe-vertical-rhythm.css' file
- * https://github.com/marco135/bullframe.css/tree/master/extensions
+ * https://github.com/marco135/bullframe.css/tree/master/add-ons
 */
 
 
@@ -331,9 +331,6 @@ input[type="url"],
 textarea {
   padding: ;
 }
-select {
-  padding: ;
-}
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select,
   select[size="0"],
@@ -396,6 +393,21 @@ input[type="submit"]:focus {
     select:focus {
       font-size: 16px;
     }
+
+
+  * display default webkit <select> UI 
+  
+  select {
+    padding-right: 0.4em;
+    background-image: none;
+    -webkit-background-size: auto auto;
+            background-size: auto auto;
+    -webkit-appearance: menulist;
+  }
+  select[size], 
+  select[multiple] {
+    -webkit-appearance: none;
+  }  
 
 */
 

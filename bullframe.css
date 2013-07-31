@@ -191,7 +191,7 @@ pre,
 code, 
 kbd, 
 samp {
-  font-family: Monaco, Menlo, Consolas, "Courier New", Courier, monospace; 
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; 
   font-size: 1em;
 }
 strong, 
@@ -272,7 +272,6 @@ a:focus {
 } 
 a {
   text-decoration: none;
-
   /* IE10: Remove grey background on active links */
   background-color: transparent; 
 
@@ -315,6 +314,18 @@ dt {
 }
 dd {
   margin-left: 0;
+}
+
+/* navigation */
+.list-inline {
+  margin-left: 0;
+  list-style: none;
+  list-style-image: none; /* IE7-8 */
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 0.4666666em;
+  padding-left: 0.4666666em;
 }
 
 /* hard reset */
@@ -431,6 +442,10 @@ legend {
   font-weight: bold;
   *margin-left: -7px;
 }
+label {
+  margin-bottom: 0.35em;
+}
+label,
 html input, 
 select, 
 textarea,
@@ -464,6 +479,10 @@ input[type="submit"],
 input[type="radio"],
 input[type="checkbox"] {
   cursor: pointer;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
 }
 
 
@@ -616,6 +635,7 @@ input[type="file"],
 select {
   *width: 100%;
 }
+button,
 input[type="image"],
 input[type="submit"],
 input[type="reset"],
@@ -636,13 +656,11 @@ input[type="time"],
 input[type="week"], 
 input[type="time"], 
 input[type="url"],
+select,
 textarea {
   padding: 0.4em;
   *padding-left: 1%; /* IE7 doesn't support CSS3 'box-sizing' */
   *padding-right: 1%;
-}
-select {
-  padding: 0.365em;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select,
@@ -672,11 +690,11 @@ input[type="checkbox"]:focus {
 }
 label input[type="radio"], 
 label input[type="checkbox"] {
-  margin-right: 5px;
+  margin-right: 0.35em;;
 }
 label + input[type="radio"], 
 label + input[type="checkbox"] {
-  margin-left: 5px;
+  margin-left: 0.35em;;
 }
 
 
@@ -703,7 +721,8 @@ input[type="submit"] {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   text-shadow: 1px 1px rgba(255,255,255,0.5);
-  border: 1px solid #999;
+  border: 1px solid #a8a8a8;
+  background-image: none; /* normalize fennec */
   background: #d6d6d6;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.1)));
   background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
@@ -780,7 +799,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
-  box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+          box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
 }
 .btn-xsmall {
   font-size: 70%;
@@ -794,7 +813,6 @@ input[type="submit"]:active {
 .btn-xlarge {
   font-size: 125%;
 } 
-
 
 
 /* selects ----------------------------------------------------------------- */
@@ -1001,7 +1019,12 @@ th {
 
 
 
-/* $ Fluid grid system (12 columns) 
+/* $ Basic fluid grid system (12 columns)
+ * 
+ * TODO: 
+ * offsetting, 
+ * column ordering (for SEO), 
+ * mobile/tablet/desktop mixing 
 ============================================================================ */
 
 /* Sub-Pixel Problems in CSS
@@ -1421,14 +1444,15 @@ th {
       -ms-user-select: none;
           user-select: none;          
 }
-.hide-text {
+.hide-text, /* old naming */
+.text-hide {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
 }
-.hide-text-indent {
+.text-hide-indent {
   text-indent: -9999px;
 }
 

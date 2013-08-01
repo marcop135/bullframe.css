@@ -5,14 +5,17 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        
-<title>BULLFRAME.CSS demo page</title>
-<meta content="https://github.com/marco135/bullframe.css/" name="description">
+<meta name="HandheldFriendly" content="True">
+
+<title>BULLFRAME.CSS boilerplate demo page</title>
+<meta name="description" content="https://github.com/marco135/bullframe.css/">
          
 <link href="bullframe.css" rel="stylesheet">
 <style> 
 
-/* styles for header, section titles and footer */
+/* styles for header, section titles and footer 
+---------------------------------------------------------------------------- */
+
 [role="banner"], 
 .download {
   color: #fff;
@@ -29,12 +32,12 @@
   display: block;
 }
 [role="navigation"] li {
-  margin-bottom: 0.35em;
-  padding-bottom: 0.35em;
+  padding: 0.35em;
   border-bottom: 1px solid #ccc;
 }
-.download {
-  margin-top: 2.8em;
+[role="navigation"] li:hover,
+[role="navigation"] li:focus {
+  background-color: #f0f0f0;
 }
 .title, 
 .sub-title {
@@ -49,7 +52,35 @@
   background-color: #eaeaea;
 } 
 
-/* styles for grid system demo */
+/* footer container */
+.download {
+  margin-top: 2.8em;
+}
+
+/* github source link */
+.github-source {
+  text-decoration: underline;
+}
+
+.github-source,
+.github-source:hover,
+.github-source:focus {
+  color: #fff;
+}
+
+/* to top */
+.back-to-top a:hover,
+.back-to-top a:focus {
+  text-decoration: none;
+}
+.back-to-top a span {
+  vertical-align: middle;
+}
+
+
+
+/* styles for grid system demo
+---------------------------------------------------------------------------- */
 .grid-system .row {
     margin-bottom: 1.4em;
 }
@@ -78,7 +109,10 @@
   text-align: center;
 }   
   
-/* styles for form elements */
+
+
+/* styles for form elements
+---------------------------------------------------------------------------- */
 legend {
   padding-bottom: 1.4em !important;
 } 
@@ -89,11 +123,20 @@ select,
 textarea {
   margin-bottom: 1.4em !important;
 } 
+input[type="radio"],
+input[type="checkbox"] {
+  *margin-bottom: 0 !important;
+}
   
-/* hide jsbin edit button in live preview if is touch */
+
+
+/* misc
+ * hide jsbin edit button in live preview if is touch
+---------------------------------------------------------------------------- */
 .touch #edit-with-js-bin {
   display: none !important;
 }
+
 </style>
   
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -102,7 +145,7 @@ textarea {
 <body> 
 
 <header role="banner">
-<h1>BULLFRAME.CSS demo page</h1>
+<h1>BULLFRAME.CSS boilerplate demo page</h1>
 </header>
 
 <nav role="navigation" class="skip-to-content"> 
@@ -1131,12 +1174,13 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
   
 <div id="download" class="download">
   <h2 class="mega">Download on GitHub</h2>
-  <b><a style="color: #fff" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></b>
+  <b><a class="github-source" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></b>
 </div> 
  
-<p class="back-to-top"><a href="#" title="back-to-top"><span class="h4">&uarr;</span> back to top</a></p>
+<p class="back-to-top">
+  <a href="#" title="back to top"><span class="h1">&uarr;</span> back to top</a>
+</p>
   
  
-
 </body>
 </html>

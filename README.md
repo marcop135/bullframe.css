@@ -1,6 +1,6 @@
 <h1>BULLFRAME.CSS v1.4.3</h1>
-<p>bullframe.css is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
-<p>Personally I don't like some heavy and stylish front-end framework like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>style-agnostic mobile-first</b> CSS-only boilerplate.<br>
+<p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
+<p>Personally I don't like some heavy and stylish front-end frameworks like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
@@ -86,16 +86,17 @@ Tested and compatible with:
 
 
 <h2>Acknowledgements</h2>
-bullframe.css incorporates some of the styles found on:
+BULLFRAME.CSS incorporates some of the styles found on:
 <ul>
   <li>Normalize.css - <a href="https://github.com/necolas/normalize.css" title="">https://github.com/necolas/normalize.css</a></li>
   <li>HTML5 Boilerplate - <a href="https://github.com/h5bp/html5-boilerplate" title="">https://github.com/h5bp/html5-boilerplate</a></li>
-  <li>Bootstrap - <a href="https://github.com/twitter/bootstrap" title="">https://github.com/twitter/bootstrap</a></li>
+  <li>Bootstrap - <a href="https://github.com/twbs/bootstrap" title="">https://github.com/twbs/bootstrap</a></li>
   <li>320 and up - <a href="https://github.com/malarkey/320andup" title="">https://github.com/malarkey/320andup</a></li>
   <li>Formalize - <a href="https://github.com/nathansmith/formalize" title="">https://github.com/nathansmith/formalize</a></li>
   <li>Inuit CSS - <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
   <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
+  <li>YUI Pure Framework - <a href="https://github.com/yui/pure/" title="">https://github.com/yui/pure/</a></li>
   <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
-  <li>Pure CSS <a href="https://github.com/yui/pure" title="">https://github.com/yui/pure</a></li>
+  <li>Pure CSS - <a href="https://github.com/yui/pure" title="">https://github.com/yui/pure</a></li>
   <li>The Nyan Project - <a href="http://www.youtube.com/watch?v=QH2-TGUlwu4" title="">http://www.youtube.com/watch?v=QH2-TGUlwu4</a></li>
 </ul>

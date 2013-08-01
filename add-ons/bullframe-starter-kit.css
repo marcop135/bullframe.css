@@ -39,8 +39,8 @@ video {
 *:before, 
 *:after { 
   -webkit-box-sizing: border-box !important; 
-  -moz-box-sizing: border-box !important; 
-  box-sizing: border-box !important; 
+     -moz-box-sizing: border-box !important; 
+          box-sizing: border-box !important; 
 }
 */
 
@@ -50,6 +50,7 @@ video {
 
 /* Customize <body> element ------------------------------------------------
  * TIPS: reset body styles if you use modal windows (e.g. fancybox)
+ * and use a '<div class="container">...</div>'.
 
 body {
   max-width: ;

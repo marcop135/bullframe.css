@@ -1,4 +1,4 @@
-/*! Author's custom styles starting-point - BULLFRAME.CSS v1.4.3 add-on
+/*! Author's custom styles starting-point - BULLFRAME.CSS v1.5.0 add-on
  *
  * Customize as you want the following code
  *
@@ -43,24 +43,6 @@ video {
           box-sizing: border-box !important; 
 }
 */
-
-
-
-
-
-/* Customize <body> element ------------------------------------------------
- * TIPS: reset body styles if you use modal windows (e.g. fancybox)
- * and use a '<div class="container">...</div>'.
-
-body {
-  max-width: ;
-  *min-width: ;
-  margin: ;
-  padding: ;
-  position: ;
-}
-*/
-
 
 
 
@@ -119,7 +101,7 @@ a:focus {
 
 /* 15px 
 
-body {
+html {
   font-size: 0.9375em;
 }
 pre, 
@@ -132,7 +114,7 @@ samp {
 
 /* 14px 
 
-body {
+html {
   font-size: 0.875em;
 }
 pre, 
@@ -145,7 +127,7 @@ samp {
 
 /* 13px 
 
-body {
+html {
   font-size: 0.8125em;
 }
 pre, 
@@ -158,7 +140,7 @@ samp {
 
 /* 12px 
 
-body {
+html {
   font-size: 0.75em;
 }
 pre, 

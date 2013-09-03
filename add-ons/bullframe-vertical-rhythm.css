@@ -1,4 +1,4 @@
-/*! Vertical rhythm - BULLFRAME.CSS v1.4.3 add-on 
+/*! Vertical rhythm - BULLFRAME.CSS v1.5.0 add-on 
  * 
  * Follow baseline number '1.4' and compose to a vertical rhythm
  * ..or use the number you want.
@@ -8,9 +8,10 @@
  */
  
 
-
-body {
+html {
   line-height: 1.4;
+}
+.container {
   padding-top: 1.4em;
 }
 .tera,

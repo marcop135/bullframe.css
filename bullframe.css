@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME.CSS v1.4.3
+ * BULLFRAME.CSS v1.5.0
  *
  * Source: https://github.com/marco135/bullframe.css/
  * MIT License 
@@ -16,13 +16,6 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 body {
-  /* 20px + 940px + 20px = 980px */
-  max-width: 940px; 
-  *min-width: 940px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: auto; /* center */
-  position: relative;
   background-color: transparent;
 }
 article,
@@ -48,15 +41,12 @@ summary {
 ============================================================================ */
 
 html {
-  font-size: 100%;
+  font-size: 1em;
+  line-height: 1.4;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
-}
-body { 
-  font-size: 1em;
-  line-height: 1.4;
 }
 .tera,
 .giga,
@@ -425,24 +415,6 @@ figure {
 
 
 /* major normalization ---------------------------------------------------- */
-form {
-  margin: 0;
-}
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-legend { 
-  display: block;
-  display: table \9; /* enable line-wrapping in IE8+ */
-  width: 100%;
-  white-space: normal; /* enable line-wrapping in FF4/5 */
-  border: 0;
-  padding: 0;
-  font-weight: bold;
-  *margin-left: -7px;
-}
 label,
 html input, 
 select, 
@@ -477,6 +449,30 @@ input[type="submit"],
 input[type="radio"],
 input[type="checkbox"] {
   cursor: pointer;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+legend { 
+  display: block;
+  display: table \9; /* enable line-wrapping in IE8+ */
+  width: 100%;
+  white-space: normal; /* enable line-wrapping in FF4/5 */
+  border: 0;
+  padding: 0;
+  font-weight: bold;
+  *margin-left: -7px;
+}
+label {
+  font-weight: bold;
+}
+label input {
+  font-weight: normal;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -1054,31 +1050,29 @@ th {
  *
  */
 
-/*
- * 
- * <body> is the grid container
- *
-    body {
-      max-width: 940px;
-      *min-width: 940px;
-    } 
- *
- */
-.row {
+.bf-container {
+  /* 20px + 940px + 20px = 980px */
+  margin: auto;
+  max-width: 940px; 
+  *min-width: 940px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.bf-row {
   display: block;
   margin-left: -10px;
   margin-right: -10px;
   *zoom: 1;
 }
-.row:before,
-.row:after {
+.bf-row:before,
+.bf-row:after {
   content: " ";
   display: table;
 }
-.row:after {
+.bf-row:after {
   clear: both;
 } 
-[class*="col-"] {
+[class*="bf-col-"] {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -1088,93 +1082,93 @@ th {
   padding-left: 10px;
   padding-right: 10px;  
 }
-.col-1 {
+.bf-col-1 {
   width: 100%;
   *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-1-2 {
+.bf-col-1-2 {
   width: 50%;
   *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-1-3 {
+.bf-col-1-3 {
   width: 33.33333%;
   *width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-2-3 {
+.bf-col-2-3 {
   width: 66.66666%;
   *width: expression((this.parentNode.clientWidth/3*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
-.col-1-4 {
+.bf-col-1-4 {
   width: 25%;
   *width: expression((this.parentNode.clientWidth/4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-3-4 {
+.bf-col-3-4 {
   width: 75%;
   *width: expression((this.parentNode.clientWidth/4*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
-.col-1-5 {
+.bf-col-1-5 {
   width: 20%;
   *width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-2-5 {
+.bf-col-2-5 {
   width: 40%;
   *width: expression((this.parentNode.clientWidth/5*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-3-5 {
+.bf-col-3-5 {
   width: 60%;
   *width: expression((this.parentNode.clientWidth/5*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-4-5 {
+.bf-col-4-5 {
   width: 80%;
   *width: expression((this.parentNode.clientWidth/5*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-1-6 {
+.bf-col-1-6 {
   width: 16.656%;
   *width: expression((this.parentNode.clientWidth/6 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-5-6 {
+.bf-col-5-6 {
   width: 83.33%;
   *width: expression((this.parentNode.clientWidth/6*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-1-8 {
+.bf-col-1-8 {
   width: 12.5%;
   *width: expression((this.parentNode.clientWidth/8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-3-8 {
+.bf-col-3-8 {
   width: 37.5%;
   *width: expression((this.parentNode.clientWidth/8*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-5-8 {
+.bf-col-5-8 {
   width: 62.5%;
   *width: expression((this.parentNode.clientWidth/8*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-7-8 {
+.bf-col-7-8 {
   width: 87.5%;
   *width: expression((this.parentNode.clientWidth/8*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-1-12 {
+.bf-col-1-12 {
   width: 8.3333%;
   *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-5-12 {
+.bf-col-5-12 {
   width: 41.6666%;
   *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-7-12 {
+.bf-col-7-12 {
   width: 58.3333%;
   *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
-.col-11-12 {
+.bf-col-11-12 {
   width: 91.6666%;
   *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 /* responsive grid */
 @media screen and (max-width: 640px) {
-  .responsive-grid .row {
+  .responsive-grid .bf-row {
     margin-left: 0;
     margin-right: 0;
   }
-  .responsive-grid [class*="col-"] {
+  .responsive-grid [class*="bf-col-"] {
     width: 100%;
     *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
     float: none;

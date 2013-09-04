@@ -265,7 +265,7 @@ a {
   /* IE10: Remove grey background on active links */
   background-color: transparent; 
 
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); /* 35% black */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -558,7 +558,7 @@ input[type="url"],
 select,
 textarea {
   background-color: #fff;
-  border: 1px solid #999;
+  border: 1px solid #b2b2b2;
 }
 input[type="color"]:focus, 
 input[type="email"]:focus, 
@@ -700,9 +700,7 @@ input[type="reset"],
 input[type="submit"] {
   padding: 0.4em 1em;
   text-align: center;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   background-clip: padding-box;
   vertical-align: baseline;
   *overflow: visible;
@@ -715,15 +713,9 @@ input[type="submit"] {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   text-shadow: 1px 1px rgba(255,255,255,0.5);
-  border: 1px solid #a8a8a8;
+  border: 1px solid #b2b2b2;
   background-image: none; /* normalize fennec */
-  background: #d6d6d6;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.1)));
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0, 0.1));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
-  background: -o-linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
-  background: linear-gradient(transparent, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+  background: #fff;
 }
 /* Firefox: Get rid of the inner focus border */
 button::-moz-focus-inner, 
@@ -754,14 +746,8 @@ input[type="reset"]:focus,
 input[type="submit"]:focus {
   outline: 0 none;
   text-decoration: none;
-  border-color: #666;
-  background: #c4c4c4;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(50%, rgba(0,0,0,0.2)), to(rgba(0,0,0,0.2)));
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
-  background: -moz-linear-gradient(top, rgba(0,0,0, 0.2) 0%, rgba(0,0,0, 0.2));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
-  background: -o-linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
-  background: linear-gradient(transparent, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+  border-color: #999;
+  background: #ebebeb;
 }
 button.btn-primary,
 .btn-primary,
@@ -770,8 +756,8 @@ input.btn-primary[type="reset"],
 input.btn-primary[type="submit"] {
   color: #fff;
   text-shadow: none;
-  border-color: #0078e7;
-  background-color: #0078e7;
+  border-color: #357ebd;
+  background-color: #428bca;
 }
 button.btn-primary:hover,
 .btn-primary:hover,
@@ -784,16 +770,16 @@ input.btn-primary[type="button"]:focus,
 input.btn-primary[type="reset"]:focus,
 input.btn-primary[type="submit"]:focus {
   color: #fff;
-  border-color: #0067c6;
-  background-color: #0067c6;
+  border-color: #285e8e;
+  background-color: #3276b1;
 }
 button:active,
 .btn:active,
 input[type="button"]:active, 
 input[type="reset"]:active,
 input[type="submit"]:active {
-  -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
-          box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
+          box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
 }
 .btn-xsmall {
   font-size: 70%;
@@ -937,7 +923,7 @@ button:active[disabled],
 input:active[disabled] {
   cursor: default !important;
   cursor: not-allowed !important;
-  background: #efefef none !important; /* very light grey */
+  background: #f9f9f9 none !important; /* very light grey */
   border-color: #dbdbdb !important;
   color: #b2b2b2 !important;
   text-shadow: none !important;
@@ -951,6 +937,7 @@ fieldset.disabled .btn-primary,
 .btn.btn-primary[disabled],
 .btn.btn-primary.disabled {
   background: #bed4f7 none !important; /* very light blue */
+  border-color: #bed4f7 !important;
   color: #fff !important;
 }
 input[type="radio"][disabled],
@@ -1455,10 +1442,12 @@ th {
 .table-overflow-container { 
   overflow-x: auto;
   *overflow-x: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 /* force and customize webkit scrollbars appearance */
 .table-overflow-container.scrollbar {
   -webkit-overflow-scrolling: auto; 
+  -ms-overflow-style: scrollbar;
 }
 .table-overflow-container.scrollbar::-webkit-scrollbar {
   width: 0.625em;

@@ -16,6 +16,7 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 body {
+  margin: 0;
   background-color: transparent;
 }
 article,
@@ -41,12 +42,17 @@ summary {
 ============================================================================ */
 
 html {
-  font-size: 1em;
+  font-size: 62.5%;
   line-height: 1.4;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
+}
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 .tera,
 .giga,
@@ -82,54 +88,63 @@ h6 {
   line-height: 1;
 }
 .tera {
-  font-size: 3.5em;
+  font-size: 56px;
+  font-size: 5.6rem;
   margin: 0.35em 0;
 }
 .giga {
-  font-size: 3em;
+  font-size: 48px;
+  font-size: 4.8rem;
   margin: 0.5em 0;
 }
 .mega {
-  font-size: 2.5em;
+  font-size: 40px;
+  font-size: 4.2rem;
   margin: 0.5em 0;
 }
 h1,
 .h1 {
-  font-size: 2em;
+  font-size: 32px;
+  font-size: 3.2rem;
   margin: 0.75em 0;
 }
 h2,
 .h2 {
-  font-size: 1.4em;
+  font-size: 24px;
+  font-size: 2.4rem;
   margin: 0.75em 0;
 }
 h3,
 .h3 {
-  font-size: 1.3125em;
+  font-size: 21px;
+  font-size: 2.1rem;
   margin: 1em 0;
 }
 h4,
 .h4 {
-  font-size: 1.125em;
-  margin: 1.4em 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin: 1.5em 0;
 }
 h5,
-.h5  {
-  font-size: 1em;
-  margin: 1.4em 0;
+.h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin: 1.5em 0;
 }
 h6,
-.h6  {
-  font-size: 0.875em;
-  margin: 1.4em 0;
+.h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 1.5em 0;
 }
 abbr[title] { 
   border-bottom: 1px dotted;
   cursor: help;
 }
 blockquote { 
-  margin: 0 0 1.4em 0;
-  padding-left: 1.4em;
+  margin: 0 0 1.5em 0;
+  padding-left: 1.5em;
   border-left: 2px solid #ccc;
 }
 q {
@@ -157,7 +172,7 @@ s {
 }
 p,
 pre {
-  margin: 1.4em 0;
+  margin: 1.5em 0;
 }
 p + p {
   margin-top: 0;
@@ -182,7 +197,8 @@ code,
 kbd, 
 samp {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace; 
-  font-size: 1em;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 strong, 
 b { 
@@ -218,7 +234,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-  margin: 1.4em 0;
+  margin: 1.5em 0;
   padding: 0;
 }
 ::-moz-selection {
@@ -278,7 +294,7 @@ menu,
 ol,
 ul,
 dl {
-  margin: 1.4em 0;
+  margin: 1.5em 0;
   padding: 0;
 }
 menu ul,
@@ -293,7 +309,7 @@ dd {
 }
 ul,
 ol {
-  margin-left: 1.4em;
+  margin-left: 1.5em;
 }
 nav ol,
 nav ul {
@@ -465,7 +481,7 @@ legend {
   white-space: normal; /* enable line-wrapping in FF4/5 */
   border: 0;
   padding: 0;
-  font-weight: bold;
+  font-weight: normal;
   *margin-left: -7px;
 }
 label {
@@ -485,8 +501,9 @@ button,
 input, 
 select, 
 textarea {
-  font-size: 100%;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, Arial, sans-serif;
 }
 button, 
 .btn,
@@ -515,7 +532,9 @@ optgroup {
 
 /* normalize appearance --------------------------------------------------- */
 button,
-html input[type="button"], /* avoid destroying native android audio/video players */
+
+/* avoid destroying native android audio/video players */
+html input[type="button"],
 input[type="reset"],
 input[type="submit"],
 input[type="email"], 
@@ -684,11 +703,11 @@ input[type="checkbox"]:focus {
 }
 label input[type="radio"], 
 label input[type="checkbox"] {
-  margin-right: 0.35em;;
+  margin-right: 0.35em;
 }
 label + input[type="radio"], 
 label + input[type="checkbox"] {
-  margin-left: 0.35em;;
+  margin-left: 0.35em;
 }
 
 
@@ -1038,17 +1057,17 @@ th {
  */
 
 .bf-container {
-  /* 20px + 940px + 20px = 980px */
+  /* 20px + 1160px + 20px = 1200px */
   margin: auto;
-  max-width: 940px; 
+  max-width: 1160px; 
   *min-width: 940px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
   padding-left: 20px;
   padding-right: 20px;
 }
 .bf-row {
   display: block;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -12px;
+  margin-right: -12px;
   *zoom: 1;
 }
 .bf-row:before,
@@ -1066,8 +1085,8 @@ th {
   float: left;
   position: relative;
   min-height: 1;
-  padding-left: 10px;
-  padding-right: 10px;  
+  padding-left: 12px;
+  padding-right: 12px;  
 }
 .bf-col-1 {
   width: 100%;
@@ -1248,11 +1267,11 @@ th {
 /* image positioning ------------------------------------------------------- */
 .img-left {
   float: left;
-  margin: 0 1.4em 1.4em 0;
+  margin: 0 1.5em 1.5em 0;
 }
 .img-right {
   float: right;
-  margin: 0 0 1.4em 1.4em;
+  margin: 0 0 1.5em 1.5em;
 }
 
 
@@ -1391,7 +1410,7 @@ th {
   text-transform: uppercase;
 }
 .text-sans-serif {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .text-serif {
   font-family: Georgia, Times, "Times New Roman", serif;

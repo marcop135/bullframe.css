@@ -47,6 +47,24 @@ video {
 
 
 
+
+/* Customize <body> element ------------------------------------------------
+ * TIPS: reset body styles if you use modal windows (e.g. fancybox)
+ * and use a '<div class="container">...</div>'.
+
+body {
+  max-width: ;
+  *min-width: ;
+  margin: ;
+  padding: ;
+  position: ;
+}
+*/
+
+
+
+
+
 /* Change skin -------------------------------------------------------------
 
 html, 
@@ -95,65 +113,6 @@ a:focus {
 
 
 
-
-
-/* Change base font-size ---------------------------------------------------
-
-/* 15px 
-
-html {
-  font-size: 0.9375em;
-}
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-
-
-/* 14px 
-
-html {
-  font-size: 0.875em;
-}
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-
-
-/* 13px 
-
-html {
-  font-size: 0.8125em;
-}
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-
-
-/* 12px 
-
-html {
-  font-size: 0.75em;
-}
-pre, 
-code, 
-kbd, 
-samp {
-  font-size: 1em;
-}
-*/
-
-
-
-
 /* WordPress Core CSS (relative units in use)
  * http://codex.wordpress.org/CSS 
  *
@@ -166,35 +125,35 @@ samp {
  * WordPress 2.6).
  * ------------------------------------------------------------------------
 .alignnone {
-  margin: 0.7em 1.4em 1.4em 0;
+  margin: 0.8em 1.5em 1.5em 0;
 }
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 0.7em auto;
+  margin: 0.8em auto;
 }
 .alignright {
   float: right;
-  margin: 0.7em 0 1.4em 1.4em;
+  margin: 0.8em 0 1.5em 1.5em;
 }
 .alignleft {
   float: left;
-  margin: 0.7em 1.4em 1.4em 0;
+  margin: 0.8em 1.5em 1.5em 0;
 }
 .aligncenter {
   display: block;
-  margin: 0.7em auto;
+  margin: 0.8em auto;
 }
 a img.alignright {
   float: right;
-  margin: 0.7em 0 1.4em 1.4em;
+  margin: 0.8em 0 1.5em 1.5em;
 }
 a img.alignnone {
-  margin: 0.7em 1.4em 1.4em 0;
+  margin: 0.8em 1.4em 1.5em 0;
 }
 a img.alignleft {
   float: left;
-  margin: 0.7em 1.4em 1.4em 0;
+  margin: 0.8em 1.5em 1.5em 0;
 }
 a img.aligncenter {
   display: block;
@@ -205,17 +164,17 @@ a img.aligncenter {
   background: #f4f4f4;
   border: 1px solid #ccc;
   max-width: 96%;
-  padding: 0.7em 0.7em 0.7em;
+  padding: 0.8em 0.8em 0.8em;
   text-align: center;
 }
 .wp-caption.alignnone {
-  margin: 0.7em 1.4em 1.4em 0;
+  margin: 0.8em 1.5em 1.4em 0;
 }
 .wp-caption.alignleft {
-  margin: 0.7em 1.4em 1.4em 0;
+  margin: 0.8em 1.5em 1.5em 0;
 }
 .wp-caption.alignright {
-  margin: 0.7em 0 1.4em 1.4em;
+  margin: 0.8em 0 1.5em 1.5em;
 }
 .wp-caption img {
   margin: 0;
@@ -223,7 +182,7 @@ a img.aligncenter {
 }
 .wp-caption p.wp-caption-text {
   font-size: 0.875em;
-  margin: 0.7em 0 0 0;
+  margin: 0.8em 0 0 0;
   padding: 0;
 }
  */

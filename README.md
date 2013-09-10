@@ -11,7 +11,6 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
-  <li>EM unit instead of PX</li>
   <li>Fluid grid system</li>
   <li>Flexible vertical grid</li>
   <li>IE7+ support <small>(if you really need it...)</small></li>

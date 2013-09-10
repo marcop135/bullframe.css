@@ -1,6 +1,6 @@
 /*! Vertical rhythm - BULLFRAME.CSS v1.5.0 add-on 
  * 
- * Follow baseline number '1.4' and compose to a vertical rhythm
+ * Follow baseline number '1.5' and compose to a vertical rhythm
  * ..or use the number you want.
  *
  * https://github.com/marco135/bullframe.css/tree/master/add-ons
@@ -8,11 +8,11 @@
  */
  
 
-html {
-  line-height: 1.4;
+body {
+  line-height: 1.5;
 }
 .bf-container {
-  padding-top: 1.4em;
+  padding-top: 1.5em;
 }
 .tera,
 .giga,
@@ -39,10 +39,10 @@ blockquote {
   margin-top: 0;
 }
 hr {
-  margin-top: 1.4em;
+  margin-top: 1.5em;
 }
 figure img + figcaption {
-  margin-top: -1.4em;
+  margin-top: -1.5em;
 }
 p,
 pre,
@@ -80,15 +80,15 @@ a img.aligncenter,
 .wp-caption.alignnone,
 .wp-caption.alignleft,
 .wp-caption.alignright {
-  margin-bottom: 1.4em;
+  margin-bottom: 1.5em;
 }
-@media screen and (max-width: 40em) { 
+@media screen and (max-width: 640px) { 
   .responsive-grid [class*="col-"] {
-    margin-bottom: 1.4em
+    margin-bottom: 1.5em
   }
 }
 legend {
-  padding-bottom: 1.4em;
+  padding-bottom: 1.5em;
 }
 ol ul,
 ul ul,
@@ -105,7 +105,7 @@ ol,
 .alignright,
 a img.alignright,
 .wp-caption.alignright {
-	margin-left: 1.4em;
+	margin-left: 1.5em;
 }
 .img-left,
 .alignnone,
@@ -114,8 +114,8 @@ a img.alignnone,
 a img.alignleft,
 .wp-caption.alignnone,
 .wp-caption.alignleft {
-	margin-right: 1.4em;
+	margin-right: 1.5em;
 }
 blockquote {
-  padding-left: 1.4em;
+  padding-left: 1.5em;
 }

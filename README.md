@@ -8,12 +8,13 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <ul>
   <li>Normalized styles for a wide range of elements across browsers (like 
   <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> do)</li>
+  <li>30%~ of Bootstrap3 main CSS</li>
+  <li>IE7+ support <small>(if you really need it...)</small></li>
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
   <li>Fluid grid system</li>
   <li>Flexible vertical grid</li>
-  <li>IE7+ support <small>(if you really need it...)</small></li>
   <li>Starter-kit custom styles</li>
 </ul>
 <ul>
@@ -26,7 +27,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
 <h2>Test it now</h2>
-<p><b><a href="http://jsbin.com/bullframecss-v1.5.0-wip/latest/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b></p>
+<p><b><a href="http://jsbin.com/bullframecss/latest/quiet" title="bullframe demo page - JSBin">Check out the demo</a></b></p>
 
 <h2>How to use it</h2>
 <ul>

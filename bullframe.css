@@ -136,7 +136,6 @@ h6 {
 
 .mega {
   font-size: 40px;
-  font-size: 4.2rem;
   margin: 0.5em 0;
 }
 
@@ -161,7 +160,6 @@ h3,
 h4,
 .h4 {
   font-size: 18px;
-  font-size: 1.8rem;
   margin: 1.5em 0;
 }
 
@@ -635,26 +633,6 @@ textarea:focus {
           box-shadow: 0 0 0 1px #52a8ec;
 }
 
-/* IE8 */
-@media \0screen {
-  input[type="color"]:focus, 
-  input[type="email"]:focus, 
-  input[type="number"]:focus, 
-  input[type="password"]:focus, 
-  input[type="tel"]:focus, 
-  input[type="search"]:focus,
-  input[type="text"]:focus, 
-  input[type^="date"]:focus,
-  input[type="month"]:focus, 
-  input[type="time"]:focus, 
-  input[type="week"]:focus, 
-  input[type="time"]:focus, 
-  input[type="url"]:focus,
-  select:focus,
-  textarea:focus {
-    outline: 1px solid #52a8ec;
-  }
-}
 
 
 /* responsiveness ---------------------------------------------------------- */
@@ -763,7 +741,7 @@ button,
 input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-  padding: 0.4em 1em;
+  padding: 0.5em 1em;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
@@ -799,7 +777,7 @@ button.btn,
 input[type="button"].btn, 
 input[type="reset"].btn,
 input[type="submit"].btn {
-  *padding: 0.3em 0.7em;
+  *padding: 0.4em 0.7em;
 }
 
 button:hover,
@@ -1101,11 +1079,11 @@ th {
 
 
 
-/* $ Basic fluid grid system (12 columns)
+/* $ Basic fluid grid system (12 columns) IE7+
  * 
- * TODO: 
- * offsetting, 
- * column ordering (for SEO), 
+ * Heads up!
+ * You can't do:
+ * nesting, offsetting, column ordering (for SEO),
  * mobile/tablet/desktop mixing 
 ============================================================================ */
 

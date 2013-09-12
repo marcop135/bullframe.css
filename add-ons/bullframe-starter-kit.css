@@ -113,6 +113,148 @@ a:focus {
 
 
 
+
+/* Change font-sizing ------------------------------------------------------ */
+
+/* EM only (with PX references) ------------------- 
+
+/* 15px 
+
+body {
+  font-size: 0.9375em;
+}
+
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 14px 
+
+body {
+  font-size: 0.875em;
+}
+
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 13px 
+
+body {
+  font-size: 0.8125em;
+}
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 12px 
+
+body {
+  font-size: 0.75em;
+}
+
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+*/
+
+
+/* just PX and REM ------------------- 
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.tera {
+  font-size: 56px;
+  font-size: 5.6rem;
+}
+
+.giga {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+.mega {
+  font-size: 40px;
+  font-size: 4.2rem;
+}
+
+h1,
+.h1 {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+h3,
+.h3 {
+  font-size: 21px;
+  font-size: 2.1rem;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+h5,
+.h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h6,
+.h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+pre,  
+code, 
+kbd, 
+samp,
+
+button, 
+input, 
+select, 
+textarea {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+*/
+
+
+
+
 /* WordPress Core CSS (relative units in use)
  * http://codex.wordpress.org/CSS 
  *

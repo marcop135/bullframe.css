@@ -6,19 +6,6 @@
  =========================================================================== */
 
 
-
-/* $ The basics
-============================================================================ */
-
-html {
-  background-color: #fff;
-  color: #222;
-  -webkit-overflow-scrolling: touch;
-}
-body {
-  margin: 0;
-  background-color: transparent;
-}
 article,
 aside,
 details,
@@ -34,26 +21,73 @@ summary {
   display: block;
 }
 
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
 
+audio:not([controls]) { 
+  display: none;
+  height: 0;
+}
 
+[hidden] {
+    display: none;
+}
 
-
-/* $ Typography
-============================================================================ */
+html,
+button, 
+input, 
+select, 
+textarea {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 html {
-  font-size: 62.5%;
-  line-height: 1.4;
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
-}
-body {
-  font-size: 16px;
-  font-size: 1.6rem;
+  background-color: #fff;
+  color: #222;
   line-height: 1.5;
+  -webkit-overflow-scrolling: touch;
 }
+
+body {
+  margin: 0;
+  background-color: transparent;
+}
+
+a,
+a:hover,
+a:focus { 
+  color: #1467ff; /* blue */
+}
+
+a:hover, 
+a:focus { 
+  text-decoration: underline;
+  outline: 0;
+}
+
+a:focus { 
+  outline: 1px dotted #222;
+  outline: 5px auto -webkit-focus-ring-color; /* webkit */
+  outline-offset: -2px;
+} 
+
+a {
+  text-decoration: none;
+  /* IE10: Remove grey background on active links */
+  background-color: transparent; 
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .tera,
 .giga,
 .gamma,
@@ -72,6 +106,7 @@ h6,
   font-weight: 700;
   line-height: 1.2; /* reduce base line-height for better display */
 }
+
 h1, 
 h2,
 h3,
@@ -81,105 +116,119 @@ h6 {
   font-family: inherit; 
   color: inherit;
 }
+
 .tera,
 .giga,
 .mega {
   display: block;
   line-height: 1;
 }
+
 .tera {
-  font-size: 56px;
-  font-size: 5.6rem;
+  font-size: 3.5em;
   margin: 0.35em 0;
 }
+
 .giga {
-  font-size: 48px;
-  font-size: 4.8rem;
+  font-size: 3em;
   margin: 0.5em 0;
 }
+
 .mega {
   font-size: 40px;
   font-size: 4.2rem;
   margin: 0.5em 0;
 }
+
 h1,
 .h1 {
-  font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 2.5em;
   margin: 0.75em 0;
 }
+
 h2,
 .h2 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 1.4em;
   margin: 0.75em 0;
 }
+
 h3,
 .h3 {
-  font-size: 21px;
-  font-size: 2.1rem;
+  font-size: 1.3125em;
   margin: 1em 0;
 }
+
 h4,
 .h4 {
   font-size: 18px;
   font-size: 1.8rem;
   margin: 1.5em 0;
 }
+
 h5,
 .h5 {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1.125em;
   margin: 1.5em 0;
 }
+
 h6,
 .h6 {
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 0.875em;
   margin: 1.5em 0;
 }
+
 abbr[title] { 
   border-bottom: 1px dotted;
   cursor: help;
 }
+
 blockquote { 
   margin: 0 0 1.5em 0;
   padding-left: 1.5em;
   border-left: 2px solid #ccc;
 }
+
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
+
 q:before,
 q:after {
   *content: '';
   *content: none;
 }
+
 mark { 
   background: #ff0; /* yellow */
   color: #000;
   font-weight: bold;
 }
+
 ins { 
   background: #ff9; /* light yellow */
   color: #000; 
   text-decoration: none;
 }
+
 del, 
 strike, 
 s { 
   text-decoration: line-through;
 }
+
 p,
 pre {
   margin: 1.5em 0;
 }
+
 p + p {
   margin-top: 0;
 }
+
 p.lead {
   font-size: 125%;
 }
+
 pre {
   word-break: break-all; /* webkit */
   word-wrap: break-word;
@@ -192,23 +241,24 @@ pre {
       -ms-hyphens: none;
           hyphens: none;
 }
+
 pre,  
 code, 
 kbd, 
 samp {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace; 
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1em;
 }
+
 strong, 
 b { 
   font-weight: bold;
 }
-em, 
-i,  
+ 
 dfn { 
   font-style: italic;
 }
+
 sub,
 sup {
   font-size: 75%;
@@ -216,20 +266,28 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sup {
   top: -0.5em;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 small {
-  font-size: 85%;
+  font-size: 80%;
 }
+
 address {
   display: block;
   font-style: normal;
 }
+
 hr {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   display: block;
   height: 1px;
   border: 0;
@@ -237,53 +295,26 @@ hr {
   margin: 1.5em 0;
   padding: 0;
 }
+
 ::-moz-selection {
   background: #b3d4fc; /* azure */
   color: #000;
   text-shadow: none;
 }
+
 ::selection { 
   background: #b3d4fc; 
   color: #000; 
   text-shadow: none;
 }
+
 img::-moz-selection { 
   background-color: transparent; 
 }
+
 img::selection  { 
   background-color: transparent;      
 }
-
-
-
-
-
-/* $ Links
-============================================================================ */
-
-a,
-a:hover,
-a:focus { 
-  color: #1467ff; /* blue */
-}
-a:hover, 
-a:focus { 
-  text-decoration: underline;
-  outline: 0;
-}
-a:focus { 
-  outline: 1px dotted #222;
-  outline: 5px auto -webkit-focus-ring-color; /* webkit */
-  outline-offset: -2px;
-} 
-a {
-  text-decoration: none;
-  /* IE10: Remove grey background on active links */
-  background-color: transparent; 
-
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 
 
 
@@ -352,7 +383,7 @@ ol.unstyled ul {
 
 
 
-/* $ Images and media elements
+/* $ Embedded contents
 ============================================================================ */
 
 img,
@@ -364,38 +395,31 @@ object,
 embed {
   max-width: 100%;
 }
-audio,
-canvas,
-video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
+
 audio,
 canvas,
 img,
 video {
   vertical-align: middle;
 }
+
 img,
 video {
   height: auto;
 }
+
 img {
   border: 0;
   width: auto;
   -ms-interpolation-mode: bicubic;
 }
-audio:not([controls]) { 
-  display: none;
-  height: 0;
-}
+
 svg:not(:root) { 
   overflow: hidden;
 }
 
-
 /* vendor styles ----------------------------------------------------------- */
+
 /* google maps fix */
 #map_canvas img,
 #map_canvas embed,
@@ -405,6 +429,7 @@ svg:not(:root) {
 .map_canvas object {
   max-width: none !important; 
 }
+
 /* override the Twitter embed fixed width */
 .twitter-tweet-rendered {
   max-width: 100% !important;
@@ -425,12 +450,11 @@ figure {
 
 
 
-
 /* $ Forms (enter the madness)
 ============================================================================ */
 
-
 /* major normalization ---------------------------------------------------- */
+
 label,
 html input, 
 select, 
@@ -444,18 +468,21 @@ input[type="submit"] {
   *display: inline;
   *zoom: 1;
 }
+
 button,
 html input, 
 select, 
 textarea {
   margin: 0;
 }
+
 input, 
 select, 
 textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
+
 label,
 button,
 .btn,
@@ -466,14 +493,17 @@ input[type="radio"],
 input[type="checkbox"] {
   cursor: pointer;
 }
+
 form {
   margin: 0;
 }
+
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
+
 legend { 
   display: block;
   display: table \9; /* enable line-wrapping in IE8+ */
@@ -484,12 +514,15 @@ legend {
   font-weight: normal;
   *margin-left: -7px;
 }
+
 label {
   font-weight: bold;
 }
+
 label input {
   font-weight: normal;
 }
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   height: auto;
@@ -497,14 +530,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 /* normalize texts -------------------------------------------------------- */
-button, 
-input, 
-select, 
-textarea {
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-family: Arial, Helvetica, Arial, sans-serif;
-}
+
 button, 
 .btn,
 .btn:hover,
@@ -514,15 +540,18 @@ select,
 textarea {
   color: #222;
 }
+
 button,
 .btn,
 input {
   line-height: normal;
 }
+
 button,
 select {
   text-transform: none;
 }
+
 optgroup {
   font-family: inherit;
   font-size: inherit;
@@ -531,6 +560,7 @@ optgroup {
 
 
 /* normalize appearance --------------------------------------------------- */
+
 button,
 
 /* avoid destroying native android audio/video players */
@@ -550,6 +580,7 @@ select,
 textarea { 
   -webkit-appearance: none;
 }
+
 button,
 input,
 select,
@@ -557,10 +588,12 @@ textarea {
   -webkit-border-radius: 0;
           border-radius: 0;
 }
+
 input[type="radio"] {
   -webkit-border-radius: 7px;
           border-radius: 7px;
 }
+
 input[type="color"], 
 input[type="email"], 
 input[type="number"], 
@@ -579,6 +612,7 @@ textarea {
   background-color: #fff;
   border: 1px solid #b2b2b2;
 }
+
 input[type="color"]:focus, 
 input[type="email"]:focus, 
 input[type="number"]:focus, 
@@ -600,6 +634,7 @@ textarea:focus {
   -webkit-box-shadow: 0 0 0 1px #52a8ec;
           box-shadow: 0 0 0 1px #52a8ec;
 }
+
 /* IE8 */
 @media \0screen {
   input[type="color"]:focus, 
@@ -623,6 +658,7 @@ textarea:focus {
 
 
 /* responsiveness ---------------------------------------------------------- */
+
 input,
 input[type="search"], /* be specific here */
 input[type="radio"], 
@@ -638,16 +674,19 @@ button,
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 html input,
 select,
 textarea {
   width: 100%;
   *width: 98%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
+
 input[type="file"],
 select {
   *width: 100%;
 }
+
 button,
 input[type="image"],
 input[type="submit"],
@@ -657,6 +696,7 @@ input[type="radio"],
 input[type="checkbox"] {
   width: auto;
 }
+
 input[type="email"], 
 input[type="number"], 
 input[type="password"], 
@@ -675,6 +715,7 @@ textarea {
   *padding-left: 1%; /* IE7 doesn't support CSS3 'box-sizing' */
   *padding-right: 1%;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select,
   select[size="0"],
@@ -682,12 +723,14 @@ textarea {
     padding-right: 1.365em;
   } 
 } 
+
 textarea {
   *padding: 1%;
 }
   
 
 /* radios and checkboxes --------------------------------------------------- */
+
 input[type="radio"], 
 input[type="checkbox"] {
   padding: 0;
@@ -695,16 +738,19 @@ input[type="checkbox"] {
   *width: 13px;
   *height: 13px;
 }
+
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   outline: 1px solid #52a8ec;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
 label input[type="radio"], 
 label input[type="checkbox"] {
   margin-right: 0.35em;
 }
+
 label + input[type="radio"], 
 label + input[type="checkbox"] {
   margin-left: 0.35em;
@@ -736,12 +782,14 @@ input[type="submit"] {
   background-image: none; /* normalize fennec */
   background: #fff;
 }
+
 /* Firefox: Get rid of the inner focus border */
 button::-moz-focus-inner, 
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
+
 /* to reduce IE7's oversized button text */
 button,
 input[type="button"], 
@@ -753,6 +801,7 @@ input[type="reset"].btn,
 input[type="submit"].btn {
   *padding: 0.3em 0.7em;
 }
+
 button:hover,
 .btn:hover,
 input[type="button"]:hover, 
@@ -768,6 +817,7 @@ input[type="submit"]:focus {
   border-color: #999;
   background: #ebebeb;
 }
+
 button.btn-primary,
 .btn-primary,
 input.btn-primary[type="button"], 
@@ -778,6 +828,7 @@ input.btn-primary[type="submit"] {
   border-color: #357ebd;
   background-color: #428bca;
 }
+
 button.btn-primary:hover,
 .btn-primary:hover,
 input.btn-primary[type="button"]:hover, 
@@ -792,6 +843,7 @@ input.btn-primary[type="submit"]:focus {
   border-color: #285e8e;
   background-color: #3276b1;
 }
+
 button:active,
 .btn:active,
 input[type="button"]:active, 
@@ -800,37 +852,46 @@ input[type="submit"]:active {
   -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
           box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
 }
+
 .btn-xsmall {
-  font-size: 70%;
+  font-size: 65%;
 }
+
 .btn-small {
-  font-size: 85%;
+  font-size: 80%;
 }
+
 .btn-large {
-  font-size: 110%;
+  font-size: 120%;
 }
+
 .btn-xlarge {
-  font-size: 125%;
+  font-size: 150%;
 } 
 
 
 /* selects ----------------------------------------------------------------- */
+
 select {
   background-repeat: no-repeat;
   background-position: right center;
 }
+
 select[size], 
 select[multiple] { 
   height: auto;
 }
+
 /* use a custom dropdown arrow in Webkit browsers (Safari, Android, Chrome, ecc...) */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
   select[size],
   select[multiple] {
     background-image: none;
     -webkit-background-size: auto auto;
             background-size: auto auto;
   }
+
   select,
   select[size="0"],
   select[size="1"] { 
@@ -841,7 +902,9 @@ select[multiple] {
     -webkit-background-size: 1.25em 0.625em;
             background-size: 1.25em 0.625em;
   } 
+
 } 
+
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -849,6 +912,7 @@ optgroup::-moz-focus-inner {
 
 
 /* textareas --------------------------------------------------------------- */
+
 textarea {
   height: auto;
   min-height: 2.8em;
@@ -859,12 +923,14 @@ textarea {
 
 
 /* invalid, placeholder, disabled, readonly -------------------------------- */
+
 input:focus:invalid, 
 select:focus:invalid,
 textarea:focus:invalid { 
   color: #b94a48; /* dark red */
   border-color: #b94a48; /* red */
 }
+
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus {
@@ -874,6 +940,7 @@ select:focus:invalid:focus {
   -webkit-box-shadow: 0 0 0 1px #b94a48;
           box-shadow: 0 0 0 1px #b94a48;
 }
+
 @media \0screen {
   input:focus:invalid:focus,
   textarea:focus:invalid:focus,
@@ -886,6 +953,7 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #888; /* gray */
 }
+
 /* FF placeholder bug
  * Issue: If one change the text color of input fields, FF will change 
  * the default color of placeholders too!
@@ -895,22 +963,27 @@ input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #888;
 }
+
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #888;
 }
+
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #888;
 }
+
 input:placeholder,
 textarea:placeholder {
   color: #888;
 }
+
 input.placeholder,
 textarea.placeholder {
   color: #888;
 }
+
 /* disable groups */
 fieldset[disabled] .btn,
 fieldset[disabled] button,
@@ -922,6 +995,7 @@ fieldset.disabled button,
 fieldset.disabled input,
 fieldset.disabled select,
 fieldset.disabled textarea,
+
 /* disable singles */
 .btn[disabled],
 button[disabled],
@@ -933,6 +1007,7 @@ button.disabled,
 input.disabled,
 select.disabled,
 textarea.disabled,
+
 /* disable active singles */
 button.disabled:active,
 .btn.disabled:active,
@@ -951,6 +1026,7 @@ input:active[disabled] {
   box-shadow: none !important;
   opacity: 1 !important;
 }
+
 fieldset[disabled] .btn-primary
 fieldset.disabled .btn-primary,
 .btn.btn-primary[disabled],
@@ -959,6 +1035,7 @@ fieldset.disabled .btn-primary,
   border-color: #bed4f7 !important;
   color: #fff !important;
 }
+
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 fieldset[disabled] input[type="radio"],
@@ -984,22 +1061,27 @@ table {
   border-spacing: 0;
   background-color: transparent; /* override deprecated 'bgcolor' attribute */
 } 
+
 thead th {
   vertical-align: bottom;
 }
+
 th,
 td { 
   vertical-align: top;
 }
+
 .table th,
 .table td {
   padding: 0.466666666em;
   border-bottom: 1px solid #999;
 }
+
 th,
 caption { 
   text-align: left;
 }
+
 th {
   font-weight: bold;
 }
@@ -1064,20 +1146,24 @@ th {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .bf-row {
   display: block;
   margin-left: -12px;
   margin-right: -12px;
   *zoom: 1;
 }
+
 .bf-row:before,
 .bf-row:after {
   content: " ";
   display: table;
 }
+
 .bf-row:after {
   clear: both;
 } 
+
 [class*="bf-col-"] {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -1088,74 +1174,92 @@ th {
   padding-left: 12px;
   padding-right: 12px;  
 }
+
 .bf-col-1 {
   width: 100%;
   *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-1-2 {
   width: 50%;
   *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-1-3 {
   width: 33.33333%;
   *width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-2-3 {
   width: 66.66666%;
   *width: expression((this.parentNode.clientWidth/3*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
+
 .bf-col-1-4 {
   width: 25%;
   *width: expression((this.parentNode.clientWidth/4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-3-4 {
   width: 75%;
   *width: expression((this.parentNode.clientWidth/4*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 } 
+
 .bf-col-1-5 {
   width: 20%;
   *width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-2-5 {
   width: 40%;
   *width: expression((this.parentNode.clientWidth/5*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-3-5 {
   width: 60%;
   *width: expression((this.parentNode.clientWidth/5*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-4-5 {
   width: 80%;
   *width: expression((this.parentNode.clientWidth/5*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-1-6 {
   width: 16.656%;
   *width: expression((this.parentNode.clientWidth/6 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-5-6 {
   width: 83.33%;
   *width: expression((this.parentNode.clientWidth/6*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-1-8 {
   width: 12.5%;
   *width: expression((this.parentNode.clientWidth/8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-3-8 {
   width: 37.5%;
   *width: expression((this.parentNode.clientWidth/8*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-5-8 {
   width: 62.5%;
   *width: expression((this.parentNode.clientWidth/8*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-7-8 {
   width: 87.5%;
   *width: expression((this.parentNode.clientWidth/8*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-1-12 {
   width: 8.3333%;
   *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-5-12 {
   width: 41.6666%;
   *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
@@ -1164,12 +1268,15 @@ th {
   width: 58.3333%;
   *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 .bf-col-11-12 {
   width: 91.6666%;
   *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
 /* responsive grid */
 @media screen and (max-width: 640px) {
+
   .responsive-grid .bf-row {
     margin-left: 0;
     margin-right: 0;
@@ -1181,6 +1288,7 @@ th {
     padding-left: 0;
     padding-right: 0;
   } 
+
 }
 
 
@@ -1223,12 +1331,15 @@ th {
   content: " ";
   display: table;
 }
+
 .clearfix:after {
   clear: both;
 }
+
 .clearfix {
   *zoom: 1;
 }
+
 /*
  * Better float containment in IE7 using CSS expressions
  * http://nicolasgallagher.com/better-float-containment-in-ie/ 
@@ -1238,9 +1349,11 @@ th {
   content: "";
   display: table;
 }
+
 .super-clearfix:after {
   clear: both;
 } 
+
 .super-clearfix {
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
   *zoom: 1; /* non-JS fallback */
@@ -1258,6 +1371,7 @@ th {
   text-align: left; 
   direction: ltr; 
 }
+
 .ir br,
 .img-r br { 
   display: none;
@@ -1269,6 +1383,7 @@ th {
   float: left;
   margin: 0 1.5em 1.5em 0;
 }
+
 .img-right {
   float: right;
   margin: 0 0 1.5em 1.5em;
@@ -1279,15 +1394,18 @@ th {
 .block {
   display: block !important;
 }
+
 .inline {
   display: inline !important;
 }
+
 .inline-block-container {
   letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
   *letter-spacing: normal; /* reset IE < 8 */
   *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
   text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
+
 /* Opera as of 12 on Windows needs word-spacing.
  * The ".opera-only" selector is used to prevent actual prefocus styling
  * and is not required in markup.
@@ -1296,6 +1414,7 @@ th {
 .inline-block-container {
   word-spacing: -0.43em;
 }
+
 /* how to use:
  *
    <nav role="navigation">
@@ -1308,6 +1427,7 @@ th {
    </nav>
  *
  */
+
 .inline-block {
   display: inline-block !important;
   *display: inline !important;
@@ -1317,14 +1437,17 @@ th {
   word-spacing: normal;
   text-rendering: auto;
 }
+
 .hide,
 .hidden {
   display: none !important; 
   visibility: hidden;
 }
+
 .invisible {
   visibility: hidden;
 }
+
 .show {
   display: block !important;
   visibility: visible;
@@ -1339,6 +1462,7 @@ th {
   clip: rect(1px 1px 1px 1px); /* IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
   border: 0;
@@ -1350,6 +1474,7 @@ th {
   position: absolute;
   width: 1px;
 }
+
 /*
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
@@ -1369,9 +1494,11 @@ th {
 .pull-right {
   float: right;
 }
+
 .pull-left {
   float: left;
 }
+
 .affix {
   position: fixed;
 }
@@ -1381,9 +1508,11 @@ th {
 .no-margin {
   margin: 0;
 }
+
 .no-padding {
   padding: 0;
 }
+
 .no-border {
   border: 0;
 }
@@ -1393,28 +1522,35 @@ th {
 .text-align-left {
   text-align: left;
 }
+
 .text-align-center {
   text-align: center;
 }
+
 .text-align-right {
   text-align: right;
 }
+
 .text-justify {
   text-align: justify;                
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
+
 .text-uppercase {
   text-transform: uppercase;
 }
+
 .text-sans-serif {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .text-serif {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: Georgia, serif;
 }
+
 .text-truncate {
   max-width: 100%;
   overflow: hidden;
@@ -1423,6 +1559,7 @@ th {
   white-space: nowrap;
   word-wrap: normal;
 }
+
 .text-break {
   word-break: break-all; /* webkit */
   word-wrap: break-word;
@@ -1435,6 +1572,7 @@ th {
       -ms-hyphens: none;
           hyphens: none;
 }
+
 .no-select {
   -webkit-user-drag: none;
   -webkit-user-select: none; 
@@ -1442,6 +1580,7 @@ th {
       -ms-user-select: none;
           user-select: none;          
 }
+
 .hide-text, /* old naming */
 .text-hide {
   font: 0/0 a;
@@ -1450,6 +1589,7 @@ th {
   background-color: transparent;
   border: 0;
 }
+
 .text-hide-indent {
   text-indent: -9999px;
 }
@@ -1458,65 +1598,75 @@ th {
 /* responsive tables --------------------------------------------------------
  * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini 
  */
-.table-overflow-container { 
+.responsive-table-container { 
   overflow-x: auto;
   *overflow-x: scroll;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
 /* force and customize webkit scrollbars appearance */
-.table-overflow-container.scrollbar {
+.responsive-table-container.scrollbar {
   -webkit-overflow-scrolling: auto; 
   -ms-overflow-style: scrollbar;
 }
-.table-overflow-container.scrollbar::-webkit-scrollbar {
+
+.responsive-table-container.scrollbar::-webkit-scrollbar {
   width: 0.625em;
   height: 0.625em;
 }
-.table-overflow-container.scrollbar::-webkit-scrollbar-track{
+
+.responsive-table-container.scrollbar::-webkit-scrollbar-track{
   padding: 0.2em;
   background-color: transparent; 
 }
-.table-overflow-container.scrollbar::-webkit-scrollbar-thumb {
+
+.responsive-table-container.scrollbar::-webkit-scrollbar-thumb {
   -webkit-border-radius: 0.625em;
           border-radius: 0.625em;
   background-color: #999; 
 }
-.table-overflow-container.scrollbar::-webkit-scrollbar-thumb:window-inactive {
+
+.responsive-table-container.scrollbar::-webkit-scrollbar-thumb:window-inactive {
   background-color: #ccc; 
 }
-.table-overflow-container table {
+
+.responsive-table-container table {
   width: 100%;
   margin-bottom: 0.4666666em;
 }
+
 /* 
  * how to wraps table via jQuery:
  * 
    <script>
      jQuery(function() {
-       jQuery('.content table').wrap('<div class="table-overflow-container"></div>');
+       jQuery('.content table').wrap('<div class="responsive-table-container"></div>');
      });
    </script>
  * 
 */
 
 
-/* flex videos ------------------------------------------------------------- */
-.flex-video-container {
+/* responsive videos ------------------------------------------------------- */
+.responsive-video-container {
   position: relative;
   padding-bottom: 67.5%; /* 4:3 standard */
   padding-top: 1.5625em;
   height: 0;
   overflow: hidden;
 }
-.flex-video-container.widescreen {
+
+.responsive-video-container.widescreen {
   padding-bottom: 56.25%; /* 16:9 */
 }
-.flex-video-container.vimeo {
+
+.responsive-video-container.vimeo {
   padding-top: 0; /* no extra-padding for controls */
 }
-.flex-video-container iframe,  
-.flex-video-container object,  
-.flex-video-container embed {
+
+.responsive-video-container iframe,  
+.responsive-video-container object,  
+.responsive-video-container embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -1528,7 +1678,7 @@ th {
  * 
    <script>
      jQuery(function() {
-        jQuery('.content iframe, .content object, .content embed').wrap('<div class="flex-video-container"></div>');
+        jQuery('.content iframe, .content object, .content embed').wrap('<div class="responsive-video-container"></div>');
      });
    </script>
  * 
@@ -1549,22 +1699,27 @@ th {
 ============================================================================ */
 
 @media print {
+
   * {
     background: transparent !important;
     color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
   a,
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
+
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
+
   /* Don't show links for images, or javascript/internal links */
   .hide-text:after, 
   .img-r a:after,
@@ -1573,39 +1728,49 @@ th {
   a[href^="#"]:after {
     content: "";
   }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   thead {
     display: table-header-group; 
   }
+
   tr,
   img {
     page-break-inside: avoid;
   }
+
   img {
     max-width: 100% !important;
   }
+
   @page {
     margin: 0.5cm;
   }
+
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
+
   h2,
   h3 {
     page-break-after: avoid;
   }
+
   .print-only { 
     display: block !important; 
     visibility: visible;
   }
+
   .hide-on-print { 
     display: none !important; 
   }
+
 }

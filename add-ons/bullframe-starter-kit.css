@@ -74,6 +74,7 @@ select,
 textarea {
   font-family: ;
 }
+
 html, 
 button, 
 .btn,
@@ -84,27 +85,28 @@ select,
 textarea {
   color: ;
 }
+
 html {
   background-color: ;
 }
-
 
 a {
   color: ;
   text-decoration: ;
   -webkit-tap-highlight-color: rgba(XXX, XXX, XXX, X.XX);
 }
+
 a:hover,
 a:focus {
   color: ;
   text-decoration: ;
 } 
 
-
 ::-moz-selection {
   background: ;
   color: ;
 }
+
 ::selection {
   background: ;
   color: ;
@@ -269,39 +271,48 @@ textarea {
 .alignnone {
   margin: 0.8em 1.5em 1.5em 0;
 }
+
 .aligncenter,
 div.aligncenter {
   display: block;
   margin: 0.8em auto;
 }
+
 .alignright {
   float: right;
   margin: 0.8em 0 1.5em 1.5em;
 }
+
 .alignleft {
   float: left;
   margin: 0.8em 1.5em 1.5em 0;
 }
+
 .aligncenter {
   display: block;
   margin: 0.8em auto;
 }
+
 a img.alignright {
   float: right;
   margin: 0.8em 0 1.5em 1.5em;
 }
+
 a img.alignnone {
   margin: 0.8em 1.4em 1.5em 0;
 }
+
 a img.alignleft {
   float: left;
   margin: 0.8em 1.5em 1.5em 0;
 }
+
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto
 }
+
 .wp-caption {
   background: #f4f4f4;
   border: 1px solid #ccc;
@@ -309,24 +320,30 @@ a img.aligncenter {
   padding: 0.8em 0.8em 0.8em;
   text-align: center;
 }
+
 .wp-caption.alignnone {
   margin: 0.8em 1.5em 1.4em 0;
 }
+
 .wp-caption.alignleft {
   margin: 0.8em 1.5em 1.5em 0;
 }
+
 .wp-caption.alignright {
   margin: 0.8em 0 1.5em 1.5em;
 }
+
 .wp-caption img {
   margin: 0;
   max-width: 98.5%;
 }
+
 .wp-caption p.wp-caption-text {
   font-size: 0.875em;
   margin: 0.8em 0 0 0;
   padding: 0;
 }
+
  */
 
 
@@ -361,6 +378,7 @@ select,
 textarea {
   border-color: ;
 }
+
 input[type="color"]:focus, 
 input[type="email"]:focus, 
 input[type="number"]:focus, 
@@ -380,7 +398,12 @@ textarea:focus {
   -webkit-box-shadow: ;
           box-shadow: ;
 }
+
+*/
+
+/* replace webkit-box-shadow in IE8
 @media \0screen {
+
   input[type="color"]:focus, 
   input[type="email"]:focus, 
   input[type="number"]:focus, 
@@ -398,6 +421,7 @@ textarea:focus {
   textarea:focus {
     outline-color: ;
   }
+
 }
 
 input[type="email"], 
@@ -415,16 +439,21 @@ input[type="url"],
 textarea {
   padding: ;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
   select,
   select[size="0"],
   select[size="1"] { 
     padding-right: ;
   } 
+
 } 
+
 textarea {
   *padding: ;
 }
+
 button,
 .btn,
 input[type="button"], 
@@ -432,6 +461,7 @@ input[type="reset"],
 input[type="submit"] {
   padding: ;
 }
+
 button,
 input[type="button"], 
 input[type="reset"],
@@ -452,6 +482,7 @@ input[type="submit"] {
   border-color: ;
   background: ;
 } 
+
 button:hover,
 .btn:hover,
 input[type="button"]:hover, 
@@ -488,6 +519,7 @@ input[type="submit"]:focus {
             background-size: auto auto;
     -webkit-appearance: menulist;
   }
+
   select[size], 
   select[multiple] {
     -webkit-appearance: none;

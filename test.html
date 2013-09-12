@@ -11,6 +11,7 @@
 <meta name="description" content="https://github.com/marco135/bullframe.css/">
          
 <link href="bullframe.css" rel="stylesheet">
+
 <style> 
 
 /* styles for header, section titles and footer 
@@ -140,6 +141,10 @@ input[type="checkbox"] {
 </style>
   
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<!-- enable cross-domain CSS3 media queries in IE8 -->
+<!--[if IE 8]>
+  <script src="http://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
@@ -414,13 +419,13 @@ input[type="checkbox"] {
 
   <h3 class="sub-title">YouTube video iframe (4:3)</h3>
   <div class="flex-video-container">
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
   </div>
 
 
   <h3 class="sub-title">Vimeo Video iframe (16:9)</h3>
   <div class="flex-video-container widescreen vimeo">
-    <iframe src="http://player.vimeo.com/video/27243869?color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    <iframe src="//player.vimeo.com/video/27243869?color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
 
 

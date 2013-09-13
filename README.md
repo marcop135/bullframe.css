@@ -28,6 +28,8 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 <h2>Test it now</h2>
 <p><b><a href="https://googledrive.com/host/0B4LqH9uqRDqQd2NFaUlxTlBSSWM/index.html" title="google drive demo page">Check out the demo</a></b></p>
+<p>Play with code on JSBin <a href="http://jsbin.com/EQoYiwI/2/" title="JSBin">http://jsbin.com/EQoYiwI/2/</a></p>
+
 
 <h2>How to use it</h2>
 <ul>
@@ -57,6 +59,11 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <p>The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.</p>
   </li>
 </ul>
+
+
+<h2>Test it now</h2>
+<p><b><a href="https://googledrive.com/host/0B4LqH9uqRDqQd2NFaUlxTlBSSWM/index.html" title="google drive demo page">Check out the demo</a></b></p>
+<p>Play with code on JSBin <a href="http://jsbin.com/oraJUX/4/edit" title="JSBin">http://jsbin.com/oraJUX/2/edit</a></p>
 
 
 <h2>Browser support</h2>

@@ -24,31 +24,46 @@
   margin-bottom: 1.5em;
   background-color: #1abb69;
 }
+
 [role="banner"] h1, 
 .download .mega {
   margin-top: 0;
 }
+
+@media (max-width: 640px) {
+
+  [role="banner"] h1 {
+    font-size: 1.6em;
+  }
+
+}
+
 [role="navigation"] .list-inline li,
 [role="navigation"] li a {
   display: block;
 }
+
 [role="navigation"] li {
   padding: 4px;
   border-bottom: 1px solid #ccc;
 }
+
 [role="navigation"] li:hover,
 [role="navigation"] li:focus {
   background-color: #f0f0f0;
 }
+
 .title, 
 .sub-title {
   padding: 4px;
 }
+
 .title {
   color: #fff;
   background-color: #222;
   margin-top: 2.8em;
 }
+
 .sub-title {
   background-color: #eaeaea;
 } 
@@ -74,6 +89,7 @@
 .back-to-top a:focus {
   text-decoration: none;
 }
+
 .back-to-top a span {
   vertical-align: middle;
 }
@@ -82,17 +98,19 @@
 
 /* styles for grid system demo
 ---------------------------------------------------------------------------- */
-.grid-system .bf-row {
+.bf-container .bf-row {
   margin-bottom: 1.5em;
 }
 @media screen and (max-width: 29.9375em ) {
   /* 479px */
-  .grid-system .bf-row {
+
+  .bf-container .bf-row {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
   }
-  .grid-system [class*="bf-col-"] {
+
+  .bf-container [class*="bf-col-"] {
     width: 100%;
     float: none;
     padding-left: 0;
@@ -100,8 +118,10 @@
     *margin-left: 0;
     margin-bottom: 1.5em;
   }
+
 }
-.grid-system .wrapper {
+
+.bf-container .wrapper {
   background: #999;
   min-height: 50px;
   line-height: 50px;
@@ -117,6 +137,7 @@
 legend {
   padding-bottom: 1.5em !important;
 } 
+
 button,
 .btn,
 input, 
@@ -124,6 +145,7 @@ select,
 textarea {
   margin-bottom: 1.5em !important;
 } 
+
 input[type="radio"],
 input[type="checkbox"] {
   *margin-bottom: 0 !important;
@@ -138,6 +160,14 @@ input[type="checkbox"] {
   display: none !important;
 }
 
+@media (max-width: 480px) {
+
+  #edit-with-js-bin {
+    display: none !important;
+  }
+
+}
+
 </style>
   
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -148,1045 +178,1045 @@ input[type="checkbox"] {
 </head>
 
 <body>
-  <div class="bf-container"> 
+<div class="bf-container">
+  <div class="bf-row"> 
+    <div class="bf-col-1">
+        
+      <header role="banner">
+      <h1>BULLFRAME.CSS boilerplate demo page</h1>
+      </header>
 
-  <header role="banner">
-  <h1>BULLFRAME.CSS boilerplate demo page</h1>
-  </header>
+      <nav role="navigation" class="skip-to-content"> 
+        <ul class="list-inline">
+          <li><a href="#texts">Go to <b>text elements</b></a></li>  
+          <li><a href="#embedded-content">Go to <b>embedded content</b></a></li>  
+          <li><a href="#forms">Go to <b>form elements</b></a></li>  
+          <li><a href="#tables">Go to <b>tables</b></a></li>  
+          <li><a href="#grid-system">Go to <b>grid system</b></a></li>  
+        </ul>
+      </nav>
+        
+      <h2 id="texts" class="title">Text elements</h2>
+       
 
-  <nav role="navigation" class="skip-to-content"> 
-    <ul class="list-inline">
-      <li><a href="#texts">Go to <b>text elements</b></a></li>  
-      <li><a href="#embedded-content">Go to <b>embedded content</b></a></li>  
-      <li><a href="#forms">Go to <b>form elements</b></a></li>  
-      <li><a href="#tables">Go to <b>tables</b></a></li>  
-      <li><a href="#grid-system">Go to <b>grid system</b></a></li>  
-    </ul>
-  </nav>
-    
-  <h2 id="texts" class="title">Text elements</h2>
-   
+      <h3 class="sub-title">Headings</h3>
+      <h1 class="tera">Tera heading</h1>
+      <h1 class="giga">Giga heading</h1>
+      <h1 class="mega">Mega heading</h1>
 
-  <h3 class="sub-title">Headings</h3>
-  <h1 class="tera">Tera heading</h1>
-  <h1 class="giga">Giga heading</h1>
-  <h1 class="mega">Mega heading</h1>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
 
-  <h1>Heading 1</h1>
-  <h2>Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h4>Heading 4</h4>
-  <h5>Heading 5</h5>
-  <h6>Heading 6</h6>
-
-  <h1><a href="#">Heading 1</a></h1>
-  <h2><a href="#">Heading 2</a></h2>
-  <h3><a href="#">Heading 3</a></h3>
-  <h4><a href="#">Heading 4</a></h4>
-  <h5><a href="#">Heading 5</a></h5>
-  <h6><a href="#">Heading 6</a></h6>
-
-
-  <h3 class="sub-title">Nav ul list</h3>
-  <nav>
-    <ul>
-      <li><a href="#">navigation item #1</a></li>
-      <li><a href="#">navigation item #2</a></li>
-      <li><a href="#">navigation item #3</a></li>
-    </ul>
-  </nav>
+      <h1><a href="#">Heading 1</a></h1>
+      <h2><a href="#">Heading 2</a></h2>
+      <h3><a href="#">Heading 3</a></h3>
+      <h4><a href="#">Heading 4</a></h4>
+      <h5><a href="#">Heading 5</a></h5>
+      <h6><a href="#">Heading 6</a></h6>
 
 
-  <h3 class="sub-title">hidden attribute</h3>
-  <p hidden="">This should be hidden in all browsers, apart from IE6</p>
+      <h3 class="sub-title">Nav ul list</h3>
+      <nav>
+        <ul>
+          <li><a href="#">navigation item #1</a></li>
+          <li><a href="#">navigation item #2</a></li>
+          <li><a href="#">navigation item #3</a></li>
+        </ul>
+      </nav>
 
 
-  <h3 class="sub-title">Address</h3>
-  <address>
-    Address: somewhere, world
-  </address>
+      <h3 class="sub-title">hidden attribute</h3>
+      <p hidden="">This should be hidden in all browsers, apart from IE6</p>
 
 
-  <h3 class="sub-title">hr</h3>
-  <hr>
-
-  <h3 class="sub-title">Inline text elements</h3>
-  <p>The <a href="#">a element</a> example<br>
-  The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with
-  title</abbr> examples<br>
-  The <strong>b element</strong> example<br>
-  The <cite>cite element</cite> example<br>
-  The <code>code element</code> example<br>
-  The <del>del element</del> example<br>
-  The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with
-  title</dfn> examples<br>
-  The <em>em element</em> example<br>
-  The <em>i element</em> example<br>
-  The img element <img alt="" src="http://placekitten.com/g/16/16"> example<br>
-  The <ins>ins element</ins> example<br>
-  The <kbd>kbd element</kbd> example<br>
-  The <mark>mark element</mark> example<br>
-  The <q>q element <q>inside</q> a q element</q> example<br>
-  The <s>s element</s> example<br>
-  The <samp>samp element</samp> example<br>
-  The <small>small element</small> example<br>
-  The <span>span element</span> example<br>
-  The <strong>strong element</strong> example<br>
-  The <sub>sub element</sub> example<br>
-  The <sup>sup element</sup> example<br>
-  The <u>u element</u> example<br>
-  The <var>var element</var> example</p>
+      <h3 class="sub-title">Address</h3>
+      <address>
+        Address: somewhere, world
+      </address>
 
 
-  <h3 class="sub-title">Paragraphs</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
-  ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-  eget dolor.</p>
+      <h3 class="sub-title">hr</h3>
+      <hr>
 
-  <p>The European languages are members of the same family. Their separate
-  existence is a myth. For science, music, sport, etc, Europe uses the same
-  vocabulary. The languages only differ in their grammar, their pronunciation
-  and their most common words. Everyone realizes why a new common language
-  would be desirable.</p>
-
-
-  <h3 class="sub-title">pre</h3>
-  <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.
-  </pre>
-
-
-  <h3 class="sub-title">pre code</h3>
-<pre>
-<code>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title &gt;...&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main role="main"&gt;...&lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code>
-</pre>
+      <h3 class="sub-title">Inline text elements</h3>
+      <p>The <a href="#">a element</a> example<br>
+      The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with
+      title</abbr> examples<br>
+      The <strong>b element</strong> example<br>
+      The <cite>cite element</cite> example<br>
+      The <code>code element</code> example<br>
+      The <del>del element</del> example<br>
+      The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with
+      title</dfn> examples<br>
+      The <em>em element</em> example<br>
+      The <em>i element</em> example<br>
+      The img element <img alt="" src="http://placekitten.com/g/16/16"> example<br>
+      The <ins>ins element</ins> example<br>
+      The <kbd>kbd element</kbd> example<br>
+      The <mark>mark element</mark> example<br>
+      The <q>q element <q>inside</q> a q element</q> example<br>
+      The <s>s element</s> example<br>
+      The <samp>samp element</samp> example<br>
+      The <small>small element</small> example<br>
+      The <span>span element</span> example<br>
+      The <strong>strong element</strong> example<br>
+      The <sub>sub element</sub> example<br>
+      The <sup>sup element</sup> example<br>
+      The <u>u element</u> example<br>
+      The <var>var element</var> example</p>
 
 
-  <h3 class="sub-title">blockquotes</h3>
-  <blockquote>
-    <p>Some sort of famous witty quote marked up with a &lt;blockquote&gt; and
-    a child &lt;p&gt; element.</p>
-  </blockquote>
-  <blockquote>
-    Even better philosophical quote marked up with just a &lt;blockquote&gt;
-    element.
-  </blockquote>
+      <h3 class="sub-title">Paragraphs</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
+      ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+      eget dolor.</p>
+
+      <p>The European languages are members of the same family. Their separate
+      existence is a myth. For science, music, sport, etc, Europe uses the same
+      vocabulary. The languages only differ in their grammar, their pronunciation
+      and their most common words. Everyone realizes why a new common language
+      would be desirable.</p>
 
 
-  <h3 class="sub-title">Ordered list</h3>
-  <ol>
-    <li>list item 1</li>
-    <li>list item 1
+      <h3 class="sub-title">pre</h3>
+      <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.
+      </pre>
+
+
+      <h3 class="sub-title">pre code</h3>
+    <pre>
+    <code>&lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;title &gt;...&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;main role="main"&gt;...&lt;/main&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code>
+    </pre>
+
+
+      <h3 class="sub-title">blockquotes</h3>
+      <blockquote>
+        <p>Some sort of famous witty quote marked up with a &lt;blockquote&gt; and
+        a child &lt;p&gt; element.</p>
+      </blockquote>
+      <blockquote>
+        Even better philosophical quote marked up with just a &lt;blockquote&gt;
+        element.
+      </blockquote>
+
+
+      <h3 class="sub-title">Ordered list</h3>
       <ol>
-        <li>list item 2</li>
-        <li>list item 2
+        <li>list item 1</li>
+        <li>list item 1
           <ol>
-            <li>list item 3</li>
-            <li>list item 3</li>
+            <li>list item 2</li>
+            <li>list item 2
+              <ol>
+                <li>list item 3</li>
+                <li>list item 3</li>
+              </ol>
+            </li>
+            <li>list item 2</li>
+            <li>list item 2</li>
           </ol>
         </li>
-        <li>list item 2</li>
-        <li>list item 2</li>
+        <li>list item 1</li>
+        <li>list item 1</li>
       </ol>
-    </li>
-    <li>list item 1</li>
-    <li>list item 1</li>
-  </ol>
 
 
-  <h3 class="sub-title">Unordered list</h3>
-  <ul>
-    <li>list item 1</li>
-    <li>list item 1
+      <h3 class="sub-title">Unordered list</h3>
       <ul>
-        <li>list item 2</li>
-        <li>list item 2
+        <li>list item 1</li>
+        <li>list item 1
           <ul>
-            <li>list item 3</li>
-            <li>list item 3</li>
+            <li>list item 2</li>
+            <li>list item 2
+              <ul>
+                <li>list item 3</li>
+                <li>list item 3</li>
+              </ul>
+            </li>
+            <li>list item 2</li>
+            <li>list item 2</li>
           </ul>
         </li>
-        <li>list item 2</li>
-        <li>list item 2</li>
+        <li>list item 1</li>
+        <li>list item 1</li>
       </ul>
-    </li>
-    <li>list item 1</li>
-    <li>list item 1</li>
-  </ul>
 
 
-  <h3 class="sub-title">Inline list</h3>
-  <ul class="list-inline">
-    <li><a href="#" title="">list item 1</a></li>
-    <li><a href="#" title="">list item 1</a></li>
-    <li><a href="#" title="">list item 1</a></li>
-    <li><a href="#" title="">list item 1</a></li>
-  </ul>
+      <h3 class="sub-title">Inline list</h3>
+      <ul class="list-inline">
+        <li><a href="#" title="">list item 1</a></li>
+        <li><a href="#" title="">list item 1</a></li>
+        <li><a href="#" title="">list item 1</a></li>
+        <li><a href="#" title="">list item 1</a></li>
+      </ul>
 
 
-  <h3 class="sub-title">Unstyled list</h3>
-  <ul class="unstyled">
-    <li>list item 1</li>
-    <li>list item 1
-      <ul>
-        <li>list item 2</li>
-        <li>list item 2
+      <h3 class="sub-title">Unstyled list</h3>
+      <ul class="unstyled">
+        <li>list item 1</li>
+        <li>list item 1
           <ul>
-            <li>list item 3</li>
-            <li>list item 3</li>
+            <li>list item 2</li>
+            <li>list item 2
+              <ul>
+                <li>list item 3</li>
+                <li>list item 3</li>
+              </ul>
+            </li>
+            <li>list item 2</li>
+            <li>list item 2</li>
           </ul>
         </li>
-        <li>list item 2</li>
-        <li>list item 2</li>
+        <li>list item 1</li>
+        <li>list item 1</li>
       </ul>
-    </li>
-    <li>list item 1</li>
-    <li>list item 1</li>
-  </ul>
 
 
-  <h3 class="sub-title">Definition list</h3>
-  <dl>
-    <dt>Description name</dt>
-    <dd>Description value</dd>
-    <dt>Description name</dt>
-    <dd>Description value</dd>
-    <dt>Description name</dt>
-    <dd>Description value</dd>
-  </dl>
+      <h3 class="sub-title">Definition list</h3>
+      <dl>
+        <dt>Description name</dt>
+        <dd>Description value</dd>
+        <dt>Description name</dt>
+        <dd>Description value</dd>
+        <dt>Description name</dt>
+        <dd>Description value</dd>
+      </dl>
 
 
-  <h2 id="embedded-content" class="title">Embedded content</h2>
+      <h2 id="embedded-content" class="title">Embedded content</h2>
 
-  <h3 class="sub-title">figure img figcaption</h3>
-  <figure>
-    <a href="#"><img alt="" src="http://placekitten.com/620/200"></a>
-    <figcaption>Figcaption content</figcaption>
-  </figure>
+      <h3 class="sub-title">figure img figcaption</h3>
+      <figure>
+        <a href="#"><img alt="" src="http://placekitten.com/620/200"></a>
+        <figcaption>Figcaption content</figcaption>
+      </figure>
 
 
-  <h3 class="sub-title">SVG</h3>
-  <svg width="200px" height="200px">
-    <circle cx="200" cy="200" r="200" fill="#ff0000" />
-  </svg>
+      <h3 class="sub-title">SVG</h3>
+      <svg width="200px" height="200px">
+        <circle cx="200" cy="200" r="200" fill="#ff0000" />
+      </svg>
 
 
 
-  <h2 class="title">Interactive embedded content</h2>
+      <h2 class="title">Interactive embedded content</h2>
 
 
-  <h3 class="sub-title">Details + summary</h3>
-  <details>
-    <summary>
-      More info
-    </summary>
-    <p>Additional information</p>
-    <ul>
-      <li>Point 1</li>
-      <li>Point 2</li>
-    </ul>
-  </details>
+      <h3 class="sub-title">Details + summary</h3>
+      <details>
+        <summary>
+          More info
+        </summary>
+        <p>Additional information</p>
+        <ul>
+          <li>Point 1</li>
+          <li>Point 2</li>
+        </ul>
+      </details>
 
 
-  <h3 class="sub-title">Audio with controls</h3>
-  <audio controls>
-   <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4"
-           type='audio/mp4'>
-   <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga"
-           type='audio/ogg; codecs=vorbis'>
-   <p>Your browser does not support the HTML5 Audio element.</p>
-  </audio>
+      <h3 class="sub-title">Audio with controls</h3>
+      <audio controls>
+       <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4"
+               type='audio/mp4'>
+       <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga"
+               type='audio/ogg; codecs=vorbis'>
+       <p>Your browser does not support the HTML5 Audio element.</p>
+      </audio>
 
-  <h3 class="sub-title">HTML5 video with controls</h3>  
-    <video controls>
-   <source src="http://www.808.dk/pics/video/gizmo.mp4"
-           type='video/mp4; codecs="avc1, mp4a"'>
-   <source src="http://www.808.dk/pics/video/gizmo.ogv"
-           type='video/ogg; codecs="theora, vorbis"'>
-   <p>Your browser does not support the HTML5 Video element.</p>
-  </video>
-    
-
-
-  <h3 class="sub-title">YouTube video iframe (4:3)</h3>
-  <div class="flex-video-container">
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
-  </div>
+      <h3 class="sub-title">HTML5 video with controls</h3>  
+        <video controls>
+       <source src="http://www.808.dk/pics/video/gizmo.mp4"
+               type='video/mp4; codecs="avc1, mp4a"'>
+       <source src="http://www.808.dk/pics/video/gizmo.ogv"
+               type='video/ogg; codecs="theora, vorbis"'>
+       <p>Your browser does not support the HTML5 Video element.</p>
+      </video>
+        
 
 
-  <h3 class="sub-title">Vimeo Video iframe (16:9)</h3>
-  <div class="flex-video-container widescreen vimeo">
-    <iframe src="http://player.vimeo.com/video/27243869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </div>
-
-
-
-  <h2 id="forms" class="title">HTML5 Forms</h2>
-
-
-  <h3 class="sub-title">Inputs</h3>
-  <form> 
-   
-    <fieldset>
-      <legend>Inputs as descendents of labels (form legend). This doubles up as
-      a long legend that can test word wrapping.</legend> 
-      <div><label>Text input<input type="text" value="default value that goes on and on without stopping or punctuation"></label></div>
-      <div><label>Email input<input type="email"></label></div>
-      <div><label>Email input (required)<input type="email" required></label></div>
-      <div><label><input name="rad" type="radio">Radio input</label></div>
-      <div><label><input type="checkbox">Checkbox input</label></div>
-      <div><label>Radio input</label><input name="rad" type="radio"></div>
-    <div><label>Checkbox input</label><input type="checkbox"></div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Inputs as siblings of labels</legend>
-
-
-      <div><label>Text input</label>
-      <input type="text" value="default value that goes on and on without stopping or punctuation"></div>
-
-      <div><label>Email input</label>
-      <input type="email"></div>
-
-      <div><label>Number input</label>
-      <input id="in" max="10" min="0" type="number" value="5"></div>
-
-      <div><label>Tel input</label>
-      <input type="tel"></div>
-
-      <div><label>URL input</label>
-      <input type="url"></div>
-
-      <div><label>Date input</label>
-      <input id="idd" type="date" value="1970-01-01"></div>
-
-      <div><label>Month input</label>
-      <input id="idm" type="month" value="1970-01"></div>
-
-      <div><label>Week input</label>
-      <input id="idw" type="week" value="1970-W01"></div>
-
-      <div><label>Datetime input</label>
-      <input id="idt" type="datetime" value="1970-01-01T00:00:00Z"></div>
-
-      <div><label>Datetime-local input</label>
-      <input id="idtl" type="datetime-local" value="1970-01-01T00:00"></div>
-
-      <div><label>Color input</label>
-      <input id="ic" type="color" value="#000000"></div>
-
-      <div><label>Range input</label>
-      <input id="ir" type="range" value="10"></div>
-
-      <div><label>Password input</label>
-      <input type="password" value="password"></div> 
-
-      <div><label>Search input</label>
-      <input id="search" name="search" type="search"></div>
-
-      <div><label>File input</label>
-      <input type="file"></div>
-    </fieldset>
-   
-    
-
-    <h3 class="sub-title">Selects</h3>
-    <fieldset>
-      <div>
-        <label for="s">Select field</label> 
-        <select id="s">
-          <option>Option 01</option>
-          <option>Option 02</option>
-        </select>
+      <h3 class="sub-title">YouTube video iframe (4:3)</h3>
+      <div class="responsive-video-container">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
       </div>
 
-      <label for="select_dd">Select drop-down [size="3"]</label> 
-      <select id="select_dd" name="select_dd" size="3">
-        <optgroup label="Group 1">
-          <option value="1">Some text goes here</option>
-          <option value="2">Another choice could be here</option>
-          <option value="3">Yet another item to be chosen</option>
-        </optgroup>
-        <optgroup label="Group 2">
-          <option value="4">Some text goes here</option>
-          <option value="5">Another choice could be here</option>
-          <option value="6">Yet another item to be chosen</option>
-        </optgroup>
-        <optgroup label="Group 3">
-          <option value="7">Some text goes here</option>
-          <option value="8">Another choice could be here</option>
-          <option value="9">Yet another item to be chosen</option>
-        </optgroup>
-      </select>
 
-      <label for="select_multi">Select multiple [size="10"]</label> 
-      <select id="select_multi" multiple="multiple" name="select_multi" size="10">
-        <optgroup label="Group 1">
-          <option value="1">Some text goes here </option>
-          <option value="2">Another choice could be here</option>
-          <option value="3">Yet another item to be chosen</option>
-        </optgroup>
-        <optgroup label="Group 2">
-          <option value="4">Some text goes here</option>
-          <option value="5">Another choice could be here</option>
-          <option value="6">Yet another item to be chosen</option>
-        </optgroup>
-        <optgroup label="Group 3">
-         <option value="7">Some text goes here</option>
-          <option value="8">Another choice could be here</option>
-          <option value="9">Yet another item to be chosen</option>
-        </optgroup>
-      </select>
-    </fieldset>
+      <h3 class="sub-title">Vimeo Video iframe (16:9)</h3>
+      <div class="responsive-video-container widescreen vimeo">
+        <iframe src="http://player.vimeo.com/video/27243869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
 
 
-    <h3 class="sub-title">Textareas</h3>
-    <fieldset>
-      <label>Textarea<textarea cols="30" rows="5">Textarea text</textarea></label>
-      <label>Textarea placeholder<textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
-    </fieldset>
 
-   <h3 class="sub-title">Textareas (disabled)</h3>
-    <fieldset disabled>
-      <label>Textarea<textarea cols="30" rows="5">Textarea text</textarea></label>
-      <label>Textarea placeholder<textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
-    </fieldset>
-    
-    <h3 class="sub-title">Clickable inputs (default)</h3>
-    <fieldset>
-      <div><input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image"></div>
-      <div><input type="reset" value="Reset (input)"></div>
-      <div><input type="button" value="Button (input)"></div>
-      <div><input type="submit" value="Submit (input)"></div>
-      <div><a class="btn" href="#" title="button link">Button (link)</a></div>
-      <div><input disabled type="submit" value="Disabled (input)"></div>
-    </fieldset>
+      <h2 id="forms" class="title">HTML5 Forms</h2>
 
 
-    <h3 class="sub-title">Buttons (default)</h3>
-    <fieldset>
-      <div><button type="reset">Reset (button)</button></div>
-      <div><button type="button">Button (button)</button></div>
-      <div><button type="submit">Submit (button)</button></div>
-      <div><button disabled type="submit">Disabled (button)</button></div>
-    </fieldset>
-    
-    
-    <h3 class="sub-title">Buttons sizing helpers</h3>
-    <fieldset>
-      <div><button type="button" class="btn-xsmall">Button (xsmall)</button></div>
-      <div><button type="button" class="btn-small">Button (small)</button></div>
-      <div><button type="button">Button (default)</button></div>
-      <div><button type="button" class="btn-large">Button (large)</button></div>
-      <div><button type="button" class="btn-xlarge">Button (xlarge)</button></div>
-    </fieldset>
-
-    <h3 class="sub-title">Clickable inputs (primary)</h3>
-    <fieldset>
-      <div><input class="btn btn-primary" type="reset" value="Reset (input)"></div>
-      <div><input class="btn btn-primary" type="button" value="Button (input)"></div>
-      <div><input class="btn btn-primary" type="submit" value="Submit (input)"></div>
-      <div><a class="btn btn-primary" href="#" title="button link">Button (link)</a></div>
-      <div><input class="btn btn-primary" disabled type="submit" value="Disabled (input)"></div>
-    </fieldset>
-
-
-    <h3 class="sub-title">Buttons (primary)</h3>
-    <fieldset>
-      <div><button class="btn btn-primary" type="reset">Reset (button)</button></div>
-      <div><button class="btn btn-primary" type="button">Button (button)</button></div>
-      <div><button class="btn btn-primary" type="submit">Submit (button)</button></div>
-      <div><button class="btn btn-primary" disabled type="submit">Disabled (button)</button></div>
-    </fieldset>
-
-  </form>
-
-
-  <h2 id="tables" class="title">Tables</h2>
-    
-  <h3 class="sub-title">Tabular data unstyled</h3>
-  <table>
-    <caption>Jimi Hendrix - albums</caption>
-    <thead>
-      <tr>
-        <th>Album</th>
-        <th>Year</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <th>Album</th>
-        <th>Year</th>
-        <th>Price</th>
-      </tr>
-    </tfoot>
-    <tbody>
-      <tr>
-        <td>Are You Experienced</td>
-        <td>1967</td>
-        <td>$10.00</td>
-      </tr>
-      <tr>
-        <td>Axis: Bold as Love</td>
-        <td>1967</td>
-        <td>$12.00</td>
-      </tr>
-      <tr>
-        <td>Electric Ladyland</td>
-        <td>1968</td>
-        <td>$10.00</td>
-      </tr>
-      <tr>
-        <td>Band of Gypsys</td>
-        <td>1970</td>
-        <td>$12.00</td>
-      </tr>
-    </tbody>
-  </table>
-    
-    
-  <h3 class="sub-title">Tabular data</h3>
-  <table class="table">
-    <caption>Jimi Hendrix - albums</caption>
-    <thead>
-      <tr>
-        <th>Album</th>
-        <th>Year</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <th>Album</th>
-        <th>Year</th>
-        <th>Price</th>
-      </tr>
-    </tfoot>
-    <tbody>
-      <tr>
-        <td>Are You Experienced</td>
-        <td>1967</td>
-        <td>$10.00</td>
-      </tr>
-      <tr>
-        <td>Axis: Bold as Love</td>
-        <td>1967</td>
-        <td>$12.00</td>
-      </tr>
-      <tr>
-        <td>Electric Ladyland</td>
-        <td>1968</td>
-        <td>$10.00</td>
-      </tr>
-      <tr>
-        <td>Band of Gypsys</td>
-        <td>1970</td>
-        <td>$12.00</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3 class="sub-title">Responsive tabular data</h3>
-  <div class="table-overflow-container scrollbar">
-  <table class="table">
-    <caption>Caption goes here</caption>
-    <thead>
-      <tr>
-        <th>Header 1</th>
-        <th>Header 2</th>
-        <th>Header 3</th>
-        <th>Header 4</th>
-        <th>Header 5</th>
-        <th>Header 6</th>
-        <th>Header 7</th>
-        <th>Header 8</th>
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <th>Header 1</th>
-        <th>Header 2</th>
-        <th>Header 3</th>
-        <th>Header 4</th>
-        <th>Header 5</th>
-        <th>Header 6</th>
-        <th>Header 7</th>
-        <th>Header 8</th>
-      </tr>
-    </tfoot>
-      <tr>
-        <td>row1_cell1</td>
-        <td>row1_cell2</td>
-        <td>row1_cell3</td>
-        <td>row1_cell4</td>
-        <td>row1_cell5</td>
-        <td>row1_cell6</td>
-        <td>row1_cell7</td>
-        <td>row1_cell8</td>
-      </tr>
-      <tr>
-        <td>row2_cell1</td>
-        <td>row2_cell2</td>
-        <td>row2_cell3</td>
-        <td>row2_cell4</td>
-        <td>row2_cell5</td>
-        <td>row2_cell6</td>
-        <td>row2_cell7</td>
-        <td>row2_cell8</td>
-      </tr>
-      <tr>
-        <td>row3_cell1</td>
-        <td>row3_cell2</td>
-        <td>row3_cell3</td>
-        <td>row3_cell4</td>
-        <td>row3_cell5</td>
-        <td>row3_cell6</td>
-        <td>row3_cell7</td>
-        <td>row3_cell8</td>
-      </tr>
-      <tr>
-        <td>row4_cell1</td>
-        <td>row4_cell2</td>
-        <td>row4_cell3</td>
-        <td>row4_cell4</td>
-        <td>row4_cell5</td>
-        <td>row4_cell6</td>
-        <td>row4_cell7</td>
-        <td>row4_cell8</td>
-      </tr>
-      <tr>
-        <td>row5_cell1</td>
-        <td>row5_cell2</td>
-        <td>row5_cell3</td>
-        <td>row5_cell4</td>
-        <td>row5_cell5</td>
-        <td>row5_cell6</td>
-        <td>row5_cell7</td>
-        <td>row5_cell8</td>
-      </tr>
-    </table>
-  </div><!-- /.table-overflow-containter -->
+      <h3 class="sub-title">Inputs</h3>
+      <form> 
        
+        <fieldset>
+          <legend>Inputs as descendents of labels (form legend). This doubles up as
+          a long legend that can test word wrapping.</legend> 
+          <div><label>Text input<input type="text" value="default value that goes on and on without stopping or punctuation"></label></div>
+          <div><label>Email input<input type="email"></label></div>
+          <div><label>Email input (required)<input type="email" required></label></div>
+          <div><label><input name="rad" type="radio">Radio input</label></div>
+          <div><label><input type="checkbox">Checkbox input</label></div>
+          <div><label>Radio input</label><input name="rad" type="radio"></div>
+        <div><label>Checkbox input</label><input type="checkbox"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Inputs as siblings of labels</legend>
 
 
-  <h2 id="grid-system" class="title">Fluid grid system</h2>
-  <h3 class="sub-title">12 fluid columns (%)</h3>  
-  <div class="grid-system">  
-          
-   <!-- 1-1 --> 
-    <div class="bf-row"> 
-     <div class="bf-col-1">
-        <div class="wrapper">
-          1-1
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-    </div><!-- /row -->
+          <div><label>Text input</label>
+          <input type="text" value="default value that goes on and on without stopping or punctuation"></div>
 
+          <div><label>Email input</label>
+          <input type="email"></div>
 
-    <!-- 1-2 -->
-    <div class="bf-row"> 
+          <div><label>Number input</label>
+          <input id="in" max="10" min="0" type="number" value="5"></div>
 
-    <div class="bf-col-1-2">
-      <div class="wrapper">1-2
-      </div><!-- /.wrapper -->
-    </div><!-- /col -->
+          <div><label>Tel input</label>
+          <input type="tel"></div>
 
-    <div class="bf-col-1-2">
-      <div class="wrapper">1-2
-      </div><!-- /.wrapper -->
-    </div><!-- /col -->
+          <div><label>URL input</label>
+          <input type="url"></div>
 
-    </div><!-- /row --> 
-      
-      
+          <div><label>Date input</label>
+          <input id="idd" type="date" value="1970-01-01"></div>
 
-    <!-- 1-3 -->  
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-3">
-        <div class="wrapper">1-3
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+          <div><label>Month input</label>
+          <input id="idm" type="month" value="1970-01"></div>
 
-      <div class="bf-col-1-3">
-         <div class="wrapper">1-3
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+          <div><label>Week input</label>
+          <input id="idw" type="week" value="1970-W01"></div>
 
-      <div class="bf-col-1-3">
-        <div class="wrapper">1-3
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-    </div><!-- /.bf-row- -->
-          
-          
-    <div class="bf-row">
-      <div class="bf-col-1-3">
-         <div class="wrapper">1-3
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+          <div><label>Datetime input</label>
+          <input id="idt" type="datetime" value="1970-01-01T00:00:00Z"></div>
 
-      <div class="bf-col-2-3">
-        <div class="wrapper">2-3
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-    </div><!-- /row --> 
-      
+          <div><label>Datetime-local input</label>
+          <input id="idtl" type="datetime-local" value="1970-01-01T00:00"></div>
 
-      
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-4">
-        <div class="wrapper">1-4
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+          <div><label>Color input</label>
+          <input id="ic" type="color" value="#000000"></div>
 
-      <div class="bf-col-1-4">
-        <div class="wrapper">1-4
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+          <div><label>Range input</label>
+          <input id="ir" type="range" value="10"></div>
 
-      <div class="bf-col-1-4">
-        <div class="wrapper">1-4
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-       <div class="bf-col-1-4">
-        <div class="wrapper">1-4
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-    </div><!-- /row --> 
+          <div><label>Password input</label>
+          <input type="password" value="password"></div> 
 
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-4">
-        <div class="wrapper">1-4
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+          <div><label>Search input</label>
+          <input id="search" name="search" type="search"></div>
 
-      <div class="bf-col-3-4">
-        <div class="wrapper">3-4
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-    </div><!-- /row --> 
-
-
-          
-      
-    <!-- 1-5   --> 
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-5">
-        <div class="wrapper">1-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-5">
-        <div class="wrapper">1-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-5">
-        <div class="wrapper">1-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-       <div class="bf-col-1-5">
-        <div class="wrapper">1-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-5">
-        <div class="wrapper">1-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-    </div><!-- /row -->   
-      
-
-    <div class="bf-row"> 
-      
-      <div class="bf-col-2-5">
-        <div class="wrapper">2-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-3-5">
-        <div class="wrapper">3-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-    </div><!-- /row -->   
-
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-5">
-        <div class="wrapper">1-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-4-5">
-        <div class="wrapper">4-5
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-    </div><!-- /row -->  
-
-          
-
-    <!-- 1-6 -->  
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-6">
-        <div class="wrapper">1-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-6">
-        <div class="wrapper">1-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-6">
-        <div class="wrapper">1-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-       <div class="bf-col-1-6">
-        <div class="wrapper">1-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+          <div><label>File input</label>
+          <input type="file"></div>
+        </fieldset>
        
-      <div class="bf-col-1-6">
-        <div class="wrapper">1-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-      <div class="bf-col-1-6">
-        <div class="wrapper">1-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-    </div><!-- /row -->
-
-
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-6">
-        <div class="wrapper">1-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-5-6">
-        <div class="wrapper">5-6
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-    </div><!-- /row -->
-          
-          
-          
-          
-          
-    <!-- 1-8 -->
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-       <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-     
-      <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-      <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-       <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-      <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
         
-    </div><!-- /row -->
-      
-    <div class="bf-row"> 
-      
-      <div class="bf-col-3-8">
-        <div class="wrapper">3-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
 
-      <div class="bf-col-5-8">
-        <div class="wrapper">5-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+        <h3 class="sub-title">Selects</h3>
+        <fieldset>
+          <div>
+            <label for="s">Select field</label> 
+            <select id="s">
+              <option>Option 01</option>
+              <option>Option 02</option>
+            </select>
+          </div>
+
+          <label for="select_dd">Select drop-down [size="3"]</label> 
+          <select id="select_dd" name="select_dd" size="3">
+            <optgroup label="Group 1">
+              <option value="1">Some text goes here</option>
+              <option value="2">Another choice could be here</option>
+              <option value="3">Yet another item to be chosen</option>
+            </optgroup>
+            <optgroup label="Group 2">
+              <option value="4">Some text goes here</option>
+              <option value="5">Another choice could be here</option>
+              <option value="6">Yet another item to be chosen</option>
+            </optgroup>
+            <optgroup label="Group 3">
+              <option value="7">Some text goes here</option>
+              <option value="8">Another choice could be here</option>
+              <option value="9">Yet another item to be chosen</option>
+            </optgroup>
+          </select>
+
+          <label for="select_multi">Select multiple [size="10"]</label> 
+          <select id="select_multi" multiple="multiple" name="select_multi" size="10">
+            <optgroup label="Group 1">
+              <option value="1">Some text goes here </option>
+              <option value="2">Another choice could be here</option>
+              <option value="3">Yet another item to be chosen</option>
+            </optgroup>
+            <optgroup label="Group 2">
+              <option value="4">Some text goes here</option>
+              <option value="5">Another choice could be here</option>
+              <option value="6">Yet another item to be chosen</option>
+            </optgroup>
+            <optgroup label="Group 3">
+             <option value="7">Some text goes here</option>
+              <option value="8">Another choice could be here</option>
+              <option value="9">Yet another item to be chosen</option>
+            </optgroup>
+          </select>
+        </fieldset>
+
+
+        <h3 class="sub-title">Textareas</h3>
+        <fieldset>
+          <label>Textarea<textarea cols="30" rows="5">Textarea text</textarea></label>
+          <label>Textarea placeholder<textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
+        </fieldset>
+
+       <h3 class="sub-title">Textareas (disabled)</h3>
+        <fieldset disabled>
+          <label>Textarea<textarea cols="30" rows="5">Textarea text</textarea></label>
+          <label>Textarea placeholder<textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
+        </fieldset>
         
-    </div><!-- /row -->
-          
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-8">
-        <div class="wrapper">1-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+        <h3 class="sub-title">Clickable inputs (default)</h3>
+        <fieldset>
+          <div><input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image"></div>
+          <div><input type="reset" value="Reset (input)"></div>
+          <div><input type="button" value="Button (input)"></div>
+          <div><input type="submit" value="Submit (input)"></div>
+          <div><a class="btn" href="#" title="button link">Button (link)</a></div>
+          <div><input disabled type="submit" value="Disabled (input)"></div>
+        </fieldset>
 
-      <div class="bf-col-7-8">
-        <div class="wrapper">7-8
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+
+        <h3 class="sub-title">Buttons (default)</h3>
+        <fieldset>
+          <div><button type="reset">Reset (button)</button></div>
+          <div><button type="button">Button (button)</button></div>
+          <div><button type="submit">Submit (button)</button></div>
+          <div><button disabled type="submit">Disabled (button)</button></div>
+        </fieldset>
         
-    </div><!-- /row -->      
-          
-          
-      
-    <!-- 1-12 --> 
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-       <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-     
-       
-       <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-         <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-      
-       <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-         <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
         
-      <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-      <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-       
-       <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col --> 
-      
-      <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+        <h3 class="sub-title">Buttons sizing helpers</h3>
+        <fieldset>
+          <div><button type="button" class="btn-xsmall">Button (xsmall)</button></div>
+          <div><button type="button" class="btn-small">Button (small)</button></div>
+          <div><button type="button">Button (default)</button></div>
+          <div><button type="button" class="btn-large">Button (large)</button></div>
+          <div><button type="button" class="btn-xlarge">Button (xlarge)</button></div>
+        </fieldset>
+
+        <h3 class="sub-title">Clickable inputs (primary)</h3>
+        <fieldset>
+          <div><input class="btn btn-primary" type="reset" value="Reset (input)"></div>
+          <div><input class="btn btn-primary" type="button" value="Button (input)"></div>
+          <div><input class="btn btn-primary" type="submit" value="Submit (input)"></div>
+          <div><a class="btn btn-primary" href="#" title="button link">Button (link)</a></div>
+          <div><input class="btn btn-primary" disabled type="submit" value="Disabled (input)"></div>
+        </fieldset>
+
+
+        <h3 class="sub-title">Buttons (primary)</h3>
+        <fieldset>
+          <div><button class="btn btn-primary" type="reset">Reset (button)</button></div>
+          <div><button class="btn btn-primary" type="button">Button (button)</button></div>
+          <div><button class="btn btn-primary" type="submit">Submit (button)</button></div>
+          <div><button class="btn btn-primary" disabled type="submit">Disabled (button)</button></div>
+        </fieldset>
+
+      </form>
+
+
+      <h2 id="tables" class="title">Tables</h2>
+        
+      <h3 class="sub-title">Tabular data unstyled</h3>
+      <table>
+        <caption>Jimi Hendrix - albums</caption>
+        <thead>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Are You Experienced</td>
+            <td>1967</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Axis: Bold as Love</td>
+            <td>1967</td>
+            <td>$12.00</td>
+          </tr>
+          <tr>
+            <td>Electric Ladyland</td>
+            <td>1968</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Band of Gypsys</td>
+            <td>1970</td>
+            <td>$12.00</td>
+          </tr>
+        </tbody>
+      </table>
+        
+        
+      <h3 class="sub-title">Tabular data</h3>
+      <table class="table">
+        <caption>Jimi Hendrix - albums</caption>
+        <thead>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Are You Experienced</td>
+            <td>1967</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Axis: Bold as Love</td>
+            <td>1967</td>
+            <td>$12.00</td>
+          </tr>
+          <tr>
+            <td>Electric Ladyland</td>
+            <td>1968</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Band of Gypsys</td>
+            <td>1970</td>
+            <td>$12.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-title">Responsive tabular data</h3>
+      <div class="responsive-table-container scrollbar">
+      <table class="table">
+        <caption>Caption goes here</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+            <th>Header 5</th>
+            <th>Header 6</th>
+            <th>Header 7</th>
+            <th>Header 8</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+            <th>Header 5</th>
+            <th>Header 6</th>
+            <th>Header 7</th>
+            <th>Header 8</th>
+          </tr>
+        </tfoot>
+          <tr>
+            <td>row1_cell1</td>
+            <td>row1_cell2</td>
+            <td>row1_cell3</td>
+            <td>row1_cell4</td>
+            <td>row1_cell5</td>
+            <td>row1_cell6</td>
+            <td>row1_cell7</td>
+            <td>row1_cell8</td>
+          </tr>
+          <tr>
+            <td>row2_cell1</td>
+            <td>row2_cell2</td>
+            <td>row2_cell3</td>
+            <td>row2_cell4</td>
+            <td>row2_cell5</td>
+            <td>row2_cell6</td>
+            <td>row2_cell7</td>
+            <td>row2_cell8</td>
+          </tr>
+          <tr>
+            <td>row3_cell1</td>
+            <td>row3_cell2</td>
+            <td>row3_cell3</td>
+            <td>row3_cell4</td>
+            <td>row3_cell5</td>
+            <td>row3_cell6</td>
+            <td>row3_cell7</td>
+            <td>row3_cell8</td>
+          </tr>
+          <tr>
+            <td>row4_cell1</td>
+            <td>row4_cell2</td>
+            <td>row4_cell3</td>
+            <td>row4_cell4</td>
+            <td>row4_cell5</td>
+            <td>row4_cell6</td>
+            <td>row4_cell7</td>
+            <td>row4_cell8</td>
+          </tr>
+          <tr>
+            <td>row5_cell1</td>
+            <td>row5_cell2</td>
+            <td>row5_cell3</td>
+            <td>row5_cell4</td>
+            <td>row5_cell5</td>
+            <td>row5_cell6</td>
+            <td>row5_cell7</td>
+            <td>row5_cell8</td>
+          </tr>
+        </table>
+      </div><!-- /.responsive-table-containter -->
            
-    </div><!-- /row --> 
-        
-    <div class="bf-row"> 
-       
-      <div class="bf-col-5-12">
-        <div class="wrapper">5-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-        
-      <div class="bf-col-7-12">
-        <div class="wrapper">7-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+
+
+      <h2 id="grid-system" class="title">Fluid grid system</h2>
+      <h3 class="sub-title">12 fluid columns (%)</h3>  
+              
+       <!-- 1-1 --> 
+        <div class="bf-row"> 
+         <div class="bf-col-1">
+            <div class="wrapper">
+              1-1
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+        </div><!-- /row -->
+
+
+        <!-- 1-2 -->
+        <div class="bf-row"> 
+
+        <div class="bf-col-1-2">
+          <div class="wrapper">1-2
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-1-2">
+          <div class="wrapper">1-2
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        </div><!-- /row --> 
           
-    </div><!-- /row --> 
+          
+
+        <!-- 1-3 -->  
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-3">
+            <div class="wrapper">1-3
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-3">
+             <div class="wrapper">1-3
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-3">
+            <div class="wrapper">1-3
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+        </div><!-- /.bf-row- -->
+              
+              
+        <div class="bf-row">
+          <div class="bf-col-1-3">
+             <div class="wrapper">1-3
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-2-3">
+            <div class="wrapper">2-3
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+        </div><!-- /row --> 
+          
+
+          
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-4">
+            <div class="wrapper">1-4
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-4">
+            <div class="wrapper">1-4
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-4">
+            <div class="wrapper">1-4
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+           <div class="bf-col-1-4">
+            <div class="wrapper">1-4
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+        </div><!-- /row --> 
+
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-4">
+            <div class="wrapper">1-4
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-3-4">
+            <div class="wrapper">3-4
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+        </div><!-- /row --> 
+
+
+              
+          
+        <!-- 1-5   --> 
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-5">
+            <div class="wrapper">1-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-5">
+            <div class="wrapper">1-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-5">
+            <div class="wrapper">1-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+           <div class="bf-col-1-5">
+            <div class="wrapper">1-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-5">
+            <div class="wrapper">1-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+        </div><!-- /row -->   
+          
+
+        <div class="bf-row"> 
+          
+          <div class="bf-col-2-5">
+            <div class="wrapper">2-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-3-5">
+            <div class="wrapper">3-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+        </div><!-- /row -->   
+
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-5">
+            <div class="wrapper">1-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-4-5">
+            <div class="wrapper">4-5
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+        </div><!-- /row -->  
+
+              
+
+        <!-- 1-6 -->  
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-6">
+            <div class="wrapper">1-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-6">
+            <div class="wrapper">1-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-6">
+            <div class="wrapper">1-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+           <div class="bf-col-1-6">
+            <div class="wrapper">1-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+           
+          <div class="bf-col-1-6">
+            <div class="wrapper">1-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+          <div class="bf-col-1-6">
+            <div class="wrapper">1-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+        </div><!-- /row -->
+
+
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-6">
+            <div class="wrapper">1-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-5-6">
+            <div class="wrapper">5-6
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+        </div><!-- /row -->
+              
+              
+              
+              
+              
+        <!-- 1-8 -->
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+           <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+         
+          <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+          <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+           <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+          <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+            
+        </div><!-- /row -->
+          
+        <div class="bf-row"> 
+          
+          <div class="bf-col-3-8">
+            <div class="wrapper">3-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-5-8">
+            <div class="wrapper">5-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+            
+        </div><!-- /row -->
+              
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-8">
+            <div class="wrapper">1-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-7-8">
+            <div class="wrapper">7-8
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+            
+        </div><!-- /row -->      
+              
+              
+          
+        <!-- 1-12 --> 
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+           <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+         
+           
+           <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+             <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+          
+           <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+             <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+            
+          <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+          <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+           
+           <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col --> 
+          
+          <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+               
+        </div><!-- /row --> 
+            
+        <div class="bf-row"> 
+           
+          <div class="bf-col-5-12">
+            <div class="wrapper">5-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+            
+          <div class="bf-col-7-12">
+            <div class="wrapper">7-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+              
+        </div><!-- /row --> 
+            
+        <div class="bf-row"> 
+          
+          <div class="bf-col-1-12">
+            <div class="wrapper">1-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+
+          <div class="bf-col-11-12">
+            <div class="wrapper">11-12
+            </div><!-- /.wrapper -->
+          </div><!-- /col -->
+            
+        </div><!-- /row -->     
+
         
-    <div class="bf-row"> 
-      
-      <div class="bf-col-1-12">
-        <div class="wrapper">1-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
-
-      <div class="bf-col-11-12">
-        <div class="wrapper">11-12
-        </div><!-- /.wrapper -->
-      </div><!-- /col -->
+      <div id="download" class="download">
+        <h2 class="mega">Download on GitHub</h2>
+        <b><a class="github-source" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></b>
+      </div> 
+       
+      <p class="back-to-top">
+        <a href="#" title="back to top"><span class="h1">&uarr;</span> back to top</a>
+      </p>
         
-    </div><!-- /row -->     
 
-  </div><!-- /.grid-system -->
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /.bf-container -->
 
-    
-
-    
-  <div id="download" class="download">
-    <h2 class="mega">Download on GitHub</h2>
-    <b><a class="github-source" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></b>
-  </div> 
-   
-  <p class="back-to-top">
-    <a href="#" title="back to top"><span class="h1">&uarr;</span> back to top</a>
-  </p>
-    
-
-</div><!-- /.bf-container --> 
 </body>
 </html>

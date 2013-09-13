@@ -55,6 +55,7 @@ html {
   color: #222;
   line-height: 1.5;
   -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -84,8 +85,6 @@ a {
   text-decoration: none;
   /* IE10: Remove grey background on active links */
   background-color: transparent; 
-
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .tera,
@@ -358,6 +357,7 @@ dd {
   list-style: none;
   list-style-image: none; /* IE7-8 */
 }
+
 .list-inline > li {
   display: inline-block;
   padding-right: 0.4666666em;
@@ -1117,18 +1117,18 @@ th {
  */
 
 .bf-container {
-  /* 20px + 1160px + 20px = 1200px */
-  margin: auto;
   max-width: 1160px; 
-  *min-width: 940px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
+  *min-width: 920px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .bf-row {
   display: block;
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: -10px;
+  margin-right: -10px;
   *zoom: 1;
 }
 
@@ -1149,8 +1149,8 @@ th {
   float: left;
   position: relative;
   min-height: 1;
-  padding-left: 12px;
-  padding-right: 12px;  
+  padding-left: 10px;
+  padding-right: 10px;  
 }
 
 .bf-col-1 {

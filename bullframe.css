@@ -51,9 +51,12 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
+
+  line-height: 1.5;
+
   background-color: #fff;
   color: #222;
-  line-height: 1.5;
+
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -66,7 +69,7 @@ body {
 a,
 a:hover,
 a:focus { 
-  color: #428bca; /* blue */
+  color: #428bca; /* bootstrap blue */
 }
 
 a:hover, 
@@ -360,8 +363,8 @@ dd {
 
 .list-inline > li {
   display: inline-block;
-  padding-right: 0.4666666em;
-  padding-left: 0.4666666em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 /* hard reset */
@@ -465,6 +468,10 @@ input[type="submit"] {
   display: inline-block;
   *display: inline;
   *zoom: 1;
+}
+
+input[type="file"] {
+  display: block;
 }
 
 button,
@@ -633,6 +640,36 @@ textarea:focus {
           box-shadow: 0 0 0 1px #428bca;
 }
 
+@media \0screen {
+
+  input[type="color"]:focus, 
+  input[type="email"]:focus, 
+  input[type="number"]:focus, 
+  input[type="password"]:focus, 
+  input[type="tel"]:focus, 
+  input[type="search"]:focus,
+  input[type="text"]:focus, 
+  input[type^="date"]:focus,
+  input[type="month"]:focus, 
+  input[type="time"]:focus, 
+  input[type="week"]:focus, 
+  input[type="time"]:focus, 
+  input[type="url"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: 1px solid #428bca
+  }
+
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 1px solid #428bca;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
 
 
 /* responsiveness ---------------------------------------------------------- */
@@ -657,7 +694,7 @@ html input,
 select,
 textarea {
   width: 100%;
-  *width: 98%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
 }
 
 input[type="file"],
@@ -689,23 +726,24 @@ input[type="time"],
 input[type="url"],
 select,
 textarea {
-  padding: 0.4em;
-  *padding-left: 1%; /* IE7 doesn't support CSS3 'box-sizing' */
-  *padding-right: 1%;
+  padding: 0.5em;
+  *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 1.5%;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select,
   select[size="0"],
   select[size="1"] { 
-    padding-right: 1.365em;
+    padding-right: 1.5em;
   } 
 } 
 
 textarea {
-  *padding: 1%;
+  *padding: 1.5%;
 }
   
+
 
 /* radios and checkboxes --------------------------------------------------- */
 
@@ -717,21 +755,14 @@ input[type="checkbox"] {
   *height: 13px;
 }
 
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  outline: 1px solid #52a8ec;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
 label input[type="radio"], 
 label input[type="checkbox"] {
-  margin-right: 0.35em;
+  margin-right: 0.5em;
 }
 
 label + input[type="radio"], 
 label + input[type="checkbox"] {
-  margin-left: 0.35em;
+  margin-left: 0.5em;
 }
 
 
@@ -777,7 +808,7 @@ button.btn,
 input[type="button"].btn, 
 input[type="reset"].btn,
 input[type="submit"].btn {
-  *padding: 0.4em 0.7em;
+  *padding: 0.4em 0.8em;
 }
 
 button:hover,
@@ -893,7 +924,7 @@ optgroup::-moz-focus-inner {
 
 textarea {
   height: auto;
-  min-height: 2.8em;
+  min-height: 3em;
   overflow: auto;
   vertical-align: top;
   resize: vertical;

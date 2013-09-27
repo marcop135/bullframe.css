@@ -1614,8 +1614,8 @@ th {
 /* add right shadows */
 
 .responsive-table-container.right-shadow { 
-  -webkit-box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
-          box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+  -webkit-box-shadow: inset -0.625em 0 0.9375em -0.625em #999;
+          box-shadow: inset -0.625em 0 0.9375em -0.625em #999;
 }
 
 @media screen and (max-width: 640px) {

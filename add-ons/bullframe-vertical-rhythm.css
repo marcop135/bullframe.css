@@ -11,9 +11,11 @@
 html {
   line-height: 1.5;
 }
+
 .bf-container {
   padding-top: 1.5em;
 }
+
 .tera,
 .giga,
 .gamma,
@@ -38,12 +40,15 @@ dl,
 blockquote {
   margin-top: 0;
 }
+
 hr {
   margin-top: 1.5em;
 }
+
 figure img + figcaption {
   margin-top: -1.5em;
 }
+
 p,
 pre,
 menu,
@@ -82,14 +87,19 @@ a img.aligncenter,
 .wp-caption.alignright {
   margin-bottom: 1.5em;
 }
+
 @media screen and (max-width: 640px) { 
+
   .responsive-grid [class*="col-"] {
     margin-bottom: 1.5em
   }
+
 }
+
 legend {
   padding-bottom: 1.5em;
 }
+
 ol ul,
 ul ul,
 ol ol,
@@ -99,6 +109,7 @@ ul ol,
 .flex-video-container embed[src*="//www.youtube.com"] {
   margin-bottom: 0;
 }
+
 ul,
 ol,
 .img-right,
@@ -107,6 +118,7 @@ a img.alignright,
 .wp-caption.alignright {
 	margin-left: 1.5em;
 }
+
 .img-left,
 .alignnone,
 .alignleft,
@@ -116,6 +128,7 @@ a img.alignleft,
 .wp-caption.alignleft {
 	margin-right: 1.5em;
 }
+
 blockquote {
   padding-left: 1.5em;
 }

@@ -1,4 +1,4 @@
-/*! Author's custom styles starting-point - BULLFRAME.CSS v1.5.0 add-on
+/*! Author's custom styles starting-point - BULLFRAME.CSS v1.5.1-wip add-on
  *
  * Customize as you want the following code
  *
@@ -78,8 +78,6 @@ textarea {
 html, 
 button, 
 .btn,
-.btn:hover,
-.btn:focus,
 input, 
 select,
 textarea {

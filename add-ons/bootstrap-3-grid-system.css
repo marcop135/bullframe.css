@@ -1,4 +1,4 @@
-/* Always use "box-sizing: border-box" across grid system */
+/* add "box-sizing: border-box" across all grid system as bootstrap do for all elements */
 .container,
 .row,
 [class*="col-"] {

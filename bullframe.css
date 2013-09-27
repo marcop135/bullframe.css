@@ -1,5 +1,5 @@
 /*!=========================================================================
- * BULLFRAME.CSS v1.5.0
+ * BULLFRAME.CSS v1.5.1-wip
  *
  * Source: https://github.com/marco135/bullframe.css/
  * MIT License 
@@ -1051,7 +1051,7 @@ td {
 
 .table th,
 .table td {
-  padding: 0.466666666em;
+  padding: 0.5em;
   border-bottom: 1px solid #999;
 }
 
@@ -1578,8 +1578,13 @@ th {
  */
 .responsive-table-container { 
   overflow-x: auto;
-  *overflow-x: scroll;
+  overflow-y: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.responsive-table-container table {
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 /* force and customize webkit scrollbars appearance */
@@ -1599,8 +1604,6 @@ th {
 }
 
 .responsive-table-container.scrollbar::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 0.625em;
-          border-radius: 0.625em;
   background-color: #999; 
 }
 
@@ -1608,10 +1611,42 @@ th {
   background-color: #ccc; 
 }
 
-.responsive-table-container table {
-  width: 100%;
-  margin-bottom: 0.4666666em;
+/* add right shadows */
+
+.responsive-table-container.right-shadow { 
+  -webkit-box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+          box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
 }
+
+@media screen and (max-width: 640px) {
+
+  .responsive-table-container.right-shadow-640 { 
+    -webkit-box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+            box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .responsive-table-container.right-shadow-768 { 
+    -webkit-box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+            box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+  }
+
+}
+
+@media screen and (max-width: 979px) {
+
+  .responsive-table-container.right-shadow-979 { 
+    -webkit-box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+            box-shadow: inset -0.625em -0.3125em 0.9375em -0.625em #999;
+  }
+
+}
+
+
+
 
 /* 
  * how to wraps table via jQuery:

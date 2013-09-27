@@ -1521,6 +1521,14 @@ th {
   text-transform: uppercase;
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
 .text-sans-serif {
   font-family: Arial, Helvetica, sans-serif;
 }

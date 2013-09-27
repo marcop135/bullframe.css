@@ -66,7 +66,7 @@ body {
 a,
 a:hover,
 a:focus { 
-  color: #1467ff; /* blue */
+  color: #428bca; /* blue */
 }
 
 a:hover, 
@@ -626,11 +626,11 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #52a8ec; /* light blue */
+  border-color: #428bca; /* blue */
   outline: 0 none;
-  *outline: 1px solid #52a8ec;
-  -webkit-box-shadow: 0 0 0 1px #52a8ec;
-          box-shadow: 0 0 0 1px #52a8ec;
+  *outline: 1px solid #428bca;
+  -webkit-box-shadow: 0 0 0 1px #428bca;
+          box-shadow: 0 0 0 1px #428bca;
 }
 
 
@@ -917,14 +917,6 @@ select:focus:invalid:focus {
   *outline: 1px solid #b94a48;
   -webkit-box-shadow: 0 0 0 1px #b94a48;
           box-shadow: 0 0 0 1px #b94a48;
-}
-
-@media \0screen {
-  input:focus:invalid:focus,
-  textarea:focus:invalid:focus,
-  select:focus:invalid:focus {
-    outline: 1px solid #b94a48;
-  }
 }
 
 input::-webkit-input-placeholder,

@@ -66,16 +66,19 @@ body {
   background-color: transparent;
 }
 
-a,
-a:hover,
-a:focus { 
+a {
   color: #428bca; /* bootstrap blue */
+  text-decoration: none;
+
+  /* IE10: Remove grey background on active links */
+  background-color: transparent; 
 }
 
 a:hover, 
 a:focus { 
   text-decoration: underline;
   outline: 0;
+  color: #2a6496;
 }
 
 a:focus { 
@@ -83,12 +86,6 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
 } 
-
-a {
-  text-decoration: none;
-  /* IE10: Remove grey background on active links */
-  background-color: transparent; 
-}
 
 .tera,
 .giga,
@@ -633,9 +630,9 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #428bca; /* blue */
+  border-color: #2a6496; /* blue */
   outline: 0 none;
-  *outline: 1px solid #428bca;
+  *outline: 1px solid #2a6496;
   -webkit-box-shadow: 0 0 0 1px #428bca;
           box-shadow: 0 0 0 1px #428bca;
 }
@@ -657,7 +654,7 @@ textarea:focus {
   input[type="url"]:focus,
   select:focus,
   textarea:focus {
-    outline: 1px solid #428bca
+    outline: 1px solid #2a6496;
   }
 
 }
@@ -665,7 +662,7 @@ textarea:focus {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px solid #428bca;
+  outline: 1px solid #2a6496;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -789,7 +786,7 @@ input[type="submit"] {
   text-shadow: 1px 1px rgba(255,255,255,0.5);
   border: 1px solid #b2b2b2;
   background-image: none; /* normalize fennec */
-  background: #fff;
+  background: #f4f4f4;
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -824,7 +821,7 @@ input[type="submit"]:focus {
   outline: 0 none;
   text-decoration: none;
   border-color: #999;
-  background: #ebebeb;
+  background: #e5e5e5;
 }
 
 button.btn-primary,

@@ -901,12 +901,12 @@ select[multiple] {
   select,
   select[size="0"],
   select[size="1"] { 
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAMAAADImI+JAAAAYFBMVEUiIiIjIyMjIyMjIyMjIyMiIiIjIyMhISEjIyMhISEhISEjIyMjIyMjIyMhISEjIyMjIyMhISEjIyMjIyMiIiIhISEjIyMjIyMjIyMjIyMjIyMAAAAgICAiIiIhISEjIyMhy2aOAAAAHHRSTlO2YGYhOaOE22/M5gyQMNB7KsVsY73IBnIbJAMAG+nIGQAAAH5JREFUeNq9zdkOgjAUAFFUcMFdWUqH0v//Sw0YG+xyeXKeTzIZC5tgZf2yEFSD53oVgqw9uCIIqX9cRQR28/mgYpB2Bp9Eob5Y15045GbceJOCXL/wQRI2u4+rSUPOZhp3EmQ7wj0ibMq3O2gZkptxLENOtmURPBZagK6/wRfIUlUi1KWf7AAAAABJRU5ErkJggg==);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAUBAMAAADxfUlCAAAAD1BMVEUAAAAhISEiIiIjIyMkJCQjEGaPAAAAAXRSTlMAQObYZgAAAE5JREFUeF6ly7ERgDAQA0EFFELwBRC4ALDpvyYCXn9jE6LwRqvv2u0dWbrDdWbZ6lMsQDPrRjBRXraLDRAsEcwIZgQDwcLBrBBMa2n6uwdXDxhPBuUpVQAAAABJRU5ErkJggg==);
     /* @2x image
-    -webkit-background-size: 40px 20px;
-    background-size: 40px 20px; */
-    -webkit-background-size: 1.25em 0.625em;
-            background-size: 1.25em 0.625em;
+    -webkit-background-size: 33px 20px;
+    background-size: 33px 20px; */
+    -webkit-background-size: 1.03125em 0.625em;
+            background-size: 1.03125em 0.625em;
   } 
 
 } 

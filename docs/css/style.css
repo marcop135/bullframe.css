@@ -1,0 +1,160 @@
+/*! style for documentation - BULLFRAME.CSS v1.5.1-wip docs
+ *
+ * https://github.com/marco135/bullframe.css/tree/master/add-ons
+ * MIT License
+============================================================================ */
+
+[role="banner"] {
+  margin: 20px 0;
+}
+
+[role="banner"], 
+.download {
+  color: #fff;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  background-color: #1abb69;
+}
+
+.download {
+  margin-top: 1.5em;
+}
+
+[role="banner"] h1, 
+.download .mega {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+
+  [role="banner"] h1 {
+    font-size: 1.6em;
+  }
+
+}
+
+[role="navigation"] .list-inline li,
+[role="navigation"] li a {
+  display: block;
+}
+
+[role="navigation"] li {
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+[role="navigation"] li:hover,
+[role="navigation"] li:focus {
+  background-color: #f0f0f0;
+}
+
+.title {
+  padding: 0.5em;
+}
+
+.sub-title {
+  padding: 0.25em;
+}
+
+.title {
+  color: #fff;
+  background-color: #1abb69;
+  margin-top: 3em;
+}
+
+.sub-title {
+  background-color: #ccc;
+} 
+
+/* footer container */
+.download {
+  margin-top: 2.8em;
+}
+
+/* github source link */
+.github-source {
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+
+.github-source:hover,
+.github-source:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.back-to-top a:hover,
+.back-to-top a:focus {
+  text-decoration: none;
+}
+
+.back-to-top a span {
+  vertical-align: middle;
+}
+
+.bullframe-demo .bf-row {
+  margin-bottom: 1.5em;
+}
+@media screen and (max-width: 29.9375em ) {
+
+  /* 479px */
+
+  .bullframe-demo .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .bullframe-demo [class*="bf-col-"] {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    *margin-left: 0;
+    margin-bottom: 1.5em;
+  }
+
+}
+
+.bullframe-demo .wrapper {
+  background: #999;
+  min-height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 75%;
+  text-align: center;
+}   
+  
+
+.bullframe-demo legend {
+  padding-bottom: 1.5em;
+} 
+
+.bullframe-demo button,
+.bullframe-demo .btn,
+.bullframe-demo input, 
+.bullframe-demo select, 
+.bullframe-demo textarea {
+  margin-bottom: 1.5em;
+} 
+
+.bullframe-demo input[type="radio"],
+.bullframe-demo input[type="checkbox"] {
+  *margin-bottom: 0;
+}
+  
+
+
+/* hide jsbin edit button in live preview if is touch */
+.touch #edit-with-js-bin {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+
+  #edit-with-js-bin {
+    display: none !important;
+  }
+
+}

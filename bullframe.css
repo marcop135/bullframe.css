@@ -1549,12 +1549,17 @@ th {
   font-style: italic;
 }
 
+.text-normal {
+  font-weight: 400;
+  font-style: normal;
+}
+
 .text-sans-serif {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .text-serif {
-  font-family: Georgia, serif;
+  font-family: Georgia, Times, serif;
 }
 
 .text-truncate {

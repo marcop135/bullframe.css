@@ -1,191 +1,44 @@
-<!--[if HTML5]><![endif]-->
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<meta name="HandheldFriendly" content="True">
-  
-<title>BULLFRAME.CSS boilerplate demo page</title>
-<meta name="description" content="https://github.com/marco135/bullframe.css/">
-         
-<link href="bullframe.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<style> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="HandheldFriendly" content="True">
+    
+  <title>BULLFRAME.CSS boilerplate</title>
+  <meta name="description" content="https://github.com/marco135/bullframe.css/">
+           
+  <link rel="stylesheet" href="bullframe.css?v=1.5.1">
 
-/* styles for header, section titles and footer 
----------------------------------------------------------------------------- */
+  <!-- styles for demo page -->
+  <link rel="stylesheet" href="docs/css/style.css">
 
-[role="banner"], 
-.download {
-  color: #fff;
-  padding: 1em;
-  margin-bottom: 1.5em;
-  background-color: #1abb69;
-}
+  <!-- enable HTML5 and media queries in IE7-8 -->
+  <script src="docs/js/vendor/html5shiv.js"></script>
+  <script src="docs/js/vendor/respond.min.js"></script>
 
-[role="banner"] h1, 
-.download .mega {
-  margin-top: 0;
-}
-
-@media (max-width: 640px) {
-
-  [role="banner"] h1 {
-    font-size: 1.6em;
-  }
-
-}
-
-[role="navigation"] .list-inline li,
-[role="navigation"] li a {
-  display: block;
-}
-
-[role="navigation"] li {
-  border-bottom: 1px solid #ccc;
-}
-
-[role="navigation"] li a {
-  padding: 5px;
-}
-
-[role="navigation"] li:hover,
-[role="navigation"] li:focus {
-  background-color: #f0f0f0;
-}
-
-.title, 
-.sub-title {
-  padding: 4px;
-}
-
-.title {
-  color: #fff;
-  background-color: #222;
-  margin-top: 2.8em;
-}
-
-.sub-title {
-  background-color: #eaeaea;
-} 
-
-/* footer container */
-.download {
-  margin-top: 2.8em;
-}
-
-/* github source link */
-.github-source {
-  text-decoration: underline;
-}
-
-.github-source,
-.github-source:hover,
-.github-source:focus {
-  color: #fff;
-}
-
-/* to top */
-.back-to-top a:hover,
-.back-to-top a:focus {
-  text-decoration: none;
-}
-
-.back-to-top a span {
-  vertical-align: middle;
-}
-
-
-
-/* styles for grid system demo
----------------------------------------------------------------------------- */
-.bf-container .bf-row {
-  margin-bottom: 1.5em;
-}
-@media screen and (max-width: 29.9375em ) {
-  /* 479px */
-
-  .bf-container .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  .bf-container [class*="bf-col-"] {
-    width: 100%;
-    float: none;
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 1.5em;
-  }
-
-}
-
-.bf-container .wrapper {
-  background: #999;
-  min-height: 50px;
-  line-height: 50px;
-  color: #fff;
-  font-size: 75%;
-  text-align: center;
-}   
-  
-
-
-/* styles for form elements
----------------------------------------------------------------------------- */
-legend {
-  padding-bottom: 1.5em !important;
-} 
-
-button,
-.btn,
-input, 
-select, 
-textarea {
-  margin-bottom: 1.5em !important;
-} 
-
-input[type="radio"],
-input[type="checkbox"] {
-  *margin-bottom: 0 !important;
-}
-  
-
-
-/* misc
- * hide jsbin edit button in live preview if is touch
----------------------------------------------------------------------------- */
-.touch #edit-with-js-bin {
-  display: none !important;
-}
-
-@media (max-width: 480px) {
-
-  #edit-with-js-bin {
-    display: none !important;
-  }
-
-}
-
-</style>
-  
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-<!-- enable cross-domain CSS3 media queries in IE8 -->
-<!--[if IE 8]>
-  <script src="http://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
-<![endif]-->
+  <!-- google analytics
+  <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-10549365-80');ga('send','pageview');
+  </script>  
+  -->
 </head>
 
 <body>
-<div class="bf-container">
+<div class="bf-container bullframe-demo">
   <div class="bf-row"> 
     <div class="bf-col-1">
         
       <header role="banner">
       <h1>BULLFRAME.CSS boilerplate demo page</h1>
+      <small><b>github.com/marco135/bullframe.css</b></small>
       </header>
 
       <nav role="navigation" class="skip-to-content"> 
@@ -251,7 +104,7 @@ input[type="checkbox"] {
       title</dfn> examples<br>
       The <em>em element</em> example<br>
       The <em>i element</em> example<br>
-      The img element <img alt="" src="http://placekitten.com/g/16/16"> example<br>
+      The img element <img alt="" src="http://lorempixel.com/g/16/16"> example<br>
       The <ins>ins element</ins> example<br>
       The <kbd>kbd element</kbd> example<br>
       The <mark>mark element</mark> example<br>
@@ -398,7 +251,7 @@ input[type="checkbox"] {
 
       <h3 class="sub-title">figure img figcaption</h3>
       <figure>
-        <a href="#"><img alt="" src="http://placekitten.com/620/200"></a>
+        <a href="#"><img alt="" src="http://lorempixel.com/620/200"></a>
         <figcaption>Figcaption content</figcaption>
       </figure>
 
@@ -428,10 +281,8 @@ input[type="checkbox"] {
 
       <h3 class="sub-title">Audio with controls</h3>
       <audio controls>
-       <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4"
-               type='audio/mp4'>
-       <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga"
-               type='audio/ogg; codecs=vorbis'>
+       <source src="http://jonhall.info/how_to/assets/media/audio/01_Happy_Birthday_Variation_In_The.mp3" type="audio/mp3" />
+       <source src="http://jonhall.info/how_to/assets/media/audio/01_Happy_Birthday_Variation_In_The.ogg" type="audio/ogg" />
        <p>Your browser does not support the HTML5 Audio element.</p>
       </audio>
 
@@ -593,7 +444,7 @@ input[type="checkbox"] {
         
         <h3 class="sub-title">Clickable inputs (default)</h3>
         <fieldset>
-          <div><input alt="Image (input)" src="http://placekitten.com/g/90/24" type="image"></div>
+          <div><input alt="Image (input)" src="http://lorempixel.com/g/90/24" type="image"></div>
           <div><input type="reset" value="Reset (input)"></div>
           <div><input type="button" value="Button (input)"></div>
           <div><input type="submit" value="Submit (input)"></div>
@@ -1285,8 +1136,7 @@ input[type="checkbox"] {
 
         
       <div id="download" class="download">
-        <h2 class="mega">Download on GitHub</h2>
-        <b><a class="github-source" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">github.com/marco135/bullframe.css</a></b>
+        <h2 class="mega"><a class="github-source" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">Download on GitHub</a></h2>
       </div> 
        
       <p class="back-to-top">

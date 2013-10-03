@@ -63,10 +63,12 @@ textarea {
   font-family: ;
 }
 
-html, 
-button, 
+html,
+button,
 .btn,
-input, 
+.btn:hover,
+.btn:focus,
+input,
 select,
 textarea {
   color: ;
@@ -422,7 +424,7 @@ textarea:focus {
 
 */
 
-/* replace webkit-box-shadow in IE8
+/* replace unsupported box-shadow in IE8
 @media \0screen {
 
   input[type="color"]:focus, 

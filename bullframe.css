@@ -29,20 +29,12 @@ video {
   *zoom: 1;
 }
 
-audio:not([controls]) { 
-  display: none;
-  height: 0;
-}
-
-[hidden] {
-    display: none;
-}
-
 html,
 button, 
 input, 
 select, 
 textarea {
+  font-size: 100%;
 
   /* The following font stack makes Pure Grids work on all known environments.
    *
@@ -53,9 +45,7 @@ textarea {
    * Droid Sans: Ships with all versions of Android.
    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
    */
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-
-  font-size: 100%;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;  
 }
 
 html,
@@ -70,13 +60,23 @@ input {
   line-height: 1.5;
 }
 
+html,
+button,
+.btn,
+.btn:hover,
+.btn:focus,
+input,
+select,
+textarea {
+  color: #222;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
 
   background-color: #fff;
-  color: #222;
 
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -438,9 +438,15 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+audio:not([controls]) { 
+  display: none;
+  height: 0;
+}
+
 svg:not(:root) { 
   overflow: hidden;
 }
+
 
 /* vendor styles ----------------------------------------------------------- */
 
@@ -554,16 +560,6 @@ label input {
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   height: auto;
-}
-
-button, 
-.btn,
-.btn:hover,
-.btn:focus,
-input, 
-select, 
-textarea {
-  color: #222;
 }
 
 button,
@@ -682,6 +678,7 @@ textarea:focus {
           box-shadow: 0 0 0 1px #428bca;
 }
 
+/* replace unsupported box-shadow in IE8 */
 @media \0screen {
 
   input[type="color"]:focus, 
@@ -1102,7 +1099,8 @@ th {
 /* $ Misc
 ============================================================================ */
 
-[hidden] { 
+[hidden],
+template { 
   display: none;
 }
 

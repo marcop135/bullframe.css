@@ -8,7 +8,17 @@
  */
  
 
-html {
+html,
+dt,
+dd,
+blockquote small,
+address,
+pre,
+button,
+.btn, 
+input, 
+select, 
+textarea {
   line-height: 1.5;
 }
 

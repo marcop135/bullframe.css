@@ -61,29 +61,24 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 </ul>
 
 
-<h2>Test it now</h2>
-<p><b><a href="https://googledrive.com/host/0B4LqH9uqRDqQd2NFaUlxTlBSSWM/index.html" title="google drive demo page">Check out the demo</a></b></p>
-<p>Play with code on JSBin <a href="http://jsbin.com/oraJUX/4/edit" title="JSBin">http://jsbin.com/oraJUX/2/edit</a></p>
-
-
 <h2>Browser support</h2>
-Tested and compatible with:
+Tested and compatible in:
 <ul>
   <li>Internet Explorer 7-10</li>
-  <li>Latest Chrome</li>
+  <li>Latest stable Chrome</li>
   <li>Firefox 4+</li>
   <li>Safari 4+</li>
   <li>Opera 10+</li>
 </ul>
 <ul>
-  <li>Mobile Safari iOS4+</li>
+  <li>Mobile Safari iOS 4+</li>
   <li>Android browser 2.3.2+ *</li>
-  <li>Latest Opera Mobile (Presto and Webkit) *</li>
+  <li>Latest stable Opera Mobile (Presto and Webkit) *</li>
   <li>Opera Mini *</li>
   <li>Internet Explorer Mobile 9-10</li>
-  <li>Latest Mobile Firefox (Fennec)</li>
-  <li>Blackberry browser OS5</li>
-  <li>Kindle Touch browser</li>
+  <li>Latest stable Mobile Firefox (Fennec)</li>
+  <li>Blackberry browser OS 5</li>
+  <li>Latest stable Kindle Touch browser</li>
 </ul>
 <p>* <b>Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug</b>. When the viewport is too narrow, content that overflows is hidden. <a href="http://barrow.io/overflow-scrolling" title="overflow scrolling">Get more info</a>.</p>
 

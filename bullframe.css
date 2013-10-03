@@ -43,9 +43,23 @@ button,
 input, 
 select, 
 textarea {
-  font-family: Arial, Helvetica, sans-serif;
+
+  /* The following font stack makes Pure Grids work on all known environments.
+   *
+   * FreeSans: Ships with many Linux distros, including Ubuntu
+   * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+     Arial to get picked up by the browser, even though neither is available
+     in Chrome OS.
+   * Droid Sans: Ships with all versions of Android.
+   * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+   */
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+
   font-size: 100%;
 }
+
+
+
 
 html,
 dt,

@@ -43,16 +43,26 @@ button,
 input, 
 select, 
 textarea {
-  font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+html,
+dt,
+dd,
+blockquote small,
+address,
+pre,
+button,
+.btn, 
+input {
+  line-height: 1.5;
 }
 
 html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
-
-  line-height: 1.5;
 
   background-color: #fff;
   color: #222;
@@ -243,7 +253,7 @@ pre,
 code, 
 kbd, 
 samp {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; 
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -325,6 +335,7 @@ dl {
   margin: 1.5em 0;
   padding: 0;
 }
+
 menu ul,
 menu ol,
 ul ul,
@@ -335,18 +346,22 @@ dd {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 ul,
 ol {
   margin-left: 1.5em;
 }
+
 nav ol,
 nav ul {
   list-style: none;
   list-style-image: none;
 } 
+
 dt {
   font-weight: bold;
 }
+
 dd {
   margin-left: 0;
 }
@@ -451,7 +466,7 @@ figure {
 /* $ Forms (enter the madness)
 ============================================================================ */
 
-/* major normalization ---------------------------------------------------- */
+/* normalize --------------------------------------------------------------- */
 
 label,
 html input, 
@@ -530,9 +545,6 @@ input[type="number"]::-webkit-inner-spin-button {
   height: auto;
 }
 
-
-/* normalize texts -------------------------------------------------------- */
-
 button, 
 .btn,
 .btn:hover,
@@ -541,12 +553,6 @@ input,
 select, 
 textarea {
   color: #222;
-}
-
-button,
-.btn,
-input {
-  line-height: normal;
 }
 
 button,
@@ -560,13 +566,11 @@ optgroup {
   font-style: inherit;
 }
 
-
-/* normalize appearance --------------------------------------------------- */
-
 button,
 
 /* avoid destroying native android audio/video players */
 html input[type="button"],
+
 input[type="reset"],
 input[type="submit"],
 input[type="email"], 
@@ -613,6 +617,36 @@ select,
 textarea {
   background-color: #fff;
   border: 1px solid #b2b2b2;
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+  padding: 0;
+  *margin-bottom: 0;
+  *width: 13px;
+  *height: 13px;
+}
+
+select[size], 
+select[multiple] { 
+  height: auto;
+}
+
+select[multiple] {
+  background-image: none; /* Fennec */
+}
+
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  height: auto;
+  min-height: 3em;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
 }
 
 input[type="color"]:focus, 
@@ -669,7 +703,7 @@ input[type="checkbox"]:focus {
 
 
 
-/* responsiveness ---------------------------------------------------------- */
+/* add responsiveness ------------------------------------------------------ */
 
 input,
 input[type="search"], /* be specific here */
@@ -728,29 +762,12 @@ textarea {
   *padding-right: 1.5%;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select,
-  select[size="0"],
-  select[size="1"] { 
-    padding-right: 1.5em;
-  } 
-} 
-
 textarea {
   *padding: 1.5%;
 }
   
 
-
-/* radios and checkboxes --------------------------------------------------- */
-
-input[type="radio"], 
-input[type="checkbox"] {
-  padding: 0;
-  *margin-bottom: 0;
-  *width: 13px;
-  *height: 13px;
-}
+/* customize radios and checkboxes ---------------------------------------- */
 
 label input[type="radio"], 
 label input[type="checkbox"] {
@@ -763,7 +780,7 @@ label + input[type="checkbox"] {
 }
 
 
-/* buttons ----------------------------------------------------------------- */
+/* customize buttons ------------------------------------------------------- */
 button,
 .btn,
 input[type="button"], 
@@ -876,59 +893,42 @@ input[type="submit"]:active {
 } 
 
 
-/* selects ----------------------------------------------------------------- */
-
-select {
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-select[size], 
-select[multiple] { 
-  height: auto;
-}
+/* hack ugly selects ------------------------------------------------------- */
 
 /* use a custom dropdown arrow in Webkit browsers (Safari, Android, Chrome, ecc...) */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  select,
+  select[size="0"],
+  select[size="1"] { 
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAQBAMAAABw0OvaAAAAD1BMVEUAAAAiIiIjIyMkJCQlJSUG0cnlAAAAAXRSTlMAQObYZgAAAE5JREFUeF5tzLEVgCAAxNAUDmLBABYMoMD+M1nw7incpUzxqUNd/Gvaz738YyjWysIY1G6IEPuf0MleFxMhcEiMQWIcgggVUl2MQeRfbb14dBhPnfNhWQAAAABJRU5ErkJggg==);
+    /* @2x image
+    -webkit-background-size: 45px 16px;
+    background-size: 45px 16px; */
+    -webkit-background-size: 1.40625em 0.5em;
+            background-size: 1.40625em 0.5em;
+
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    padding-right: 2em;
+  } 
 
   select[size],
   select[multiple] {
     background-image: none;
     -webkit-background-size: auto auto;
             background-size: auto auto;
-  }
+    background-position: left top;
 
-  select,
-  select[size="0"],
-  select[size="1"] { 
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAUBAMAAADxfUlCAAAAD1BMVEUAAAAhISEiIiIjIyMkJCQjEGaPAAAAAXRSTlMAQObYZgAAAE5JREFUeF6ly7ERgDAQA0EFFELwBRC4ALDpvyYCXn9jE6LwRqvv2u0dWbrDdWbZ6lMsQDPrRjBRXraLDRAsEcwIZgQDwcLBrBBMa2n6uwdXDxhPBuUpVQAAAABJRU5ErkJggg==);
-    /* @2x image
-    -webkit-background-size: 33px 20px;
-    background-size: 33px 20px; */
-    -webkit-background-size: 1.03125em 0.625em;
-            background-size: 1.03125em 0.625em;
-  } 
+    padding-right: 0.5em;
+
+  }
 
 } 
 
-optgroup::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
 
-
-/* textareas --------------------------------------------------------------- */
-
-textarea {
-  height: auto;
-  min-height: 3em;
-  overflow: auto;
-  vertical-align: top;
-  resize: vertical;
-}
-
-
-/* invalid, placeholder, disabled, readonly -------------------------------- */
+/* invalid, placeholder, disabled adn readonly ----------------------------- */
 
 input:focus:invalid, 
 select:focus:invalid,
@@ -1436,7 +1436,7 @@ th {
   text-rendering: auto;
 }
 
-.hide,
+.hide, /* old naming */
 .hidden {
   display: none !important; 
   visibility: hidden;
@@ -1623,7 +1623,6 @@ th {
 /* force and customize webkit scrollbars appearance */
 .responsive-table-container.scrollbar {
   -webkit-overflow-scrolling: auto; 
-  -ms-overflow-style: scrollbar;
 }
 
 .responsive-table-container.scrollbar::-webkit-scrollbar {
@@ -1632,7 +1631,7 @@ th {
 }
 
 .responsive-table-container.scrollbar::-webkit-scrollbar-track{
-  padding: 0.2em;
+  padding: 0.25em;
   background-color: transparent; 
 }
 

@@ -51,7 +51,6 @@ textarea {
 html,
 dt,
 dd,
-blockquote small,
 address,
 pre,
 button,
@@ -499,7 +498,8 @@ input[type="submit"] {
   *zoom: 1;
 }
 
-input[type="file"] {
+input[type="file"],
+output {
   display: block;
 }
 
@@ -560,6 +560,10 @@ label input {
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   height: auto;
+}
+
+output {
+  vertical-align: middle;
 }
 
 button,
@@ -1368,22 +1372,20 @@ template {
 
 
 /* image replacement ------------------------------------------------------- */
-.ir,
-.img-r {
-  display: block; 
-  border: 0; 
-  text-indent: -9999px; 
-  overflow: hidden; 
-  background-repeat: no-repeat; 
-  text-align: left; 
-  direction: ltr; 
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
 }
 
-.ir br,
-.img-r br { 
-  display: none;
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
-
 
 /* image positioning ------------------------------------------------------- */
 .img-left {

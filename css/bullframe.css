@@ -1,10 +1,11 @@
-/*!=========================================================================
- * BULLFRAME.CSS v1.5.1-wip
+/*! $
+ * BULLFRAME.CSS v1.5.1
  *
- * Source: https://github.com/marco135/bullframe.css/
- * MIT License 
- =========================================================================== */
-
+ * GitHub: https://github.com/marco135/bullframe.css/
+ * MIT Licenses
+ *
+ * Carefully built by @m135_
+*/
 
 article,
 aside,
@@ -37,6 +38,8 @@ textarea {
   font-size: 100%;
 
   /* The following font stack makes Pure Grids work on all known environments.
+   * project documentation http://purecss.io/grids/
+   * grid fix http://blog.purecss.io/post/60789414532/how-we-improved-grids-in-pure-0-3-0
    *
    * FreeSans: Ships with many Linux distros, including Ubuntu
    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and

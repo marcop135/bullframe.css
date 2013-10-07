@@ -11,14 +11,11 @@
 html,
 dt,
 dd,
-blockquote small,
 address,
 pre,
 button,
 .btn, 
-input, 
-select, 
-textarea {
+input {
   line-height: 1.5;
 }
 

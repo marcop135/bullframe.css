@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.5.1
+ * BULLFRAME.CSS v1.5.2
  *
  * GitHub: https://github.com/marco135/bullframe.css/
  * MIT Licenses
@@ -36,19 +36,7 @@ input,
 select, 
 textarea {
   font-size: 100%;
-
-  /* The following font stack makes Pure Grids work on all known environments.
-   * project documentation http://purecss.io/grids/
-   * grid fix http://blog.purecss.io/post/60789414532/how-we-improved-grids-in-pure-0-3-0
-   *
-   * FreeSans: Ships with many Linux distros, including Ubuntu
-   * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
-     Arial to get picked up by the browser, even though neither is available
-     in Chrome OS.
-   * Droid Sans: Ships with all versions of Android.
-   * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
-   */
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;  
+  font-family: Arial, Helvetica, sans-serif;  
 }
 
 html,
@@ -1747,23 +1735,11 @@ template {
     text-decoration: underline;
   }
 
+  /*
   a[href]:after {
     content: " (" attr(href) ")";
   }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /* Don't show links for images, or javascript/internal links */
-  .text-hide:after, 
-  .hide-text:after, 
-  .img-r a:after,
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
+  */
 
   pre,
   blockquote {

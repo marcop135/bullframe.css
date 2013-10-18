@@ -1,4 +1,4 @@
-<h1>BULLFRAME.CSS v1.5.1</h1>
+<h1>BULLFRAME.CSS v1.5.2</h1>
 <p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>Personally I don't like some heavy and stylish front-end frameworks like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -8,7 +8,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <ul>
   <li>Normalized styles for a wide range of elements across browsers (like 
   <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> do)</li>
-  <li>20KB minified</li>
+  <li>30KB minified</li>
   <li>IE7+ support <small>(if you really need it...)</small></li>
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>

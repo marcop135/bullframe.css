@@ -1,4 +1,4 @@
-/*! Vertical rhythm - BULLFRAME.CSS v1.5.1 add-on 
+/*! Vertical rhythm - BULLFRAME.CSS v1.5.2 add-on 
  * 
  * Follow baseline number '1.5' and compose to a vertical rhythm
  * ..or use the number you want.
@@ -19,6 +19,7 @@ input {
   line-height: 1.5;
 }
 
+.container,
 .bf-container {
   padding-top: 1.5em;
 }

@@ -1634,7 +1634,6 @@ template {
 /* force and customize webkit scrollbars appearance */
 .responsive-table-container.scrollbar {
   -webkit-overflow-scrolling: auto; 
-  -ms-overflow-style: scrollbar;
 }
 
 .responsive-table-container.scrollbar::-webkit-scrollbar {

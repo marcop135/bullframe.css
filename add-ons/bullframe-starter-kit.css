@@ -1,10 +1,11 @@
-/*! Author's custom styles starting-point - BULLFRAME.CSS v1.5.2 add-on
+/*! Author's custom styles starting-point - BULLFRAME.CSS v1.6.0 add-on
  *
  * Customize as you want the following code
  *
  * https://github.com/marco135/bullframe.css/tree/master/add-ons
  * MIT License
 ============================================================================ */
+
 
 
 
@@ -25,17 +26,6 @@
 
 
 
-/* Scalable <img> and <video> elements ------------------------------------
-
- * just in case, to force correct aspet ratio 
- * if necessary, override this rule with 'max-height: XXXpx'  
-
-img,
-video {
-  height: auto !important;
-}
-*/
-
 
 
 /* Change box-model 
@@ -50,6 +40,22 @@ video {
           box-sizing: border-box !important; 
 }
 */
+
+
+
+
+
+/* Scalable <img> and <video> elements ------------------------------------
+
+ * just in case, to force correct aspet ratio 
+ * if necessary, override this rule with 'max-height: XXXpx'  
+
+img,
+video {
+  height: auto !important;
+}
+*/
+
 
 
 

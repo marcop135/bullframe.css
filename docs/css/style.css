@@ -1,4 +1,4 @@
-/*! styles for documentation - BULLFRAME.CSS v1.5.1-wip docs
+/*! styles for documentation - BULLFRAME.CSS v1.6.0 docs
  *
  * https://github.com/marco135/bullframe.css/tree/master/add-ons
  * MIT License
@@ -18,7 +18,7 @@
   color: #fff;
   padding: 1em;
   margin-bottom: 1.5em;
-  background-color: #1abb69;
+  background-color: #c36e9e;
 }
 
 [role="banner"] h1 {
@@ -43,18 +43,13 @@
 [role="navigation"] .list-inline li,
 [role="navigation"] li a {
   display: block;
+  font-size: 1.1em;
 }
 
 [role="navigation"] li {
   padding: 0.5em;
   border-bottom: 1px solid #ccc;
 }
-
-[role="navigation"] li:hover,
-[role="navigation"] li:focus {
-  background-color: #f0f0f0;
-}
-
 
 
 
@@ -65,7 +60,7 @@
 .title {
   padding: 0.5em;
   color: #fff;
-  background-color: #1abb69;
+  background-color: #444;
   margin-top: 3em;
 }
 
@@ -178,21 +173,3 @@
 
 
 
-
-/* misc
---------------------------------------------------------------------------- */
-
-/* hide jsbin.com edit button in live preview 
- * if the browser screen is too small */
-
-.touch #edit-with-js-bin {
-  display: none !important;
-}
-
-@media (max-width: 480px) {
-
-  #edit-with-js-bin {
-    display: none !important;
-  }
-
-}

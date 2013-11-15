@@ -849,6 +849,17 @@ input.btn-primary[type="submit"] {
   background-color: #428bca;
 }
 
+button.btn-success,
+.btn-success,
+input.btn-success[type="button"], 
+input.btn-success[type="reset"],
+input.btn-success[type="submit"] {
+  color: #fff;
+  text-shadow: none;
+  border-color: #4cae4c;
+  background-color: #5cb85c;
+}
+
 button.btn-primary:hover,
 .btn-primary:hover,
 input.btn-primary[type="button"]:hover, 
@@ -862,6 +873,21 @@ input.btn-primary[type="submit"]:focus {
   color: #fff;
   border-color: #285e8e;
   background-color: #3276b1;
+}
+
+button.btn-success:hover,
+.btn-success:hover,
+input.btn-success[type="button"]:hover, 
+input.btn-success[type="reset"]:hover,
+input.btn-success[type="submit"]:hover,
+button.btn-success:focus,
+.btn-success:focus,
+input.btn-success[type="button"]:focus, 
+input.btn-success[type="reset"]:focus,
+input.btn-success[type="submit"]:focus {
+  color: #fff;
+  border-color: #398439;
+  background-color: #47a447;
 }
 
 button:active,
@@ -1028,6 +1054,15 @@ fieldset.disabled .btn-primary,
 .btn.btn-primary.disabled {
   background: #bed4f7 none !important; /* very light blue */
   border-color: #bed4f7 !important;
+  color: #fff !important;
+}
+
+fieldset[disabled] .btn-success
+fieldset.disabled .btn-success,
+.btn.btn-success[disabled],
+.btn.btn-success.disabled {
+  background: #a2d6a2 none !important; /* very light green */
+  border-color: #a2d6a2 !important;
   color: #fff !important;
 }
 

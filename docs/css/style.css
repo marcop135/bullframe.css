@@ -11,13 +11,8 @@
 --------------------------------------------------------------------------- */
 
 [role="banner"] {
-  margin: 20px 0;
-}
-
-[role="banner"] {
   color: #fff;
-  padding: 1em;
-  margin-bottom: 1.5em;
+  padding: 2em 0;
   background-color: #c36e9e;
 }
 
@@ -33,6 +28,14 @@
 
 }
 
+[role="banner"] small a {
+  color: #fff;
+}
+
+[role="banner"] small a:hover,
+[role="banner"] small a:focus {
+  color: #fff;
+}
 
 
 
@@ -76,16 +79,6 @@
 /* content
 --------------------------------------------------------------------------- */
 
-.bullframe-demo .wrapper {
-  background: #999;
-  min-height: 50px;
-  line-height: 50px;
-  color: #fff;
-  font-size: 75%;
-  text-align: center;
-}   
-  
-
 .bullframe-demo legend {
   padding-bottom: 1.5em;
 } 
@@ -106,7 +99,20 @@
 
 /* grid system */
 
-.bullframe-demo .bf-row {
+.grid {
+  margin-bottom: 4.5em;
+}
+
+.grid .wrapper {
+  background: #999;
+  min-height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 75%;
+  text-align: center;
+}   
+
+.grid .bf-row {
   margin-bottom: 1.5em;
 }
 
@@ -114,13 +120,13 @@
 
   /* 479px */
 
-  .bullframe-demo .bf-row {
+  .grid .bf-row {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
   }
 
-  .bullframe-demo [class*="bf-col-"] {
+  .grid [class*="bf-col-"] {
     width: 100%;
     float: none;
     padding-left: 0;
@@ -138,27 +144,9 @@
 /* footer
 --------------------------------------------------------------------------- */
 
-.download {
-  margin-top: 3em;
-  color: #fff;
-  padding: 1em;
-  background-color: #1abb69;
-}
-
-.download .mega {
-  margin: 0;
-}
-
-.github-source {
-  color: #fff;
-  display: block;
+.back-to-top {
   text-align: center;
-}
-
-.github-source:hover,
-.github-source:focus {
-  color: #333;
-  text-decoration: none;
+  display: block;
 }
 
 .back-to-top a:hover,
@@ -166,9 +154,34 @@
   text-decoration: none;
 }
 
-.back-to-top a span {
+.back-to-top a i {
   vertical-align: middle;
+  font-style: normal
 }
+
+.download {
+  margin-top: 3em;
+  color: #fff;
+  background-color: #c36e9e;
+}
+
+.download .github-source {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 3em;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.download .github-source:hover,
+.download .github-source:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+
 
 
 

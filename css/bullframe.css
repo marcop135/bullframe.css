@@ -1543,10 +1543,15 @@ template {
   float: left;
 }
 
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .affix {
   position: fixed;
 }
-
 
 /* reset margin/padding ---------------------------------------------------- */
 .no-margin {

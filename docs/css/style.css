@@ -50,7 +50,7 @@
 }
 
 [role="navigation"] li {
-  padding: 0.5em;
+  padding: 0.5em 0;
   border-bottom: 1px solid #ccc;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .sub-title {
-  background-color: #ccc;
+  background-color: #f0f0f0;
   padding: 0.25em;
 } 
 
@@ -99,7 +99,11 @@
 
 /* grid system */
 
-.grid {
+h2#grid-system {
+  margin-bottom: 1.5em;
+}
+
+.grid-bootstrap {
   margin-bottom: 4.5em;
 }
 

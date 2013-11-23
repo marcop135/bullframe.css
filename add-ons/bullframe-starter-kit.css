@@ -65,7 +65,8 @@ html,
 button, 
 input, 
 select,
-textarea {
+textarea,
+.inline-block-container {
   font-family: ;
 }
 

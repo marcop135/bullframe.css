@@ -1337,6 +1337,10 @@ template {
 
 /* $ Custom Bootstrap 3 grid system with no mobile/tablet/desktop mixing 
  * http://getbootstrap.com/css/#grid
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
 ============================================================================ */
 
 .container {
@@ -1366,6 +1370,9 @@ template {
 }
 
 .row {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   margin-right: -15px;
   margin-left: -15px;
   *zoom: 1;
@@ -1379,6 +1386,12 @@ template {
 
 .row:after {
   clear: both;
+}
+
+[class^="col-"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .col-xs-1,
@@ -1779,6 +1792,9 @@ template {
   display: inline !important;
 }
 
+/* Using Grids with Your Font-Family
+ * http://purecss.io/grids/#using-grids-with-custom-fonts
+ */
 .inline-block-container {
   letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
   *letter-spacing: normal; /* reset IE < 8 */
@@ -1832,7 +1848,6 @@ template {
  *
  */
 
- 
 .hide, /* old naming */
 .hidden {
   display: none !important; 

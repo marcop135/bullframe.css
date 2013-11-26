@@ -13,11 +13,12 @@
 [role="banner"] {
   color: #fff;
   padding: 2em 0;
+  margin-bottom: 1.5em;
   background-color: #c36e9e;
 }
 
 [role="banner"] h1 {
-  margin: 0;
+  margin: 0 ;
 }
 
 [role="banner"] h1::-moz-selection { 
@@ -44,7 +45,6 @@
 
   [role="banner"] h1 {
     font-size: 2em;
-    text-shadow: 2px 2px 2px #333;
   }
 
 }
@@ -57,14 +57,45 @@
 
 }
 
-[role="banner"] small a {
-  color: #fff;
+@media screen and (min-width: 641px) {
+
+  .version {
+    text-align: right;
+  }
+
 }
 
-[role="banner"] small a:hover,
-[role="banner"] small a:focus {
-  color: #fff;
+.version span {
+  font-size: 80%;
+  display: inline-block;
+  margin-top: 0.75em;
 }
+
+@media (min-width: 1025px) {
+
+  .version span {
+    margin-top: 1.5em;
+  }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+  .abstract {
+    font-size: 1.2em;
+  }
+}
+
+.abstract code {
+  background: #f0f0f0;
+  display: inline-block;
+  padding: 0.1em 0.3em;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+}
+
+
 
 
 
@@ -73,42 +104,48 @@
 /* navigation 
 --------------------------------------------------------------------------- */
 
-[role="navigation"] li a {
+.nav li a {
   display: block;
   border-bottom: 1px solid #ccc;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 720px) {
 
-  [role="navigation"] li a {
+  .nav li a {
     padding: 0.75em 0;
   }
 
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 721px) {
 
-  [role="navigation"] li {
+  .nav li {
     float: left;
-    margin: 3.75em 1.25em 1.25em 1.25em;
+    margin: 2em 1em 1em 1em;
   }
 
-  [role="navigation"] li:first-child {
+  .nav li:first-child {
     margin-left: 0;
   }
 
-  [role="navigation"] li a:hover,
-  [role="navigation"] li a:focus {
+  .nav li a:hover,
+  .nav li a:focus {
     text-decoration: none;
     border-color: #2a6496;
   }
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
 
-  [role="navigation"] li a {
-    font-size: 1.2em;
+  .nav li {
+    float: left;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .nav li a {
+    font-size: 1.1em;
   }
 
 }
@@ -216,6 +253,7 @@ h2#grid-system {
 .back-to-top {
   text-align: center;
   display: block;
+  margin: 6em 0;
 }
 
 .back-to-top a:hover,
@@ -228,10 +266,21 @@ h2#grid-system {
   font-style: normal
 }
 
+.sharing {
+  width: 100%;
+  margin: 0 auto 1.5em 0;
+  text-align: center;
+}
+
+.sharing iframe {
+  border: 0;
+  vertical-align: middle;
+}
+
 .download {
   margin-top: 3em;
   color: #fff;
-  background-color: #c36e9e;
+  background-color: #333;
 }
 
 .download .github-source {
@@ -240,16 +289,14 @@ h2#grid-system {
   text-align: center;
   padding: 1em 0;
   font-size: 3em;
-  text-shadow: 2px 2px 2px #333;
   line-height: 1.1;
   font-weight: bold;
 }
 
 .download .github-source:hover,
 .download .github-source:focus {
-  color: #333;
+  color: #fff;
   text-decoration: none;
-  text-shadow: none;
 }
 
 

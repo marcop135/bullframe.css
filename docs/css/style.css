@@ -20,10 +20,39 @@
   margin: 0;
 }
 
-@media (max-width: 640px) {
+[role="banner"] h1::-moz-selection { 
+  background-color: #fff; 
+}
+
+[role="banner"] h1::selection  { 
+  background-color: #fff;      
+}
+
+@media (max-width: 700px) {
 
   [role="banner"] h1 {
     font-size: 1.5em;
+  }
+
+}
+
+@media (min-width: 701px) {
+
+  [role="banner"] {
+    padding: 3em 0;
+  }
+
+  [role="banner"] h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #333;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  [role="banner"] h1 {
+    font-size: 3em;
   }
 
 }
@@ -40,19 +69,53 @@
 
 
 
+
 /* navigation 
 --------------------------------------------------------------------------- */
 
-[role="navigation"] .list-inline li,
 [role="navigation"] li a {
   display: block;
-  font-size: 1.1em;
-}
-
-[role="navigation"] li {
-  padding: 0.5em 0;
   border-bottom: 1px solid #ccc;
 }
+
+@media screen and (max-width: 640px) {
+
+  [role="navigation"] li a {
+    padding: 0.75em 0;
+  }
+
+}
+
+@media screen and (min-width: 641px) {
+
+  [role="navigation"] li {
+    float: left;
+    margin: 3.75em 1.25em 1.25em 1.25em;
+  }
+
+  [role="navigation"] li:first-child {
+    margin-left: 0;
+  }
+
+  [role="navigation"] li a:hover,
+  [role="navigation"] li a:focus {
+    text-decoration: none;
+    border-color: #2a6496;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  [role="navigation"] li a {
+    font-size: 1.2em;
+  }
+
+}
+
+
+
+
 
 
 
@@ -68,8 +131,9 @@
 }
 
 .sub-title {
-  background-color: #f0f0f0;
-  padding: 0.25em;
+  margin-top: 2em;
+  padding: 0.5em 0;
+  text-transform: uppercase;
 } 
 
 
@@ -109,28 +173,29 @@ h2#grid-system {
 
 .grid .wrapper {
   background: #999;
-  min-height: 50px;
-  line-height: 50px;
+  height: 40px;
+  overflow-y: hidden;
+  line-height: 40px;
   color: #fff;
-  font-size: 75%;
+  font-size: 70%;
   text-align: center;
 }   
 
-.grid .bf-row {
+.grid .bf-row,
+.grid .row {
   margin-bottom: 1.5em;
 }
 
-@media screen and (max-width: 29.9375em ) {
+@media screen and (max-width: 640px ) {
 
-  /* 479px */
-
-  .grid .bf-row {
+  .grid .bf-row,
+  .grid .row {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
   }
 
-  .grid [class*="bf-col-"] {
+  .grid [class*="col-"] {
     width: 100%;
     float: none;
     padding-left: 0;
@@ -175,6 +240,7 @@ h2#grid-system {
   text-align: center;
   padding: 1em 0;
   font-size: 3em;
+  text-shadow: 2px 2px 2px #333;
   line-height: 1.1;
   font-weight: bold;
 }
@@ -183,6 +249,7 @@ h2#grid-system {
 .download .github-source:focus {
   color: #333;
   text-decoration: none;
+  text-shadow: none;
 }
 
 

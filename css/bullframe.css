@@ -1,11 +1,19 @@
 /*! $
- * BULLFRAME.CSS v1.5.2
+ * BULLFRAME.CSS v1.6.0
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT Licenses
  *
  * Carefully built by @m135_
-*/
+ */
+
+*, 
+*:before, 
+*:after { 
+  -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box; 
+}
 
 article,
 aside,
@@ -282,14 +290,10 @@ small {
 }
 
 address {
-  display: block;
   font-style: normal;
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
   display: block;
   height: 1px;
   border: 0;
@@ -351,6 +355,7 @@ nav ol,
 nav ul {
   list-style: none;
   list-style-image: none;
+  margin-left: 0;
 } 
 
 dt {
@@ -370,8 +375,11 @@ dd {
 
 .list-inline > li {
   display: inline-block;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  margin-left: 1.5em;
+}
+
+.list-inline > li:first-child {
+  margin-left: 0;
 }
 
 /* hard reset */
@@ -382,7 +390,6 @@ ol.unstyled ol,
 ul.unstyled ol,
 ol.unstyled ul { 
   margin: 0;
-  padding: 0;
   list-style: none;
   list-style-image: none; /* IE7-8 */
 } 
@@ -411,15 +418,15 @@ video {
   vertical-align: middle;
 }
 
-img,
-video {
-  height: auto;
-}
-
 img {
   border: 0;
   width: auto;
+  height: auto;
   -ms-interpolation-mode: bicubic;
+}
+
+video {
+  height: auto;
 }
 
 audio:not([controls]) { 
@@ -701,22 +708,6 @@ input[type="checkbox"]:focus {
 
 
 /* add responsiveness ------------------------------------------------------ */
-
-input,
-input[type="search"], /* be specific here */
-input[type="radio"], 
-input[type="checkbox"],
-input[type="button"], 
-input[type="reset"],
-input[type="submit"],
-select, 
-textarea,
-button,
-.btn {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
 
 html input,
 select,
@@ -1158,16 +1149,21 @@ template {
  * 5. Opera and Safari round the numbers down. 
  * No fix :(
  * A discussion about Opera on GitHub https://github.com/jokjus/centage/issues/1
- * A discussion about Bootstrap fluid grid system on StackOverflow
+ * A discussion about Bootstrap 2 fluid grid system on StackOverflow
  * http://stackoverflow.com/questions/10683539/bootstrap-fluid-grid-system-issue-opera-11-64
  *
  *
  */
 
 .bf-container {
-  -webkit-box-sizing: content-box !important;
-     -moz-box-sizing: content-box !important;
-          box-sizing: content-box !important;
+  /* avoid IE8 issue with 'box-sizing: border-box' in combination 
+   * with max/min-width and max/min-height 
+   * https://github.com/twbs/bootstrap/issues/10014
+   */
+  -webkit-box-sizing: content-box; 
+     -moz-box-sizing: content-box; 
+          box-sizing: content-box; 
+          
   max-width: 1160px;
   *min-width: 920px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
   padding-right: 20px;
@@ -1189,8 +1185,8 @@ template {
 
 .bf-row {
   display: block;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -20px;
+  margin-right: -20px;
   *zoom: 1;
 }
 
@@ -1205,94 +1201,11 @@ template {
 } 
 
 [class*="bf-col-"] {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 10px;
-  padding-right: 10px;  
-}
-
-.bf-col-1 {
-  width: 100%;
-  *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-1-2 {
-  width: 50%;
-  *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-1-3 {
-  width: 33.33333%;
-  *width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-2-3 {
-  width: 66.66666%;
-  *width: expression((this.parentNode.clientWidth/3*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-} 
-
-.bf-col-1-4 {
-  width: 25%;
-  *width: expression((this.parentNode.clientWidth/4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-3-4 {
-  width: 75%;
-  *width: expression((this.parentNode.clientWidth/4*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-} 
-
-.bf-col-1-5 {
-  width: 20%;
-  *width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-2-5 {
-  width: 40%;
-  *width: expression((this.parentNode.clientWidth/5*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-3-5 {
-  width: 60%;
-  *width: expression((this.parentNode.clientWidth/5*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-4-5 {
-  width: 80%;
-  *width: expression((this.parentNode.clientWidth/5*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-1-6 {
-  width: 16.656%;
-  *width: expression((this.parentNode.clientWidth/6 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-5-6 {
-  width: 83.33%;
-  *width: expression((this.parentNode.clientWidth/6*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-1-8 {
-  width: 12.5%;
-  *width: expression((this.parentNode.clientWidth/8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-3-8 {
-  width: 37.5%;
-  *width: expression((this.parentNode.clientWidth/8*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-5-8 {
-  width: 62.5%;
-  *width: expression((this.parentNode.clientWidth/8*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-7-8 {
-  width: 87.5%;
-  *width: expression((this.parentNode.clientWidth/8*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+  padding-left: 20px;
+  padding-right: 20px;  
 }
 
 .bf-col-1-12 {
@@ -1300,18 +1213,90 @@ template {
   *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
+.bf-col-1-8 {
+  width: 12.5%;
+  *width: expression((this.parentNode.clientWidth/8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-1-6 {
+  width: 16.656%;
+  *width: expression((this.parentNode.clientWidth/6 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-1-5 {
+  width: 20%;
+  *width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-1-4 {
+  width: 25%;
+  *width: expression((this.parentNode.clientWidth/4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-1-3 {
+  width: 33.33333%;
+  *width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-3-8 {
+  width: 37.5%;
+  *width: expression((this.parentNode.clientWidth/8*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+
 .bf-col-5-12 {
   width: 41.6666%;
   *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
+
+.bf-col-1-2 {
+  width: 50%;
+  *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
 .bf-col-7-12 {
   width: 58.3333%;
   *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
+.bf-col-5-8 {
+  width: 62.5%;
+  *width: expression((this.parentNode.clientWidth/8*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-2-3 {
+  width: 66.66666%;
+  *width: expression((this.parentNode.clientWidth/3*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+} 
+
+.bf-col-3-4 {
+  width: 75%;
+  *width: expression((this.parentNode.clientWidth/4*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+} 
+
+.bf-col-4-5 {
+  width: 80%;
+  *width: expression((this.parentNode.clientWidth/5*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-5-6 {
+  width: 83.33%;
+  *width: expression((this.parentNode.clientWidth/6*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-7-8 {
+  width: 87.5%;
+  *width: expression((this.parentNode.clientWidth/8*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
 .bf-col-11-12 {
   width: 91.6666%;
   *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-1 {
+  width: 100%;
+  *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
 /* responsive grid */
@@ -1323,360 +1308,6 @@ template {
   }
 
   .responsive-grid [class*="bf-col-"] {
-    width: 100%;
-    *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-    float: none;
-    padding-left: 0;
-    padding-right: 0;
-  } 
-
-}
-
-
-
-
-/* $ Custom Bootstrap 3 grid system with no mobile/tablet/desktop mixing 
- * http://getbootstrap.com/css/#grid
- *
- * Copyright 2013 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
-============================================================================ */
-
-.container {
-  -webkit-box-sizing: content-box !important;
-     -moz-box-sizing: content-box !important;
-          box-sizing: content-box !important;
-  max-width: 1170px;
-  *min-width: 930px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.container:before,
-.container:after {
-  display: table;
-  content: " ";
-}
-
-.container:after {
-  clear: both;
-}
-
-.container {
-  *zoom: 1;
-}
-
-.row {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-right: -15px;
-  margin-left: -15px;
-  *zoom: 1;
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
-}
-
-[class^="col-"] {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.col-xs-1,
-.col-sm-1,
-.col-md-1,
-.col-lg-1,
-.col-xs-2,
-.col-sm-2,
-.col-md-2,
-.col-lg-2,
-.col-xs-3,
-.col-sm-3,
-.col-md-3,
-.col-lg-3,
-.col-xs-4,
-.col-sm-4,
-.col-md-4,
-.col-lg-4,
-.col-xs-5,
-.col-sm-5,
-.col-md-5,
-.col-lg-5,
-.col-xs-6,
-.col-sm-6,
-.col-md-6,
-.col-lg-6,
-.col-xs-7,
-.col-sm-7,
-.col-md-7,
-.col-lg-7,
-.col-xs-8,
-.col-sm-8,
-.col-md-8,
-.col-lg-8,
-.col-xs-9,
-.col-sm-9,
-.col-md-9,
-.col-lg-9,
-.col-xs-10,
-.col-sm-10,
-.col-md-10,
-.col-lg-10,
-.col-xs-11,
-.col-sm-11,
-.col-md-11,
-.col-lg-11,
-.col-xs-12,
-.col-sm-12,
-.col-md-12,
-.col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.col-xs-1,
-.col-xs-2,
-.col-xs-3,
-.col-xs-4,
-.col-xs-5,
-.col-xs-6,
-.col-xs-7,
-.col-xs-8,
-.col-xs-9,
-.col-xs-10,
-.col-xs-11 {
-  float: left;
-}
-
-/* put here CSS expressions for IE7 support */
-
-.col-xs-12 {
-  width: 100%;
-}
-
-.col-xs-11 {
-  width: 91.66666666666666%;
-}
-
-.col-xs-10 {
-  width: 83.33333333333334%;
-}
-
-.col-xs-9 {
-  width: 75%;
-}
-
-.col-xs-8 {
-  width: 66.66666666666666%;
-}
-
-.col-xs-7 {
-  width: 58.333333333333336%;
-}
-
-.col-xs-6 {
-  width: 50%;
-}
-
-.col-xs-5 {
-  width: 41.66666666666667%;
-}
-
-.col-xs-4 {
-  width: 33.33333333333333%;
-}
-
-.col-xs-3 {
-  width: 25%;
-}
-
-.col-xs-2 {
-  width: 16.666666666666664%;
-}
-
-.col-xs-1 {
-  width: 8.333333333333332%;
-}
-
-.col-xs-pull-12 {
-  right: 100%;
-}
-
-.col-xs-pull-11 {
-  right: 91.66666666666666%;
-}
-
-.col-xs-pull-10 {
-  right: 83.33333333333334%;
-}
-
-.col-xs-pull-9 {
-  right: 75%;
-}
-
-.col-xs-pull-8 {
-  right: 66.66666666666666%;
-}
-
-.col-xs-pull-7 {
-  right: 58.333333333333336%;
-}
-
-.col-xs-pull-6 {
-  right: 50%;
-}
-
-.col-xs-pull-5 {
-  right: 41.66666666666667%;
-}
-
-.col-xs-pull-4 {
-  right: 33.33333333333333%;
-}
-
-.col-xs-pull-3 {
-  right: 25%;
-}
-
-.col-xs-pull-2 {
-  right: 16.666666666666664%;
-}
-
-.col-xs-pull-1 {
-  right: 8.333333333333332%;
-}
-
-.col-xs-pull-0 {
-  right: 0;
-}
-
-.col-xs-push-12 {
-  left: 100%;
-}
-
-.col-xs-push-11 {
-  left: 91.66666666666666%;
-}
-
-.col-xs-push-10 {
-  left: 83.33333333333334%;
-}
-
-.col-xs-push-9 {
-  left: 75%;
-}
-
-.col-xs-push-8 {
-  left: 66.66666666666666%;
-}
-
-.col-xs-push-7 {
-  left: 58.333333333333336%;
-}
-
-.col-xs-push-6 {
-  left: 50%;
-}
-
-.col-xs-push-5 {
-  left: 41.66666666666667%;
-}
-
-.col-xs-push-4 {
-  left: 33.33333333333333%;
-}
-
-.col-xs-push-3 {
-  left: 25%;
-}
-
-.col-xs-push-2 {
-  left: 16.666666666666664%;
-}
-
-.col-xs-push-1 {
-  left: 8.333333333333332%;
-}
-
-.col-xs-push-0 {
-  left: 0;
-}
-
-.col-xs-offset-12 {
-  margin-left: 100%;
-}
-
-.col-xs-offset-11 {
-  margin-left: 91.66666666666666%;
-}
-
-.col-xs-offset-10 {
-  margin-left: 83.33333333333334%;
-}
-
-.col-xs-offset-9 {
-  margin-left: 75%;
-}
-
-.col-xs-offset-8 {
-  margin-left: 66.66666666666666%;
-}
-
-.col-xs-offset-7 {
-  margin-left: 58.333333333333336%;
-}
-
-.col-xs-offset-6 {
-  margin-left: 50%;
-}
-
-.col-xs-offset-5 {
-  margin-left: 41.66666666666667%;
-}
-
-.col-xs-offset-4 {
-  margin-left: 33.33333333333333%;
-}
-
-.col-xs-offset-3 {
-  margin-left: 25%;
-}
-
-.col-xs-offset-2 {
-  margin-left: 16.666666666666664%;
-}
-
-.col-xs-offset-1 {
-  margin-left: 8.333333333333332%;
-}
-
-.col-xs-offset-0 {
-  margin-left: 0;
-}
-
-/* responsive grid */
-@media screen and (max-width: 640px) {
-
-  .responsive-grid .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .responsive-grid [class*="col-"] {
     width: 100%;
     *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
     float: none;
@@ -1848,42 +1479,6 @@ template {
 }
 
 
-/* screenreaders ----------------------------------------------------------- */
-/* Hide text for non-screenreaders */
-.screen-reader-text,
-.assistive-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-
 /* layout positioning ------------------------------------------------------ */
 .pull-right {
   float: right;
@@ -1901,19 +1496,6 @@ template {
 
 .affix {
   position: fixed;
-}
-
-/* reset margin/padding ---------------------------------------------------- */
-.no-margin {
-  margin: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-border {
-  border: 0;
 }
 
 
@@ -1948,19 +1530,6 @@ template {
 
 .text-italic {
   font-style: italic;
-}
-
-.text-normal {
-  font-weight: 400;
-  font-style: normal;
-}
-
-.text-sans-serif {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.text-serif {
-  font-family: Georgia, Times, serif;
 }
 
 .text-truncate {
@@ -2123,12 +1692,6 @@ template {
   a:visited {
     text-decoration: underline;
   }
-
-  /*
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  */
 
   pre,
   blockquote {

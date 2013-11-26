@@ -26,9 +26,7 @@
 
 
 
-
-
-/* Change box-model 
+/* Always use 'box-sizing: border-box'
  * (no IE7 support. just in case, use box-sizing polyfill) 
  * https://github.com/Schepp/box-sizing-polyfill --------------------------
 
@@ -633,12 +631,21 @@ input[type="submit"]:focus {
 
 
 /* Print -------------------------------------------------------------------
- * don't show URLs
+ * show URLs
 
   @media print {
 
     a[href]:after {
-      content: " (" attr(href) ")";
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
     }
 
   }
@@ -648,7 +655,8 @@ input[type="submit"]:focus {
 
 
 /* $ 'Safe' CSS hacks reference --------------------------------------------
- * More hacks on http://browserhacks.com/
+ * More hacks on http://browserhacks.com/ 
+ */
 
 /* IE7
 .safe-css-hack { 

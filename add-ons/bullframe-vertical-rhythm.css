@@ -19,8 +19,8 @@ input {
   line-height: 1.5;
 }
 
-.container,
-.bf-container {
+.bf-container,
+.container {
   padding-top: 1.5em;
 }
 
@@ -70,7 +70,7 @@ figcaption,
 address,
 audio,
 video,
-.flex-video-container,
+.responsive-video-container,
 iframe[src*="//www.youtube.com"],
 iframe[src*="//vimeo.com"],
 embed[src*="//www.youtube.com"],
@@ -99,7 +99,7 @@ a img.aligncenter,
 @media screen and (max-width: 640px) { 
 
   .responsive-grid [class*="col-"] {
-    margin-bottom: 1.5em
+    margin-bottom: 1.5em;
   }
 
 }

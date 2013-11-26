@@ -1293,7 +1293,7 @@
     <a href="#" title="back to top"><i class="h1">&uarr;</i> back to top</a>
   </span>
 
-
+  <!-- avoid this row in production -->
   <div class="bf-row">
     <div class="bf-col-1">
       <div class="sharing">
@@ -1326,9 +1326,21 @@
 
 
 
+
+<!-- avoid this scripts in production
 <script>
-// twitter btn
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  // twitter btn
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  // google anlytics
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-10549365-80');ga('send','pageview');
 </script>
+-->
+
 </body>
 </html>

@@ -666,7 +666,8 @@ input[type="week"]:focus,
 input[type="time"]:focus, 
 input[type="url"]:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+#input-focused {
   border-color: #2a6496; /* blue */
   outline: 0 none;
   *outline: 1px solid #2a6496;
@@ -691,7 +692,8 @@ textarea:focus {
   input[type="time"]:focus, 
   input[type="url"]:focus,
   select:focus,
-  textarea:focus {
+  textarea:focus,
+  #input-focused {
     outline: 1px solid #2a6496;
   }
 
@@ -944,16 +946,16 @@ input[type="submit"]:active {
 
 /* invalid, placeholder, disabled adn readonly ----------------------------- */
 
-input:focus:invalid, 
-select:focus:invalid,
-textarea:focus:invalid { 
+.invalid input,
+.invalid textarea,
+.invalid select,
+.invalid input:focus,
+.invalid textarea:focus,
+.invalid select:focus,
+input:focus.invalid,
+textarea:focus.invalid,
+select:focus.invalid {
   color: #b94a48; /* dark red */
-  border-color: #b94a48; /* red */
-}
-
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
   border-color: #b94a48; /* red */
   outline: 0 none;
   *outline: 1px solid #b94a48;

@@ -1,6 +1,6 @@
 <h1>BULLFRAME.CSS v1.6.0</h1>
 <p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
-<p>Personally I don't like some heavy and stylish front-end frameworks like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
+<p>Personally I don't like some heavy front-end frameworks like <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
@@ -40,8 +40,8 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 &lt;html>
 &lt;head>
 &lt;meta charset="utf-8">
-    &lt;link rel="stylesheet" src="bullframe.min.css">
-&lt;link rel="stylesheet" src="your-styles.css">
+    &lt;link src="bullframe.min.css rel="stylesheet">
+&lt;link src="custom-styles.css" rel="stylesheet">
 &lt;/head>
 ...</code></pre>
   </li>

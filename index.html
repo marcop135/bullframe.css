@@ -2,15 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
   
 <title>BULLFRAME.CSS boilerplate</title>
 <meta name="description" content="Flexible, Style-agnostic, Mobile-First, RWD, CSS boilerplate. Fork on GitHub github.com/marco135/bullframe.css">
          
-<link rel="stylesheet" href="css/bullframe.css?v=1.6.0">
+<link href="css/bullframe.css?v=1.6.0" rel="stylesheet">
 
-<!-- styles for demo page -->
-<link rel="stylesheet" href="docs/css/style.css?v=1.6.0">
+<!-- custom styles -->
+<link href="docs/css/style.css?v=1.6.0" rel="stylesheet">
 
 <!-- enable HTML5 elements and CSS3 Media Queries support in all browsers -->
 <!--[if lt IE 9]>
@@ -364,14 +365,14 @@
   <div class="bf-row">
 
     <div class="bf-col-1-2">
-      <h3 class="sub-title">YouTube video iframe (4:3)</h3>
+      <h3 class="sub-title">YouTube iframe (4:3)</h3>
       <div class="responsive-video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div><!-- /col -->
 
     <div class="bf-col-1-2">
-      <h3 class="sub-title">Vimeo Video iframe (16:9)</h3>
+      <h3 class="sub-title">Vimeo iframe (16:9)</h3>
       <div class="responsive-video-container widescreen vimeo">
         <iframe src="https://player.vimeo.com/video/27243869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
@@ -383,7 +384,7 @@
 
   <div class="bf-row">
     <div class="bf-col-1">
-      <h2 id="forms" class="title">HTML5 Forms</h2>
+      <h2 id="forms" class="title">Forms</h2>
     </div><!-- /col -->
   </div><!-- /row -->
 
@@ -393,19 +394,22 @@
       <h3 class="sub-title">Inputs</h3>
       <form>
         <fieldset>
-          <legend>Inputs as siblings of labels</legend>
-
-          <div><label>Text input</label>
-          <input type="text" value="default value that goes on and on without stopping or punctuation"></div>
+          <legend>HTML5 has several new input types for forms (legend).</legend>
 
           <div><label>Text input as descendant of label
           <input type="text" value="default value that goes on and on without stopping or punctuation"></label></div>
+          
+          <div><label>Text input as sibling of label</label>
+          <input type="text" value="default value that goes on and on without stopping or punctuation"></div>
+
+          <div><label>Text input (focused)</label>
+          <input id="input-focused" type="text"></div>
+
+          <div class="invalid"><label>Text input (invalid)</label>
+          <input type="text"></div>
 
           <div><label>Email input</label>
           <input type="email"></div>
-
-          <div><label>Email input (required)</label>
-          <input type="email" required></div>
 
           <div><label>Number input</label>
           <input id="in" max="10" min="0" type="number" value="5"></div>
@@ -1316,7 +1320,7 @@
 
     <div class="bf-row">
       <div class="bf-col-1">
-        <a class="github-source" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">Download on GitHub</a>
+        <a class="github-source" href="http://github.com/marco135/bullframe.css/archive/master.zip">Download BULLFRAME.CSS</a>
       </div><!-- /col -->
     </div><!-- /row -->
 
@@ -1327,11 +1331,13 @@
 
 
 
-<!-- avoid this scripts in production
-<script>
-  // twitter btn
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
+
+
+<!-- avoid this scripts in production -->
+<!-- 
+<script src="http://platform.twitter.com/widgets.js"></script>
+<script>
   // google anlytics
   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

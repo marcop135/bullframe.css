@@ -18,6 +18,12 @@
   <script src="docs/js/vendor/html5shiv.js"></script>
   <script src="docs/js/vendor/respond.min.js"></script>
 <![endif]-->
+
+<!-- Fix IE 10 on Windows Phone 8 Viewport -->
+<script>
+// https://gist.github.com/stowball/4617428
+  (function(){if("-ms-user-select" in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();
+</script>
 </head>
 
 <body class="bullframe-demo">
@@ -1309,24 +1315,8 @@
     <a href="#" title="back to top"><i class="h1">&uarr;</i> <b>back to top</b></a>
   </span>
 
-  <!-- avoid this row in production -->
-  <div class="bf-row">
-
-    <div class="bf-col-12-12">
-      <div class="sharing">
-        <div class="tw-btn-wrapper">
-          <a href="https://twitter.com/m135_" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @m135_</a>
-        </div>
-        <p><a href="https://github.com/marco135/bullframe.css" title="github source">github.com/marco135/bullframe.css</a></p>
-        <p><code>$ git clone https://github.com/marco135/bullframe.css.git</code></p>
-      </div><!--/.social-btns -->
-    </div><!-- /col -->
-
-  </div><!-- /row -->
-
 
 </div><!-- /.bf-container -->
-
 
 
 <div id="download" class="download">
@@ -1341,38 +1331,6 @@
   </div><!-- /.bf-container -->
 </div><!-- /.download -->
 
-
-
-
-
-
-
-
-<!-- avoid this scripts in production
-<script>
-
-  // twitter
-  window.twttr = (function (d,s,id) {
-    var t, js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-  }(document, "script", "twitter-wjs"));
-
-  // Fix IE 10 on Windows Phone 8 Viewport 
-  // https://gist.github.com/stowball/4617428
-  (function(){if("-ms-user-select" in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();
-
-  // google anlytics
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-10549365-80');ga('send','pageview');
-
-</script>
--->
 
 </body>
 </html>

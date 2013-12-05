@@ -264,7 +264,7 @@ h2#grid-system {
 .back-to-top {
   text-align: center;
   display: block;
-  margin: 6em 0;
+  margin: 4.5em 0 6em 0;
 }
 
 .back-to-top a:hover,
@@ -284,7 +284,7 @@ h2#grid-system {
 }
 
 .sharing .tw-btn-wrapper {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .download {

@@ -1,11 +1,19 @@
 /*! $
- * BULLFRAME.CSS v1.5.2
+ * BULLFRAME.CSS v1.6.0
  *
  * GitHub: https://github.com/marco135/bullframe.css
- * MIT Licenses
+ * MIT License
  *
  * Carefully built by @m135_
-*/
+ */
+
+*, 
+*:before, 
+*:after { 
+  -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box; 
+}
 
 article,
 aside,
@@ -43,10 +51,7 @@ html,
 dt,
 dd,
 address,
-pre,
-button,
-.btn, 
-input {
+pre {
   line-height: 1.5;
 }
 
@@ -193,7 +198,21 @@ abbr[title] {
 blockquote { 
   margin: 0 0 1.5em 0;
   padding-left: 1.5em;
-  border-left: 2px solid #ccc;
+  border-left: 5px solid #ccc;
+}
+
+blockquote p { 
+  margin-bottom: 0;
+}
+
+blockquote small { 
+  color: #999;
+  display: block;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+  *content: '';
 }
 
 q {
@@ -282,14 +301,10 @@ small {
 }
 
 address {
-  display: block;
   font-style: normal;
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
   display: block;
   height: 1px;
   border: 0;
@@ -351,6 +366,7 @@ nav ol,
 nav ul {
   list-style: none;
   list-style-image: none;
+  margin-left: 0;
 } 
 
 dt {
@@ -370,19 +386,22 @@ dd {
 
 .list-inline > li {
   display: inline-block;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  margin-right: 1.5em;
+}
+
+/* IE8+ */
+.list-inline > li:last-child {
+  margin-right: 0;
 }
 
 /* hard reset */
-ul.unstyled,
-ol.unstyled,
-ul.unstyled ul,
-ol.unstyled ol,
-ul.unstyled ol,
-ol.unstyled ul { 
+ul.list-unstyled,
+ol.list-unstyled,
+ul.list-unstyled ul,
+ol.list-unstyled ol,
+ul.list-unstyled ol,
+ol.list-unstyled ul { 
   margin: 0;
-  padding: 0;
   list-style: none;
   list-style-image: none; /* IE7-8 */
 } 
@@ -411,15 +430,15 @@ video {
   vertical-align: middle;
 }
 
-img,
-video {
-  height: auto;
-}
-
 img {
   border: 0;
   width: auto;
+  height: auto;
   -ms-interpolation-mode: bicubic;
+}
+
+video {
+  height: auto;
 }
 
 audio:not([controls]) { 
@@ -489,10 +508,16 @@ output {
 }
 
 button,
+input {
+  line-height: normal;
+}
+
+button,
 html input, 
 select, 
 textarea {
   margin: 0;
+  background-image: none; /* reset Fennec */
 }
 
 input, 
@@ -535,7 +560,7 @@ legend {
 }
 
 label {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 label input {
@@ -659,35 +684,13 @@ input[type="week"]:focus,
 input[type="time"]:focus, 
 input[type="url"]:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+#input-focused {
   border-color: #2a6496; /* blue */
   outline: 0 none;
   *outline: 1px solid #2a6496;
-  -webkit-box-shadow: 0 0 0 1px #428bca;
-          box-shadow: 0 0 0 1px #428bca;
-}
-
-/* replace unsupported box-shadow in IE8 */
-@media \0screen {
-
-  input[type="color"]:focus, 
-  input[type="email"]:focus, 
-  input[type="number"]:focus, 
-  input[type="password"]:focus, 
-  input[type="tel"]:focus, 
-  input[type="search"]:focus,
-  input[type="text"]:focus, 
-  input[type^="date"]:focus,
-  input[type="month"]:focus, 
-  input[type="time"]:focus, 
-  input[type="week"]:focus, 
-  input[type="time"]:focus, 
-  input[type="url"]:focus,
-  select:focus,
-  textarea:focus {
-    outline: 1px solid #2a6496;
-  }
-
+  -webkit-box-shadow: 0 0 0 1px #2a6496;
+          box-shadow: 0 0 0 1px #2a6496;
 }
 
 input[type="file"]:focus,
@@ -701,22 +704,6 @@ input[type="checkbox"]:focus {
 
 
 /* add responsiveness ------------------------------------------------------ */
-
-input,
-input[type="search"], /* be specific here */
-input[type="radio"], 
-input[type="checkbox"],
-input[type="button"], 
-input[type="reset"],
-input[type="submit"],
-select, 
-textarea,
-button,
-.btn {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
 
 html input,
 select,
@@ -784,6 +771,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   padding: 0.5em 1em;
+  line-height: normal;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
@@ -849,6 +837,17 @@ input.btn-primary[type="submit"] {
   background-color: #428bca;
 }
 
+button.btn-success,
+.btn-success,
+input.btn-success[type="button"], 
+input.btn-success[type="reset"],
+input.btn-success[type="submit"] {
+  color: #fff;
+  text-shadow: none;
+  border-color: #4cae4c;
+  background-color: #5cb85c;
+}
+
 button.btn-primary:hover,
 .btn-primary:hover,
 input.btn-primary[type="button"]:hover, 
@@ -864,30 +863,47 @@ input.btn-primary[type="submit"]:focus {
   background-color: #3276b1;
 }
 
+button.btn-success:hover,
+.btn-success:hover,
+input.btn-success[type="button"]:hover, 
+input.btn-success[type="reset"]:hover,
+input.btn-success[type="submit"]:hover,
+button.btn-success:focus,
+.btn-success:focus,
+input.btn-success[type="button"]:focus, 
+input.btn-success[type="reset"]:focus,
+input.btn-success[type="submit"]:focus {
+  color: #fff;
+  border-color: #398439;
+  background-color: #47a447;
+}
+
 button:active,
 .btn:active,
 input[type="button"]:active, 
 input[type="reset"]:active,
 input[type="submit"]:active {
-  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
-          box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 .btn-xsmall {
-  font-size: 65%;
+  font-size: 70%;
 }
 
 .btn-small {
-  font-size: 80%;
+  font-size: 85%;
 }
 
 .btn-large {
-  font-size: 120%;
+  font-size: 125%;
 }
 
 .btn-xlarge {
   font-size: 150%;
 } 
+
 
 
 /* hack ugly selects ------------------------------------------------------- */
@@ -898,12 +914,12 @@ input[type="submit"]:active {
   select,
   select[size="0"],
   select[size="1"] { 
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAQBAMAAABw0OvaAAAAD1BMVEUAAAAiIiIjIyMkJCQlJSUG0cnlAAAAAXRSTlMAQObYZgAAAE5JREFUeF5tzLEVgCAAxNAUDmLBABYMoMD+M1nw7incpUzxqUNd/Gvaz738YyjWysIY1G6IEPuf0MleFxMhcEiMQWIcgggVUl2MQeRfbb14dBhPnfNhWQAAAABJRU5ErkJggg==);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAARCAYAAABASYU2AAAAbElEQVR42u2SQQrAMAgE9y1u/P8TWyyFXgpe1uwlA8GLEdkRa60rM2Wv5kFNDSYpWTAinooJlEliEpJzmv3av3/YwZBmf5rVj9289+XW3CPQ7NLea3Zp7zT7EWg2aG9SdGvvFvQj1jyfJg7/3HajEiSxv0LJAAAAAElFTkSuQmCC);
     /* @2x image
-    -webkit-background-size: 45px 16px;
-    background-size: 45px 16px; */
-    -webkit-background-size: 1.40625em 0.5em;
-            background-size: 1.40625em 0.5em;
+    -webkit-background-size: 41px 17px;
+    background-size: 41px 17px; */
+    -webkit-background-size: 1.28125em 0.53125em;
+            background-size: 1.28125em 0.53125em;
 
     background-repeat: no-repeat;
     background-position: right center;
@@ -927,16 +943,16 @@ input[type="submit"]:active {
 
 /* invalid, placeholder, disabled adn readonly ----------------------------- */
 
-input:focus:invalid, 
-select:focus:invalid,
-textarea:focus:invalid { 
+.invalid input,
+.invalid textarea,
+.invalid select,
+.invalid input:focus,
+.invalid textarea:focus,
+.invalid select:focus,
+input:focus.invalid,
+textarea:focus.invalid,
+select:focus.invalid {
   color: #b94a48; /* dark red */
-  border-color: #b94a48; /* red */
-}
-
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
   border-color: #b94a48; /* red */
   outline: 0 none;
   *outline: 1px solid #b94a48;
@@ -1025,9 +1041,20 @@ input:active[disabled] {
 fieldset[disabled] .btn-primary
 fieldset.disabled .btn-primary,
 .btn.btn-primary[disabled],
-.btn.btn-primary.disabled {
+.btn.btn-primary.disabled,
+.btn.btn-primary.disabled:active {
   background: #bed4f7 none !important; /* very light blue */
   border-color: #bed4f7 !important;
+  color: #fff !important;
+}
+
+fieldset[disabled] .btn-success
+fieldset.disabled .btn-success,
+.btn.btn-success[disabled],
+.btn.btn-success.disabled,
+.btn.btn-success.disabled:active {
+  background: #a2d6a2 none !important; /* very light green */
+  border-color: #a2d6a2 !important;
   color: #fff !important;
 }
 
@@ -1097,20 +1124,15 @@ template {
 
 
 
-/* $ Basic fluid grid system (12 columns) IE7+
+/* $ Basic 12 columns fluid grid system
  * 
- * Heads up!
- * You can't do:
- * nesting, offsetting, column ordering (for SEO),
- * mobile/tablet/desktop mixing 
+ * Heads up!!
+ * You can't do column ordering (for SEO) 
+ * and mobile/tablet/desktop mixing 
 ============================================================================ */
 
 /* Sub-Pixel Problems in CSS
  * http://ejohn.org/blog/sub-pixel-problems-in-css/
- * 
- *
- * Unfortunately, there’s no silver bullet.
- * Read on.
  *
  * 1. FF4+: ok
  *
@@ -1128,25 +1150,44 @@ template {
  * 5. Opera and Safari round the numbers down. 
  * No fix :(
  * A discussion about Opera on GitHub https://github.com/jokjus/centage/issues/1
- * A discussion about Bootstrap fluid grid system on StackOverflow
+ * A discussion about Bootstrap 2 fluid grid system on StackOverflow
  * http://stackoverflow.com/questions/10683539/bootstrap-fluid-grid-system-issue-opera-11-64
  *
  *
  */
 
 .bf-container {
-  max-width: 1160px; 
-  *min-width: 920px; /* http://www.jonikorpi.com/leaving-old-IE-behind/  */
-  margin-left: auto;
+  /* avoid IE8 issue with 'box-sizing: border-box' in combination 
+   * with max/min-width and max/min-height 
+   * https://github.com/twbs/bootstrap/issues/10014
+   */
+  -webkit-box-sizing: content-box; 
+     -moz-box-sizing: content-box; 
+          box-sizing: content-box; 
+          
+  max-width: 1170px;
+  *min-width: 930px; /* http://www.jonikorpi.com/leaving-old-IE-behind/ */
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.bf-container:before,
+.bf-container:after {
+  display: table;
+  content: " ";
+}
+
+.bf-container:after {
+  clear: both;
 }
 
 .bf-row {
   display: block;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -15px;
+  margin-right: -15px;
   *zoom: 1;
 }
 
@@ -1161,94 +1202,66 @@ template {
 } 
 
 [class*="bf-col-"] {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 10px;
-  padding-right: 10px;  
+  padding-left: 15px;
+  padding-right: 15px;  
 }
 
-.bf-col-1 {
+.bf-col-12-12 {
   width: 100%;
   *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-1-2 {
+.bf-col-11-12 {
+  width: 91.66666666666666%;
+  *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-10-12 {
+  width: 83.33333333333334%;
+  *width: expression((this.parentNode.clientWidth/12*10 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-9-12 {
+  width: 75%;
+  *width: expression((this.parentNode.clientWidth/12*9 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-8-12 {
+  width: 66.66666666666666%;
+  *width: expression((this.parentNode.clientWidth/12*8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-7-12 {
+  width: 58.333333333333336%;
+  *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-6-12 {
   width: 50%;
   *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-1-3 {
-  width: 33.33333%;
-  *width: expression((this.parentNode.clientWidth/3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+.bf-col-5-12 {
+  width: 41.66666666666667%;
+  *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-2-3 {
-  width: 66.66666%;
-  *width: expression((this.parentNode.clientWidth/3*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-} 
+.bf-col-4-12 {
+  width: 33.33333333333333%;
+  *width: expression((this.parentNode.clientWidth/12*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
 
-.bf-col-1-4 {
+.bf-col-3-12 {
   width: 25%;
-  *width: expression((this.parentNode.clientWidth/4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+  *width: expression((this.parentNode.clientWidth/12*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-3-4 {
-  width: 75%;
-  *width: expression((this.parentNode.clientWidth/4*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-} 
-
-.bf-col-1-5 {
-  width: 20%;
-  *width: expression((this.parentNode.clientWidth/5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-2-5 {
-  width: 40%;
-  *width: expression((this.parentNode.clientWidth/5*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-3-5 {
-  width: 60%;
-  *width: expression((this.parentNode.clientWidth/5*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-4-5 {
-  width: 80%;
-  *width: expression((this.parentNode.clientWidth/5*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-1-6 {
-  width: 16.656%;
-  *width: expression((this.parentNode.clientWidth/6 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-5-6 {
-  width: 83.33%;
-  *width: expression((this.parentNode.clientWidth/6*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-1-8 {
-  width: 12.5%;
-  *width: expression((this.parentNode.clientWidth/8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-3-8 {
-  width: 37.5%;
-  *width: expression((this.parentNode.clientWidth/8*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-5-8 {
-  width: 62.5%;
-  *width: expression((this.parentNode.clientWidth/8*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-7-8 {
-  width: 87.5%;
-  *width: expression((this.parentNode.clientWidth/8*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+.bf-col-2-12 {
+  width: 16.666666666666664%;
+  *width: expression((this.parentNode.clientWidth/12*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
 .bf-col-1-12 {
@@ -1256,37 +1269,86 @@ template {
   *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-5-12 {
-  width: 41.6666%;
-  *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-.bf-col-7-12 {
-  width: 58.3333%;
-  *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+.bf-col-offset-12-12 {
+  margin-left: 100%;
 }
 
-.bf-col-11-12 {
-  width: 91.6666%;
-  *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+.bf-col-offset-11-12 {
+  margin-left: 91.66666666666666%;
+}
+
+.bf-col-offset-10-12 {
+  margin-left: 83.33333333333334%;
+}
+
+.bf-col-offset-9-12 {
+  margin-left: 75%;
+}
+
+.bf-col-offset-8-12 {
+  margin-left: 66.66666666666666%;
+}
+
+.bf-col-offset-7-12 {
+  margin-left: 58.333333333333336%;
+}
+
+.bf-col-offset-6-12 {
+  margin-left: 50%;
+}
+
+.bf-col-offset-5-12 {
+  margin-left: 41.66666666666667%;
+}
+
+.bf-col-offset-4-12 {
+  margin-left: 33.33333333333333%;
+}
+
+.bf-col-offset-3-12 {
+  margin-left: 25%;
+}
+
+.bf-col-offset-2-12 {
+  margin-left: 16.666666666666664%;
+}
+
+.bf-col-offset-1-12 {
+  margin-left: 8.3333%;
+}
+
+.bf-col-offset-0-12 {
+  margin-left: 0;
 }
 
 /* responsive grid */
-@media screen and (max-width: 640px) {
+@media (max-width: 640px) {
 
   .responsive-grid .bf-row {
     margin-left: 0;
     margin-right: 0;
-  }
+  } 
+
   .responsive-grid [class*="bf-col-"] {
     width: 100%;
     *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
     float: none;
+    margin-left: 0;
     padding-left: 0;
     padding-right: 0;
   } 
 
 }
 
+/* fix missing table cell borders when using 'col-' classes 
+ * for column sizing 
+ * https://github.com/twbs/bootstrap/issues/11623 
+ */
+table col[class*="bf-col-"] {
+  position: static;
+  display: table-column;
+  float: none;
+}
 
 
 
@@ -1356,22 +1418,6 @@ template {
 }
 
 
-/* image replacement ------------------------------------------------------- */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px;
-}
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-
 /* image positioning ------------------------------------------------------- */
 .img-left {
   float: left;
@@ -1393,6 +1439,9 @@ template {
   display: inline !important;
 }
 
+/* Using Grids with Your Font-Family
+ * http://purecss.io/grids/#using-grids-with-custom-fonts
+ */
 .inline-block-container {
   letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
   *letter-spacing: normal; /* reset IE < 8 */
@@ -1436,7 +1485,7 @@ template {
 /* how to use:
  *
    <nav id="nav" class="nav" role="navigation">
-     <ul class="inline-block-container unstyled">
+     <ul class="inline-block-container list-unstyled">
        <li class="inline"><a href="#" class="inline-block">Home</a></li>
        <li class="inline"><a href="#" class="inline-block">Works</a></li>
        <li class="inline"><a href="#" class="inline-block">About</a></li>
@@ -1446,7 +1495,6 @@ template {
  *
  */
 
- 
 .hide, /* old naming */
 .hidden {
   display: none !important; 
@@ -1463,42 +1511,6 @@ template {
 }
 
 
-/* screenreaders ----------------------------------------------------------- */
-/* Hide text for non-screenreaders */
-.screen-reader-text,
-.assistive-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-
 /* layout positioning ------------------------------------------------------ */
 .pull-right {
   float: right;
@@ -1508,22 +1520,14 @@ template {
   float: left;
 }
 
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .affix {
   position: fixed;
-}
-
-
-/* reset margin/padding ---------------------------------------------------- */
-.no-margin {
-  margin: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-border {
-  border: 0;
 }
 
 
@@ -1558,19 +1562,6 @@ template {
 
 .text-italic {
   font-style: italic;
-}
-
-.text-normal {
-  font-weight: 400;
-  font-style: normal;
-}
-
-.text-sans-serif {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.text-serif {
-  font-family: Georgia, Times, serif;
 }
 
 .text-truncate {
@@ -1733,12 +1724,6 @@ template {
   a:visited {
     text-decoration: underline;
   }
-
-  /*
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  */
 
   pre,
   blockquote {

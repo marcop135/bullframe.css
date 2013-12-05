@@ -1,4 +1,4 @@
-/*! Vertical rhythm - BULLFRAME.CSS v1.5.2 add-on 
+/*! Vertical rhythm - BULLFRAME.CSS v1.6.0 add-on 
  * 
  * Follow baseline number '1.5' and compose to a vertical rhythm
  * ..or use the number you want.
@@ -12,15 +12,12 @@ html,
 dt,
 dd,
 address,
-pre,
-button,
-.btn, 
-input {
+pre {
   line-height: 1.5;
 }
 
-.container,
-.bf-container {
+.bf-container,
+.container {
   padding-top: 1.5em;
 }
 
@@ -70,7 +67,7 @@ figcaption,
 address,
 audio,
 video,
-.flex-video-container,
+.responsive-video-container,
 iframe[src*="//www.youtube.com"],
 iframe[src*="//vimeo.com"],
 embed[src*="//www.youtube.com"],
@@ -99,7 +96,7 @@ a img.aligncenter,
 @media screen and (max-width: 640px) { 
 
   .responsive-grid [class*="col-"] {
-    margin-bottom: 1.5em
+    margin-bottom: 1.5em;
   }
 
 }

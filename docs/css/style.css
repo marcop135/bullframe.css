@@ -1,4 +1,4 @@
-/*! styles for documentation - BULLFRAME.CSS v1.5.1-wip docs
+/*! styles for documentation - BULLFRAME.CSS v1.6.0 docs
  *
  * https://github.com/marco135/bullframe.css/tree/master/add-ons
  * MIT License
@@ -6,32 +6,100 @@
 
 
 
+@-ms-viewport { 
+  width: device-width;
+} 
+
 
 /* banner 
 --------------------------------------------------------------------------- */
 
 [role="banner"] {
-  margin: 20px 0;
-}
-
-[role="banner"] {
   color: #fff;
-  padding: 1em;
+  padding: 2em 0;
   margin-bottom: 1.5em;
-  background-color: #1abb69;
+  background-color: #c36e9e;
 }
 
 [role="banner"] h1 {
-  margin: 0;
+  margin: 0 ;
 }
 
-@media (max-width: 640px) {
+[role="banner"] h1::-moz-selection { 
+  background-color: #fff; 
+}
+
+[role="banner"] h1::selection  { 
+  background-color: #fff;      
+}
+
+@media (max-width: 700px) {
 
   [role="banner"] h1 {
     font-size: 1.5em;
   }
 
 }
+
+@media (min-width: 701px) {
+
+  [role="banner"] {
+    padding: 3em 0;
+  }
+
+  [role="banner"] h1 {
+    font-size: 2em;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  [role="banner"] h1 {
+    font-size: 3em;
+  }
+
+}
+
+@media (min-width: 641px) {
+
+  .version {
+    text-align: right;
+  }
+
+}
+
+.version span {
+  font-size: 80%;
+  display: inline-block;
+  margin-top: 0.75em;
+}
+
+@media (min-width: 1025px) {
+
+  .version span {
+    margin-top: 1.5em;
+  }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+  .abstract {
+    font-size: 1.2em;
+  }
+}
+
+.abstract code {
+  background: #f0f0f0;
+  display: inline-block;
+  padding: 0.1em 0.3em;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+}
+
+
 
 
 
@@ -40,20 +108,57 @@
 /* navigation 
 --------------------------------------------------------------------------- */
 
-[role="navigation"] .list-inline li,
-[role="navigation"] li a {
+.nav li a {
   display: block;
-}
-
-[role="navigation"] li {
-  padding: 0.5em;
+  padding: 0.75em 0;
   border-bottom: 1px solid #ccc;
 }
 
-[role="navigation"] li:hover,
-[role="navigation"] li:focus {
-  background-color: #f0f0f0;
+@media (min-width: 330px) and (max-width: 720px) {
+
+  .nav li a {
+    width: 50%;
+    float: left;
+  }
+
 }
+
+@media (min-width: 721px) {
+
+  .nav li {
+    float: left;
+    margin: 2em 1em 1em 1em;
+  }
+
+  .nav li:first-child {
+    margin-left: 0;
+  }
+
+  .nav li a:hover,
+  .nav li a:focus {
+    text-decoration: none;
+    border-color: #2a6496;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  .nav li {
+    float: left;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .nav li a {
+    padding: 0.5em 0;
+    font-size: 1.1em;
+  }
+
+}
+
+
+
 
 
 
@@ -62,16 +167,21 @@
 /* section titles 
 --------------------------------------------------------------------------- */
 
+.title,
+.sub-title {
+  text-transform: uppercase;
+} 
+
 .title {
   padding: 0.5em;
   color: #fff;
-  background-color: #1abb69;
+  background-color: #444;
   margin-top: 3em;
 }
 
 .sub-title {
-  background-color: #ccc;
-  padding: 0.25em;
+  margin-top: 2em;
+  padding: 0.5em 0;
 } 
 
 
@@ -80,16 +190,6 @@
 
 /* content
 --------------------------------------------------------------------------- */
-
-.bullframe-demo .wrapper {
-  background: #999;
-  min-height: 50px;
-  line-height: 50px;
-  color: #fff;
-  font-size: 75%;
-  text-align: center;
-}   
-  
 
 .bullframe-demo legend {
   padding-bottom: 1.5em;
@@ -111,21 +211,39 @@
 
 /* grid system */
 
-.bullframe-demo .bf-row {
+h2#grid-system {
   margin-bottom: 1.5em;
 }
 
-@media screen and (max-width: 29.9375em ) {
+.grid-bootstrap {
+  margin-bottom: 4.5em;
+}
 
-  /* 479px */
+.grid .wrapper {
+  background: #999;
+  height: 4.5em;
+  overflow-y: hidden;
+  line-height: 4.5em;
+  color: #fff;
+  font-size: 70%;
+  text-align: center;
+}   
 
-  .bullframe-demo .bf-row {
+.grid .bf-row,
+.grid .row {
+  margin-bottom: 1.5em;
+}
+
+@media (max-width: 640px ) {
+
+  .grid .bf-row,
+  .grid .row {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
   }
 
-  .bullframe-demo [class*="bf-col-"] {
+  .grid [class*="col-"] {
     width: 100%;
     float: none;
     padding-left: 0;
@@ -143,27 +261,10 @@
 /* footer
 --------------------------------------------------------------------------- */
 
-.download {
-  margin-top: 3em;
-  color: #fff;
-  padding: 1em;
-  background-color: #1abb69;
-}
-
-.download .mega {
-  margin: 0;
-}
-
-.github-source {
-  color: #fff;
-  display: block;
+.back-to-top {
   text-align: center;
-}
-
-.github-source:hover,
-.github-source:focus {
-  color: #333;
-  text-decoration: none;
+  display: block;
+  margin: 4.5em 0 6em 0;
 }
 
 .back-to-top a:hover,
@@ -171,28 +272,53 @@
   text-decoration: none;
 }
 
-.back-to-top a span {
+.back-to-top a i {
   vertical-align: middle;
+  font-style: normal
 }
 
-
-
-
-
-/* misc
---------------------------------------------------------------------------- */
-
-/* hide jsbin.com edit button in live preview 
- * if the browser screen is too small */
-
-.touch #edit-with-js-bin {
-  display: none !important;
+.sharing {
+  width: 100%;
+  margin: 0 auto 1.5em 0;
+  text-align: center;
 }
 
-@media (max-width: 480px) {
+.sharing .tw-btn-wrapper {
+  margin-bottom: 4em;
+}
 
-  #edit-with-js-bin {
-    display: none !important;
+.download {
+  margin-top: 3em;
+  color: #fff;
+  background-color: #333;
+}
+
+.download .github-source {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 3em;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+
+  .download .github-source {
+    font-size: 2em;
   }
 
 }
+
+.download .github-source:hover,
+.download .github-source:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+
+

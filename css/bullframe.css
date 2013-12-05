@@ -389,11 +389,12 @@ dd {
 
 .list-inline > li {
   display: inline-block;
-  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
-.list-inline > li:first-child {
-  margin-left: 0;
+/* IE8+ */
+.list-inline > li:last-child {
+  margin-right: 0;
 }
 
 /* hard reset */

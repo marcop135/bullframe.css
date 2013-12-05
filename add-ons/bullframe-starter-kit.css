@@ -1,10 +1,11 @@
-/*! Author's custom styles starting-point - BULLFRAME.CSS v1.5.2 add-on
+/*! Author's custom styles starting-point - BULLFRAME.CSS v1.6.0 add-on
  *
  * Customize as you want the following code
  *
  * https://github.com/marco135/bullframe.css/tree/master/add-ons
  * MIT License
 ============================================================================ */
+
 
 
 
@@ -25,6 +26,7 @@
 
 
 
+
 /* Scalable <img> and <video> elements ------------------------------------
 
  * just in case, to force correct aspet ratio 
@@ -38,20 +40,6 @@ video {
 
 
 
-/* Change box-model 
- * (no IE7 support. just in case, use box-sizing polyfill) 
- * https://github.com/Schepp/box-sizing-polyfill --------------------------
-
-*, 
-*:before, 
-*:after { 
-  -webkit-box-sizing: border-box !important; 
-     -moz-box-sizing: border-box !important; 
-          box-sizing: border-box !important; 
-}
-*/
-
-
 
 /* Change skin -------------------------------------------------------------
 
@@ -59,15 +47,14 @@ html,
 button, 
 input, 
 select,
-textarea {
+textarea,
+.inline-block-container {
   font-family: ;
 }
 
 html,
 button,
 .btn,
-.btn:hover,
-.btn:focus,
 input,
 select,
 textarea {
@@ -108,6 +95,48 @@ a:focus {
 /* Change font-sizing ------------------------------------------------------ */
 
 /* EM only (with PX references) ------------------- 
+
+/* 19px 
+
+body {
+  font-size: 1.1875em;
+}
+
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 18px 
+
+body {
+  font-size: 1.125em;
+}
+
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
+
+/* 17px 
+
+body {
+  font-size: 1.0625em;
+}
+
+pre, 
+code, 
+kbd, 
+samp {
+  font-size: 1em;
+}
+
 
 /* 15px 
 
@@ -246,95 +275,37 @@ textarea {
 
 
 
-/* WordPress Core CSS (relative units in use)
+/* WordPress generated classes
  * http://codex.wordpress.org/CSS 
- *
- * - WordPress generated classes
- * Several classes for aligning images and block elements (div, p, table etc.)
- * were introduced in WordPress 2.5: aligncenter, alignleft and alignright. 
- * In addition the class alignnone is added to images that are not aligned, 
- * so they can be styled differently if needed.
- * The same classes are used to align images that have a caption (as of
- * WordPress 2.6).
  * ------------------------------------------------------------------------
-
-.alignnone {
-  margin: 0.8em 1.5em 1.5em 0;
-}
-
-.aligncenter,
-div.aligncenter {
-  display: block;
-  margin: 0.8em auto;
-}
-
-.alignright {
-  float: right;
-  margin: 0.8em 0 1.5em 1.5em;
-}
 
 .alignleft {
   float: left;
-  margin: 0.8em 1.5em 1.5em 0;
+  margin: 0 1.5em 0 0;
 }
 
 .aligncenter {
   display: block;
-  margin: 0.8em auto;
-}
-
-a img.alignright {
-  float: right;
-  margin: 0.8em 0 1.5em 1.5em;
-}
-
-a img.alignnone {
-  margin: 0.8em 1.4em 1.5em 0;
-}
-
-a img.alignleft {
-  float: left;
-  margin: 0.8em 1.5em 1.5em 0;
-}
-
-a img.aligncenter {
-  display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
-.wp-caption {
-  background: #f4f4f4;
-  border: 1px solid #ccc;
-  max-width: 96%;
-  padding: 0.8em 0.8em 0.8em;
-  text-align: center;
+.alignright {
+  float: right;
+  margin: 0 0 0 1.5em;
 }
 
-.wp-caption.alignnone {
-  margin: 0.8em 1.5em 1.4em 0;
+img.alignright,
+img.alignleft {
+  margin-bottom: 1.5em;
 }
 
-.wp-caption.alignleft {
-  margin: 0.8em 1.5em 1.5em 0;
-}
-
-.wp-caption.alignright {
-  margin: 0.8em 0 1.5em 1.5em;
-}
-
-.wp-caption img {
+.alignnone {
+  float: none;
   margin: 0;
-  max-width: 98.5%;
 }
 
-.wp-caption p.wp-caption-text {
-  font-size: 0.875em;
-  margin: 0.8em 0 0 0;
-  padding: 0;
-}
-
- */
+*/
 
 
 
@@ -363,7 +334,8 @@ a img.aligncenter {
   ol,
   ul,
   dl,
-  blockquote {
+  blockquote,
+  hr {
     margin-top: 0;
   }
 
@@ -415,7 +387,8 @@ input[type="week"]:focus,
 input[type="time"]:focus, 
 input[type="url"]:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+#input-focused {
   border-color: ;
   outline: ;
   -webkit-box-shadow: ;
@@ -441,8 +414,21 @@ textarea:focus {
   input[type="time"]:focus, 
   input[type="url"]:focus,
   select:focus,
-  textarea:focus {
-    outline-color: ;
+  textarea:focus,
+  #input-focused  {
+    outline-color: #2a6496;
+  }
+
+  .invalid input,
+  .invalid textarea,
+  .invalid select,
+  .invalid input:focus,
+  .invalid textarea:focus,
+  .invalid select:focus,
+  input:focus.invalid,
+  textarea:focus.invalid,
+  select:focus.invalid  {
+    outline-color: #b94a48;
   }
 
 }
@@ -544,6 +530,8 @@ input[type="submit"]:focus {
   
   select {
     padding-right: 0.5em;
+    *padding-left: 1.5%;
+    *padding-right: 1.5%;
     background-image: none;
     -webkit-background-size: auto auto;
             background-size: auto auto;
@@ -563,24 +551,24 @@ input[type="submit"]:focus {
 
 /* Miscellaneous -----------------------------------------------------------
 
- * responsive Facebook comments embed
+* responsive Facebook comments embed
 
-    .fb-comments, 
-    .fb-comments span, 
-    .fb-comments iframe {
-      width: 100% !important;
-    }
+.fb-comments, 
+.fb-comments span, 
+.fb-comments iframe {
+  width: 100% !important;
+}
 
 
 * prevent phone numbers looking twice as large and having a Skype highlight 
 * https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md 
 
-    span.skype_pnh_container {
-      display: none !important;
-    }
-    span.skype_pnh_print_container {
-      display: inline !important;
-    }
+span.skype_pnh_container {
+  display: none !important;
+}
+span.skype_pnh_print_container {
+  display: inline !important;
+}
 
 
 */
@@ -626,12 +614,21 @@ input[type="submit"]:focus {
 
 
 /* Print -------------------------------------------------------------------
- * don't show URLs
+ * show URLs
 
   @media print {
 
     a[href]:after {
-      content: " (" attr(href) ")";
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
     }
 
   }
@@ -640,53 +637,67 @@ input[type="submit"]:focus {
 
 
 
-/* $ 'Safe' CSS hacks reference --------------------------------------------
- * More hacks on http://browserhacks.com/
+/* $ 'Safe' CSS hacks reference 
+ * http://jsfiddle.net/rV4p6/3/
+ * See http://browserhacks.com/ for more ------------------------------------
+ */
 
 /* IE7
-.safe-css-hack { 
-  *color: darkred; 
-}
+ *
+    .safe-css-hack { 
+      *color: darkred; 
+    }
 */
+
 
 /* IE8
-@media \0screen {
-  .safe-css-hack { 
-    color: green; 
-  }
-}
+ *
+    @media \0screen {
+
+      .safe-css-hack { 
+        color: green; 
+      }
+
+    }
 */
+
 
 /* IE9+ (note the '\9' at the end)
-.safe-css-hack:nth-of-type(1n) {
-  color: blue \9;
-} 
+ *
+    .safe-css-hack:nth-of-type(1n) {
+      color: blue \9;
+    } 
 */
 
-/* IE10+
-_::-ms-reveal, p {
-  color: orange;
-}
+
+/* Webkit browsers 
+ * (Chrome, Safari, Android, Opera webkit, Chrome, etc...)
+ *
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+      .safe-css-hack { 
+        color: cyan; 
+      } 
+
+    }  
 */
 
-/* Webkit browsers (Chrome, Safari, Android, Opera webkit, Chrome, etc...)
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .safe-css-hack { 
-    color: cyan; 
-  } 
-}  
-*/
 
 /* Opera 9.5-12, IE7
-_:-o-prefocus, .safe-css-hack {
-  color: brown;
-}
+ *
+    _:-o-prefocus, .safe-css-hack {
+      color: brown;
+    }
 */
 
-/* Firefox 3.5+
-@-moz-document url-prefix() {
-  .safe-css-hack { 
-    color: magenta; 
-  } 
-} 
+
+/* Firefox 3.6+
+ *
+    @media screen and (-moz-images-in-menus:0) {
+
+      .safe-css-hack { 
+        color: magenta; 
+      } 
+
+    } 
 */

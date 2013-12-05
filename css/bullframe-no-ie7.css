@@ -1,13 +1,20 @@
 /*! $
- * BULLFRAME.CSS v1.5.2 no-ie7
+ * BULLFRAME.CSS v1.6.0 no-ie7
  *
  * Browser support: IE8+
- *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
  *
  * Carefully built by @m135_
-*/
+ */
+
+*, 
+*:before, 
+*:after { 
+  -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box; 
+}
 
 article,
 aside,
@@ -43,10 +50,7 @@ html,
 dt,
 dd,
 address,
-pre,
-button,
-.btn, 
-input {
+pre {
   line-height: 1.5;
 }
 
@@ -193,17 +197,25 @@ abbr[title] {
 blockquote { 
   margin: 0 0 1.5em 0;
   padding-left: 1.5em;
-  border-left: 2px solid #ccc;
+  border-left: 5px solid #ccc;
+}
+
+blockquote p { 
+  margin-bottom: 0;
+}
+
+blockquote small { 
+  color: #999;
+  display: block;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+  *content: '';
 }
 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-q:before,
-q:after {
-  *content: '';
-  *content: none;
 }
 
 mark { 
@@ -282,14 +294,10 @@ small {
 }
 
 address {
-  display: block;
   font-style: normal;
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
   display: block;
   height: 1px;
   border: 0;
@@ -351,6 +359,7 @@ nav ol,
 nav ul {
   list-style: none;
   list-style-image: none;
+  margin-left: 0;
 } 
 
 dt {
@@ -370,19 +379,22 @@ dd {
 
 .list-inline > li {
   display: inline-block;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  margin-right: 1.5em;
+}
+
+/* IE8+ */
+.list-inline > li:last-child {
+  margin-right: 0;
 }
 
 /* hard reset */
-ul.unstyled,
-ol.unstyled,
-ul.unstyled ul,
-ol.unstyled ol,
-ul.unstyled ol,
-ol.unstyled ul { 
+ul.list-unstyled,
+ol.list-unstyled,
+ul.list-unstyled ul,
+ol.list-unstyled ol,
+ul.list-unstyled ol,
+ol.list-unstyled ul { 
   margin: 0;
-  padding: 0;
   list-style: none;
   list-style-image: none; /* IE7-8 */
 } 
@@ -411,14 +423,14 @@ video {
   vertical-align: middle;
 }
 
-img,
-video {
-  height: auto;
-}
-
 img {
   border: 0;
   width: auto;
+  height: auto;
+}
+
+video {
+  height: auto;
 }
 
 audio:not([controls]) { 
@@ -486,10 +498,16 @@ output {
 }
 
 button,
+input {
+  line-height: normal;
+}
+
+button,
 html input, 
 select, 
 textarea {
   margin: 0;
+  background-image: none; /* reset Fennec */
 }
 
 input, 
@@ -530,7 +548,7 @@ legend {
 }
 
 label {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 label input {
@@ -651,34 +669,12 @@ input[type="week"]:focus,
 input[type="time"]:focus, 
 input[type="url"]:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+#input-focused {
   border-color: #2a6496; /* blue */
   outline: 0 none;
-  -webkit-box-shadow: 0 0 0 1px #428bca;
-          box-shadow: 0 0 0 1px #428bca;
-}
-
-/* replace unsupported box-shadow in IE8 */
-@media \0screen {
-
-  input[type="color"]:focus, 
-  input[type="email"]:focus, 
-  input[type="number"]:focus, 
-  input[type="password"]:focus, 
-  input[type="tel"]:focus, 
-  input[type="search"]:focus,
-  input[type="text"]:focus, 
-  input[type^="date"]:focus,
-  input[type="month"]:focus, 
-  input[type="time"]:focus, 
-  input[type="week"]:focus, 
-  input[type="time"]:focus, 
-  input[type="url"]:focus,
-  select:focus,
-  textarea:focus {
-    outline: 1px solid #2a6496;
-  }
-
+  -webkit-box-shadow: 0 0 0 1px #2a6496;
+          box-shadow: 0 0 0 1px #2a6496;
 }
 
 input[type="file"]:focus,
@@ -692,22 +688,6 @@ input[type="checkbox"]:focus {
 
 
 /* add responsiveness ------------------------------------------------------ */
-
-input,
-input[type="search"], /* be specific here */
-input[type="radio"], 
-input[type="checkbox"],
-input[type="button"], 
-input[type="reset"],
-input[type="submit"],
-select, 
-textarea,
-button,
-.btn {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
 
 html input,
 select,
@@ -742,7 +722,6 @@ textarea {
   padding: 0.5em;
 }
   
-
 /* customize radios and checkboxes ---------------------------------------- */
 
 label input[type="radio"], 
@@ -763,6 +742,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   padding: 0.5em 1em;
+  line-height: normal;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
@@ -815,6 +795,17 @@ input.btn-primary[type="submit"] {
   background-color: #428bca;
 }
 
+button.btn-success,
+.btn-success,
+input.btn-success[type="button"], 
+input.btn-success[type="reset"],
+input.btn-success[type="submit"] {
+  color: #fff;
+  text-shadow: none;
+  border-color: #4cae4c;
+  background-color: #5cb85c;
+}
+
 button.btn-primary:hover,
 .btn-primary:hover,
 input.btn-primary[type="button"]:hover, 
@@ -830,30 +821,47 @@ input.btn-primary[type="submit"]:focus {
   background-color: #3276b1;
 }
 
+button.btn-success:hover,
+.btn-success:hover,
+input.btn-success[type="button"]:hover, 
+input.btn-success[type="reset"]:hover,
+input.btn-success[type="submit"]:hover,
+button.btn-success:focus,
+.btn-success:focus,
+input.btn-success[type="button"]:focus, 
+input.btn-success[type="reset"]:focus,
+input.btn-success[type="submit"]:focus {
+  color: #fff;
+  border-color: #398439;
+  background-color: #47a447;
+}
+
 button:active,
 .btn:active,
 input[type="button"]:active, 
 input[type="reset"]:active,
 input[type="submit"]:active {
-  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
-          box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 .btn-xsmall {
-  font-size: 65%;
+  font-size: 70%;
 }
 
 .btn-small {
-  font-size: 80%;
+  font-size: 85%;
 }
 
 .btn-large {
-  font-size: 120%;
+  font-size: 125%;
 }
 
 .btn-xlarge {
   font-size: 150%;
 } 
+
 
 
 /* hack ugly selects ------------------------------------------------------- */
@@ -864,12 +872,12 @@ input[type="submit"]:active {
   select,
   select[size="0"],
   select[size="1"] { 
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAQBAMAAABw0OvaAAAAD1BMVEUAAAAiIiIjIyMkJCQlJSUG0cnlAAAAAXRSTlMAQObYZgAAAE5JREFUeF5tzLEVgCAAxNAUDmLBABYMoMD+M1nw7incpUzxqUNd/Gvaz738YyjWysIY1G6IEPuf0MleFxMhcEiMQWIcgggVUl2MQeRfbb14dBhPnfNhWQAAAABJRU5ErkJggg==);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAARCAYAAABASYU2AAAAbElEQVR42u2SQQrAMAgE9y1u/P8TWyyFXgpe1uwlA8GLEdkRa60rM2Wv5kFNDSYpWTAinooJlEliEpJzmv3av3/YwZBmf5rVj9289+XW3CPQ7NLea3Zp7zT7EWg2aG9SdGvvFvQj1jyfJg7/3HajEiSxv0LJAAAAAElFTkSuQmCC);
     /* @2x image
-    -webkit-background-size: 45px 16px;
-    background-size: 45px 16px; */
-    -webkit-background-size: 1.40625em 0.5em;
-            background-size: 1.40625em 0.5em;
+    -webkit-background-size: 41px 17px;
+    background-size: 41px 17px; */
+    -webkit-background-size: 1.28125em 0.53125em;
+            background-size: 1.28125em 0.53125em;
 
     background-repeat: no-repeat;
     background-position: right center;
@@ -893,16 +901,16 @@ input[type="submit"]:active {
 
 /* invalid, placeholder, disabled adn readonly ----------------------------- */
 
-input:focus:invalid, 
-select:focus:invalid,
-textarea:focus:invalid { 
+.invalid input,
+.invalid textarea,
+.invalid select,
+.invalid input:focus,
+.invalid textarea:focus,
+.invalid select:focus,
+input:focus.invalid,
+textarea:focus.invalid,
+select:focus.invalid {
   color: #b94a48; /* dark red */
-  border-color: #b94a48; /* red */
-}
-
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
   border-color: #b94a48; /* red */
   outline: 0 none;
   -webkit-box-shadow: 0 0 0 1px #b94a48;
@@ -990,9 +998,20 @@ input:active[disabled] {
 fieldset[disabled] .btn-primary
 fieldset.disabled .btn-primary,
 .btn.btn-primary[disabled],
-.btn.btn-primary.disabled {
+.btn.btn-primary.disabled,
+.btn.btn-primary.disabled:active {
   background: #bed4f7 none !important; /* very light blue */
   border-color: #bed4f7 !important;
+  color: #fff !important;
+}
+
+fieldset[disabled] .btn-success
+fieldset.disabled .btn-success,
+.btn.btn-success[disabled],
+.btn.btn-success.disabled,
+.btn.btn-success.disabled:active {
+  background: #a2d6a2 none !important; /* very light green */
+  border-color: #a2d6a2 !important;
   color: #fff !important;
 }
 
@@ -1061,872 +1080,64 @@ template {
 
 
 
-/* $ Bootstrap grid system 3.0.0
+
+/* $ Basic 12 columns fluid grid system
  * 
- * Bootstrap includes a responsive, mobile first fluid grid system that
- * appropriately scales up to 12 columns as the device or viewport size 
- * increases. It includes predefined classes for easy layout options, 
- * as well as powerful mixins for generating more semantic layouts.
-============================================================================ */
-
-[class^="col-"] {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*!
- * Bootstrap v3.0.0
- *
- * Copyright 2013 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container:before,
-.container:after {
-  content: " ";
-  display: table;
-}
-
-.container:after {
-  clear: both;
-}
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.row:before,
-.row:after {
-  content: " ";
-  display: table;
-}
-
-.row:after {
-  clear: both;
-}
-
-.col-xs-1,
-.col-xs-2,
-.col-xs-3,
-.col-xs-4,
-.col-xs-5,
-.col-xs-6,
-.col-xs-7,
-.col-xs-8,
-.col-xs-9,
-.col-xs-10,
-.col-xs-11,
-.col-xs-12,
-.col-sm-1,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
-.col-md-1,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-lg-1,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-xs-1,
-.col-xs-2,
-.col-xs-3,
-.col-xs-4,
-.col-xs-5,
-.col-xs-6,
-.col-xs-7,
-.col-xs-8,
-.col-xs-9,
-.col-xs-10,
-.col-xs-11 {
-  float: left;
-}
-
-.col-xs-1 {
-  width: 8.333333333333332%;
-}
-
-.col-xs-2 {
-  width: 16.666666666666664%;
-}
-
-.col-xs-3 {
-  width: 25%;
-}
-
-.col-xs-4 {
-  width: 33.33333333333333%;
-}
-
-.col-xs-5 {
-  width: 41.66666666666667%;
-}
-
-.col-xs-6 {
-  width: 50%;
-}
-
-.col-xs-7 {
-  width: 58.333333333333336%;
-}
-.col-xs-8 {
-  width: 66.66666666666666%;
-}
-
-.col-xs-9 {
-  width: 75%;
-}
-
-.col-xs-10 {
-  width: 83.33333333333334%;
-}
-
-.col-xs-11 {
-  width: 91.66666666666666%;
-}
-
-.col-xs-12 {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 750px;
-  }
-
-  .col-sm-1,
-  .col-sm-2,
-  .col-sm-3,
-  .col-sm-4,
-  .col-sm-5,
-  .col-sm-6,
-  .col-sm-7,
-  .col-sm-8,
-  .col-sm-9,
-  .col-sm-10,
-  .col-sm-11 {
-    float: left;
-  }
-
-  .col-sm-1 {
-    width: 8.333333333333332%;
-  }
-
-  .col-sm-2 {
-    width: 16.666666666666664%;
-  }
-
-  .col-sm-3 {
-    width: 25%;
-  }
-
-  .col-sm-4 {
-    width: 33.33333333333333%;
-  }
-
-  .col-sm-5 {
-    width: 41.66666666666667%;
-  }
-
-  .col-sm-6 {
-    width: 50%;
-  }
-
-  .col-sm-7 {
-    width: 58.333333333333336%;
-  }
-
-  .col-sm-8 {
-    width: 66.66666666666666%;
-  }
-
-  .col-sm-9 {
-    width: 75%;
-  }
-
-  .col-sm-10 {
-    width: 83.33333333333334%;
-  }
-
-  .col-sm-11 {
-    width: 91.66666666666666%;
-  }
-
-  .col-sm-12 {
-    width: 100%;
-  }
-
-  .col-sm-push-1 {
-    left: 8.333333333333332%;
-  }
-
-  .col-sm-push-2 {
-    left: 16.666666666666664%;
-  }
-
-  .col-sm-push-3 {
-    left: 25%;
-  }
-
-  .col-sm-push-4 {
-    left: 33.33333333333333%;
-  }
-
-  .col-sm-push-5 {
-    left: 41.66666666666667%;
-  }
-
-  .col-sm-push-6 {
-    left: 50%;
-  }
-
-  .col-sm-push-7 {
-    left: 58.333333333333336%;
-  }
-
-  .col-sm-push-8 {
-    left: 66.66666666666666%;
-  }
-
-  .col-sm-push-9 {
-    left: 75%;
-  }
-
-  .col-sm-push-10 {
-    left: 83.33333333333334%;
-  }
-
-  .col-sm-push-11 {
-    left: 91.66666666666666%;
-  }
-
-  .col-sm-pull-1 {
-    right: 8.333333333333332%;
-  }
-
-  .col-sm-pull-2 {
-    right: 16.666666666666664%;
-  }
-
-  .col-sm-pull-3 {
-    right: 25%;
-  }
-
-  .col-sm-pull-4 {
-    right: 33.33333333333333%;
-  }
-
-  .col-sm-pull-5 {
-    right: 41.66666666666667%;
-  }
-
-  .col-sm-pull-6 {
-    right: 50%;
-  }
-
-  .col-sm-pull-7 {
-    right: 58.333333333333336%;
-  }
-
-  .col-sm-pull-8 {
-    right: 66.66666666666666%;
-  }
-
-  .col-sm-pull-9 {
-    right: 75%;
-  }
-
-  .col-sm-pull-10 {
-    right: 83.33333333333334%;
-  }
-
-  .col-sm-pull-11 {
-    right: 91.66666666666666%;
-  }
-
-  .col-sm-offset-1 {
-    margin-left: 8.333333333333332%;
-  }
-
-  .col-sm-offset-2 {
-    margin-left: 16.666666666666664%;
-  }
-
-  .col-sm-offset-3 {
-    margin-left: 25%;
-  }
-
-  .col-sm-offset-4 {
-    margin-left: 33.33333333333333%;
-  }
-
-  .col-sm-offset-5 {
-    margin-left: 41.66666666666667%;
-  }
-
-  .col-sm-offset-6 {
-    margin-left: 50%;
-  }
-
-  .col-sm-offset-7 {
-    margin-left: 58.333333333333336%;
-  }
-
-  .col-sm-offset-8 {
-    margin-left: 66.66666666666666%;
-  }
-
-  .col-sm-offset-9 {
-    margin-left: 75%;
-  }
-
-  .col-sm-offset-10 {
-    margin-left: 83.33333333333334%;
-  }
-
-  .col-sm-offset-11 {
-    margin-left: 91.66666666666666%;
-  }
-
-}
-
-@media (min-width: 992px) {
-
-  .container {
-    max-width: 970px;
-  }
-
-  .col-md-1,
-  .col-md-2,
-  .col-md-3,
-  .col-md-4,
-  .col-md-5,
-  .col-md-6,
-  .col-md-7,
-  .col-md-8,
-  .col-md-9,
-  .col-md-10,
-  .col-md-11 {
-    float: left;
-  }
-
-  .col-md-1 {
-    width: 8.333333333333332%;
-  }
-
-  .col-md-2 {
-    width: 16.666666666666664%;
-  }
-
-  .col-md-3 {
-    width: 25%;
-  }
-
-  .col-md-4 {
-    width: 33.33333333333333%;
-  }
-
-  .col-md-5 {
-    width: 41.66666666666667%;
-  }
-
-  .col-md-6 {
-    width: 50%;
-  }
-
-  .col-md-7 {
-    width: 58.333333333333336%;
-  }
-
-  .col-md-8 {
-    width: 66.66666666666666%;
-  }
-
-  .col-md-9 {
-    width: 75%;
-  }
-
-  .col-md-10 {
-    width: 83.33333333333334%;
-  }
-
-  .col-md-11 {
-    width: 91.66666666666666%;
-  }
-
-  .col-md-12 {
-    width: 100%;
-  }
-
-  .col-md-push-0 {
-    left: auto;
-  }
-
-  .col-md-push-1 {
-    left: 8.333333333333332%;
-  }
-
-  .col-md-push-2 {
-    left: 16.666666666666664%;
-  }
-
-  .col-md-push-3 {
-    left: 25%;
-  }
-
-  .col-md-push-4 {
-    left: 33.33333333333333%;
-  }
-
-  .col-md-push-5 {
-    left: 41.66666666666667%;
-  }
-
-  .col-md-push-6 {
-    left: 50%;
-  }
-
-  .col-md-push-7 {
-    left: 58.333333333333336%;
-  }
-
-  .col-md-push-8 {
-    left: 66.66666666666666%;
-  }
-
-  .col-md-push-9 {
-    left: 75%;
-  }
-
-  .col-md-push-10 {
-    left: 83.33333333333334%;
-  }
-
-  .col-md-push-11 {
-    left: 91.66666666666666%;
-  }
-
-  .col-md-pull-0 {
-    right: auto;
-  }
-
-  .col-md-pull-1 {
-    right: 8.333333333333332%;
-  }
-
-  .col-md-pull-2 {
-    right: 16.666666666666664%;
-  }
-
-  .col-md-pull-3 {
-    right: 25%;
-  }
-
-  .col-md-pull-4 {
-    right: 33.33333333333333%;
-  }
-
-  .col-md-pull-5 {
-    right: 41.66666666666667%;
-  }
-
-  .col-md-pull-6 {
-    right: 50%;
-  }
-
-  .col-md-pull-7 {
-    right: 58.333333333333336%;
-  }
-
-  .col-md-pull-8 {
-    right: 66.66666666666666%;
-  }
-
-  .col-md-pull-9 {
-    right: 75%;
-  }
-
-  .col-md-pull-10 {
-    right: 83.33333333333334%;
-  }
-
-  .col-md-pull-11 {
-    right: 91.66666666666666%;
-  }
-
-  .col-md-offset-0 {
-    margin-left: 0;
-  }
-
-  .col-md-offset-1 {
-    margin-left: 8.333333333333332%;
-  }
-
-  .col-md-offset-2 {
-    margin-left: 16.666666666666664%;
-  }
-
-  .col-md-offset-3 {
-    margin-left: 25%;
-  }
-
-  .col-md-offset-4 {
-    margin-left: 33.33333333333333%;
-  }
-
-  .col-md-offset-5 {
-    margin-left: 41.66666666666667%;
-  }
-
-  .col-md-offset-6 {
-    margin-left: 50%;
-  }
-
-  .col-md-offset-7 {
-    margin-left: 58.333333333333336%;
-  }
-
-  .col-md-offset-8 {
-    margin-left: 66.66666666666666%;
-  }
-
-  .col-md-offset-9 {
-    margin-left: 75%;
-  }
-
-  .col-md-offset-10 {
-    margin-left: 83.33333333333334%;
-  }
-
-  .col-md-offset-11 {
-    margin-left: 91.66666666666666%;
-  }
-
-}
-
-@media (min-width: 1200px) {
-
-  .container {
-    max-width: 1170px;
-  }
-
-  .col-lg-1,
-  .col-lg-2,
-  .col-lg-3,
-  .col-lg-4,
-  .col-lg-5,
-  .col-lg-6,
-  .col-lg-7,
-  .col-lg-8,
-  .col-lg-9,
-  .col-lg-10,
-  .col-lg-11 {
-    float: left;
-  }
-
-  .col-lg-1 {
-    width: 8.333333333333332%;
-  }
-
-  .col-lg-2 {
-    width: 16.666666666666664%;
-  }
-
-  .col-lg-3 {
-    width: 25%;
-  }
-
-  .col-lg-4 {
-    width: 33.33333333333333%;
-  }
-
-  .col-lg-5 {
-    width: 41.66666666666667%;
-  }
-
-  .col-lg-6 {
-    width: 50%;
-  }
-
-  .col-lg-7 {
-    width: 58.333333333333336%;
-  }
-
-  .col-lg-8 {
-    width: 66.66666666666666%;
-  }
-
-  .col-lg-9 {
-    width: 75%;
-  }
-
-  .col-lg-10 {
-    width: 83.33333333333334%;
-  }
-
-  .col-lg-11 {
-    width: 91.66666666666666%;
-  }
-
-  .col-lg-12 {
-    width: 100%;
-  }
-
-  .col-lg-push-0 {
-    left: auto;
-  }
-
-  .col-lg-push-1 {
-    left: 8.333333333333332%;
-  }
-
-  .col-lg-push-2 {
-    left: 16.666666666666664%;
-  }
-
-  .col-lg-push-3 {
-    left: 25%;
-  }
-
-  .col-lg-push-4 {
-    left: 33.33333333333333%;
-  }
-
-  .col-lg-push-5 {
-    left: 41.66666666666667%;
-  }
-
-  .col-lg-push-6 {
-    left: 50%;
-  }
-
-  .col-lg-push-7 {
-    left: 58.333333333333336%;
-  }
-
-  .col-lg-push-8 {
-    left: 66.66666666666666%;
-  }
-
-  .col-lg-push-9 {
-    left: 75%;
-  }
-
-  .col-lg-push-10 {
-    left: 83.33333333333334%;
-  }
-
-  .col-lg-push-11 {
-    left: 91.66666666666666%;
-  }
-
-  .col-lg-pull-0 {
-    right: auto;
-  }
-
-  .col-lg-pull-1 {
-    right: 8.333333333333332%;
-  }
-
-  .col-lg-pull-2 {
-    right: 16.666666666666664%;
-  }
-
-  .col-lg-pull-3 {
-    right: 25%;
-  }
-
-  .col-lg-pull-4 {
-    right: 33.33333333333333%;
-  }
-
-  .col-lg-pull-5 {
-    right: 41.66666666666667%;
-  }
-
-  .col-lg-pull-6 {
-    right: 50%;
-  }
-
-  .col-lg-pull-7 {
-    right: 58.333333333333336%;
-  }
-
-  .col-lg-pull-8 {
-    right: 66.66666666666666%;
-  }
-
-  .col-lg-pull-9 {
-    right: 75%;
-  }
-
-  .col-lg-pull-10 {
-    right: 83.33333333333334%;
-  }
-
-  .col-lg-pull-11 {
-    right: 91.66666666666666%;
-  }
-
-  .col-lg-offset-0 {
-    margin-left: 0;
-  }
-
-  .col-lg-offset-1 {
-    margin-left: 8.333333333333332%;
-  }
-
-  .col-lg-offset-2 {
-    margin-left: 16.666666666666664%;
-  }
-
-  .col-lg-offset-3 {
-    margin-left: 25%;
-  }
-
-  .col-lg-offset-4 {
-    margin-left: 33.33333333333333%;
-  }
-
-  .col-lg-offset-5 {
-    margin-left: 41.66666666666667%;
-  }
-
-  .col-lg-offset-6 {
-    margin-left: 50%;
-  }
-
-  .col-lg-offset-7 {
-    margin-left: 58.333333333333336%;
-  }
-
-  .col-lg-offset-8 {
-    margin-left: 66.66666666666666%;
-  }
-
-  .col-lg-offset-9 {
-    margin-left: 75%;
-  }
-
-  .col-lg-offset-10 {
-    margin-left: 83.33333333333334%;
-  }
-
-  .col-lg-offset-11 {
-    margin-left: 91.66666666666666%;
-  }
-
-}
-
-/* IE8 fix https://github.com/twbs/bootstrap/issues/10406
- * do not use "box-sizing: border-box" and adapt container max-width */
-
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 750px;
-  }
-
-}
-
-@media (min-width: 992px) {
-
-  .container {
-    max-width: 940px;
-  }
-
-}
-
-@media (min-width: 1200px) {
-
-  .container {
-    max-width: 1140px;
-  }
-
-}
-
-
-
-
-
-/* $ Basic fluid grid system (12 columns) IE8+
- * 
- * Heads up!
- * You can't do:
- * nesting, offsetting, column ordering (for SEO),
- * mobile/tablet/desktop mixing 
+ * Heads up!!
+ * You can't do column ordering (for SEO) 
+ * and mobile/tablet/desktop mixing 
 ============================================================================ */
 
 /* Sub-Pixel Problems in CSS
  * http://ejohn.org/blog/sub-pixel-problems-in-css/
- * 
- * Opera and Safari round the numbers down. 
+ *
+ * 1. FF4+: ok
+ *
+ * 2. WebKit is ok since 3 May, 2013 
+ * http://css-tricks.com/percentage-bugs-in-webkit/
+ * http://trac.webkit.org/changeset/116009
+ *
+ * 3. IE8+: ok
+ *
+ * 4. Opera and Safari round the numbers down. 
  * No fix :(
- *
- * A discussion about Opera on GitHub 
- * https://github.com/jokjus/centage/issues/1
- *
- * A discussion about Bootstrap fluid grid system on StackOverflow
+ * A discussion about Opera on GitHub https://github.com/jokjus/centage/issues/1
+ * A discussion about Bootstrap 2 fluid grid system on StackOverflow
  * http://stackoverflow.com/questions/10683539/bootstrap-fluid-grid-system-issue-opera-11-64
+ *
  *
  */
 
 .bf-container {
-  max-width: 1160px; 
-  margin-left: auto;
+  /* avoid IE8 issue with 'box-sizing: border-box' in combination 
+   * with max/min-width and max/min-height 
+   * https://github.com/twbs/bootstrap/issues/10014
+   */
+  -webkit-box-sizing: content-box; 
+     -moz-box-sizing: content-box; 
+          box-sizing: content-box; 
+          
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-left: auto;
+}
+
+.bf-container:before,
+.bf-container:after {
+  display: table;
+  content: " ";
+}
+
+.bf-container:after {
+  clear: both;
 }
 
 .bf-row {
   display: block;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .bf-row:before,
@@ -1940,111 +1151,140 @@ template {
 } 
 
 [class*="bf-col-"] {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 10px;
-  padding-right: 10px;  
+  padding-left: 15px;
+  padding-right: 15px;  
 }
 
-.bf-col-1 {
+.bf-col-12-12 {
   width: 100%;
 }
 
-.bf-col-1-2 {
+.bf-col-11-12 {
+  width: 91.66666666666666%;
+}
+
+.bf-col-10-12 {
+  width: 83.33333333333334%;
+}
+
+.bf-col-9-12 {
+  width: 75%;
+}
+
+.bf-col-8-12 {
+  width: 66.66666666666666%;
+}
+
+.bf-col-7-12 {
+  width: 58.333333333333336%;
+}
+
+.bf-col-6-12 {
   width: 50%;
 }
 
-.bf-col-1-3 {
-  width: 33.33333%;
+.bf-col-5-12 {
+  width: 41.66666666666667%;
 }
 
-.bf-col-2-3 {
-  width: 66.66666%;
-} 
+.bf-col-4-12 {
+  width: 33.33333333333333%;
+}
 
-.bf-col-1-4 {
+.bf-col-3-12 {
   width: 25%;
 }
 
-.bf-col-3-4 {
-  width: 75%;
-} 
-
-.bf-col-1-5 {
-  width: 20%;
-}
-
-.bf-col-2-5 {
-  width: 40%;
-}
-
-.bf-col-3-5 {
-  width: 60%;
-}
-
-.bf-col-4-5 {
-  width: 80%;
-}
-
-.bf-col-1-6 {
-  width: 16.656%;
-}
-
-.bf-col-5-6 {
-  width: 83.33%;
-}
-
-.bf-col-1-8 {
-  width: 12.5%;
-}
-
-.bf-col-3-8 {
-  width: 37.5%;
-}
-
-.bf-col-5-8 {
-  width: 62.5%;
-}
-
-.bf-col-7-8 {
-  width: 87.5%;
+.bf-col-2-12 {
+  width: 16.666666666666664%;
 }
 
 .bf-col-1-12 {
   width: 8.3333%;
 }
 
-.bf-col-5-12 {
-  width: 41.6666%;
-}
-.bf-col-7-12 {
-  width: 58.3333%;
+.bf-col-offset-12-12 {
+  margin-left: 100%;
 }
 
-.bf-col-11-12 {
-  width: 91.6666%;
+.bf-col-offset-11-12 {
+  margin-left: 91.66666666666666%;
+}
+
+.bf-col-offset-10-12 {
+  margin-left: 83.33333333333334%;
+}
+
+.bf-col-offset-9-12 {
+  margin-left: 75%;
+}
+
+.bf-col-offset-8-12 {
+  margin-left: 66.66666666666666%;
+}
+
+.bf-col-offset-7-12 {
+  margin-left: 58.333333333333336%;
+}
+
+.bf-col-offset-6-12 {
+  margin-left: 50%;
+}
+
+.bf-col-offset-5-12 {
+  margin-left: 41.66666666666667%;
+}
+
+.bf-col-offset-4-12 {
+  margin-left: 33.33333333333333%;
+}
+
+.bf-col-offset-3-12 {
+  margin-left: 25%;
+}
+
+.bf-col-offset-2-12 {
+  margin-left: 16.666666666666664%;
+}
+
+.bf-col-offset-1-12 {
+  margin-left: 8.3333%;
+}
+
+.bf-col-offset-0-12 {
+  margin-left: 0;
 }
 
 /* responsive grid */
-@media screen and (max-width: 640px) {
+@media (max-width: 640px) {
 
   .responsive-grid .bf-row {
     margin-left: 0;
     margin-right: 0;
-  }
+  } 
+
   .responsive-grid [class*="bf-col-"] {
     width: 100%;
     float: none;
+    margin-left: 0;
     padding-left: 0;
     padding-right: 0;
   } 
 
 }
 
+/* fix missing table cell borders when using 'col-' classes 
+ * for column sizing 
+ * https://github.com/twbs/bootstrap/issues/11623 
+ */
+table col[class*="bf-col-"] {
+  position: static;
+  display: table-column;
+  float: none;
+}
 
 
 
@@ -2091,20 +1331,6 @@ template {
 }
 
 
-/* image replacement ------------------------------------------------------- */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-}
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-
 /* image positioning ------------------------------------------------------- */
 .img-left {
   float: left;
@@ -2126,6 +1352,9 @@ template {
   display: inline !important;
 }
 
+/* Using Grids with Your Font-Family
+ * http://purecss.io/grids/#using-grids-with-custom-fonts
+ */
 .inline-block-container {
   letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
   text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
@@ -2149,7 +1378,7 @@ template {
  * The ".opera-only" selector is used to prevent actual prefocus styling
  * and is not required in markup.
 */
-.opera-only :-o-prefocus,
+.opera-only :-o-prefocus, /* this hack affect also IE7 */
 .inline-block-container {
   word-spacing: -0.43em;
 }
@@ -2165,7 +1394,7 @@ template {
 /* how to use:
  *
    <nav id="nav" class="nav" role="navigation">
-     <ul class="inline-block-container unstyled">
+     <ul class="inline-block-container list-unstyled">
        <li class="inline"><a href="#" class="inline-block">Home</a></li>
        <li class="inline"><a href="#" class="inline-block">Works</a></li>
        <li class="inline"><a href="#" class="inline-block">About</a></li>
@@ -2175,7 +1404,6 @@ template {
  *
  */
 
- 
 .hide, /* old naming */
 .hidden {
   display: none !important; 
@@ -2192,41 +1420,6 @@ template {
 }
 
 
-/* screenreaders ----------------------------------------------------------- */
-/* Hide text for non-screenreaders */
-.screen-reader-text,
-.assistive-text {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-
 /* layout positioning ------------------------------------------------------ */
 .pull-right {
   float: right;
@@ -2236,22 +1429,14 @@ template {
   float: left;
 }
 
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .affix {
   position: fixed;
-}
-
-
-/* reset margin/padding ---------------------------------------------------- */
-.no-margin {
-  margin: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-border {
-  border: 0;
 }
 
 
@@ -2286,19 +1471,6 @@ template {
 
 .text-italic {
   font-style: italic;
-}
-
-.text-normal {
-  font-weight: 400;
-  font-style: normal;
-}
-
-.text-sans-serif {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.text-serif {
-  font-family: Georgia, Times, serif;
 }
 
 .text-truncate {
@@ -2461,12 +1633,6 @@ template {
   a:visited {
     text-decoration: underline;
   }
-
-  /*
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  */
 
   pre,
   blockquote {

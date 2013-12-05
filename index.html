@@ -1,83 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    
-  <title>BULLFRAME.CSS boilerplate</title>
-  <meta name="description" content="https://github.com/marco135/bullframe.css/">
-           
-  <link rel="stylesheet" href="css/bullframe.css?v=1.5.2">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  
+<title>BULLFRAME.CSS boilerplate</title>
+<meta name="description" content="Flexible, Style-agnostic, Mobile-First, RWD, CSS boilerplate. Fork on GitHub github.com/marco135/bullframe.css">
+         
+<link href="css/bullframe.css?v=1.6.0" rel="stylesheet">
 
-  <!-- styles for demo page -->
-  <link rel="stylesheet" href="docs/css/style.css">
+<!-- custom styles -->
+<link href="docs/css/style.css?v=1.6.0" rel="stylesheet">
 
-  <!-- enable HTML5 elements and CSS3 Media Queries support in all browsers -->
+<!-- enable HTML5 elements and CSS3 Media Queries support in all browsers -->
+<!--[if lt IE 9]>
   <script src="docs/js/vendor/html5shiv.js"></script>
   <script src="docs/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Fix IE 10 on Windows Phone 8 Viewport -->
+<script>
+// https://gist.github.com/stowball/4617428
+  (function(){if("-ms-user-select" in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();
+</script>
 </head>
 
-<body>
-<div class="bf-container bullframe-demo">
-  <div class="bf-row"> 
-    <div class="bf-col-1">
-        
-      <header role="banner">
-      <h1>BULLFRAME.CSS boilerplate demo page</h1>
-      <small>v1.5.2 - <b>github.com/marco135/bullframe.css</b></small>
-      </header>
+<body class="bullframe-demo">
 
-      <nav role="navigation" class="skip-to-content"> 
+<header role="banner">
+
+  <div class="bf-container responsive-grid">
+    <div class="bf-row">
+      <div class="bf-col-9-12">
+        <h1>BULLFRAME.CSS demo</h1>
+      </div><!-- /col -->
+
+      <div class="bf-col-3-12 version">
+        <span>v1.6.0</span>
+      </div><!-- /col -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+
+</header>
+
+
+<div class="bf-container responsive-grid">
+
+  <div class="bf-row">
+    <div class="bf-col-12-122-12">
+      <p class="abstract"><code>bullframe.css</code> is a <strong>simple</strong>, flexible, IE7+ CSS file to be used as an alternative to <i>Bootstrap</i> or <i>Normalize</i>.</p>
+    </div>
+  </div>
+
+  <div class="bf-row"> 
+
+    <div class="bf-col-12-12">
+      <nav role="navigation" class="nav skip-to-content"> 
         <span class="hide">Skip to content</span>
-        <ul class="list-inline">
-          <li><a href="#texts">Go to <b>text elements</b></a></li>  
-          <li><a href="#embedded-content">Go to <b>embedded content</b></a></li>  
-          <li><a href="#forms">Go to <b>form elements</b></a></li>  
-          <li><a href="#tables">Go to <b>tables</b></a></li>  
-          <li><a href="#grid-system">Go to <b>grid system</b></a></li>  
-          <li><a href="#download"><b>&raquo; Download on GitHub</b></a></li> 
+        <ul class="list-unstyled clearfix">
+          <li><a href="#texts">Text elements</a></li>  
+          <li><a href="#embedded-content">Embedded content</a></li>  
+          <li><a href="#forms">Forms</a></li>  
+          <li><a href="#tables">Tables</a></li>  
+          <li><a href="#grid-system">Grid system</a></li>  
+          <li><a href="#download">Download</a></li>  
         </ul>
       </nav>
-        
-      <h2 id="texts" class="title">Text elements</h2>
-       
+    </div><!-- /col -->
 
+  </div><!-- /row -->
+
+
+  <h2 id="texts" class="title">Text elements</h2>
+
+  <div class="bf-row"> 
+    <div class="bf-col-6-12">
       <h3 class="sub-title">Headings</h3>
-
       <h1 class="tera">Tera heading</h1>
       <h1 class="giga">Giga heading</h1>
       <h1 class="mega">Mega heading</h1>
-
       <h1>Heading 1 <a href="#">with link</a></h1>
       <h2>Heading 2 <a href="#">with link</a></h2>
       <h3>Heading 3 <a href="#">with link</a></h3>
       <h4>Heading 4 <a href="#">with link</a></h4>
       <h5>Heading 5 <a href="#">with link</a></h5>
       <h6>Heading 6 <a href="#">with link</a></h6>
+    </div><!-- /col -->
 
-      <h3 class="sub-title">Nav ul list</h3>
-      <nav>
-        <ul>
-          <li><a href="#">navigation item #1</a></li>
-          <li><a href="#">navigation item #2</a></li>
-          <li><a href="#">navigation item #3</a></li>
-        </ul>
-      </nav>
-
-
-      <h3 class="sub-title">hidden attribute</h3>
-      <p hidden="">This should be hidden in all browsers, apart from IE6</p>
-
-
-      <h3 class="sub-title">Address</h3>
-      <address>
-        Address: somewhere, world
-      </address>
-
-
-      <h3 class="sub-title">hr</h3>
-      <hr>
-
+    <div class="bf-col-6-12">
       <h3 class="sub-title">Inline text elements</h3>
       <p>The <a href="#">a element</a> example<br>
       The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with
@@ -104,8 +115,13 @@
       The <sup>sup element</sup> example<br>
       The <u>u element</u> example<br>
       The <var>var element</var> example</p>
+    </div><!-- /col -->
 
+  </div><!-- /row -->
 
+  <div class="bf-row">
+
+    <div class="bf-col-6-12">
       <h3 class="sub-title">Paragraphs</h3>
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
       ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem
@@ -117,13 +133,42 @@
       vocabulary. The languages only differ in their grammar, their pronunciation
       and their most common words. Everyone realizes why a new common language
       would be desirable.</p>
+    </div><!-- /col -->  
 
+    <div class="bf-col-6-12">
+      <h3 class="sub-title">hidden attribute</h3>
+      <p hidden="">This should be hidden in all browsers, apart from IE6</p>
 
+      <h3 class="sub-title">Template content</h3>
+      <template>
+          <h1>{{title}}</h1>
+          <content></content>
+      </template>
+
+      <h3 class="sub-title">Address</h3>
+      <address>
+        Address: somewhere, world
+      </address>
+    </div><!-- /col -->  
+
+  </div><!-- /row -->
+
+  <div class="bf-row">
+    <div class="bf-col-12-12">
+      <h3 class="sub-title">hr</h3>
+      <hr>
+    </div><!-- /col -->
+  </div><!-- /row -->
+
+  <div class="bf-row">
+
+    <div class="bf-col-6-12">
       <h3 class="sub-title">pre</h3>
-      <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.
+      <pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
       </pre>
+    </div><!-- /col -->
 
-
+    <div class="bf-col-6-12">
       <h3 class="sub-title">pre code</h3>
     <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
@@ -137,26 +182,29 @@
   &lt;div role="main"&gt;...&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+    </div><!-- /col -->
+
+  </div><!-- /row -->
 
 
-      <h3 class="sub-title">Template content</h3>
-      <template>
-          <h1>{{title}}</h1>
-          <content></content>
-      </template>
+  <div class="bf-row">
 
-
+    <div class="bf-col-12-12">
       <h3 class="sub-title">blockquotes</h3>
       <blockquote>
-        <p>Some sort of famous witty quote marked up with a &lt;blockquote&gt; and
-        a child &lt;p&gt; element.</p>
+        <p>Some sort of famous witty quote marked up with a <code>&lt;blockquote&gt;</code> and a child <code>&lt;p&gt;</code> element.</p>
+        <small>Tom Whatever</small>
       </blockquote>
       <blockquote>
-        Even better philosophical quote marked up with just a &lt;blockquote&gt;
-        element.
+        Even better philosophical quote marked up with just a <code>&lt;blockquote&gt;</code> element.
       </blockquote>
+    </div><!-- /col -->
 
+  </div><!-- /row -->
 
+  <div class="bf-row">
+
+    <div class="bf-col-4-12">
       <h3 class="sub-title">Ordered list</h3>
       <ol>
         <li>list item 1</li>
@@ -176,8 +224,9 @@
         <li>list item 1</li>
         <li>list item 1</li>
       </ol>
+    </div><!-- /col -->
 
-
+    <div class="bf-col-4-12">
       <h3 class="sub-title">Unordered list</h3>
       <ul>
         <li>list item 1</li>
@@ -197,19 +246,28 @@
         <li>list item 1</li>
         <li>list item 1</li>
       </ul>
+    </div><!-- /col -->
+
+    <div class="bf-col-4-12">
+      <h3 class="sub-title">Definition list</h3>
+      <dl>
+        <dt>Description name</dt>
+        <dd>Description value</dd>
+        <dt>Description name</dt>
+        <dd>Description value</dd>
+        <dt>Description name</dt>
+        <dd>Description value</dd>
+      </dl>
+    </div><!-- /col -->
+
+  </div><!-- /row -->
 
 
-      <h3 class="sub-title">Inline list</h3>
-      <ul class="list-inline">
-        <li><a href="#" title="">list item 1</a></li>
-        <li><a href="#" title="">list item 1</a></li>
-        <li><a href="#" title="">list item 1</a></li>
-        <li><a href="#" title="">list item 1</a></li>
-      </ul>
+  <div class="bf-row">
 
-
+    <div class="bf-col-4-12">  
       <h3 class="sub-title">Unstyled list</h3>
-      <ul class="unstyled">
+      <ul class="list-unstyled">
         <li>list item 1</li>
         <li>list item 1
           <ul>
@@ -227,59 +285,64 @@
         <li>list item 1</li>
         <li>list item 1</li>
       </ul>
+    </div><!-- /col -->
 
+    <div class="bf-col-4-12">
+      <h3 class="sub-title">Nav ul list</h3>
+      <nav>
+        <ul>
+          <li><a href="#">navigation item #1</a></li>
+          <li><a href="#">navigation item #2</a></li>
+          <li><a href="#">navigation item #3</a></li>
+          <li><a href="#">navigation item #4</a></li>
+          <li><a href="#">navigation item #5</a></li>
+          <li><a href="#">navigation item #6</a></li>
+        </ul>
+      </nav>
+    </div><!-- /col -->
 
-      <h3 class="sub-title">Definition list</h3>
-      <dl>
-        <dt>Description name</dt>
-        <dd>Description value</dd>
-        <dt>Description name</dt>
-        <dd>Description value</dd>
-        <dt>Description name</dt>
-        <dd>Description value</dd>
-      </dl>
+    <div class="bf-col-4-12">  
+      <h3 class="sub-title">Inline list</h3>
+      <ul class="list-inline">
+        <li><a href="#" title="">list item 1</a></li>
+        <li><a href="#" title="">list item 2</a></li>
+        <li><a href="#" title="">list item 3</a></li>
+        <li><a href="#" title="">list item 4</a></li>
+        <li><a href="#" title="">list item 5</a></li>
+        <li><a href="#" title="">list item 6</a></li>
+      </ul>
+    </div><!-- /col -->
 
+  </div><!-- /row -->
 
-
+  <div class="bf-row">
+    <div class="bf-col-12-12">
       <h2 id="embedded-content" class="title">Embedded content</h2>
+    </div><!-- /col -->
+  </div><!-- /row -->
 
+  <div class="bf-row">
+
+    <div class="bf-col-6-12">
       <h3 class="sub-title">figure img figcaption</h3>
       <figure>
         <a href="#"><img alt="" src="http://lorempixel.com/620/200"></a>
         <figcaption>Figcaption content</figcaption>
       </figure>
+    </div><!-- /col -->
 
-
+    <div class="bf-col-6-12">
       <h3 class="sub-title">SVG</h3>
       <svg width="200px" height="200px">
-        <circle cx="200" cy="200" r="200" fill="#ff0000" />
+        <circle cx="0" cy="0" r="200" fill="#ff0000" />
       </svg>
+    </div><!-- /col -->
 
+  </div><!-- /row -->
 
+  <div class="bf-row">
 
-      <h2 class="title">Interactive embedded content</h2>
-
-
-      <h3 class="sub-title">Details + summary</h3>
-      <details>
-        <summary>
-          More info
-        </summary>
-        <p>Additional information</p>
-        <ul>
-          <li>Point 1</li>
-          <li>Point 2</li>
-        </ul>
-      </details>
-
-
-      <h3 class="sub-title">Audio with controls</h3>
-      <audio controls>
-       <source src="http://jonhall.info/how_to/assets/media/audio/01_Happy_Birthday_Variation_In_The.mp3" type="audio/mp3" />
-       <source src="http://jonhall.info/how_to/assets/media/audio/01_Happy_Birthday_Variation_In_The.ogg" type="audio/ogg" />
-       <p>Your browser does not support the HTML5 Audio element.</p>
-      </audio>
-
+    <div class="bf-col-6-12">
       <h3 class="sub-title">HTML5 video with controls</h3>  
         <video controls>
        <source src="http://www.808.dk/pics/video/gizmo.mp4"
@@ -288,46 +351,71 @@
                type='video/ogg; codecs="theora, vorbis"'>
        <p>Your browser does not support the HTML5 Video element.</p>
       </video>
-        
+    </div><!-- /col --> 
+
+    <div class="bf-col-6-12">
+      <h3 class="sub-title">Audio with controls</h3>
+      <audio controls>
+       <source src="http://jonhall.info/how_to/assets/media/audio/01_Happy_Birthday_Variation_In_The.mp3" type="audio/mp3" />
+       <source src="http://jonhall.info/how_to/assets/media/audio/01_Happy_Birthday_Variation_In_The.ogg" type="audio/ogg" />
+       <p>Your browser does not support the HTML5 Audio element.</p>
+      </audio>
+    </div><!-- /col -->
+
+  </div><!-- /row -->
 
 
-      <h3 class="sub-title">YouTube video iframe (4:3)</h3>
+  <div class="bf-row">
+
+    <div class="bf-col-6-12">
+      <h3 class="sub-title">YouTube iframe (4:3)</h3>
       <div class="responsive-video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
       </div>
+    </div><!-- /col -->
 
-
-      <h3 class="sub-title">Vimeo Video iframe (16:9)</h3>
+    <div class="bf-col-6-12">
+      <h3 class="sub-title">Vimeo iframe (16:9)</h3>
       <div class="responsive-video-container widescreen vimeo">
         <iframe src="https://player.vimeo.com/video/27243869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
+    </div><!-- /col -->
+
+  </div><!-- /row -->
 
 
 
-      <h2 id="forms" class="title">HTML5 Forms</h2>
+  <div class="bf-row">
+    <div class="bf-col-12-12">
+      <h2 id="forms" class="title">Forms</h2>
+    </div><!-- /col -->
+  </div><!-- /row -->
 
-
+  <div class="bf-row">
+    <div class="bf-col-12-12">
+      <p>100% width <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;textarea&gt;</code></p>
+    </div><!-- /col -->
+  </div><!-- /row -->
+    
+  <div class="bf-row">
+    <div class="bf-col-6-12">
       <h3 class="sub-title">Inputs</h3>
-      <form> 
-       
+
+      <form>
         <fieldset>
-          <legend>Inputs as descendents of labels (form legend). This doubles up as
-          a long legend that can test word wrapping.</legend> 
-          <div><label>Text input<input type="text" value="default value that goes on and on without stopping or punctuation"></label></div>
-          <div><label>Email input<input type="email"></label></div>
-          <div><label>Email input (required)<input type="email" required></label></div>
-          <div><label><input name="rad" type="radio">Radio input</label></div>
-          <div><label><input type="checkbox">Checkbox input</label></div>
-          <div><label>Radio input</label><input name="rad" type="radio"></div>
-        <div><label>Checkbox input</label><input type="checkbox"></div>
-        </fieldset>
+          <legend>HTML5 has several new input types for forms (legend).</legend>
 
-        <fieldset>
-          <legend>Inputs as siblings of labels</legend>
-
-
-          <div><label>Text input</label>
+          <div><label>Text input as descendant of label
+          <input type="text" value="default value that goes on and on without stopping or punctuation"></label></div>
+          
+          <div><label>Text input as sibling of label</label>
           <input type="text" value="default value that goes on and on without stopping or punctuation"></div>
+
+          <div><label>Text input (focused)</label>
+          <input id="input-focused" type="text"></div>
+
+          <div class="invalid"><label>Text input (invalid)</label>
+          <input type="text"></div>
 
           <div><label>Email input</label>
           <input type="email"></div>
@@ -370,12 +458,29 @@
 
           <div><label>File input</label>
           <input type="file"></div>
-        </fieldset>
-       
-        
 
+          <div class="bf-row">
+            <div class="bf-col-6-12">
+              <div><label><input name="rad" type="radio">Radio input</label></div>
+              <div><label><input type="checkbox">Checkbox input</label></div>
+            </div><!-- /col -->
+
+            <div class="bf-col-6-12">
+              <div><label>descendant of label</label><input name="rad" type="radio"></div>
+              <div><label>descendant of label</label><input type="checkbox"></div>
+            </div><!-- /col -->
+          </div><!-- /row -->
+
+        </fieldset>
+       </form>
+     </div><!-- /col -->
+
+    <div class="bf-col-6-12">
+        
+      <form>
         <h3 class="sub-title">Selects</h3>
         <fieldset>
+          <legend>Cross-browser, cross-platform consistency in webkit browsers.</legend>    
           <div>
             <label for="s">Select field</label> 
             <select id="s">
@@ -422,41 +527,58 @@
             </optgroup>
           </select>
         </fieldset>
+      </form>
 
-
-        <h3 class="sub-title">Textareas</h3>
+      <h3 class="sub-title">Textareas</h3>
+      <form>
         <fieldset>
-          <label>Textarea<textarea cols="30" rows="5">Textarea text</textarea></label>
-          <label>Textarea placeholder<textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
+          <label>Textarea</label>
+          <textarea rows="7">Textarea text</textarea>
+          <label>Textarea placeholder</label>
+          <textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text." rows="7"></textarea>
         </fieldset>
+      </form>
 
-       <h3 class="sub-title">Textareas (disabled)</h3>
+      <h3 class="sub-title">Textareas (disabled)</h3>
+      <form>
         <fieldset disabled>
-          <label>Textarea<textarea cols="30" rows="5">Textarea text</textarea></label>
-          <label>Textarea placeholder<textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text." rows="5"></textarea></label>
+          <label>Textarea</label>
+          <textarea rows="7">Textarea text</textarea>
+          <label>Textarea placeholder</label>
+          <textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text." rows="7"></textarea>
         </fieldset>
-        
-        <h3 class="sub-title">Clickable inputs (default)</h3>
-        <fieldset>
-          <div><input alt="Image (input)" src="http://lorempixel.com/g/90/24" type="image"></div>
-          <div><input type="reset" value="Reset (input)"></div>
-          <div><input type="button" value="Button (input)"></div>
-          <div><input type="submit" value="Submit (input)"></div>
-          <div><a class="btn" href="#" title="button link">Button (link)</a></div>
-          <div><input disabled type="submit" value="Disabled (input)"></div>
-        </fieldset>
+      </form>
 
+    </div><!-- /col -->
 
-        <h3 class="sub-title">Buttons (default)</h3>
-        <fieldset>
-          <div><button type="reset">Reset (button)</button></div>
-          <div><button type="button">Button (button)</button></div>
-          <div><button type="submit">Submit (button)</button></div>
-          <div><button disabled type="submit">Disabled (button)</button></div>
-        </fieldset>
-        
-        
-        <h3 class="sub-title">Buttons sizing helpers</h3>
+  </div><!-- /row -->
+
+  <div class="bf-row">
+
+    <div class="bf-col-4-12">
+      <h3 class="sub-title">Clickable inputs (default)</h3>
+      <fieldset>
+        <div><input alt="Image (input)" src="http://lorempixel.com/g/90/24" type="image"></div>
+        <div><input type="reset" value="Reset (input)"></div>
+        <div><input type="button" value="Button (input)"></div>
+        <div><input type="submit" value="Submit (input)"></div>
+        <div><a class="btn" href="#" title="button link">Button (link)</a></div>
+        <div><input disabled type="submit" value="Disabled (input)"></div>
+      </fieldset>
+    </div><!-- /col -->
+
+    <div class="bf-col-4-12">
+      <h3 class="sub-title">Buttons (default)</h3>
+      <fieldset>
+        <div><button type="reset">Reset (button)</button></div>
+        <div><button type="button">Button (button)</button></div>
+        <div><button type="submit">Submit (button)</button></div>
+        <div><button disabled type="submit">Disabled (button)</button></div>
+      </fieldset>
+    </div><!-- /col -->
+
+    <div class="bf-col-4-12">
+      <h3 class="sub-title">Buttons sizing helpers</h3>
         <fieldset>
           <div><button type="button" class="btn-xsmall">Button (xsmall)</button></div>
           <div><button type="button" class="btn-small">Button (small)</button></div>
@@ -464,7 +586,13 @@
           <div><button type="button" class="btn-large">Button (large)</button></div>
           <div><button type="button" class="btn-xlarge">Button (xlarge)</button></div>
         </fieldset>
+    </div><!-- /col -->
 
+  </div><!-- /row -->
+
+    <div class="bf-row">
+
+      <div class="bf-col-6-12">
         <h3 class="sub-title">Clickable inputs (primary)</h3>
         <fieldset>
           <div><input class="btn btn-primary" type="reset" value="Reset (input)"></div>
@@ -473,8 +601,10 @@
           <div><a class="btn btn-primary" href="#" title="button link">Button (link)</a></div>
           <div><input class="btn btn-primary" disabled type="submit" value="Disabled (input)"></div>
         </fieldset>
+    </div><!-- /col -->
 
 
+      <div class="bf-col-6-12">
         <h3 class="sub-title">Buttons (primary)</h3>
         <fieldset>
           <div><button class="btn btn-primary" type="reset">Reset (button)</button></div>
@@ -482,664 +612,725 @@
           <div><button class="btn btn-primary" type="submit">Submit (button)</button></div>
           <div><button class="btn btn-primary" disabled type="submit">Disabled (button)</button></div>
         </fieldset>
-
-      </form>
-
-
-      <h2 id="tables" class="title">Tables</h2>
-        
-      <h3 class="sub-title">Tabular data unstyled</h3>
-      <table>
-        <caption>Jimi Hendrix - albums</caption>
-        <thead>
-          <tr>
-            <th>Album</th>
-            <th>Year</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>Album</th>
-            <th>Year</th>
-            <th>Price</th>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td>Are You Experienced</td>
-            <td>1967</td>
-            <td>$10.00</td>
-          </tr>
-          <tr>
-            <td>Axis: Bold as Love</td>
-            <td>1967</td>
-            <td>$12.00</td>
-          </tr>
-          <tr>
-            <td>Electric Ladyland</td>
-            <td>1968</td>
-            <td>$10.00</td>
-          </tr>
-          <tr>
-            <td>Band of Gypsys</td>
-            <td>1970</td>
-            <td>$12.00</td>
-          </tr>
-        </tbody>
-      </table>
-        
-        
-      <h3 class="sub-title">Tabular data</h3>
-      <table class="table">
-        <caption>Jimi Hendrix - albums</caption>
-        <thead>
-          <tr>
-            <th>Album</th>
-            <th>Year</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>Album</th>
-            <th>Year</th>
-            <th>Price</th>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td>Are You Experienced</td>
-            <td>1967</td>
-            <td>$10.00</td>
-          </tr>
-          <tr>
-            <td>Axis: Bold as Love</td>
-            <td>1967</td>
-            <td>$12.00</td>
-          </tr>
-          <tr>
-            <td>Electric Ladyland</td>
-            <td>1968</td>
-            <td>$10.00</td>
-          </tr>
-          <tr>
-            <td>Band of Gypsys</td>
-            <td>1970</td>
-            <td>$12.00</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3 class="sub-title">Responsive tabular data</h3>
-      <div class="responsive-table-container">
-      <table class="table">
-        <caption>Caption goes here</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-            <th>Header 4</th>
-            <th>Header 5</th>
-            <th>Header 6</th>
-            <th>Header 7</th>
-            <th>Header 8</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-            <th>Header 4</th>
-            <th>Header 5</th>
-            <th>Header 6</th>
-            <th>Header 7</th>
-            <th>Header 8</th>
-          </tr>
-        </tfoot>
-          <tr>
-            <td>row1_cell1</td>
-            <td>row1_cell2</td>
-            <td>row1_cell3</td>
-            <td>row1_cell4</td>
-            <td>row1_cell5</td>
-            <td>row1_cell6</td>
-            <td>row1_cell7</td>
-            <td>row1_cell8</td>
-          </tr>
-          <tr>
-            <td>row2_cell1</td>
-            <td>row2_cell2</td>
-            <td>row2_cell3</td>
-            <td>row2_cell4</td>
-            <td>row2_cell5</td>
-            <td>row2_cell6</td>
-            <td>row2_cell7</td>
-            <td>row2_cell8</td>
-          </tr>
-          <tr>
-            <td>row3_cell1</td>
-            <td>row3_cell2</td>
-            <td>row3_cell3</td>
-            <td>row3_cell4</td>
-            <td>row3_cell5</td>
-            <td>row3_cell6</td>
-            <td>row3_cell7</td>
-            <td>row3_cell8</td>
-          </tr>
-          <tr>
-            <td>row4_cell1</td>
-            <td>row4_cell2</td>
-            <td>row4_cell3</td>
-            <td>row4_cell4</td>
-            <td>row4_cell5</td>
-            <td>row4_cell6</td>
-            <td>row4_cell7</td>
-            <td>row4_cell8</td>
-          </tr>
-          <tr>
-            <td>row5_cell1</td>
-            <td>row5_cell2</td>
-            <td>row5_cell3</td>
-            <td>row5_cell4</td>
-            <td>row5_cell5</td>
-            <td>row5_cell6</td>
-            <td>row5_cell7</td>
-            <td>row5_cell8</td>
-          </tr>
-        </table>
-      </div><!-- /.responsive-table-containter -->
-
-
-      <h3 class="sub-title">Responsive tabular data with custom scrollbar</h3>
-      <div class="responsive-table-container scrollbar">
-      <table class="table">
-        <caption>Caption goes here</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-            <th>Header 4</th>
-            <th>Header 5</th>
-            <th>Header 6</th>
-            <th>Header 7</th>
-            <th>Header 8</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-            <th>Header 4</th>
-            <th>Header 5</th>
-            <th>Header 6</th>
-            <th>Header 7</th>
-            <th>Header 8</th>
-          </tr>
-        </tfoot>
-          <tr>
-            <td>row1_cell1</td>
-            <td>row1_cell2</td>
-            <td>row1_cell3</td>
-            <td>row1_cell4</td>
-            <td>row1_cell5</td>
-            <td>row1_cell6</td>
-            <td>row1_cell7</td>
-            <td>row1_cell8</td>
-          </tr>
-          <tr>
-            <td>row2_cell1</td>
-            <td>row2_cell2</td>
-            <td>row2_cell3</td>
-            <td>row2_cell4</td>
-            <td>row2_cell5</td>
-            <td>row2_cell6</td>
-            <td>row2_cell7</td>
-            <td>row2_cell8</td>
-          </tr>
-          <tr>
-            <td>row3_cell1</td>
-            <td>row3_cell2</td>
-            <td>row3_cell3</td>
-            <td>row3_cell4</td>
-            <td>row3_cell5</td>
-            <td>row3_cell6</td>
-            <td>row3_cell7</td>
-            <td>row3_cell8</td>
-          </tr>
-          <tr>
-            <td>row4_cell1</td>
-            <td>row4_cell2</td>
-            <td>row4_cell3</td>
-            <td>row4_cell4</td>
-            <td>row4_cell5</td>
-            <td>row4_cell6</td>
-            <td>row4_cell7</td>
-            <td>row4_cell8</td>
-          </tr>
-          <tr>
-            <td>row5_cell1</td>
-            <td>row5_cell2</td>
-            <td>row5_cell3</td>
-            <td>row5_cell4</td>
-            <td>row5_cell5</td>
-            <td>row5_cell6</td>
-            <td>row5_cell7</td>
-            <td>row5_cell8</td>
-          </tr>
-        </table>
-      </div><!-- /.responsive-table-containter -->
-
-
-
-      <h2 id="grid-system" class="title">Fluid grid system</h2>
-      <h3 class="sub-title">12 fluid columns (%)</h3>  
-              
-       <!-- 1-1 --> 
-        <div class="bf-row"> 
-         <div class="bf-col-1">
-            <div class="wrapper">
-              1-1
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-        </div><!-- /row -->
-
-
-        <!-- 1-2 -->
-        <div class="bf-row"> 
-
-        <div class="bf-col-1-2">
-          <div class="wrapper">1-2
-          </div><!-- /.wrapper -->
-        </div><!-- /col -->
-
-        <div class="bf-col-1-2">
-          <div class="wrapper">1-2
-          </div><!-- /.wrapper -->
-        </div><!-- /col -->
-
-        </div><!-- /row --> 
-          
-          
-
-        <!-- 1-3 -->  
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-3">
-            <div class="wrapper">1-3
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-3">
-             <div class="wrapper">1-3
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-3">
-            <div class="wrapper">1-3
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-        </div><!-- /.bf-row- -->
-              
-              
-        <div class="bf-row">
-          <div class="bf-col-1-3">
-             <div class="wrapper">1-3
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-2-3">
-            <div class="wrapper">2-3
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-        </div><!-- /row --> 
-          
-
-          
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-4">
-            <div class="wrapper">1-4
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-4">
-            <div class="wrapper">1-4
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-4">
-            <div class="wrapper">1-4
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-           <div class="bf-col-1-4">
-            <div class="wrapper">1-4
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-        </div><!-- /row --> 
-
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-4">
-            <div class="wrapper">1-4
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-3-4">
-            <div class="wrapper">3-4
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-        </div><!-- /row --> 
-
-
-              
-          
-        <!-- 1-5   --> 
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-5">
-            <div class="wrapper">1-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-5">
-            <div class="wrapper">1-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-5">
-            <div class="wrapper">1-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-           <div class="bf-col-1-5">
-            <div class="wrapper">1-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-5">
-            <div class="wrapper">1-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-        </div><!-- /row -->   
-          
-
-        <div class="bf-row"> 
-          
-          <div class="bf-col-2-5">
-            <div class="wrapper">2-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-3-5">
-            <div class="wrapper">3-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-        </div><!-- /row -->   
-
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-5">
-            <div class="wrapper">1-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-4-5">
-            <div class="wrapper">4-5
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-        </div><!-- /row -->  
-
-              
-
-        <!-- 1-6 -->  
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-6">
-            <div class="wrapper">1-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-6">
-            <div class="wrapper">1-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-6">
-            <div class="wrapper">1-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-           <div class="bf-col-1-6">
-            <div class="wrapper">1-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-           
-          <div class="bf-col-1-6">
-            <div class="wrapper">1-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-          <div class="bf-col-1-6">
-            <div class="wrapper">1-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-        </div><!-- /row -->
-
-
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-6">
-            <div class="wrapper">1-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-5-6">
-            <div class="wrapper">5-6
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-        </div><!-- /row -->
-              
-              
-              
-              
-              
-        <!-- 1-8 -->
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-           <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-         
-          <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-          <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-           <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-          <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-            
-        </div><!-- /row -->
-          
-        <div class="bf-row"> 
-          
-          <div class="bf-col-3-8">
-            <div class="wrapper">3-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-5-8">
-            <div class="wrapper">5-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-            
-        </div><!-- /row -->
-              
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-8">
-            <div class="wrapper">1-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-7-8">
-            <div class="wrapper">7-8
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-            
-        </div><!-- /row -->      
-              
-              
-          
-        <!-- 1-12 --> 
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-           <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-         
-           
-           <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-             <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-          
-           <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-             <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-            
-          <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-          <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-           
-           <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col --> 
-          
-          <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-               
-        </div><!-- /row --> 
-            
-        <div class="bf-row"> 
-           
-          <div class="bf-col-5-12">
-            <div class="wrapper">5-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-            
-          <div class="bf-col-7-12">
-            <div class="wrapper">7-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-              
-        </div><!-- /row --> 
-            
-        <div class="bf-row"> 
-          
-          <div class="bf-col-1-12">
-            <div class="wrapper">1-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-
-          <div class="bf-col-11-12">
-            <div class="wrapper">11-12
-            </div><!-- /.wrapper -->
-          </div><!-- /col -->
-            
-        </div><!-- /row -->     
-
-        
-      <div id="download" class="download">
-        <h2 class="mega"><a class="github-source" href="https://github.com/marco135/bullframe.css" title="bullframe.css github">Download on GitHub</a></h2>
-      </div> 
-       
-      <p class="back-to-top">
-        <a href="#" title="back to top"><span class="h1">&uarr;</span> back to top</a>
-      </p>
-        
-
     </div><!-- /col -->
+
   </div><!-- /row -->
+
+  <div class="bf-row">
+
+    <div class="bf-col-6-12">
+      <h3 class="sub-title">Clickable inputs (success)</h3>
+      <fieldset>
+        <div><input class="btn btn-success" type="reset" value="Reset (input)"></div>
+        <div><input class="btn btn-success" type="button" value="Button (input)"></div>
+        <div><input class="btn btn-success" type="submit" value="Submit (input)"></div>
+        <div><a class="btn btn-success" href="#" title="button link">Button (link)</a></div>
+        <div><input class="btn btn-success" disabled type="submit" value="Disabled (input)"></div>
+      </fieldset>
+    </div><!-- /col -->
+
+    <div class="bf-col-6-12">
+      <h3 class="sub-title">Buttons (success)</h3>
+      <fieldset>
+        <div><button class="btn btn-success" type="reset">Reset (button)</button></div>
+        <div><button class="btn btn-success" type="button">Button (button)</button></div>
+        <div><button class="btn btn-success" type="submit">Submit (button)</button></div>
+        <div><button class="btn btn-success" disabled type="submit">Disabled (button)</button></div>
+      </fieldset>
+    </div><!-- /col -->
+
+  </div><!-- /row -->
+
+    
+
+  <div class="bf-row">
+    <div class="bf-col-12-12">
+      <h2 id="tables" class="title">Tables</h2>
+     </div>   
+  </div><!-- /row -->
+
+    <div class="bf-row">    
+        <div class="bf-col-6-12">
+          
+        <h3 class="sub-title">Unstyled tabular data</h3>
+        <table>
+          <caption>Jimi Hendrix - albums</caption>
+          <thead>
+            <tr>
+              <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Are You Experienced</td>
+              <td>1967</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>Axis: Bold as Love</td>
+              <td>1967</td>
+              <td>$12.00</td>
+            </tr>
+            <tr>
+              <td>Electric Ladyland</td>
+              <td>1968</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>Band of Gypsys</td>
+              <td>1970</td>
+              <td>$12.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /col -->
+
+      <div class="bf-col-6-12">    
+        <h3 class="sub-title">Styled tabular data</h3>
+        <table class="table">
+          <caption>Jimi Hendrix - albums</caption>
+          <thead>
+            <tr>
+              <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Album</th>
+              <th>Year</th>
+              <th>Price</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Are You Experienced</td>
+              <td>1967</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>Axis: Bold as Love</td>
+              <td>1967</td>
+              <td>$12.00</td>
+            </tr>
+            <tr>
+              <td>Electric Ladyland</td>
+              <td>1968</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>Band of Gypsys</td>
+              <td>1970</td>
+              <td>$12.00</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div><!-- /col -->
+    </div><!-- /row -->
+
+    <div class="bf-row">
+
+      <div class="bf-col-12-12">
+
+        <h3 class="sub-title">Styled responsive tabular data</h3>
+        <div class="responsive-table-container">
+        <table class="table">
+          <caption>Caption goes here</caption>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+              <th>Header 5</th>
+              <th>Header 6</th>
+              <th>Header 7</th>
+              <th>Header 8</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+              <th>Header 5</th>
+              <th>Header 6</th>
+              <th>Header 7</th>
+              <th>Header 8</th>
+            </tr>
+          </tfoot>
+            <tr>
+              <td>row1_cell1</td>
+              <td>row1_cell2</td>
+              <td>row1_cell3</td>
+              <td>row1_cell4</td>
+              <td>row1_cell5</td>
+              <td>row1_cell6</td>
+              <td>row1_cell7</td>
+              <td>row1_cell8</td>
+            </tr>
+            <tr>
+              <td>row2_cell1</td>
+              <td>row2_cell2</td>
+              <td>row2_cell3</td>
+              <td>row2_cell4</td>
+              <td>row2_cell5</td>
+              <td>row2_cell6</td>
+              <td>row2_cell7</td>
+              <td>row2_cell8</td>
+            </tr>
+            <tr>
+              <td>row3_cell1</td>
+              <td>row3_cell2</td>
+              <td>row3_cell3</td>
+              <td>row3_cell4</td>
+              <td>row3_cell5</td>
+              <td>row3_cell6</td>
+              <td>row3_cell7</td>
+              <td>row3_cell8</td>
+            </tr>
+            <tr>
+              <td>row4_cell1</td>
+              <td>row4_cell2</td>
+              <td>row4_cell3</td>
+              <td>row4_cell4</td>
+              <td>row4_cell5</td>
+              <td>row4_cell6</td>
+              <td>row4_cell7</td>
+              <td>row4_cell8</td>
+            </tr>
+            <tr>
+              <td>row5_cell1</td>
+              <td>row5_cell2</td>
+              <td>row5_cell3</td>
+              <td>row5_cell4</td>
+              <td>row5_cell5</td>
+              <td>row5_cell6</td>
+              <td>row5_cell7</td>
+              <td>row5_cell8</td>
+            </tr>
+          </table>
+        </div><!-- /.responsive-table-containter -->
+
+
+        <h3 class="sub-title">Styled responsive tabular data with webkit scrollbar</h3>
+        <div class="responsive-table-container scrollbar">
+        <table class="table">
+          <caption>Caption goes here</caption>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+              <th>Header 5</th>
+              <th>Header 6</th>
+              <th>Header 7</th>
+              <th>Header 8</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+              <th>Header 5</th>
+              <th>Header 6</th>
+              <th>Header 7</th>
+              <th>Header 8</th>
+            </tr>
+          </tfoot>
+            <tr>
+              <td>row1_cell1</td>
+              <td>row1_cell2</td>
+              <td>row1_cell3</td>
+              <td>row1_cell4</td>
+              <td>row1_cell5</td>
+              <td>row1_cell6</td>
+              <td>row1_cell7</td>
+              <td>row1_cell8</td>
+            </tr>
+            <tr>
+              <td>row2_cell1</td>
+              <td>row2_cell2</td>
+              <td>row2_cell3</td>
+              <td>row2_cell4</td>
+              <td>row2_cell5</td>
+              <td>row2_cell6</td>
+              <td>row2_cell7</td>
+              <td>row2_cell8</td>
+            </tr>
+            <tr>
+              <td>row3_cell1</td>
+              <td>row3_cell2</td>
+              <td>row3_cell3</td>
+              <td>row3_cell4</td>
+              <td>row3_cell5</td>
+              <td>row3_cell6</td>
+              <td>row3_cell7</td>
+              <td>row3_cell8</td>
+            </tr>
+            <tr>
+              <td>row4_cell1</td>
+              <td>row4_cell2</td>
+              <td>row4_cell3</td>
+              <td>row4_cell4</td>
+              <td>row4_cell5</td>
+              <td>row4_cell6</td>
+              <td>row4_cell7</td>
+              <td>row4_cell8</td>
+            </tr>
+            <tr>
+              <td>row5_cell1</td>
+              <td>row5_cell2</td>
+              <td>row5_cell3</td>
+              <td>row5_cell4</td>
+              <td>row5_cell5</td>
+              <td>row5_cell6</td>
+              <td>row5_cell7</td>
+              <td>row5_cell8</td>
+            </tr>
+          </table>
+        </div><!-- /.responsive-table-containter -->
+
+
+    </div><!-- /.bf-col-12-12 -->
+  </div><!-- /.bf-row -->
+
+
+  <div class="bf-row">
+
+    <div class="bf-col-12-12">
+      <h2 id="grid-system" class="title">Grid System</h2>
+      <p>12 columns fluid Grid System</p>  
+    </div><!-- /col -->
+
+  </div><!-- /row -->
+
+  <div class="grid">
+
+     <!-- 12-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-12-12">
+          <div class="wrapper">
+            12-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+     <!-- 11-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-11-12">
+          <div class="wrapper">
+            11-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        <div class="bf-col-1-12">
+          <div class="wrapper">
+            1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+
+     <!-- 10-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-10-12">
+          <div class="wrapper">
+            10-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        <div class="bf-col-2-12">
+          <div class="wrapper">
+            2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+
+
+      <!-- 9-12 -->
+      <div class="bf-row"> 
+
+      <div class="bf-col-9-12">
+        <div class="wrapper">9-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      <div class="bf-col-3-12">
+        <div class="wrapper">3-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      </div><!-- /row --> 
+
+
+
+     <!-- 8-12 -->
+      <div class="bf-row"> 
+
+      <div class="bf-col-8-12">
+        <div class="wrapper">8-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      <div class="bf-col-4-12">
+        <div class="wrapper">4-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      </div><!-- /row --> 
+
+
+     <!-- 7-12 -->
+      <div class="bf-row"> 
+
+      <div class="bf-col-7-12">
+        <div class="wrapper">7-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      <div class="bf-col-5-12">
+        <div class="wrapper">5-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      </div><!-- /row --> 
+
+
+      <!-- 6-12 -->
+      <div class="bf-row"> 
+
+      <div class="bf-col-6-12">
+        <div class="wrapper">6-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      <div class="bf-col-6-12">
+        <div class="wrapper">6-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      </div><!-- /row --> 
+        
+
+
+      <!-- 5-12 -->
+      <div class="bf-row"> 
+
+      <div class="bf-col-5-12">
+        <div class="wrapper">5-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      <div class="bf-col-7-12">
+        <div class="wrapper">7-12
+        </div><!-- /.wrapper -->
+      </div><!-- /col -->
+
+      </div><!-- /row --> 
+
+
+      <!-- 4-12 -->  
+      <div class="bf-row"> 
+        
+        <div class="bf-col-4-12">
+          <div class="wrapper">4-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-4-12">
+           <div class="wrapper">4-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-4-12">
+          <div class="wrapper">4-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        
+      </div><!-- /.bf-row- -->
+        
+
+      <!-- 3-12 -->  
+      <div class="bf-row"> 
+        
+        <div class="bf-col-3-12">
+          <div class="wrapper">3-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-3-12">
+          <div class="wrapper">3-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-3-12">
+          <div class="wrapper">3-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        
+         <div class="bf-col-3-12">
+          <div class="wrapper">3-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        
+      </div><!-- /row --> 
+
+
+    
+      <!-- 2-12 --> 
+      <div class="bf-row"> 
+        
+        <div class="bf-col-2-12">
+          <div class="wrapper">2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-2-12">
+          <div class="wrapper">2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-2-12">
+          <div class="wrapper">2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        
+         <div class="bf-col-2-12">
+          <div class="wrapper">2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-2-12">
+          <div class="wrapper">2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-2-12">
+          <div class="wrapper">2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        
+      </div><!-- /row -->   
+            
+
+
+      <!-- 1-12 --> 
+      <div class="bf-row"> 
+        
+        <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+
+        <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        
+         <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+       
+         
+         <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col --> 
+        
+           <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+        
+         <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col --> 
+        
+           <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+          
+        <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col --> 
+        
+        <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+         
+         <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col --> 
+        
+        <div class="bf-col-1-12">
+          <div class="wrapper">1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+             
+      </div><!-- /row --> 
+    
+      
+    </div><!-- /grid -->    
+
+
+    <!-- offsetting -->
+    <div class="grid">
+
+      <div class="bf-row"> 
+       <div class="bf-col-12-12">
+        <p>Offsetting columns</p>
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+
+      <!-- 11-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-1-12 bf-col-offset-11-12">
+        <div class="wrapper">
+            offset-11-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 10-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-2-12 bf-col-offset-10-12">
+        <div class="wrapper">
+            offset-10-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 9-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-3-12 bf-col-offset-9-12">
+        <div class="wrapper">
+            offset-9-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 8-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-4-12 bf-col-offset-8-12">
+        <div class="wrapper">
+            offset-8-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 7-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-5-12 bf-col-offset-7-12">
+        <div class="wrapper">
+            offset-7-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 6-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-6-12 bf-col-offset-6-12">
+        <div class="wrapper">
+            offset-6-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 5-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-7-12 bf-col-offset-5-12">
+        <div class="wrapper">
+            offset-5-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 4-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-8-12 bf-col-offset-4-12">
+        <div class="wrapper">
+            offset-4-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 3-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-9-12 bf-col-offset-3-12">
+        <div class="wrapper">
+            offset-3-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 2-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-10-12 bf-col-offset-2-12">
+        <div class="wrapper">
+            offset-2-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <!-- 1-12 --> 
+      <div class="bf-row"> 
+       <div class="bf-col-11-12 bf-col-offset-1-12">
+        <div class="wrapper">
+            offset-1-12
+          </div><!-- /.wrapper -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+    </div><!-- /grid -->    
+
+
+  <span class="back-to-top">
+    <a href="#" title="back to top"><i class="h1">&uarr;</i> <b>back to top</b></a>
+  </span>
+
+
 </div><!-- /.bf-container -->
+
+
+<div id="download" class="download">
+  <div class="bf-container">
+
+    <div class="bf-row">
+      <div class="bf-col-12-12">
+        <a class="github-source" href="http://github.com/marco135/bullframe.css/archive/master.zip">Download BULLFRAME.CSS</a>
+      </div><!-- /col -->
+    </div><!-- /row -->
+
+  </div><!-- /.bf-container -->
+</div><!-- /.download -->
+
 
 </body>
 </html>

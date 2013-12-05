@@ -12,10 +12,7 @@ html,
 dt,
 dd,
 address,
-pre,
-button,
-.btn, 
-input {
+pre {
   line-height: 1.5;
 }
 

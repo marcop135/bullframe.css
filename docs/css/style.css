@@ -167,6 +167,11 @@
 /* section titles 
 --------------------------------------------------------------------------- */
 
+.title,
+.sub-title {
+  text-transform: uppercase;
+} 
+
 .title {
   padding: 0.5em;
   color: #fff;
@@ -177,7 +182,6 @@
 .sub-title {
   margin-top: 2em;
   padding: 0.5em 0;
-  text-transform: uppercase;
 } 
 
 
@@ -279,9 +283,8 @@ h2#grid-system {
   text-align: center;
 }
 
-.sharing iframe {
-  border: 0;
-  vertical-align: middle;
+.sharing .tw-btn-wrapper {
+  margin-bottom: 3em;
 }
 
 .download {

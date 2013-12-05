@@ -259,20 +259,6 @@
 
   <div class="bf-row">
 
-    <div class="bf-col-4-12">
-      <h3 class="sub-title">Nav ul list</h3>
-      <nav>
-        <ul>
-          <li><a href="#">navigation item #1</a></li>
-          <li><a href="#">navigation item #2</a></li>
-          <li><a href="#">navigation item #3</a></li>
-          <li><a href="#">navigation item #4</a></li>
-          <li><a href="#">navigation item #5</a></li>
-          <li><a href="#">navigation item #6</a></li>
-        </ul>
-      </nav>
-    </div><!-- /col -->
-
     <div class="bf-col-4-12">  
       <h3 class="sub-title">Unstyled list</h3>
       <ul class="list-unstyled">
@@ -295,10 +281,21 @@
       </ul>
     </div><!-- /col -->
 
-  </div><!-- /row -->
+    <div class="bf-col-4-12">
+      <h3 class="sub-title">Nav ul list</h3>
+      <nav>
+        <ul>
+          <li><a href="#">navigation item #1</a></li>
+          <li><a href="#">navigation item #2</a></li>
+          <li><a href="#">navigation item #3</a></li>
+          <li><a href="#">navigation item #4</a></li>
+          <li><a href="#">navigation item #5</a></li>
+          <li><a href="#">navigation item #6</a></li>
+        </ul>
+      </nav>
+    </div><!-- /col -->
 
-  <div class="bf-row">
-    <div class="bf-col-12-12">  
+    <div class="bf-col-4-12">  
       <h3 class="sub-title">Inline list</h3>
       <ul class="list-inline">
         <li><a href="#" title="">list item 1</a></li>
@@ -309,6 +306,7 @@
         <li><a href="#" title="">list item 6</a></li>
       </ul>
     </div><!-- /col -->
+
   </div><!-- /row -->
 
   <div class="bf-row">
@@ -388,9 +386,15 @@
   </div><!-- /row -->
 
   <div class="bf-row">
-
+    <div class="bf-col-12-12">
+      <p>100% width <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;textarea&gt;</code></p>
+    </div><!-- /col -->
+  </div><!-- /row -->
+    
+  <div class="bf-row">
     <div class="bf-col-6-12">
       <h3 class="sub-title">Inputs</h3>
+
       <form>
         <fieldset>
           <legend>HTML5 has several new input types for forms (legend).</legend>
@@ -470,6 +474,7 @@
       <form>
         <h3 class="sub-title">Selects</h3>
         <fieldset>
+          <legend>Cross-browser, cross-platform consistency in webkit browsers.</legend>    
           <div>
             <label for="s">Select field</label> 
             <select id="s">
@@ -641,7 +646,7 @@
     <div class="bf-row">    
         <div class="bf-col-6-12">
           
-        <h3 class="sub-title">Tabular data unstyled</h3>
+        <h3 class="sub-title">Unstyled tabular data</h3>
         <table>
           <caption>Jimi Hendrix - albums</caption>
           <thead>
@@ -684,7 +689,7 @@
       </div><!-- /col -->
 
       <div class="bf-col-6-12">    
-        <h3 class="sub-title">Tabular data</h3>
+        <h3 class="sub-title">Styled tabular data</h3>
         <table class="table">
           <caption>Jimi Hendrix - albums</caption>
           <thead>
@@ -732,7 +737,7 @@
 
       <div class="bf-col-12-12">
 
-        <h3 class="sub-title">Responsive tabular data</h3>
+        <h3 class="sub-title">Styled responsive tabular data</h3>
         <div class="responsive-table-container">
         <table class="table">
           <caption>Caption goes here</caption>
@@ -814,7 +819,7 @@
         </div><!-- /.responsive-table-containter -->
 
 
-        <h3 class="sub-title">Responsive tabular data with webkit scrollbar</h3>
+        <h3 class="sub-title">Styled responsive tabular data with webkit scrollbar</h3>
         <div class="responsive-table-container scrollbar">
         <table class="table">
           <caption>Caption goes here</caption>
@@ -1301,19 +1306,22 @@
 
 
   <span class="back-to-top">
-    <a href="#" title="back to top"><i class="h1">&uarr;</i> back to top</a>
+    <a href="#" title="back to top"><i class="h1">&uarr;</i> <b>back to top</b></a>
   </span>
 
   <!-- avoid this row in production -->
   <div class="bf-row">
+
     <div class="bf-col-12-12">
       <div class="sharing">
-        <p><a href="https://twitter.com/m135_" class="twitter-follow-button" data-show-count="false">Follow @m135_</a></p>
+        <div class="tw-btn-wrapper">
+          <a href="https://twitter.com/m135_" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @m135_</a>
+        </div>
         <p><a href="https://github.com/marco135/bullframe.css" title="github source">github.com/marco135/bullframe.css</a></p>
-        <p><small><code>$ git clone https://github.com/marco135/bullframe.css.git</code></small></p>
+        <p><code>$ git clone https://github.com/marco135/bullframe.css.git</code></p>
       </div><!--/.social-btns -->
-
     </div><!-- /col -->
+
   </div><!-- /row -->
 
 

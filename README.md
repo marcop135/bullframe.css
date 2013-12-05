@@ -72,12 +72,11 @@ Tested and compatible in:
 </ul>
 <ul>
   <li>Mobile Safari iOS 4+</li>
-  <li>Android browser 2.3.2+ *</li>
+  <li>Android browser 2.2+ *</li>
   <li>Latest stable Opera Mobile (Presto and Webkit) *</li>
   <li>Opera Mini *</li>
   <li>Internet Explorer Mobile 9-10</li>
   <li>Latest stable Mobile Firefox (Fennec)</li>
-  <li>Blackberry browser OS 5</li>
   <li>Latest stable Kindle Touch browser</li>
 </ul>
 <p>* <b>Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug</b>. When the viewport is too narrow, content that overflows is hidden. <a href="http://barrow.io/overflow-scrolling" title="overflow scrolling">Get more info</a>.</p>

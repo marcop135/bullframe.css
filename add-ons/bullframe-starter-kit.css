@@ -416,7 +416,19 @@ textarea:focus,
   select:focus,
   textarea:focus,
   #input-focused  {
-    outline-color: ;
+    outline-color: #2a6496;
+  }
+
+  .invalid input,
+  .invalid textarea,
+  .invalid select,
+  .invalid input:focus,
+  .invalid textarea:focus,
+  .invalid select:focus,
+  input:focus.invalid,
+  textarea:focus.invalid,
+  select:focus.invalid  {
+    outline-color: #b94a48;
   }
 
 }

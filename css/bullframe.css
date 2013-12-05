@@ -2,7 +2,7 @@
  * BULLFRAME.CSS v1.6.0
  *
  * GitHub: https://github.com/marco135/bullframe.css
- * MIT Licenses
+ * MIT License
  *
  * Carefully built by @m135_
  */
@@ -51,10 +51,7 @@ html,
 dt,
 dd,
 address,
-pre,
-button,
-.btn, 
-input {
+pre {
   line-height: 1.5;
 }
 
@@ -511,6 +508,11 @@ output {
 }
 
 button,
+input {
+  line-height: normal;
+}
+
+button,
 html input, 
 select, 
 textarea {
@@ -558,7 +560,7 @@ legend {
 }
 
 label {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 label input {
@@ -691,30 +693,6 @@ textarea:focus,
           box-shadow: 0 0 0 1px #2a6496;
 }
 
-/* replace unsupported box-shadow in IE8 */
-@media \0screen {
-
-  input[type="color"]:focus, 
-  input[type="email"]:focus, 
-  input[type="number"]:focus, 
-  input[type="password"]:focus, 
-  input[type="tel"]:focus, 
-  input[type="search"]:focus,
-  input[type="text"]:focus, 
-  input[type^="date"]:focus,
-  input[type="month"]:focus, 
-  input[type="time"]:focus, 
-  input[type="week"]:focus, 
-  input[type="time"]:focus, 
-  input[type="url"]:focus,
-  select:focus,
-  textarea:focus,
-  #input-focused {
-    outline: 1px solid #2a6496;
-  }
-
-}
-
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -793,6 +771,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   padding: 0.5em 1em;
+  line-height: normal;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
@@ -1062,7 +1041,8 @@ input:active[disabled] {
 fieldset[disabled] .btn-primary
 fieldset.disabled .btn-primary,
 .btn.btn-primary[disabled],
-.btn.btn-primary.disabled {
+.btn.btn-primary.disabled,
+.btn.btn-primary.disabled:active {
   background: #bed4f7 none !important; /* very light blue */
   border-color: #bed4f7 !important;
   color: #fff !important;
@@ -1071,7 +1051,8 @@ fieldset.disabled .btn-primary,
 fieldset[disabled] .btn-success
 fieldset.disabled .btn-success,
 .btn.btn-success[disabled],
-.btn.btn-success.disabled {
+.btn.btn-success.disabled,
+.btn.btn-success.disabled:active {
   background: #a2d6a2 none !important; /* very light green */
   border-color: #a2d6a2 !important;
   color: #fff !important;

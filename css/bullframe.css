@@ -98,7 +98,7 @@ a:focus {
 }
 
 a:focus { 
-  outline: 1px dotted #222;
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
 } 

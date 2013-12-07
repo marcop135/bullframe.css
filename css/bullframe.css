@@ -329,7 +329,7 @@ img::-moz-selection {
   background-color: transparent; 
 }
 
-img::selection  { 
+img::selection { 
   background-color: transparent;      
 }
 
@@ -597,6 +597,9 @@ input[type="submit"],
 input[type="email"], 
 input[type="text"],
 input[type="tel"], 
+input[type^="date"],
+input[type="month"],
+input[type="week"],
 input[type="url"],
 input[type="image"],
 input[type="password"], 

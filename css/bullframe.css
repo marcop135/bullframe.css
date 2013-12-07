@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.0
+ * BULLFRAME.CSS v1.6.1
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
@@ -98,7 +98,7 @@ a:focus {
 }
 
 a:focus { 
-  outline: 1px dotted #222;
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
 } 
@@ -267,7 +267,7 @@ pre,
 code, 
 kbd, 
 samp {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -329,7 +329,7 @@ img::-moz-selection {
   background-color: transparent; 
 }
 
-img::selection  { 
+img::selection { 
   background-color: transparent;      
 }
 
@@ -597,6 +597,9 @@ input[type="submit"],
 input[type="email"], 
 input[type="text"],
 input[type="tel"], 
+input[type^="date"],
+input[type="month"],
+input[type="week"],
 input[type="url"],
 input[type="image"],
 input[type="password"], 
@@ -688,7 +691,6 @@ textarea:focus,
 #input-focused {
   border-color: #2a6496; /* blue */
   outline: 0 none;
-  *outline: 1px solid #2a6496;
   -webkit-box-shadow: 0 0 0 1px #2a6496;
           box-shadow: 0 0 0 1px #2a6496;
 }
@@ -943,19 +945,18 @@ input[type="submit"]:active {
 
 /* invalid, placeholder, disabled adn readonly ----------------------------- */
 
-.invalid input,
-.invalid textarea,
-.invalid select,
-.invalid input:focus,
-.invalid textarea:focus,
-.invalid select:focus,
-input:focus.invalid,
-textarea:focus.invalid,
-select:focus.invalid {
+input:focus:invalid, 
+select:focus:invalid,
+textarea:focus:invalid { 
   color: #b94a48; /* dark red */
   border-color: #b94a48; /* red */
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #b94a48; /* red */
   outline: 0 none;
-  *outline: 1px solid #b94a48;
   -webkit-box-shadow: 0 0 0 1px #b94a48;
           box-shadow: 0 0 0 1px #b94a48;
 }
@@ -1001,11 +1002,6 @@ fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
-fieldset.disabled .btn,
-fieldset.disabled button,
-fieldset.disabled input,
-fieldset.disabled select,
-fieldset.disabled textarea,
 
 /* disable singles */
 .btn[disabled],
@@ -1013,19 +1009,13 @@ button[disabled],
 input[disabled],
 select[disabled],
 textarea[disabled],
-.btn.disabled,
-button.disabled,
-input.disabled,
-select.disabled,
-textarea.disabled,
 
 /* disable active singles */
-button.disabled:active,
-.btn.disabled:active,
-input.disabled:active,
-button:active[disabled],
 .btn:active[disabled],
-input:active[disabled] {
+button:active[disabled],
+input:active[disabled],
+select:active[disabled],
+textarea:active[disabled] {
   cursor: default !important;
   cursor: not-allowed !important;
   background: #f9f9f9 none !important; /* very light grey */
@@ -1033,26 +1023,22 @@ input:active[disabled] {
   color: #b2b2b2 !important;
   text-shadow: none !important;
   -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
   opacity: 1 !important;
 }
 
-fieldset[disabled] .btn-primary
-fieldset.disabled .btn-primary,
-.btn.btn-primary[disabled],
-.btn.btn-primary.disabled,
-.btn.btn-primary.disabled:active {
+fieldset[disabled] .btn-primary,
+[disabled].btn-primary,
+[disabled].btn-primary:active {
   background: #bed4f7 none !important; /* very light blue */
   border-color: #bed4f7 !important;
   color: #fff !important;
 }
 
-fieldset[disabled] .btn-success
-fieldset.disabled .btn-success,
-.btn.btn-success[disabled],
-.btn.btn-success.disabled,
-.btn.btn-success.disabled:active {
+fieldset[disabled] .btn-success,
+[disabled].btn-success,
+[disabled].btn-success:active {
   background: #a2d6a2 none !important; /* very light green */
   border-color: #a2d6a2 !important;
   color: #fff !important;
@@ -1061,12 +1047,7 @@ fieldset.disabled .btn-success,
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 fieldset[disabled] input[type="radio"],
-fieldset[disabled] input[type="checkbox"],
-
-input[type="radio"].disabled,
-input[type="checkbox"].disabled,
-fieldset.disabled input[type="radio"],
-fieldset.disabled input[type="checkbox"] {
+fieldset[disabled] input[type="checkbox"] {
   background-color: transparent;
 }
 

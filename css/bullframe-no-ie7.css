@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.0 no-ie7
+ * BULLFRAME.CSS v1.6.1 no-ie7
  *
  * Browser support: IE8+
  * GitHub: https://github.com/marco135/bullframe.css
@@ -97,7 +97,7 @@ a:focus {
 }
 
 a:focus { 
-  outline: 1px dotted #222;
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
 } 
@@ -211,7 +211,6 @@ blockquote small {
 
 blockquote small:before {
   content: '\2014 \00A0';
-  *content: '';
 }
 
 q {
@@ -260,7 +259,7 @@ pre,
 code, 
 kbd, 
 samp {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -322,7 +321,7 @@ img::-moz-selection {
   background-color: transparent; 
 }
 
-img::selection  { 
+img::selection { 
   background-color: transparent;      
 }
 
@@ -585,6 +584,9 @@ input[type="submit"],
 input[type="email"], 
 input[type="text"],
 input[type="tel"], 
+input[type^="date"],
+input[type="month"],
+input[type="week"],
 input[type="url"],
 input[type="image"],
 input[type="password"], 
@@ -693,6 +695,12 @@ html input,
 select,
 textarea {
   width: 100%;
+  *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
+}
+
+input[type="file"],
+select {
+  *width: 100%;
 }
 
 button,
@@ -722,6 +730,7 @@ textarea {
   padding: 0.5em;
 }
   
+
 /* customize radios and checkboxes ---------------------------------------- */
 
 label input[type="radio"], 
@@ -901,16 +910,16 @@ input[type="submit"]:active {
 
 /* invalid, placeholder, disabled adn readonly ----------------------------- */
 
-.invalid input,
-.invalid textarea,
-.invalid select,
-.invalid input:focus,
-.invalid textarea:focus,
-.invalid select:focus,
-input:focus.invalid,
-textarea:focus.invalid,
-select:focus.invalid {
+input:focus:invalid, 
+select:focus:invalid,
+textarea:focus:invalid { 
   color: #b94a48; /* dark red */
+  border-color: #b94a48; /* red */
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
   border-color: #b94a48; /* red */
   outline: 0 none;
   -webkit-box-shadow: 0 0 0 1px #b94a48;
@@ -958,11 +967,6 @@ fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
-fieldset.disabled .btn,
-fieldset.disabled button,
-fieldset.disabled input,
-fieldset.disabled select,
-fieldset.disabled textarea,
 
 /* disable singles */
 .btn[disabled],
@@ -970,19 +974,13 @@ button[disabled],
 input[disabled],
 select[disabled],
 textarea[disabled],
-.btn.disabled,
-button.disabled,
-input.disabled,
-select.disabled,
-textarea.disabled,
 
 /* disable active singles */
-button.disabled:active,
-.btn.disabled:active,
-input.disabled:active,
-button:active[disabled],
 .btn:active[disabled],
-input:active[disabled] {
+button:active[disabled],
+input:active[disabled],
+select:active[disabled],
+textarea:active[disabled] {
   cursor: default !important;
   cursor: not-allowed !important;
   background: #f9f9f9 none !important; /* very light grey */
@@ -990,26 +988,22 @@ input:active[disabled] {
   color: #b2b2b2 !important;
   text-shadow: none !important;
   -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
   opacity: 1 !important;
 }
 
-fieldset[disabled] .btn-primary
-fieldset.disabled .btn-primary,
-.btn.btn-primary[disabled],
-.btn.btn-primary.disabled,
-.btn.btn-primary.disabled:active {
+fieldset[disabled] .btn-primary,
+[disabled].btn-primary,
+[disabled].btn-primary:active {
   background: #bed4f7 none !important; /* very light blue */
   border-color: #bed4f7 !important;
   color: #fff !important;
 }
 
-fieldset[disabled] .btn-success
-fieldset.disabled .btn-success,
-.btn.btn-success[disabled],
-.btn.btn-success.disabled,
-.btn.btn-success.disabled:active {
+fieldset[disabled] .btn-success,
+[disabled].btn-success,
+[disabled].btn-success:active {
   background: #a2d6a2 none !important; /* very light green */
   border-color: #a2d6a2 !important;
   color: #fff !important;
@@ -1018,12 +1012,7 @@ fieldset.disabled .btn-success,
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 fieldset[disabled] input[type="radio"],
-fieldset[disabled] input[type="checkbox"],
-
-input[type="radio"].disabled,
-input[type="checkbox"].disabled,
-fieldset.disabled input[type="radio"],
-fieldset.disabled input[type="checkbox"] {
+fieldset[disabled] input[type="checkbox"] {
   background-color: transparent;
 }
 
@@ -1378,7 +1367,7 @@ table col[class*="bf-col-"] {
  * The ".opera-only" selector is used to prevent actual prefocus styling
  * and is not required in markup.
 */
-.opera-only :-o-prefocus, /* this hack affect also IE7 */
+.opera-only :-o-prefocus,
 .inline-block-container {
   word-spacing: -0.43em;
 }

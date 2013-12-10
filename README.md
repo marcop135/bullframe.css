@@ -40,8 +40,8 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 &lt;html>
 &lt;head>
 &lt;meta charset="utf-8">
-    &lt;link src="bullframe.min.css rel="stylesheet">
-&lt;link src="custom-styles.css" rel="stylesheet">
+    &lt;link href="bullframe.min.css rel="stylesheet">
+&lt;link href="custom-styles.css" rel="stylesheet">
 &lt;/head>
 ...</code></pre>
   </li>

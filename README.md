@@ -98,5 +98,5 @@ BULLFRAME.CSS incorporates some of the styles found on:
   <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
   <li>Pure CSS - <a href="https://github.com/yui/pure" title="">https://github.com/yui/pure</a></li>
   <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
-  <li>The Nyan Project - <a href="http://www.youtube.com/watch?v=QH2-TGUlwu4" title="">http://www.youtube.com/watch?v=QH2-TGUlwu4</a></li>
+  <li>The Nyan Project - <a href="http://www.youtube.com/watch?v=jI-kpVh6e1U" title="">http://www.youtube.com/watch?v=jI-kpVh6e1U</a></li>
 </ul>

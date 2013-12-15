@@ -96,8 +96,7 @@ BULLFRAME.CSS incorporates some of the styles found on:
   <li>Formalize - <a href="https://github.com/nathansmith/formalize" title="">https://github.com/nathansmith/formalize</a></li>
   <li>Inuit CSS - <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
   <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
-  <li>YUI Pure Framework - <a href="https://github.com/yui/pure/" title="">https://github.com/yui/pure/</a></li>
-  <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
   <li>Pure CSS - <a href="https://github.com/yui/pure" title="">https://github.com/yui/pure</a></li>
+  <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
   <li>The Nyan Project - <a href="http://www.youtube.com/watch?v=QH2-TGUlwu4" title="">http://www.youtube.com/watch?v=QH2-TGUlwu4</a></li>
 </ul>

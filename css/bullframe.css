@@ -463,11 +463,6 @@ svg:not(:root) {
   max-width: none !important; 
 }
 
-/* override the Twitter embed fixed width */
-.twitter-tweet-rendered {
-  max-width: 100% !important;
-}
-
 
 
 

@@ -41,6 +41,23 @@ video {
 
 
 
+/* google maps possible fix ------------------------------------------------
+ * see also http://getbootstrap.com/getting-started/#third-parties
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; 
+}
+*/
+
+
+
+
+
 /* Change skin -------------------------------------------------------------
 
 html, 

@@ -451,20 +451,6 @@ svg:not(:root) {
 }
 
 
-/* vendor styles ----------------------------------------------------------- */
-
-/* google maps fix */
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-  max-width: none !important; 
-}
-
-
-
 
 
 /* $ Figures

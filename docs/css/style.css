@@ -317,6 +317,10 @@ h2#grid-system {
   text-decoration: none;
 }
 
+[role="contentinfo"] {
+  background-color: #ccc;
+}
+
 
 
 

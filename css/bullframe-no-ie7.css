@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.1 no-ie7
+ * BULLFRAME.CSS v1.6.2 no-ie7
  *
  * Browser support: IE8+
  * GitHub: https://github.com/marco135/bullframe.css
@@ -211,6 +211,7 @@ blockquote small {
 
 blockquote small:before {
   content: '\2014 \00A0';
+  *content: '';
 }
 
 q {
@@ -381,7 +382,6 @@ dd {
   margin-right: 1.5em;
 }
 
-/* IE8+ */
 .list-inline > li:last-child {
   margin-right: 0;
 }
@@ -440,25 +440,6 @@ audio:not([controls]) {
 svg:not(:root) { 
   overflow: hidden;
 }
-
-
-/* vendor styles ----------------------------------------------------------- */
-
-/* google maps fix */
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-  max-width: none !important; 
-}
-
-/* override the Twitter embed fixed width */
-.twitter-tweet-rendered {
-  max-width: 100% !important;
-}
-
 
 
 
@@ -695,12 +676,6 @@ html input,
 select,
 textarea {
   width: 100%;
-  *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
-}
-
-input[type="file"],
-select {
-  *width: 100%;
 }
 
 button,
@@ -1348,26 +1323,23 @@ table col[class*="bf-col-"] {
   letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
   text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 
-  /*
-  Use flexbox when possible to avoid 'letter-spacing' side-effects.
-
-  NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-  '-moz-' prefix version is omitted.
+  /* The following font stack makes Pure Grids work on all known environments.
+  * FreeSans: Ships with many Linux distros, including Ubuntu
+  * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+  Arial to get picked up by the browser, even though neither is available
+  in Chrome OS.
+  * Droid Sans: Ships with all versions of Android.
+  * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
   */
-
-  display: -webkit-flex;
-  -webkit-flex-flow: row wrap;
-
-  /* IE10 uses display: flexbox */
-  display: -ms-flexbox;
-  -ms-flex-flow: row wrap;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
  * The ".opera-only" selector is used to prevent actual prefocus styling
  * and is not required in markup.
 */
-.opera-only :-o-prefocus,
+
+/* this hack affect also IE7 */
 .inline-block-container {
   word-spacing: -0.43em;
 }
@@ -1378,6 +1350,7 @@ table col[class*="bf-col-"] {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* how to use:

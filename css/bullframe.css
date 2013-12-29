@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.1
+ * BULLFRAME.CSS v1.6.2
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
@@ -449,25 +449,6 @@ audio:not([controls]) {
 svg:not(:root) { 
   overflow: hidden;
 }
-
-
-/* vendor styles ----------------------------------------------------------- */
-
-/* google maps fix */
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-  max-width: none !important; 
-}
-
-/* override the Twitter embed fixed width */
-.twitter-tweet-rendered {
-  max-width: 100% !important;
-}
-
 
 
 
@@ -1429,19 +1410,15 @@ table col[class*="bf-col-"] {
   *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
   text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 
-  /*
-  Use flexbox when possible to avoid 'letter-spacing' side-effects.
-
-  NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-  '-moz-' prefix version is omitted.
+  /* The following font stack makes Pure Grids work on all known environments.
+  * FreeSans: Ships with many Linux distros, including Ubuntu
+  * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+  Arial to get picked up by the browser, even though neither is available
+  in Chrome OS.
+  * Droid Sans: Ships with all versions of Android.
+  * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
   */
-
-  display: -webkit-flex;
-  -webkit-flex-flow: row wrap;
-
-  /* IE10 uses display: flexbox */
-  display: -ms-flexbox;
-  -ms-flex-flow: row wrap;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -1461,6 +1438,7 @@ table col[class*="bf-col-"] {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* how to use:

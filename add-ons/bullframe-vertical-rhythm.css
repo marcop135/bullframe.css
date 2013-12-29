@@ -1,4 +1,4 @@
-/*! Vertical rhythm - BULLFRAME.CSS v1.6.1 add-on 
+/*! Vertical rhythm - BULLFRAME.CSS v1.6.2 add-on 
  * 
  * Follow baseline number '1.5' and compose to a vertical rhythm
  * ..or use the number you want.
@@ -16,8 +16,7 @@ pre {
   line-height: 1.5;
 }
 
-.bf-container,
-.container {
+.bf-container {
   padding-top: 1.5em;
 }
 
@@ -72,7 +71,7 @@ iframe[src*="//www.youtube.com"],
 iframe[src*="//vimeo.com"],
 embed[src*="//www.youtube.com"],
 table,
-.table-overflow-container,
+.responsive-table-container,
 button,
 .btn,
 html input,
@@ -82,20 +81,13 @@ textarea,
 .img-right,
 .alignnone,
 .alignright,
-.alignleft,
-a img.alignright,
-a img.alignnone,
-a img.alignleft,
-a img.aligncenter,
-.wp-caption.alignnone,
-.wp-caption.alignleft,
-.wp-caption.alignright {
+.alignleft {
   margin-bottom: 1.5em;
 }
 
 @media screen and (max-width: 640px) { 
 
-  .responsive-grid [class*="col-"] {
+  .responsive-grid [class*="bf-col-"] {
     margin-bottom: 1.5em;
   }
 
@@ -109,28 +101,21 @@ ol ul,
 ul ul,
 ol ol,
 ul ol,
-.flex-video-container iframe[src*="//www.youtube.com"],
-.flex-video-container iframe[src*="//vimeo.com"],
-.flex-video-container embed[src*="//www.youtube.com"] {
+.responsive-video-container iframe[src*="//www.youtube.com"],
+.responsive-video-container iframe[src*="//vimeo.com"],
+.responsive-video-container embed[src*="//www.youtube.com"] {
   margin-bottom: 0;
 }
 
 ul,
 ol,
 .img-right,
-.alignright,
-a img.alignright,
-.wp-caption.alignright {
+.alignright {
 	margin-left: 1.5em;
 }
 
 .img-left,
-.alignnone,
-.alignleft,
-a img.alignnone,
-a img.alignleft,
-.wp-caption.alignnone,
-.wp-caption.alignleft {
+.alignleft {
 	margin-right: 1.5em;
 }
 

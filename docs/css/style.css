@@ -83,6 +83,10 @@
 
 }
 
+.abstract {
+  line-height: 1.8;
+}
+
 @media screen and (min-width: 1025px) {
 
   .abstract {
@@ -289,8 +293,6 @@ h2#grid-system {
 
 .download {
   margin-top: 3em;
-  color: #fff;
-  background-color: #333;
 }
 
 .download .github-source {
@@ -301,6 +303,17 @@ h2#grid-system {
   font-size: 3em;
   line-height: 1.1;
   font-weight: bold;
+  background-color: #333;
+  -webkit-transition: all .3s;
+     -moz-transition: all .3s;
+      -ms-transition: all .3s;
+       -o-transition: all .3s;
+          transition: all .3s;
+}
+
+.download .github-source:hover,
+.download .github-source:focus {
+  background-color: #000;
 }
 
 @media (max-width: 640px) {
@@ -321,7 +334,11 @@ h2#grid-system {
   background-color: #ccc;
 }
 
-
+[role="contentinfo"] p {
+  display: block;
+  padding: 1em 0;
+  margin: 0;
+}
 
 
 

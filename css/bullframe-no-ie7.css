@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.2 no-ie7
+ * BULLFRAME.CSS v1.6.3 no-ie7
  *
  * Browser support: IE8+
  * GitHub: https://github.com/marco135/bullframe.css
@@ -418,7 +418,8 @@ embed {
 audio,
 canvas,
 img,
-video {
+video,
+svg {
   vertical-align: middle;
 }
 
@@ -1001,7 +1002,6 @@ fieldset[disabled] input[type="checkbox"] {
 table {
   max-width: 100%;
   border-collapse: collapse;
-  border-spacing: 0;
   background-color: transparent; /* override deprecated 'bgcolor' attribute */
 } 
 

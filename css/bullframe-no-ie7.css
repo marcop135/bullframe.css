@@ -1002,7 +1002,6 @@ fieldset[disabled] input[type="checkbox"] {
 table {
   max-width: 100%;
   border-collapse: collapse;
-  background-color: transparent; /* override deprecated 'bgcolor' attribute */
 } 
 
 thead th {

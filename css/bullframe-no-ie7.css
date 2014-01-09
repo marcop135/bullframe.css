@@ -512,10 +512,13 @@ form {
   margin: 0;
 }
 
+/* 1. Remove intrinsic min-width of fieldset
+ * https://github.com/necolas/normalize.css/pull/269 */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
+  min-width: 0; /* 1 */
 }
 
 legend { 

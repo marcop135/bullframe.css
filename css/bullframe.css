@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.2
+ * BULLFRAME.CSS v1.6.3
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
@@ -174,7 +174,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 1.125em;
   margin: 1.5em 0;
 }
 

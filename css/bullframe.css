@@ -37,7 +37,10 @@ video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  vertical-align: middle;
+}
+
+progress {
+  vertical-align: baseline;
 }
 
 html,
@@ -426,6 +429,9 @@ embed {
   max-width: 100%;
 }
 
+audio,
+video,
+canvas,
 img,
 svg {
   vertical-align: middle;

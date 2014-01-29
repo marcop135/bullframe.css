@@ -32,10 +32,12 @@ summary {
 
 audio,
 canvas,
+progress,
 video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
+  vertical-align: middle;
 }
 
 html,
@@ -423,10 +425,7 @@ embed {
   max-width: 100%;
 }
 
-audio,
-canvas,
 img,
-video,
 svg {
   vertical-align: middle;
 }

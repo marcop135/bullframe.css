@@ -763,7 +763,7 @@ input[type="submit"] {
   margin: 0;
   background-clip: padding-box;
   vertical-align: baseline;
-  *overflow: visible;
+  overflow: visible;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-drag: none;
   -webkit-user-select: none; 

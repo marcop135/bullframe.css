@@ -253,6 +253,7 @@ p.lead {
 }
 
 pre {
+  overflow: auto;
   word-break: break-all; /* webkit */
   word-wrap: break-word;
   white-space: pre;

@@ -62,7 +62,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>Browser support</h2>
 Tested and compatible in:
 <ul>
-  <li>Internet Explorer 7-10</li>
+  <li>Internet Explorer 7-11</li>
   <li>Latest stable Chrome</li>
   <li>Firefox 4+</li>
   <li>Safari 4+</li>
@@ -75,7 +75,6 @@ Tested and compatible in:
   <li>Opera Mini *</li>
   <li>Internet Explorer Mobile 9-10</li>
   <li>Latest stable Mobile Firefox (Fennec)</li>
-  <li>Latest stable Kindle Touch browser</li>
 </ul>
 <p>* <b>Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug</b>. When the viewport is too narrow, content that overflows is hidden. <a href="http://barrow.io/overflow-scrolling" title="overflow scrolling">Get more info</a>.</p>
 

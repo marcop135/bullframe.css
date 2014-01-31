@@ -21,8 +21,8 @@
 
 <!-- Fix IE 10 on Windows Phone 8 Viewport -->
 <script>
-// https://gist.github.com/stowball/4617428
-  (function(){if("-ms-user-select" in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();
+// http://getbootstrap.com/getting-started/#support-ie10-width
+if(navigator.userAgent.match(/IEMobile\/10\.0/)){var msViewportStyle=document.createElement("style");msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(msViewportStyle)}
 </script>
 </head>
 

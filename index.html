@@ -8,10 +8,10 @@
 <title>BULLFRAME.CSS boilerplate</title>
 <meta name="description" content="Flexible, Style-agnostic, Mobile-First, RWD, CSS boilerplate. Fork on GitHub github.com/marco135/bullframe.css">
          
-<link href="css/bullframe.css?v=1.6.2" rel="stylesheet">
+<link href="css/bullframe.css?v=1.6.3" rel="stylesheet">
 
 <!-- custom styles -->
-<link href="docs/css/style.css?v=1.6.2" rel="stylesheet">
+<link href="docs/css/style.css?v=1.6.3" rel="stylesheet">
 
 <!-- enable HTML5 elements and CSS3 Media Queries support in all browsers -->
 <!--[if lt IE 9]>
@@ -21,8 +21,8 @@
 
 <!-- Fix IE 10 on Windows Phone 8 Viewport -->
 <script>
-// https://gist.github.com/stowball/4617428
-  (function(){if("-ms-user-select" in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();
+// http://getbootstrap.com/getting-started/#support-ie10-width
+if(navigator.userAgent.match(/IEMobile\/10\.0/)){var msViewportStyle=document.createElement("style");msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(msViewportStyle)}
 </script>
 </head>
 
@@ -37,7 +37,7 @@
       </div><!-- /col -->
 
       <div class="bf-col-3-12 version">
-        <span>v1.6.2</span>
+        <span>v1.6.3</span>
       </div><!-- /col -->
     </div><!-- /row -->
   </div><!-- /container -->
@@ -48,7 +48,7 @@
 <div class="bf-container responsive-grid">
 
   <div class="bf-row">
-    <div class="bf-col-12-122-12">
+    <div class="bf-col-12-12">
       <p class="abstract"><code>bullframe.css</code> is a flexible, IE7+ CSS-only boilerplate to be used as an alternative to <i>Bootstrap</i> or <i>Normalize</i>.</p>
     </div>
   </div>
@@ -323,7 +323,7 @@
 
   <div class="bf-row">
 
-    <div class="bf-col-6-12">
+    <div class="bf-col-4-12">
       <h3 class="sub-title">figure img figcaption</h3>
       <figure>
         <a href="#"><img src="http://lorempixel.com/620/200" width="310" height="100" alt=""></a>
@@ -331,11 +331,16 @@
       </figure>
     </div><!-- /col -->
 
-    <div class="bf-col-6-12">
+    <div class="bf-col-4-12">
       <h3 class="sub-title">SVG</h3>
       <svg width="200px" height="200px">
         <circle cx="0" cy="0" r="200" fill="#ff0000" />
       </svg>
+    </div><!-- /col -->
+
+    <div class="bf-col-4-12">
+      <h3 class="sub-title">Progress</h3>
+      <progress>progress</progress>
     </div><!-- /col -->
 
   </div><!-- /row -->
@@ -1317,8 +1322,7 @@
 
     <div class="bf-col-12-12">
       <div class="sharing">
-        <h4>Fork/Clone this project</h4>
-        <p><a href="https://github.com/marco135/bullframe.css" title="github source">github.com/marco135/bullframe.css</a></p>
+        <p><strong>Fork this project</strong>: <a href="https://github.com/marco135/bullframe.css" title="github source">https://github.com/marco135/bullframe.css</a></p>
         <p><code>$ git clone https://github.com/marco135/bullframe.css.git</code></p>
       </div><!--/.social-btns -->
     </div><!-- /col -->

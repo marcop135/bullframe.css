@@ -408,46 +408,6 @@ textarea:focus,
 #input-focused {
   border-color: ;
   outline: ;
-  -webkit-box-shadow: ;
-          box-shadow: ;
-}
-
-*/
-
-/* replace unsupported box-shadow in IE8
-@media \0screen {
-
-  input[type="color"]:focus, 
-  input[type="email"]:focus, 
-  input[type="number"]:focus, 
-  input[type="password"]:focus, 
-  input[type="tel"]:focus, 
-  input[type="search"]:focus,
-  input[type="text"]:focus, 
-  input[type^="date"]:focus,
-  input[type="month"]:focus, 
-  input[type="time"]:focus, 
-  input[type="week"]:focus, 
-  input[type="time"]:focus, 
-  input[type="url"]:focus,
-  select:focus,
-  textarea:focus,
-  #input-focused  {
-    outline-color: #2a6496;
-  }
-
-  .invalid input,
-  .invalid textarea,
-  .invalid select,
-  .invalid input:focus,
-  .invalid textarea:focus,
-  .invalid select:focus,
-  input:focus.invalid,
-  textarea:focus.invalid,
-  select:focus.invalid  {
-    outline-color: #b94a48;
-  }
-
 }
 
 input[type="file"]:focus,
@@ -590,6 +550,20 @@ span.skype_pnh_print_container {
 
 * target android browsers only
 * http://getbootstrap.com/getting-started/#support-android-stock-browser
+<<<<<<< HEAD
+=======
+ 
+  <script>
+  var nua = navigator.userAgent;
+  var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1);
+  if (isAndroid) {
+    $('.element').css('color', 'red');
+  }
+  </script>
+
+
+*/
+>>>>>>> origin/1.6.3-wip
 
     <script>
     var nua = navigator.userAgent;
@@ -628,14 +602,23 @@ span.skype_pnh_print_container {
 
 /* High resolution devices (retina)
 @media print,
+<<<<<<< HEAD
   only screen and (-webkit-min-device-pixel-ratio: 2),
+=======
+only screen and (-webkit-min-device-pixel-ratio: 2),
+>>>>>>> origin/1.6.3-wip
   only screen and (   min--moz-device-pixel-ratio: 2),
   only screen and (     -o-min-device-pixel-ratio: 2/1),
   only screen and (        min-device-pixel-ratio: 2),
   only screen and (                min-resolution: 192dpi),
   only screen and (                min-resolution: 2dppx) {
+<<<<<<< HEAD
+=======
+  
+}
+>>>>>>> origin/1.6.3-wip
     
-} */
+*/
 
 
 /* Print -------------------------------------------------------------------

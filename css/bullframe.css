@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.2
+ * BULLFRAME.CSS v1.6.3
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
@@ -32,10 +32,15 @@ summary {
 
 audio,
 canvas,
+progress,
 video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
+}
+
+progress {
+  vertical-align: baseline;
 }
 
 html,
@@ -174,7 +179,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 1.125em;
   margin: 1.5em 0;
 }
 
@@ -251,6 +256,7 @@ p.lead {
 }
 
 pre {
+  overflow: auto;
   word-break: break-all; /* webkit */
   word-wrap: break-word;
   white-space: pre;
@@ -424,9 +430,10 @@ embed {
 }
 
 audio,
+video,
 canvas,
 img,
-video {
+svg {
   vertical-align: middle;
 }
 
@@ -523,10 +530,13 @@ form {
   margin: 0;
 }
 
+/* 1. Remove intrinsic min-width of fieldset
+ * https://github.com/necolas/normalize.css/pull/269 */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
+  min-width: 0; /* 1 */
 }
 
 legend { 
@@ -566,6 +576,7 @@ optgroup {
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
+  font-weight: 700;
 }
 
 button,
@@ -670,10 +681,8 @@ input[type="url"]:focus,
 select:focus,
 textarea:focus,
 #input-focused {
-  border-color: #2a6496; /* blue */
+  border-color: #2a6496;
   outline: 0 none;
-  -webkit-box-shadow: 0 0 0 1px #2a6496;
-          box-shadow: 0 0 0 1px #2a6496;
 }
 
 input[type="file"]:focus,
@@ -759,7 +768,7 @@ input[type="submit"] {
   margin: 0;
   background-clip: padding-box;
   vertical-align: baseline;
-  *overflow: visible;
+  overflow: visible;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-drag: none;
   -webkit-user-select: none; 
@@ -936,10 +945,8 @@ textarea:focus:invalid {
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus {
-  border-color: #b94a48; /* red */
+  border-color: #c72a28; /* red */
   outline: 0 none;
-  -webkit-box-shadow: 0 0 0 1px #b94a48;
-          box-shadow: 0 0 0 1px #b94a48;
 }
 
 input::-webkit-input-placeholder,
@@ -1042,8 +1049,6 @@ fieldset[disabled] input[type="checkbox"] {
 table {
   max-width: 100%;
   border-collapse: collapse;
-  border-spacing: 0;
-  background-color: transparent; /* override deprecated 'bgcolor' attribute */
 } 
 
 thead th {
@@ -1564,6 +1569,19 @@ table col[class*="bf-col-"] {
 
 .text-hide-indent {
   text-indent: -9999px;
+}
+
+/* assistive text for screen reader only (e.g. form labels) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(1px 1px 1px 1px); /* IE7 */
+  border: 0;
 }
 
 

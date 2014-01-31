@@ -1486,6 +1486,18 @@ table col[class*="bf-col-"] {
   text-indent: -9999px;
 }
 
+/* assistive text for screen reader only (e.g. form labels) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 
 /* responsive tables --------------------------------------------------------
  * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini 

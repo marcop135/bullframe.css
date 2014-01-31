@@ -588,8 +588,18 @@ span.skype_pnh_print_container {
 }
 
 
-*/
+* target android browsers only
+* http://getbootstrap.com/getting-started/#support-android-stock-browser
 
+    <script>
+    var nua = navigator.userAgent;
+    var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1);
+    if (isAndroid) {
+      $('.class-or-element').css('color', 'red');
+    }
+    </script>
+
+*/
 
 
 

@@ -29,6 +29,14 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>Test it now</h2>
 <p><b><a href="http://bullframecss.com" title="bullframe.css boilerplate demo">Check out the demo</a></b></p>
 
+<h2>CDN</h2>
+<p><a href="http://www.jsdelivr.com/#!bullframe.css" title="JSDelivr Bullframe.css">JSDelivr</a> provides CDN support for Bullframe.css's CSS files.</p>
+<pre><code>&lt;!-- Latest compiled and minified IE7+ CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/bullframe.css/1.6.3/bullframe.min.css&quot;&gt;&lt;/code&gt;
+
+&lt;!-- Latest compiled and minified IE8+ CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/bullframe.css/1.6.3/bullframe-no-ie7.min.css&quot;&gt;</code></pre>
+
 <h2>How to use it</h2>
 <ul>
   <li>

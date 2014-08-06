@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v1.6.3
+ * BULLFRAME.CSS v2.0.0
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
@@ -7,12 +7,12 @@
  * Carefully built by @m135_
  */
 
-*, 
-*:before, 
-*:after { 
-  -webkit-box-sizing: border-box; 
-     -moz-box-sizing: border-box; 
-          box-sizing: border-box; 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 article,
@@ -26,7 +26,7 @@ hgroup,
 main,
 nav,
 section,
-summary { 
+summary {
   display: block;
 }
 
@@ -44,12 +44,12 @@ progress {
 }
 
 html,
-button, 
-input, 
-select, 
+button,
+input,
+select,
 textarea {
   font-size: 100%;
-  font-family: Arial, Helvetica, sans-serif;  
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -71,10 +71,16 @@ textarea {
   color: #222;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
+  font-size: 10px; /* IE fix https://github.com/twbs/bootstrap/issues/13737 */
 
   background-color: #fff;
 
@@ -84,133 +90,111 @@ html {
 
 body {
   margin: 0;
+  font-size: 16px;
   background-color: transparent;
+  min-width: 320px;
+  -ms-overflow-style: scrollbar; /* IE10+ */
 }
 
 a {
   color: #428bca; /* bootstrap blue */
   text-decoration: none;
 
-  /* IE10: Remove grey background on active links */
-  background-color: transparent; 
+  /* IE10+: Remove grey background on active links */
+  background-color: transparent;
 }
 
-a:hover, 
-a:focus { 
+a:hover,
+a:focus {
   text-decoration: underline;
   outline: 0;
   color: #2a6496;
 }
 
-a:focus { 
+a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
-} 
+}
 
-.tera,
-.giga,
-.gamma,
 h1,
-.h1, 
-h2, 
+.h1,
+h2,
 .h2,
-h3, 
+h3,
 .h3,
 h4,
 .h4,
 h5,
-.h5, 
+.h5,
 h6,
 .h6 {
   font-weight: 700;
   line-height: 1.1;
 }
 
-h1, 
+h1,
 h2,
 h3,
 h4,
-h5, 
+h5,
 h6 {
-  font-family: inherit; 
+  font-family: inherit;
   color: inherit;
-}
-
-.tera,
-.giga,
-.mega {
-  display: block;
-  line-height: 1;
-}
-
-.tera {
-  font-size: 4em;
-  margin: 0.35em 0;
-}
-
-.giga {
-  font-size: 3.5em;
-  margin: 0.5em 0;
-}
-
-.mega {
-  font-size: 3em;
-  margin: 0.5em 0;
 }
 
 h1,
 .h1 {
-  font-size: 2.5em;
-  margin: 0.75em 0;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
 h2,
 .h2 {
-  font-size: 1.4em;
-  margin: 0.75em 0;
+    font-size: 1.5em;
+    margin: 0.83em 0;
 }
 
 h3,
 .h3 {
-  font-size: 1.3125em;
-  margin: 1em 0;
+    font-size: 1.17em;
+    margin: 1em 0;
 }
 
 h4,
 .h4 {
-  font-size: 1.125em;
-  margin: 1.5em 0;
+    font-size: 1em;
+    margin: 1.33em 0;
 }
 
 h5,
 .h5 {
-  font-size: 1.125em;
-  margin: 1.5em 0;
+    font-size: 0.83em;
+    margin: 1.67em 0;
 }
 
 h6,
 .h6 {
-  font-size: 0.875em;
-  margin: 1.5em 0;
+    font-size: 0.75em;
+    margin: 2.33em 0;
 }
 
-abbr[title] { 
+abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-blockquote { 
+blockquote {
   margin: 0 0 1.5em 0;
   padding-left: 1.5em;
   border-left: 5px solid #ccc;
 }
 
-blockquote p { 
+blockquote p {
   margin-bottom: 0;
 }
 
-blockquote small { 
+blockquote small {
   color: #999;
   display: block;
 }
@@ -230,15 +214,15 @@ q:after {
   *content: none;
 }
 
-mark { 
+mark {
   background: #ff0; /* yellow */
   color: #000;
   font-weight: bold;
 }
 
-ins { 
+ins {
   background: #ff9; /* light yellow */
-  color: #000; 
+  color: #000;
   text-decoration: none;
 }
 
@@ -269,20 +253,20 @@ pre {
           hyphens: none;
 }
 
-pre,  
-code, 
-kbd, 
+pre,
+code,
+kbd,
 samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 1em;
 }
 
-strong, 
-b { 
+strong,
+b {
   font-weight: bold;
 }
- 
-dfn { 
+
+dfn {
   font-style: italic;
 }
 
@@ -325,18 +309,18 @@ hr {
   text-shadow: none;
 }
 
-::selection { 
-  background: #b3d4fc; 
-  color: #000; 
+::selection {
+  background: #b3d4fc;
+  color: #000;
   text-shadow: none;
 }
 
-img::-moz-selection { 
-  background-color: transparent; 
+img::-moz-selection {
+  background-color: transparent;
 }
 
-img::selection { 
-  background-color: transparent;      
+img::selection {
+  background-color: transparent;
 }
 
 
@@ -373,7 +357,7 @@ nav ul {
   list-style: none;
   list-style-image: none;
   margin-left: 0;
-} 
+}
 
 dt {
   font-weight: bold;
@@ -382,35 +366,6 @@ dt {
 dd {
   margin-left: 0;
 }
-
-/* navigation */
-.list-inline {
-  margin-left: 0;
-  list-style: none;
-  list-style-image: none; /* IE7-8 */
-}
-
-.list-inline > li {
-  display: inline-block;
-  margin-right: 1.5em;
-}
-
-/* IE8+ */
-.list-inline > li:last-child {
-  margin-right: 0;
-}
-
-/* hard reset */
-ul.list-unstyled,
-ol.list-unstyled,
-ul.list-unstyled ul,
-ol.list-unstyled ol,
-ul.list-unstyled ol,
-ol.list-unstyled ul { 
-  margin: 0;
-  list-style: none;
-  list-style-image: none; /* IE7-8 */
-} 
 
 
 
@@ -448,12 +403,12 @@ video {
   height: auto;
 }
 
-audio:not([controls]) { 
+audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-svg:not(:root) { 
+svg:not(:root) {
   overflow: hidden;
 }
 
@@ -477,12 +432,12 @@ figure {
 /* normalize --------------------------------------------------------------- */
 
 label,
-html input, 
-select, 
+html input,
+select,
 textarea,
 button,
 .btn,
-html input[type="button"], 
+html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   display: inline-block;
@@ -501,15 +456,15 @@ input {
 }
 
 button,
-html input, 
-select, 
+html input,
+select,
 textarea {
   margin: 0;
   background-image: none; /* reset Fennec */
 }
 
-input, 
-select, 
+input,
+select,
 textarea {
   vertical-align: baseline;
   *vertical-align: middle;
@@ -539,7 +494,7 @@ fieldset {
   min-width: 0; /* 1 */
 }
 
-legend { 
+legend {
   display: block;
   display: table \9; /* enable line-wrapping in IE8+ */
   width: 100%;
@@ -586,20 +541,20 @@ html input[type="button"],
 
 input[type="reset"],
 input[type="submit"],
-input[type="email"], 
+input[type="email"],
 input[type="text"],
-input[type="tel"], 
+input[type="tel"],
 input[type^="date"],
 input[type="month"],
 input[type="week"],
 input[type="url"],
 input[type="image"],
-input[type="password"], 
+input[type="password"],
 input[type="search"],
-input[type="search"]::-webkit-search-decoration, 
-input[type="search"]::-webkit-search-cancel-button, 
-select,   
-textarea { 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+select,
+textarea {
   -webkit-appearance: none;
 }
 
@@ -616,18 +571,18 @@ input[type="radio"] {
           border-radius: 7px;
 }
 
-input[type="color"], 
-input[type="email"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
+input[type="color"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
 input[type="search"],
-input[type="text"], 
+input[type="text"],
 input[type^="date"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="time"],
 input[type="url"],
 select,
 textarea {
@@ -635,7 +590,7 @@ textarea {
   border: 1px solid #b2b2b2;
 }
 
-input[type="radio"], 
+input[type="radio"],
 input[type="checkbox"] {
   padding: 0;
   *margin-bottom: 0;
@@ -643,8 +598,8 @@ input[type="checkbox"] {
   *height: 13px;
 }
 
-select[size], 
-select[multiple] { 
+select[size],
+select[multiple] {
   height: auto;
 }
 
@@ -665,18 +620,18 @@ textarea {
   resize: vertical;
 }
 
-input[type="color"]:focus, 
-input[type="email"]:focus, 
-input[type="number"]:focus, 
-input[type="password"]:focus, 
-input[type="tel"]:focus, 
+input[type="color"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
 input[type="search"]:focus,
-input[type="text"]:focus, 
+input[type="text"]:focus,
 input[type^="date"]:focus,
-input[type="month"]:focus, 
-input[type="time"]:focus, 
-input[type="week"]:focus, 
-input[type="time"]:focus, 
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus,
@@ -719,17 +674,17 @@ input[type="checkbox"] {
   width: auto;
 }
 
-input[type="email"], 
-input[type="number"], 
-input[type="password"], 
-input[type="tel"], 
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
 input[type="search"],
-input[type="text"], 
+input[type="text"],
 input[type^="date"],
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="time"], 
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="time"],
 input[type="url"],
 select,
 textarea {
@@ -741,16 +696,16 @@ textarea {
 textarea {
   *padding: 1.5%;
 }
-  
+
 
 /* customize radios and checkboxes ---------------------------------------- */
 
-label input[type="radio"], 
+label input[type="radio"],
 label input[type="checkbox"] {
   margin-right: 0.5em;
 }
 
-label + input[type="radio"], 
+label + input[type="radio"],
 label + input[type="checkbox"] {
   margin-left: 0.5em;
 }
@@ -759,7 +714,7 @@ label + input[type="checkbox"] {
 /* customize buttons ------------------------------------------------------- */
 button,
 .btn,
-input[type="button"], 
+input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   padding: 0.5em 1em;
@@ -771,10 +726,10 @@ input[type="submit"] {
   overflow: visible;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-drag: none;
-  -webkit-user-select: none; 
+  -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; 
+          user-select: none;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   text-shadow: 1px 1px rgba(255,255,255,0.5);
@@ -784,7 +739,7 @@ input[type="submit"] {
 }
 
 /* Firefox: Get rid of the inner focus border */
-button::-moz-focus-inner, 
+button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -792,11 +747,11 @@ input::-moz-focus-inner {
 
 /* to reduce IE7's oversized button text */
 button,
-input[type="button"], 
+input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button.btn,
-input[type="button"].btn, 
+input[type="button"].btn,
 input[type="reset"].btn,
 input[type="submit"].btn {
   *padding: 0.4em 0.8em;
@@ -804,12 +759,12 @@ input[type="submit"].btn {
 
 button:hover,
 .btn:hover,
-input[type="button"]:hover, 
+input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 button:focus,
 .btn:focus,
-input[type="button"]:focus, 
+input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
   outline: 0 none;
@@ -820,7 +775,7 @@ input[type="submit"]:focus {
 
 button.btn-primary,
 .btn-primary,
-input.btn-primary[type="button"], 
+input.btn-primary[type="button"],
 input.btn-primary[type="reset"],
 input.btn-primary[type="submit"] {
   color: #fff;
@@ -829,25 +784,14 @@ input.btn-primary[type="submit"] {
   background-color: #428bca;
 }
 
-button.btn-success,
-.btn-success,
-input.btn-success[type="button"], 
-input.btn-success[type="reset"],
-input.btn-success[type="submit"] {
-  color: #fff;
-  text-shadow: none;
-  border-color: #4cae4c;
-  background-color: #5cb85c;
-}
-
 button.btn-primary:hover,
 .btn-primary:hover,
-input.btn-primary[type="button"]:hover, 
+input.btn-primary[type="button"]:hover,
 input.btn-primary[type="reset"]:hover,
 input.btn-primary[type="submit"]:hover,
 button.btn-primary:focus,
 .btn-primary:focus,
-input.btn-primary[type="button"]:focus, 
+input.btn-primary[type="button"]:focus,
 input.btn-primary[type="reset"]:focus,
 input.btn-primary[type="submit"]:focus {
   color: #fff;
@@ -855,47 +799,15 @@ input.btn-primary[type="submit"]:focus {
   background-color: #3276b1;
 }
 
-button.btn-success:hover,
-.btn-success:hover,
-input.btn-success[type="button"]:hover, 
-input.btn-success[type="reset"]:hover,
-input.btn-success[type="submit"]:hover,
-button.btn-success:focus,
-.btn-success:focus,
-input.btn-success[type="button"]:focus, 
-input.btn-success[type="reset"]:focus,
-input.btn-success[type="submit"]:focus {
-  color: #fff;
-  border-color: #398439;
-  background-color: #47a447;
-}
-
 button:active,
 .btn:active,
-input[type="button"]:active, 
+input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-
-.btn-xsmall {
-  font-size: 70%;
-}
-
-.btn-small {
-  font-size: 85%;
-}
-
-.btn-large {
-  font-size: 125%;
-}
-
-.btn-xlarge {
-  font-size: 150%;
-} 
-
 
 
 /* hack ugly selects ------------------------------------------------------- */
@@ -905,7 +817,7 @@ input[type="submit"]:active {
 
   select,
   select[size="0"],
-  select[size="1"] { 
+  select[size="1"] {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAARCAYAAABASYU2AAAAbElEQVR42u2SQQrAMAgE9y1u/P8TWyyFXgpe1uwlA8GLEdkRa60rM2Wv5kFNDSYpWTAinooJlEliEpJzmv3av3/YwZBmf5rVj9289+XW3CPQ7NLea3Zp7zT7EWg2aG9SdGvvFvQj1jyfJg7/3HajEiSxv0LJAAAAAElFTkSuQmCC);
     /* @2x image
     -webkit-background-size: 41px 17px;
@@ -917,7 +829,7 @@ input[type="submit"]:active {
     background-position: right center;
 
     padding-right: 2em;
-  } 
+  }
 
   select[size],
   select[multiple] {
@@ -930,14 +842,14 @@ input[type="submit"]:active {
 
   }
 
-} 
+}
 
 
 /* invalid, placeholder, disabled adn readonly ----------------------------- */
 
-input:focus:invalid, 
+input:focus:invalid,
 select:focus:invalid,
-textarea:focus:invalid { 
+textarea:focus:invalid {
   color: #b94a48; /* dark red */
   border-color: #b94a48; /* red */
 }
@@ -955,9 +867,9 @@ textarea::-webkit-input-placeholder {
 }
 
 /* FF placeholder bug
- * Issue: If one change the text color of input fields, FF will change 
+ * Issue: If one change the text color of input fields, FF will change
  * the default color of placeholders too!
- * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150 
+ * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
  */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
@@ -1049,14 +961,14 @@ fieldset[disabled] input[type="checkbox"] {
 table {
   max-width: 100%;
   border-collapse: collapse;
-} 
+}
 
 thead th {
   vertical-align: bottom;
 }
 
 th,
-td { 
+td {
   vertical-align: top;
 }
 
@@ -1067,7 +979,7 @@ td {
 }
 
 th,
-caption { 
+caption {
   text-align: left;
 }
 
@@ -1083,7 +995,7 @@ th {
 ============================================================================ */
 
 [hidden],
-template { 
+template {
   display: none;
 }
 
@@ -1092,10 +1004,10 @@ template {
 
 
 /* $ Basic 12 columns fluid grid system
- * 
+ *
  * Heads up!!
- * You can't do column ordering (for SEO) 
- * and mobile/tablet/desktop mixing 
+ * You can't do column ordering (for SEO)
+ * and mobile/tablet/desktop mixing
 ============================================================================ */
 
 /* Sub-Pixel Problems in CSS
@@ -1103,7 +1015,7 @@ template {
  *
  * 1. FF4+: ok
  *
- * 2. WebKit is ok since 3 May, 2013 
+ * 2. WebKit is ok since 3 May, 2013
  * http://css-tricks.com/percentage-bugs-in-webkit/
  * http://trac.webkit.org/changeset/116009
  *
@@ -1114,7 +1026,7 @@ template {
  * http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
  * http://www.maratz.com/blog/archives/2012/08/01/emulate-box-sizing-in-ie7/
  *
- * 5. Opera and Safari round the numbers down. 
+ * 5. Opera and Safari round the numbers down.
  * No fix :(
  * A discussion about Opera on GitHub https://github.com/jokjus/centage/issues/1
  * A discussion about Bootstrap 2 fluid grid system on StackOverflow
@@ -1124,14 +1036,14 @@ template {
  */
 
 .bf-container {
-  /* avoid IE8 issue with 'box-sizing: border-box' in combination 
-   * with max/min-width and max/min-height 
+  /* avoid IE8 issue with 'box-sizing: border-box' in combination
+   * with max/min-width and max/min-height
    * https://github.com/twbs/bootstrap/issues/10014
    */
-  -webkit-box-sizing: content-box; 
-     -moz-box-sizing: content-box; 
-          box-sizing: content-box; 
-          
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+
   max-width: 1170px;
   *min-width: 930px; /* http://www.jonikorpi.com/leaving-old-IE-behind/ */
   padding-right: 15px;
@@ -1166,126 +1078,74 @@ template {
 
 .bf-row:after {
   clear: both;
-} 
+}
 
 [class*="bf-col-"] {
   float: left;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px;  
+  padding-right: 15px;
 }
 
-.bf-col-12-12 {
+.bf-col-12 {
   width: 100%;
   *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-11-12 {
+.bf-col-11 {
   width: 91.66666666666666%;
   *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-10-12 {
+.bf-col-10 {
   width: 83.33333333333334%;
   *width: expression((this.parentNode.clientWidth/12*10 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-9-12 {
+.bf-col-9 {
   width: 75%;
   *width: expression((this.parentNode.clientWidth/12*9 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-8-12 {
+.bf-col-8 {
   width: 66.66666666666666%;
   *width: expression((this.parentNode.clientWidth/12*8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-7-12 {
+.bf-col-7 {
   width: 58.333333333333336%;
   *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-6-12 {
+.bf-col-6 {
   width: 50%;
   *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-5-12 {
+.bf-col-5 {
   width: 41.66666666666667%;
   *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-4-12 {
+.bf-col-4 {
   width: 33.33333333333333%;
   *width: expression((this.parentNode.clientWidth/12*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-3-12 {
+.bf-col-3 {
   width: 25%;
   *width: expression((this.parentNode.clientWidth/12*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-2-12 {
+.bf-col-2 {
   width: 16.666666666666664%;
   *width: expression((this.parentNode.clientWidth/12*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
 }
 
-.bf-col-1-12 {
+.bf-col-1 {
   width: 8.3333%;
   *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
-}
-
-.bf-col-offset-12-12 {
-  margin-left: 100%;
-}
-
-.bf-col-offset-11-12 {
-  margin-left: 91.66666666666666%;
-}
-
-.bf-col-offset-10-12 {
-  margin-left: 83.33333333333334%;
-}
-
-.bf-col-offset-9-12 {
-  margin-left: 75%;
-}
-
-.bf-col-offset-8-12 {
-  margin-left: 66.66666666666666%;
-}
-
-.bf-col-offset-7-12 {
-  margin-left: 58.333333333333336%;
-}
-
-.bf-col-offset-6-12 {
-  margin-left: 50%;
-}
-
-.bf-col-offset-5-12 {
-  margin-left: 41.66666666666667%;
-}
-
-.bf-col-offset-4-12 {
-  margin-left: 33.33333333333333%;
-}
-
-.bf-col-offset-3-12 {
-  margin-left: 25%;
-}
-
-.bf-col-offset-2-12 {
-  margin-left: 16.666666666666664%;
-}
-
-.bf-col-offset-1-12 {
-  margin-left: 8.3333%;
-}
-
-.bf-col-offset-0-12 {
-  margin-left: 0;
 }
 
 /* responsive grid */
@@ -1294,7 +1154,7 @@ template {
   .responsive-grid .bf-row {
     margin-left: 0;
     margin-right: 0;
-  } 
+  }
 
   .responsive-grid [class*="bf-col-"] {
     width: 100%;
@@ -1303,13 +1163,13 @@ template {
     margin-left: 0;
     padding-left: 0;
     padding-right: 0;
-  } 
+  }
 
 }
 
-/* fix missing table cell borders when using 'col-' classes 
- * for column sizing 
- * https://github.com/twbs/bootstrap/issues/11623 
+/* fix missing table cell borders when using 'col-' classes
+ * for column sizing
+ * https://github.com/twbs/bootstrap/issues/11623
  */
 table col[class*="bf-col-"] {
   position: static;
@@ -1349,7 +1209,7 @@ table col[class*="bf-col-"] {
 ============================================================================ */
 
 
-/* clearfix --------------------------------------------------------------- */ 
+/* clearfix --------------------------------------------------------------- */
 /* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
@@ -1367,7 +1227,7 @@ table col[class*="bf-col-"] {
 
 /*
  * Better float containment in IE7 using CSS expressions
- * http://nicolasgallagher.com/better-float-containment-in-ie/ 
+ * http://nicolasgallagher.com/better-float-containment-in-ie/
  */
 .super-clearfix:before,
 .super-clearfix:after {
@@ -1377,7 +1237,7 @@ table col[class*="bf-col-"] {
 
 .super-clearfix:after {
   clear: both;
-} 
+}
 
 .super-clearfix {
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -1385,93 +1245,70 @@ table col[class*="bf-col-"] {
 }
 
 
-/* image positioning ------------------------------------------------------- */
-.img-left {
-  float: left;
-  margin: 0 1.5em 1.5em 0;
-}
-
-.img-right {
-  float: right;
-  margin: 0 0 1.5em 1.5em;
-}
-
-
 /* layout display ---------------------------------------------------------- */
-.block {
+.hide {
+  display: none !important;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.touch .hide-on-touch {
+  display: none !important;
+}
+
+.no-touch .hide-on-non-touch {
+  display: none !important;
+}
+
+.none {
+  display: none;
+}
+
+.show {
   display: block !important;
 }
 
-.inline {
-  display: inline !important;
+.show-block {
+  display: block;
 }
 
-/* Using Grids with Your Font-Family
- * http://purecss.io/grids/#using-grids-with-custom-fonts
- */
-.inline-block-container {
-  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-  *letter-spacing: normal; /* reset IE < 8 */
-  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
-
-  /* The following font stack makes Pure Grids work on all known environments.
-  * FreeSans: Ships with many Linux distros, including Ubuntu
-  * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
-  Arial to get picked up by the browser, even though neither is available
-  in Chrome OS.
-  * Droid Sans: Ships with all versions of Android.
-  * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
-  */
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+.show-inline {
+  display: inline;
 }
 
-/* Opera as of 12 on Windows needs word-spacing.
- * The ".opera-only" selector is used to prevent actual prefocus styling
- * and is not required in markup.
-*/
-.opera-only :-o-prefocus, /* this hack affect also IE7 */
-.inline-block-container {
-  word-spacing: -0.43em;
-}
-
-.inline-block {
-  display: inline-block !important;
-  *display: inline !important;
+.show-inline-block {
+  display: inline-block;
+  *display: inline;
   *zoom: 1;
-  vertical-align: top;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-rendering: auto;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* how to use:
- *
-   <nav id="nav" class="nav" role="navigation">
-     <ul class="inline-block-container list-unstyled">
-       <li class="inline"><a href="#" class="inline-block">Home</a></li>
-       <li class="inline"><a href="#" class="inline-block">Works</a></li>
-       <li class="inline"><a href="#" class="inline-block">About</a></li>
-       <li class="inline"><a href="#" class="inline-block">Contact</a></li>
-     </ul>
-   </nav>
- *
- */
-
-.hide, /* old naming */
-.hidden {
-  display: none !important; 
-  visibility: hidden;
 }
 
 .invisible {
   visibility: hidden;
 }
 
-.show {
-  display: block !important;
-  visibility: visible;
+.hide-text, /* old naming */
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* assistive text for screen reader only (e.g. form labels) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(1px 1px 1px 1px); /* IE7 */
+  border: 0;
 }
 
 
@@ -1494,33 +1331,47 @@ table col[class*="bf-col-"] {
   position: fixed;
 }
 
+/* http://css-tricks.com/centering-in-the-unknown/
+ * align center vertically and horizontally
+ */
+.align-center-unknown {
+  display: table;
+  width: 100%;
+}
+
+.align-center-unknown-item  {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
 
 /* text utilities ---------------------------------------------------------- */
-.text-align-left {
+.text-left {
   text-align: left;
 }
 
-.text-align-center {
+.text-center {
   text-align: center;
 }
 
-.text-align-right {
+.text-right {
   text-align: right;
-}
-
-.text-justify {
-  text-align: justify;                
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
 }
 
 .text-uppercase {
   text-transform: uppercase;
 }
 
+.text-lowercase {
+  text-transform: uppercase;
+}
+
 .text-bold {
+  font-weight: 700;
+}
+
+.text-normal {
   font-weight: 700;
 }
 
@@ -1537,107 +1388,71 @@ table col[class*="bf-col-"] {
   word-wrap: normal;
 }
 
-.text-break {
-  word-break: break-all; /* webkit */
-  word-wrap: break-word;
-  white-space: pre;
-  white-space: -moz-pre-wrap; /* fennec */
-  white-space: pre-wrap;
-  white-space: pre \9; /* IE7+ */
-  -webkit-hyphens: none;
-     -moz-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
-}
-
 .no-select {
   -webkit-user-drag: none;
-  -webkit-user-select: none; 
+  -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none;          
+          user-select: none;
 }
 
-.hide-text, /* old naming */
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
 
-.text-hide-indent {
-  text-indent: -9999px;
-}
 
-/* assistive text for screen reader only (e.g. form labels) */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  clip: rect(1px 1px 1px 1px); /* IE7 */
-  border: 0;
-}
 
 
 /* responsive tables --------------------------------------------------------
- * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini 
+ * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini
  */
-.responsive-table-container { 
+.responsive-table {
   overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.responsive-table-container table {
+.responsive-table table {
   width: 100%;
   margin-bottom: 1em;
 }
 
 /* force and customize webkit scrollbars appearance */
-.responsive-table-container.scrollbar {
-  -webkit-overflow-scrolling: auto; 
+.responsive-table.scrollbar {
+  -webkit-overflow-scrolling: auto;
 }
 
-.responsive-table-container.scrollbar::-webkit-scrollbar {
+.responsive-table.scrollbar::-webkit-scrollbar {
   width: 0.625em;
   height: 0.625em;
 }
 
-.responsive-table-container.scrollbar::-webkit-scrollbar-track {
+.responsive-table.scrollbar::-webkit-scrollbar-track {
   padding: 0.25em;
-  background-color: transparent; 
+  background-color: transparent;
 }
 
-.responsive-table-container.scrollbar::-webkit-scrollbar-thumb {
-  background-color: #999; 
+.responsive-table.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #999;
   -webkit-border-radius: 0.625em;
           border-radius: 0.625em;
 }
 
-.responsive-table-container.scrollbar::-webkit-scrollbar-thumb:window-inactive {
-  background-color: #ccc; 
+.responsive-table.scrollbar::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #ccc;
 }
 
-/* 
+/*
  * how to wraps table via jQuery:
- * 
+ *
    <script>
-     jQuery(function() {
-       jQuery('.article-content table').wrap('<div class="responsive-table-container"></div>');
+     &(function() {
+       $('.article-content table').wrap('<div class="responsive-table"></div>');
      });
    </script>
- * 
+ *
 */
 
 
 /* responsive videos ------------------------------------------------------- */
-.responsive-video-container {
+.responsive-video {
   position: relative;
   padding-bottom: 67.5%; /* 4:3 standard */
   padding-top: 1.5625em;
@@ -1645,9 +1460,11 @@ table col[class*="bf-col-"] {
   overflow: hidden;
 }
 
-.responsive-video-container iframe,  
-.responsive-video-container object,  
-.responsive-video-container embed {
+.responsive-video-item,
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed,
+.responsive-video video {
   position: absolute;
   top: 0;
   left: 0;
@@ -1655,31 +1472,24 @@ table col[class*="bf-col-"] {
   height: 100%;
 }
 
-.responsive-video-container.widescreen {
+.responsive-video.widescreen {
   padding-bottom: 56.25%; /* 16:9 */
 }
 
-.responsive-video-container.vimeo {
+.responsive-video.vimeo {
   padding-top: 0; /* no extra-padding for controls */
 }
 
-/* 
+/*
  * how to wraps videos via jQuery:
- * 
+ *
    <script>
-     jQuery(function() {
-        jQuery('.article-content iframe, .content object, .article-content embed').wrap('<div class="responsive-video-container"></div>');
+     $(function() {
+        $('.article-content iframe, .content object, .article-content embed').wrap('<div class="responsive-video-container"></div>');
      });
    </script>
- * 
+ *
 */
-
-
-/* miscellaneous ----------------------------------------------------------- */
-.print-only { 
-  display: none !important; 
-  visibility: hidden;
-}
 
 
 
@@ -1709,7 +1519,7 @@ table col[class*="bf-col-"] {
   }
 
   thead {
-    display: table-header-group; 
+    display: table-header-group;
   }
 
   tr,
@@ -1735,15 +1545,6 @@ table col[class*="bf-col-"] {
   h2,
   h3 {
     page-break-after: avoid;
-  }
-
-  .print-only { 
-    display: block !important; 
-    visibility: visible;
-  }
-
-  .hide-on-print { 
-    display: none !important; 
   }
 
 }

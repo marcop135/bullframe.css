@@ -1,18 +1,19 @@
-<h1>BULLFRAME.CSS v1.6.3</h1>
+<h1>BULLFRAME.CSS v2.0.0</h1>
 <p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
-<p>Personally I don't like some heavy front-end frameworks like <a href="http://getbootstrap.com" title="Twitter Bootstrap">Bootstrap</a> or <a href="http://foundation.zurb.com/" title="Zurb Foundation">Foundation</a>. So I create a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
+<p>It's a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
 <h2>Best features</h2>
 <ul>
-  <li>Normalized styles for a wide range of elements across browsers (like 
+  <li>Normalized styles for a wide range of elements across browsers (like
   <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> do)</li>
-  <li>30KB minified</li>
-  <li>IE7+ support <small>(if you really need it...)</small></li>
+  <li>20KB minified</li>
+  <li>IE7+ support</li>
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
+  <li>Custom Roboto Google Fonts by default</li>
   <li>Fluid grid system</li>
   <li>Flexible vertical grid</li>
   <li>Starter-kit custom styles</li>
@@ -22,7 +23,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Flexible images and media (video, audio, iframe, embed)</li>
   <li>Flexible, cross-browser HTML5 forms</li>
   <li>Flexible tables</li>
-  <li>Several helper classes (like '.clearfix' or '.hide-text')</li>
+  <li>Several helper classes (like '.clearfix' or '.text-hide')</li>
 </ul>
 
 
@@ -32,23 +33,20 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>CDN</h2>
 <p><a href="http://www.jsdelivr.com/#!bullframe.css" title="JSDelivr Bullframe.css">JSDelivr</a> provides CDN support for Bullframe.css's CSS files.</p>
 <pre><code>&lt;!-- Latest compiled and minified IE7+ CSS --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/bullframe.css/1.6.3/bullframe.min.css&quot;&gt;
-
-&lt;!-- Latest compiled and minified IE8+ CSS --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/bullframe.css/1.6.3/bullframe-no-ie7.min.css&quot;&gt;</code></pre>
+&lt;link href=&quot;//cdn.jsdelivr.net/bullframe.css/2.0.0/bullframe.min.css&quot; rel=&quot;stylesheet&quot; &gt;</code></pre>
 
 <h2>How to use it</h2>
 <ul>
   <li>
     <p>1) <b>Write your styles without ever touch the boilerplate</b></p>
     <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles like this:</p>
-<pre><code>&lt;!doctype html>
-&lt;html>
-&lt;head>
-&lt;meta charset="utf-8">
-    &lt;link href="bullframe.min.css rel="stylesheet">
-&lt;link href="custom-styles.css" rel="stylesheet">
-&lt;/head>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;link href="bullframe.min.css rel="stylesheet"&gt;
+&lt;link href="your-styles.css" rel="stylesheet"&gt;
 ...</code></pre>
   </li>
 </ul>

@@ -5,13 +5,21 @@
 ============================================================================ */
 
 
+/* the basics
+--------------------------------------------------------------------------- */
 
-@-ms-viewport { 
-  width: device-width;
-} 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
 
 
-/* banner 
+/* banner
 --------------------------------------------------------------------------- */
 
 [role="banner"] {
@@ -25,12 +33,12 @@
   margin: 0 ;
 }
 
-[role="banner"] h1::-moz-selection { 
-  background-color: #fff; 
+[role="banner"] h1::-moz-selection {
+  background-color: #fff;
 }
 
-[role="banner"] h1::selection  { 
-  background-color: #fff;      
+[role="banner"] h1::selection  {
+  background-color: #fff;
 }
 
 @media (max-width: 700px) {
@@ -109,7 +117,7 @@
 
 
 
-/* navigation 
+/* navigation
 --------------------------------------------------------------------------- */
 
 .nav li a {
@@ -168,13 +176,13 @@
 
 
 
-/* section titles 
+/* section titles
 --------------------------------------------------------------------------- */
 
 .title,
 .sub-title {
   text-transform: uppercase;
-} 
+}
 
 .title {
   padding: 0.5em;
@@ -186,7 +194,7 @@
 .sub-title {
   margin-top: 2em;
   padding: 0.5em 0;
-} 
+}
 
 
 
@@ -197,15 +205,15 @@
 
 .bullframe-demo legend {
   padding-bottom: 1.5em;
-} 
+}
 
 .bullframe-demo button,
 .bullframe-demo .btn,
-.bullframe-demo input, 
-.bullframe-demo select, 
+.bullframe-demo input,
+.bullframe-demo select,
 .bullframe-demo textarea {
   margin-bottom: 1.5em;
-} 
+}
 
 .bullframe-demo input[type="radio"],
 .bullframe-demo input[type="checkbox"] {
@@ -231,7 +239,7 @@ h2#grid-system {
   color: #fff;
   font-size: 70%;
   text-align: center;
-}   
+}
 
 .grid .bf-row,
 .grid .row {

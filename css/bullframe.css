@@ -30,6 +30,11 @@ summary {
   display: block;
 }
 
+[hidden],
+template {
+  display: none;
+}
+
 audio,
 canvas,
 progress,
@@ -145,38 +150,38 @@ h6 {
 
 h1,
 .h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 2.25em;
+    margin: 0.75em 0;
 }
 
 h2,
 .h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
+    font-size: 2em;
+    margin: 0.75em 0;
 }
 
 h3,
 .h3 {
-    font-size: 1.17em;
-    margin: 1em 0;
+    font-size: 1.5em;
+    margin: 0.75em 0;
 }
 
 h4,
 .h4 {
     font-size: 1em;
-    margin: 1.33em 0;
+    margin: 1.5em 0;
 }
 
 h5,
 .h5 {
     font-size: 0.83em;
-    margin: 1.67em 0;
+    margin: 1.5em 0;
 }
 
 h6,
 .h6 {
     font-size: 0.75em;
-    margin: 2.33em 0;
+    margin: 1.5em 0;
 }
 
 abbr[title] {
@@ -401,6 +406,10 @@ img {
 
 video {
   height: auto;
+}
+
+audio {
+  width: 100%;
 }
 
 audio:not([controls]) {
@@ -990,19 +999,6 @@ th {
 
 
 
-
-/* $ Misc
-============================================================================ */
-
-[hidden],
-template {
-  display: none;
-}
-
-
-
-
-
 /* $ Basic 12 columns fluid grid system
  *
  * Heads up!!
@@ -1060,6 +1056,24 @@ template {
 }
 
 .bf-container:after {
+  clear: both;
+}
+
+.bf-container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.bf-container-fluid:before,
+.bf-container-fluid:after {
+  display: table;
+  content: " ";
+}
+
+.bf-container-fluid:after {
   clear: both;
 }
 
@@ -1309,6 +1323,13 @@ table col[class*="bf-col-"] {
   clip: rect(0, 0, 0, 0);
   clip: rect(1px 1px 1px 1px); /* IE7 */
   border: 0;
+}
+
+/* Fix IE 10 on Windows Phone 8 Viewport
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-ms-viewport {
+  width: device-width;
 }
 
 

@@ -1,0 +1,499 @@
+/*! Author's custom styles starting-point - BULLFRAME.CSS v2.0.0 add-on
+ *
+ * Customize as you want the following code
+ *
+ * https://github.com/marco135/bullframe.css/tree/master/add-ons
+ * MIT License
+============================================================================ */
+
+
+
+
+/* Use @viewport rule ------------------------------------------------------
+
+ * Fix IE 10 on Windows Phone 8 Viewport with JavaScript
+ *
+    <script>
+      // Fix IE 10 on Windows Phone 8 Viewport https://gist.github.com/stowball/4617428
+      (function(){if("-ms-user-select" in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();
+    </script>
+
+@-ms-viewport {
+  width: device-width;
+}
+
+*/
+
+
+
+
+/* Scalable <img> and <video> elements ------------------------------------
+
+ * just in case, to force correct aspet ratio
+ * if necessary, override this rule with 'max-height: XXXpx'
+
+img,
+video {
+  height: auto !important;
+}
+*/
+
+
+
+
+/* google maps possible fix ------------------------------------------------
+ * see also http://getbootstrap.com/getting-started/#third-parties
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important;
+}
+*/
+
+
+
+
+
+/* Change skin -------------------------------------------------------------
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: ;
+}
+
+html,
+button,
+.btn,
+input,
+select,
+textarea {
+  color: ;
+}
+
+html {
+  background-color: ;
+}
+
+a {
+  color: ;
+  text-decoration: ;
+  -webkit-tap-highlight-color: rgba(XXX, XXX, XXX, X.XX);
+}
+
+a:hover,
+a:focus {
+  color: ;
+  text-decoration: ;
+}
+
+::-moz-selection {
+  background: ;
+  color: ;
+}
+
+::selection {
+  background: ;
+  color: ;
+}
+
+*/
+
+
+
+
+/* WordPress generated classes
+ * http://codex.wordpress.org/CSS
+ * ------------------------------------------------------------------------
+
+.alignleft {
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+img.alignright,
+img.alignleft {
+  margin-bottom: 1.5em;
+}
+
+.alignnone {
+  float: none;
+  margin: 0;
+}
+
+*/
+
+
+
+
+
+/* Reset 'margin-top' for a wide range of elements -------------------------
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  p,
+  pre,
+  menu,
+  ol,
+  ul,
+  dl,
+  blockquote,
+  hr {
+    margin-top: 0;
+  }
+
+*/
+
+
+
+
+/* Compose to a vertical rhythm --------------------------------------------
+ *
+ * reference to 'bullframe-vertical-rhythm.css' file
+ * https://github.com/marco135/bullframe.css/tree/master/add-ons
+*/
+
+
+
+/* Customize <form> elements -----------------------------------------------
+
+input[type="color"],
+input[type="email"],
+input[type="image"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type^="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="time"],
+input[type="url"],
+select,
+textarea {
+  border-color: ;
+}
+
+input[type="color"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type^="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus,
+#inputFocused {
+  border-color: ;
+  outline: ;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: ;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type^="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="time"],
+input[type="url"],
+textarea {
+  padding: ;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  select,
+  select[size="0"],
+  select[size="1"] {
+    padding-right: ;
+    background-position: ;
+  }
+
+}
+
+textarea {
+  *padding: ;
+}
+
+button,
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: ;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button.btn,
+input[type="button"].btn,
+input[type="reset"].btn,
+input[type="submit"].btn {
+  *padding: ;
+}
+
+button,
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: ;
+  border-color: ;
+  background: ;
+}
+
+button:hover,
+.btn:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+.btn:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  color: ;
+  border-color: ;
+  background: ;
+}
+
+
+ * Useful tip
+ *
+ * avoid auto-zooming form controls on iPhone and iPod http://goo.gl/DExZO
+ *
+    input:focus,
+    textarea:focus,
+    select:focus {
+      font-size: 16px !important;
+    }
+
+
+  * display default webkit <select> UI
+
+  select {
+    padding-right: 0.5em;
+    *padding-left: 1.5%;
+    *padding-right: 1.5%;
+    background-image: none;
+    -webkit-background-size: auto auto;
+            background-size: auto auto;
+    -webkit-appearance: menulist;
+  }
+
+  select[size],
+  select[multiple] {
+    -webkit-appearance: none;
+  }
+
+*/
+
+
+
+
+
+/* Miscellaneous -----------------------------------------------------------
+
+* responsive Facebook comments embed
+
+.fb-comments,
+.fb-comments span,
+.fb-comments iframe {
+  width: 100% !important;
+}
+
+
+* prevent phone numbers looking twice as large and having a Skype highlight
+* https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md
+
+span.skype_pnh_container {
+  display: none !important;
+}
+span.skype_pnh_print_container {
+  display: inline !important;
+}
+
+
+* target android browsers only
+* http://getbootstrap.com/getting-started/#support-android-stock-browser
+  <script>
+  var nua = navigator.userAgent;
+  var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1);
+  if (isAndroid) {
+    $('p').css('color', 'red');
+  }
+  </script>
+
+
+*/
+
+
+
+
+/* Flexible media queries reference ----------------------------------------
+
+/* 320px
+@media only screen and (min-width: 20em) { } */
+
+
+/* 480px
+@media only screen and (min-width: 30em) { } */
+
+
+/* 767px
+@media only screen and (min-width: 47.9375em) { } */
+
+
+/* 979px
+@media only screen and (min-width: 61.1875em) { } */
+
+
+/* 1200px
+@media only screen and (min-width: 75em) { } */
+
+
+/* High resolution devices (retina)
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+}
+*/
+
+
+
+/* Print -------------------------------------------------------------------
+ * show URLs
+
+  @media print {
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+  }
+
+*/
+
+
+
+/* $ 'Safe' CSS hacks reference
+ * http://jsfiddle.net/rV4p6/3/
+ * See http://browserhacks.com/ for more ------------------------------------
+ */
+
+/* IE7
+ *
+    .safe-css-hack {
+      *color: darkred;
+    }
+*/
+
+
+/* IE8
+ *
+    @media \0screen {
+
+      .safe-css-hack {
+        color: green;
+      }
+
+    }
+*/
+
+
+/* IE9+ (note the '\9' at the end)
+ *
+    .safe-css-hack:nth-of-type(1n) {
+      color: blue \9;
+    }
+*/
+
+
+/* Webkit browsers
+ * (Chrome, Safari, Android, Opera webkit, Chrome, etc...)
+ *
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+      .safe-css-hack {
+        color: cyan;
+      }
+
+    }
+*/
+
+
+/* Opera 9.5-12, IE7
+ *
+    _:-o-prefocus, .safe-css-hack {
+      color: brown;
+    }
+*/
+
+
+/* Firefox 3.6+
+ *
+    @media screen and (-moz-images-in-menus:0) {
+
+      .safe-css-hack {
+        color: magenta;
+      }
+
+    }
+*/

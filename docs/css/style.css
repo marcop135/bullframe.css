@@ -1,4 +1,4 @@
-/*! styles for documentation - BULLFRAME.CSS v1.6.3 docs
+/*! styles for documentation - BULLFRAME.CSS v2.0.1 docs
  *
  * https://github.com/marco135/bullframe.css/tree/master/add-ons
  * MIT License
@@ -227,12 +227,8 @@ h2#grid-system {
   margin-bottom: 1.5em;
 }
 
-.grid-bootstrap {
-  margin-bottom: 4.5em;
-}
-
 .grid .wrapper {
-  background: #999;
+  background: #888;
   height: 4.5em;
   overflow-y: hidden;
   line-height: 4.5em;
@@ -241,31 +237,26 @@ h2#grid-system {
   text-align: center;
 }
 
-.grid .bf-row,
-.grid .row {
+/* zebra stripes */
+.grid .bf-row:nth-child(odd) .wrapper {
+  background-color: #ccc;
+}
+
+.grid .bf-row {
   margin-bottom: 1.5em;
 }
 
-@media (max-width: 640px ) {
+@media (max-width: 767px) {
 
-  .grid .bf-row,
-  .grid .row {
-    margin-left: 0;
-    margin-right: 0;
+  .grid .bf-row {
     margin-bottom: 0;
   }
 
-  .grid [class*="col-"] {
-    width: 100%;
-    float: none;
-    padding-left: 0;
-    padding-right: 0;
-    *margin-left: 0;
-    margin-bottom: 1.5em;
+  .grid [class*="bf-col-"] {
+    margin-bottom: 0.75em;
   }
 
 }
-
 
 
 

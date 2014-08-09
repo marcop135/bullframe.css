@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v2.0.0
+ * BULLFRAME.CSS v2.0.1
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
@@ -644,7 +644,7 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus,
-#input-focused {
+#inputFocused {
   border-color: #2a6496;
   outline: 0 none;
 }
@@ -1163,7 +1163,7 @@ th {
 }
 
 /* responsive grid */
-@media (max-width: 640px) {
+@media (max-width: 767px) {
 
   .responsive-grid .bf-row {
     margin-left: 0;
@@ -1260,6 +1260,14 @@ table col[class*="bf-col-"] {
 
 
 /* layout display ---------------------------------------------------------- */
+
+/* Fix IE 10 on Windows Phone 8 Viewport
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
 .hide {
   display: none !important;
 }
@@ -1277,12 +1285,12 @@ table col[class*="bf-col-"] {
   display: none !important;
 }
 
-.none {
-  display: none;
-}
-
 .show {
   display: block !important;
+}
+
+.none {
+  display: none;
 }
 
 .show-block {
@@ -1303,7 +1311,6 @@ table col[class*="bf-col-"] {
   visibility: hidden;
 }
 
-.hide-text, /* old naming */
 .text-hide {
   font: 0/0 a;
   color: transparent;
@@ -1323,13 +1330,6 @@ table col[class*="bf-col-"] {
   clip: rect(0, 0, 0, 0);
   clip: rect(1px 1px 1px 1px); /* IE7 */
   border: 0;
-}
-
-/* Fix IE 10 on Windows Phone 8 Viewport
- * http://getbootstrap.com/getting-started/#support-ie10-width
- */
-@-ms-viewport {
-  width: device-width;
 }
 
 
@@ -1393,7 +1393,7 @@ table col[class*="bf-col-"] {
 }
 
 .text-normal {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .text-italic {

@@ -13,16 +13,14 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
-  <li>Custom Roboto Google Fonts by default</li>
-  <li>Fluid grid system</li>
+  <li>Simple fluid grid system</li>
   <li>Flexible vertical grid</li>
   <li>Starter-kit custom styles</li>
 </ul>
 <ul>
-  <li>Flexible and rich typography</li>
-  <li>Flexible images and media (video, audio, iframe, embed)</li>
+  <li>Flexible images and media elements (video, audio, iframe, embed)</li>
   <li>Flexible, cross-browser HTML5 forms</li>
-  <li>Flexible tables</li>
+  <li>Responsive tables</li>
   <li>Several helper classes (like '.clearfix' or '.text-hide')</li>
 </ul>
 

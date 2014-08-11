@@ -401,11 +401,14 @@ span.skype_pnh_print_container {
 
 /* High resolution devices (retina)
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+       (-webkit-min-device-pixel-ratio: 2),
+       (min--moz-device-pixel-ratio: 2),
+       (-o-min-device-pixel-ratio: 2/1),
+       (min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
+
 }
-*/
 
 
 

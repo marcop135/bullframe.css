@@ -1,4 +1,4 @@
-/*! styles for documentation - BULLFRAME.CSS v2.0.1 docs
+/*! styles for documentation - BULLFRAME.CSS v2.1.0 docs
  *
  * https://github.com/marco135/bullframe.css/tree/master/add-ons
  * MIT License
@@ -8,7 +8,7 @@
 /* the basics
 --------------------------------------------------------------------------- */
 
-@import url(//fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
 
 html,
 button,
@@ -91,89 +91,26 @@ textarea {
 
 }
 
-.abstract {
-  line-height: 1.8;
-}
+@media (min-width: 1024px) {
 
-@media screen and (min-width: 1025px) {
-
-  .abstract {
-    font-size: 1.2em;
+  p.claim {
+    font-size: 170%;
   }
+
 }
 
-.abstract code {
+p.claim i {
+  color: #666;
+}
+
+code.cdn {
   background: #f0f0f0;
   display: inline-block;
-  padding: 0.1em 0.3em;
-  border: 1px solid #ccc;
+  padding: 10px 15px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
+  width: 100%;
 }
-
-
-
-
-
-
-
-/* navigation
---------------------------------------------------------------------------- */
-
-.nav li a {
-  display: block;
-  padding: 0.75em 0;
-  border-bottom: 1px solid #ccc;
-}
-
-@media (min-width: 330px) and (max-width: 720px) {
-
-  .nav li a {
-    width: 50%;
-    float: left;
-  }
-
-}
-
-@media (min-width: 721px) {
-
-  .nav li {
-    float: left;
-    margin: 2em 1em 1em 1em;
-  }
-
-  .nav li:first-child {
-    margin-left: 0;
-  }
-
-  .nav li a:hover,
-  .nav li a:focus {
-    text-decoration: none;
-    border-color: #2a6496;
-  }
-
-}
-
-@media (min-width: 1025px) {
-
-  .nav li {
-    float: left;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-  }
-
-  .nav li a {
-    padding: 0.5em 0;
-    font-size: 1.1em;
-  }
-
-}
-
-
-
-
-
-
 
 
 /* section titles

@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v2.0.1
+ * BULLFRAME.CSS v2.1.0
  *
  * GitHub: https://github.com/marco135/bullframe.css
  * MIT License
@@ -99,6 +99,9 @@ body {
   background-color: transparent;
   min-width: 320px;
   -ms-overflow-style: scrollbar; /* IE10+ */
+  /* http://css-tricks.com/almanac/properties/b/backface-visibility/ */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 a {
@@ -150,38 +153,38 @@ h6 {
 
 h1,
 .h1 {
-    font-size: 2.25em;
-    margin: 0.75em 0;
+  font-size: 36px;
+  margin: 24px 0;
 }
 
 h2,
 .h2 {
-    font-size: 2em;
-    margin: 0.75em 0;
+  font-size: 30px;
+  margin: 24px 0;
 }
 
 h3,
 .h3 {
-    font-size: 1.5em;
-    margin: 0.75em 0;
+  font-size: 24px;
+  margin: 24px 0;
 }
 
 h4,
 .h4 {
-    font-size: 1em;
-    margin: 1.5em 0;
+  font-size: 18px;
+  margin: 10px 0
 }
 
 h5,
 .h5 {
-    font-size: 0.83em;
-    margin: 1.5em 0;
+  font-size: 14px;
+  margin: 10px 0;
 }
 
 h6,
 .h6 {
-    font-size: 0.75em;
-    margin: 1.5em 0;
+  font-size: 12px;
+  margin: 10px 0;
 }
 
 abbr[title] {
@@ -190,8 +193,8 @@ abbr[title] {
 }
 
 blockquote {
-  margin: 0 0 1.5em 0;
-  padding-left: 1.5em;
+  margin: 0 0 24px 0;
+  padding-left: 24px;
   border-left: 5px solid #ccc;
 }
 
@@ -233,7 +236,7 @@ ins {
 
 p,
 pre {
-  margin: 1.5em 0;
+  margin: 24px 0;
 }
 
 p + p {
@@ -263,7 +266,7 @@ code,
 kbd,
 samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 strong,
@@ -284,11 +287,11 @@ sup {
 }
 
 sup {
-  top: -0.5em;
+  top: -8px;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -4px;
 }
 
 small {
@@ -304,7 +307,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-  margin: 1.5em 0;
+  margin: 24px 0;
   padding: 0;
 }
 
@@ -337,7 +340,7 @@ menu,
 ol,
 ul,
 dl {
-  margin: 1.5em 0;
+  margin: 24px 0;
   padding: 0;
 }
 
@@ -354,7 +357,7 @@ dd {
 
 ul,
 ol {
-  margin-left: 1.5em;
+  margin-left: 24px;
 }
 
 nav ol,
@@ -623,7 +626,7 @@ optgroup::-moz-focus-inner {
 
 textarea {
   height: auto;
-  min-height: 3em;
+  min-height: 50px;
   overflow: auto;
   vertical-align: top;
   resize: vertical;
@@ -697,7 +700,7 @@ input[type="time"],
 input[type="url"],
 select,
 textarea {
-  padding: 0.5em;
+  padding: 8px;
   *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
   *padding-right: 1.5%;
 }
@@ -711,12 +714,12 @@ textarea {
 
 label input[type="radio"],
 label input[type="checkbox"] {
-  margin-right: 0.5em;
+  margin-right: 8px;
 }
 
 label + input[type="radio"],
 label + input[type="checkbox"] {
-  margin-left: 0.5em;
+  margin-left: 8px;
 }
 
 
@@ -726,7 +729,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  padding: 0.5em 1em;
+  padding: 8px 1em;
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -837,7 +840,7 @@ input[type="submit"]:active {
     background-repeat: no-repeat;
     background-position: right center;
 
-    padding-right: 2em;
+    padding-right: 32px;
   }
 
   select[size],
@@ -847,7 +850,7 @@ input[type="submit"]:active {
             background-size: auto auto;
     background-position: left top;
 
-    padding-right: 0.5em;
+    padding-right: 8px;
 
   }
 
@@ -983,7 +986,7 @@ td {
 
 .table th,
 .table td {
-  padding: 0.5em;
+  padding: 8px;
   border-bottom: 1px solid #999;
 }
 
@@ -1432,7 +1435,7 @@ table col[class*="bf-col-"] {
 
 .responsive-table table {
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 
 /* force and customize webkit scrollbars appearance */
@@ -1441,19 +1444,19 @@ table col[class*="bf-col-"] {
 }
 
 .responsive-table.scrollbar::-webkit-scrollbar {
-  width: 0.625em;
-  height: 0.625em;
+  width: 10px;
+  height: 10px;
 }
 
 .responsive-table.scrollbar::-webkit-scrollbar-track {
-  padding: 0.25em;
+  padding: 4px;
   background-color: transparent;
 }
 
 .responsive-table.scrollbar::-webkit-scrollbar-thumb {
   background-color: #999;
-  -webkit-border-radius: 0.625em;
-          border-radius: 0.625em;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
 }
 
 .responsive-table.scrollbar::-webkit-scrollbar-thumb:window-inactive {

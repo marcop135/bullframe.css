@@ -1271,14 +1271,16 @@ table col[class*="bf-col-"] {
   width: device-width;
 }
 
+
 .hide {
   display: none !important;
 }
 
-.hidden {
-  display: none !important;
-  visibility: hidden;
+.show {
+  display: block !important;
 }
+
+/* modernizr.js classes */
 
 .touch .hide-on-touch {
   display: none !important;
@@ -1288,11 +1290,15 @@ table col[class*="bf-col-"] {
   display: none !important;
 }
 
-.show {
-  display: block !important;
+.invisible {
+  visibility: hidden;
 }
 
-.none {
+.visible {
+  visibility: visible;
+}
+
+.show-none {
   display: none;
 }
 
@@ -1310,10 +1316,6 @@ table col[class*="bf-col-"] {
   *zoom: 1;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .text-hide {
   font: 0/0 a;
   color: transparent;
@@ -1323,6 +1325,12 @@ table col[class*="bf-col-"] {
 }
 
 /* assistive text for screen reader only (e.g. form labels) */
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1334,6 +1342,7 @@ table col[class*="bf-col-"] {
   clip: rect(1px 1px 1px 1px); /* IE7 */
   border: 0;
 }
+
 
 
 /* layout positioning ------------------------------------------------------ */
@@ -1388,7 +1397,7 @@ table col[class*="bf-col-"] {
 }
 
 .text-lowercase {
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .text-bold {
@@ -1427,39 +1436,39 @@ table col[class*="bf-col-"] {
 /* responsive tables --------------------------------------------------------
  * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini
  */
-.responsive-table {
+.table-responsive {
   overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.responsive-table table {
+.table-responsive table {
   width: 100%;
   margin-bottom: 16px;
 }
 
 /* force and customize webkit scrollbars appearance */
-.responsive-table.scrollbar {
+.table-responsive.scrollbar {
   -webkit-overflow-scrolling: auto;
 }
 
-.responsive-table.scrollbar::-webkit-scrollbar {
+.table-responsive.scrollbar::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-.responsive-table.scrollbar::-webkit-scrollbar-track {
+.table-responsive.scrollbar::-webkit-scrollbar-track {
   padding: 4px;
   background-color: transparent;
 }
 
-.responsive-table.scrollbar::-webkit-scrollbar-thumb {
+.table-responsive.scrollbar::-webkit-scrollbar-thumb {
   background-color: #999;
   -webkit-border-radius: 10px;
           border-radius: 10px;
 }
 
-.responsive-table.scrollbar::-webkit-scrollbar-thumb:window-inactive {
+.table-responsive.scrollbar::-webkit-scrollbar-thumb:window-inactive {
   background-color: #ccc;
 }
 
@@ -1468,7 +1477,7 @@ table col[class*="bf-col-"] {
  *
    <script>
      &(function() {
-       $('.article-content table').wrap('<div class="responsive-table"></div>');
+       $('.article-content table').wrap('<div class="table-responsive"></div>');
      });
    </script>
  *
@@ -1476,7 +1485,7 @@ table col[class*="bf-col-"] {
 
 
 /* responsive videos ------------------------------------------------------- */
-.responsive-video {
+.embed-responsive {
   position: relative;
   padding-bottom: 67.5%; /* 4:3 standard */
   padding-top: 1.5625em;
@@ -1484,11 +1493,11 @@ table col[class*="bf-col-"] {
   overflow: hidden;
 }
 
-.responsive-video-item,
-.responsive-video iframe,
-.responsive-video object,
-.responsive-video embed,
-.responsive-video video {
+.embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive embed,
+.embed-responsive video {
   position: absolute;
   top: 0;
   left: 0;
@@ -1496,11 +1505,11 @@ table col[class*="bf-col-"] {
   height: 100%;
 }
 
-.responsive-video.widescreen {
+.embed-responsive.widescreen {
   padding-bottom: 56.25%; /* 16:9 */
 }
 
-.responsive-video.vimeo {
+.embed-responsive.vimeo {
   padding-top: 0; /* no extra-padding for controls */
 }
 
@@ -1509,7 +1518,7 @@ table col[class*="bf-col-"] {
  *
    <script>
      $(function() {
-        $('.article-content iframe, .content object, .article-content embed').wrap('<div class="responsive-video-container"></div>');
+        $('.article-content iframe, .content object, .article-content embed').wrap('<div class="embed-responsive"></div>');
      });
    </script>
  *

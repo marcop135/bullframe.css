@@ -281,7 +281,7 @@
 
     <div class="bf-col-6">
       <h3 class="sub-title">HTML5 video with controls</h3>
-        <video controls>
+        <video controls poster="http://video-js.zencoder.com/oceans-clip.png">
        <source src="http://video-js.zencoder.com/oceans-clip.mp4"
                type='video/mp4; codecs="avc1, mp4a"'>
        <source src="http://video-js.zencoder.com/oceans-clip.ogv"
@@ -306,14 +306,14 @@
 
     <div class="bf-col-6">
       <h3 class="sub-title">YouTube iframe (4:3)</h3>
-      <div class="responsive-video">
+      <div class="embed-responsive">
         <iframe width="560" height="315" src="http://www.youtube.com/embed/Z-4v4I7Gzk0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div><!-- /col -->
 
     <div class="bf-col-6">
       <h3 class="sub-title">Vimeo iframe (16:9)</h3>
-      <div class="responsive-video widescreen vimeo">
+      <div class="embed-responsive widescreen vimeo">
         <iframe src="http://player.vimeo.com/video/27243869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div><!-- /col -->
@@ -641,7 +641,7 @@
       <div class="bf-col-12">
 
         <h3 class="sub-title">Styled responsive tabular data</h3>
-        <div class="responsive-table">
+        <div class="table-responsive">
         <table class="table">
           <caption>Caption goes here</caption>
           <thead>
@@ -719,11 +719,11 @@
               <td>row5_cell8</td>
             </tr>
           </table>
-        </div><!-- /.responsive-table-containter -->
+        </div><!-- /.table-responsive-containter -->
 
 
         <h3 class="sub-title">Styled responsive tabular data with custom scrollbar in webkit</h3>
-        <div class="responsive-table scrollbar">
+        <div class="table-responsive scrollbar">
         <table class="table">
           <caption>Caption goes here</caption>
           <thead>
@@ -801,7 +801,7 @@
               <td>row5_cell8</td>
             </tr>
           </table>
-        </div><!-- /.responsive-table-containter -->
+        </div><!-- /.table-responsive-containter -->
 
 
     </div><!-- /.bf-col-12 -->
@@ -1105,8 +1105,12 @@
 
     <div class="bf-col-12">
       <div class="sharing">
-        <p><strong>Fork this project</strong>: <a href="http://github.com/marco135/bullframe.css" title="github source">https://github.com/marco135/bullframe.css</a></p>
-        <p><code>$ git clone https://github.com/marco135/bullframe.css.git</code></p>
+        <span class="show-block h4"><strong>Fork this project on GitHub</strong></span>
+        <a href="http://github.com/marco135/bullframe.css" title="github source">https://github.com/marco135/bullframe.css</a>
+        <code class="show-block">$ git clone https://github.com/marco135/bullframe.css.git</code>
+        <hr>
+        <span class="show-block h4"><strong>CDN link</strong></span>
+        <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/bullframe.css/2.1.0/bullframe.min.css&quot;&gt;</code>
       </div><!--/.social-btns -->
     </div><!-- /col -->
 

@@ -1,4 +1,4 @@
-<h1>BULLFRAME.CSS v2.0.1</h1>
+<h1>BULLFRAME.CSS v2.1.0</h1>
 <p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>It's a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!

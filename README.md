@@ -1,4 +1,4 @@
-<h1>BULLFRAME.CSS v2.1.0</h1>
+<h1>BULLFRAME.CSS v2.1.1</h1>
 <p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>It's a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -26,12 +26,12 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 
 
 <h2>Test it now</h2>
-<p><b><a href="http://marco135.github.io/bullframe.css/" title="bullframe.css boilerplate demo">Check out the demo</a></b></p>
+<p><b><a href="http://marcopontili.github.io/bullframe.css/" title="bullframe.css boilerplate demo">Check out the demo</a></b></p>
 
 <h2>CDN</h2>
 <p><a href="http://www.jsdelivr.com/#!bullframe.css" title="JSDelivr Bullframe.css">JSDelivr</a> provides CDN support for Bullframe.css's CSS files.</p>
 <pre><code>&lt;!-- Latest compiled and minified IE7+ CSS --&gt;
-&lt;link href=&quot;//cdn.jsdelivr.net/bullframe.css/2.0.0/bullframe.min.css&quot; rel=&quot;stylesheet&quot; &gt;</code></pre>
+&lt;link href=&quot;//cdn.jsdelivr.net/bullframe.css/2.1.1/bullframe.min.css&quot; rel=&quot;stylesheet&quot; &gt;</code></pre>
 
 <h2>How to use it</h2>
 <ul>

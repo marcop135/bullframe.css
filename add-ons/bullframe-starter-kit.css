@@ -1,8 +1,8 @@
-/*! BULLFRAME.CSS v2.1.0 add-on
+/*! BULLFRAME.CSS v2.1.1 add-on
  * Author's custom styles starting-point
  * Customize as you want the following code
  *
- * https://github.com/marco135/bullframe.css/tree/master/add-ons
+ * https://github.com/marcopontili/bullframe.css/tree/master/add-ons
  * MIT License
 ============================================================================ */
 
@@ -11,11 +11,28 @@
 
 /* Use @viewport rule ------------------------------------------------------
 
- * Fix IE 10 on Windows Phone 8 Viewport with JavaScript
+ *
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014 Twitter, Inc.
+ * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+ * details, see http://creativecommons.org/licenses/by/3.0/.
+ *
  *
     <script>
+      // See the Getting Started docs for more information:
       // http://getbootstrap.com/getting-started/#support-ie10-width
-      if(navigator.userAgent.match(/IEMobile\/10\.0/)){var msViewportStyle=document.createElement("style");msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(msViewportStyle)}
+      (function () {
+        'use strict';
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+          var msViewportStyle = document.createElement('style')
+          msViewportStyle.appendChild(
+            document.createTextNode(
+              '@-ms-viewport{width:auto!important}'
+            )
+          )
+          document.querySelector('head').appendChild(msViewportStyle)
+        }
+      })();
     </script>
 
 @-ms-viewport {
@@ -44,15 +61,26 @@ video {
 /* google maps possible fix ------------------------------------------------
  * see also http://getbootstrap.com/getting-started/#third-parties
 
+#googlemap,
+#map_canvas {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+#googlemap img,
+#googlemap object,
+#googlemap embed,
+
 #map_canvas img,
-#map_canvas embed,
 #map_canvas object,
+#map_canvas embed,
+
 .map_canvas img,
-.map_canvas embed,
-.map_canvas object {
+.map_canvas object,
+.map_canvas embed {
   max-width: none !important;
 }
-*/
 
 
 
@@ -146,28 +174,28 @@ img.alignleft {
 
 /* Reset 'margin-top' for a wide range of elements -------------------------
 
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6,
-  p,
-  pre,
-  menu,
-  ol,
-  ul,
-  dl,
-  blockquote,
-  hr {
-    margin-top: 0;
-  }
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p,
+pre,
+menu,
+ol,
+ul,
+dl,
+blockquote,
+hr {
+  margin-top: 0;
+}
 
 */
 
@@ -401,12 +429,12 @@ span.skype_pnh_print_container {
 
 /* High resolution devices (retina)
 @media print,
-       (-webkit-min-device-pixel-ratio: 2),
-       (min--moz-device-pixel-ratio: 2),
-       (-o-min-device-pixel-ratio: 2/1),
-       (min-device-pixel-ratio: 2),
-       (min-resolution: 192dpi),
-       (min-resolution: 2dppx) {
+ (-webkit-min-device-pixel-ratio: 2),
+ (min--moz-device-pixel-ratio: 2),
+ (-o-min-device-pixel-ratio: 2/1),
+ (min-device-pixel-ratio: 2),
+ (min-resolution: 192dpi),
+ (min-resolution: 2dppx) {
 
 }
 
@@ -436,7 +464,7 @@ span.skype_pnh_print_container {
 
 
 
-/* $ 'Safe' CSS hacks reference
+/* $ Safe CSS hacks reference
  * http://jsfiddle.net/rV4p6/3/
  * See http://browserhacks.com/ for more ------------------------------------
  */

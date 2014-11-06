@@ -1,7 +1,7 @@
-/*! BULLFRAME.CSS v2.1.0 docs
+/*! BULLFRAME.CSS v2.1.1 docs
  * styles for documentation
  *
- * https://github.com/marco135/bullframe.css/tree/master/add-ons
+ * https://github.com/marcopontili/bullframe.css/tree/master/add-ons
  * MIT License
 ============================================================================ */
 
@@ -9,14 +9,14 @@
 /* the basics
 --------------------------------------------------------------------------- */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
 
 html,
 button,
 input,
 select,
 textarea {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 
@@ -261,11 +261,11 @@ h2#grid-system {
 }
 
 [role="contentinfo"] {
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 [role="contentinfo"] p {
   display: block;
-  padding: 32px 0;
+  padding: 10px 0;
   margin: 0;
 }

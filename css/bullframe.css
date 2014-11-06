@@ -1,10 +1,10 @@
 /*! $
- * BULLFRAME.CSS v2.1.0
+ * BULLFRAME.CSS v2.1.1
  *
- * GitHub: https://github.com/marco135/bullframe.css
+ * GitHub: https://github.com/marcopontili/bullframe.css
  * MIT License
  *
- * Carefully built by @m135_
+ * Carefully built by @marcopontili
  */
 
 *,
@@ -519,6 +519,7 @@ legend {
 
 label {
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 label input {
@@ -1533,7 +1534,9 @@ table col[class*="bf-col-"] {
 
 @media print {
 
-  * {
+  *,
+  *:before,
+  *:after {
     background: transparent !important;
     color: #000 !important;
     box-shadow: none !important;

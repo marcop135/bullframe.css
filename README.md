@@ -31,7 +31,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>CDN</h2>
 <p><a href="http://www.jsdelivr.com/#!bullframe.css" title="JSDelivr Bullframe.css">JSDelivr</a> provides CDN support for Bullframe.css's CSS files.</p>
 <pre><code>&lt;!-- Latest compiled and minified IE7+ CSS --&gt;
-&lt;link href=&quot;//cdn.jsdelivr.net/bullframe.css/2.1.1/bullframe.min.css&quot; rel=&quot;stylesheet&quot; &gt;</code></pre>
+&lt;link href=&quot;//cdn.jsdelivr.net/bullframe.css/2.1.2/bullframe.min.css&quot; rel=&quot;stylesheet&quot; &gt;</code></pre>
 
 <h2>How to use it</h2>
 <ul>

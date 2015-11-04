@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v2.1.1
+ * BULLFRAME.CSS v2.1.2
  *
  * GitHub: https://github.com/marcopontili/bullframe.css
  * MIT License
@@ -1305,6 +1305,12 @@ table col[class*="bf-col-"] {
 
 .show-block {
   display: block;
+}
+
+.show-block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .show-inline {

@@ -9,7 +9,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <li>Normalized styles for a wide range of elements across browsers (like
   <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> does)</li>
   <li>20KB minified</li>
-  <li>IE7+ support</li>
+  <li>IE8+ support</li>
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>

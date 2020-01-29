@@ -1,10 +1,10 @@
 /*! $
- * BULLFRAME.CSS v2.1.2
+ * BULLFRAME.CSS v2.2.0
  *
- * GitHub: https://github.com/marcopontili/bullframe.css
+ * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
  *
- * Carefully built by @marcopontili
+ * Carefully built by @marcop135
  */
 
 *,
@@ -13,6 +13,1436 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+template {
+  display: none;
+}
+
+/* Always hide an element with the `hidden` HTML attribute (from PureCSS).
+ * Needed for proper display in IE 10-. */
+[hidden] {
+  display: none !important;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+dt,
+dd,
+address,
+pre {
+  line-height: 1.5;
+}
+
+html,
+button,
+.btn,
+.btn:hover,
+.btn:focus,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  word-wrap: break-word;
+  font-size: 10px; /* IE fix https://github.com/twbs/bootstrap/issues/13737 */
+  -ms-overflow-style: scrollbar;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: transparent;
+  min-width: 320px;
+  -ms-overflow-style: scrollbar; /* IE10+ */
+  /* http://css-tricks.com/almanac/properties/b/backface-visibility/ */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+/* Fix IE 10 on Windows Phone 8 Viewport
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+/* Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ *
+ * Credit: https://github.com/suitcss/base */
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+a {
+  color: #2387dd; /* bootstrap blue */
+  text-decoration: none;
+
+  /* IE10+: Remove grey background on active links */
+  background-color: transparent;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: 0;
+  color: #2a6496;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color; /* webkit */
+  outline-offset: -2px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  color: inherit;
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+  margin: 24px 0;
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+  margin: 24px 0;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+  margin: 24px 0;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+  margin: 10px 0
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* Abbreviations (Bootstrap 4)
+ *
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ * 3. Add explicit cursor to indicate changed behavior. */
+abbr[title] {
+  cursor: help;
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+  cursor: help; /* 3 */
+  border-bottom: 0; /* 1 */
+}
+
+blockquote {
+  margin: 0 0 24px 0;
+  padding-left: 24px;
+  border-left: 5px solid #ccc;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+blockquote small {
+  color: #999;
+  display: block;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+  *content: '';
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before,
+q:after {
+  *content: '';
+  *content: none;
+}
+
+mark {
+  background: #ff0; /* yellow */
+  color: #000;
+  font-weight: bold;
+}
+
+ins {
+  background: #ff9; /* light yellow */
+  color: #000;
+  text-decoration: none;
+}
+
+p,
+pre {
+  margin: 24px 0;
+}
+
+p + p {
+  margin-top: 0;
+}
+
+p.lead {
+  font-size: 125%;
+}
+
+pre {
+  overflow: auto;
+  word-break: break-all; /* webkit */
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: -moz-pre-wrap; /* fennec */
+  white-space: pre-wrap;
+  white-space: pre \9; /* IE7+ */
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 16px;
+}
+
+strong,
+b {
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -8px;
+}
+
+sub {
+  bottom: -4px;
+}
+
+small {
+  font-size: 80%;
+}
+
+address {
+  font-style: normal;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 24px 0;
+  padding: 0;
+  overflow: visible; /* Show the overflow in Edge and IE */
+}
+
+::-moz-selection {
+  background: #b3d4fc; /* azure */
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  color: #000;
+  text-shadow: none;
+}
+
+img::-moz-selection {
+  background-color: transparent;
+}
+
+img::selection {
+  background-color: transparent;
+}
+
+
+
+/* $ Lists
+============================================================================ */
+
+menu,
+ol,
+ul,
+dl {
+  margin: 24px 0;
+  padding: 0;
+}
+
+menu ul,
+menu ol,
+ul ul,
+ul ol,
+ol ol,
+ol ul,
+dd {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-left: 24px;
+}
+
+nav ol,
+nav ul {
+  list-style: none;
+  list-style-image: none;
+  margin-left: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+
+
+
+
+/* $ Embedded contents
+============================================================================ */
+
+img,
+canvas,
+audio,
+video,
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+audio,
+video,
+canvas,
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  border: 0;
+  width: auto;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+video {
+  height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+
+
+
+/* $ Figures
+============================================================================ */
+
+figure {
+  margin: 0;
+}
+
+
+
+
+
+/* $ Forms (enter the madness)
+============================================================================ */
+
+/* normalize --------------------------------------------------------------- */
+
+label,
+html input,
+select,
+textarea,
+button,
+.btn,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+input[type="file"],
+output {
+  display: block;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+html input,
+select,
+textarea {
+  margin: 0;
+  background-image: none; /* reset Fennec */
+}
+
+input,
+select,
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+label,
+button,
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+form {
+  margin: 0;
+}
+
+/* 1. Remove intrinsic min-width of fieldset
+ * https://github.com/necolas/normalize.css/pull/269 */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0; /* 1 */
+}
+
+legend {
+  display: block;
+  display: table \9; /* enable line-wrapping in IE8+ */
+  width: 100%;
+  white-space: normal; /* enable line-wrapping in FF4/5 */
+  border: 0;
+  padding: 0;
+  font-weight: normal;
+  *margin-left: -7px;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+label input {
+  font-weight: normal;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+
+output {
+  vertical-align: middle;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: 700;
+}
+
+button,
+
+/* avoid destroying native android audio/video players */
+html input[type="button"],
+
+input[type="reset"],
+input[type="submit"],
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="url"],
+input[type="image"],
+input[type="password"],
+input[type="search"],
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+textarea {
+  -webkit-appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+input[type="radio"] {
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
+}
+
+input[type="color"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="time"],
+input[type="url"],
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #b2b2b2;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 0;
+  *margin-bottom: 0;
+  *width: 13px;
+  *height: 13px;
+}
+
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+select[multiple] {
+  background-image: none; /* Fennec */
+}
+
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+input[type="color"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus,
+#inputFocused {
+  border-color: #222;
+  outline: 0 none;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 1px solid #2a6496;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+/* add responsiveness ------------------------------------------------------ */
+
+html input,
+select,
+textarea {
+  width: 100%;
+  *width: 97%; /* IE7 doesn't support CSS3 'box-sizing' */
+}
+
+input[type="file"],
+select {
+  *width: 100%;
+}
+
+button,
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+html input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="time"],
+input[type="url"],
+select,
+textarea {
+  padding: 8px;
+  *padding-left: 1.5%; /* IE7 doesn't support CSS3 'box-sizing' */
+  *padding-right: 1.5%;
+}
+
+textarea {
+  *padding: 1.5%;
+}
+
+
+/* customize radios and checkboxes ---------------------------------------- */
+
+label input[type="radio"],
+label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+label + input[type="radio"],
+label + input[type="checkbox"] {
+  margin-left: 8px;
+}
+
+
+/* customize buttons ------------------------------------------------------- */
+button,
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 8px 1em;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #b2b2b2;
+  background-image: none; /* normalize fennec */
+  background: #f4f4f4;
+}
+
+/* Firefox: Get rid of the inner focus border */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* to reduce IE7's oversized button text */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button.btn,
+input[type="button"].btn,
+input[type="reset"].btn,
+input[type="submit"].btn {
+  *padding: 0.4em 0.8em;
+}
+
+button:hover,
+.btn:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+.btn:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  outline: 0 none;
+  text-decoration: none;
+  border-color: #999;
+  background: #e5e5e5;
+}
+
+button:active,
+.btn:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+
+
+/* invalid, placeholder, disabled adn readonly ----------------------------- */
+
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+  color: #b94a48; /* dark red */
+  border-color: #b94a48; /* red */
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #c72a28; /* red */
+  outline: 0 none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888; /* gray */
+}
+
+/* FF placeholder bug
+ * Issue: If one change the text color of input fields, FF will change
+ * the default color of placeholders too!
+ * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
+ */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #888;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #888;
+}
+
+input:placeholder,
+textarea:placeholder {
+  color: #888;
+}
+
+input.placeholder,
+textarea.placeholder {
+  color: #888;
+}
+
+/* disable groups */
+fieldset[disabled] .btn,
+fieldset[disabled] button,
+fieldset[disabled] input,
+fieldset[disabled] select,
+fieldset[disabled] textarea,
+
+/* disable singles */
+.btn[disabled],
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled],
+
+/* disable active singles */
+.btn:active[disabled],
+button:active[disabled],
+input:active[disabled],
+select:active[disabled],
+textarea:active[disabled] {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  background: #f9f9f9 none !important; /* very light grey */
+  border-color: #dbdbdb !important;
+  color: #b2b2b2 !important;
+  text-shadow: none !important;
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+fieldset[disabled] .btn-success,
+[disabled].btn-success,
+[disabled].btn-success:active {
+  background: #a2d6a2 none !important; /* very light green */
+  border-color: #a2d6a2 !important;
+  color: #fff !important;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+  background-color: transparent;
+}
+
+
+
+
+
+/* $ Tables
+============================================================================ */
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid #999;
+}
+
+th,
+caption {
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+
+
+
+/* $ Basic 12 columns fluid grid system
+ *
+ * Heads up!!
+ * You can't do column ordering (for SEO)
+ * and mobile/tablet/desktop mixing
+============================================================================ */
+
+.bf-container {
+  /* avoid IE8 issue with 'box-sizing: border-box' in combination
+   * with max/min-width and max/min-height
+   * https://github.com/twbs/bootstrap/issues/10014
+   */
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.bf-container:before,
+.bf-container:after {
+  display: table;
+  content: " ";
+}
+
+.bf-container:after {
+  clear: both;
+}
+
+.bf-container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.bf-container-fluid:before,
+.bf-container-fluid:after {
+  display: table;
+  content: " ";
+}
+
+.bf-container-fluid:after {
+  clear: both;
+}
+
+.bf-row {
+  display: block;
+  margin-left: -15px;
+  margin-right: -15px;
+  *zoom: 1;
+}
+
+.bf-row:before,
+.bf-row:after {
+  content: " ";
+  display: table;
+}
+
+.bf-row:after {
+  clear: both;
+}
+
+[class*="bf-col-"] {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bf-col-12 {
+  width: 100%;
+  *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-11 {
+  width: 91.66666666666666%;
+  *width: expression((this.parentNode.clientWidth/12*11 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-10 {
+  width: 83.33333333333334%;
+  *width: expression((this.parentNode.clientWidth/12*10 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-9 {
+  width: 75%;
+  *width: expression((this.parentNode.clientWidth/12*9 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-8 {
+  width: 66.66666666666666%;
+  *width: expression((this.parentNode.clientWidth/12*8 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-7 {
+  width: 58.333333333333336%;
+  *width: expression((this.parentNode.clientWidth/12*7 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-6 {
+  width: 50%;
+  *width: expression((this.parentNode.clientWidth/2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-5 {
+  width: 41.66666666666667%;
+  *width: expression((this.parentNode.clientWidth/12*5 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-4 {
+  width: 33.33333333333333%;
+  *width: expression((this.parentNode.clientWidth/12*4 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-3 {
+  width: 25%;
+  *width: expression((this.parentNode.clientWidth/12*3 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-2 {
+  width: 16.666666666666664%;
+  *width: expression((this.parentNode.clientWidth/12*2 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+.bf-col-1 {
+  width: 8.3333%;
+  *width: expression((this.parentNode.clientWidth/12 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+}
+
+/* responsive grid */
+@media (max-width: 767px) {
+
+  .responsive-grid .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .responsive-grid [class*="bf-col-"] {
+    width: 100%;
+    *width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+    float: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+/* fix missing table cell borders when using 'col-' classes
+ * for column sizing
+ * https://github.com/twbs/bootstrap/issues/11623
+ */
+table col[class*="bf-col-"] {
+  position: static;
+  display: table-column;
+  float: none;
+}
+
+
+
+
+/* $ Just in case, add custom styles here
+============================================================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $ Helper classes
+============================================================================ */
+
+
+/* clearfix --------------------------------------------------------------- */
+/* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*
+ * Better float containment in IE7 using CSS expressions
+ * http://nicolasgallagher.com/better-float-containment-in-ie/
+ */
+.super-clearfix:before,
+.super-clearfix:after {
+  content: "";
+  display: table;
+}
+
+.super-clearfix:after {
+  clear: both;
+}
+
+.super-clearfix {
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  *zoom: 1; /* non-JS fallback */
+}
+
+
+/* layout display ---------------------------------------------------------- */
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.show-none {
+  display: none;
+}
+
+.show-block {
+  display: block;
+}
+
+.show-block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show-inline {
+  display: inline;
+}
+
+.show-inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* assistive text for screen reader only (e.g. form labels) */
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(1px 1px 1px 1px); /* IE7 */
+  border: 0;
+}
+
+
+
+/* layout positioning ------------------------------------------------------ */
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.affix {
+  position: fixed;
+}
+
+/* http://css-tricks.com/centering-in-the-unknown/
+ * align center vertically and horizontally
+ */
+.align-center-unknown {
+  display: table;
+  width: 100%;
+}
+
+.align-center-unknown-item  {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* text utilities ---------------------------------------------------------- */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.no-select {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+
+
+/* responsive tables --------------------------------------------------------
+ * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini
+ */
+.table-responsive {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-responsive table {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* force and customize webkit scrollbars appearance */
+.table-responsive.scrollbar {
+  -webkit-overflow-scrolling: auto;
+}
+
+
+
+/* responsive videos ------------------------------------------------------- */
+.embed-responsive {
+  position: relative;
+  padding-bottom: 67.5%; /* 4:3 standard */
+  padding-top: 1.5625em;
+  height: 0;
+  overflow: hidden;
+}
+
+.embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive embed,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.embed-responsive.widescreen {
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.embed-responsive.vimeo {
+  padding-top: 0; /* no extra-padding for controls */
+}
+
+
+
+/* $ Print
+============================================================================ */
+
+@media print {
+
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+}
 }
 
 article,

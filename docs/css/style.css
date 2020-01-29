@@ -1,110 +1,50 @@
-/*! BULLFRAME.CSS v2.1.2 docs
+/*! BULLFRAME.CSS v2.2.0 docs
  * styles for documentation
  *
- * https://github.com/marcopontili/bullframe.css/tree/master/add-ons
+ * https://github.com/marcop135/bullframe.css/tree/master/add-ons
  * MIT License
 ============================================================================ */
 
-
-/* the basics
+/* header
 --------------------------------------------------------------------------- */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
-
-html,
-button,
-input,
-select,
-textarea {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-}
-
-
-/* banner
---------------------------------------------------------------------------- */
-
-[role="banner"] {
-  color: #fff;
-  padding: 30px 0;
-  margin-bottom: 24px;
-  background-color: #c36e9e;
-}
-
-[role="banner"] h1 {
-  margin: 0;
-}
-
-.version span {
-  font-size: 80%;
-  display: inline-block;
-  margin-top: 0.75em;
-}
-
-@media (min-width: 768px) {
-
-  [role="banner"] {
-    padding: 50px 0;
-  }
-
-  [role="banner"] h1 {
-    font-size: 50px;
-  }
-
-  .version {
-    text-align: right;
-  }
-
-  .version span {
-    margin-top: 24px;
-  }
-
-}
-
-@media (min-width: 1024px) {
-
-  p.claim {
-    font-size: 170%;
-  }
-
-}
-
-p.claim i {
-  color: #666;
+header {
+  margin-top: 15px;
 }
 
 .dev-wrapper {
-  background: #f0f0f0;
-  padding: 24px;
-  border: 1px solid #ccc;
+  padding: 1.5em;
+  background: #ccc;
+  border: 1px solid #999;
+  position: relative;
   -webkit-border-radius: 3px;
           border-radius: 3px;
 }
 
-.dev-wrapper code {
-  display: block;
-  margin-bottom: 18px;
-}
-
 .dev-wrapper .btn {
   margin-bottom: 0 !important;
+  font-size: 18px;
+  border-color: #666;
 }
 
-.dev-wrapper code + .btn {
+.dev-wrapper .btn:first-child {
   margin-right: 10px;
-  background-color: #fff;
 }
 
-@media (min-width: 768px) {
-
-  .dev-wrapper {
-    font-size: 150%;
-  }
-
-  .dev-wrapper code + .btn {
-    margin-right: 20px;
-  }
-
+.dev-wrapper h1 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
+
+
+.dev-wrapper p {
+  margin-top: 0;
+}
+
+
+
 
 
 
@@ -118,6 +58,8 @@ p.claim i {
 
 .title {
   padding: 0.5em;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   color: #fff;
   background-color: #444;
   margin-top: 3em;
@@ -218,47 +160,10 @@ h2#grid-system {
   text-align: center;
 }
 
-.sharing .tw-btn-wrapper {
-  margin-bottom: 4em;
-}
-
-.download {
-  margin-top: 3em;
-}
-
-.download .github-source {
-  color: #fff;
-  display: block;
-  text-align: center;
-  padding: 32px 0;
-  font-size: 50px;
-  line-height: 1.1;
+.github-source {
   font-weight: bold;
-  background-color: #333;
-  -webkit-transition: all .3s;
-     -moz-transition: all .3s;
-       -o-transition: all .3s;
-          transition: all .3s;
 }
 
-.download .github-source:hover,
-.download .github-source:focus {
-  background-color: #000;
-}
-
-@media (max-width: 640px) {
-
-  .download .github-source {
-    font-size: 32px;
-  }
-
-}
-
-.download .github-source:hover,
-.download .github-source:focus {
-  color: #fff;
-  text-decoration: none;
-}
 
 [role="contentinfo"] {
   background-color: #fff;

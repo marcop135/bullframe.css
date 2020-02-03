@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v2.2.0
+ * BULLFRAME.CSS v2.3.0
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -1237,9 +1237,6 @@ table col[class*="bf-col-"] {
 
 
 /* text utilities ---------------------------------------------------------- */
-.text-uppercase {
-  text-transform: uppercase;
-}
 
 .text-truncate {
   max-width: 100%;

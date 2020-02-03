@@ -14,8 +14,7 @@ header {
 
 .dev-wrapper {
   padding: 1.5em;
-  background: #ccc;
-  border: 1px solid #999;
+  border: 1px solid #ccc;
   position: relative;
   -webkit-border-radius: 3px;
           border-radius: 3px;
@@ -24,7 +23,7 @@ header {
 .dev-wrapper .btn {
   margin-bottom: 0 !important;
   font-size: 18px;
-  border-color: #666;
+  font-size: 1.8rem;
 }
 
 .dev-wrapper .btn:first-child {

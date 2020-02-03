@@ -438,10 +438,12 @@ svg {
 }
 
 img {
-  border: 0;
-  width: auto;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
+  border-style: none;
+}
+
+img[width],
+img[height] {
+  max-width: none;
 }
 
 video {

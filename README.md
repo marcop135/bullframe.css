@@ -6,10 +6,9 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 <h2>Best features</h2>
 <ul>
-  <li>Normalized styles for a wide range of elements across browsers (like
-  <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> does)</li>
-  <li>10KB minified/gzipped</li>
-  <li>IE8+ support</li>
+  <li>Normalize and fluidify styles for a wide range of HTML elements</li>
+  <li>10KB minified and gzipped</li>
+  <li>IE8+ and older browser support</li>
   <li>Mobile-First Responsive Web Design ready</li>
   <li>Style-agnostic</li>
   <li>Minimal 12-columsn fluid grid system</li>

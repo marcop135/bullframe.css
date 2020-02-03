@@ -1,7 +1,7 @@
 <img src="docs/img/bullframe-css-logo.png" alt="bullframe.css boilerplate">
-<p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
+<p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>responsive web design</b> retro-compatible with IE8.</p>
 <p>It's a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
-You can copy-and-paste it quickly or just watch it when you build cool websites!
+You can copy-and-paste it quickly or just watch it when you build cool websites and apps!</p>
 
 
 <h2>Best features</h2>
@@ -10,8 +10,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
   <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> does)</li>
   <li>10KB minified/gzipped</li>
   <li>IE8+ support</li>
-  <li>Mobile-First</li>
-  <li>Responsive Web Design ready</li>
+  <li>Mobile-First Responsive Web Design ready</li>
   <li>Style-agnostic</li>
   <li>Minimal 12-columsn fluid grid system</li>
 </ul>

@@ -1,4 +1,4 @@
-/*! BULLFRAME.CSS v2.2.0 add-on
+/*! BULLFRAME.CSS v2.3.0 add-on
  * Author's custom styles starting-point
  * Customize as you want the following code
  *
@@ -40,21 +40,6 @@
 }
 
 */
-
-
-
-
-/* Scalable <img> and <video> elements ------------------------------------
-
- * just in case, to force correct aspet ratio
- * if necessary, override this rule with 'max-height: XXXpx'
-
-img,
-video {
-  height: auto !important;
-}
-*/
-
 
 
 
@@ -112,7 +97,6 @@ html {
 a {
   color: ;
   text-decoration: ;
-  -webkit-tap-highlight-color: rgba(XXX, XXX, XXX, X.XX);
 }
 
 a:hover,
@@ -132,42 +116,6 @@ a:focus {
 }
 
 */
-
-
-
-
-/* WordPress generated classes
- * http://codex.wordpress.org/CSS
- * ------------------------------------------------------------------------
-
-.alignleft {
-  float: left;
-  margin: 0 1.5em 0 0;
-}
-
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.alignright {
-  float: right;
-  margin: 0 0 0 1.5em;
-}
-
-img.alignright,
-img.alignleft {
-  margin-bottom: 1.5em;
-}
-
-.alignnone {
-  float: none;
-  margin: 0;
-}
-
-*/
-
 
 
 
@@ -365,46 +313,6 @@ input[type="submit"]:focus {
 
 
 
-
-
-/* Miscellaneous -----------------------------------------------------------
-
-* responsive Facebook comments embed
-
-.fb-comments,
-.fb-comments span,
-.fb-comments iframe {
-  width: 100% !important;
-}
-
-
-* prevent phone numbers looking twice as large and having a Skype highlight
-* https://github.com/h5bp/html5-boilerplate/blob/v4.1.0/doc/faq.md
-
-span.skype_pnh_container {
-  display: none !important;
-}
-span.skype_pnh_print_container {
-  display: inline !important;
-}
-
-
-* target android browsers only
-* http://getbootstrap.com/getting-started/#support-android-stock-browser
-  <script>
-  var nua = navigator.userAgent;
-  var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1);
-  if (isAndroid) {
-    $('p').css('color', 'red');
-  }
-  </script>
-
-
-*/
-
-
-
-
 /* Flexible media queries reference ----------------------------------------
 
 /* 320px
@@ -468,13 +376,6 @@ span.skype_pnh_print_container {
  * http://jsfiddle.net/rV4p6/3/
  * See http://browserhacks.com/ for more ------------------------------------
  */
-
-/* IE7
- *
-    .safe-css-hack {
-      *color: darkred;
-    }
-*/
 
 
 /* IE8

@@ -12,6 +12,10 @@ header {
   margin-top: 15px;
 }
 
+header img {
+  max-width: 320px;
+}
+
 .dev-wrapper {
   padding: 1.5em;
   border: 1px solid #ccc;
@@ -30,16 +34,8 @@ header {
   margin-right: 10px;
 }
 
-.dev-wrapper h1 {
-  display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-
 .dev-wrapper p {
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 

@@ -1,4 +1,4 @@
-<h1>BULLFRAME.CSS v2.2.0</h1>
+<img src="docs/img/bullframe-css-logo.png" alt="bullframe.css boilerplate">
 <p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>Mobile-First Responsive Web Design</b>.</p>
 <p>It's a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites!
@@ -8,14 +8,12 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <ul>
   <li>Normalized styles for a wide range of elements across browsers (like
   <i><a href="http://nicolasgallagher.com/about-normalize-css/" title="about normalize.css">normalize.css</a></i> does)</li>
-  <li>20KB minified</li>
+  <li>10KB minified/gzipped</li>
   <li>IE8+ support</li>
   <li>Mobile-First</li>
   <li>Responsive Web Design ready</li>
   <li>Style-agnostic</li>
-  <li>Simple fluid grid system</li>
-  <li>Flexible vertical grid</li>
-  <li>Starter-kit custom styles</li>
+  <li>Minimal 12-columsn fluid grid system</li>
 </ul>
 <ul>
   <li>Flexible images and media elements (video, audio, iframe, embed)</li>
@@ -57,7 +55,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites!
 <h2>Browser support</h2>
 Tested and compatible in:
 <ul>
-  <li>Internet Explorer 7-11</li>
+  <li>Internet Explorer 8-11</li>
   <li>Latest stable Chrome</li>
   <li>Firefox 4+</li>
   <li>Safari 4+</li>

@@ -34,6 +34,11 @@ template {
   display: none;
 }
 
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
 /* Always hide an element with the `hidden` HTML attribute (from PureCSS).
  * Needed for proper display in IE 10-. */
 [hidden] {
@@ -267,6 +272,7 @@ pre {
      -moz-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
+  -ms-overflow-style: scrollbar;
 }
 
 pre,
@@ -483,13 +489,18 @@ button,
 .btn,
 html input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+output {
   display: inline-block;
 }
 
-input[type="file"],
-output {
+input[type="file"] {
   display: block;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
 }
 
 button,
@@ -533,10 +544,16 @@ legend {
   display: block;
   display: table \9; /* enable line-wrapping in IE8+ */
   width: 100%;
+  max-width: 100%;
   white-space: normal; /* enable line-wrapping in FF4/5 */
   border: 0;
   padding: 0;
   font-weight: 400;
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: inherit;
+  color: inherit;
 }
 
 label {
@@ -552,6 +569,11 @@ label input {
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
 }
 
 output {
@@ -602,6 +624,12 @@ textarea {
   -webkit-border-radius: 0;
           border-radius: 0;
 }
+
+input[type="radio"] {
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
+}
+
 
 input[type="radio"] {
   -webkit-border-radius: 7px;
@@ -724,6 +752,13 @@ select,
 textarea {
   padding: 8px;
   padding: 0.8rem;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
 }
 
 

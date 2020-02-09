@@ -234,7 +234,7 @@ q {
 mark {
   background: #ff0; /* yellow */
   color: #000;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 ins {
@@ -388,7 +388,7 @@ nav ul {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dd {
@@ -936,7 +936,7 @@ caption {
 }
 
 th {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 

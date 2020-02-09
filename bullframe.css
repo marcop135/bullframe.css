@@ -998,8 +998,10 @@ th {
 }
 
 .bf-container-fluid {
-  padding-right: 15px;
   padding-left: 15px;
+  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-right: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1503,8 +1505,11 @@ input[type="submit"]:focus {
 
 
 
-/* $ Print
-============================================================================ */
+/* ==========================================================================
+  Print styles.
+  Inlined to avoid the additional HTTP request:
+  https://www.phpied.com/delay-loading-your-print-css/
+  ========================================================================== */
 
 @media print {
 
@@ -1513,6 +1518,7 @@ input[type="submit"]:focus {
   *:after {
     background: transparent !important;
     color: #000 !important;
+    /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -1522,12 +1528,37 @@ input[type="submit"]:focus {
     text-decoration: underline;
   }
 
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+      * Don't show links that are fragment identifiers,
+      * or use the `javascript:` pseudo protocol
+      */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
+  /*
+      * Printing Tables:
+      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+      */
   thead {
     display: table-header-group;
   }
@@ -1535,14 +1566,6 @@ input[type="submit"]:focus {
   tr,
   img {
     page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
   }
 
   p,

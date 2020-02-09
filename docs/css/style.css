@@ -13,10 +13,6 @@ header {
   margin-top: 1.5rem;
 }
 
-header img {
-  max-width: 500px;
-}
-
 .dev-wrapper {
   padding: 1.5em;
   border: 1px solid #999;

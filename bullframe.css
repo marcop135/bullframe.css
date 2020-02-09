@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v2.3.1
+ * BULLFRAME.CSS v2.4.0
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -53,23 +53,6 @@ progress {
 
 html,
 button,
-input,
-select,
-textarea {
-  font-size: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-html,
-dt,
-dd,
-address,
-pre {
-  line-height: 1.5;
-}
-
-html,
-button,
 .btn,
 .btn:hover,
 .btn:focus,
@@ -79,29 +62,22 @@ textarea {
   color: #222;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   word-wrap: break-word;
-  font-size: 10px; /* IE fix https://github.com/twbs/bootstrap/issues/13737 */
+  font-size: 62.5%; 
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -ms-overflow-style: scrollbar;
-  background-color: #fff;
-  -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   margin: 0;
   font-size: 16px;
   font-size: 1.6rem;
-  background-color: transparent;
-  min-width: 320px;
-  -ms-overflow-style: scrollbar; /* IE10+ */
+  background-color: #fff;
   /* http://css-tricks.com/almanac/properties/b/backface-visibility/ */
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -482,6 +458,17 @@ figure {
 
 /* normalize --------------------------------------------------------------- */
 
+html input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 label,
 html input,
 select,
@@ -500,15 +487,9 @@ output {
 }
 
 button,
-input {
-  line-height: normal;
-}
-
-button,
 html input,
 select,
 textarea {
-  margin: 0;
   background-image: none; /* reset Fennec */
 }
 
@@ -537,7 +518,6 @@ form {
  * https://github.com/necolas/normalize.css/pull/269 */
 fieldset {
   border: 0;
-  margin: 0;
   padding: 0;
   min-width: 0; /* 1 */
 }
@@ -1111,24 +1091,22 @@ table col[class*="bf-col-"] {
 
 Change skin -------------------------------------------------------------
 
-html,
-button,
-input,
-select,
-textarea {
+html {
   font-family: ;
 }
 
 html,
 button,
 .btn,
+.btn:hover,
+.btn:focus,
 input,
 select,
 textarea {
   color: ;
 }
 
-html {
+body {
   background-color: ;
 }
 

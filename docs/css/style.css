@@ -14,7 +14,8 @@ header {
 }
 
 .dev-wrapper {
-  padding: 1.5em;
+  padding: 15px 15px 0 15px;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   border: 1px solid #999;
   position: relative;
   -webkit-border-radius: 3px;
@@ -22,14 +23,13 @@ header {
 }
 
 .dev-wrapper .btn {
-  margin-bottom: 0 !important;
-  font-size: 18px;
-  font-size: 1.8rem;
+  margin-right: 15px;
+  margin-right: 1.5rem;
+  font-size: 125%;
 }
 
-.dev-wrapper .btn:first-child {
-  margin-right: 10px;
-  margin-right: 1rem;
+.dev-wrapper .btn + .btn {
+  margin-right: 0;
 }
 
 .dev-wrapper p {
@@ -162,7 +162,7 @@ h2#grid-system {
 }
 
 .github-source {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 

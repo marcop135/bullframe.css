@@ -23,26 +23,27 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 ## How to use it
 
-*   1) **Write your styles without ever touch the boilerplate**
+1) **Write your styles without ever touch the boilerplate**
 
-    Include `bullframe.min.css` file _before_ your custom styles like this:
+Include `bullframe.min.css` file _before_ your custom styles like this:
 
-        <!doctype html>
-        <html>
-        <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="bullframe.css rel="stylesheet">
-        <link href="your-styles.css" rel="stylesheet">
-        ...
+    <!doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bullframe.css rel="stylesheet">
+    <link href="custom-styles.css" rel="stylesheet">
+    ...
 
-*   2) **Write your styles inside the boilerplate**
+2) **Write your styles inside the boilerplate**
 
-    Open `bullframe.css` file, scroll down the code and start to add styles _inside_ "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
+Open `bullframe.css` file, scroll down the code and start to add styles _inside_ "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
 
-*   3) **Just watch `bullframe.css` when coding websites**
+3) **Just watch `bullframe.css` when coding websites**
 
-    The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.
+The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.
 
 ## Browser support
 

@@ -970,6 +970,16 @@ caption {
   text-align: left;
 }
 
+caption {
+  padding-top: 8px;
+  padding-top: 0.8rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.8rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+
 th {
   font-weight: 700;
 }

@@ -773,7 +773,7 @@ label input[type="checkbox"] {
 label + input[type="radio"],
 label + input[type="checkbox"] {
   margin-left: 8px;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
 }
 
 
@@ -783,8 +783,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  padding: 8px 1em;
-  padding: 0.8rem 1rem;
+  padding: 8px 16px;
+  padding: 0.8rem 1.6rem;
   line-height: normal;
   text-align: center;
   margin: 0;

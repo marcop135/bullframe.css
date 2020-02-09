@@ -335,23 +335,11 @@ hr {
 }
 
 ::-moz-selection {
-  background: #b3d4fc; /* azure */
-  color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
-  color: #000;
   text-shadow: none;
-}
-
-img::-moz-selection {
-  background-color: transparent;
-}
-
-img::selection {
-  background-color: transparent;
 }
 
 
@@ -1187,16 +1175,6 @@ a:hover,
 a:focus {
   color: ;
   text-decoration: ;
-}
-
-::-moz-selection {
-  background: ;
-  color: ;
-}
-
-::selection {
-  background: ;
-  color: ;
 }
 
 

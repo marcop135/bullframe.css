@@ -401,6 +401,11 @@ embed {
   max-width: 100%;
 }
 
+img[width],
+img[height] {
+  max-width: none;
+}
+
 audio,
 video,
 canvas,
@@ -413,9 +418,8 @@ img {
   border-style: none;
 }
 
-img[width],
-img[height] {
-  max-width: none;
+figure {
+  margin: 0;
 }
 
 video {
@@ -434,18 +438,6 @@ audio:not([controls]) {
 svg:not(:root) {
   overflow: hidden;
 }
-
-
-
-
-/* $ Figures
-============================================================================ */
-
-figure {
-  margin: 0;
-}
-
-
 
 
 
@@ -581,7 +573,6 @@ button,
 
 /* avoid destroying native android audio/video players */
 html input[type="button"],
-
 input[type="reset"],
 input[type="submit"],
 input[type="email"],
@@ -987,9 +978,9 @@ th {
      -moz-box-sizing: content-box;
           box-sizing: content-box;
 
-  max-width: 1170px;
+  max-width: 1270px;
   padding-right: 15px;
-  padding-right: 1.rem;
+  padding-right: 1.5rem;
   padding-left: 15px;
   padding-left: 1.5rem;
   margin-right: auto;

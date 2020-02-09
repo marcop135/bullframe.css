@@ -72,7 +72,7 @@ html {
       -ms-text-size-adjust: 100%;
   word-wrap: break-word; /* break very long texts by default...break things and be comfortable in the process! */
   font-size: 62.5%; 
-  line-height: 1.5;
+  line-height: 1.4;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
@@ -1374,15 +1374,22 @@ input[type="submit"]:focus {
   visibility: hidden !important;
 }
 
+/* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
 }
 
 

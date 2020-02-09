@@ -317,6 +317,7 @@ address {
 }
 
 hr {
+  box-sizing: content-box;
   display: block;
   height: 1px;
   border: 0;

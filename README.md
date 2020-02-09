@@ -1,92 +1,84 @@
-<img src="docs/img/bullframe-css-logo.png" alt="bullframe.css boilerplate">
-<p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>responsive web design</b> retro-compatible with IE8 and other old browsers.</p>
-<p>It's a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
-You can copy-and-paste it quickly or just watch it when you build cool websites and apps!</p>
+![bullframe.css boilerplate](docs/img/bullframe-css-logo.png)
+
+`bullframe.css` is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for **responsive web design** retro-compatible with IE8 and other old browsers.
+
+It's a **simple, mobile-first** CSS-only boilerplate.  
+You can copy-and-paste it quickly or just watch it when you build cool websites and apps!
+
 <span>Latest: v2.4.0</span>
 
+## Best features
 
-<h2>Best features</h2>
-<ul>
-  <li>Normalize and fluidify styles for a wide range of HTML elements</li>
-  <li>10KB minified and gzipped</li>
-  <li>IE8+ and older browser support</li>
-  <li>Mobile-First Responsive Web Design ready</li>
-  <li>Style-agnostic</li>
-  <li>Minimal 12-columsn fluid grid system</li>
-</ul>
-<ul>
-  <li>Flexible images and media elements (video, audio, iframe, embed)</li>
-  <li>Flexible, cross-browser HTML5 forms</li>
-  <li>Responsive tables</li>
-  <li>Several helper classes (like '.clearfix' or '.text-hide')</li>
-</ul>
+*   Normalize and fluidify styles for a wide range of HTML elements
+*   10KB minified and gzipped
+*   IE8+ and older browser support
+*   Mobile-First Responsive Web Design ready
+*   Style-agnostic
+*   Minimal 12-columsn fluid grid system
 
-<h2>How to use it</h2>
-<ul>
-  <li>
-    <p>1) <b>Write your styles without ever touch the boilerplate</b></p>
-    <p>Include <code>bullframe.min.css</code> file <i>before</i> your custom styles like this:</p>
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;link href="bullframe.css rel="stylesheet"&gt;
-&lt;link href="your-styles.css" rel="stylesheet"&gt;
-...</code></pre>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p>2) <b>Write your styles inside the boilerplate</b></p>
-  <p>Open <code>bullframe.css</code> file, scroll down the code and start to add styles <i>inside</i>
-"Author's custom styles" section (like <a href="https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110" title="HTML5 Boilerplate main.css">HTML5 Boilerplate main.css</a>).</p>
-  </li>
-</ul>
-<ul>
-  <li>
-    <p>3) <b>Just watch <code>bullframe.css</code> when coding websites</b></p>
-  <p>The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.</p>
-  </li>
-</ul>
+*   Flexible images and media elements (video, audio, iframe, embed)
+*   Flexible, cross-browser HTML5 forms
+*   Responsive tables
+*   Several helper classes (like '.clearfix' or '.text-hide')
 
+## How to use it
 
-<h2>Browser support</h2>
+*   1) **Write your styles without ever touch the boilerplate**
+
+    Include `bullframe.min.css` file _before_ your custom styles like this:
+
+        <!doctype html>
+        <html>
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bullframe.css rel="stylesheet">
+        <link href="your-styles.css" rel="stylesheet">
+        ...
+
+*   2) **Write your styles inside the boilerplate**
+
+    Open `bullframe.css` file, scroll down the code and start to add styles _inside_ "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
+
+*   3) **Just watch `bullframe.css` when coding websites**
+
+    The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.
+
+## Browser support
+
 Tested and compatible in:
-<ul>
-  <li>Internet Explorer 8-11</li>
-  <li>Latest stable Chrome</li>
-  <li>Latest stable Firefox</li>
-  <li>Latest stable Edge</li>
-  <li>Latest stable Safari</li>
-  <li>Latest stable Opera</li>
-</ul>
-<ul>
-  <li>Mobile Safari iOS 4+</li>
-  <li>Android browser 2.2+ *</li>
-  <li>Latest stable Opera Mobile (Presto and Webkit) *</li>
-  <li>Opera Mini *</li>
-  <li>Internet Explorer Mobile 9-10</li>
-  <li>Latest stable Firefox Mobile</li>
-</ul>
-<p>* <b>Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug</b>. When the viewport is too narrow, content that overflows is hidden. <a href="http://barrow.io/overflow-scrolling" title="overflow scrolling">Get more info</a>.</p>
 
+*   Internet Explorer 8-11
+*   Latest stable Chrome
+*   Latest stable Firefox
+*   Latest stable Edge
+*   Latest stable Safari
+*   Latest stable Opera
 
-<h2>License</h2>
-<p>The MIT License (MIT) - <a href="http://opensource.org/licenses/MIT" title="The MIT License">http://opensource.org/licenses/MIT</a></p>
+*   Mobile Safari iOS 4+
+*   Android browser 2.2+ *
+*   Latest stable Opera Mobile (Presto and Webkit) *
+*   Opera Mini *
+*   Internet Explorer Mobile 9-10
+*   Latest stable Firefox Mobile
 
+* **Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
 
-<h2>Acknowledgements</h2>
+## License
+
+The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
+
+## Acknowledgements
+
 BULLFRAME.CSS incorporates some of the styles found on:
-<ul>
-  <li>Normalize.css - <a href="https://github.com/necolas/normalize.css" title="">https://github.com/necolas/normalize.css</a></li>
-  <li>HTML5 Boilerplate - <a href="https://github.com/h5bp/html5-boilerplate" title="">https://github.com/h5bp/html5-boilerplate</a></li>
-  <li>Bootstrap - <a href="https://github.com/twbs/bootstrap" title="">https://github.com/twbs/bootstrap</a></li>
-  <li>320 and up - <a href="https://github.com/malarkey/320andup" title="">https://github.com/malarkey/320andup</a></li>
-  <li>Formalize - <a href="https://github.com/nathansmith/formalize" title="">https://github.com/nathansmith/formalize</a></li>
-  <li>Inuit CSS - <a href="https://github.com/csswizardry/inuit.css" title="">https://github.com/csswizardry/inuit.css</a></li>
-  <li>YUI3 CSS Grids - <a href="http://yuilibrary.com/yui/docs/cssgrids/" title="">http://yuilibrary.com/yui/docs/cssgrids/</a></li>
-  <li>Pure CSS - <a href="https://github.com/yui/pure" title="">https://github.com/yui/pure</a></li>
-  <li>Typeplate - <a href="https://github.com/typeplate/typeplate.github.com" title="">https://github.com/typeplate/typeplate.github.com</a></li>
-  <li>The Nyan Project - <a href="http://www.youtube.com/watch?v=jI-kpVh6e1U" title="">https://www.youtube.com/watch?v=jI-kpVh6e1U</a></li>
-</ul>
+
+*   Normalize.css - [https://github.com/necolas/normalize.css](https://github.com/necolas/normalize.css)
+*   HTML5 Boilerplate - [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
+*   Bootstrap - [https://github.com/twbs/bootstrap](https://github.com/twbs/bootstrap)
+*   320 and up - [https://github.com/malarkey/320andup](https://github.com/malarkey/320andup)
+*   Formalize - [https://github.com/nathansmith/formalize](https://github.com/nathansmith/formalize)
+*   Inuit CSS - [https://github.com/csswizardry/inuit.css](https://github.com/csswizardry/inuit.css)
+*   YUI3 CSS Grids - [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
+*   Pure CSS - [https://github.com/yui/pure](https://github.com/yui/pure)
+*   Typeplate - [https://github.com/typeplate/typeplate.github.com](https://github.com/typeplate/typeplate.github.com)
+*   The Nyan Project - [https://www.youtube.com/watch?v=jI-kpVh6e1U](http://www.youtube.com/watch?v=jI-kpVh6e1U)

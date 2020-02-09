@@ -151,7 +151,7 @@ h6 {
 h1,
 .h1 {
   font-size: 36px;
-  font-size: 3.6rem
+  font-size: 3.6rem;
   margin: 24px 0;
 }
 
@@ -160,6 +160,7 @@ h2,
   font-size: 30px;
   font-size: 3rem;
   margin: 24px 0;
+  margin: 2.4rem 0;
 }
 
 h3,
@@ -167,6 +168,7 @@ h3,
   font-size: 24px;
   font-size: 2.4rem;
   margin: 24px 0;
+  margin: 2.4rem 0;
 }
 
 h4,
@@ -181,6 +183,7 @@ h5,
   font-size: 14px;
   font-size: 1.4rem;
   margin: 10px 0;
+  margin: 1rem 0;
 }
 
 h6,
@@ -188,6 +191,7 @@ h6,
   font-size: 12px;
   font-size: 1.2rem;
   margin: 10px 0;
+  margin: 1rem 0;
 }
 
 /* Abbreviations (Bootstrap 4)
@@ -205,7 +209,9 @@ abbr[title] {
 
 blockquote {
   margin: 0 0 24px 0;
+  margin-bottom: 2.4rem;
   padding-left: 24px;
+  padding-left: 2.4rem;
   border-left: 5px solid #ccc;
 }
 
@@ -248,6 +254,7 @@ ins {
 p,
 pre {
   margin: 24px 0;
+  margin: 2.4rem 0;
 }
 
 p + p {
@@ -300,10 +307,12 @@ sup {
 
 sup {
   top: -8px;
+  top: -0.8rem;
 }
 
 sub {
   bottom: -4px;
+  bottom: -0.4rem;
 }
 
 small {
@@ -320,6 +329,7 @@ hr {
   border: 0;
   border-top: 1px solid #ccc;
   margin: 24px 0;
+  margin: 2.4rem 0;
   padding: 0;
   overflow: visible; /* Show the overflow in Edge and IE */
 }
@@ -354,6 +364,7 @@ ol,
 ul,
 dl {
   margin: 24px 0;
+  margin: 2.4rem 0;
   padding: 0;
 }
 
@@ -371,6 +382,7 @@ dd {
 ul,
 ol {
   margin-left: 24px;
+  margin-left: 2.4rem;
 }
 
 nav ol,
@@ -535,6 +547,7 @@ legend {
 label {
   font-weight: 700;
   margin-bottom: 5px;
+  margin-bottom: 5rem;
 }
 
 label input {
@@ -715,6 +728,7 @@ input[type="url"],
 select,
 textarea {
   padding: 8px;
+  padding: 0.8rem;
 }
 
 
@@ -723,11 +737,13 @@ textarea {
 label input[type="radio"],
 label input[type="checkbox"] {
   margin-right: 8px;
+  margin-right: 0.8rem;
 }
 
 label + input[type="radio"],
 label + input[type="checkbox"] {
   margin-left: 8px;
+  margin-left: .8rem;
 }
 
 
@@ -738,6 +754,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   padding: 8px 1em;
+  padding: 0.8rem 1rem;
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -914,6 +931,7 @@ td {
 .table th,
 .table td {
   padding: 8px;
+  padding: 0.8rem;
   border-bottom: 1px solid #999;
 }
 
@@ -947,7 +965,9 @@ th {
 
   max-width: 1170px;
   padding-right: 15px;
+  padding-right: 1.rem;
   padding-left: 15px;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -982,7 +1002,9 @@ th {
 .bf-row {
   display: block;
   margin-left: -15px;
+  margin-left: -1.5rem;
   margin-right: -15px;
+  margin-right: -1.5rem;
 }
 
 .bf-row:before,
@@ -1000,7 +1022,9 @@ th {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
+  padding-left: 1.5rem;
   padding-right: 15px;
+  padding-right: 1.5rem;
 }
 
 .bf-col-12 {
@@ -1421,6 +1445,7 @@ input[type="submit"]:focus {
 .table-responsive table {
   width: 100%;
   margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 
 /* force and customize webkit scrollbars appearance */
@@ -1515,5 +1540,4 @@ input[type="submit"]:focus {
     page-break-after: avoid;
   }
 
-}
 }

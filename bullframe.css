@@ -566,8 +566,8 @@ label input {
   font-weight: 400;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+[type="number"]::-webkit-outer-spin-button,
+[type="number"]::-webkit-inner-spin-button {
   height: auto;
 }
 
@@ -610,9 +610,9 @@ input[type="week"],
 input[type="url"],
 input[type="image"],
 input[type="password"],
-input[type="search"],
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
+[type="search"],
+[type="search"]::-webkit-search-decoration,
+[type="search"]::-webkit-search-cancel-button,
 textarea {
   -webkit-appearance: none;
 }
@@ -638,10 +638,10 @@ input[type="radio"] {
 
 input[type="color"],
 input[type="email"],
-input[type="number"],
+[type="number"],
 input[type="password"],
 input[type="tel"],
-input[type="search"],
+[type="search"],
 input[type="text"],
 input[type="date"],
 input[type="datetime"],
@@ -686,10 +686,10 @@ textarea {
 
 input[type="color"]:focus,
 input[type="email"]:focus,
-input[type="number"]:focus,
+[type="number"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus,
-input[type="search"]:focus,
+[type="search"]:focus,
 input[type="text"]:focus,
 input[type="date"]:focus,
 input[type="datetime"]:focus,
@@ -735,10 +735,10 @@ input[type="checkbox"] {
 }
 
 input[type="email"],
-input[type="number"],
+[type="number"],
 input[type="password"],
 input[type="tel"],
-input[type="search"],
+[type="search"],
 input[type="text"],
 input[type="date"],
 input[type="datetime"],
@@ -1224,10 +1224,10 @@ Customize <form> elements -----------------------------------------------
 input[type="color"],
 input[type="email"],
 input[type="image"],
-input[type="number"],
+[type="number"],
 input[type="password"],
 input[type="tel"],
-input[type="search"],
+[type="search"],
 input[type="text"],
 input[type^="date"],
 input[type="month"],
@@ -1242,10 +1242,10 @@ textarea {
 
 input[type="color"]:focus,
 input[type="email"]:focus,
-input[type="number"]:focus,
+[type="number"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus,
-input[type="search"]:focus,
+[type="search"]:focus,
 input[type="text"]:focus,
 input[type^="date"]:focus,
 input[type="month"]:focus,
@@ -1267,10 +1267,10 @@ input[type="checkbox"]:focus {
 }
 
 input[type="email"],
-input[type="number"],
+[type="number"],
 input[type="password"],
 input[type="tel"],
-input[type="search"],
+[type="search"],
 input[type="text"],
 input[type^="date"],
 input[type="month"],

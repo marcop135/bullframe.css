@@ -176,13 +176,9 @@ h3,
 }
 
 h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-size: 18px;
-  font-size: 1.8rem;
+.h4 {
+  font-size: 20px;
+  font-size: 2rem;
   margin: 10px 0
 }
 
@@ -190,8 +186,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 17px;
+  font-size: 1.7rem;
   margin: 10px 0;
   margin: 1rem 0;
 }
@@ -227,7 +223,7 @@ blockquote small {
 }
 
 blockquote small:before {
-  content: '\2014 \00A0';
+  content: "\2014 \00A0";
 }
 
 q {
@@ -250,10 +246,6 @@ p,
 pre {
   margin: 24px 0;
   margin: 2.4rem 0;
-}
-
-p + p {
-  margin-top: 0;
 }
 
 p.lead {

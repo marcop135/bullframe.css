@@ -1498,31 +1498,40 @@ input[type="submit"]:focus {
 
 
 /* responsive videos ------------------------------------------------------- */
+
 .embed-responsive {
   position: relative;
-  padding-bottom: 67.5%; /* 4:3 standard */
-  padding-top: 1.5625em;
-  height: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
   overflow: hidden;
 }
 
-.embed-responsive-item,
+.embed-responsive::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+.embed-responsive .embed-responsive-item,
 .embed-responsive iframe,
-.embed-responsive object,
 .embed-responsive embed,
+.embed-responsive object,
 .embed-responsive video {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
-.embed-responsive.widescreen {
+.embed-responsive.widescreen::before {
   padding-bottom: 56.25%; /* 16:9 */
 }
 
-.embed-responsive.vimeo {
+.embed-responsive.vimeo::before {
   padding-top: 0; /* no extra-padding for controls */
 }
 

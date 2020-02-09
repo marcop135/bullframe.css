@@ -1,6 +1,6 @@
 ![bullframe.css boilerplate](docs/img/bullframe-css-logo.png)
 
-`bullframe.css` is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for **responsive web design** retro-compatible with IE8 and other old browsers.
+*bullframe.css* is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for **responsive web design** retro-compatible with IE8 and other old browsers.
 
 It's a **simple, mobile-first** CSS-only boilerplate.  
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
@@ -26,15 +26,19 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 Include `bullframe.css` file *before* your custom styles like this:
 
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="bullframe.css" rel="stylesheet">
-  <link href="custom-styles.css" rel="stylesheet">
-...
+  <!doctype html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bullframe.css" rel="stylesheet">
+    <link href="custom-styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+  </body>
+  </html>
 
 2) **Write your styles inside the boilerplate**
 
@@ -71,7 +75,7 @@ Tested and compatible in:
 
 ## Acknowledgements
 
-Bullframe.css incorporates some of the styles found on:
+bullframe.css incorporates some of the styles found on:
 
 * Normalize.css - [https://github.com/necolas/normalize.css](https://github.com/necolas/normalize.css)
 * HTML5 Boilerplate - [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)

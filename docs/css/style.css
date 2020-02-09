@@ -51,14 +51,14 @@ header {
 }
 
 .title {
-  padding: 5px;
-  padding: 0.5rem;
+  padding: 10px 15px;
+  padding: 1rem 1.5rem;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   color: #fff;
   background-color: #444;
-  margin-top: 30px;
-  margin-top: 3rem;
+  margin-top: 60px;
+  margin-top: 6rem;
 }
 
 .sub-title {

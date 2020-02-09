@@ -279,7 +279,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: monospace, monospace;
   font-size: 16px;
   font-size: 1.6rem;
 }

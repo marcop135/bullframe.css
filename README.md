@@ -24,21 +24,17 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 1) **Write your styles without ever touch the boilerplate**
 
-Include `bullframe.css` file *before* your custom styles like this:
+Include the bullframe.css file *before* your custom styles like this:
 
-`<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="bullframe.css" rel="stylesheet">
-  <link href="custom-styles.css" rel="stylesheet">
-</head>
-<body>
-  <h1>Hello World!</h1>
-</body>
-</html>`
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;link href="bullframe.css rel="stylesheet"&gt;
+&lt;link href="custom-styles.css" rel="stylesheet"&gt;
+...</code></pre>
 
 2) **Write your styles inside the boilerplate**
 

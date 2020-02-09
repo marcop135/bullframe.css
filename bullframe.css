@@ -335,10 +335,14 @@ hr {
 }
 
 ::-moz-selection {
+  background-color:#2a2adb; /* dark blue */
+  color: #fff;
   text-shadow: none;
 }
 
 ::selection {
+  background-color: #2a2adb; /* dark blue */
+  color: #fff;
   text-shadow: none;
 }
 

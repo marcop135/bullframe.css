@@ -34,11 +34,7 @@ Include `bullframe.css` file *before* your custom styles like this:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="bullframe.css" rel="stylesheet">
   <link href="custom-styles.css" rel="stylesheet">
-</head>
-<body>
-  <h1>Hello World!</h1>
-</body>
-</html>
+...
 
 2) **Write your styles inside the boilerplate**
 

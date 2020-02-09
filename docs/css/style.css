@@ -10,6 +10,7 @@
 
 header {
   margin-top: 15px;
+  margin-top: 1.5rem;
 }
 
 header img {
@@ -18,7 +19,7 @@ header img {
 
 .dev-wrapper {
   padding: 1.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   position: relative;
   -webkit-border-radius: 3px;
           border-radius: 3px;
@@ -32,10 +33,12 @@ header img {
 
 .dev-wrapper .btn:first-child {
   margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .dev-wrapper p {
   margin-top: 10px;
+  margin-top: 1rem;
 }
 
 
@@ -52,17 +55,21 @@ header img {
 }
 
 .title {
-  padding: 0.5em;
+  padding: 5px;
+  padding: 0.5rem;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   color: #fff;
   background-color: #444;
-  margin-top: 3em;
+  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .sub-title {
-  margin-top: 2em;
-  padding: 0.5em 0;
+  margin-top: 20px;
+  margin-top: 2rem;
+  padding: 5px 0;
+  padding: 0.5rem 0;
 }
 
 
@@ -74,6 +81,7 @@ header img {
 
 .bullframe-demo legend {
   padding-bottom: 24px;
+  padding-bottom: 2.4rem;
 }
 
 .bullframe-demo button,
@@ -82,24 +90,22 @@ header img {
 .bullframe-demo select,
 .bullframe-demo textarea {
   margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
-
-.bullframe-demo input[type="radio"],
-.bullframe-demo input[type="checkbox"] {
-  *margin-bottom: 0;
-}
-
 
 /* grid system */
 
 h2#grid-system {
   margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .grid .wrapper {
   background-color: #888;
   height: 48px;
+  height: 4.8rem;
   line-height: 48px;
+  line-height: 4.8rem;
   overflow-y: hidden;
   color: #fff;
   font-size: 70%;
@@ -113,6 +119,7 @@ h2#grid-system {
 
 .grid .bf-row {
   margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 @media (max-width: 767px) {
@@ -123,6 +130,7 @@ h2#grid-system {
 
   .grid [class*="bf-col-"] {
     margin-bottom: 12px;
+    margin-bottom: 1.2rem;
   }
 
 }
@@ -137,6 +145,7 @@ h2#grid-system {
   text-align: center;
   display: block;
   margin: 70px 0 100px 0;
+  margin: 7rem 0 10rem 0;
 }
 
 .back-to-top a:hover,
@@ -152,6 +161,7 @@ h2#grid-system {
 .sharing {
   width: 100%;
   margin: 0 auto 24px 0;
+  margin-bottom: 2.4rem;
   text-align: center;
 }
 
@@ -167,5 +177,6 @@ h2#grid-system {
 [role="contentinfo"] p {
   display: block;
   padding: 10px 0;
+  padding: 1rem 0;
   margin: 0;
 }

@@ -1108,6 +1108,8 @@ textarea {
 
 body {
   background-color: ;
+  font-size: ??px;
+  font-size: ??rem
 }
 
 a {
@@ -1313,12 +1315,6 @@ input[type="submit"]:focus {
 
 .visible {
   visibility: visible;
-}
-
-.show-block-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .show-inline {

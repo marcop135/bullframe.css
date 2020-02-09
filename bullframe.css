@@ -976,7 +976,6 @@ caption {
   padding-bottom: 8px;
   padding-bottom: 0.8rem;
   color: #6c757d;
-  text-align: left;
   caption-side: bottom;
 }
 
@@ -1118,12 +1117,14 @@ th {
 /* responsive grid */
 @media (max-width: 767px) {
 
-  .responsive-grid .bf-row {
+  .responsive-grid .bf-row,
+  .bf-rwd-grid .bf-row {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .responsive-grid [class*="bf-col-"] {
+  .responsive-grid [class*="bf-col-"],
+  .bf-rwd-grid [class*="bf-col-"] {
     width: 100%;
     float: none;
     margin-left: 0;

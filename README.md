@@ -1,8 +1,8 @@
-<img width="500" src="docs/img/bullframe-css-logo.png" alt="bullframe.css boilerplate">
+<img src="docs/img/bullframe-css-logo.png" alt="bullframe.css boilerplate">
 <p><code>bullframe.css</code> is a CSS file to be used as an <b>alternative to CSS resets</b> and as a starting-point for <b>responsive web design</b> retro-compatible with IE8 and other old browsers.</p>
 <p>It's a <b>simple, mobile-first</b> CSS-only boilerplate.<br>
 You can copy-and-paste it quickly or just watch it when you build cool websites and apps!</p>
-<span>Latest: v2.3.1</span>
+<span>Latest: v2.4.0</span>
 
 
 <h2>Best features</h2>

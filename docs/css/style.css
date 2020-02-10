@@ -18,6 +18,8 @@ header {
   padding: 3rem 3rem 1.5rem 3rem;
   border: 2px solid #222;
   background-color: #f0f0f0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .dev-wrapper h1 {
@@ -66,26 +68,30 @@ header {
 .dev-wrapper .btn {
   margin-right: 15px;
   margin-right: 1.5rem;
-  color: #fff;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.dev-wrapper .btn-github  {
-  background-color: blue;
-  border-color: blue;
+  background-color: #fff;
+  border-width: 2px;
+  border-color: #222;
 }
 
 .dev-wrapper .btn:hover,
 .dev-wrapper .btn:focus {
-  background-color: #000086;
-  border-color: #000086;
+  background-color: #ccc;
+  border-color: #222;
 }
 
-.dev-wrapper .btn + .btn {
-  margin-right: 0;
+.dev-wrapper .btn-github,
+.dev-wrapper .btn-github {
+  background-color: #0e35f1;
+  border-color: #0e35f1;
+  color: #fff;
+}
+
+.dev-wrapper .btn-github:hover,
+.dev-wrapper .btn-github:focus {
+  background-color: #09229b;
+  border-color: #09229b;
 }
 
 .dev-wrapper .btn + .btn {
@@ -109,15 +115,14 @@ header {
   font-family: "Anonymous Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 40px;
   font-size: 4rem;
-}
-
-.title {
   padding: 10px 15px;
   padding: 1rem 1.5rem;
   border: 2px solid #222;
   margin-top: 60px;
   margin-top: 6rem;
   background-color: #f0f0f0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 

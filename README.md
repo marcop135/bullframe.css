@@ -35,7 +35,7 @@ Include the bullframe.css file *before* your custom styles like this:
 &lt;meta charset="utf-8"&gt;
 &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;link href="bullframe.css rel="stylesheet"&gt;
+**&lt;link href="bullframe.css rel="stylesheet"&gt;**
 &lt;link href="custom-styles.css" rel="stylesheet"&gt;
 ...</code></pre>
 

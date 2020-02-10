@@ -652,6 +652,7 @@ optgroup::-moz-focus-inner {
 textarea {
   height: auto;
   min-height: 50px;
+  min-height: 5rem;
   overflow: auto;
   vertical-align: top;
   resize: vertical;

@@ -417,6 +417,7 @@ svg {
 }
 
 img {
+  height: auto;
   border-style: none;
 }
 

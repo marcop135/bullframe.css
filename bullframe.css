@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v2.4.1
+ * BULLFRAME.CSS v2.5.0
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -89,10 +89,18 @@ body {
 }
 
 /* Fix IE 10 on Windows Phone 8 Viewport
- * http://getbootstrap.com/getting-started/#support-ie10-width
+ * https://getbootstrap.com/docs/3.3/getting-started/#support-ie10-width
  */
 @-ms-viewport {
   width: device-width;
+}
+
+@-o-viewport { 
+  width: device-width; 
+}
+
+@viewport { 
+  width: device-width; 
 }
 
 /* Suppress the focus outline on elements that cannot be accessed via keyboard.

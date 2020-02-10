@@ -1356,6 +1356,7 @@ input[type="submit"]:focus {
   background-color: transparent;
   border: 0;
   margin: 0;
+  padding: 0;
 }
 
 /* assistive text for screen reader only (e.g. form labels) */

@@ -96,10 +96,9 @@ header {
 --------------------------------------------------------------------------- */
 
 .title {
-  text-transform: uppercase;
   font-family: "Anonymous Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 35px;
-  font-size: 3.5rem;
+  font-size: 40px;
+  font-size: 4rem;
 }
 
 .title {

@@ -11,16 +11,15 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 ## Best features
 
-* Normalize and fluidify styles for a wide range of HTML elements
+* Normalize and fluidify styles for all HTML elements
 * 10KB minified/gzipped
 * IE8+ and several old and new desktop/mobile browsers support
 * Mobile-First Responsive Web Design ready
 * Style-agnostic, no more override nightmares
 * Minimal 12-columns fluid grid system
 * Flexible images and media elements (video, audio, iframe, embed)
-* Flexible, cross-browser HTML5 forms
+* Flexible, cross-browser HTML5 form elements
 * Responsive tables
-* Several helper classes (like '.clearfix' or '.text-hide')
 
 ***
 

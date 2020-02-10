@@ -403,11 +403,6 @@ embed {
   max-width: 100%;
 }
 
-img[width],
-img[height] {
-  max-width: none;
-}
-
 audio,
 video,
 canvas,
@@ -419,6 +414,11 @@ svg {
 img {
   height: auto;
   border-style: none;
+}
+
+img[width],
+img[height] {
+  max-width: none;
 }
 
 figure {
@@ -444,7 +444,7 @@ svg:not(:root) {
 
 
 
-/* $ Forms (enter the madness)
+/* $ Forms (enter the madness!)
 ============================================================================ */
 
 /* normalize --------------------------------------------------------------- */
@@ -546,12 +546,12 @@ label input {
   font-weight: 400;
 }
 
-[type="number"]::-webkit-outer-spin-button,
-[type="number"]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   height: auto;
 }
 
-[type="search"] {
+input[type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
@@ -572,9 +572,10 @@ optgroup {
   font-weight: 700;
 }
 
+/* list every single elements and avoid destroying native 
+ * android audio/video players
+ */
 button,
-
-/* avoid destroying native android audio/video players */
 html input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -611,10 +612,10 @@ input[type="radio"] {
 
 input[type="color"],
 input[type="email"],
-[type="number"],
+input[type="number"],
 input[type="password"],
 input[type="tel"],
-[type="search"],
+input[type="search"],
 input[type="text"],
 input[type="date"],
 input[type="datetime"],
@@ -660,10 +661,10 @@ textarea {
 
 input[type="color"]:focus,
 input[type="email"]:focus,
-[type="number"]:focus,
+input[type="number"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus,
-[type="search"]:focus,
+input[type="search"]:focus,
 input[type="text"]:focus,
 input[type="date"]:focus,
 input[type="datetime"]:focus,
@@ -683,7 +684,7 @@ textarea:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px solid #2a6496; /* blue *
+  outline: 1px solid #2a6496; /* blue */
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -709,10 +710,10 @@ input[type="checkbox"] {
 }
 
 input[type="email"],
-[type="number"],
+input[type="number"],
 input[type="password"],
 input[type="tel"],
-[type="search"],
+input[type="search"],
 input[type="text"],
 input[type="date"],
 input[type="datetime"],
@@ -884,24 +885,15 @@ button:active[disabled],
 input:active[disabled],
 select:active[disabled],
 textarea:active[disabled] {
-  cursor: default !important;
+  cursor: default !important; /* fallback */
   cursor: not-allowed !important;
   background: #f9f9f9 none !important; /* very light grey */
   border-color: #dbdbdb !important;
   color: #b2b2b2 !important;
   text-shadow: none !important;
   -webkit-box-shadow: none !important;
-     -moz-box-shadow: none !important;
           box-shadow: none !important;
   opacity: 1 !important;
-}
-
-fieldset[disabled] .btn-success,
-[disabled].btn-success,
-[disabled].btn-success:active {
-  background: #a2d6a2 none !important; /* very light green */
-  border-color: #a2d6a2 !important;
-  color: #fff !important;
 }
 
 input[type="radio"][disabled],

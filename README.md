@@ -1,8 +1,7 @@
 ![bullframe.css boilerplate](docs/img/bullframe-css-logo.png)
 
-*bullframe.css* is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for **responsive web design** retro-compatible with IE8 and other old browsers.
+*bullframe.css* is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for a solid mobile-first **responsive web design** retro-compatible with IE8 and other old browsers.
 
-It's a **solid, mobile-first** CSS-only boilerplate.  
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
 *Latest: v2.5.0 (2012-2020)*
@@ -41,7 +40,7 @@ Include the bullframe.css file *before* your custom styles like this:
 
 - **Write your styles inside the boilerplate**
 
-Open `bullframe.css` file, scroll down the code and start to add styles _inside_ "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
+Open `bullframe.css` file, scroll down the code and start to add styles *inside* "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
 
 - **Just watch `bullframe.css` when coding websites**
 

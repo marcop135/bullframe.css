@@ -821,9 +821,11 @@ input[type="submit"] {
 
 /* Firefox: Get rid of the inner focus border */
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   padding: 0;
-  border: 0;
+  border-style: none;
 }
 
 button:hover,

@@ -8,23 +8,25 @@
   <title>bullframe.css CSS boilerplate</title>
   <meta name="description" content="Simple but powerful, 100%-fluid, IE-friendly CSS-only boilerplate.">
 
-  <link href="../../bullframe.css?v=2.4.0" rel="stylesheet">
+  <link href="../bullframe.css?v=2.4.1" rel="stylesheet">
 
   <!-- custom styles -->
-  <link href="css/style.css?v=2.4.0" rel="stylesheet">
+  <link href="css/style.css?v=2.4.1" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700&display=swap" rel="stylesheet">
-
 
   <!-- enable HTML5 elements and CSS3 Media Queries support in all browsers -->
   <!--[if lt IE 9]>
-    <script src="docs/js/vendor/html5shiv.min.js?v=3.7.3"></script>
-    <script src="docs/js/vendor/respond.min.js?v=1.4.2"></script>
+    <script src="js/vendor/html5shiv.min.js?v=3.7.3"></script>
+    <script src="js/vendor/respond.min.js?v=1.4.2"></script>
   <![endif]-->
 
   <!-- Fix IE 10 on Windows Phone 8 Viewport -->
   <script>
     // https://getbootstrap.com/getting-started/#support-ie10-width
-    if(navigator.userAgent.match(/IEMobile\/10\.0/)){var msViewportStyle=document.createElement("style");msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(msViewportStyle)}
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+      var msViewportStyle = document.createElement("style");
+      msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")), document.querySelector("head").appendChild(msViewportStyle)
+    }
   </script>
 </head>
 

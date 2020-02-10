@@ -1,5 +1,5 @@
 /*! $
- * BULLFRAME.CSS v2.4.0
+ * BULLFRAME.CSS v2.4.1
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -157,6 +157,7 @@ h1,
   font-size: 36px;
   font-size: 3.6rem;
   margin: 24px 0;
+  margin: 2.4rem 0;
 }
 
 h2,
@@ -179,7 +180,8 @@ h4,
 .h4 {
   font-size: 20px;
   font-size: 2rem;
-  margin: 10px 0
+  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 h5,
@@ -1472,7 +1474,7 @@ input[type="submit"]:focus {
 
 
 
-/* responsive videos ------------------------------------------------------- */
+/* responsive videos and embeds --------------------------------------------- */
 
 .embed-responsive {
   position: relative;

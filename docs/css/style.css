@@ -64,19 +64,19 @@ header {
   border-color: #007bff;
 }
 
-.dev-wrapper .btn + .btn {
-  margin-right: 0;
+.dev-wrapper .btn-github  {
+  background-color: blue;
 }
 
 .dev-wrapper .btn:hover,
-.dev-wrapper .btn:focus,
-.dev-wrapper .btn-github,
-.dev-wrapper .btn-github:hover,
-.dev-wrapper .btn-github:focus  {
-  background: blue;
+.dev-wrapper .btn:focus {
+  background-color: #000086;
+  border-color: #000086;
 }
 
-
+.dev-wrapper .btn + .btn {
+  margin-right: 0;
+}
 
 .dev-wrapper .btn + .btn {
   margin-right: 0;

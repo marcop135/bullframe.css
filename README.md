@@ -2,7 +2,7 @@
 
 *bullframe.css* is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for **responsive web design** retro-compatible with IE8 and other old browsers.
 
-It's a **simple, mobile-first** CSS-only boilerplate.  
+It's a **solid, mobile-first** CSS-only boilerplate.  
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
 *Latest: v2.4.1 (2012-2020)*

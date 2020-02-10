@@ -8,10 +8,10 @@
   <title>bullframe.css CSS boilerplate</title>
   <meta name="description" content="Solid, 100%-fluid, IE-friendly CSS-only boilerplate.">
 
-  <link href="../bullframe.css?v=2.4.1" rel="stylesheet">
+  <link href="../bullframe.css?v=2.5.0" rel="stylesheet">
 
   <!-- custom styles -->
-  <link href="css/style.css?v=2.4.1" rel="stylesheet">
+  <link href="css/style.css?v=2.5.0" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700&display=swap" rel="stylesheet">
 
 
@@ -23,10 +23,17 @@
 
   <!-- Fix IE 10 on Windows Phone 8 Viewport -->
   <script>
-    // https://getbootstrap.com/getting-started/#support-ie10-width
+    // Copyright 2014-2015 Twitter, Inc.
+    // Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+    // https://getbootstrap.com/docs/3.3/getting-started/#support-ie10-width
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-      var msViewportStyle = document.createElement("style");
-      msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")), document.querySelector("head").appendChild(msViewportStyle)
+      var msViewportStyle = document.createElement('style')
+      msViewportStyle.appendChild(
+        document.createTextNode(
+          '@-ms-viewport{width:auto!important}'
+        )
+      )
+      document.querySelector('head').appendChild(msViewportStyle)
     }
   </script>
 </head>

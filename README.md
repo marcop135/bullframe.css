@@ -5,7 +5,7 @@
 It's a **solid, mobile-first** CSS-only boilerplate.  
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
-*Latest: v2.4.1 (2012-2020)*
+*Latest: v2.5.0 (2012-2020)*
 
 ***
 
@@ -60,7 +60,7 @@ Tested and compatible in:
 * Latest stable Safari
 * Latest stable Opera
 * Mobile Safari iOS 4+
-* Android browser 2.2+ *
+* Android browser v5+ *
 * Latest stable Opera Mobile (Presto and Webkit) *
 * Opera Mini *
 * Internet Explorer Mobile 9-10

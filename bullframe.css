@@ -609,12 +609,6 @@ input[type="radio"] {
           border-radius: 7px;
 }
 
-
-input[type="radio"] {
-  -webkit-border-radius: 7px;
-          border-radius: 7px;
-}
-
 input[type="color"],
 input[type="email"],
 [type="number"],

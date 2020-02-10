@@ -5,7 +5,9 @@
 It's a **simple, mobile-first** CSS-only boilerplate.  
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
-*Latest: v2.4.0 (2012-2020)*
+*Latest: v2.4.1 (2012-2020)*
+
+***
 
 ## Best features
 
@@ -20,9 +22,11 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 * Responsive tables
 * Several helper classes (like '.clearfix' or '.text-hide')
 
+***
+
 ## How to use it
 
-1) **Write your styles without ever touch the boilerplate**
+- **Write your styles without ever touch the boilerplate**
 
 Include the bullframe.css file *before* your custom styles like this:
 
@@ -36,13 +40,15 @@ Include the bullframe.css file *before* your custom styles like this:
 &lt;link href="custom-styles.css" rel="stylesheet"&gt;
 ...</code></pre>
 
-2) **Write your styles inside the boilerplate**
+- **Write your styles inside the boilerplate**
 
 Open `bullframe.css` file, scroll down the code and start to add styles _inside_ "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
 
-3) **Just watch `bullframe.css` when coding websites**
+- **Just watch `bullframe.css` when coding websites**
 
 The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.
+
+***
 
 ## Browser support
 
@@ -63,6 +69,7 @@ Tested and compatible in:
 
 * **Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
 
+***
 
 ## Contributors
 
@@ -88,4 +95,3 @@ bullframe.css incorporates some of the styles found on:
 ## License
 
 The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
-

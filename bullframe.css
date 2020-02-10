@@ -259,9 +259,9 @@ pre {
   word-break: break-all; /* webkit */
   word-wrap: break-word;
   white-space: pre;
-  white-space: -moz-pre-wrap; /* fennec */
+  white-space: -moz-pre-wrap; /* FF mobile */
   white-space: pre-wrap;
-  white-space: pre \9; /* IE7+ */
+  white-space: pre \9; /* IE8+ */
   -webkit-hyphens: none;
      -moz-hyphens: none;
       -ms-hyphens: none;
@@ -486,7 +486,7 @@ button,
 html input,
 select,
 textarea {
-  background-image: none; /* reset Fennec */
+  background-image: none; /* FF mobile */
 }
 
 input,
@@ -641,7 +641,7 @@ select[multiple] {
 }
 
 select[multiple] {
-  background-image: none; /* Fennec */
+  background-image: none; /* FF mobile */
 }
 
 optgroup::-moz-focus-inner {
@@ -683,7 +683,7 @@ textarea:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px solid #2a6496;
+  outline: 1px solid #2a6496; /* blue *
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -774,8 +774,8 @@ input[type="submit"] {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   border: 1px solid #b2b2b2;
-  background-image: none; /* normalize fennec */
-  background: #f4f4f4;
+  background-image: none; /* normalize FF mobile */
+  background: #f4f4f4; /* light gray */
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -1234,13 +1234,6 @@ select:focus,
 textarea:focus,
 #inputFocused {
   border-color: ;
-  outline: ;
-}
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  outline: ;
 }
 
 input[type="email"],

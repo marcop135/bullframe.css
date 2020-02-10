@@ -15,18 +15,17 @@
           box-sizing: border-box;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
+article, 
+aside, 
+dialog, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+main, 
+nav, 
+section {
   display: block;
 }
 
@@ -83,7 +82,10 @@ body {
   font-size: 17px;
   font-size: 1.7rem;
   background-color: #fff;
-  /* http://css-tricks.com/almanac/properties/b/backface-visibility/ */
+  /* 3D effects are problematic in WebKit because 
+   * backface-visibility not hidden, so we can add backface support 
+   * to the body element
+   * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -133,6 +135,21 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color; /* webkit */
   outline-offset: -2px;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, 
+a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
 }
 
 h1,
@@ -207,8 +224,10 @@ h6,
  * 1. Remove the bottom border in Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  * 3. Add explicit cursor to indicate changed behavior. */
-abbr[title] {
+abbr[title],
+abbr[data-original-title] {
   cursor: help;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
   cursor: help; /* 3 */
@@ -282,12 +301,20 @@ code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 17px;
+  font-size: 1.7rem;
 }
 
-strong,
-b {
+/* Prevent the duplicate application of `bolder` by the next rule 
+* in Safari 6. */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/* Add the correct font weight in Chrome, Edge, and Safari. */
+b,
+strong {
   font-weight: bolder;
 }
 
@@ -352,6 +379,11 @@ hr {
 
 /* $ Lists
 ============================================================================ */
+
+/* Add the correct display in IE 9- *//
+menu {
+  display: block;
+}
 
 menu,
 ol,

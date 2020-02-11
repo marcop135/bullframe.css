@@ -738,7 +738,7 @@ html input,
 select,
 textarea,
 legend,
-label input {
+label {
   width: 100%;
 }
 

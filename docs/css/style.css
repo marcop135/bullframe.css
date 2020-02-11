@@ -9,17 +9,17 @@
 --------------------------------------------------------------------------- */
 
 header {
-  margin-top: 15px;
-  margin-top: 1.5rem;
+  margin-top: 24px;
+  margin-top: 2.4rem;
 }
 
 .dev-wrapper {
-  padding: 30px 30px 15px 30px;
-  padding: 3rem 3rem 1.5rem 3rem;
+  padding: 24px 24px 12px 24px;
+  padding: 2.4rem 2.4rem 1.2rem 2.4rem;
   border: 2px solid #222;
   background-color: #f0f0f0;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
 }
 
 .dev-wrapper h1 {
@@ -52,7 +52,7 @@ header {
   .dev-wrapper h1 {
     font-size: 100px;
     font-size: 10rem;
-    letter-spacing: -5px;
+    letter-spacing: -6px;
   }
 
 }
@@ -68,8 +68,8 @@ header {
 .dev-wrapper .btn {
   margin-right: 15px;
   margin-right: 1.5rem;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
   background-color: #fff;
   border-width: 2px;
   border-color: #222;
@@ -119,8 +119,8 @@ header {
   margin-top: 60px;
   margin-top: 6rem;
   background-color: #f0f0f0;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
 }
 
 
@@ -193,8 +193,8 @@ h2#grid-system {
 .back-to-top {
   text-align: center;
   display: block;
-  margin: 70px 0 100px 0;
-  margin: 7rem 0 10rem 0;
+  margin: 60px 0 120px 0;
+  margin: 6rem 0 12rem 0;
 }
 
 .back-to-top a:hover,
@@ -221,8 +221,8 @@ h2#grid-system {
 }
 
 .sharing .h2 {
-  margin-bottom: 5px;
-  margin-bottom: .5rem;
+  margin-bottom: 6px;
+  margin-bottom: .6rem;
   line-height: 1.2;
 }
 

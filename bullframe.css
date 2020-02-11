@@ -1,5 +1,5 @@
 /*! $
- * bullframe.css v2.5.0
+ * bullframe.css v2.5.1
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -133,8 +133,8 @@ a:focus {
 
 a:focus {
   outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color; /* webkit */
-  outline-offset: -2px;
+  outline: 6px auto -webkit-focus-ring-color; /* webkit */
+  outline-offset: -3px;
 }
 
 a:not([href]):not([tabindex]) {
@@ -239,7 +239,7 @@ blockquote {
   margin-bottom: 2.4rem;
   padding-left: 24px;
   padding-left: 2.4rem;
-  border-left: 5px solid #ccc;
+  border-left: 6px solid #ccc;
 }
 
 blockquote p {
@@ -567,8 +567,8 @@ legend {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: inherit;
@@ -577,14 +577,14 @@ legend {
 
 label {
   font-weight: 700;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
 }
 
 label input {
   font-weight: 400;
-  margin-top: 5px;
-  margin-bottom: 0.5rem;
+  margin-top: 6px;
+  margin-bottom: 0.6rem;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -593,7 +593,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 input[type="search"] {
-  outline-offset: -2px;
+  outline-offset: -3px;
   -webkit-appearance: none;
 }
 
@@ -647,8 +647,8 @@ textarea {
 }
 
 input[type="radio"] {
-  -webkit-border-radius: 7px;
-          border-radius: 7px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
 }
 
 input[type="color"],
@@ -693,8 +693,8 @@ optgroup::-moz-focus-inner {
 
 textarea {
   height: auto;
-  min-height: 50px;
-  min-height: 5rem;
+  min-height: 60px;
+  min-height: 6rem;
   overflow: auto;
   vertical-align: top;
   resize: vertical;
@@ -726,8 +726,8 @@ input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   outline: 1px solid #2a6496; /* blue */
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: 6px auto -webkit-focus-ring-color;
+  outline-offset: -3px;
 }
 
 
@@ -768,8 +768,8 @@ input[type="time"],
 input[type="url"],
 select,
 textarea {
-  padding: 8px;
-  padding: 0.8rem;
+  padding: 6px;
+  padding: 0.6rem;
 }
 
 input[type="date"],
@@ -784,14 +784,14 @@ input[type="month"] {
 
 label input[type="radio"],
 label input[type="checkbox"] {
-  margin-right: 8px;
-  margin-right: 0.8rem;
+  margin-right: 12px;
+  margin-right: 1.2rem;
 }
 
 label + input[type="radio"],
 label + input[type="checkbox"] {
-  margin-left: 8px;
-  margin-left: 0.8rem;
+  margin-left: 12px;
+  margin-left: 1.2rem;
 }
 
 
@@ -801,8 +801,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  padding: 8px 16px;
-  padding: 0.8rem 1.6rem;
+  padding: 6px 12px;
+  padding: 0.6rem 1.2rem;
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -853,8 +853,8 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.125);
 }
 
 
@@ -1013,11 +1013,11 @@ th {
      -moz-box-sizing: content-box;
           box-sizing: content-box;
 
-  max-width: 1270px;
-  padding-right: 15px;
-  padding-right: 1.5rem;
-  padding-left: 15px;
-  padding-left: 1.5rem;
+  max-width: 1252px;
+  padding-right: 24px;
+  padding-right: 2.4rem;
+  padding-left: 24px;
+  padding-left: 2.4rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1033,10 +1033,10 @@ th {
 }
 
 .bf-container-fluid {
-  padding-left: 15px;
-  padding-left: 1.5rem;
-  padding-right: 15px;
-  padding-right: 1.5rem;
+  padding-left: 24px;
+  padding-left: 2.4rem;
+  padding-right: 24px;
+  padding-right: 2.4rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1053,10 +1053,10 @@ th {
 
 .bf-row {
   display: block;
-  margin-left: -15px;
-  margin-left: -1.5rem;
-  margin-right: -15px;
-  margin-right: -1.5rem;
+  margin-left: -24px;
+  margin-left: -2.4rem;
+  margin-right: -24px;
+  margin-right: -2.4rem;
 }
 
 .bf-row:before,
@@ -1073,10 +1073,10 @@ th {
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-left: 1.5rem;
-  padding-right: 15px;
-  padding-right: 1.5rem;
+  padding-left: 24px;
+  padding-left: 2.4rem;
+  padding-right: 24px;
+  padding-right: 2.4rem;
 }
 
 .bf-col-12 {

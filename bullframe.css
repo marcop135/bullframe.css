@@ -562,7 +562,6 @@ fieldset {
 legend {
   display: block;
   display: table \9; /* enable line-wrapping in IE8+ */
-  width: 100%;
   max-width: 100%;
   white-space: normal; /* enable line-wrapping in FF4/5 */
   border: 0;
@@ -584,6 +583,8 @@ label {
 
 label input {
   font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 0.5rem;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -735,7 +736,9 @@ input[type="checkbox"]:focus {
 
 html input,
 select,
-textarea {
+textarea,
+legend,
+label input {
   width: 100%;
 }
 

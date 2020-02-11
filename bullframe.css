@@ -55,6 +55,8 @@ progress {
   vertical-align: baseline;
 }
 
+/* add a default color to a wide range of elements to avoid
+ * cross-browser issues */
 html,
 button,
 .btn,
@@ -68,20 +70,27 @@ textarea {
 
 html {
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-  word-wrap: break-word; /* break very long texts by default...break things and be comfortable in the process! */
+  -ms-text-size-adjust: 100%;
   font-size: 62.5%; 
-  line-height: 1.4;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: sans-serif;
+  line-height: 1.15; 
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
 }
 
 body {
   margin: 0;
+  line-height: 1.5;
   font-size: 17px;
   font-size: 1.7rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* break very long texts by default...break things and be comfortable 
+   * in the process! */
+  word-wrap: break-word;
   background-color: #fff;
+  
   /* 3D effects are problematic in WebKit because 
    * backface-visibility not hidden, so we can add backface support 
    * to the body element
@@ -120,6 +129,7 @@ a {
 
   /* IE10+: Remove grey background on active links */
   background-color: transparent;
+
   /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
   -webkit-text-decoration-skip: objects;
 }
@@ -377,10 +387,12 @@ hr {
 
 
 
+
+
 /* $ Lists
 ============================================================================ */
 
-/* Add the correct display in IE 9- *//
+/* Add the correct display in IE 9- */
 menu {
   display: block;
 }
@@ -481,6 +493,8 @@ audio:not([controls]) {
 svg:not(:root) {
   overflow: hidden;
 }
+
+
 
 
 
@@ -614,8 +628,7 @@ optgroup {
 }
 
 /* list every single elements and avoid destroying native 
- * android audio/video players
- */
+ * android audio/video players */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -818,7 +831,7 @@ input[type="submit"] {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   border: 1px solid #b2b2b2;
-  background-image: none; /* normalize FF mobile */
+  background-image: none; /* FF mobile */
   background: #f4f4f4; /* light gray */
 }
 
@@ -998,10 +1011,6 @@ th {
 
 
 /* $ Basic 12 columns fluid grid system
- *
- * Heads up!!
- * You can't do column ordering (for SEO)
- * and mobile/tablet/desktop mixing
 ============================================================================ */
 
 .bf-container {
@@ -1164,12 +1173,11 @@ table col[class*="bf-col-"] {
 ============================================================================ */
 
 
-
 /*
 
 Change skin -------------------------------------------------------------
 
-html {
+body {
   font-family: ;
 }
 
@@ -1329,20 +1337,6 @@ input[type="submit"]:focus {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* $ Helper classes
 ============================================================================ */
 
@@ -1397,7 +1391,6 @@ input[type="submit"]:focus {
 }
 
 /* assistive text for screen reader only (e.g. form labels) */
-
 .hidden {
   display: none !important;
   visibility: hidden !important;
@@ -1478,7 +1471,6 @@ input[type="submit"]:focus {
 
 
 
-
 /* responsive tables --------------------------------------------------------
  * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini
  */
@@ -1501,7 +1493,7 @@ input[type="submit"]:focus {
 
 
 
-/* responsive videos and embeds --------------------------------------------- */
+/* responsive embeds ------------------------------------------------------- */
 
 .embed-responsive {
   position: relative;
@@ -1536,24 +1528,24 @@ input[type="submit"]:focus {
 }
 
 .embed-responsive.vimeo::before {
-  padding-top: 0; /* no extra-padding for controls */
+  padding-top: 0; /* no extra-padding for vimeo controls */
 }
 
 
 
-/* ==========================================================================
-  Print styles.
-  Inlined to avoid the additional HTTP request:
-  https://www.phpied.com/delay-loading-your-print-css/
-  ========================================================================== */
 
-@media print {
+
+/* $ Print styles.
+ * Inlined to avoid the additional HTTP request:
+ * https://www.phpied.com/delay-loading-your-print-css/
+============================================================================ */@media print {
 
   *,
   *:before,
   *:after {
     background: transparent !important;
     color: #000 !important;
+
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1572,10 +1564,8 @@ input[type="submit"]:focus {
     content: " (" attr(title) ")";
   }
 
-  /*
-      * Don't show links that are fragment identifiers,
-      * or use the `javascript:` pseudo protocol
-      */
+  /* Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -1591,10 +1581,8 @@ input[type="submit"]:focus {
     page-break-inside: avoid;
   }
 
-  /*
-      * Printing Tables:
-      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-      */
+  /* Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables */
   thead {
     display: table-header-group;
   }

@@ -52,18 +52,20 @@ The file is divided into several sections of code. You can copy-and-paste only w
 
 Tested and compatible in:
 
-* Internet Explorer 8-11
-* Latest stable Chrome
-* Latest stable Firefox
-* Latest stable Edge
-* Latest stable Safari
-* Latest stable Opera
-* Mobile Safari iOS 4+
-* Android browser v5+ *
-* Latest stable Opera Mobile (Presto and Webkit) *
-* Opera Mini *
+* Chrome (last two)
+* Edge (last two)
+* Firefox (last two)
+* Opera (last two)
+* Safari 6+
+* Internet Explorer 8+
 * Internet Explorer Mobile 9-10
-* Latest stable Firefox Mobile
+* Firefox Mobile (last two)
+* Chrome mobile (last two)
+* Mobile Safari iOS 4+
+* Android browser v5+
+* Opera Mobile (last two) *
+* Opera Mini *
+
 
 * **Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
 

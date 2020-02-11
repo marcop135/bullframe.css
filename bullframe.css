@@ -205,8 +205,8 @@ h4,
 .h4 {
   font-size: 20px;
   font-size: 2rem;
-  margin: 10px 0;
-  margin: 1rem 0;
+  margin: 12px 0;
+  margin: 1.2rem 0;
 }
 
 h5,
@@ -215,8 +215,8 @@ h6,
 .h6 {
   font-size: 17px;
   font-size: 1.7rem;
-  margin: 10px 0;
-  margin: 1rem 0;
+  margin: 12px 0;
+  margin: 1.2rem 0;
 }
 
 /* Abbreviations (Bootstrap 4)

@@ -24,6 +24,7 @@ footer,
 header, 
 hgroup, 
 main, 
+menu,
 nav, 
 section {
   display: block;
@@ -391,11 +392,6 @@ hr {
 
 /* $ Lists
 ============================================================================ */
-
-/* Add the correct display in IE 9- */
-menu {
-  display: block;
-}
 
 menu,
 ol,

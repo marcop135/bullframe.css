@@ -301,8 +301,8 @@ code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 17px;
-  font-size: 1.7rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 /* Prevent the duplicate application of `bolder` by the next rule 

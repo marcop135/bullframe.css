@@ -1,5 +1,5 @@
 /*! $
- * bullframe.css v2.5.1
+ * bullframe.css v2.6.0
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -312,8 +312,7 @@ code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 95%;
 }
 
 /* Prevent the duplicate application of `bolder` by the next rule 

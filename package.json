@@ -1,7 +1,7 @@
 {
   "name": "bullframe.css",
-  "version": "2.5.0",
-  "description": "Solid, IE8+, 100%-fluid, IE-friendly CSS-only boilerplate.",
+  "version": "2.5.1",
+  "description": "Solid, IE8+, 100% fluid, IE-friendly CSS-only boilerplate.",
   "main": "bullframe.css",
   "style": "bullframe.css",
   "files": [

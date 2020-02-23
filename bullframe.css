@@ -1,5 +1,5 @@
 /*! $
- * bullframe.css v2.5.0
+ * bullframe.css v2.5.1
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -85,6 +85,8 @@ body {
   line-height: 1.5;
   font-size: 17px;
   font-size: 1.7rem;
+  font-weight: 400;
+  text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   /* break very long texts by default...break things and be comfortable 

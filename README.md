@@ -1,4 +1,4 @@
-![bullframe.css boilerplate](docs/img/bullframe-css-logo.png)
+![bullframe.css boilerplate](logo.png)
 
 *bullframe.css* is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for a solid mobile-first **responsive web design** retro-compatible with IE8 and other old browsers.
 

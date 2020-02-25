@@ -1,5 +1,5 @@
 /*! $
- * bullframe.css v2.5.1
+ * bullframe.css v2.5.2
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -1465,6 +1465,19 @@ input[type="submit"]:focus {
       -ms-user-select: none;
           user-select: none;
 }
+
+.font-sans-serif {
+  font-family: Cabin, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-serif {
+  font-family: "Museo Slab 500", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+.font-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "description": "Solid, IE8+, 100% fluid, IE-friendly CSS-only boilerplate.",
   "main": "bullframe.css",
   "style": "bullframe.css",

@@ -1,5 +1,5 @@
 /*! $
- * bullframe.css v2.6.0
+ * bullframe.css v2.6.1
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -124,7 +124,7 @@ body {
  * might still respond to pointer events.
  *
  * Credit: https://github.com/suitcss/base */
-[tabindex="-1"]:focus {
+[tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
@@ -247,6 +247,8 @@ abbr[data-original-title] {
   text-decoration: underline dotted; /* 2 */
   cursor: help; /* 3 */
   border-bottom: 0; /* 1 */
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 blockquote {
@@ -550,13 +552,11 @@ textarea {
 }
 
 label,
-button,
 .btn,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-input[type="radio"],
-input[type="checkbox"] {
+button:not(:disabled),
+input[type="button"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+input[type="submit"]:not(:disabled) {
   cursor: pointer;
 }
 
@@ -988,9 +988,8 @@ td {
   border-bottom: 1px solid #999;
 }
 
-th,
-caption {
-  text-align: left;
+th {
+  text-align: inherit;
 }
 
 caption {
@@ -999,6 +998,7 @@ caption {
   padding-bottom: 8px;
   padding-bottom: 0.8rem;
   color: #6c757d;
+  text-align: left;
   caption-side: bottom;
 }
 

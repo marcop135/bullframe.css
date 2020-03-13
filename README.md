@@ -39,7 +39,16 @@ Include the bullframe.css file *before* your custom styles like this:
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="bullframe.css">
+  
+  <!-- if needed, support HTML5 elements in old browsers -->
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+
   <link rel="stylesheet" href="your-styles.css">
+  <!-- if needed, support CSS3 media queries in IE8 -->
+  <!--[if IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"></script>
+  <![endif]-->
   ...
 ```
 

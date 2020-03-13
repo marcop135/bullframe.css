@@ -14,22 +14,23 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 ## Best features
 
 * Normalize and fluidify as much as possible HTML elements out-of-the-box
-* IE8+ and several old and new desktop/mobile browsers support
+* Support IE8+ and a wide range of desktop and mobile browsers
 * Mobile-First Responsive Web Design ready
-* 10KB minified/gzipped
-* Minimal 12-columns fluid grid system
-* Flexible images and media elements (video, audio, iframe, embed)
-* Flexible, cross-browser HTML5 form elements
-* Responsive tables
+* Progressive Enhancement development ready
+* Simple 12-columns fluid grid system IE8+
+* Flexible images and media elements (video, audio, iframe, embed) by default
+* Flexible, cross-browser HTML5 form elements by default
+* 10KB~ minified/gzipped
+* Use classes only for utilities (e.g. '.clearfix', '.text-hide')
 * Extensive bug fixing documentation 
 
 ***
 
 ## How to use it
 
-- **Write your styles without ever touch the boilerplate**
+1. **Write your styles without ever touch the boilerplate**
 
-Include the bullframe.css file *before* your custom styles like this:
+Include the bullframe.css file *before* your custom styles and, if needed, include some polyfills via the JSDelivr CDN:
 
 ```html
 <!doctype html>
@@ -44,19 +45,21 @@ Include the bullframe.css file *before* your custom styles like this:
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
 
   <link rel="stylesheet" href="your-styles.css">
+
   <!-- if needed, support CSS3 media queries in IE8 -->
   <!--[if IE 8]>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"></script>
   <![endif]-->
+
   ...
 ```
 
-- **Write your styles inside the boilerplate**
+2. **Write your styles inside the boilerplate**
 
 Open `bullframe.css` file, scroll down the code and start to add styles *inside* "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
 
-- **Just watch `bullframe.css` when coding websites**
+3. **Just take a look at `bullframe.css` when coding websites**
 
 The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.
 
@@ -66,7 +69,7 @@ The file is divided into several sections of code. You can copy-and-paste only w
 
 Tested and compatible in:
 
-* evergreen browsers (Chrome, Firefox, Edge, Opera)
+* Evergreen browsers (Chrome, Firefox, Edge, Opera)
 * Safari 6+
 * Internet Explorer 8+
 * Internet Explorer Mobile 9-10

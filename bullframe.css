@@ -1492,7 +1492,7 @@ input[type="submit"]:focus {
 .table-responsive {
   overflow-x: auto;
   overflow-y: hidden;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: scrollbar;
 }
 
 .table-responsive table {

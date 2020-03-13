@@ -31,15 +31,17 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 Include the bullframe.css file *before* your custom styles like this:
 
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;link href="bullframe.css rel="stylesheet"&gt;
-&lt;link href="custom-styles.css" rel="stylesheet"&gt;
-...</code></pre>
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no>
+  <link rel="stylesheet" href="bullframe.css>
+  <link rel="stylesheet" href="your-styles.css">
+  ...
+```
 
 - **Write your styles inside the boilerplate**
 
@@ -55,10 +57,7 @@ The file is divided into several sections of code. You can copy-and-paste only w
 
 Tested and compatible in:
 
-* Chrome (last two)
-* Edge (last two)
-* Firefox (last two)
-* Opera (last two)
+* evergreen browsers (Chrome, Firefox, Edge, Opera)
 * Safari 6+
 * Internet Explorer 8+
 * Internet Explorer Mobile 9-10

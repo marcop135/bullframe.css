@@ -1,8 +1,10 @@
 ![bullframe.css boilerplate](logo.png)
 
-*bullframe.css* is a CSS file to be used as an **alternative to CSS resets** and as a starting-point for a solid mobile-first **responsive web design** retro-compatible with IE8 and other old browsers.
+*bullframe.css* is a CSS file to be used as an alternative to CSS resets and as a starting-point for a solid mobile-first responsive web design **retro-compatible with IE8** and other old browsers.
 
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
+
+***
 
 <img src="https://camo.githubusercontent.com/cdc54d1641f5e11e246a2707063ecad092c96d11/68747470733a2f2f64617669642d646d2e6f72672f6477796c2f657374612e737667" alt="Dependency Status" data-canonical-src="https://david-dm.org/dwyl/esta.svg" style="max-width:100%;"></a>
 <a href="https://github.com/marcop135/bullframe.css/issues"><img src="https://camo.githubusercontent.com/926d8ca67df15de5bd1abac234c0603d94f66c00/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6e747269627574696f6e732d77656c636f6d652d627269676874677265656e2e7376673f7374796c653d666c6174" alt="contributions welcome" data-canonical-src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" style="max-width:100%;"></a>
@@ -81,7 +83,7 @@ Tested and compatible in:
 * Opera Mini *
 
 
-* **Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
+** * Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
 
 ***
 
@@ -89,9 +91,13 @@ Tested and compatible in:
 
 [@englishextra](https://github.com/englishextra) the project is still live thanks to you!
 
+***
+
 ## Become a sponsor 
 
 [Sponsor me](https://github.com/sponsors/marcop135) and support my front-end efforts and open source!
+
+***
 
 ## Acknowledgements
 

@@ -1181,20 +1181,6 @@ textarea {
 
 body {
   font-family: ;
-}
-
-html,
-button,
-.btn,
-.btn:hover,
-.btn:focus,
-input,
-select,
-textarea {
-  color: ;
-}
-
-body {
   background-color: ;
   font-size: ??px;
   font-size: ??rem
@@ -1214,10 +1200,7 @@ a:focus {
 
 
 * Reset 'margin-top' for a wide range of elements -------------------------
-* Compose to a vertical rhythm --------------------------------------------
-*
-* reference to 'bullframe-vertical-rhythm.css' file
-* https://github.com/marco135/bullframe.css/tree/master/add-ons
+* and compose to a vertical rhythm ----------------------------------------
 
 h1,
 .h1,
@@ -1243,17 +1226,18 @@ hr {
 }
 
 
-Customize <form> elements -----------------------------------------------
+Customize form elements -----------------------------------------------
 
 input[type="color"],
 input[type="email"],
-input[type="image"],
-[type="number"],
+input[type="number"],
 input[type="password"],
 input[type="tel"],
-[type="search"],
+input[type="search"],
 input[type="text"],
-input[type^="date"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"],
@@ -1261,42 +1245,28 @@ input[type="time"],
 input[type="url"],
 select,
 textarea {
-  border-color: ;
-}
-
-input[type="color"]:focus,
-input[type="email"]:focus,
-[type="number"]:focus,
-input[type="password"]:focus,
-input[type="tel"]:focus,
-[type="search"]:focus,
-input[type="text"]:focus,
-input[type^="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-select:focus,
-textarea:focus,
-#inputFocused {
-  border-color: ;
+  background-color: ;
+  border: 1px solid #;
 }
 
 input[type="email"],
-[type="number"],
+input[type="number"],
 input[type="password"],
 input[type="tel"],
-[type="search"],
+input[type="search"],
 input[type="text"],
-input[type^="date"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"],
 input[type="time"],
 input[type="url"],
+select,
 textarea {
-  padding: ;
+  padding: px;
+  padding: rem;
 }
 
 button,
@@ -1304,16 +1274,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  padding: ;
-}
-
-button,
-.btn,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  color: ;
-  border-color: ;
+  padding: px;
+  padding: rem;
+  border-color: #;
   background: ;
 }
 
@@ -1327,11 +1290,9 @@ button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  color: ;
-  border-color: ;
-  background: ;
+  border-color: #;
+  background: #;
 }
-
 
 */
 

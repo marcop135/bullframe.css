@@ -26,7 +26,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 ***
 
-## How to use it
+## 3 ways to use it
 
 1. **Write your styles without ever touch the boilerplate**
 
@@ -89,6 +89,9 @@ Tested and compatible in:
 
 [@englishextra](https://github.com/englishextra) the project is still live thanks to you!
 
+## Become a sponsor 
+
+[Sponsor me](https://github.com/sponsors/marcop135) and support my front-end efforts and open source!
 
 ## Acknowledgements
 
@@ -103,7 +106,6 @@ bullframe.css incorporates some of the styles found on:
 * YUI3 CSS Grids - [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
 * Pure CSS - [https://github.com/yui/pure](https://github.com/yui/pure)
 * Typeplate - [https://github.com/typeplate/typeplate.github.com](https://github.com/typeplate/typeplate.github.com)
-* The Nyan Project - [https://www.youtube.com/watch?v=jI-kpVh6e1U](http://www.youtube.com/watch?v=jI-kpVh6e1U)
 
 
 ## License

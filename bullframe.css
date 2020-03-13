@@ -1,12 +1,12 @@
 /*! $
- * bullframe.css v2.6.2
+ * bullframe.css v2.6.3
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
  *
  * Carefully built by @marcop135
  */
-
+ 
 *,
 *:before,
 *:after {
@@ -58,7 +58,7 @@ progress {
   max-width: 100%;
 }
 
-/* add a default color to a wide range of elements to avoid
+/* add a default color to a wide range of elements and avoid
  * cross-browser issues */
 html,
 button,

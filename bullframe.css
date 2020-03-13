@@ -1168,6 +1168,17 @@ table col[class*="bf-col-"] {
 
 Change skin -------------------------------------------------------------
 
+html,
+button,
+.btn,
+.btn:hover,
+.btn:focus,
+input,
+select,
+textarea {
+  color: ;
+}
+
 body {
   font-family: ;
 }

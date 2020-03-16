@@ -1,5 +1,5 @@
 /*! $
- * bullframe.css v2.6.3
+ * bullframe.css v2.6.4
  *
  * GitHub: https://github.com/marcop135/bullframe.css
  * MIT License
@@ -934,15 +934,10 @@ button:active[disabled],
 input:active[disabled],
 select:active[disabled],
 textarea:active[disabled] {
-  cursor: default !important; /* fallback */
-  cursor: not-allowed !important;
-  background: #f9f9f9 none !important; /* very light grey */
-  border-color: #dbdbdb !important;
-  color: #b2b2b2 !important;
-  text-shadow: none !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  opacity: 1 !important;
+  cursor: default !important; /* IE8-10 fallback */
+  cursor: not-allowed !important; /* Opera Mini fallback */
+  pointer-events: none;
+  opacity: 0.5 !important;
 }
 
 input[type="radio"][disabled],

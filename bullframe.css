@@ -1201,8 +1201,7 @@
  ol,
  ul,
  dl,
- blockquote,
- hr {
+ blockquote {
    margin-top: 0;
  }
  

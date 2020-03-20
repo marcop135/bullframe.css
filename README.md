@@ -71,7 +71,7 @@ The file is divided into several sections of code. You can copy-and-paste only w
 
 Tested and compatible in:
 
-* Evergreen browsers (Chrome, Firefox, Edge, Opera)
+* Evergreen browsers (last 2 versions)
 * Safari 6+
 * Internet Explorer 8+
 * Internet Explorer Mobile 9-10

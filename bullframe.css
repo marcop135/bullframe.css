@@ -3,8 +3,6 @@
 *,
 *:before,
 *:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -118,13 +116,6 @@ body {
 /* Fix IE 10 on Windows Phone 8 Viewport
 * https://getbootstrap.com/docs/3.3/getting-started/#support-ie10-width
 */
-@-ms-viewport {
-	width: device-width;
-}
-
-@-o-viewport {
-	width: device-width;
-}
 
 @viewport {
 	width: device-width;
@@ -311,8 +302,6 @@ pre {
 	white-space: pre-wrap;
 	white-space: pre \9; /* IE8+ */
 	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
 	hyphens: none;
 	-ms-overflow-style: scrollbar;
 }
@@ -383,12 +372,6 @@ hr {
 	margin: 2.4rem 0;
 	padding: 0;
 	overflow: visible; /* Show the overflow in Edge and IE */
-}
-
-::-moz-selection {
-	background-color: #0808af; /* dark blue */
-	color: #fff;
-	text-shadow: none;
 }
 
 ::selection {
@@ -648,12 +631,10 @@ button,
 input,
 select,
 textarea {
-	-webkit-border-radius: 0;
 	border-radius: 0;
 }
 
 input[type="radio"] {
-	-webkit-border-radius: 6px;
 	border-radius: 6px;
 }
 
@@ -806,10 +787,7 @@ input[type="submit"] {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	border: 1px solid #b2b2b2;
 	background-image: none; /* FF mobile */
@@ -852,7 +830,6 @@ select:invalid,
 textarea:invalid {
 	color: red;
 	border-color: red;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -866,20 +843,6 @@ textarea::-webkit-input-placeholder {
 * the default color of placeholders too!
 * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 */
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-	color: #888;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-	color: #888;
-}
-
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-	color: #888;
-}
 
 input::placeholder,
 textarea::placeholder {
@@ -973,8 +936,6 @@ th {
   * with max/min-width and max/min-height
   * https://github.com/twbs/bootstrap/issues/10014
   */
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 
 	max-width: 1252px;
@@ -1366,7 +1327,6 @@ input[type="submit"]:focus {
 .text-truncate {
 	max-width: 100%;
 	overflow: hidden;
-	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	word-wrap: normal;
@@ -1375,8 +1335,6 @@ input[type="submit"]:focus {
 .no-select {
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 }
 

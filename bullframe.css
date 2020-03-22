@@ -512,7 +512,6 @@ input[type="file"] {
 
 ::-webkit-file-upload-button {
 	font: inherit;
-	-webkit-appearance: button;
 }
 
 button,
@@ -585,7 +584,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="search"] {
 	outline-offset: -3px;
-	-webkit-appearance: none;
 }
 
 output {
@@ -604,8 +602,9 @@ optgroup {
 	font-weight: 700;
 }
 
-/* list every single elements and avoid destroying native 
-* android audio/video players */
+/* remove -webkit-appearance 
+ * and list every single elements and avoid destroying native 
+ * android audio/video players */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -620,11 +619,24 @@ input[type="week"],
 input[type="url"],
 input[type="image"],
 input[type="password"],
-[type="search"],
-[type="search"]::-webkit-search-decoration,
-[type="search"]::-webkit-search-cancel-button,
-textarea {
+input[type="search"],
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
 	-webkit-appearance: none;
+}
+
+
+/* add again -webkit-appearance destroyed from the previous ruleset */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+	-webkit-appearance: listbox;
 }
 
 button,
@@ -747,13 +759,6 @@ select,
 textarea {
 	padding: 6px;
 	padding: 0.6rem;
-}
-
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-	-webkit-appearance: listbox;
 }
 
 /* customize radios and checkboxes ---------------------------------------- */

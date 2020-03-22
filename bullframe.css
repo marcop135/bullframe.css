@@ -313,7 +313,7 @@ samp {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
 		"Courier New", monospace;
 	/* a monospaced text should looks bigger, so a smaller font-size is preferred */
-  font-size: 95%;
+  font-size: 87.5%;
 }
 
 /* Prevent the duplicate application of `bolder` by the next rule 

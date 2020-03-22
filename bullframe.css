@@ -1,4 +1,4 @@
-/*! bullframe.css v2.7.1 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v2.8.0 | MIT License | https://github.com/marcop135/bullframe.css */
 
 *,
 *:before,
@@ -50,7 +50,7 @@ progress {
 }
 
 /* add a default color to a wide range of elements and avoid
-* cross-browser issues */
+* cross-browsers issues */
 html,
 button,
 .btn,
@@ -89,13 +89,18 @@ body {
 	font-weight: 400;
 	text-align: left;
 	font-family: 
-
-  /* Safari for OS X and iOS (San Francisco) */ -apple-system,
-		/* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
-		/* Windows */ "Segoe UI", /* Android */ Roboto,
-		/* Basic web fallback */ "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-		/* emoji support */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-		"Noto Color Emoji";
+	/* Safari for OS X and iOS (San Francisco) */ 
+	-apple-system,
+	/* Chrome < 56 for OS X (San Francisco) */ 
+	BlinkMacSystemFont,
+	/* Windows */ 
+	"Segoe UI", 
+	/* Android */ 
+	Roboto,
+	/* Basic web fallback */ 
+	"Helvetica Neue", Arial, "Noto Sans", sans-serif,
+	/* emoji fonts */ 
+	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 	/* this enable font ligatures*/
 	text-rendering: optimizeLegibility;

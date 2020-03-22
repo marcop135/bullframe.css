@@ -602,11 +602,10 @@ optgroup {
 	font-weight: 700;
 }
 
-/* remove -webkit-appearance 
- * and list every single elements and avoid destroying native 
- * android audio/video players */
+/* remove -webkit-appearance listing every single elements that needed it */
 button,
-html input[type="button"],
+/* avoid destroying native android audio/video players */
+html input[type="button"], 
 input[type="reset"],
 input[type="submit"],
 input[type="email"],
@@ -624,7 +623,6 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
 	-webkit-appearance: none;
 }
-
 
 /* add again -webkit-appearance destroyed from the previous ruleset */
 
@@ -676,7 +674,7 @@ input[type="checkbox"] {
 }
 
 input[type="range"] {
-	background-color: transparent; /* FF mobile */
+	background-color: transparent; /* FF and Chrome mobile */
 }
 
 select[size],
@@ -891,6 +889,8 @@ fieldset[disabled] input[type="checkbox"] {
 	background-color: transparent;
 }
 
+
+
 /* $ Tables
 ============================================================================ */
 
@@ -932,6 +932,8 @@ caption {
 th {
 	font-weight: 700;
 }
+
+
 
 /* $ Basic 12 columns fluid grid system
 ============================================================================ */
@@ -1084,6 +1086,8 @@ table col[class*="bf-col-"] {
 	display: table-column;
 	float: none;
 }
+
+
 
 /* $ Just in case, add custom styles here
 ============================================================================ */
@@ -1350,8 +1354,7 @@ input[type="submit"]:focus {
 }
 
 .font-serif {
-	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
-		"DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+	font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .font-monospace {

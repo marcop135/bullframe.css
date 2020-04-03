@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>bullframe.css CSS boilerplate</title>
-  <meta name="description" content="Solid, IE8+, 100% fluid, IE-friendly CSS-only boilerplate.">
+  <meta name="description" content="Solid, fluid, IE-friendly CSS-only boilerplate.">
 
-  <link rel="stylesheet" href="bullframe.min.css?v=2.7.1" >
+  <link rel="stylesheet" href="bullframe.css?v=2.8.1" >
   <style>
     /* add some extra styles for the demo */
     html {  
@@ -20,20 +20,10 @@
       margin-top: 2.4rem;
     }
 
-    .dev-wrapper {
-      padding: 24px 24px 12px 24px;
-      padding: 2.4rem 2.4rem 1.2rem 2.4rem;
-      border: 2px solid #222;
-      background-color: #f0f0f0;
-      -webkit-border-radius: 6px;
-              border-radius: 6px;
-    }
-
     .dev-wrapper h1 {
       margin: 0;
       line-height: 1.1;
-      letter-spacing: -2px;
-      font-family: "Anonymous Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: "Nova Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
     @media (min-width: 450px) {
@@ -48,8 +38,8 @@
     @media (min-width: 600px) {
 
       .dev-wrapper h1 {
-        font-size: 70px;
-        font-size: 7rem;
+        font-size: 60px;
+        font-size: 6rem;
       }
 
     }
@@ -57,9 +47,8 @@
     @media (min-width: 1000px) {
 
       .dev-wrapper h1 {
-        font-size: 100px;
-        font-size: 10rem;
-        letter-spacing: -6px;
+        font-size: 80px;
+        font-size: 8rem;
       }
 
     }
@@ -67,7 +56,7 @@
     @media (min-width: 600px) {
 
       .dev-wrapper .btn {
-        font-size: 150%;
+        font-size: 125%;
       }
 
     }
@@ -75,8 +64,8 @@
     .dev-wrapper .btn {
       margin-right: 15px;
       margin-right: 1.5rem;
-      -webkit-border-radius: 6px;
-              border-radius: 6px;
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
       background-color: #fff;
       border-width: 2px;
       border-color: #222;
@@ -116,14 +105,13 @@
 
     .title {
       font-family: "Anonymous Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      padding: 10px 15px;
-      padding: 1rem 1.5rem;
-      border: 2px solid #222;
+      font-size: 40px;
+      font-size: 4rem;
       margin-top: 60px;
       margin-top: 6rem;
-      background-color: #f0f0f0;
       -webkit-border-radius: 6px;
               border-radius: 6px;
+      text-transform: uppercase;
     }
 
     .bullframe-demo legend {
@@ -219,15 +207,12 @@
       font-weight: 700;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Nova+Mono:700&display=swap" rel="stylesheet">
 
   <!-- enable HTML5 elements and CSS3 Media Queries support in all browsers -->
-  <!--[if IE 8]>
-    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"></script>
-  <![endif]-->
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"></script>
 
   <!-- Fix IE 10 on Windows Phone 8 Viewport -->
   <script>
@@ -262,13 +247,13 @@
             <a class="btn" href="https://github.com/marcop135/bullframe.css/archive/master.zip" title="bullframe.css source">Download</a>
             <pre><code>$ git clone https://github.com/marcop135/bullframe.css.git</code></pre>
           </div><!-- /dev-wrapper -->
-
+          <p class="lead">
+            Take a quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations.
+          </p>
         </div>
       </div>
   
-      <p class="lead">
-        Take a look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations.
-      </p>
+      
     </header>
 
     <h2 id="texts" class="title">Text elements</h2>

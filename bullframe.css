@@ -115,7 +115,7 @@ body {
   * to the body element
   * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
 	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+					backface-visibility: hidden;
 }
 
 /* Fix IE 10 on Windows Phone 8 Viewport
@@ -318,7 +318,7 @@ samp {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
 		"Courier New", monospace;
 	/* a monospaced text should looks bigger, so a smaller font-size is preferred */
-  font-size: 87.5%;
+  font-size: 90%;
 }
 
 /* Prevent the duplicate application of `bolder` by the next rule 

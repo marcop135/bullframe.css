@@ -4,12 +4,9 @@
 
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
-***
-
 <img src="https://camo.githubusercontent.com/cdc54d1641f5e11e246a2707063ecad092c96d11/68747470733a2f2f64617669642d646d2e6f72672f6477796c2f657374612e737667" alt="Dependency Status" data-canonical-src="https://david-dm.org/dwyl/esta.svg" style="max-width:100%;"></a>
-<a href="https://github.com/marcop135/bullframe.css/issues"><img src="https://camo.githubusercontent.com/926d8ca67df15de5bd1abac234c0603d94f66c00/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6e747269627574696f6e732d77656c636f6d652d627269676874677265656e2e7376673f7374796c653d666c6174" alt="contributions welcome" data-canonical-src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" style="max-width:100%;"></a>
+<img alt="GitHub" src="https://img.shields.io/github/license/marcop135/bullframe.css" style="max-width:100%;">
 
-*Current version: v2.8.0*
 
 ***
 
@@ -32,7 +29,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 1. **Write your styles without ever touch the boilerplate**
 
-Include the bullframe.css file *before* your custom styles and, if needed, include some polyfills via the JSDelivr CDN:
+Include the bullframe.css file *before* your custom styles and, if needed, include some polyfills via JSDelivr CDN:
 
 ```html
 <!doctype html>
@@ -42,18 +39,13 @@ Include the bullframe.css file *before* your custom styles and, if needed, inclu
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="bullframe.css">
-  
-  <!-- if needed, support HTML5 elements in old browsers -->
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
 
   <link rel="stylesheet" href="your-styles.css">
 
-  <!-- if needed, support CSS3 media queries in IE8 -->
-  <!--[if IE 8]>
+  <!-- if needed, support HTML5 elements and media queries in very old browsers -->
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"></script>
-  <![endif]-->
-
   ...
 ```
 
@@ -71,19 +63,17 @@ The file is divided into several sections of code. You can copy-and-paste only w
 
 Tested and compatible in:
 
-* Evergreen browsers (last 2 versions)
+* IE 8+
+* Latest Stable: Firefox, Chrome, Safari
 * Safari 6+
-* Internet Explorer 8+
-* Internet Explorer Mobile 9-10
-* Firefox Mobile (last two)
-* Chrome mobile (last two)
-* Mobile Safari iOS 4+
+* IE Mobile 9-10
+* Latest Stable: Firefox, Chrome and Opera Mobile *
 * Android browser v5+
-* Opera Mobile (last two) *
+* Mobile Safari iOS 4+
 * Opera Mini *
 
 
-** * Responsive tabular data CSS-only tecnique not working in Android 2.x, Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
+** * Responsive tabular data CSS-only tecnique not working in Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
 
 ***
 

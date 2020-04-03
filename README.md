@@ -8,8 +8,6 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 <img alt="GitHub" src="https://img.shields.io/github/license/marcop135/bullframe.css" style="max-width:100%;">
 
 
-***
-
 ## Best features
 
 * Normalize and fluidify as much as possible HTML elements out-of-the-box
@@ -22,8 +20,6 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 * 10KB~ minified/gzipped
 * Use classes only for utilities (e.g. '.clearfix', '.text-hide')
 * Extensive bug fixing documentation 
-
-***
 
 ## 3 ways to use it
 
@@ -57,8 +53,6 @@ Open `bullframe.css` file, scroll down the code and start to add styles *inside*
 
 The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.
 
-***
-
 ## Browser support
 
 Tested and compatible in:
@@ -73,21 +67,15 @@ Tested and compatible in:
 * Opera Mini *
 
 
-** * Responsive tabular data CSS-only tecnique not working in Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
-
-***
+* Responsive tabular data CSS-only tecnique not working in Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
 
 ## Contributors
 
 [@englishextra](https://github.com/englishextra) the project is still live thanks to you!
 
-***
-
 ## Become a sponsor 
 
 [Sponsor me](https://github.com/sponsors/marcop135) and support my front-end efforts and open source!
-
-***
 
 ## Acknowledgements
 
@@ -102,7 +90,6 @@ bullframe.css incorporates some of the styles found on:
 * YUI3 CSS Grids - [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
 * Pure CSS - [https://github.com/yui/pure](https://github.com/yui/pure)
 * Typeplate - [https://github.com/typeplate/typeplate.github.com](https://github.com/typeplate/typeplate.github.com)
-
 
 ## License
 

@@ -1,4 +1,4 @@
-<img src="https://github.com/marcop135/bullframe.css/raw/master/logo.png" style="max-width:100%;">
+# bullframe.css
 
 *bullframe.css* is a CSS file to be used as an alternative to CSS resets and as a starting-point for a solid mobile-first responsive web design **retro-compatible with IE8** and other old browsers.
 

@@ -1,4 +1,4 @@
-/*! bullframe.css v2.8.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v2.8.1 | MIT License | https://github.com/marcop135/bullframe.css */
 
 *,
 *:before,
@@ -114,7 +114,7 @@ body {
   * backface-visibility not hidden, so we can add backface support 
   * to the body element
   * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
-	-webkit-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden; /* needed for old Androids */
 					backface-visibility: hidden;
 }
 
@@ -306,7 +306,6 @@ pre {
 	white-space: -moz-pre-wrap; /* FF mobile */
 	white-space: pre-wrap;
 	white-space: pre \9; /* IE8+ */
-	-webkit-hyphens: none;
 	hyphens: none;
 	-ms-overflow-style: scrollbar;
 }
@@ -793,8 +792,6 @@ input[type="submit"] {
 	vertical-align: baseline;
 	overflow: visible;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
 	user-select: none;
 	border-radius: 3px;
 	border: 1px solid #b2b2b2;
@@ -1347,8 +1344,6 @@ input[type="submit"]:focus {
 }
 
 .no-select {
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
 	user-select: none;
 }
 

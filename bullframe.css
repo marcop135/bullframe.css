@@ -1,4 +1,4 @@
-/*! bullframe.css v2.8.2 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v2.9.0 | MIT License | https://github.com/marcop135/bullframe.css */
 
 *,
 *:before,
@@ -88,6 +88,7 @@ body {
 	font-size: 1.7rem;
 	font-weight: 400;
 	text-align: left;
+	
 	font-family: 
 	/* Safari for OS X and iOS (San Francisco) */ 
 	-apple-system,
@@ -97,8 +98,17 @@ body {
 	"Segoe UI", 
 	/* Android */ 
 	Roboto,
+	/* Linux with KDE */
+	Oxygen-Sans,
+	/* Ubuntu (all variants) */
+	Ubuntu,
+	/* Linux with GNOME Shell */
+	Cantarell,
+	/* macOS 10.10 and below */
+	"Helvetica Neue", 
+	Helvetica,
 	/* Basic web fallback */ 
-	"Helvetica Neue", Arial, "Noto Sans", sans-serif,
+	Arial,	sans-serif,
 	/* emoji fonts */ 
 	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 

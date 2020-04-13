@@ -64,10 +64,7 @@ Tested and compatible in:
 * Latest Stable: Firefox, Chrome and Opera Mobile *
 * Android browser v5+
 * Mobile Safari iOS 4+
-* Opera Mini *
-
-
-** * Responsive tabular data CSS-only tecnique not working in Opera 10-11, Opera Mobile (Presto) and Opera Mini due to overflow bug**. When the viewport is too narrow, content that overflows is hidden. [Get more info](http://barrow.io/overflow-scrolling "overflow scrolling").
+* Opera Mini (no responsive-table support http://barrow.io/overflow-scrolling)
 
 ## Contributors
 

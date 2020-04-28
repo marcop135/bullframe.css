@@ -1,4 +1,4 @@
-/*! bullframe.css v2.9.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.0.0-alpha | MIT License | https://github.com/marcop135/bullframe.css */
 
 *,
 *:before,
@@ -328,6 +328,11 @@ samp {
 		"Courier New", monospace;
 	/* a monospaced text should looks bigger, so a smaller font-size is preferred */
   font-size: 90%;
+}
+
+kbd {
+  background-color: #222;
+  color: #fff;
 }
 
 /* Prevent the duplicate application of `bolder` by the next rule 

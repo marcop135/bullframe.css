@@ -6,27 +6,9 @@ enableRobotsTXT: true
 metaDataFormat: "yaml"
 
 publishDir: "_gh_pages"
-# module:
-#   mounts:
-#     - source:           dist
-#       target:           static/docs/4.3/dist
-#     - source:           site/assets
-#       target:           assets
-#     - source:           site/content
-#       target:           content
-#     - source:           site/data
-#       target:           data
-#     - source:           site/layouts
-#       target:           layouts
-#     - source:           site/static
-#       target:           static
-#     - source:           site/static/docs/4.3/assets/img/favicons/apple-touch-icon.png
-#       target:           static/apple-touch-icon.png
-#     - source:           site/static/docs/4.3/assets/img/favicons/favicon.ico
-#       target:           static/favicon.ico
 
 params:
-  description: "The most popular HTML, CSS, and JS library in the world."
+  description: "Solid, fluid and IE-friendly CSS boilerplate"
   authors: "Marco Pontili"
 
   current_version: "3.0.0"
@@ -34,7 +16,7 @@ params:
 
 download:
   source: "https://github.com/marcop135/bullframe.css/archive/master.zip"
-  dist: "https://github.com/marcop135/bullframe.css/releases/tag/v2.9.0/bullframe-css-master.zip"
+  dist: "https://github.com/marcop135/bullframe.css/releases/tag/v3.0.0/bullframe-css-master.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

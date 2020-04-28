@@ -63,8 +63,7 @@ textarea {
 }
 
 html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 
 	/* resize the base font-size and get an easy math for rem units */
 	font-size: 62.5%;
@@ -124,7 +123,6 @@ body {
   * backface-visibility not hidden, so we can add backface support 
   * to the body element
   * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
-	-webkit-backface-visibility: hidden; /* needed for old Androids */
 					backface-visibility: hidden;
 }
 
@@ -153,7 +151,8 @@ a {
 	background-color: transparent;
 
 	/* Remove gaps in links underline in iOS 8+ and Safari 8+. */
-	-webkit-text-decoration-skip: objects;
+	text-decoration-skip: objects;
+	text-decoration-skip-ink: objects;
 }
 
 a:hover,
@@ -252,13 +251,12 @@ h6,
 abbr[title],
 abbr[data-original-title] {
 	cursor: help;
-	-webkit-text-decoration: underline dotted;
 	text-decoration: underline; /* 2 */
 	text-decoration: underline dotted; /* 2 */
 	cursor: help; /* 3 */
 	border-bottom: 0; /* 1 */
-	-webkit-text-decoration-skip-ink: none;
 	text-decoration-skip-ink: none;
+	text-decoration-skip: none;
 }
 
 blockquote {
@@ -313,9 +311,6 @@ pre {
 	word-break: break-all; /* webkit */
 	word-wrap: break-word;
 	white-space: pre;
-	white-space: -moz-pre-wrap; /* FF mobile */
-	white-space: pre-wrap;
-	white-space: pre \9; /* IE8+ */
 	hyphens: none;
 	-ms-overflow-style: scrollbar;
 }
@@ -639,20 +634,20 @@ html [type="button"],
 [type="search"],
 [type="search"]::-webkit-search-decoration,
 [type="search"]::-webkit-search-cancel-button {
-	-webkit-appearance: none;
+	appearance: none;
 }
 
 /* add again -webkit-appearance destroyed from the previous ruleset */
 
 ::-webkit-file-upload-button {
-	-webkit-appearance: button;
+	appearance: button;
 }
 
 [type="date"],
 [type="time"],
 [type="datetime-local"],
 [type="month"] {
-	-webkit-appearance: listbox;
+	appearance: listbox;
 }
 
 button,

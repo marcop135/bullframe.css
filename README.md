@@ -19,61 +19,68 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 - Use classes only for utilities (e.g. '.clearfix', '.text-hide')
 - Extensive bug fixing documentation
 
-## 3 ways to use it
+## How to use it
 
-1. **Write your styles without ever touch the boilerplate**
+Include it via CDN in the `<head>`
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
+integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
+crossorigin="anonymous"></script> 
+```
 
-Include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN:
+Or include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN:
 
 ```html
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" 
+integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
 
-		<link rel="stylesheet" href="your-styles.css" />
+<link rel="stylesheet" href="your-styles.css" />
 
-		<!-- if needed, support HTML5 elements and media queries in very old browsers -->
-		<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js" integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ" crossorigin="anonymous"></script> 
-		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js" integrity="sha384-ZsmIinCvbXADrA6X142ORTARKZC5fj0125RzRZu6UL0btZcg7Oa9GdQoMpbfqtc2" crossorigin="anonymous"></script> 
-		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js" integrity="sha384-KuUd5duWxH/o7SoDxJkvx6CbpKG/KNbfWUBytOzRPrjXj3fYtRBsPSCDQMK5m09g" crossorigin="anonymous"></script>
-		...
-	</head>
+<!-- if needed, support HTML5 elements and media queries in very old browsers -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
+integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
+crossorigin="anonymous"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"
+integrity="sha384-ZsmIinCvbXADrA6X142ORTARKZC5fj0125RzRZu6UL0btZcg7Oa9GdQoMpbfqtc2"
+crossorigin="anonymous"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js" 
+integrity="sha384-KuUd5duWxH/o7SoDxJkvx6CbpKG/KNbfWUBytOzRPrjXj3fYtRBsPSCDQMK5m09g" crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>Hello World!</h1>
+</body>
+</>
 </html>
 ```
-
-2. **Write your styles inside the boilerplate**
-
-Open `bullframe.css` file, scroll down the code and start to add styles _inside_ "Author's custom styles" section (like [HTML5 Boilerplate main.css](https://github.com/h5bp/html5-boilerplate/blob/b83ce3b1b42157f8c817a62b4d353415e25c3af4/css/main.css#l-92-110 "HTML5 Boilerplate main.css")).
-
-3. **Just take a look at `bullframe.css` when coding websites**
-
-The file is divided into several sections of code. You can copy-and-paste only what you need (e.g. typography, forms, print) or just watch CSS tricks and best practices.
 
 ## Browser support
 
 Tested and compatible in:
 
+Desktop browsers
+
 - IE 8+
-- Latest Stable: Firefox, Chrome, Safari
-- Safari 6+
-- IE Mobile 9-10
-- Latest Stable: Firefox, Chrome and Opera Mobile
+- Latest Stable: Firefox, Chrome, Safari, Opera
+
+Mobile browsers
+
+- Latest Stable: Firefox, Chrome and Opera
 - Android browser v5+
+- IE Mobile 9-10
 - Mobile Safari iOS 4+
 - Opera Mini (no responsive-table support http://barrow.io/overflow-scrolling)
 
 ## Tested on real browsers
 
-Legacy browsers support is from IE 8 up. This CSS boilerplate is tested in a wide range of browsers using [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
+This project is tested in a wide range of browsers using [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
-<a href="http://browserstack.com/"><img alt="BrowserStack Logo" src="./docs/img/browserstack-logo.png"  width="300" height="158"/></a>
+<a href="http://browserstack.com/"><img alt="BrowserStack Logo" src="./docs/img/browserstack-logo.png"  width="200" height="105"/></a>
 
 ## Contributors
 
@@ -100,5 +107,3 @@ bullframe.css incorporates some of the styles found on:
 ## License
 
 The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
-
-

@@ -24,12 +24,17 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 Include it via CDN in the `<head>`
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
-integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
-crossorigin="anonymous"></script>
+<script
+	type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
+	integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
+	crossorigin="anonymous"
+></script>
 ```
 
-Or include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN:
+Or include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN.
+
+IE8+ (verbose version)
 
 ```html
 <!DOCTYPE html>
@@ -43,7 +48,6 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 
 <link rel="stylesheet" href="your-styles.css" />
 
-<!-- if needed, support HTML5 elements and media queries in very old browsers -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
 integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
 crossorigin="anonymous"></script>
@@ -56,7 +60,43 @@ integrity="sha384-KuUd5duWxH/o7SoDxJkvx6CbpKG/KNbfWUBytOzRPrjXj3fYtRBsPSCDQMK5m0
 <body>
   <h1>Hello World!</h1>
 </body>
-</>
+</html>
+```
+
+IE10+ (verbose version)
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="your-styles.css" />
+
+</head>
+<body>
+  <h1>Hello World!</h1>
+</body>
+</html>
+```
+
+IE10+ (minimal setup)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+</head>
+<body>
+  <h1>Hello World!</h1>
+</body>
 </html>
 ```
 

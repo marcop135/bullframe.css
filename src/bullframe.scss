@@ -87,29 +87,17 @@ body {
 	font-size: 1.7rem;
 	font-weight: 400;
 	text-align: left;
-	
+
 	font-family: 
-	/* Safari for OS X and iOS (San Francisco) */ 
-	-apple-system,
-	/* Chrome < 56 for OS X (San Francisco) */ 
-	BlinkMacSystemFont,
-	/* Windows */ 
-	"Segoe UI", 
-	/* Android */ 
-	Roboto,
-	/* Linux with KDE */
-	Oxygen-Sans,
-	/* Ubuntu (all variants) */
-	Ubuntu,
-	/* Linux with GNOME Shell */
-	Cantarell,
-	/* macOS 10.10 and below */
-	"Helvetica Neue", 
-	Helvetica,
-	/* Basic web fallback */ 
-	Arial,	sans-serif,
-	/* emoji fonts */ 
-	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	/* Safari for OS X and iOS (San Francisco) */ -apple-system,
+		/* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
+		/* Windows */ "Segoe UI", /* Android */ Roboto,
+		/* Linux with KDE */ Oxygen-Sans, /* Ubuntu (all variants) */ Ubuntu,
+		/* Linux with GNOME Shell */ Cantarell,
+		/* macOS 10.10 and below */ "Helvetica Neue", Helvetica,
+		/* Basic web fallback */ Arial, sans-serif,
+		/* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
 
 	/* this enable font ligatures*/
 	text-rendering: optimizeLegibility;
@@ -123,7 +111,7 @@ body {
   * backface-visibility not hidden, so we can add backface support 
   * to the body element
   * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
-					backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 /* Fix IE 10 on Windows Phone 8 Viewport
@@ -322,12 +310,12 @@ samp {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
 		"Courier New", monospace;
 	/* a monospaced text should looks bigger, so a smaller font-size is preferred */
-  font-size: 90%;
+	font-size: 90%;
 }
 
 kbd {
-  background-color: #222;
-  color: #fff;
+	background-color: #222;
+	color: #fff;
 }
 
 /* Prevent the duplicate application of `bolder` by the next rule 
@@ -899,8 +887,6 @@ fieldset[disabled] [type="checkbox"] {
 	background-color: transparent;
 }
 
-
-
 /* $ Tables
 ============================================================================ */
 
@@ -942,8 +928,6 @@ caption {
 th {
 	font-weight: 700;
 }
-
-
 
 /* $ Basic 12 columns fluid grid system
 ============================================================================ */
@@ -1096,8 +1080,6 @@ table col[class*="bf-col-"] {
 	display: table-column;
 	float: none;
 }
-
-
 
 /* $ Just in case, add custom styles here
 ============================================================================ */

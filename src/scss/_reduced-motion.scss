@@ -1,0 +1,16 @@
+// prefers-reduced-motion media feature query
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+//
+// @media (prefers-reduced-motion: reduce) { ... }
+// Indicates that user has notified the system that they prefer an
+// interface that minimizes the amount of movement or animation,
+// preferably to the point where all non-essential movement is removed.
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

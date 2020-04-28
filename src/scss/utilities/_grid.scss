@@ -61,7 +61,7 @@
 	clear: both;
 }
 
-[class*="bf-col-"] {
+[class^="bf-col-"] {
 	float: left;
 	position: relative;
 	min-height: 1px;
@@ -131,7 +131,7 @@
 		margin-right: 0;
 	}
 
-	.bf-container--break-sm [class*="bf-col-"] {
+	.bf-container--break-sm [class^="bf-col-"] {
 		width: 100%;
 		float: none;
 		margin-left: 0;
@@ -146,7 +146,7 @@
 		margin-right: 0;
 	}
 
-	.bf-container--break-md [class*="bf-col-"] {
+	.bf-container--break-md [class^="bf-col-"] {
 		width: 100%;
 		float: none;
 		margin-left: 0;
@@ -161,7 +161,7 @@
 		margin-right: 0;
 	}
 
-	.bf-container--break-lg [class*="bf-col-"] {
+	.bf-container--break-lg [class^="bf-col-"] {
 		width: 100%;
 		float: none;
 		margin-left: 0;
@@ -174,7 +174,7 @@
 * for column sizing
 * https://github.com/twbs/bootstrap/issues/11623
 */
-table col[class*="bf-col-"] {
+table col[class^="bf-col-"] {
 	position: static;
 	display: table-column;
 	float: none;

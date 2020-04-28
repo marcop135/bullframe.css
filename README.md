@@ -4,7 +4,7 @@ _bullframe.css_ is a CSS file to be used as an alternative to CSS resets and as 
 
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
-<img alt="GitHub" src="https://img.shields.io/github/license/marcop135/bullframe.css" style="max-width:100%;">
+![dependencies badge](https://img.shields.io/github/license/marcop135/bullframe.css)
 
 ## Best features
 
@@ -22,10 +22,11 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 ## How to use it
 
 Include it via CDN in the `<head>`
+
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
 integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
-crossorigin="anonymous"></script> 
+crossorigin="anonymous"></script>
 ```
 
 Or include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN:
@@ -37,7 +38,7 @@ Or include the bullframe.css file _before_ your custom styles and, if needed, in
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
 integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
 
 <link rel="stylesheet" href="your-styles.css" />
@@ -45,15 +46,15 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 <!-- if needed, support HTML5 elements and media queries in very old browsers -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
 integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
-crossorigin="anonymous"></script> 
+crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"
 integrity="sha384-ZsmIinCvbXADrA6X142ORTARKZC5fj0125RzRZu6UL0btZcg7Oa9GdQoMpbfqtc2"
-crossorigin="anonymous"></script> 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js" 
+crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"
 integrity="sha384-KuUd5duWxH/o7SoDxJkvx6CbpKG/KNbfWUBytOzRPrjXj3fYtRBsPSCDQMK5m09g" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1>Hello World!</h1>
+  <h1>Hello World!</h1>
 </body>
 </>
 </html>
@@ -74,13 +75,13 @@ Mobile browsers
 - Android browser v5+
 - IE Mobile 9-10
 - Mobile Safari iOS 4+
-- Opera Mini (no responsive-table support http://barrow.io/overflow-scrolling)
+- Opera Mini (no responsive-table support barrow.io/overflow-scrolling)
 
 ## Tested on real browsers
 
 This project is tested in a wide range of browsers using [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
-<a href="http://browserstack.com/"><img alt="BrowserStack Logo" src="./docs/img/browserstack-logo.png"  width="200" height="105"/></a>
+![BrowserStack Logo](./docs/img/browserstack-logo.png)
 
 ## Contributors
 

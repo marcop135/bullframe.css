@@ -1,0 +1,104 @@
+/* clearfix --------------------------------------------------------------- */
+/* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* layout display ---------------------------------------------------------- */
+
+.hide {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.show-inline {
+	display: inline;
+}
+
+.show-inline-block {
+	display: inline-block;
+}
+
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* assistive text for screen reader only (e.g. form labels) */
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+/* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	/* 1 */
+}
+
+/* layout positioning ------------------------------------------------------ */
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.affix {
+	position: fixed;
+}
+
+/* http://css-tricks.com/centering-in-the-unknown/
+* align center vertically and horizontally
+*/
+.align-center-unknown {
+	display: table;
+	width: 100%;
+}
+
+.align-center-unknown-item {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}

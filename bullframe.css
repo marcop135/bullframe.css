@@ -31,7 +31,7 @@ summary {
 }
 
 /* Always hide an element with the `hidden` HTML attribute (from PureCSS).
-* Needed for proper display in IE 10-. */
+ * Needed for proper display in IE 10-. */
 [hidden] {
 	display: none !important;
 }
@@ -733,8 +733,7 @@ input[type="week"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 select:focus,
-textarea:focus,
-#inputFocused {
+textarea:focus {
 	border-color: #000;
 }
 

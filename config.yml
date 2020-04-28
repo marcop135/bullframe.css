@@ -1,24 +1,9 @@
 languageCode: "en"
 title: "bullframe.css"
 baseURL: "https://github.com/marcop135/bullframe.css"
-enableInlineShortcodes: true
 
-# markup:
-#   goldmark:
-#     renderer:
-#       unsafe:           true
-#   highlight:
-#     noClasses:          false
-#   tableOfContents:
-#     startLevel:         2
-#     endLevel:           6
-
-# buildDrafts:            true
-# buildFuture:            true
-
-# enableRobotsTXT:        true
-# metaDataFormat:         "yaml"
-# disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+enableRobotsTXT: true
+metaDataFormat: "yaml"
 
 publishDir: "_gh_pages"
 # module:
@@ -40,31 +25,18 @@ publishDir: "_gh_pages"
 #     - source:           site/static/docs/4.3/assets/img/favicons/favicon.ico
 #       target:           static/favicon.ico
 
-# params:
-#   description:          "The most popular HTML, CSS, and JS library in the world."
-#   authors:              "Mark Otto, Jacob Thornton, and Bootstrap contributors"
-#   social_image_path:    /docs/4.3/assets/brand/bootstrap-social.png
-#   social_logo_path:     /docs/4.3/assets/brand/bootstrap-social-logo.png
+params:
+  description: "The most popular HTML, CSS, and JS library in the world."
+  authors: "Marco Pontili"
 
-#   current_version:      "4.3.1"
-#   current_ruby_version: "4.3.1"
-#   rfs_version:          "9.0.2"
-#   docs_version:         "4.3"
-#   github_org:           "https://github.com/twbs"
-#   repo:                 "https://github.com/twbs/bootstrap"
-#   twitter:              "getbootstrap"
-#   slack:                "https://bootstrap-slack.herokuapp.com/"
-#   opencollective:       "https://opencollective.com/bootstrap"
-#   blog:                 "https://blog.getbootstrap.com/"
-#   expo:                 "https://expo.getbootstrap.com/"
-#   themes:               "https://themes.getbootstrap.com/"
-#   icons:                "https://icons.getbootstrap.com/"
+  current_version: "3.0.0"
+  repo: "https://github.com/marcop135/bullframe.css"
 
-# download:
-#   source:             "https://github.com/twbs/bootstrap/archive/v4.3.1.zip"
-#   dist:               "https://github.com/twbs/bootstrap/releases/download/v4.3.1/bootstrap-4.3.1-dist.zip"
+download:
+  source: "https://github.com/marcop135/bullframe.css/archive/master.zip"
+  dist: "https://github.com/marcop135/bullframe.css/releases/tag/v2.9.0/bullframe-css-master.zip"
 
-# cdn:
-#   # See https://www.srihash.org for info on how to generate the hashes
-#   css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-#   css_hash:         "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css: "https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+  css_hash: "sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"

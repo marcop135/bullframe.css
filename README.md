@@ -35,14 +35,14 @@ Include the bullframe.css file _before_ your custom styles and, if needed, inclu
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
-		<link	rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" crossorigin="anonymous"	/>
+		 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
 
 		<link rel="stylesheet" href="your-styles.css" />
 
 		<!-- if needed, support HTML5 elements and media queries in very old browsers -->
-		<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js" integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ" crossorigin="anonymous"></script> 
+		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js" integrity="sha384-ZsmIinCvbXADrA6X142ORTARKZC5fj0125RzRZu6UL0btZcg7Oa9GdQoMpbfqtc2" crossorigin="anonymous"></script> 
+		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js" integrity="sha384-KuUd5duWxH/o7SoDxJkvx6CbpKG/KNbfWUBytOzRPrjXj3fYtRBsPSCDQMK5m09g" crossorigin="anonymous"></script>
 		...
 	</head>
 </html>

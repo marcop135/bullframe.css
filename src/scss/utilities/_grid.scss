@@ -24,7 +24,7 @@
 	clear: both;
 }
 
-.bf-container-fluid {
+.bf-container--fluid {
 	padding-left: 24px;
 	padding-left: 2.4rem;
 	padding-right: 24px;
@@ -33,13 +33,13 @@
 	margin-left: auto;
 }
 
-.bf-container-fluid:before,
-.bf-container-fluid:after {
+.bf-container--fluid:before,
+.bf-container--fluid:after {
 	display: table;
 	content: " ";
 }
 
-.bf-container-fluid:after {
+.bf-container--fluid:after {
 	clear: both;
 }
 
@@ -120,15 +120,48 @@
 }
 
 /* responsive grid */
-@media (max-width: 767px) {
-	.responsive-grid .bf-row,
-	.bf-rwd-grid .bf-row {
+// https://getbootstrap.com/docs/4.4/layout/grid/
+// ≥576px 	sm
+// ≥768px 	md
+// ≥992px 	lg
+
+@media (max-width: 576px) {
+	.bf-container--break-sm .bf-row {
 		margin-left: 0;
 		margin-right: 0;
 	}
 
-	.responsive-grid [class*="bf-col-"],
-	.bf-rwd-grid [class*="bf-col-"] {
+	.bf-container--break-sm [class*="bf-col-"] {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.bf-container--break-md .bf-row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.bf-container--break-md [class*="bf-col-"] {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 992px) {
+	.bf-container--break-lg .bf-row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.bf-container--break-lg [class*="bf-col-"] {
 		width: 100%;
 		float: none;
 		margin-left: 0;

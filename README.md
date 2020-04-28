@@ -69,6 +69,12 @@ Tested and compatible in:
 - Mobile Safari iOS 4+
 - Opera Mini (no responsive-table support http://barrow.io/overflow-scrolling)
 
+## Tested on real browsers
+
+Legacy browsers support is from IE 8 up. This CSS boilerplate is tested in a wide range of browsers using [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
+
+<a href="http://browserstack.com/"><img alt="BrowserStack Logo" src="./docs/img/browserstack-logo.png"  width="300" height="158"/></a>
+
 ## Contributors
 
 [@englishextra](https://github.com/englishextra) the project is still live thanks to you!
@@ -94,3 +100,5 @@ bullframe.css incorporates some of the styles found on:
 ## License
 
 The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
+
+

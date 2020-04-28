@@ -1,0 +1,48 @@
+img,
+canvas,
+audio,
+video,
+iframe,
+object,
+embed {
+	max-width: 100%;
+}
+
+audio,
+video,
+canvas,
+img,
+svg {
+	vertical-align: middle;
+}
+
+img {
+	height: auto;
+	border-style: none;
+}
+
+img[width],
+img[height] {
+	max-width: none;
+}
+
+figure {
+	margin: 0;
+}
+
+video {
+	height: auto;
+}
+
+audio {
+	width: 100%;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}

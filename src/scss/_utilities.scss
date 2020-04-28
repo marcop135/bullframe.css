@@ -105,6 +105,44 @@
 
 /* text utilities ---------------------------------------------------------- */
 
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-transform-none {
+	text-transform: none;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-shadow {
+	text-shadow: 0 0 0.2rem #222;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+// useful to 'reset' <i> inherited style
+.text-style-normal {
+	font-style: normal;
+}
+
+// useful to 'reset' <b> inherited style
+.text-weight-normal {
+	font-weight: 400;
+}
+
 .text-truncate {
 	max-width: 100%;
 	overflow: hidden;

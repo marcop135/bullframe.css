@@ -1,0 +1,148 @@
+.bf-container {
+	/* avoid IE8 issue with 'box-sizing: border-box' in combination
+  * with max/min-width and max/min-height
+  * https://github.com/twbs/bootstrap/issues/10014
+  */
+	box-sizing: content-box;
+
+	max-width: 1252px;
+	padding-right: 24px;
+	padding-right: 2.4rem;
+	padding-left: 24px;
+	padding-left: 2.4rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.bf-container:before,
+.bf-container:after {
+	display: table;
+	content: " ";
+}
+
+.bf-container:after {
+	clear: both;
+}
+
+.bf-container-fluid {
+	padding-left: 24px;
+	padding-left: 2.4rem;
+	padding-right: 24px;
+	padding-right: 2.4rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.bf-container-fluid:before,
+.bf-container-fluid:after {
+	display: table;
+	content: " ";
+}
+
+.bf-container-fluid:after {
+	clear: both;
+}
+
+.bf-row {
+	display: block;
+	margin-left: -24px;
+	margin-left: -2.4rem;
+	margin-right: -24px;
+	margin-right: -2.4rem;
+}
+
+.bf-row:before,
+.bf-row:after {
+	content: " ";
+	display: table;
+}
+
+.bf-row:after {
+	clear: both;
+}
+
+[class*="bf-col-"] {
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-left: 24px;
+	padding-left: 2.4rem;
+	padding-right: 24px;
+	padding-right: 2.4rem;
+}
+
+.bf-col-12 {
+	width: 100%;
+}
+
+.bf-col-11 {
+	width: 91.66666666666666%;
+}
+
+.bf-col-10 {
+	width: 83.33333333333334%;
+}
+
+.bf-col-9 {
+	width: 75%;
+}
+
+.bf-col-8 {
+	width: 66.66666666666666%;
+}
+
+.bf-col-7 {
+	width: 58.333333333333336%;
+}
+
+.bf-col-6 {
+	width: 50%;
+}
+
+.bf-col-5 {
+	width: 41.66666666666667%;
+}
+
+.bf-col-4 {
+	width: 33.33333333333333%;
+}
+
+.bf-col-3 {
+	width: 25%;
+}
+
+.bf-col-2 {
+	width: 16.666666666666664%;
+}
+
+.bf-col-1 {
+	width: 8.3333%;
+}
+
+/* responsive grid */
+@media (max-width: 767px) {
+	.responsive-grid .bf-row,
+	.bf-rwd-grid .bf-row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.responsive-grid [class*="bf-col-"],
+	.bf-rwd-grid [class*="bf-col-"] {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/* fix missing table cell borders when using 'col-' classes
+* for column sizing
+* https://github.com/twbs/bootstrap/issues/11623
+*/
+table col[class*="bf-col-"] {
+	position: static;
+	display: table-column;
+	float: none;
+}

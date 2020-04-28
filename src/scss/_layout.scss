@@ -1,0 +1,52 @@
+/*! bullframe.css v3.0.0-alpha | MIT License | https://github.com/marcop135/bullframe.css */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+	display: block;
+}
+
+template {
+	display: none;
+}
+
+summary {
+	display: list-item;
+	cursor: pointer;
+}
+
+/* Always hide an element with the `hidden` HTML attribute (from PureCSS).
+ * Needed for proper display in IE 10-. */
+[hidden] {
+	display: none !important;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+}
+
+/* Fix IE 10 on Windows Phone 8 Viewport
+* https://getbootstrap.com/docs/3.3/getting-started/#support-ie10-width
+*/
+
+@viewport {
+	width: device-width;
+}

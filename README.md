@@ -4,7 +4,6 @@ _bullframe.css_ is a CSS file to be used as an alternative to CSS resets and as 
 
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
-<img src="https://camo.githubusercontent.com/cdc54d1641f5e11e246a2707063ecad092c96d11/68747470733a2f2f64617669642d646d2e6f72672f6477796c2f657374612e737667" alt="Dependency Status" data-canonical-src="https://david-dm.org/dwyl/esta.svg" style="max-width:100%;">
 <img alt="GitHub" src="https://img.shields.io/github/license/marcop135/bullframe.css" style="max-width:100%;">
 
 ## Best features

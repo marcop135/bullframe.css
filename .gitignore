@@ -626,3 +626,4 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/vim,linux,macos,emacs,windows,webstorm,sublimetext,visualstudio,visualstudiocode
+README.html

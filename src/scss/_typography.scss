@@ -1,32 +1,23 @@
-/* add a default color to a wide range of elements and avoid
-* cross-browsers issues */
-
-html,
-button,
-.btn,
-.btn:hover,
-.btn:focus,
-input,
-select,
-textarea {
-	color: #222;
-}
-
 html {
 	text-size-adjust: 100%;
 
-	/* resize the base font-size and get an easy math for rem units */
+	// resize the base font-size and get an easy math for rem units
+	// https://snook.ca/archives/html_and_css/font-size-with-rem
 	font-size: 62.5%;
 
-	/* set a default font-family and line-height */
+	color: #222;
+
+	// set a default font-family and line-height
 	font-family: sans-serif;
 	line-height: 1.15;
 
-	/* don't let MS browsers hide the main scrollbar */
+	// don't let MS browsers hide the main scrollbar
+	// this is a not standard CSS property, so it's for IE only
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
 	-ms-overflow-style: scrollbar;
 
-	/* remove a tap background when a link or interactive element is focused 
-   * if is touch */
+	// remove a tap background when a link or interactive element is focused 
+  // if is touch
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -35,11 +26,13 @@ body {
 	line-height: 1.5;
 	font-size: 17px;
 	font-size: 1.7rem;
+
+	// this is useful to inherit values for some elements (e.g. forms)
 	font-weight: 400;
 	text-align: left;
 
 	font-family: 
-	/* Safari for OS X and iOS (San Francisco) */ -apple-system,
+		/* Safari for OS X and iOS (San Francisco) */ -apple-system,
 		/* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
 		/* Windows */ "Segoe UI", /* Android */ Roboto,
 		/* Linux with KDE */ Oxygen-Sans, /* Ubuntu (all variants) */ Ubuntu,
@@ -49,18 +42,22 @@ body {
 		/* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
 
-	/* this enable font ligatures*/
+	// this enable font ligatures
 	text-rendering: optimizeLegibility;
 
 	/* break very long texts by default...break things and be comfortable 
   * in the process! */
 	word-wrap: break-word;
+
 	background-color: #fff;
 
 	/* 3D effects are problematic in WebKit because 
   * backface-visibility not hidden, so we can add backface support 
   * to the body element
-  * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
+	* http://css-tricks.com/almanac/properties/b/backface-visibility/ */
+	
+	// this is a not standard CSS property, so it's for webkit only
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
 	backface-visibility: hidden;
 }
 
@@ -77,6 +74,7 @@ h5,
 h6,
 .h6 {
 	font-weight: 700;
+	margin-top: 0;
 }
 
 h1,
@@ -152,7 +150,8 @@ blockquote {
 	margin-bottom: 2.4rem;
 	padding-left: 24px;
 	padding-left: 2.4rem;
-	border-left: 6px solid #ccc;
+	border-left: 6px solid gray;
+	border-left: .6rem solid gray;
 }
 
 blockquote p {
@@ -160,7 +159,7 @@ blockquote p {
 }
 
 blockquote small {
-	color: #999;
+	color: gray;
 	display: block;
 }
 
@@ -186,12 +185,12 @@ ins {
 
 p,
 pre {
-	margin: 24px 0;
-	margin: 2.4rem 0;
+	margin: 0 0 24px 0;
+	margin: 0 0 2.4rem 0;
 }
 
 p.lead {
-	font-size: 125%;
+	font-size: 120%;
 }
 
 pre {
@@ -200,6 +199,8 @@ pre {
 	word-wrap: break-word;
 	white-space: pre;
 	hyphens: none;
+	// this is a not standard CSS property, so it's for IE only
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
 	-ms-overflow-style: scrollbar;
 }
 
@@ -262,7 +263,7 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid #999;
+	border-top: 1px solid gray;
 	margin: 24px 0;
 	margin: 2.4rem 0;
 	padding: 0;
@@ -276,8 +277,11 @@ address {
 	line-height: inherit;
 }
 
+summary {
+	display: list-item;
+	cursor: pointer;
+}
+
 ::selection {
-	background-color: #0808af; /* dark blue */
-	color: #fff;
 	text-shadow: none;
 }

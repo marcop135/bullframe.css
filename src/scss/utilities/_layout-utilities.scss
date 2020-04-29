@@ -28,12 +28,20 @@
 	visibility: visible;
 }
 
-.show-inline {
+.display-inline {
 	display: inline;
 }
 
-.show-inline-block {
+.display-inline-block {
 	display: inline-block;
+}
+
+.display-flex {
+	display: flex;
+}
+
+.display-inline-flex {
+	display: inline-flex;
 }
 
 .text-hide {

@@ -5,23 +5,24 @@
   */
 	box-sizing: content-box;
 
-	max-width: 1252px;
+	max-width: 1252px; // 1252 + left padding 24 + right padding 24 = 1300
 	padding-right: 24px;
 	padding-right: 2.4rem;
 	padding-left: 24px;
 	padding-left: 2.4rem;
 	margin-right: auto;
 	margin-left: auto;
-}
 
-.bf-container:before,
-.bf-container:after {
-	display: table;
-	content: " ";
-}
+	// clearfix
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
 
-.bf-container:after {
-	clear: both;
+	&:after {
+		clear: both;
+	}
 }
 
 .bf-container--fluid {
@@ -31,17 +32,19 @@
 	padding-right: 2.4rem;
 	margin-right: auto;
 	margin-left: auto;
+
+	// clearfix 
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
+
+	&:after {
+		clear: both;
+	}
 }
 
-.bf-container--fluid:before,
-.bf-container--fluid:after {
-	display: table;
-	content: " ";
-}
-
-.bf-container--fluid:after {
-	clear: both;
-}
 
 .bf-row {
 	display: block;
@@ -49,16 +52,17 @@
 	margin-left: -2.4rem;
 	margin-right: -24px;
 	margin-right: -2.4rem;
-}
 
-.bf-row:before,
-.bf-row:after {
-	content: " ";
-	display: table;
-}
+	// clearfix 
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
 
-.bf-row:after {
-	clear: both;
+	&:after {
+		clear: both;
+	}
 }
 
 [class^="bf-col-"] {
@@ -119,7 +123,7 @@
 	width: 8.3333%;
 }
 
-/* responsive grid */
+// grid breakpoints
 // https://getbootstrap.com/docs/4.4/layout/grid/
 // ≥576px 	sm
 // ≥768px 	md
@@ -170,12 +174,9 @@
 	}
 }
 
-/* fix missing table cell borders when using 'col-' classes
-* for column sizing
-* https://github.com/twbs/bootstrap/issues/11623
-*/
-table col[class^="bf-col-"] {
+// fix missing table cell borders when using 'col-' classes for column sizing
+// https://github.com/twbs/bootstrap/issues/11623
+table td[class^="bf-col-"],
+table th[class^="bf-col-"] {
 	position: static;
-	display: table-column;
-	float: none;
 }

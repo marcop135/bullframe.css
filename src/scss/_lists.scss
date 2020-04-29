@@ -2,8 +2,8 @@ menu,
 ol,
 ul,
 dl {
-	margin: 24px 0;
-	margin: 2.4rem 0;
+	margin: 0 0 24px 0;
+	margin: 0 0 2.4rem 0;
 	padding: 0;
 }
 
@@ -14,7 +14,6 @@ ul ol,
 ol ol,
 ol ul,
 dd {
-	margin-top: 0;
 	margin-bottom: 0;
 }
 

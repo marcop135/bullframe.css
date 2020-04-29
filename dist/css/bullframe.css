@@ -26,11 +26,6 @@ template {
   display: none;
 }
 
-summary {
-  display: list-item;
-  cursor: pointer;
-}
-
 /* Always hide an element with the `hidden` HTML attribute (from PureCSS).
  * Needed for proper display in IE 10-. */
 [hidden] {
@@ -49,33 +44,16 @@ summary {
 @viewport {
   width: device-width;
 }
-/* add a default color to a wide range of elements and avoid
-* cross-browsers issues */
-html,
-button,
-.btn,
-.btn:hover,
-.btn:focus,
-input,
-select,
-textarea {
-  color: #222;
-}
-
 html {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
-  /* resize the base font-size and get an easy math for rem units */
   font-size: 62.5%;
-  /* set a default font-family and line-height */
+  color: #222;
   font-family: sans-serif;
   line-height: 1.15;
-  /* don't let MS browsers hide the main scrollbar */
   -ms-overflow-style: scrollbar;
-  /* remove a tap background when a link or interactive element is focused 
-    * if is touch */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -87,7 +65,6 @@ body {
   font-weight: 400;
   text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* this enable font ligatures*/
   text-rendering: optimizeLegibility;
   /* break very long texts by default...break things and be comfortable 
    * in the process! */
@@ -96,7 +73,7 @@ body {
   /* 3D effects are problematic in WebKit because 
    * backface-visibility not hidden, so we can add backface support 
    * to the body element
-   * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
+  * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -114,6 +91,7 @@ h5,
 h6,
 .h6 {
   font-weight: 700;
+  margin-top: 0;
 }
 
 h1,
@@ -196,7 +174,8 @@ blockquote {
   margin-bottom: 2.4rem;
   padding-left: 24px;
   padding-left: 2.4rem;
-  border-left: 6px solid #ccc;
+  border-left: 6px solid gray;
+  border-left: 0.6rem solid gray;
 }
 
 blockquote p {
@@ -204,7 +183,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: #999;
+  color: gray;
   display: block;
 }
 
@@ -232,12 +211,12 @@ ins {
 
 p,
 pre {
-  margin: 24px 0;
-  margin: 2.4rem 0;
+  margin: 0 0 24px 0;
+  margin: 0 0 2.4rem 0;
 }
 
 p.lead {
-  font-size: 125%;
+  font-size: 120%;
 }
 
 pre {
@@ -311,7 +290,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #999;
+  border-top: 1px solid gray;
   margin: 24px 0;
   margin: 2.4rem 0;
   padding: 0;
@@ -326,17 +305,16 @@ address {
   line-height: inherit;
 }
 
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
 ::-moz-selection {
-  background-color: #0808af;
-  /* dark blue */
-  color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #0808af;
-  /* dark blue */
-  color: #fff;
   text-shadow: none;
 }
 
@@ -387,8 +365,8 @@ menu,
 ol,
 ul,
 dl {
-  margin: 24px 0;
-  margin: 2.4rem 0;
+  margin: 0 0 24px 0;
+  margin: 0 0 2.4rem 0;
   padding: 0;
 }
 
@@ -399,7 +377,6 @@ ul ol,
 ol ol,
 ol ul,
 dd {
-  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -454,11 +431,6 @@ img {
   border-style: none;
 }
 
-img[width],
-img[height] {
-  max-width: none;
-}
-
 figure {
   margin: 0;
 }
@@ -492,6 +464,7 @@ button,
 select,
 optgroup,
 textarea {
+  color: inherit;
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -568,8 +541,7 @@ legend {
   font-weight: 400;
   margin-bottom: 6px;
   margin-bottom: 0.6rem;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: inherit;
   line-height: inherit;
   color: inherit;
 }
@@ -580,12 +552,6 @@ label {
   margin-bottom: 0.6rem;
 }
 
-label input {
-  font-weight: 400;
-  margin-top: 6px;
-  margin-bottom: 0.6rem;
-}
-
 [type=number]::-webkit-outer-spin-button,
 [type=number]::-webkit-inner-spin-button {
   height: auto;
@@ -593,6 +559,7 @@ label input {
 
 [type=search] {
   outline-offset: -3px;
+  outline-offset: -0.3rem;
 }
 
 output {
@@ -789,6 +756,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
+  color: inherit;
   padding: 6px 12px;
   padding: 0.6rem 1.2rem;
   line-height: normal;
@@ -849,37 +817,26 @@ textarea:invalid {
           box-shadow: none;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #888;
-  /* gray */
-}
-
 /* FF placeholder bug
 * Issue: If one change the text color of input fields, FF will change
 * the default color of placeholders too!
 * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #888;
+  color: gray;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #888;
+  color: gray;
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #888;
+  color: gray;
 }
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: #888;
+  color: gray;
 }
 input::placeholder,
 textarea::placeholder {
-  color: #888;
-}
-
-input.placeholder,
-textarea.placeholder {
-  color: #888;
+  color: gray;
 }
 
 /* disable groups */
@@ -907,13 +864,6 @@ textarea[disabled] {
   background: #f4f4f4;
 }
 
-[type=radio][disabled],
-[type=checkbox][disabled],
-fieldset[disabled] [type=radio],
-fieldset[disabled] [type=checkbox] {
-  background-color: transparent;
-}
-
 table {
   max-width: 100%;
   border-collapse: collapse;
@@ -928,23 +878,16 @@ td {
   vertical-align: top;
 }
 
-.table th,
-.table td {
-  padding: 8px;
-  padding: 0.8rem;
-  border-bottom: 1px solid #999;
-}
-
 th {
   text-align: inherit;
 }
 
 caption {
-  padding-top: 8px;
-  padding-top: 0.8rem;
-  padding-bottom: 8px;
-  padding-bottom: 0.8rem;
-  color: #6c757d;
+  padding-top: 6px;
+  padding-top: 0.6rem;
+  padding-bottom: 6px;
+  padding-bottom: 0.6rem;
+  color: gray;
   text-align: left;
   caption-side: bottom;
 }
@@ -953,138 +896,6 @@ th {
   font-weight: 700;
 }
 
-/* $ Just in case, add custom styles here
-============================================================================ */
-/*
-
-Change skin -------------------------------------------------------------
-
-html,
-button,
-.btn,
-.btn:hover,
-.btn:focus,
-input,
-select,
-textarea {
-  color: ;
-}
-
-body {
-  font-family: ;
-  background-color: ;
-  font-size: ??px;
-  font-size: ??rem
-}
-
-a {
-  color: ;
-  text-decoration: ;
-}
-
-a:hover,
-a:focus {
-  color: ;
-  text-decoration: ;
-}
-
-
-
-* Reset 'margin-top' for a wide range of elements -------------------------
-* and compose to a vertical rhythm ----------------------------------------
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6,
-p,
-pre,
-menu,
-ol,
-ul,
-dl,
-blockquote {
-  margin-top: 0;
-}
-
-
-Customize form elements -----------------------------------------------
-
-[type="color"],
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="time"],
-[type="url"],
-select,
-textarea {
-  background-color: ;
-  border: 1px solid #;
-}
-
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="time"],
-[type="url"],
-select,
-textarea {
-  padding: px;
-  padding: rem;
-}
-
-button,
-.btn,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  padding: px;
-  padding: rem;
-  border-color: #;
-  background: ;
-}
-
-button:hover,
-.btn:hover,
-[type="button"]:hover,
-[type="reset"]:hover,
-[type="submit"]:hover,
-button:focus,
-.btn:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus {
-  border-color: #;
-  background: #;
-}
-
-*/
 .bf-container {
   /* avoid IE8 issue with 'box-sizing: border-box' in combination
    * with max/min-width and max/min-height
@@ -1100,13 +911,10 @@ button:focus,
   margin-right: auto;
   margin-left: auto;
 }
-
-.bf-container:before,
-.bf-container:after {
+.bf-container:before, .bf-container:after {
   display: table;
   content: " ";
 }
-
 .bf-container:after {
   clear: both;
 }
@@ -1119,13 +927,10 @@ button:focus,
   margin-right: auto;
   margin-left: auto;
 }
-
-.bf-container--fluid:before,
-.bf-container--fluid:after {
+.bf-container--fluid:before, .bf-container--fluid:after {
   display: table;
   content: " ";
 }
-
 .bf-container--fluid:after {
   clear: both;
 }
@@ -1137,13 +942,10 @@ button:focus,
   margin-right: -24px;
   margin-right: -2.4rem;
 }
-
-.bf-row:before,
-.bf-row:after {
+.bf-row:before, .bf-row:after {
   content: " ";
   display: table;
 }
-
 .bf-row:after {
   clear: both;
 }
@@ -1206,7 +1008,6 @@ button:focus,
   width: 8.3333%;
 }
 
-/* responsive grid */
 @media (max-width: 576px) {
   .bf-container--break-sm .bf-row {
     margin-left: 0;
@@ -1249,18 +1050,11 @@ button:focus,
     padding-right: 0;
   }
 }
-/* fix missing table cell borders when using 'col-' classes
-* for column sizing
-* https://github.com/twbs/bootstrap/issues/11623
-*/
-table col[class^=bf-col-] {
+table td[class^=bf-col-],
+table th[class^=bf-col-] {
   position: static;
-  display: table-column;
-  float: none;
 }
 
-/* clearfix --------------------------------------------------------------- */
-/* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1271,43 +1065,13 @@ table col[class^=bf-col-] {
   clear: both;
 }
 
-/* layout display ---------------------------------------------------------- */
 .hide {
   display: none !important;
 }
 
-.show {
-  display: block !important;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.display-inline {
-  display: inline;
-}
-
-.display-inline-block {
-  display: inline-block;
-}
-
-.display-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.display-inline-flex {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 .text-hide {
@@ -1320,13 +1084,13 @@ table col[class^=bf-col-] {
   padding: 0;
 }
 
-/* assistive text for screen reader only (e.g. form labels) */
-.hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* 1. For long content, line feeds are not interpreted as spaces and small width
+/*
+// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+// 
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
 *    causes content to wrap 1 word per line:
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
@@ -1340,31 +1104,89 @@ table col[class^=bf-col-] {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
 
-/* layout positioning ------------------------------------------------------ */
-.pull-right {
-  float: right;
+/*
+// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+// 
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
-.pull-left {
-  float: left;
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
-.center-block {
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-block-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.affix {
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-flex {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.display-inline-flex {
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.position-fixed {
   position: fixed;
 }
 
-/* http://css-tricks.com/centering-in-the-unknown/
-* align center vertically and horizontally
-*/
 .align-center-unknown {
   display: table;
   width: 100%;
@@ -1396,6 +1218,26 @@ table col[class^=bf-col-] {
   margin-right: 0 !important;
 }
 
+.m-bottom-6 {
+  margin-bottom: 6px !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.m-bottom-12 {
+  margin-bottom: 12px !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.m-bottom-24 {
+  margin-bottom: 24px !important;
+  margin-bottom: 2.4rem !important;
+}
+
+.m-bottom-36 {
+  margin-bottom: 36px !important;
+  margin-bottom: 3.6rem !important;
+}
+
 .p-0 {
   padding: 0 !important;
 }
@@ -1414,6 +1256,26 @@ table col[class^=bf-col-] {
 
 .p-right-0 {
   padding-right: 0 !important;
+}
+
+.p-bottom-6 {
+  padding-bottom: 6px !important;
+  padding-bottom: 1.2rem !important;
+}
+
+.p-bottom-12 {
+  padding-bottom: 12px !important;
+  padding-bottom: 1.2rem !important;
+}
+
+.p-bottom-24 {
+  padding-bottom: 24px !important;
+  padding-bottom: 2.4rem !important;
+}
+
+.p-bottom-36 {
+  padding-bottom: 36px !important;
+  padding-bottom: 3.6rem !important;
 }
 
 .text-uppercase {
@@ -1487,18 +1349,12 @@ table col[class^=bf-col-] {
   padding: 0;
   overflow: hidden;
 }
-
 .embed-responsive::before {
   display: block;
   content: "";
   padding-top: 56.25%;
 }
-
-.embed-responsive .embed-responsive--item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
+.embed-responsive .embed-responsive--item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1507,15 +1363,20 @@ table col[class^=bf-col-] {
   height: 100%;
   border: 0;
 }
-
 .embed-responsive.widescreen::before {
   padding-bottom: 56.25%;
   /* 16:9 */
 }
-
 .embed-responsive.vimeo::before {
   padding-top: 0;
   /* no extra-padding for vimeo controls */
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  padding: 0.8rem;
+  border-bottom: 1px solid #999;
 }
 
 .table-responsive {
@@ -1530,11 +1391,15 @@ table col[class^=bf-col-] {
   margin-bottom: 1.6rem;
 }
 
-/* force webkit scrollbars appearance */
 .table-responsive.scrollbar {
   -webkit-overflow-scrolling: auto;
 }
 
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
 @media print {
   *,
 *:before,
@@ -1560,8 +1425,10 @@ a:visited {
     content: " (" attr(title) ")";
   }
 
-  /* Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol */
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
   a[href^="#"]:after,
 a[href^="javascript:"]:after {
     content: "";
@@ -1577,8 +1444,10 @@ blockquote {
     page-break-inside: avoid;
   }
 
-  /* Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables */
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group;
   }

@@ -1,10 +1,13 @@
 /* normalize --------------------------------------------------------------- */
 
+// ! TODO refactor styles and avoid overcomplexing
+
 html input,
 button,
 select,
 optgroup,
 textarea {
+	color: inherit;
 	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
@@ -77,8 +80,7 @@ legend {
 	font-weight: 400;
 	margin-bottom: 6px;
 	margin-bottom: 0.6rem;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: inherit;
 	line-height: inherit;
 	color: inherit;
 }
@@ -89,12 +91,6 @@ label {
 	margin-bottom: 0.6rem;
 }
 
-label input {
-	font-weight: 400;
-	margin-top: 6px;
-	margin-bottom: 0.6rem;
-}
-
 [type="number"]::-webkit-outer-spin-button,
 [type="number"]::-webkit-inner-spin-button {
 	height: auto;
@@ -102,6 +98,7 @@ label input {
 
 [type="search"] {
 	outline-offset: -3px;
+	outline-offset: -0.3rem;
 }
 
 output {
@@ -296,6 +293,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+	color: inherit;
 	padding: 6px 12px;
 	padding: 0.6rem 1.2rem;
 	line-height: normal;
@@ -351,11 +349,6 @@ textarea:invalid {
 	box-shadow: none;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-	color: #888; /* gray */
-}
-
 /* FF placeholder bug
 * Issue: If one change the text color of input fields, FF will change
 * the default color of placeholders too!
@@ -364,12 +357,7 @@ textarea::-webkit-input-placeholder {
 
 input::placeholder,
 textarea::placeholder {
-	color: #888;
-}
-
-input.placeholder,
-textarea.placeholder {
-	color: #888;
+	color: gray;
 }
 
 /* disable groups */
@@ -395,11 +383,4 @@ textarea[disabled] {
 .btn[disabled]:focus {
 	border: 1px solid #b2b2b2;
 	background: #f4f4f4;
-}
-
-[type="radio"][disabled],
-[type="checkbox"][disabled],
-fieldset[disabled] [type="radio"],
-fieldset[disabled] [type="checkbox"] {
-	background-color: transparent;
 }

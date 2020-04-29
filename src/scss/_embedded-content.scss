@@ -28,10 +28,12 @@ img {
 	border-style: none;
 }
 
-img[width],
-img[height] {
-	max-width: none;
-}
+// useful for CMS generated images 
+// but causes layout breaking
+// img[width],
+// img[height] {
+// 	max-width: none;
+// }
 
 figure {
 	margin: 0;

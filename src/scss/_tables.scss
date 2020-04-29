@@ -12,23 +12,16 @@ td {
 	vertical-align: top;
 }
 
-.table th,
-.table td {
-	padding: 8px;
-	padding: 0.8rem;
-	border-bottom: 1px solid #999;
-}
-
 th {
 	text-align: inherit;
 }
 
 caption {
-	padding-top: 8px;
-	padding-top: 0.8rem;
-	padding-bottom: 8px;
-	padding-bottom: 0.8rem;
-	color: #6c757d;
+	padding-top: 6px;
+	padding-top: 0.6rem;
+	padding-bottom: 6px;
+	padding-bottom: 0.6rem;
+	color: gray;
 	text-align: left;
 	caption-side: bottom;
 }

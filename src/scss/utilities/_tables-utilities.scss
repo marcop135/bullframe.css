@@ -1,0 +1,34 @@
+.table th,
+.table td {
+	padding: 8px;
+	padding: 0.8rem;
+	border-bottom: 1px solid #999;
+}
+
+
+// responsive tables
+// ! issues on Opera 10-11, Opera Mobile Presto and Opera Mini
+// Read more about Opera: http://barrow.io/overflow-scrolling
+
+.table-responsive {
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	// this is a not standard CSS property, so it's for IE only
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
+	-ms-overflow-style: scrollbar;
+}
+
+.table-responsive table {
+	width: 100%;
+	margin-bottom: 16px;
+	margin-bottom: 1.6rem;
+}
+
+// force webkit scrollbars appearance
+.table-responsive.scrollbar {
+
+	// this is a not standard CSS property, so it's for webkit only
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
+	-webkit-overflow-scrolling: auto;
+}

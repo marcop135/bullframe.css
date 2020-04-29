@@ -1,5 +1,5 @@
-/* clearfix --------------------------------------------------------------- */
-/* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
+// micro-clearfix 
+// http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
 	content: " ";
@@ -10,38 +10,14 @@
 	clear: both;
 }
 
-/* layout display ---------------------------------------------------------- */
-
 .hide {
 	display: none !important;
 }
 
-.show {
-	display: block !important;
-}
-
-.invisible {
-	visibility: hidden;
-}
-
-.visible {
-	visibility: visible;
-}
-
-.display-inline {
-	display: inline;
-}
-
-.display-inline-block {
-	display: inline-block;
-}
-
-.display-flex {
-	display: flex;
-}
-
-.display-inline-flex {
-	display: inline-flex;
+// assistive text for screen reader only (e.g. form labels)
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
 }
 
 .text-hide {
@@ -54,17 +30,16 @@
 	padding: 0;
 }
 
-/* assistive text for screen reader only (e.g. form labels) */
-.hidden {
-	display: none !important;
-	visibility: hidden !important;
-}
-
-/* 1. For long content, line feeds are not interpreted as spaces and small width
+/*
+// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+// 
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
 *    causes content to wrap 1 word per line:
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
-
 .sr-only {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
@@ -75,31 +50,87 @@
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
-	/* 1 */
 }
 
-/* layout positioning ------------------------------------------------------ */
-.pull-right {
-	float: right;
+/*
+// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+// 
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
-.pull-left {
-	float: left;
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
-.center-block {
+.invisible {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-block-center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.affix {
+.display-inline {
+	display: inline;
+}
+
+.display-inline-block {
+	display: inline-block ;
+}
+
+// IE10+
+// https://caniuse.com/#feat=flexbox
+.display-flex {
+	display: flex !important;
+}
+
+.display-inline-flex {
+	display: inline-flex !important;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.position-fixed {
 	position: fixed;
 }
 
-/* http://css-tricks.com/centering-in-the-unknown/
-* align center vertically and horizontally
-*/
+// cross-browser vertically and horizontally center alignment
+// http://css-tricks.com/centering-in-the-unknown/
 .align-center-unknown {
 	display: table;
 	width: 100%;

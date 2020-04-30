@@ -363,5 +363,5 @@ textarea[disabled] {
 	cursor: default !important; // IE8-10 fallback
 	cursor: not-allowed !important; // Opera Mini fallback
 	pointer-events: none;
-	opacity: 0.5 !important;
+	opacity: .5 !important;
 }

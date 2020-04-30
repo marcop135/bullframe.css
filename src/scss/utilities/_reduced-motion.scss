@@ -9,9 +9,9 @@
 @media (prefers-reduced-motion: reduce) {
 	.reduced-motion,
 	.reduced-motion * {
-		animation-duration: 0.01ms !important;
+		animation-duration: .01ms !important;
 		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
+		transition-duration: .01ms !important;
 		scroll-behavior: auto !important;
 	}
 }

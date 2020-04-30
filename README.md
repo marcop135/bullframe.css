@@ -152,14 +152,12 @@ This project is tested in a wide range of browsers using [BrowserStack](http://b
 bullframe.css incorporates some of the styles found on:
 
 - Normalize.css - [https://github.com/necolas/normalize.css](https://github.com/necolas/normalize.css)
-- HTML5 Boilerplate - [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
 - Bootstrap - [https://github.com/twbs/bootstrap](https://github.com/twbs/bootstrap)
+- HTML5 Boilerplate - [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
 - 320 and up - [https://github.com/malarkey/320andup](https://github.com/malarkey/320andup)
 - Formalize - [https://github.com/nathansmith/formalize](https://github.com/nathansmith/formalize)
 - Inuit CSS - [https://github.com/csswizardry/inuit.css](https://github.com/csswizardry/inuit.css)
 - YUI3 CSS Grids - [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
-- Pure CSS - [https://github.com/yui/pure](https://github.com/yui/pure)
-- Typeplate - [https://github.com/typeplate/typeplate.github.com](https://github.com/typeplate/typeplate.github.com)
 
 ## License
 

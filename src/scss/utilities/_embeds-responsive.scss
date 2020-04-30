@@ -11,7 +11,11 @@
 	&::before {
 		display: block;
 		content: "";
-		padding-top: 56.25%;
+		padding-top: 56.25%; // 16:9 by default
+	}
+
+	&.embed-responsive--4-3::before {
+		padding-top: 75%;
 	}
 
 	& .embed-responsive--item,
@@ -27,9 +31,4 @@
 		height: 100%;
 		border: 0;
 	}
-
-	&.widescreen::before {
-		padding-bottom: 56.25%; // 16:9
-	}
-
 }

@@ -19,7 +19,7 @@
 @import "embedded-content";
 
 // all about for elements
-@import "forms";
+@import "form-elements";
 
 // <table> and his elements
 @import "tables";
@@ -47,7 +47,10 @@
 @import "utilities/spacing-utilities";
 
 // font families, text truncated, text alignment, and more
-@import "utilities/texts";
+@import "utilities/texts-utilities";
+
+// font families, text truncated, text alignment, and more
+@import "utilities/lists-utilities";
 
 // embed without worries iframes, video or whatever needed
 @import "utilities/embeds-responsive";

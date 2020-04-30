@@ -1,7 +1,3 @@
-/* normalize --------------------------------------------------------------- */
-
-// ! TODO refactor styles and avoid overcomplexing
-
 html input,
 button,
 select,
@@ -40,7 +36,7 @@ button,
 html input,
 select,
 textarea {
-	background-image: none; /* FF mobile */
+	background-image: none; // FF mobile
 }
 
 input,
@@ -61,8 +57,8 @@ form {
 	margin: 0;
 }
 
-/* 1. Remove intrinsic min-width of fieldset
-* https://github.com/necolas/normalize.css/pull/269 */
+// 1. Remove intrinsic min-width of fieldset
+// https://github.com/necolas/normalize.css/pull/269
 fieldset {
 	border: 0;
 	padding: 0;
@@ -72,9 +68,9 @@ fieldset {
 
 legend {
 	display: block;
-	display: table \9; /* enable line-wrapping in IE8+ */
+	display: table \9; // enable line-wrapping in IE8+
 	max-width: 100%;
-	white-space: normal; /* enable line-wrapping in FF4/5 */
+	white-space: normal; // enable line-wrapping in FF4/5
 	border: 0;
 	padding: 0;
 	font-weight: 400;
@@ -117,9 +113,9 @@ optgroup {
 	font-weight: 700;
 }
 
-/* remove -webkit-appearance listing every single elements that needed it */
+// remove -webkit-appearance listing every single elements that needed it
 button,
-/* avoid destroying native android audio/video players */
+// avoid destroying native android audio/video players
 html [type="button"], 
 [type="reset"],
 [type="submit"],
@@ -139,8 +135,7 @@ html [type="button"],
 	appearance: none;
 }
 
-/* add again -webkit-appearance destroyed from the previous ruleset */
-
+// add again -webkit-appearance destroyed from the previous ruleset
 ::-webkit-file-upload-button {
 	appearance: button;
 }
@@ -189,7 +184,7 @@ textarea {
 }
 
 [type="range"] {
-	background-color: transparent; /* FF and Chrome mobile */
+	background-color: transparent; // FF and Chrome mobile
 }
 
 select[size],
@@ -198,7 +193,7 @@ select[multiple] {
 }
 
 select[multiple] {
-	background-image: none; /* FF mobile */
+	background-image: none; // FF mobile
 }
 
 optgroup::-moz-focus-inner {
@@ -233,8 +228,6 @@ select:focus,
 textarea:focus {
 	border-color: #000;
 }
-
-/* add responsiveness ------------------------------------------------------ */
 
 html input,
 select,
@@ -273,8 +266,6 @@ textarea {
 	padding: 0.6rem;
 }
 
-/* customize radios and checkboxes ---------------------------------------- */
-
 label [type="radio"],
 label [type="checkbox"] {
 	margin-right: 12px;
@@ -287,7 +278,6 @@ label + [type="checkbox"] {
 	margin-left: 1.2rem;
 }
 
-/* customize buttons ------------------------------------------------------- */
 button,
 .btn,
 [type="button"],
@@ -306,11 +296,11 @@ button,
 	user-select: none;
 	border-radius: 3px;
 	border: 1px solid #b2b2b2;
-	background-image: none; /* FF mobile */
-	background: #f4f4f4; /* light gray */
+	background-image: none; // FF mobile
+	background: #f4f4f4; // light gray
 }
 
-/* Firefox: Get rid of the inner focus border */
+// Firefox: Get rid of the inner focus border
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -339,8 +329,7 @@ button:focus,
 	background: #cacaca;
 }
 
-/* invalid, placeholder, disabled and readonly ----------------------------- */
-
+// invalid, placeholder, disabled and readonly
 input:invalid,
 select:invalid,
 textarea:invalid {
@@ -349,32 +338,30 @@ textarea:invalid {
 	box-shadow: none;
 }
 
-/* FF placeholder bug
-* Issue: If one change the text color of input fields, FF will change
-* the default color of placeholders too!
-* Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
-*/
-
+// FF placeholder bug
+// Issue: If one change the text color of input fields, FF will change
+// the default color of placeholders too!
+// Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
 	color: gray;
 }
 
-/* disable groups */
+// disable groups
 fieldset[disabled] .btn,
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
 
-/* disable singles */
+// disable singles
 .btn[disabled],
 button[disabled],
 input[disabled],
 select[disabled],
 textarea[disabled] {
-	cursor: default !important; /* IE8-10 fallback */
-	cursor: not-allowed !important; /* Opera Mini fallback */
+	cursor: default !important; // IE8-10 fallback
+	cursor: not-allowed !important; // Opera Mini fallback
 	pointer-events: none;
 	opacity: 0.5 !important;
 }

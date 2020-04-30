@@ -1,8 +1,8 @@
 .bf-container {
-	/* avoid IE8 issue with 'box-sizing: border-box' in combination
-  * with max/min-width and max/min-height
-  * https://github.com/twbs/bootstrap/issues/10014
-  */
+	// avoid IE8 issue with 'box-sizing: border-box' in combination
+  // with max/min-width and max/min-height
+  // https://github.com/twbs/bootstrap/issues/10014
+  //
 	box-sizing: content-box;
 
 	max-width: 1252px; // 1252 + left padding 24 + right padding 24 = 1300

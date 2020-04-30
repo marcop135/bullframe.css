@@ -1,7 +1,7 @@
 .table th,
 .table td {
-	padding: 8px;
-	padding: .8rem;
+	padding: $spacing-lg-px / 3; // 8px
+	padding: $spacing-lg-rem / 3; // 8rem
 	border-bottom: 1px solid $gray;
 }
 

@@ -1,5 +1,5 @@
 // taken from https://getbootstrap.com/docs/4.4/utilities/embed/
-// but lightened and enhanced for a better Vimeo support
+// but lightened a bit
 
 .embed-responsive {
 	position: relative;
@@ -29,11 +29,7 @@
 	}
 
 	&.widescreen::before {
-		padding-bottom: 56.25%; /* 16:9 */
-	}
-
-	&.vimeo::before {
-		padding-top: 0; /* no extra-padding for vimeo controls */
+		padding-bottom: 56.25%; // 16:9
 	}
 
 }

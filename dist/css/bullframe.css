@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! bullframe.css v3.0.0-alpha | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.0.0-beta | MIT License | https://github.com/marcop135/bullframe.css */
 *,
 *:before,
 *:after {
@@ -26,22 +26,11 @@ template {
   display: none;
 }
 
-/* Always hide an element with the `hidden` HTML attribute (from PureCSS).
- * Needed for proper display in IE 10-. */
 [hidden] {
   display: none !important;
 }
 
-/* Fix IE 10 on Windows Phone 8 Viewport
-* https://getbootstrap.com/docs/3.3/getting-started/#support-ie10-width
-*/
 @-ms-viewport {
-  width: device-width;
-}
-@-o-viewport {
-  width: device-width;
-}
-@viewport {
   width: device-width;
 }
 html {
@@ -66,14 +55,8 @@ body {
   text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-rendering: optimizeLegibility;
-  /* break very long texts by default...break things and be comfortable 
-   * in the process! */
   word-wrap: break-word;
   background-color: #fff;
-  /* 3D effects are problematic in WebKit because 
-   * backface-visibility not hidden, so we can add backface support 
-   * to the body element
-  * http://css-tricks.com/almanac/properties/b/backface-visibility/ */
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -106,7 +89,7 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 3 6px;
   font-size: 3.6rem;
   margin: 24px 0;
   margin: 2.4rem 0;
@@ -146,23 +129,14 @@ h6,
   margin: 1.2rem 0;
 }
 
-/* Abbreviations (from Bootstrap 4)
-*
-* 1. Remove the bottom border in Firefox 39-.
-* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-* 3. Add explicit cursor to indicate changed behavior. */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
   text-decoration: underline;
-  /* 2 */
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
-  /* 2 */
   cursor: help;
-  /* 3 */
   border-bottom: 0;
-  /* 1 */
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   -webkit-text-decoration-skip: none;
@@ -174,8 +148,9 @@ blockquote {
   margin-bottom: 2.4rem;
   padding-left: 24px;
   padding-left: 2.4rem;
-  border-left: 6px solid gray;
-  border-left: 0.6rem solid gray;
+  border-left: 6px solid #999;
+  border-left: 0.6rem solid #999;
+  font-style: italic;
 }
 
 blockquote p {
@@ -183,7 +158,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: gray;
+  color: #999;
   display: block;
 }
 
@@ -197,14 +172,12 @@ q {
 
 mark {
   background: #ff0;
-  /* yellow */
   color: #000;
   font-weight: 700;
 }
 
 ins {
   background: #ff9;
-  /* light yellow */
   color: #000;
   text-decoration: none;
 }
@@ -222,7 +195,6 @@ p.lead {
 pre {
   overflow: auto;
   word-break: break-all;
-  /* webkit */
   word-wrap: break-word;
   white-space: pre;
   -webkit-hyphens: none;
@@ -236,7 +208,6 @@ code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* a monospaced text should looks bigger, so a smaller font-size is preferred */
   font-size: 90%;
 }
 
@@ -245,14 +216,11 @@ kbd {
   color: #fff;
 }
 
-/* Prevent the duplicate application of `bolder` by the next rule 
-* in Safari 6. */
 b,
 strong {
   font-weight: inherit;
 }
 
-/* Add the correct font weight in Chrome, Edge, and Safari. */
 b,
 strong {
   font-weight: bolder;
@@ -290,12 +258,11 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid gray;
+  border-top: 1px solid #999;
   margin: 24px 0;
   margin: 2.4rem 0;
   padding: 0;
   overflow: visible;
-  /* Show the overflow in Edge and IE */
 }
 
 address {
@@ -318,22 +285,14 @@ summary {
   text-shadow: none;
 }
 
-/* Suppress the focus outline on elements that cannot be accessed via keyboard.
-* This prevents an unwanted focus outline from appearing around elements that
-* might still respond to pointer events.
-*
-* Credit: https://github.com/suitcss/base */
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
 a {
-  color: #2387dd;
-  /* bootstrap blue */
+  color: #0056b3;
   text-decoration: none;
-  /* IE10+: Remove grey background on active links */
   background-color: transparent;
-  /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
   -webkit-text-decoration-skip: objects;
           text-decoration-skip: objects;
   -webkit-text-decoration-skip-ink: objects;
@@ -343,7 +302,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-  color: blue;
+  color: #007bff;
 }
 
 a:not([href]):not([tabindex]) {
@@ -458,7 +417,6 @@ progress {
   max-width: 100%;
 }
 
-/* normalize --------------------------------------------------------------- */
 html input,
 button,
 select,
@@ -469,6 +427,24 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+html input,
+select,
+textarea,
+legend,
+label {
+  width: 100%;
+}
+
+button,
+[type=image],
+[type=submit],
+[type=reset],
+html [type=button],
+[type=radio],
+[type=checkbox] {
+  width: auto;
 }
 
 label,
@@ -498,7 +474,6 @@ html input,
 select,
 textarea {
   background-image: none;
-  /* FF mobile */
 }
 
 input,
@@ -519,23 +494,18 @@ form {
   margin: 0;
 }
 
-/* 1. Remove intrinsic min-width of fieldset
-* https://github.com/necolas/normalize.css/pull/269 */
 fieldset {
   border: 0;
   padding: 0;
   margin: 0;
   min-width: 0;
-  /* 1 */
 }
 
 legend {
   display: block;
   display: table \9 ;
-  /* enable line-wrapping in IE8+ */
   max-width: 100%;
   white-space: normal;
-  /* enable line-wrapping in FF4/5 */
   border: 0;
   padding: 0;
   font-weight: 400;
@@ -578,7 +548,6 @@ optgroup {
   font-weight: 700;
 }
 
-/* remove -webkit-appearance listing every single elements that needed it */
 button,
 html [type=button],
 [type=reset],
@@ -600,7 +569,6 @@ html [type=button],
           appearance: none;
 }
 
-/* add again -webkit-appearance destroyed from the previous ruleset */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
           appearance: button;
@@ -643,7 +611,7 @@ textarea {
 select,
 textarea {
   background-color: #fff;
-  border: 1px solid #b2b2b2;
+  border: 1px solid #999;
 }
 
 [type=radio],
@@ -653,7 +621,6 @@ textarea {
 
 [type=range] {
   background-color: transparent;
-  /* FF and Chrome mobile */
 }
 
 select[size],
@@ -663,7 +630,6 @@ select[multiple] {
 
 select[multiple] {
   background-image: none;
-  /* FF mobile */
 }
 
 optgroup::-moz-focus-inner {
@@ -678,44 +644,6 @@ textarea {
   overflow: auto;
   vertical-align: top;
   resize: vertical;
-}
-
-[type=color]:focus,
-[type=email]:focus,
-[type=number]:focus,
-[type=password]:focus,
-[type=tel]:focus,
-[type=search]:focus,
-[type=text]:focus,
-[type=date]:focus,
-[type=datetime-local]:focus,
-[type=month]:focus,
-[type=time]:focus,
-[type=week]:focus,
-[type=time]:focus,
-[type=url]:focus,
-select:focus,
-textarea:focus {
-  border-color: #000;
-}
-
-/* add responsiveness ------------------------------------------------------ */
-html input,
-select,
-textarea,
-legend,
-label {
-  width: 100%;
-}
-
-button,
-[type=image],
-[type=submit],
-[type=reset],
-html [type=button],
-[type=radio],
-[type=checkbox] {
-  width: auto;
 }
 
 [type=email],
@@ -737,7 +665,6 @@ textarea {
   padding: 0.6rem;
 }
 
-/* customize radios and checkboxes ---------------------------------------- */
 label [type=radio],
 label [type=checkbox] {
   margin-right: 12px;
@@ -750,15 +677,33 @@ label + [type=checkbox] {
   margin-left: 1.2rem;
 }
 
-/* customize buttons ------------------------------------------------------- */
+[type=color]:focus,
+[type=email]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=tel]:focus,
+[type=search]:focus,
+[type=text]:focus,
+[type=date]:focus,
+[type=datetime-local]:focus,
+[type=month]:focus,
+[type=time]:focus,
+[type=week]:focus,
+[type=time]:focus,
+[type=url]:focus,
+select:focus,
+textarea:focus {
+  border-color: #000;
+}
+
 button,
 .btn,
 [type=button],
 [type=reset],
 [type=submit] {
   color: inherit;
-  padding: 6px 12px;
-  padding: 0.6rem 1.2rem;
+  padding: 8px 16px;
+  padding: 0.8rem 1.6rem;
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -771,25 +716,20 @@ button,
       -ms-user-select: none;
           user-select: none;
   border-radius: 3px;
-  border: 1px solid #b2b2b2;
+  border: 1px solid #ccc;
   background-image: none;
-  /* FF mobile */
-  background: #f4f4f4;
-  /* light gray */
+  background: #ccc;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-/* Firefox: Get rid of the inner focus border */
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner {
   padding: 0;
   border-style: none;
-}
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
 }
 
 button:hover,
@@ -803,43 +743,50 @@ button:focus,
 [type=reset]:focus,
 [type=submit]:focus {
   text-decoration: none;
-  border-color: #999;
-  background: #cacaca;
+  border-color: #b3b3b3;
+  color: inherit;
+  background: #b3b3b3;
 }
 
-/* invalid, placeholder, disabled and readonly ----------------------------- */
+button:focus,
+.btn:focus,
+[type=button]:focus,
+[type=reset]:focus,
+[type=submit]:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 input:invalid,
 select:invalid,
 textarea:invalid {
-  color: red;
-  border-color: red;
+  color: #FF0000;
+  border-color: #FF0000;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-/* FF placeholder bug
-* Issue: If one change the text color of input fields, FF will change
-* the default color of placeholders too!
-* Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
-*/
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: gray;
-}
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: gray;
-}
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: gray;
-}
-input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: gray;
-}
-input::placeholder,
-textarea::placeholder {
-  color: gray;
+  color: #666;
 }
 
-/* disable groups */
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #666;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #666;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #666;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #666;
+}
+
 fieldset[disabled] .btn,
 fieldset[disabled] button,
 fieldset[disabled] input,
@@ -851,17 +798,9 @@ input[disabled],
 select[disabled],
 textarea[disabled] {
   cursor: default !important;
-  /* IE8-10 fallback */
   cursor: not-allowed !important;
-  /* Opera Mini fallback */
   pointer-events: none;
   opacity: 0.5 !important;
-}
-
-.btn[disabled]:hover,
-.btn[disabled]:focus {
-  border: 1px solid #b2b2b2;
-  background: #f4f4f4;
 }
 
 table {
@@ -887,7 +826,7 @@ caption {
   padding-top: 0.6rem;
   padding-bottom: 6px;
   padding-bottom: 0.6rem;
-  color: gray;
+  color: #999;
   text-align: left;
   caption-side: bottom;
 }
@@ -897,13 +836,10 @@ th {
 }
 
 .bf-container {
-  /* avoid IE8 issue with 'box-sizing: border-box' in combination
-   * with max/min-width and max/min-height
-   * https://github.com/twbs/bootstrap/issues/10014
-   */
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   max-width: 1252px;
+  max-width: 125.2rem;
   padding-right: 24px;
   padding-right: 2.4rem;
   padding-left: 24px;
@@ -1008,7 +944,7 @@ th {
   width: 8.3333%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 57 6px) {
   .bf-container--break-sm .bf-row {
     margin-left: 0;
     margin-right: 0;
@@ -1234,7 +1170,7 @@ table th[class^=bf-col-] {
 }
 
 .m-bottom-36 {
-  margin-bottom: 36px !important;
+  margin-bottom: 3 6px !important;
   margin-bottom: 3.6rem !important;
 }
 
@@ -1274,7 +1210,7 @@ table th[class^=bf-col-] {
 }
 
 .p-bottom-36 {
-  padding-bottom: 36px !important;
+  padding-bottom: 3 6px !important;
   padding-bottom: 3.6rem !important;
 }
 
@@ -1328,6 +1264,7 @@ table th[class^=bf-col-] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .font-sans-serif {
@@ -1342,6 +1279,13 @@ table th[class^=bf-col-] {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.list-unstyled,
+.list-unstyled * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .embed-responsive {
   position: relative;
   display: block;
@@ -1354,6 +1298,9 @@ table th[class^=bf-col-] {
   content: "";
   padding-top: 56.25%;
 }
+.embed-responsive.embed-responsive--4-3::before {
+  padding-top: 75%;
+}
 .embed-responsive .embed-responsive--item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video {
   position: absolute;
   top: 0;
@@ -1363,19 +1310,11 @@ table th[class^=bf-col-] {
   height: 100%;
   border: 0;
 }
-.embed-responsive.widescreen::before {
-  padding-bottom: 56.25%;
-  /* 16:9 */
-}
-.embed-responsive.vimeo::before {
-  padding-top: 0;
-  /* no extra-padding for vimeo controls */
-}
 
 .table th,
 .table td {
-  padding: 8px;
-  padding: 0.8rem;
+  padding: 4px;
+  padding: 0.4rem;
   border-bottom: 1px solid #999;
 }
 
@@ -1387,7 +1326,7 @@ table th[class^=bf-col-] {
 
 .table-responsive table {
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 1 6px;
   margin-bottom: 1.6rem;
 }
 
@@ -1470,7 +1409,8 @@ h3 {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .reduced-motion {
+  .reduced-motion,
+.reduced-motion * {
     -webkit-animation-duration: 0.01ms !important;
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;

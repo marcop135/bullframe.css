@@ -191,8 +191,7 @@ q {
 mark {
 	background: $yellow;
 	color: $black;
-	font-weight: 700;
-}
+	font-weight: 700;}
 
 ins {
 	background: $yellow-light;
@@ -263,12 +262,12 @@ sup {
 
 sup {
 	top: -8px;
-	top: -0.8rem;
+	top: -.8rem;
 }
 
 sub {
 	bottom: -4px;
-	bottom: -0.4rem;
+	bottom: -.4rem;
 }
 
 small {

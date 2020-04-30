@@ -277,14 +277,6 @@ summary {
   cursor: pointer;
 }
 
-::-moz-selection {
-  text-shadow: none;
-}
-
-::selection {
-  text-shadow: none;
-}
-
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }

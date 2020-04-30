@@ -46,7 +46,16 @@
 
 .no-select {
 	user-select: none;
+
+	// this is a not standard CSS property, so it's for webkit only
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout
+	// useful on iOS
+	// https://css-tricks.com/force-selection-text-block/#article-header-id-7
+	// https://ishadeed.com/article/selection-in-css scroll down to 
+	// 'selection on mobile' section
+	-webkit-touch-callout: none;
 }
+
 
 .font-sans-serif {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

@@ -64,9 +64,6 @@
 			.dev-wrapper .btn {
 				margin-right: 15px;
 				margin-right: 1.5rem;
-				-webkit-border-radius: 6px;
-				border-radius: 6px;
-				border-width: 2px;
 			}
 
 			.dev-wrapper .btn + .btn {
@@ -119,9 +116,11 @@
 				line-height: 48px;
 				line-height: 4.8rem;
 				overflow-y: hidden;
-				color: #fff;
-				font-size: 70%;
+				color: #000;
+				font-size: 75%;
 				text-align: center;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
 			}
 
 			.grid .bf-row:nth-child(odd) .wrapper {
@@ -388,7 +387,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 			<!-- /row -->
 
 			<div class="bf-row">
-				<div class="bf-col-4">
+				<div class="bf-col-3">
 					<h3 class="sub-title">Ordered list</h3>
 					<ol>
 						<li>list item 1</li>
@@ -413,7 +412,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				</div>
 				<!-- /col -->
 
-				<div class="bf-col-4">
+				<div class="bf-col-3">
 					<h3 class="sub-title">Unordered list</h3>
 					<ul>
 						<li>list item 1</li>
@@ -438,7 +437,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				</div>
 				<!-- /col -->
 
-				<div class="bf-col-4">
+				<div class="bf-col-3">
 					<h3 class="sub-title">Definition list</h3>
 					<dl>
 						<dt>Description name</dt>
@@ -450,6 +449,31 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 					</dl>
 				</div>
 				<!-- /col -->
+
+				<div class="bf-col-3">
+					<h3 class="sub-title">Unstyled list</h3>
+					<ol class="list-unstyled">
+						<li>list item 1</li>
+						<li>
+							list item 1
+							<ol>
+								<li>list item 2</li>
+								<li>
+									list item 2
+									<ol>
+										<li>list item 3</li>
+										<li>list item 3</li>
+									</ol>
+								</li>
+								<li>list item 2</li>
+								<li>list item 2</li>
+							</ol>
+						</li>
+						<li>list item 1</li>
+						<li>list item 1</li>
+					</ol>
+				</div><!-- /col -->
+
 			</div>
 			<!-- /row -->
 

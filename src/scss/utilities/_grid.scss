@@ -7,10 +7,10 @@
 
 	max-width: 1252px; // 1252 + left padding 24 + right padding 24 = 1300
 	max-width: 125.2rem;
-	padding-right: 24px;
-	padding-right: 2.4rem;
-	padding-left: 24px;
-	padding-left: 2.4rem;
+	padding-right: $spacing-xl-px;
+	padding-right: $spacing-xl-rem;
+	padding-left: $spacing-xl-px;
+	padding-left: $spacing-xl-rem;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -27,10 +27,10 @@
 }
 
 .bf-container--fluid {
-	padding-left: 24px;
-	padding-left: 2.4rem;
-	padding-right: 24px;
-	padding-right: 2.4rem;
+	padding-left: $spacing-xl-px;
+	padding-left: $spacing-xl-rem;
+	padding-right: $spacing-xl-px;
+	padding-right: $spacing-xl-rem;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -49,10 +49,10 @@
 
 .bf-row {
 	display: block;
-	margin-left: -24px;
-	margin-left: -2.4rem;
-	margin-right: -24px;
-	margin-right: -2.4rem;
+	margin-left: -$spacing-xl-px;
+	margin-left: -$spacing-xl-rem;
+	margin-right: -$spacing-xl-px;
+	margin-right: -$spacing-xl-rem;
 
 	// clearfix 
 	&:before,
@@ -70,10 +70,10 @@
 	float: left;
 	position: relative;
 	min-height: 1px;
-	padding-left: 24px;
-	padding-left: 2.4rem;
-	padding-right: 24px;
-	padding-right: 2.4rem;
+	padding-left: $spacing-xl-px;
+	padding-left: $spacing-xl-rem;
+	padding-right: $spacing-xl-px;
+	padding-right: $spacing-xl-rem;
 }
 
 .bf-col-12 {
@@ -126,11 +126,11 @@
 
 // grid breakpoints
 // https://getbootstrap.com/docs/4.4/layout/grid/
-// ≥576px 	sm
+// ≥57$spacing-md-px 	sm
 // ≥768px 	md
 // ≥992px 	lg
 
-@media (max-width: 576px) {
+@media (max-width: 57$spacing-md-px) {
 	.bf-container--break-sm .bf-row {
 		margin-left: 0;
 		margin-right: 0;

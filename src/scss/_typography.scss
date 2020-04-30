@@ -106,34 +106,34 @@ h6 {
 
 h1,
 .h1 {
-	font-size: 36px;
-	font-size: 3.6rem;
-	margin: 24px 0;
-	margin: 2.4rem 0;
+	font-size: 3$spacing-md-px;
+	font-size: $spacing-xxl-rem;
+	margin: $spacing-xl-px 0;
+	margin: $spacing-xl-rem 0;
 }
 
 h2,
 .h2 {
 	font-size: 30px;
 	font-size: 3rem;
-	margin: 24px 0;
-	margin: 2.4rem 0;
+	margin: $spacing-xl-px 0;
+	margin: $spacing-xl-rem 0;
 }
 
 h3,
 .h3 {
-	font-size: 24px;
-	font-size: 2.4rem;
-	margin: 24px 0;
-	margin: 2.4rem 0;
+	font-size: $spacing-xl-px;
+	font-size: $spacing-xl-rem;
+	margin: $spacing-xl-px 0;
+	margin: $spacing-xl-rem 0;
 }
 
 h4,
 .h4 {
 	font-size: 20px;
 	font-size: 2rem;
-	margin: 12px 0;
-	margin: 1.2rem 0;
+	margin: $spacing-lg-px 0;
+	margin: $spacing-lg-rem 0;
 }
 
 h5,
@@ -142,8 +142,8 @@ h6,
 .h6 {
 	font-size: 17px;
 	font-size: 1.7rem;
-	margin: 12px 0;
-	margin: 1.2rem 0;
+	margin: $spacing-lg-px 0;
+	margin: $spacing-lg-rem 0;
 }
 
 // Abbreviations (taken Bootstrap 4)
@@ -163,11 +163,11 @@ abbr[data-original-title] {
 }
 
 blockquote {
-	margin: 0 0 24px 0;
-	margin-bottom: 2.4rem;
-	padding-left: 24px;
-	padding-left: 2.4rem;
-	border-left: 6px solid $gray;
+	margin: 0 0 $spacing-xl-px 0;
+	margin-bottom: $spacing-xl-rem;
+	padding-left: $spacing-xl-px;
+	padding-left: $spacing-xl-rem;
+	border-left: $spacing-md-px solid $gray;
 	border-left: .6rem solid $gray;
 }
 
@@ -202,8 +202,8 @@ ins {
 
 p,
 pre {
-	margin: 0 0 24px 0;
-	margin: 0 0 2.4rem 0;
+	margin: 0 0 $spacing-xl-px 0;
+	margin: 0 0 $spacing-xl-rem 0;
 }
 
 p.lead {
@@ -281,16 +281,16 @@ hr {
 	height: 1px;
 	border: 0;
 	border-top: 1px solid $gray;
-	margin: 24px 0;
-	margin: 2.4rem 0;
+	margin: $spacing-xl-px 0;
+	margin: $spacing-xl-rem 0;
 	padding: 0;
 	overflow: visible; // Show the overflow in Edge and IE
 }
 
 address {
 	font-style: normal;
-	margin-bottom: 12px;
-	margin-bottom: 1.2rem;
+	margin-bottom: $spacing-lg-px;
+	margin-bottom: $spacing-lg-rem;
 	line-height: inherit;
 }
 

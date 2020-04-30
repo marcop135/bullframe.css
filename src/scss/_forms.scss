@@ -74,8 +74,8 @@ legend {
 	border: 0;
 	padding: 0;
 	font-weight: 400;
-	margin-bottom: 6px;
-	margin-bottom: 0.6rem;
+	margin-bottom: $spacing-md-px;
+	margin-bottom: $spacing-md-rem;
 	font-size: inherit;
 	line-height: inherit;
 	color: inherit;
@@ -83,8 +83,8 @@ legend {
 
 label {
 	font-weight: 700;
-	margin-bottom: 6px;
-	margin-bottom: 0.6rem;
+	margin-bottom: $spacing-md-px;
+	margin-bottom: $spacing-md-rem;
 }
 
 [type="number"]::-webkit-outer-spin-button,
@@ -93,8 +93,8 @@ label {
 }
 
 [type="search"] {
-	outline-offset: -3px;
-	outline-offset: -0.3rem;
+	outline-offset: -$spacing-sm-px;
+	outline-offset: -$spacing-sm-rem;
 }
 
 output {
@@ -155,7 +155,7 @@ textarea {
 }
 
 [type="radio"] {
-	border-radius: 6px;
+	border-radius: $spacing-md-px;
 }
 
 [type="color"],
@@ -262,20 +262,20 @@ html [type="button"],
 [type="url"],
 select,
 textarea {
-	padding: 6px;
-	padding: 0.6rem;
+	padding: $spacing-md-px;
+	padding: $spacing-md-rem;
 }
 
 label [type="radio"],
 label [type="checkbox"] {
-	margin-right: 12px;
-	margin-right: 1.2rem;
+	margin-right: $spacing-lg-px;
+	margin-right: $spacing-lg-rem;
 }
 
 label + [type="radio"],
 label + [type="checkbox"] {
-	margin-left: 12px;
-	margin-left: 1.2rem;
+	margin-left: $spacing-lg-px;
+	margin-left: $spacing-lg-rem;
 }
 
 button,
@@ -284,8 +284,8 @@ button,
 [type="reset"],
 [type="submit"] {
 	color: inherit;
-	padding: 6px 12px;
-	padding: 0.6rem 1.2rem;
+	padding: $spacing-md-px $spacing-lg-px;
+	padding: $spacing-md-rem $spacing-lg-rem;
 	line-height: normal;
 	text-align: center;
 	margin: 0;
@@ -294,7 +294,7 @@ button,
 	overflow: visible;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	user-select: none;
-	border-radius: 3px;
+	border-radius: $spacing-sm-px;
 	border: 1px solid $gray;
 	background-image: none; // FF mobile
 	background: $gray-light; // light gray

@@ -24,23 +24,23 @@
 }
 
 .m-bottom-6 {
-	margin-bottom: 6px !important;
-	margin-bottom: 1.2rem !important;
+	margin-bottom: $spacing-md-px !important;
+	margin-bottom: $spacing-lg-rem !important;
 }
 
 .m-bottom-12 {
-	margin-bottom: 12px !important;
-	margin-bottom: 1.2rem !important;
+	margin-bottom: $spacing-lg-px !important;
+	margin-bottom: $spacing-lg-rem !important;
 }
 
 .m-bottom-24 {
-	margin-bottom: 24px !important;
-	margin-bottom: 2.4rem !important;
+	margin-bottom: $spacing-xl-px !important;
+	margin-bottom: $spacing-xl-rem !important;
 }
 
 .m-bottom-36 {
-	margin-bottom: 36px !important;
-	margin-bottom: 3.6rem !important;
+	margin-bottom: 3$spacing-md-px !important;
+	margin-bottom: $spacing-xxl-rem !important;
 }
 
 // paddings
@@ -66,21 +66,21 @@
 }
 
 .p-bottom-6 {
-	padding-bottom: 6px !important;
-	padding-bottom: 1.2rem !important;
+	padding-bottom: $spacing-md-px !important;
+	padding-bottom: $spacing-lg-rem !important;
 }
 
 .p-bottom-12 {
-	padding-bottom: 12px !important;
-	padding-bottom: 1.2rem !important;
+	padding-bottom: $spacing-lg-px !important;
+	padding-bottom: $spacing-lg-rem !important;
 }
 
 .p-bottom-24 {
-	padding-bottom: 24px !important;
-	padding-bottom: 2.4rem !important;
+	padding-bottom: $spacing-xl-px !important;
+	padding-bottom: $spacing-xl-rem !important;
 }
 
 .p-bottom-36 {
-	padding-bottom: 36px !important;
-	padding-bottom: 3.6rem !important;
+	padding-bottom: 3$spacing-md-px !important;
+	padding-bottom: $spacing-xxl-rem !important;
 }

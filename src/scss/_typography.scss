@@ -66,7 +66,7 @@ body {
 	// e.g. big <h1> or <h2> headlines
 	word-wrap: break-word;
 
-	background-color: #fff;
+	background-color: $white;
 
 	// 3D effects are problematic in WebKit because 
   // backface-visibility not hidden, so we can add backface support 
@@ -167,8 +167,8 @@ blockquote {
 	margin-bottom: 2.4rem;
 	padding-left: 24px;
 	padding-left: 2.4rem;
-	border-left: 6px solid gray;
-	border-left: .6rem solid gray;
+	border-left: 6px solid $gray;
+	border-left: .6rem solid $gray;
 }
 
 blockquote p {
@@ -176,7 +176,7 @@ blockquote p {
 }
 
 blockquote small {
-	color: gray;
+	color: $gray;
 	display: block;
 }
 
@@ -189,14 +189,14 @@ q {
 }
 
 mark {
-	background: #ff0; // yellow
-	color: #000;
+	background: $yellow;
+	color: $black;
 	font-weight: 700;
 }
 
 ins {
-	background: #ff9; // light yellow
-	color: #000;
+	background: $yellow-light;
+	color: $black;
 	text-decoration: none;
 }
 
@@ -232,8 +232,8 @@ samp {
 }
 
 kbd {
-	background-color: #222;
-	color: #fff;
+	background-color: $dark;
+	color: $white;
 }
 
 // Prevent the duplicate application of `bolder` by the next rule 
@@ -280,7 +280,7 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid gray;
+	border-top: 1px solid $gray;
 	margin: 24px 0;
 	margin: 2.4rem 0;
 	padding: 0;

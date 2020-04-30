@@ -17,10 +17,10 @@ th {
 }
 
 caption {
-	padding-top: 6px;
-	padding-top: 0.6rem;
-	padding-bottom: 6px;
-	padding-bottom: 0.6rem;
+	padding-top: $spacing-md-px;
+	padding-top: $spacing-md-rem;
+	padding-bottom: $spacing-md-px;
+	padding-bottom: $spacing-md-rem;
 	color: $gray;
 	text-align: left;
 	caption-side: bottom;

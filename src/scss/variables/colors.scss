@@ -1,0 +1,24 @@
+// CSS Variables (Custom Properties) are not IE-friendly
+// https://caniuse.com/#feat=css-variables
+// let's Sass do the job instead
+
+// customise/enlarge this small selection as needed
+
+// backgrounds, texts and borders
+$white: #fff;
+$gray-light: #ccc;
+$gray: #999;
+$gray-dark: #666;
+$dark: #222;
+$black: #000;
+
+// <mark> and <ins>
+$yellow-light: #ff9;
+$yellow: #ff0;
+
+// anchors
+$blue: #007bff;
+$blue-light: #0056b3;
+
+// invalid forms
+$red: #FF0000;

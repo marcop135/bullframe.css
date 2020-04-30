@@ -1,3 +1,8 @@
+// colors and spacing variables
+// this is for an easy customisation
+@import "variables/colors";
+@import "variables/spacing";
+
 // all about box-sizing and display
 @import "layout";
 
@@ -39,7 +44,7 @@
 @import "utilities/layout-utilities";
 
 // reset margins and paddings adding a class
-@import "utilities/spacing";
+@import "utilities/spacing-utilities";
 
 // font families, text truncated, text alignment, and more
 @import "utilities/texts";

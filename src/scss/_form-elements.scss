@@ -1,3 +1,5 @@
+// normalization, enhancement and responsiveness
+
 html input,
 button,
 select,
@@ -10,6 +12,26 @@ textarea {
 	line-height: inherit;
 }
 
+html input,
+select,
+textarea,
+legend,
+label {
+	width: 100%;
+}
+
+button,
+[type="image"],
+[type="submit"],
+[type="reset"],
+html [type="button"],
+[type="radio"],
+[type="checkbox"] {
+	width: auto;
+}
+
+// inline-block display gives the best cross-browser combination
+// and allow several properties
 label,
 html input,
 select,
@@ -45,6 +67,7 @@ textarea {
 	vertical-align: baseline;
 }
 
+// always show a pointer cursor
 .btn,
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -63,7 +86,7 @@ fieldset {
 	border: 0;
 	padding: 0;
 	margin: 0;
-	min-width: 0; /* 1 */
+	min-width: 0; // 1.
 }
 
 legend {
@@ -174,8 +197,8 @@ textarea {
 [type="url"],
 select,
 textarea {
-	background-color: $white;
-	border: 1px solid $gray-light;
+	background-color: $white; // this is cross-browser
+	border: 1px solid $gray;
 }
 
 [type="radio"],
@@ -210,43 +233,6 @@ textarea {
 	resize: vertical;
 }
 
-[type="color"]:focus,
-[type="email"]:focus,
-[type="number"]:focus,
-[type="password"]:focus,
-[type="tel"]:focus,
-[type="search"]:focus,
-[type="text"]:focus,
-[type="date"]:focus,
-[type="datetime-local"]:focus,
-[type="month"]:focus,
-[type="time"]:focus,
-[type="week"]:focus,
-[type="time"]:focus,
-[type="url"]:focus,
-select:focus,
-textarea:focus {
-	border-color: #000;
-}
-
-html input,
-select,
-textarea,
-legend,
-label {
-	width: 100%;
-}
-
-button,
-[type="image"],
-[type="submit"],
-[type="reset"],
-html [type="button"],
-[type="radio"],
-[type="checkbox"] {
-	width: auto;
-}
-
 [type="email"],
 [type="number"],
 [type="password"],
@@ -278,14 +264,33 @@ label + [type="checkbox"] {
 	margin-left: $spacing-lg-rem;
 }
 
+[type="color"]:focus,
+[type="email"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="tel"]:focus,
+[type="search"]:focus,
+[type="text"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
+[type="time"]:focus,
+[type="url"]:focus,
+select:focus,
+textarea:focus {
+	border-color: $black;
+}
+
 button,
 .btn,
 [type="button"],
 [type="reset"],
 [type="submit"] {
 	color: inherit;
-	padding: $spacing-md-px $spacing-lg-px;
-	padding: $spacing-md-rem $spacing-lg-rem;
+	padding: ($spacing-xl-px / 3) (($spacing-xl-px / 3) * 2); // 8px 16px
+	padding: ($spacing-xl-rem / 3) (($spacing-xl-rem / 3) * 2);
 	line-height: normal;
 	text-align: center;
 	margin: 0;
@@ -295,9 +300,10 @@ button,
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	user-select: none;
 	border-radius: $spacing-sm-px;
-	border: 1px solid $gray;
+	border: 1px solid $gray-light;
 	background-image: none; // FF mobile
-	background: $gray-light; // light gray
+	background: $gray-light;
+	transition: all .2s;
 }
 
 // Firefox: Get rid of the inner focus border
@@ -307,11 +313,6 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
 	padding: 0;
 	border-style: none;
-}
-
-button:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
 }
 
 button:hover,
@@ -325,8 +326,21 @@ button:focus,
 [type="reset"]:focus,
 [type="submit"]:focus {
 	text-decoration: none;
-	border-color: $gray;
-	background: $gray-light;
+	border-color: darken($gray-light, 10%);
+	color: inherit;
+	background: darken($gray-light, 10%);
+}
+
+button:focus,
+.btn:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus {
+	// ! do not remove the outline
+	// Accessibility Concerns
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/:focus#Accessibility_Concerns
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
 }
 
 // invalid, placeholder, disabled and readonly
@@ -344,17 +358,17 @@ textarea:invalid {
 // Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
-	color: $gray;
+	color: $gray-dark;
 }
 
-// disable groups
+// disabled groups
 fieldset[disabled] .btn,
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
 
-// disable singles
+// disabled singles
 .btn[disabled],
 button[disabled],
 input[disabled],

@@ -1,27 +1,38 @@
+// customise this spacing selection as needed
+
+// the REM unit is the default,
+// preceded by the PX unit as fallback for old browsers (IE)
+// https://caniuse.com/#search=rem
+//
+// e.g.
+// html { font-size: 62.5%; }
+// body { font-size: 16px; }
+// h1 { font-size: 30px; font-size: 3rem; }
+
 // margins in PXs
-$margin-sm: 3px;
-$margin-md: 6px;
-$margin-lg: 12px;
-$margin-xl: 24px;
-$margin-xxl: 36px;
+$margin-sm-px: 3px;
+$margin-md-px: 6px;
+$margin-lg-px: 12px;
+$margin-xl-px: 24px;
+$margin-xxl-px: 36px;
 
 // margins in REMs
-$margin-sm: .3rem;
-$margin-md: .6rem;
-$margin-lg: 1.2rem;
-$margin-xl: 2.4rem;
-$margin-xl: 3.6rem;
+$margin-sm-rem: .3rem;
+$margin-md-rem: .6rem;
+$margin-lg-rem: 1.2rem;
+$margin-xl-rem: 2.4rem;
+$margin-xl-rem: 3.6rem;
 
 // paddings in PXs
-$padding-sm: 3px;
-$padding-md: 6px;
-$padding-lg: 12px;
-$padding-xl: 24px;
-$padding-xxl: 36px;
+$padding-sm-px: 3px;
+$padding-md-px: 6px;
+$padding-lg-px: 12px;
+$padding-xl-px: 24px;
+$padding-xxl-px: 36px;
 
 // paddings in REMs
-$margin-sm: .3rem;
-$margin-md: .6rem;
-$margin-lg: 1.2rem;
-$margin-xl: 2.4rem;
-$margin-xxl: 3.6rem;
+$padding-sm-rem: .3rem;
+$padding-md-rem: .6rem;
+$padding-lg-rem: 1.2rem;
+$padding-xl-rem: 2.4rem;
+$padding-xxl-rem: 3.6rem;

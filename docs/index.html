@@ -213,17 +213,17 @@
 							<h1>bullframe.css</h1>
 							<p class="lead">Solid, fluid and IE-friendly CSS boilerplate</p>
 							<a
-								class="btn btn-github"
-								href="https://github.com/marcop135/bullframe.css"
-								title="bullframe.css github"
-								>GitHub</a
-							>
-							<a
-								class="btn"
+								class="btn btn--primary"
 								href="https://github.com/marcop135/bullframe.css/archive/master.zip"
 								title="bullframe.css source"
 								>Download</a
 							>
+							<a
+								class="btn btn-github"
+								href="https://github.com/marcop135/bullframe.css"
+								title="bullframe.css github"
+								>GitHub</a
+							>							
 							<pre><code>$ git clone https://github.com/marcop135/bullframe.css.git</code></pre>
 						</div>
 						<!-- /dev-wrapper -->
@@ -788,7 +788,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 						<div>
 							<a class="btn" href="#" title="button link">Button (link)</a>
 						</div>
+						<div>
+							<a class="btn btn--primary" href="#" title="button link">Primary button (link)</a>
+						</div>
 						<div><input disabled type="submit" value="Disabled (input)" /></div>
+						<div>
+							<a class="btn btn--primary disabled" href="#" title="button link">Disabled primary button (link)</a>
+						</div>
 					</fieldset>
 				</div>
 				<!-- /col -->
@@ -799,7 +805,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 						<div><button type="reset">Reset (button)</button></div>
 						<div><button type="button">Button (button)</button></div>
 						<div><button type="submit">Submit (button)</button></div>
+						<div><button class="btn btn--primary" type="submit">Primary submit (button) </button></div>
 						<div><button disabled type="submit">Disabled (button)</button></div>
+						<div><button class="btn btn--primary" type="submit">Disabled primary submit (button) </button></div>
 					</fieldset>
 				</div>
 				<!-- /col -->

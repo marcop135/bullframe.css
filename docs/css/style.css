@@ -1,0 +1,134 @@
+html {
+scroll-behavior: smooth;
+}
+
+header {
+margin-top: 24px;
+margin-top: 2.4rem;
+}
+
+.dev-wrapper h1 {
+line-height: 1.1;
+}
+
+@media (min-width: 450px) {
+.dev-wrapper h1 {
+  font-size: 50px;
+  font-size: 5rem;
+}
+}
+
+@media (min-width: 600px) {
+.dev-wrapper h1 {
+  font-size: 60px;
+  font-size: 6rem;
+}
+}
+
+@media (min-width: 1000px) {
+.dev-wrapper h1 {
+  font-size: 80px;
+  font-size: 8rem;
+}
+}
+
+.dev-wrapper p {
+margin-top: 10px;
+margin-top: 1rem;
+}
+
+.section-title {
+font-size: 40px;
+font-size: 4rem;
+margin-top: 60px;
+margin-top: 6rem;
+text-transform: uppercase;
+}
+
+.bullframe-demo legend {
+padding-bottom: 12px;
+padding-bottom: 1.2rem;
+}
+
+.bullframe-demo button,
+.bullframe-demo .bf-btn,
+.bullframe-demo input,
+.bullframe-demo select,
+.bullframe-demo textarea {
+margin-bottom: 24px;
+margin-bottom: 2.4rem;
+}
+
+h2#grid-system {
+margin-bottom: 12px;
+margin-bottom: 1.2rem;
+}
+
+.grid .wrapper {
+background-color: #888;
+height: 48px;
+height: 4.8rem;
+line-height: 48px;
+line-height: 4.8rem;
+overflow-y: hidden;
+color: #000;
+font-size: 75%;
+text-align: center;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+
+.grid .bf-row:nth-child(odd) .wrapper {
+background-color: #ccc;
+}
+
+.grid .bf-row {
+margin-bottom: 24px;
+margin-bottom: 2.4rem;
+}
+
+@media (max-width: 767px) {
+.grid .bf-row {
+  margin-bottom: 0;
+}
+
+.grid [class*="bf-col-"] {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+}
+
+.back-to-top {
+text-align: center;
+display: block;
+margin: 60px 0 120px 0;
+margin: 6rem 0 12rem 0;
+}
+
+.back-to-top a i {
+vertical-align: middle;
+font-style: normal;
+}
+
+.sharing {
+width: 100%;
+margin: 60px auto 60px 0;
+margin-top: 6rem;
+margin-bottom: 6rem;
+text-align: center;
+line-height: 3;
+}
+
+.sharing code {
+line-height: 1.5;
+}
+
+.sharing .bf-h1 {
+margin-bottom: 12px;
+margin-bottom: 1.2rem;
+line-height: 1.2;
+}
+
+.github-source {
+font-weight: 700;
+}

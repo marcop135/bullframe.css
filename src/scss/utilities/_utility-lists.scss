@@ -1,6 +1,12 @@
 // this is useful for navbars
 .list-unstyled,
-.list-unstyled * {
+menu ul.list-unstyled,
+menu ol.list-unstyled,
+ul.list-unstyled ul,
+ul.list-unstyled ol,
+ol.list-unstyled ol,
+ol.list-unstyled ul,
+dd.list-unstyled {
   margin: 0;
   padding: 0;
   list-style: none;

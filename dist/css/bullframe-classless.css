@@ -154,13 +154,13 @@ q {
 }
 
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000;
   font-weight: 700;
 }
 
 ins {
-  background: #ff9;
+  background-color: #ff9;
   color: #000;
   text-decoration: none;
 }
@@ -665,6 +665,9 @@ label + [type=checkbox] {
 [type=url]:focus,
 select:focus,
 textarea:focus {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   border-color: #000;
 }
 
@@ -712,7 +715,6 @@ button:focus,
 [type=reset]:focus,
 [type=submit]:focus {
   text-decoration: none;
-  border-color: #b3b3b3;
   color: inherit;
   background: #b3b3b3;
 }
@@ -727,7 +729,10 @@ button:focus,
 
 input:invalid,
 select:invalid,
-textarea:invalid {
+textarea:invalid,
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
   color: #FF0000;
   border-color: #FF0000;
   -webkit-box-shadow: none;

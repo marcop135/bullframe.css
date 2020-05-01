@@ -37,7 +37,6 @@ html input,
 select,
 textarea,
 button,
-.btn,
 html [type="button"],
 [type="reset"],
 [type="submit"],
@@ -68,7 +67,6 @@ textarea {
 }
 
 // always show a pointer cursor
-.btn,
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -284,7 +282,6 @@ textarea:focus {
 }
 
 button,
-.btn,
 [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -300,7 +297,7 @@ button,
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	user-select: none;
 	border-radius: $spacing-sm-px;
-	border: 1px solid $gray-light;
+	border: 0;
 	background-image: none; // FF mobile
 	background: $gray-light;
 	transition: all .2s;
@@ -316,12 +313,10 @@ button::-moz-focus-inner,
 }
 
 button:hover,
-.btn:hover,
 [type="button"]:hover,
 [type="reset"]:hover,
 [type="submit"]:hover,
 button:focus,
-.btn:focus,
 [type="button"]:focus,
 [type="reset"]:focus,
 [type="submit"]:focus {
@@ -332,7 +327,6 @@ button:focus,
 }
 
 button:focus,
-.btn:focus,
 [type="button"]:focus,
 [type="reset"]:focus,
 [type="submit"]:focus {
@@ -362,14 +356,12 @@ textarea::placeholder {
 }
 
 // disabled groups
-fieldset[disabled] .btn,
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
 
 // disabled singles
-.btn[disabled],
 button[disabled],
 input[disabled],
 select[disabled],

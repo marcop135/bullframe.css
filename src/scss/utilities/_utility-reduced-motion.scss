@@ -7,8 +7,8 @@
 // preferably to the point where all non-essential movement is removed.
 
 @media (prefers-reduced-motion: reduce) {
-	.reduced-motion,
-	.reduced-motion * {
+	.bf-reduced-motion,
+	.bf-reduced-motion * {
 		animation-duration: .01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: .01ms !important;

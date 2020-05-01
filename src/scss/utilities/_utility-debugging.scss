@@ -5,7 +5,10 @@
 // }
 
 // something more powerful...
-
+//
+// ! :not is IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
+//
 // /*! debug.css v0.0.1 | MIT License | zaydek.github.com/debug.css */
 // :not(g):not(path) {
 // 	color:                 hsla(210, 100%, 100%, 0.9) !important;

@@ -12,7 +12,12 @@
 	overflow: visible;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	user-select: none;
+
+	// ! IE9+
+	// https://caniuse.com/#feat=border-radius
 	border-radius: $spacing-sm-px;
+	border-radius: $spacing-sm-rem;
+
 	border: 0;
 	background-image: none; // FF mobile
 	background: $gray-light;

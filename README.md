@@ -43,14 +43,9 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 
 <link rel="stylesheet" href="your-styles.css" />
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"
-integrity="sha384-yiRLiWDq32cfGJfghoG8zTaVhAMRpRD29GhKaF4ZuOkIUXW3lRv3kbDH2azwgUoZ"
-crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"
-integrity="sha384-ZsmIinCvbXADrA6X142ORTARKZC5fj0125RzRZu6UL0btZcg7Oa9GdQoMpbfqtc2"
-crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"
-integrity="sha384-KuUd5duWxH/o7SoDxJkvx6CbpKG/KNbfWUBytOzRPrjXj3fYtRBsPSCDQMK5m09g" crossorigin="anonymous"></script>
+<!-- enable HTML5 elements and CSS3 media queries in old browsers 
+(html5shiv.js + respond.js) -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/respond.min.js" integrity="sha384-Y5098RDeBIkjYD3undzXpR4viQ5s5ZgUNJ/2s2RSQ5nabAj9M34XtL5luONpYt1A" crossorigin="anonymous"></script>
 </head>
 <body>
   <h1>Hello World!</h1>
@@ -67,8 +62,7 @@ IE10+ (verbose version)
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
-integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"  crossorigin="anonymous">
 
 <link rel="stylesheet" href="your-styles.css" />
 
@@ -90,9 +84,8 @@ IE8+ (minimal setup)
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 
-<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"></script>
+<!-- support for HTML5 elements and media queries in old browsers -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/respond.min.js"></script>
 </head>
 <body>
   <h1>Hello World!</h1>

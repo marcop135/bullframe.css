@@ -78,18 +78,12 @@ body {
 	backface-visibility: hidden;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
+h1
+h2
+h3
+h4
 h5,
-.h5,
-h6,
-.h6 {
+h6 {
 	font-weight: 700;
 	margin-top: 0;
 }
@@ -104,42 +98,36 @@ h6 {
 	color: inherit;
 }
 
-h1,
-.h1 {
+h1 {
 	font-size: 3$spacing-md-px;
 	font-size: $spacing-xxl-rem;
 	margin: $spacing-xl-px 0;
 	margin: $spacing-xl-rem 0;
 }
 
-h2,
-.h2 {
+h2 {
 	font-size: 30px;
 	font-size: 3rem;
 	margin: $spacing-xl-px 0;
 	margin: $spacing-xl-rem 0;
 }
 
-h3,
-.h3 {
+h3 {
 	font-size: $spacing-xl-px;
 	font-size: $spacing-xl-rem;
 	margin: $spacing-xl-px 0;
 	margin: $spacing-xl-rem 0;
 }
 
-h4,
-.h4 {
+h4 {
 	font-size: 20px;
 	font-size: 2rem;
 	margin: $spacing-lg-px 0;
 	margin: $spacing-lg-rem 0;
 }
 
-h5,
-.h5,
-h6,
-.h6 {
+h5
+h6 {
 	font-size: 17px;
 	font-size: 1.7rem;
 	margin: $spacing-lg-px 0;
@@ -204,10 +192,6 @@ p,
 pre {
 	margin: 0 0 $spacing-xl-px 0;
 	margin: 0 0 $spacing-xl-rem 0;
-}
-
-p.lead {
-	font-size: 120%;
 }
 
 pre {

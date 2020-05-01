@@ -1,21 +1,21 @@
 # bullframe.css
 
 _bullframe.css_ is a (S)CSS framework to be used as an alternative to CSS resets.<br> 
-It's a good starting-point for a **IE8+** solid, progressive, mobile-first responsive web design.
+It's a solid starting-point for a **IE8+**, progressive, mobile-first responsive web design.<br>
+Write semantic HTML, drop the styles you need, add some polyfills if needed, and you are ready to go everywhere!
 
 ## Best features
 
-:heavy_check_mark: Normalize and fluidify as much as possible HTML elements out-of-the-box<br>
-:heavy_check_mark: Support IE8+ and a wide range of desktop and mobile browsers<br>
-:heavy_check_mark: Mobile-First Responsive Web Design ready<br>
-:heavy_check_mark: Progressive Enhancement development ready<br>
-:heavy_check_mark: Flexible images and media elements (video, audio, iframe, embed) by default<br>
-:heavy_check_mark: Flexible, cross-browser HTML5 form elements by default<br>
-:heavy_check_mark: Simple 12-columns fluid grid system IE8+<br>
-:heavy_check_mark: Choose utility classes (e.g. '.btn') or not (classless)<br>
-:heavy_check_mark: Dark mode included<br>
-:heavy_check_mark: Heavily commented<br>
-:heavy_check_mark: 10KB~ minified/gzipped<br>
+- Add responsiveness as normalize as much as possible HTML elements <i>out-of-the-box</i><br>
+- Support IE8+ and a wide range of desktop and mobile browsers<br>
+- Mobile-First Responsive Web Design ready<br>
+- Progressive Enhancement development ready<br>
+- Flexible images and media elements (video, audio, iframe, embed) by default<br>
+- Flexible, cross-browser HTML5 form elements by default<br>
+- Simple 12-columns fluid grid system IE8+<br>
+- Choose utility classes (e.g. '.h1', '.clearfix') or not (classless)<br>
+- Dark mode included<br>
+- Lightweight: just 10KB~ minified/gzipped (Bootstrap is 10 times more)<br>
 
 ## How to use it
 
@@ -25,22 +25,17 @@ Include it via CDN in the `<head>`
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 ```
 
-Or include the minified CSS file before your custom styles and, if needed, include some polyfills via JSDelivr CDN.
+Or include some polyfills via JSDelivr CDN for a wide cross-browser support:
 
-### IE8+ (verbose version)
+### IE11+ (minimal setup)
 
 ```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
-integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
-
-<!-- enable HTML5 elements, CSS3 media queries, and fix IE10 viewport on Windows 8 -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/respond.min.js,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-gREdttsFCQA+/jAI4yYFCtTs3d2gbjqhjAyUdoQprlF40Ig05yfwvRpZuM9yO5O6" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 </head>
 <body>
   <h1>Hello World!</h1>
@@ -68,6 +63,27 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
+### IE8+ (verbose version)
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
+
+<!-- enable HTML5 elements, CSS3 media queries, and fix IE10 viewport on Windows 8 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/respond.min.js,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-gREdttsFCQA+/jAI4yYFCtTs3d2gbjqhjAyUdoQprlF40Ig05yfwvRpZuM9yO5O6" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Hello World!</h1>
+</body>
+</html>
+```
+
 ### IE11+ (verbose version)
 
 ```html
@@ -85,21 +101,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 
 ```
 
-### IE11+ (minimal setup)
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
-</head>
-<body>
-  <h1>Hello World!</h1>
-</body>
-</html>
-```
 
 ## Classless
 
@@ -107,8 +109,8 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">
 ```
 
-Drop che bullframe.css styles in your webpage, and the job is done.
-Just semantic HTML and you get styles and cross-browser normalization.
+Drop the main CSS file in your webpage, and the job is done!
+Just semantic HTML and you get nice styles and cross-browser normalization.<br>
 More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frameworks/).
 
 ## Dark mode
@@ -119,8 +121,8 @@ This enables a dark-mode style in all browsers
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-darkmode.min.css">
 ```
 
-And this enable a dark mode only if the user prefers it, in browsers that support the <code>prefers-color-scheme</code> media query.
-Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+And this enable a dark mode only if the user prefers it, in browsers that support the <code>prefers-color-scheme</code> media query.<br>
+Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 ```html
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-darkmode-prefers.min.css">

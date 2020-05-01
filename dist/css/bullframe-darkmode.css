@@ -1412,47 +1412,46 @@ fieldset[disabled] .btn .btn[disabled],
   -webkit-overflow-scrolling: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color: #f0f0f0;
-  }
+html {
+  color: #f0f0f0;
+}
 
-  body {
-    background-color: #222;
-  }
+body {
+  background-color: #222;
+}
 
-  a {
-    color: #4da3ff;
-  }
+a {
+  color: #4da3ff;
+}
 
-  a:hover,
+a:hover,
 a:focus {
-    color: #017bff;
-  }
+  color: #017bff;
+}
 
-  mark {
-    background-color: #e6e600;
-  }
+mark {
+  background-color: #e6e600;
+}
 
-  ins {
-    background-color: #cccc00;
-  }
+ins {
+  background-color: #cccc00;
+}
 
-  kbd {
-    background-color: #ccc;
-    color: #000;
-  }
+kbd {
+  background-color: #ccc;
+  color: #000;
+}
 
-  hr {
-    border-color: #ccc;
-  }
+hr {
+  border-color: #ccc;
+}
 
-  .table th,
+.table th,
 .table td {
-    border-color: #666;
-  }
+  border-color: #666;
+}
 
-  [type=color],
+[type=color],
 [type=email],
 [type=number],
 [type=password],
@@ -1468,11 +1467,11 @@ a:focus {
 [type=url],
 select,
 textarea {
-    background-color: #333;
-    border-color: #000;
-  }
+  background-color: #333;
+  border-color: #000;
+}
 
-  [type=color]:focus,
+[type=color]:focus,
 [type=email]:focus,
 [type=number]:focus,
 [type=password]:focus,
@@ -1488,25 +1487,25 @@ textarea {
 [type=url]:focus,
 select:focus,
 textarea:focus {
-    background-color: #333;
-    border-color: #999;
-  }
+  background-color: #333;
+  border-color: #999;
+}
 
-  button,
+button,
 [type=button],
 [type=reset],
 [type=submit],
 .btn {
-    color: #222;
-    background: #ccc;
-  }
+  color: #222;
+  background: #ccc;
+}
 
-  .btn--primary {
-    color: #fff;
-    background: #0056b3;
-  }
+.btn--primary {
+  color: #fff;
+  background: #0056b3;
+}
 
-  button:hover,
+button:hover,
 [type=button]:hover,
 [type=reset]:hover,
 [type=submit]:hover,
@@ -1516,37 +1515,37 @@ button:focus,
 [type=submit]:focus,
 .btn:hover,
 .btn:focus {
-    color: #000;
-    background: #dfdfdf;
-  }
-
-  .btn--primary:hover,
-.btn--primary:focus {
-    color: #fff;
-    background: #0068d9;
-  }
-
-  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #999;
-  }
-
-  input::-moz-placeholder, textarea::-moz-placeholder {
-    color: #999;
-  }
-
-  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color: #999;
-  }
-
-  input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-    color: #999;
-  }
-
-  input::placeholder,
-textarea::placeholder {
-    color: #999;
-  }
+  color: #000;
+  background: #dfdfdf;
 }
+
+.btn--primary:hover,
+.btn--primary:focus {
+  color: #fff;
+  background: #0068d9;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #999;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #999;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #999;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -1634,4 +1633,3 @@ h3 {
     scroll-behavior: auto !important;
   }
 }
-/*# sourceMappingURL=bullframe.css.map */

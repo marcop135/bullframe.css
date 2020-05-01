@@ -65,12 +65,12 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 // No IE, Opera Mini and Samsung browser support
 // https://caniuse.com/#feat=prefers-color-scheme
-@import "utilities/utility-dark-mode-prefers";
+// @import "utilities/utility-dark-mode-prefers";
 
 // add dark using an <html> or <body> class
 // e.g. '.dark p { color: white }'
 // uncomment it if you need a dark mode as default
-// @import "utilities/utility-dark-mode";
+@import "utilities/utility-dark-mode";
 
 // default print styles
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css

@@ -97,8 +97,8 @@ legend {
 	border: 0;
 	padding: 0;
 	font-weight: 400;
-	margin-bottom: $spacing-md-px;
-	margin-bottom: $spacing-md-rem;
+	margin-bottom: $bf-spacing-md-px;
+	margin-bottom: $bf-spacing-md-rem;
 	font-size: inherit;
 	line-height: inherit;
 	color: inherit;
@@ -106,8 +106,8 @@ legend {
 
 label {
 	font-weight: 700;
-	margin-bottom: $spacing-md-px;
-	margin-bottom: $spacing-md-rem;
+	margin-bottom: $bf-spacing-md-px;
+	margin-bottom: $bf-spacing-md-rem;
 }
 
 [type="number"]::-webkit-outer-spin-button,
@@ -116,8 +116,8 @@ label {
 }
 
 [type="search"] {
-	outline-offset: -$spacing-sm-px;
-	outline-offset: -$spacing-sm-rem;
+	outline-offset: -$bf-spacing-sm-px;
+	outline-offset: -$bf-spacing-sm-rem;
 }
 
 output {
@@ -176,14 +176,14 @@ button,
 input,
 select,
 textarea {
-	border-radius: $spacing-sm-px;
-	border-radius: $spacing-sm-rem;
+	border-radius: $bf-spacing-sm-px;
+	border-radius: $bf-spacing-sm-rem;
 }
 
 // ! IE9+
 // https://caniuse.com/#feat=border-radius
 [type="radio"] {
-	border-radius: $spacing-md-px;
+	border-radius: $bf-spacing-md-px;
 }
 
 [type="color"],
@@ -202,8 +202,8 @@ textarea {
 [type="url"],
 select,
 textarea {
-	background-color: $white; // this is cross-browser
-	border: 1px solid $gray;
+	background-color: $bf-white; // this is cross-browser
+	border: 1px solid $bf-gray;
 }
 
 [type="radio"],
@@ -253,20 +253,20 @@ textarea {
 [type="url"],
 select,
 textarea {
-	padding: $spacing-md-px;
-	padding: $spacing-md-rem;
+	padding: $bf-spacing-md-px;
+	padding: $bf-spacing-md-rem;
 }
 
 label [type="radio"],
 label [type="checkbox"] {
-	margin-right: $spacing-lg-px;
-	margin-right: $spacing-lg-rem;
+	margin-right: $bf-spacing-lg-px;
+	margin-right: $bf-spacing-lg-rem;
 }
 
 label + [type="radio"],
 label + [type="checkbox"] {
-	margin-left: $spacing-lg-px;
-	margin-left: $spacing-lg-rem;
+	margin-left: $bf-spacing-lg-px;
+	margin-left: $bf-spacing-lg-rem;
 }
 
 [type="color"]:focus,
@@ -286,7 +286,7 @@ label + [type="checkbox"] {
 select:focus,
 textarea:focus {
 	transition: all .2s;
-	border-color: $black;
+	border-color: $bf-black;
 }
 
 button,
@@ -294,8 +294,8 @@ button,
 [type="reset"],
 [type="submit"] {
 	color: inherit;
-	padding: ($spacing-xl-px / 3) (($spacing-xl-px / 3) * 2); // 8px 16px
-	padding: ($spacing-xl-rem / 3) (($spacing-xl-rem / 3) * 2);
+	padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
+	padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
 	line-height: normal;
 	text-align: center;
 	margin: 0;
@@ -307,12 +307,12 @@ button,
 
 	// ! IE9+
 	// https://caniuse.com/#feat=border-radius
-	border-radius: $spacing-sm-px;
-	border-radius: $spacing-sm-rem;
+	border-radius: $bf-spacing-sm-px;
+	border-radius: $bf-spacing-sm-rem;
 
 	border: 0;
 	background-image: none; // FF mobile
-	background: $gray-light;
+	background: $bf-gray-light;
 	transition: all .2s;
 }
 
@@ -335,7 +335,7 @@ button:focus,
 [type="submit"]:focus {
 	text-decoration: none;
 	color: inherit;
-	background: darken($gray-light, 10%);
+	background: darken($bf-gray-light, 10%);
 }
 
 button:focus,
@@ -355,8 +355,8 @@ textarea:invalid,
 input:invalid:focus,
 select:invalid:focus,
 textarea:invalid:focus {
-	color: $red;
-	border-color: $red;
+	color: $bf-red;
+	border-color: $bf-red;
 	box-shadow: none;
 }
 
@@ -366,7 +366,7 @@ textarea:invalid:focus {
 // Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
-	color: $gray-dark;
+	color: $bf-gray-dark;
 }
 
 // disabled groups

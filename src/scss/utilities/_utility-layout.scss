@@ -1,26 +1,26 @@
 // micro-clearfix 
 // http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
+.bf-clearfix:before,
+.bf-clearfix:after {
 	content: " ";
 	display: table;
 }
 
-.clearfix:after {
+.bf-clearfix:after {
 	clear: both;
 }
 
-.hide {
+.bf-hide {
 	display: none !important;
 }
 
 // assistive text for screen reader only (e.g. form labels)
-.hidden {
+.bf-hidden {
 	display: none !important;
 	visibility: hidden !important;
 }
 
-.text-hide {
+.bf-text-hide {
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
@@ -40,7 +40,7 @@
 *    causes content to wrap 1 word per line:
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
-.sr-only {
+.bf-sr-only {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
 	height: 1px;
@@ -59,8 +59,8 @@
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
 */
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.bf-sr-only.focusable:active,
+.bf-sr-only.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -70,73 +70,62 @@
   width: auto;
 }
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-.invisible {
+.bf-invisible {
 	visibility: hidden;
 }
 
-.visible {
+.bf-visible {
 	visibility: visible;
 }
 
-.display-block {
+.bf-display-block {
 	display: block;
 }
 
-.display-block-center {
+.bf-display-block-center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.display-inline {
+.bf-display-inline {
 	display: inline;
 }
 
-.display-inline-block {
+.bf-display-inline-block {
 	display: inline-block ;
 }
 
 // IE10+
 // https://caniuse.com/#feat=flexbox
-.display-flex {
+.bf-display-flex {
 	display: flex !important;
 }
 
-.display-inline-flex {
+.bf-display-inline-flex {
 	display: inline-flex !important;
 }
 
-.float-right {
+.bf-float-right {
 	float: right;
 }
 
-.float-left {
+.bf-float-left {
 	float: left;
 }
 
-.position-fixed {
+.bf-position-fixed {
 	position: fixed;
 }
 
 // cross-browser vertically and horizontally center alignment
 // http://css-tricks.com/centering-in-the-unknown/
-.align-center-unknown {
+.bf-align-center-unknown {
 	display: table;
 	width: 100%;
 }
 
-.align-center-unknown--item {
+.bf-align-center-unknown--item {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;

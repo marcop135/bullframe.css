@@ -66,7 +66,7 @@ body {
 	// e.g. big <h1> or <h2> headlines
 	word-wrap: break-word;
 
-	background-color: $white;
+	background-color: $bf-white;
 
 	// 3D effects are problematic in WebKit because 
   // backface-visibility not hidden, so we can add backface support 
@@ -99,39 +99,39 @@ h6 {
 }
 
 h1 {
-	font-size: 3$spacing-md-px;
-	font-size: $spacing-xxl-rem;
-	margin: $spacing-xl-px 0;
-	margin: $spacing-xl-rem 0;
+	font-size: 3$bf-spacing-md-px;
+	font-size: $bf-spacing-xxl-rem;
+	margin: $bf-spacing-xl-px 0;
+	margin: $bf-spacing-xl-rem 0;
 }
 
 h2 {
 	font-size: 30px;
 	font-size: 3rem;
-	margin: $spacing-xl-px 0;
-	margin: $spacing-xl-rem 0;
+	margin: $bf-spacing-xl-px 0;
+	margin: $bf-spacing-xl-rem 0;
 }
 
 h3 {
-	font-size: $spacing-xl-px;
-	font-size: $spacing-xl-rem;
-	margin: $spacing-xl-px 0;
-	margin: $spacing-xl-rem 0;
+	font-size: $bf-spacing-xl-px;
+	font-size: $bf-spacing-xl-rem;
+	margin: $bf-spacing-xl-px 0;
+	margin: $bf-spacing-xl-rem 0;
 }
 
 h4 {
 	font-size: 20px;
 	font-size: 2rem;
-	margin: $spacing-lg-px 0;
-	margin: $spacing-lg-rem 0;
+	margin: $bf-spacing-lg-px 0;
+	margin: $bf-spacing-lg-rem 0;
 }
 
 h5
 h6 {
 	font-size: 17px;
 	font-size: 1.7rem;
-	margin: $spacing-lg-px 0;
-	margin: $spacing-lg-rem 0;
+	margin: $bf-spacing-lg-px 0;
+	margin: $bf-spacing-lg-rem 0;
 }
 
 // Abbreviations (taken Bootstrap 4)
@@ -151,12 +151,12 @@ abbr[data-original-title] {
 }
 
 blockquote {
-	margin: 0 0 $spacing-xl-px 0;
-	margin-bottom: $spacing-xl-rem;
-	padding-left: $spacing-xl-px;
-	padding-left: $spacing-xl-rem;
-	border-left: $spacing-md-px solid $gray;
-	border-left: .6rem solid $gray;
+	margin: 0 0 $bf-spacing-xl-px 0;
+	margin-bottom: $bf-spacing-xl-rem;
+	padding-left: $bf-spacing-xl-px;
+	padding-left: $bf-spacing-xl-rem;
+	border-left: $bf-spacing-md-px solid $bf-gray;
+	border-left: .6rem solid $bf-gray;
 	font-style: italic;
 }
 
@@ -165,7 +165,7 @@ blockquote p {
 }
 
 blockquote small {
-	color: $gray;
+	color: $bf-gray;
 	display: block;
 }
 
@@ -178,21 +178,21 @@ q {
 }
 
 mark {
-	background-color: $yellow;
-	color: $black;
+	background-color: $bf-yellow;
+	color: $bf-black;
 	font-weight: 700;
 }
 
 ins {
-	background-color: $yellow-light;
-	color: $black;
+	background-color: $bf-yellow-light;
+	color: $bf-black;
 	text-decoration: none;
 }
 
 p,
 pre {
-	margin: 0 0 $spacing-xl-px 0;
-	margin: 0 0 $spacing-xl-rem 0;
+	margin: 0 0 $bf-spacing-xl-px 0;
+	margin: 0 0 $bf-spacing-xl-rem 0;
 }
 
 pre {
@@ -217,14 +217,14 @@ samp {
 }
 
 kbd {
-	background-color: $dark;
-	color: $white;
-	padding: $spacing-sm-px;
-	padding: $spacing-sm-rem;
+	background-color: $bf-dark;
+	color: $bf-white;
+	padding: $bf-spacing-sm-px;
+	padding: $bf-spacing-sm-rem;
 
 	// ! IE9+
 	// https://caniuse.com/#feat=border-radius
-	border-radius: $spacing-sm-px;
+	border-radius: $bf-spacing-sm-px;
 }
 
 // Prevent the duplicate application of `bolder` by the next rule 
@@ -271,17 +271,17 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid $gray;
-	margin: $spacing-xl-px 0;
-	margin: $spacing-xl-rem 0;
+	border-top: 1px solid $bf-gray;
+	margin: $bf-spacing-xl-px 0;
+	margin: $bf-spacing-xl-rem 0;
 	padding: 0;
 	overflow: visible; // Show the overflow in Edge and IE
 }
 
 address {
 	font-style: normal;
-	margin-bottom: $spacing-lg-px;
-	margin-bottom: $spacing-lg-rem;
+	margin-bottom: $bf-spacing-lg-px;
+	margin-bottom: $bf-spacing-lg-rem;
 	line-height: inherit;
 }
 

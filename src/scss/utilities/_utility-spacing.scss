@@ -3,84 +3,84 @@
 
 // margins and paddings classes
 
-.m-0 {
+.bf-m-0 {
 	margin: 0 !important;
 }
 
-.m-top-0 {
+.bf-m-top-0 {
 	margin-top: 0 !important;
 }
 
-.m-bottom-0 {
+.bf-m-bottom-0 {
 	margin-bottom: 0 !important;
 }
 
-.m-left-0 {
+.bf-m-left-0 {
 	margin-left: 0 !important;
 }
 
-.m-right-0 {
+.bf-m-right-0 {
 	margin-right: 0 !important;
 }
 
-.m-bottom-6 {
-	margin-bottom: $spacing-md-px !important;
-	margin-bottom: $spacing-lg-rem !important;
+.bf-m-bottom-6 {
+	margin-bottom: $bf-spacing-md-px !important;
+	margin-bottom: $bf-spacing-lg-rem !important;
 }
 
-.m-bottom-12 {
-	margin-bottom: $spacing-lg-px !important;
-	margin-bottom: $spacing-lg-rem !important;
+.bf-m-bottom-12 {
+	margin-bottom: $bf-spacing-lg-px !important;
+	margin-bottom: $bf-spacing-lg-rem !important;
 }
 
-.m-bottom-24 {
-	margin-bottom: $spacing-xl-px !important;
-	margin-bottom: $spacing-xl-rem !important;
+.bf-m-bottom-24 {
+	margin-bottom: $bf-spacing-xl-px !important;
+	margin-bottom: $bf-spacing-xl-rem !important;
 }
 
-.m-bottom-36 {
-	margin-bottom: 3$spacing-md-px !important;
-	margin-bottom: $spacing-xxl-rem !important;
+.bf-m-bottom-36 {
+	margin-bottom: 3$bf-spacing-md-px !important;
+	margin-bottom: $bf-spacing-xxl-rem !important;
 }
 
 // paddings
 
-.p-0 {
+.bf-p-0 {
 	padding: 0 !important;
 }
 
-.p-top-0 {
+.bf-p-top-0 {
 	padding-top: 0 !important;
 }
 
-.p-bottom-0 {
+.bf-p-bottom-0 {
 	padding-bottom: 0 !important;
 }
 
-.p-left-0 {
+.bf-p-left-0 {
 	padding-left: 0 !important;
 }
 
-.p-right-0 {
+.bf-p-right-0 {
 	padding-right: 0 !important;
 }
 
-.p-bottom-6 {
-	padding-bottom: $spacing-md-px !important;
-	padding-bottom: $spacing-lg-rem !important;
+.bf-p-bottom-6 {
+	padding-bottom: $bf-spacing-md-px !important;
+	padding-bottom: $bf-spacing-lg-rem !important;
 }
 
-.p-bottom-12 {
-	padding-bottom: $spacing-lg-px !important;
-	padding-bottom: $spacing-lg-rem !important;
+.bf-p-bottom-12 {
+	padding-bottom: $bf-spacing-lg-px !important;
+	padding-bottom: $bf-spacing-lg-rem !important;
 }
 
-.p-bottom-24 {
-	padding-bottom: $spacing-xl-px !important;
-	padding-bottom: $spacing-xl-rem !important;
+.bf-p-bottom-24 {
+	padding-bottom: $bf-spacing-xl-px !important;
+	padding-bottom: $bf-spacing-xl-rem !important;
 }
 
-.p-bottom-36 {
-	padding-bottom: 3$spacing-md-px !important;
-	padding-bottom: $spacing-xxl-rem !important;
+.bf-p-bottom-36 {
+	padding-bottom: 3$bf-spacing-md-px !important;
+	padding-bottom: $bf-spacing-xxl-rem !important;
 }

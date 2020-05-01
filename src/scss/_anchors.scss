@@ -14,7 +14,7 @@
 }
 
 a {
-	color: $blue-light; // bootstrap blue
+	color: $bf-blue-light; // bootstrap blue
 	text-decoration: none;
 
 	// IE10+: Remove grey background on active links
@@ -28,7 +28,7 @@ a {
 a:hover,
 a:focus {
 	text-decoration: underline;
-	color: $blue-light;
+	color: $bf-blue-light;
 }
 
 // this is taken from Bootstrap's reboot

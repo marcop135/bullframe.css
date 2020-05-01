@@ -1,43 +1,43 @@
 html {
-  color: $light;
+  color: $bf-light;
 }
 
 body {
-  background-color: $dark;
+  background-color: $bf-dark;
 }
 
 // anchors
 a {
-	color: lighten($blue, 15%);
+	color: lighten($bf-blue, 15%);
 }
 
 a:hover,
 a:focus {
-	color: lighten($blue-light, 15%);
+	color: lighten($bf-blue-light, 15%);
 }
 
 // typography
 mark {
-	background-color: darken($yellow, 5%);
+	background-color: darken($bf-yellow, 5%);
 }
 
 ins {
-	background-color: darken($yellow-light, 40%);
+	background-color: darken($bf-yellow-light, 40%);
 }
 
 kbd {
-  background-color: $gray-light;
-  color: $black;
+  background-color: $bf-gray-light;
+  color: $bf-black;
 }
 
 hr {
-  border-color: $gray-light;
+  border-color: $bf-gray-light;
 }
 
 // tables
-.table th,
-.table td {
-	border-color: $gray-dark;
+.bf-table th,
+.bf-table td {
+	border-color: $bf-gray-dark;
 }
 
 // forms
@@ -57,8 +57,8 @@ hr {
 [type="url"],
 select,
 textarea {
-  background-color: $gray-dark-extra;
-  border-color: $black;
+  background-color: $bf-gray-dark-extra;
+  border-color: $bf-black;
 }
 
 [type="color"]:focus,
@@ -77,8 +77,8 @@ textarea {
 [type="url"]:focus,
 select:focus,
 textarea:focus {
-  background-color: $gray-dark-extra;
-	border-color: $gray;
+  background-color: $bf-gray-dark-extra;
+	border-color: $bf-gray;
 }
 
 button,
@@ -86,13 +86,13 @@ button,
 [type="reset"],
 [type="submit"],
 .btn {
-  color: $dark;
-  background: $gray-light;
+  color: $bf-dark;
+  background: $bf-gray-light;
 }
 
 .btn--primary {
-  color: $white;
-  background: $blue-light;
+  color: $bf-white;
+  background: $bf-blue-light;
 }
 
 button:hover,
@@ -103,19 +103,19 @@ button:focus,
 [type="button"]:focus,
 [type="reset"]:focus,
 [type="submit"]:focus,
-.btn:hover,
-.btn:focus {
-	color: $black;
-  background: lighten($gray-light, 7.5%);
+.bf-btn:hover,
+.bf-btn:focus {
+	color: $bf-black;
+  background: lighten($bf-gray-light, 7.5%);
 }
 
-.btn--primary:hover,
-.btn--primary:focus {
-  color: $white;
-  background: lighten($blue-light, 7.5%);
+.bf-btn--primary:hover,
+.bf-btn--primary:focus {
+  color: $bf-white;
+  background: lighten($bf-blue-light, 7.5%);
 }
 
 input::placeholder,
 textarea::placeholder {
-	color: $gray;
+	color: $bf-gray;
 }

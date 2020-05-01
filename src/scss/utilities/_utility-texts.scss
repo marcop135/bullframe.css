@@ -1,42 +1,42 @@
-.text-uppercase {
+.bf-text-uppercase {
 	text-transform: uppercase;
 }
 
-.text-transform-none {
+.bf-text-transform-none {
 	text-transform: none;
 }
 
-.text-left {
+.bf-text-left {
 	text-align: left;
 }
 
-.text-center {
+.bf-text-center {
 	text-align: center;
 }
 
-.text-right {
+.bf-text-right {
 	text-align: right;
 }
 
-.text-shadow {
-	text-shadow: 0 0 .2rem $dark;
+.bf-text-shadow {
+	text-shadow: 0 0 .2rem $bf-dark;
 }
 
-.text-italic {
+.bf-text-italic {
 	font-style: italic;
 }
 
 // useful to 'reset' <i> inherited style
-.text-style-normal {
+.bf-text-style-normal {
 	font-style: normal;
 }
 
 // useful to 'reset' <b> inherited style
-.text-weight-normal {
+.bf-text-weight-normal {
 	font-weight: 400;
 }
 
-.text-truncate {
+.bf-text-truncate {
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -44,7 +44,7 @@
 	word-wrap: normal;
 }
 
-.no-select {
+.bf-no-select {
 	user-select: none;
 
 	// this is a not standard CSS property, so it's for webkit only
@@ -57,69 +57,69 @@
 }
 
 
-.font-sans-serif {
+.bf-font-sans-serif {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
 		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
 }
 
-.font-serif {
+.bf-font-serif {
 	font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-.font-monospace {
+.bf-font-monospace {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
 		"Courier New", monospace;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+.bf-h1,
+.bf-h2,
+.bf-h3,
+.bf-h4,
+.bf-h5,
+.bf-h6 {
 	font-weight: 700;
 	margin-top: 0;
 }
 
-.h1 {
-	font-size: 3$spacing-md-px;
-	font-size: $spacing-xxl-rem;
-	margin: $spacing-xl-px 0;
-	margin: $spacing-xl-rem 0;
+.bf-h1 {
+	font-size: 3$bf-spacing-md-px;
+	font-size: $bf-spacing-xxl-rem;
+	margin: $bf-spacing-xl-px 0;
+	margin: $bf-spacing-xl-rem 0;
 }
 
-.h2 {
+.bf-h2 {
 	font-size: 30px;
 	font-size: 3rem;
-	margin: $spacing-xl-px 0;
-	margin: $spacing-xl-rem 0;
+	margin: $bf-spacing-xl-px 0;
+	margin: $bf-spacing-xl-rem 0;
 }
 
-.h3 {
-	font-size: $spacing-xl-px;
-	font-size: $spacing-xl-rem;
-	margin: $spacing-xl-px 0;
-	margin: $spacing-xl-rem 0;
+.bf-h3 {
+	font-size: $bf-spacing-xl-px;
+	font-size: $bf-spacing-xl-rem;
+	margin: $bf-spacing-xl-px 0;
+	margin: $bf-spacing-xl-rem 0;
 }
 
-.h4 {
+.bf-h4 {
 	font-size: 20px;
 	font-size: 2rem;
-	margin: $spacing-lg-px 0;
-	margin: $spacing-lg-rem 0;
+	margin: $bf-spacing-lg-px 0;
+	margin: $bf-spacing-lg-rem 0;
 }
 
-.h5,
-.h6 {
+.bf-h5,
+.bf-h6 {
 	font-size: 17px;
 	font-size: 1.7rem;
-	margin: $spacing-lg-px 0;
-	margin: $spacing-lg-rem 0;
+	margin: $bf-spacing-lg-px 0;
+	margin: $bf-spacing-lg-rem 0;
 }
 
-p.lead {
+p.bf-lead {
 	font-size: 120%;
 }
 

@@ -16,8 +16,8 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 - Flexible images and media elements (video, audio, iframe, embed) by default
 - Flexible, cross-browser HTML5 form elements by default
 - 10KB~ minified/gzipped
-- Use classes only for utilities (e.g. '.clearfix', '.text-hide')
-- Extensive bug fixing documentation
+- Choose utility classes or avoid them (classless)
+- Heavily commented
 
 ## How to use it
 

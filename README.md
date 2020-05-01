@@ -24,7 +24,7 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 Include it via CDN in the `<head>`
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 ```
 
 Or include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN.
@@ -38,34 +38,11 @@ IE8+ (verbose version)
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
 integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
 
-<link rel="stylesheet" href="your-styles.css" />
-
-<!-- enable HTML5 elements and CSS3 media queries in old browsers 
-(html5shiv.js + respond.js) -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/respond.min.js" integrity="sha384-Y5098RDeBIkjYD3undzXpR4viQ5s5ZgUNJ/2s2RSQ5nabAj9M34XtL5luONpYt1A" crossorigin="anonymous"></script>
-</head>
-<body>
-  <h1>Hello World!</h1>
-</body>
-</html>
-```
-
-IE10+ (verbose version)
-
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"  crossorigin="anonymous">
-
-<link rel="stylesheet" href="your-styles.css" />
-
+<!-- enable HTML5 elements, CSS3 media queries, and fix IE10 viewport on Windows 8 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/respond.min.js,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-gREdttsFCQA+/jAI4yYFCtTs3d2gbjqhjAyUdoQprlF40Ig05yfwvRpZuM9yO5O6" crossorigin="anonymous"></script>
 </head>
 <body>
   <h1>Hello World!</h1>
@@ -79,13 +56,13 @@ IE8+ (minimal setup)
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 
-<!-- support for HTML5 elements and media queries in old browsers -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/respond.min.js"></script>
+<!-- enable HTML5 elements, CSS3 media queries, and fix IE10 viewport on Windows 8 -->
+<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/respond.min.js,npm/ie10-viewport-bug-workaround.js@1.0.0"></script>
 </head>
 <body>
   <h1>Hello World!</h1>
@@ -93,7 +70,24 @@ IE8+ (minimal setup)
 </html>
 ```
 
-IE10+ (minimal setup)
+IE11+ (verbose version)
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"  crossorigin="anonymous">
+</head>
+<body>
+  <h1>Hello World!</h1>
+</body>
+</html>
+
+```
+
+IE11+ (minimal setup)
 
 ```html
 <!DOCTYPE html>

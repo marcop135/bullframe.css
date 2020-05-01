@@ -24,7 +24,7 @@
 	transition: all .2s;
 }
 
-.bf-btn--primary {
+.bf-btn.bf-btn--primary {
   color: $bf-white;
   background: $bf-blue-light;
 }
@@ -36,8 +36,8 @@
   background: darken($bf-gray-light, 10%);
 }
 
-.bf-btn--primary:hover,
-.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:focus {
   color: $bf-white;
   background: darken($bf-blue-light, 10%);
 }

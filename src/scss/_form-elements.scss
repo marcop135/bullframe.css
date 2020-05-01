@@ -186,26 +186,6 @@ textarea {
 	border-radius: $bf-spacing-md-px;
 }
 
-[type="color"],
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="time"],
-[type="url"],
-select,
-textarea {
-	background-color: $bf-white; // this is cross-browser
-	border: 1px solid $bf-gray;
-}
-
 [type="radio"],
 [type="checkbox"] {
 	padding: 0;
@@ -253,8 +233,19 @@ textarea {
 [type="url"],
 select,
 textarea {
+	background-color: $bf-white; // this is cross-browser
+	border: 1px solid $bf-gray;
+
 	padding: $bf-spacing-md-px;
 	padding: $bf-spacing-md-rem;
+
+	// remove the outline and add :focus colors/bgs
+	outline: 0 none;
+
+	&:focus {
+		transition: all .2s;
+		border-color: $bf-black;
+	}
 }
 
 label [type="radio"],
@@ -269,30 +260,22 @@ label + [type="checkbox"] {
 	margin-left: $bf-spacing-lg-rem;
 }
 
-[type="color"]:focus,
-[type="email"]:focus,
-[type="number"]:focus,
-[type="password"]:focus,
-[type="tel"]:focus,
-[type="search"]:focus,
-[type="text"]:focus,
-[type="date"]:focus,
-[type="datetime-local"]:focus,
-[type="month"]:focus,
-[type="time"]:focus,
-[type="week"]:focus,
-[type="time"]:focus,
-[type="url"]:focus,
-select:focus,
-textarea:focus {
-	transition: all .2s;
-	border-color: $bf-black;
+// Firefox: Get rid of the inner focus border
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	padding: 0;
+	border-style: none;
 }
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+	// remove the outline and add :focus colors/bgs
+	outline: 0 none;
+
 	color: inherit;
 	padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
 	padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
@@ -316,15 +299,6 @@ button,
 	transition: all .2s;
 }
 
-// Firefox: Get rid of the inner focus border
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	padding: 0;
-	border-style: none;
-}
-
 button:hover,
 [type="button"]:hover,
 [type="reset"]:hover,
@@ -333,6 +307,9 @@ button:focus,
 [type="button"]:focus,
 [type="reset"]:focus,
 [type="submit"]:focus {
+	// remove the outline and add :focus colors/bgs
+	outline: 0 none;
+
 	text-decoration: none;
 	color: inherit;
 	background: darken($bf-gray-light, 10%);
@@ -342,9 +319,6 @@ button:focus,
 [type="button"]:focus,
 [type="reset"]:focus,
 [type="submit"]:focus {
-	// ! do not remove the outline
-	// Accessibility Concerns
-	// https://developer.mozilla.org/en-US/docs/Web/CSS/:focus#Accessibility_Concerns
 	outline: 1px dotted;
 	outline: 5px auto -webkit-focus-ring-color;
 }

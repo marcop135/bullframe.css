@@ -171,24 +171,8 @@
 			}
 		</style>
 
-		<!-- enable HTML5 elements and CSS3 Media Queries support in all browsers -->
-		<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/matchmedia.addListener.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/src/respond.js"></script>
-
-		<!-- Fix IE 10 on Windows Phone 8 Viewport -->
-		<script>
-			// Copyright 2014-2015 Twitter, Inc.
-			// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-			// https://getbootstrap.com/docs/3.3/getting-started/#support-ie10-width
-			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-				var msViewportStyle = document.createElement("style");
-				msViewportStyle.appendChild(
-					document.createTextNode("@-ms-viewport{width:auto!important}")
-				);
-				document.querySelector("head").appendChild(msViewportStyle);
-			}
-		</script>
+		<!-- enable HTML5 elements, CSS3 media queries, and fix IE10 viewport on Windows 8 -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/respond.min.js,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-gREdttsFCQA+/jAI4yYFCtTs3d2gbjqhjAyUdoQprlF40Ig05yfwvRpZuM9yO5O6" crossorigin="anonymous"></script>
 	</head>
 
 	<body class="bullframe-demo">

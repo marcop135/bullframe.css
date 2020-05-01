@@ -1,23 +1,22 @@
 # bullframe.css
 
-_bullframe.css_ is a CSS file to be used as an alternative to CSS resets and as a starting-point for a solid mobile-first responsive web design **retro-compatible with IE8** and other old browsers.
+_bullframe.css_ is a CSS boilerplate to be used as an alternative to CSS resets and as a starting-point for a solid mobile-first responsive web design **retro-compatible with IE8** and other old browsers.
 
 You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
 
-![dependencies badge](https://img.shields.io/github/license/marcop135/bullframe.css)
-
 ## Best features
 
-- Normalize and fluidify as much as possible HTML elements out-of-the-box
-- Support IE8+ and a wide range of desktop and mobile browsers
-- Mobile-First Responsive Web Design ready
-- Progressive Enhancement development ready
-- Simple 12-columns fluid grid system IE8+
-- Flexible images and media elements (video, audio, iframe, embed) by default
-- Flexible, cross-browser HTML5 form elements by default
-- 10KB~ minified/gzipped
-- Choose utility classes or avoid them (classless)
-- Heavily commented
+:heavy_check_mark: Normalize and fluidify as much as possible HTML elements out-of-the-box
+:heavy_check_mark: Support IE8+ and a wide range of desktop and mobile browsers
+:heavy_check_mark: Mobile-First Responsive Web Design ready
+:heavy_check_mark: Progressive Enhancement development ready
+:heavy_check_mark: Flexible images and media elements (video, audio, iframe, embed) by default
+:heavy_check_mark: Flexible, cross-browser HTML5 form elements by default
+:heavy_check_mark: Simple 12-columns fluid grid system IE8+
+:heavy_check_mark: Choose utility classes (e.g. '.btn') or not (classless)
+:heavy_check_mark: Dark mode included
+:heavy_check_mark: Heavily commented
+:heavy_check_mark: 10KB~ minified/gzipped
 
 ## How to use it
 
@@ -29,7 +28,7 @@ Include it via CDN in the `<head>`
 
 Or include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN.
 
-IE8+ (verbose version)
+*IE8+ (verbose version)*
 
 ```html
 <!DOCTYPE html>
@@ -50,7 +49,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-IE8+ (minimal setup)
+*IE8+ (minimal setup)*
 
 ```html
 <!DOCTYPE html>
@@ -70,7 +69,7 @@ IE8+ (minimal setup)
 </html>
 ```
 
-IE11+ (verbose version)
+*IE11+ (verbose version)*
 
 ```html
 <!DOCTYPE html>
@@ -87,7 +86,7 @@ IE11+ (verbose version)
 
 ```
 
-IE11+ (minimal setup)
+*IE11+ (minimal setup)*
 
 ```html
 <!DOCTYPE html>
@@ -111,7 +110,7 @@ Desktop browsers
 
 - IE 8+
 - Latest Stable: Firefox, Chrome, Safari, Opera
-
+ 
 Mobile browsers
 
 - Latest Stable: Firefox, Chrome and Opera

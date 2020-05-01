@@ -272,9 +272,7 @@ a {
   -webkit-text-decoration-skip-ink: objects;
           text-decoration-skip-ink: objects;
 }
-
-a:hover,
-a:focus {
+a:hover, a:focus {
   text-decoration: underline;
   color: #0056b3;
 }
@@ -567,26 +565,6 @@ textarea {
   border-radius: 6px;
 }
 
-[type=color],
-[type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=time],
-[type=week],
-[type=time],
-[type=url],
-select,
-textarea {
-  background-color: #fff;
-  border: 1px solid #999;
-}
-
 [type=radio],
 [type=checkbox] {
   padding: 0;
@@ -634,23 +612,12 @@ textarea {
 [type=url],
 select,
 textarea {
+  background-color: #fff;
+  border: 1px solid #999;
   padding: 6px;
   padding: 0.6rem;
+  outline: 0 none;
 }
-
-label [type=radio],
-label [type=checkbox] {
-  margin-right: 12px;
-  margin-right: 1.2rem;
-}
-
-label + [type=radio],
-label + [type=checkbox] {
-  margin-left: 12px;
-  margin-left: 1.2rem;
-}
-
-[type=color]:focus,
 [type=email]:focus,
 [type=number]:focus,
 [type=password]:focus,
@@ -672,10 +639,31 @@ textarea:focus {
   border-color: #000;
 }
 
+label [type=radio],
+label [type=checkbox] {
+  margin-right: 12px;
+  margin-right: 1.2rem;
+}
+
+label + [type=radio],
+label + [type=checkbox] {
+  margin-left: 12px;
+  margin-left: 1.2rem;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
 button,
 [type=button],
 [type=reset],
 [type=submit] {
+  outline: 0 none;
   color: inherit;
   padding: 8px 16px;
   padding: 0.8rem 1.6rem;
@@ -700,14 +688,6 @@ button,
   transition: all 0.2s;
 }
 
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-
 button:hover,
 [type=button]:hover,
 [type=reset]:hover,
@@ -716,6 +696,7 @@ button:focus,
 [type=button]:focus,
 [type=reset]:focus,
 [type=submit]:focus {
+  outline: 0 none;
   text-decoration: none;
   color: inherit;
   background: #b3b3b3;
@@ -1318,7 +1299,7 @@ p.bf-lead {
   transition: all 0.2s;
 }
 
-.bf-btn--primary {
+.bf-btn.bf-btn--primary {
   color: #fff;
   background: #0056b3;
 }
@@ -1330,8 +1311,8 @@ p.bf-lead {
   background: #b3b3b3;
 }
 
-.bf-btn--primary:hover,
-.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:focus {
   color: #fff;
   background: #003d80;
 }
@@ -1422,9 +1403,7 @@ dd.bf-list-unstyled {
   a {
     color: #4da3ff;
   }
-
-  a:hover,
-a:focus {
+  a:hover, a:focus {
     color: #017bff;
   }
 
@@ -1469,7 +1448,6 @@ textarea {
     background-color: #333;
     border-color: #000;
   }
-
   [type=color]:focus,
 [type=email]:focus,
 [type=number]:focus,
@@ -1488,40 +1466,6 @@ select:focus,
 textarea:focus {
     background-color: #333;
     border-color: #999;
-  }
-
-  button,
-[type=button],
-[type=reset],
-[type=submit],
-.btn {
-    color: #222;
-    background: #ccc;
-  }
-
-  .btn--primary {
-    color: #fff;
-    background: #0056b3;
-  }
-
-  button:hover,
-[type=button]:hover,
-[type=reset]:hover,
-[type=submit]:hover,
-button:focus,
-[type=button]:focus,
-[type=reset]:focus,
-[type=submit]:focus,
-.bf-btn:hover,
-.bf-btn:focus {
-    color: #000;
-    background: #dfdfdf;
-  }
-
-  .bf-btn--primary:hover,
-.bf-btn--primary:focus {
-    color: #fff;
-    background: #0068d9;
   }
 
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -1543,6 +1487,34 @@ button:focus,
   input::placeholder,
 textarea::placeholder {
     color: #999;
+  }
+
+  button,
+[type=button],
+[type=reset],
+[type=submit],
+.bf-btn {
+    color: #222;
+    background: #b3b3b3;
+  }
+  button:hover, button:focus,
+[type=button]:hover,
+[type=button]:focus,
+[type=reset]:hover,
+[type=reset]:focus,
+[type=submit]:hover,
+[type=submit]:focus,
+.bf-btn:hover,
+.bf-btn:focus {
+    color: #222;
+    background: #ccc;
+  }
+
+  .bf-btn.bf-btn--primary {
+    background: #0056b3;
+  }
+  .bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:focus {
+    background: #0062cd;
   }
 }
 /* ==========================================================================

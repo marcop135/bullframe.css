@@ -23,12 +23,12 @@ a {
 	// Remove gaps in links underline in iOS 8+ and Safari 8+.
 	text-decoration-skip: objects;
 	text-decoration-skip-ink: objects;
-}
 
-a:hover,
-a:focus {
-	text-decoration: underline;
-	color: $bf-blue-light;
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		color: $bf-blue-light;
+	}
 }
 
 // this is taken from Bootstrap's reboot

@@ -21,8 +21,8 @@
 
 .table-responsive table {
 	width: 100%;
-	margin-bottom: 1$spacing-md-px;
-	margin-bottom: 1.6rem;
+	margin-bottom: $spacing-md-px;
+	margin-bottom: $spacing-md-rem;
 }
 
 // force webkit scrollbars appearance

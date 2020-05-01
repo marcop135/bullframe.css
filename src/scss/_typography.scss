@@ -180,7 +180,8 @@ q {
 mark {
 	background: $yellow;
 	color: $black;
-	font-weight: 700;}
+	font-weight: 700;
+}
 
 ins {
 	background: $yellow-light;
@@ -218,6 +219,9 @@ samp {
 kbd {
 	background-color: $dark;
 	color: $white;
+	padding: $spacing-sm-px;
+	padding: $spacing-sm-rem;
+	border-radius: $spacing-sm-px;
 }
 
 // Prevent the duplicate application of `bolder` by the next rule 

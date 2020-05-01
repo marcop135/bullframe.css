@@ -22,7 +22,7 @@ Write semantic HTML, drop the styles you need, add some polyfills if needed, and
 Include it via CDN in the `<head>`
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 ```
 
 Or include some polyfills via JSDelivr CDN for a wide cross-browser support:
@@ -115,13 +115,13 @@ More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frame
 
 ## Dark mode
 
-This enables a dark-mode style in all browsers
+This enables a dark-mode style in all browsers:
 
 ```html
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-darkmode.min.css">
 ```
 
-And this enable a dark mode only if the user prefers it, in browsers that support the <code>prefers-color-scheme</code> media query.<br>
+And this, enables a dark mode only if the user prefers it, in browsers that support the <code>prefers-color-scheme</code> media query.<br>
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 ```html

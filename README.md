@@ -6,17 +6,17 @@ You can copy-and-paste it quickly or just watch it when you build cool websites 
 
 ## Best features
 
-:heavy_check_mark: Normalize and fluidify as much as possible HTML elements out-of-the-box
-:heavy_check_mark: Support IE8+ and a wide range of desktop and mobile browsers
-:heavy_check_mark: Mobile-First Responsive Web Design ready
-:heavy_check_mark: Progressive Enhancement development ready
-:heavy_check_mark: Flexible images and media elements (video, audio, iframe, embed) by default
-:heavy_check_mark: Flexible, cross-browser HTML5 form elements by default
-:heavy_check_mark: Simple 12-columns fluid grid system IE8+
-:heavy_check_mark: Choose utility classes (e.g. '.btn') or not (classless)
-:heavy_check_mark: Dark mode included
-:heavy_check_mark: Heavily commented
-:heavy_check_mark: 10KB~ minified/gzipped
+:heavy_check_mark: Normalize and fluidify as much as possible HTML elements out-of-the-box<br>
+:heavy_check_mark: Support IE8+ and a wide range of desktop and mobile browsers<br>
+:heavy_check_mark: Mobile-First Responsive Web Design ready<br>
+:heavy_check_mark: Progressive Enhancement development ready<br>
+:heavy_check_mark: Flexible images and media elements (video, audio, iframe, embed) by default<br>
+:heavy_check_mark: Flexible, cross-browser HTML5 form elements by default<br>
+:heavy_check_mark: Simple 12-columns fluid grid system IE8+<br>
+:heavy_check_mark: Choose utility classes (e.g. '.btn') or not (classless)<br>
+:heavy_check_mark: Dark mode included<br>
+:heavy_check_mark: Heavily commented<br>
+:heavy_check_mark: 10KB~ minified/gzipped<br>
 
 ## How to use it
 
@@ -26,9 +26,9 @@ Include it via CDN in the `<head>`
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 ```
 
-Or include the bullframe.css file _before_ your custom styles and, if needed, include some polyfills via JSDelivr CDN.
+Or include the minified CSS file before your custom styles and, if needed, include some polyfills via JSDelivr CDN.
 
-*IE8+ (verbose version)*
+### IE8+ (verbose version)
 
 ```html
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-*IE8+ (minimal setup)*
+### IE8+ (minimal setup)
 
 ```html
 <!DOCTYPE html>
@@ -69,7 +69,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-*IE11+ (verbose version)*
+### IE11+ (verbose version)
 
 ```html
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 
 ```
 
-*IE11+ (minimal setup)*
+### IE11+ (minimal setup)
 
 ```html
 <!DOCTYPE html>
@@ -101,6 +101,32 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </body>
 </html>
 ```
+
+## Classless
+
+```html
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">
+```
+
+Drop che bullframe.css styles in your webpage, and the job is done.
+Just semantic HTML and you get styles and cross-browser normalization.
+More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frameworks/).
+
+## Dark mode
+
+This enables a dark-mode style in all browsers
+
+```html
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-darkmode.min.css">
+```
+
+And this enable a dark mode only if the user prefers it, in browsers that support the <code>prefers-color-scheme</code> media query.
+Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+
+```html
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-darkmode-prefers.min.css">
+```
+
 
 ## Browser support
 

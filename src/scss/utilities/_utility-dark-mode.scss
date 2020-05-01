@@ -1,0 +1,121 @@
+html {
+  color: $light;
+}
+
+body {
+  background-color: $dark;
+}
+
+// anchors
+a {
+	color: lighten($blue, 15%);
+}
+
+a:hover,
+a:focus {
+	color: lighten($blue-light, 15%);
+}
+
+// typography
+mark {
+	background-color: darken($yellow, 5%);
+}
+
+ins {
+	background-color: darken($yellow-light, 40%);
+}
+
+kbd {
+  background-color: $gray-light;
+  color: $black;
+}
+
+hr {
+  border-color: $gray-light;
+}
+
+// tables
+.table th,
+.table td {
+	border-color: $gray-dark;
+}
+
+// forms
+[type="color"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+select,
+textarea {
+  background-color: $gray-dark-extra;
+  border-color: $black;
+}
+
+[type="color"]:focus,
+[type="email"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="tel"]:focus,
+[type="search"]:focus,
+[type="text"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
+[type="time"]:focus,
+[type="url"]:focus,
+select:focus,
+textarea:focus {
+  background-color: $gray-dark-extra;
+	border-color: $gray;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+.btn {
+  color: $dark;
+  background: $gray-light;
+}
+
+.btn--primary {
+  color: $white;
+  background: $blue-light;
+}
+
+button:hover,
+[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover,
+button:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus,
+.btn:hover,
+.btn:focus {
+	color: $black;
+  background: lighten($gray-light, 7.5%);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  color: $white;
+  background: lighten($blue-light, 7.5%);
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: $gray;
+}

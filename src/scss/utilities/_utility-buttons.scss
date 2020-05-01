@@ -27,7 +27,6 @@
 .btn:hover,
 .btn:focus {
 	text-decoration: none;
-	border-color: darken($gray-light, 10%);
 	color: inherit;
   background: darken($gray-light, 10%);
 }
@@ -35,7 +34,6 @@
 .btn--primary:hover,
 .btn--primary:focus {
   color: $white;
-  border-color: darken($blue-light, 10%);
   background: darken($blue-light, 10%);
 }
 

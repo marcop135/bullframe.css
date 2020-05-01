@@ -559,7 +559,8 @@ button,
 input,
 select,
 textarea {
-  border-radius: 0;
+  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 
 [type=radio] {
@@ -690,6 +691,7 @@ button,
       -ms-user-select: none;
           user-select: none;
   border-radius: 3px;
+  border-radius: 0.3rem;
   border: 0;
   background-image: none;
   background: #ccc;

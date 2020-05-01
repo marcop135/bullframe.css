@@ -61,18 +61,8 @@ body {
           backface-visibility: hidden;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+h1 h2 h3 h4 h5,
+h6 {
   font-weight: 700;
   margin-top: 0;
 }
@@ -87,42 +77,35 @@ h6 {
   color: inherit;
 }
 
-h1,
-.h1 {
+h1 {
   font-size: 3 6px;
   font-size: 3.6rem;
   margin: 24px 0;
   margin: 2.4rem 0;
 }
 
-h2,
-.h2 {
+h2 {
   font-size: 30px;
   font-size: 3rem;
   margin: 24px 0;
   margin: 2.4rem 0;
 }
 
-h3,
-.h3 {
+h3 {
   font-size: 24px;
   font-size: 2.4rem;
   margin: 24px 0;
   margin: 2.4rem 0;
 }
 
-h4,
-.h4 {
+h4 {
   font-size: 20px;
   font-size: 2rem;
   margin: 12px 0;
   margin: 1.2rem 0;
 }
 
-h5,
-.h5,
-h6,
-.h6 {
+h5 h6 {
   font-size: 17px;
   font-size: 1.7rem;
   margin: 12px 0;
@@ -188,10 +171,6 @@ pre {
   margin: 0 0 2.4rem 0;
 }
 
-p.lead {
-  font-size: 120%;
-}
-
 pre {
   overflow: auto;
   word-break: break-all;
@@ -214,6 +193,9 @@ samp {
 kbd {
   background-color: #222;
   color: #fff;
+  padding: 3px;
+  padding: 0.3rem;
+  border-radius: 3px;
 }
 
 b,
@@ -294,7 +276,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-  color: #007bff;
+  color: #0056b3;
 }
 
 a:not([href]):not([tabindex]) {
@@ -444,7 +426,6 @@ html input,
 select,
 textarea,
 button,
-.btn,
 html [type=button],
 [type=reset],
 [type=submit],
@@ -474,7 +455,6 @@ textarea {
   vertical-align: baseline;
 }
 
-.btn,
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
@@ -689,7 +669,6 @@ textarea:focus {
 }
 
 button,
-.btn,
 [type=button],
 [type=reset],
 [type=submit] {
@@ -708,7 +687,7 @@ button,
       -ms-user-select: none;
           user-select: none;
   border-radius: 3px;
-  border: 1px solid #ccc;
+  border: 0;
   background-image: none;
   background: #ccc;
   -webkit-transition: all 0.2s;
@@ -725,12 +704,10 @@ button::-moz-focus-inner,
 }
 
 button:hover,
-.btn:hover,
 [type=button]:hover,
 [type=reset]:hover,
 [type=submit]:hover,
 button:focus,
-.btn:focus,
 [type=button]:focus,
 [type=reset]:focus,
 [type=submit]:focus {
@@ -741,7 +718,6 @@ button:focus,
 }
 
 button:focus,
-.btn:focus,
 [type=button]:focus,
 [type=reset]:focus,
 [type=submit]:focus {
@@ -779,12 +755,10 @@ textarea::placeholder {
   color: #666;
 }
 
-fieldset[disabled] .btn,
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
-.btn[disabled],
 button[disabled],
 input[disabled],
 select[disabled],
@@ -1269,6 +1243,115 @@ table th[class^=bf-col-] {
 
 .font-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.h1 {
+  font-size: 3 6px;
+  font-size: 3.6rem;
+  margin: 24px 0;
+  margin: 2.4rem 0;
+}
+
+.h2 {
+  font-size: 30px;
+  font-size: 3rem;
+  margin: 24px 0;
+  margin: 2.4rem 0;
+}
+
+.h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin: 24px 0;
+  margin: 2.4rem 0;
+}
+
+.h4 {
+  font-size: 20px;
+  font-size: 2rem;
+  margin: 12px 0;
+  margin: 1.2rem 0;
+}
+
+.h5,
+.h6 {
+  font-size: 17px;
+  font-size: 1.7rem;
+  margin: 12px 0;
+  margin: 1.2rem 0;
+}
+
+p.lead {
+  font-size: 120%;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  color: inherit;
+  padding: 8px 16px;
+  padding: 0.8rem 1.6rem;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 3px;
+  border: 0;
+  background-image: none;
+  background: #ccc;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn--primary {
+  color: #fff;
+  background: #0056b3;
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+  border-color: #b3b3b3;
+  color: inherit;
+  background: #b3b3b3;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  color: #fff;
+  border-color: #003d80;
+  background: #003d80;
+}
+
+.btn:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset[disabled] .btn .btn[disabled],
+.btn.disabled {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  opacity: 0.5 !important;
 }
 
 .list-unstyled,

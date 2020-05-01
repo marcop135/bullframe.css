@@ -1,0 +1,57 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  color: inherit;
+	padding: ($spacing-xl-px / 3) (($spacing-xl-px / 3) * 2); // 8px 16px
+	padding: ($spacing-xl-rem / 3) (($spacing-xl-rem / 3) * 2);
+	line-height: normal;
+	text-align: center;
+	margin: 0;
+	background-clip: padding-box;
+	vertical-align: baseline;
+	overflow: visible;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	user-select: none;
+	border-radius: $spacing-sm-px;
+	border: 0;
+	background-image: none; // FF mobile
+	background: $gray-light;
+	transition: all .2s;
+}
+
+.btn--primary {
+  color: $white;
+  background: $blue-light;
+}
+
+.btn:hover,
+.btn:focus {
+	text-decoration: none;
+	border-color: darken($gray-light, 10%);
+	color: inherit;
+  background: darken($gray-light, 10%);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  color: $white;
+  border-color: darken($blue-light, 10%);
+  background: darken($blue-light, 10%);
+}
+
+.btn:focus {
+	// ! do not remove the outline
+	// Accessibility Concerns
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/:focus#Accessibility_Concerns
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset[disabled] .btn
+.btn[disabled],
+.btn.disabled {
+	cursor: default !important; // IE8-10 fallback
+	cursor: not-allowed !important; // Opera Mini fallback
+	pointer-events: none;
+	opacity: .5 !important;
+}

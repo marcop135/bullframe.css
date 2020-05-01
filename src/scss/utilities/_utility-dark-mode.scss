@@ -8,12 +8,12 @@ body {
 
 // anchors
 a {
-	color: lighten($bf-blue, 15%);
-}
-
-a:hover,
-a:focus {
-	color: lighten($bf-blue-light, 15%);
+  color: lighten($bf-blue, 15%);
+  
+  &:hover,
+  &:focus {
+    color: lighten($bf-blue-light, 15%);
+  }
 }
 
 // typography
@@ -59,63 +59,38 @@ select,
 textarea {
   background-color: $bf-gray-dark-extra;
   border-color: $bf-black;
+
+  &:focus {
+    background-color: $bf-gray-dark-extra;
+	  border-color: $bf-gray;
+  }
 }
 
-[type="color"]:focus,
-[type="email"]:focus,
-[type="number"]:focus,
-[type="password"]:focus,
-[type="tel"]:focus,
-[type="search"]:focus,
-[type="text"]:focus,
-[type="date"]:focus,
-[type="datetime-local"]:focus,
-[type="month"]:focus,
-[type="time"]:focus,
-[type="week"]:focus,
-[type="time"]:focus,
-[type="url"]:focus,
-select:focus,
-textarea:focus {
-  background-color: $bf-gray-dark-extra;
-	border-color: $bf-gray;
+input::placeholder,
+textarea::placeholder {
+	color: $bf-gray;
 }
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"],
-.btn {
+.bf-btn {
   color: $bf-dark;
-  background: $bf-gray-light;
+  background: darken($bf-gray-light, 10%);
+
+  &:hover,
+  &:focus {
+    color: $bf-dark;
+    background: $bf-gray-light;
+  }
 }
 
-.btn--primary {
-  color: $bf-white;
+.bf-btn.bf-btn--primary {
   background: $bf-blue-light;
-}
-
-button:hover,
-[type="button"]:hover,
-[type="reset"]:hover,
-[type="submit"]:hover,
-button:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus,
-.bf-btn:hover,
-.bf-btn:focus {
-	color: $bf-black;
-  background: lighten($bf-gray-light, 7.5%);
-}
-
-.bf-btn--primary:hover,
-.bf-btn--primary:focus {
-  color: $bf-white;
-  background: lighten($bf-blue-light, 7.5%);
-}
-
-input::placeholder,
-textarea::placeholder {
-	color: $bf-gray;
+  
+  &:hover,
+  &:focus {
+    background: lighten($bf-blue-light, 5%);
+  }
 }

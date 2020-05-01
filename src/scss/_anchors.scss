@@ -3,6 +3,12 @@
 // might still respond to pointer events.
 // 
 // Credit: https://github.com/suitcss/base
+//
+// ! just modern browsers support ':focus-visible'
+// https://caniuse.com/#feat=css-focus-visible
+// use this polyfill for cross-browsing https://github.com/WICG/focus-visible
+// and ':not' is IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
 [tabindex="-1"]:focus:not(:focus-visible) {
 	outline: 0 !important;
 }

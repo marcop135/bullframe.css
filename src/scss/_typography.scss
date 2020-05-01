@@ -221,6 +221,9 @@ kbd {
 	color: $white;
 	padding: $spacing-sm-px;
 	padding: $spacing-sm-rem;
+
+	// ! IE9+
+	// https://caniuse.com/#feat=border-radius
 	border-radius: $spacing-sm-px;
 }
 

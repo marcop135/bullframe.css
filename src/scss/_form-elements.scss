@@ -67,6 +67,8 @@ textarea {
 }
 
 // always show a pointer cursor
+// IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -278,6 +280,7 @@ label + [type="checkbox"] {
 [type="url"]:focus,
 select:focus,
 textarea:focus {
+	transition: all .2s;
 	border-color: $black;
 }
 
@@ -321,7 +324,6 @@ button:focus,
 [type="reset"]:focus,
 [type="submit"]:focus {
 	text-decoration: none;
-	border-color: darken($gray-light, 10%);
 	color: inherit;
 	background: darken($gray-light, 10%);
 }
@@ -337,10 +339,12 @@ button:focus,
 	outline: 5px auto -webkit-focus-ring-color;
 }
 
-// invalid, placeholder, disabled and readonly
 input:invalid,
 select:invalid,
-textarea:invalid {
+textarea:invalid,
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
 	color: $red;
 	border-color: $red;
 	box-shadow: none;

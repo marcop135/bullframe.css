@@ -1,8 +1,7 @@
 # bullframe.css
 
-_bullframe.css_ is a CSS boilerplate to be used as an alternative to CSS resets and as a starting-point for a solid mobile-first responsive web design **retro-compatible with IE8** and other old browsers.
-
-You can copy-and-paste it quickly or just watch it when you build cool websites and web apps!
+_bullframe.css_ is a (S)CSS framework to be used as an alternative to CSS resets.<br> 
+It's a good starting-point for a **IE8+** solid, progressive, mobile-first responsive web design.
 
 ## Best features
 

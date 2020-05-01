@@ -1,9 +1,9 @@
-.btn {
+.bf-btn {
   display: inline-block;
   cursor: pointer;
   color: inherit;
-	padding: ($spacing-xl-px / 3) (($spacing-xl-px / 3) * 2); // 8px 16px
-	padding: ($spacing-xl-rem / 3) (($spacing-xl-rem / 3) * 2);
+	padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
+	padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
 	line-height: normal;
 	text-align: center;
 	margin: 0;
@@ -15,34 +15,34 @@
 
 	// ! IE9+
 	// https://caniuse.com/#feat=border-radius
-	border-radius: $spacing-sm-px;
-	border-radius: $spacing-sm-rem;
+	border-radius: $bf-spacing-sm-px;
+	border-radius: $bf-spacing-sm-rem;
 
 	border: 0;
 	background-image: none; // FF mobile
-	background: $gray-light;
+	background: $bf-gray-light;
 	transition: all .2s;
 }
 
-.btn--primary {
-  color: $white;
-  background: $blue-light;
+.bf-btn--primary {
+  color: $bf-white;
+  background: $bf-blue-light;
 }
 
-.btn:hover,
-.btn:focus {
+.bf-btn:hover,
+.bf-btn:focus {
 	text-decoration: none;
 	color: inherit;
-  background: darken($gray-light, 10%);
+  background: darken($bf-gray-light, 10%);
 }
 
-.btn--primary:hover,
-.btn--primary:focus {
-  color: $white;
-  background: darken($blue-light, 10%);
+.bf-btn--primary:hover,
+.bf-btn--primary:focus {
+  color: $bf-white;
+  background: darken($bf-blue-light, 10%);
 }
 
-.btn:focus {
+.bf-btn:focus {
 	// ! do not remove the outline
 	// Accessibility Concerns
 	// https://developer.mozilla.org/en-US/docs/Web/CSS/:focus#Accessibility_Concerns
@@ -50,9 +50,9 @@
 	outline: 5px auto -webkit-focus-ring-color;
 }
 
-fieldset[disabled] .btn
-.btn[disabled],
-.btn.disabled {
+fieldset[disabled] .bf-btn
+.bf-btn[disabled],
+.bf-btn.disabled {
 	cursor: default !important; // IE8-10 fallback
 	cursor: not-allowed !important; // Opera Mini fallback
 	pointer-events: none;

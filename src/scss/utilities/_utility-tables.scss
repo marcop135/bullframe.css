@@ -1,8 +1,8 @@
-.table th,
-.table td {
-	padding: $spacing-lg-px / 3; // 8px
-	padding: $spacing-lg-rem / 3; // 8rem
-	border-bottom: 1px solid $gray;
+.bf-table th,
+.bf-table td {
+	padding: $bf-spacing-lg-px / 3; // 8px
+	padding: $bf-spacing-lg-rem / 3; // 8rem
+	border-bottom: 1px solid $bf-gray;
 }
 
 
@@ -10,7 +10,7 @@
 // ! issues on Opera 10-11, Opera Mobile Presto and Opera Mini
 // Read more about Opera: http://barrow.io/overflow-scrolling
 
-.table-responsive {
+.bf-table-responsive {
 	overflow-x: auto;
 	overflow-y: hidden;
 
@@ -19,14 +19,14 @@
 	-ms-overflow-style: scrollbar;
 }
 
-.table-responsive table {
+.bf-table-responsive table {
 	width: 100%;
-	margin-bottom: $spacing-md-px;
-	margin-bottom: $spacing-md-rem;
+	margin-bottom: $bf-spacing-md-px;
+	margin-bottom: $bf-spacing-md-rem;
 }
 
 // force webkit scrollbars appearance
-.table-responsive.scrollbar {
+.bf-table-responsive.scrollbar {
 
 	// this is a not standard CSS property, so it's for webkit only
 	// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling

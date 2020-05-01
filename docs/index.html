@@ -92,7 +92,7 @@
 			}
 
 			.bullframe-demo button,
-			.bullframe-demo .btn,
+			.bullframe-demo .bf-btn,
 			.bullframe-demo input,
 			.bullframe-demo select,
 			.bullframe-demo textarea {
@@ -164,7 +164,7 @@
 				line-height: 1.5;
 			}
 
-			.sharing .h2 {
+			.sharing .bf-h2 {
 				margin-bottom: 12px;
 				margin-bottom: 1.2rem;
 				line-height: 1.2;
@@ -206,15 +206,15 @@
 					<div class="bf-col-12">
 						<div class="dev-wrapper">
 							<h1>bullframe.css</h1>
-							<p class="lead">Solid, fluid and IE-friendly CSS boilerplate</p>
+							<p class="bf-lead">Solid, fluid and IE-friendly CSS boilerplate</p>
 							<a
-								class="btn btn--primary"
+								class="bf-btn bf-btn--primary"
 								href="https://github.com/marcop135/bullframe.css/archive/master.zip"
 								title="bullframe.css source"
 								>Download</a
 							>
 							<a
-								class="btn btn-github"
+								class="bf-btn"
 								href="https://github.com/marcop135/bullframe.css"
 								title="bullframe.css github"
 								>GitHub</a
@@ -222,7 +222,7 @@
 							<pre><code>$ git clone https://github.com/marcop135/bullframe.css.git</code></pre>
 						</div>
 						<!-- /dev-wrapper -->
-						<p class="lead">
+						<p class="bf-lead">
 							Take a quick look at a wide range of HTML elements, divided into
 							several sections and rendered into unusual combinations.
 						</p>
@@ -443,7 +443,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 				<div class="bf-col-3">
 					<h3 class="sub-title">Unstyled list</h3>
-					<ol class="list-unstyled">
+					<ol class="bf-list-unstyled">
 						<li>list item 1</li>
 						<li>
 							list item 1
@@ -535,7 +535,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 			<div class="bf-row">
 				<div class="bf-col-6">
 					<h3 class="sub-title">YouTube iframe 16:9 (default)</h3>
-					<div class="embed-responsive">
+					<div class="bf-embed-responsive">
 						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
@@ -543,7 +543,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 				<div class="bf-col-6">
 					<h3 class="sub-title">YouTube iframe 4:3</h3>
-					<div class="embed-responsive embed-responsive--4-3">
+					<div class="bf-embed-responsive bf-embed-responsive--4-3">
 						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mM5_T-F1Yn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
@@ -781,14 +781,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 						<div><input type="button" value="Button (input)" /></div>
 						<div><input type="submit" value="Submit (input)" /></div>
 						<div>
-							<a class="btn" href="#" title="button link">Button (link)</a>
+							<a class="bf-btn" href="#" title="button link">Button (link)</a>
 						</div>
 						<div>
-							<a class="btn btn--primary" href="#" title="button link">Primary button (link)</a>
+							<a class="bf-btn bf-btn--primary" href="#" title="button link">Primary button (link)</a>
 						</div>
 						<div><input disabled type="submit" value="Disabled (input)" /></div>
 						<div>
-							<a class="btn btn--primary disabled" href="#" title="button link">Disabled primary button (link)</a>
+							<a class="bf-btn bf-btn--primary disabled" href="#" title="button link">Disabled primary button (link)</a>
 						</div>
 					</fieldset>
 				</div>
@@ -800,9 +800,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 						<div><button type="reset">Reset (button)</button></div>
 						<div><button type="button">Button (button)</button></div>
 						<div><button type="submit">Submit (button)</button></div>
-						<div><button class="btn btn--primary" type="submit">Primary submit (button) </button></div>
+						<div><button class="bf-btn bf-btn--primary" type="submit">Primary submit (button) </button></div>
 						<div><button disabled type="submit">Disabled (button)</button></div>
-						<div><button class="btn btn--primary" type="submit">Disabled primary submit (button) </button></div>
+						<div><button class="bf-btn bf-btn--primary" type="submit" disabled>Disabled primary submit (button) </button></div>
 					</fieldset>
 				</div>
 				<!-- /col -->
@@ -865,7 +865,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 				<div class="bf-col-6">
 					<h3 class="sub-title">Styled tabular data</h3>
-					<table class="table">
+					<table class="bf-table">
 						<caption>
 							Jimi Hendrix - albums
 						</caption>
@@ -914,8 +914,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 			<div class="bf-row">
 				<div class="bf-col-12">
 					<h3 class="sub-title">Styled responsive tabular data</h3>
-					<div class="table-responsive">
-						<table class="table">
+					<div class="bf-table-responsive">
+						<table class="bf-table">
 							<caption>
 								Caption goes here
 							</caption>
@@ -1312,13 +1312,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 			<div class="bf-row">
 				<div class="bf-col-12">
 					<div class="sharing">
-						<span class="display-block h1">Fork, clone or download this project</span>
+						<span class="bf-display-block bf-h1">Fork, clone or download this project</span>
 						<a
 							href="https://github.com/marcop135/bullframe.css"
 							title="github source"
 							>https://github.com/marcop135/bullframe.css</a
 						>
-						<code class="display-block"
+						<code class="bf-display-block"
 							>$ git clone https://github.com/marcop135/bullframe.css.git</code
 						>
 						<a
@@ -1331,7 +1331,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 					<span class="back-to-top">
 						<a href="#" title="back to top"
-							><i class="h1">&uarr;</i> back to top</a
+							><i class="bf-h1">&uarr;</i> back to top</a
 						>
 					</span>
 				</div>

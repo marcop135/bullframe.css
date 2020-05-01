@@ -2,8 +2,8 @@ menu,
 ol,
 ul,
 dl {
-	margin: 0 0 $spacing-xl-px 0;
-	margin: 0 0 $spacing-xl-rem 0;
+	margin: 0 0 $bf-spacing-xl-px 0;
+	margin: 0 0 $bf-spacing-xl-rem 0;
 	padding: 0;
 }
 
@@ -19,8 +19,8 @@ dd {
 
 ul,
 ol {
-	margin-left: $spacing-xl-px;
-	margin-left: $spacing-xl-rem;
+	margin-left: $bf-spacing-xl-px;
+	margin-left: $bf-spacing-xl-rem;
 }
 
 nav ol,

@@ -25,6 +25,10 @@ Include it via CDN in the `<head>`
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 ```
 
+Install it via NPM
+
+... (TODO)
+
 Or start from these HTML5 snippets, adding some JS polyfills (html5shiv.js, respond.js, ie10-viewport-bug-workaround.js) if you need a wide cross-browser support.
 
 ### IE8+ and old browsers (verbose)

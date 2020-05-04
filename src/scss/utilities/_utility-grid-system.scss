@@ -1,18 +1,32 @@
-.bf-container {
+.bf-container,
+.bf-container--fluid {
 	// avoid IE8 issue with 'box-sizing: border-box' in combination
   // with max/min-width and max/min-height
   // https://github.com/twbs/bootstrap/issues/10014
   //
 	box-sizing: content-box;
+	
+	// you could add these classes to an inline/inline-block element
+	// but it's not recommended
+	display: block;
 
-	max-width: 1252px; // 1252 + left padding 24 + right padding 24 = 1300
-	max-width: 125.2rem;
-	padding-right: $bf-spacing-xl-px;
-	padding-right: $bf-spacing-xl-rem;
-	padding-left: $bf-spacing-xl-px;
-	padding-left: $bf-spacing-xl-rem;
+	// centering
 	margin-right: auto;
 	margin-left: auto;
+
+	// spacing
+	padding-left: $bf-spacing-lg-px; // 12
+	padding-left: $bf-spacing-lg-rem;
+	padding-right: $bf-spacing-lg-px;
+	padding-right: $bf-spacing-lg-rem;
+
+	// medium screens
+	@media (min-width: 768px) {
+		padding-left: $bf-spacing-xl-px; // 24
+		padding-left: $bf-spacing-xl-rem;
+		padding-right: $bf-spacing-xl-px; 
+		padding-right: $bf-spacing-xl-rem;
+	}
 
 	// clearfix
 	&:before,
@@ -26,33 +40,47 @@
 	}
 }
 
-.bf-container--fluid {
-	padding-left: $bf-spacing-xl-px;
-	padding-left: $bf-spacing-xl-rem;
-	padding-right: $bf-spacing-xl-px;
-	padding-right: $bf-spacing-xl-rem;
-	margin-right: auto;
-	margin-left: auto;
-
-	// clearfix 
-	&:before,
-	&:after {
-		display: table;
-		content: " ";
+.bf-container {
+	// small screens
+	@media (min-width: 576px) {
+		max-width: 528px; // 528 + 24 padding left + 24 padding right = 576
+		max-width: 52.6rem;
 	}
 
-	&:after {
-		clear: both;
+	// medium screens
+	@media (min-width: 768px) {
+		max-width: 720px; // 720 + 24 + 24 = 768
+		max-width: 72rem;
+	}
+
+	// large screens
+	@media (min-width: 992px) {
+		max-width: 960px; // 960 + 24 + 24 = 1024
+		max-width: 96rem;
+	}
+
+	// xl screens
+	@media (min-width: 1200px) {
+		max-width: 1152px; // 1152 + 24 + 24 = 1200
+		max-width: 115.2rem;
 	}
 }
 
 
 .bf-row {
 	display: block;
-	margin-left: -$bf-spacing-xl-px;
-	margin-left: -$bf-spacing-xl-rem;
-	margin-right: -$bf-spacing-xl-px;
-	margin-right: -$bf-spacing-xl-rem;
+
+	margin-left: -$bf-spacing-lg-px;
+	margin-left: -$bf-spacing-lg-rem;
+	margin-right: -$bf-spacing-lg-px;
+	margin-right: -$bf-spacing-lg-rem;
+
+	@media (min-width: 768px) {
+		margin-left: -$bf-spacing-xl-px;
+		margin-left: -$bf-spacing-xl-rem;
+		margin-right: -$bf-spacing-xl-px;
+		margin-right: -$bf-spacing-xl-rem;
+	}
 
 	// clearfix 
 	&:before,
@@ -67,13 +95,24 @@
 }
 
 [class^="bf-col-"] {
+	// the block display is triggered by 'float: left'
+	// display: block; 
+
 	float: left;
 	position: relative;
 	min-height: 1px;
-	padding-left: $bf-spacing-xl-px;
-	padding-left: $bf-spacing-xl-rem;
-	padding-right: $bf-spacing-xl-px;
-	padding-right: $bf-spacing-xl-rem;
+
+	padding-left: $bf-spacing-lg-px;
+	padding-left: $bf-spacing-lg-rem;
+	padding-right: $bf-spacing-lg-px;
+	padding-right: $bf-spacing-lg-rem;
+
+	@media (min-width: 768px) {
+		padding-left: $bf-spacing-xl-px;
+		padding-left: $bf-spacing-xl-rem;
+		padding-right: $bf-spacing-xl-px;
+		padding-right: $bf-spacing-xl-rem;
+	}
 }
 
 .bf-col-12 {
@@ -124,19 +163,14 @@
 	width: 8.3333%;
 }
 
-// grid breakpoints
-// https://getbootstrap.com/docs/4.4/layout/grid/
-// ≥57$bf-spacing-md-px 	sm
-// ≥768px 	md
-// ≥992px 	lg
-
-@media (max-width: 57$bf-spacing-md-px) {
-	.bf-container--break-sm .bf-row {
+// 'break' the columns and make them full-width
+@media (max-width: 575px) {
+	.bf-container--break-xs .bf-row {
 		margin-left: 0;
 		margin-right: 0;
 	}
 
-	.bf-container--break-sm [class^="bf-col"] {
+	.bf-container--break-xs [class^="bf-col"] {
 		width: 100%;
 		float: none;
 		margin-left: 0;
@@ -145,6 +179,7 @@
 	}
 }
 
+// 'break' the columns and make them full-width
 @media (max-width: 767px) {
 	.bf-container--break-md .bf-row {
 		margin-left: 0;
@@ -160,7 +195,7 @@
 	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	.bf-container--break-lg .bf-row {
 		margin-left: 0;
 		margin-right: 0;

@@ -78,10 +78,10 @@ body {
 	backface-visibility: hidden;
 }
 
-h1
-h2
-h3
-h4
+h1,
+h2,
+h3,
+h4,
 h5,
 h6 {
 	font-weight: 700;
@@ -99,7 +99,7 @@ h6 {
 }
 
 h1 {
-	font-size: 3$bf-spacing-md-px;
+	font-size: $bf-spacing-md-px;
 	font-size: $bf-spacing-xxl-rem;
 	margin-bottom: $bf-spacing-xl-px 0;
 	margin-bottom: $bf-spacing-xl-rem 0;

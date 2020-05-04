@@ -621,27 +621,43 @@ textarea {
   border: 1px solid #999;
   padding: 6px;
   padding: 0.6rem;
-  outline: 0 none;
 }
-[type=email]:focus,
+[type=email]:active, [type=email]:focus,
+[type=number]:active,
 [type=number]:focus,
+[type=password]:active,
 [type=password]:focus,
+[type=tel]:active,
 [type=tel]:focus,
+[type=search]:active,
 [type=search]:focus,
+[type=text]:active,
 [type=text]:focus,
+[type=date]:active,
 [type=date]:focus,
+[type=datetime-local]:active,
 [type=datetime-local]:focus,
+[type=month]:active,
 [type=month]:focus,
+[type=time]:active,
 [type=time]:focus,
+[type=week]:active,
 [type=week]:focus,
+[type=time]:active,
 [type=time]:focus,
+[type=url]:active,
 [type=url]:focus,
+select:active,
 select:focus,
+textarea:active,
 textarea:focus {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
   border-color: #000;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+          box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
 }
 
 label [type=radio],
@@ -668,8 +684,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  outline: 0 none;
-  color: inherit;
+  color: #fff;
   padding: 8px 16px;
   padding: 0.8rem 1.6rem;
   line-height: normal;
@@ -687,32 +702,40 @@ button,
   border-radius: 0.3rem;
   border: 0;
   background-image: none;
-  background: #ccc;
+  background: #666;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-
-button:hover,
+button:hover, button:active, button:focus,
 [type=button]:hover,
+[type=button]:active,
+[type=button]:focus,
 [type=reset]:hover,
+[type=reset]:active,
+[type=reset]:focus,
 [type=submit]:hover,
-button:focus,
-[type=button]:focus,
-[type=reset]:focus,
+[type=submit]:active,
 [type=submit]:focus {
-  outline: 0 none;
   text-decoration: none;
-  color: inherit;
-  background: #b3b3b3;
+  color: #fff;
+  background: #4d4d4d;
 }
-
+button:active, button:focus,
+[type=button]:active,
+[type=button]:focus,
+[type=reset]:active,
+[type=reset]:focus,
+[type=submit]:active,
+[type=submit]:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
 button:focus,
 [type=button]:focus,
 [type=reset]:focus,
 [type=submit]:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 0;
 }
 
 input:invalid,
@@ -723,8 +746,8 @@ select:invalid:focus,
 textarea:invalid:focus {
   color: #FF0000;
   border-color: #FF0000;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
+          box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -1317,7 +1340,7 @@ p.bf-lead {
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: inherit;
+  color: #fff;
   padding: 8px 16px;
   padding: 0.8rem 1.6rem;
   line-height: normal;
@@ -1335,33 +1358,37 @@ p.bf-lead {
   border-radius: 0.3rem;
   border: 0;
   background-image: none;
-  background: #ccc;
+  background: #666;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-
+.bf-btn:hover, .bf-btn:active, .bf-btn:focus {
+  text-decoration: none;
+  color: #fff;
+  background: #4d4d4d;
+}
+.bf-btn:active, .bf-btn:focus {
+  text-decoration: none;
+  color: #fff;
+  background: #4d4d4d;
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+.bf-btn:focus {
+  outline: 0;
+}
 .bf-btn.bf-btn--primary {
   color: #fff;
   background: #0056b3;
 }
-
-.bf-btn:hover,
-.bf-btn:focus {
-  text-decoration: none;
-  color: inherit;
-  background: #b3b3b3;
-}
-
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
   color: #fff;
   background: #003d80;
 }
-
-.bf-btn:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+.bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+          box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
 fieldset[disabled] .bf-btn .bf-btn[disabled],
@@ -1370,6 +1397,8 @@ fieldset[disabled] .bf-btn .bf-btn[disabled],
   cursor: not-allowed !important;
   pointer-events: none;
   opacity: 0.5 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .bf-list-unstyled,
@@ -1489,24 +1518,41 @@ textarea {
   background-color: #333;
   border-color: #000;
 }
-[type=color]:focus,
+[type=color]:active, [type=color]:focus,
+[type=email]:active,
 [type=email]:focus,
+[type=number]:active,
 [type=number]:focus,
+[type=password]:active,
 [type=password]:focus,
+[type=tel]:active,
 [type=tel]:focus,
+[type=search]:active,
 [type=search]:focus,
+[type=text]:active,
 [type=text]:focus,
+[type=date]:active,
 [type=date]:focus,
+[type=datetime-local]:active,
 [type=datetime-local]:focus,
+[type=month]:active,
 [type=month]:focus,
+[type=time]:active,
 [type=time]:focus,
+[type=week]:active,
 [type=week]:focus,
+[type=time]:active,
 [type=time]:focus,
+[type=url]:active,
 [type=url]:focus,
+select:active,
 select:focus,
+textarea:active,
 textarea:focus {
   background-color: #333;
   border-color: #999;
+  -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+          box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -1550,12 +1596,28 @@ button:hover, button:focus,
   color: #222;
   background: #ccc;
 }
+button:active, button:focus,
+[type=button]:active,
+[type=button]:focus,
+[type=reset]:active,
+[type=reset]:focus,
+[type=submit]:active,
+[type=submit]:focus,
+.bf-btn:active,
+.bf-btn:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.75);
+          box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.75);
+}
 
 .bf-btn.bf-btn--primary {
   background: #0056b3;
 }
 .bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:focus {
   background: #0062cd;
+}
+.bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 /* ==========================================================================

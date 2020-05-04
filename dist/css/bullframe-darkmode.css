@@ -61,7 +61,11 @@ body {
           backface-visibility: hidden;
 }
 
-h1 h2 h3 h4 h5,
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   font-weight: 700;
   margin-top: 0;
@@ -78,38 +82,39 @@ h6 {
 }
 
 h1 {
-  font-size: 3 6px;
+  font-size: 6px;
   font-size: 3.6rem;
-  margin: 24px 0;
-  margin: 2.4rem 0;
+  margin-bottom: 24px 0;
+  margin-bottom: 2.4rem 0;
 }
 
 h2 {
   font-size: 30px;
   font-size: 3rem;
-  margin: 24px 0;
-  margin: 2.4rem 0;
+  margin-bottom: 24px 0;
+  margin-bottom: 2.4rem 0;
 }
 
 h3 {
   font-size: 24px;
   font-size: 2.4rem;
-  margin: 24px 0;
-  margin: 2.4rem 0;
+  margin-bottom: 24px 0;
+  margin-bottom: 2.4rem 0;
 }
 
 h4 {
   font-size: 20px;
   font-size: 2rem;
-  margin: 12px 0;
-  margin: 1.2rem 0;
+  margin-bottom: 12px 0;
+  margin-bottom: 1.2rem 0;
 }
 
-h5 h6 {
+h5,
+h6 {
   font-size: 17px;
   font-size: 1.7rem;
-  margin: 12px 0;
-  margin: 1.2rem 0;
+  margin-bottom: 12px 0;
+  margin-bottom: 1.2rem 0;
 }
 
 abbr[title],
@@ -789,48 +794,77 @@ th {
   font-weight: 700;
 }
 
-.bf-container {
+.bf-container,
+.bf-container--fluid {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  max-width: 1252px;
-  max-width: 125.2rem;
-  padding-right: 24px;
-  padding-right: 2.4rem;
-  padding-left: 24px;
-  padding-left: 2.4rem;
+  display: block;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 12px;
+  padding-left: 1.2rem;
+  padding-right: 12px;
+  padding-right: 1.2rem;
 }
-.bf-container:before, .bf-container:after {
-  display: table;
-  content: " ";
-}
-.bf-container:after {
-  clear: both;
-}
-
+@media (min-width: 768px) {
+  .bf-container,
 .bf-container--fluid {
-  padding-left: 24px;
-  padding-left: 2.4rem;
-  padding-right: 24px;
-  padding-right: 2.4rem;
-  margin-right: auto;
-  margin-left: auto;
+    padding-left: 24px;
+    padding-left: 2.4rem;
+    padding-right: 24px;
+    padding-right: 2.4rem;
+  }
 }
-.bf-container--fluid:before, .bf-container--fluid:after {
+.bf-container:before, .bf-container:after,
+.bf-container--fluid:before,
+.bf-container--fluid:after {
   display: table;
   content: " ";
 }
+.bf-container:after,
 .bf-container--fluid:after {
   clear: both;
 }
 
+@media (min-width: 576px) {
+  .bf-container {
+    max-width: 528px;
+    max-width: 52.6rem;
+  }
+}
+@media (min-width: 768px) {
+  .bf-container {
+    max-width: 720px;
+    max-width: 72rem;
+  }
+}
+@media (min-width: 992px) {
+  .bf-container {
+    max-width: 960px;
+    max-width: 96rem;
+  }
+}
+@media (min-width: 1200px) {
+  .bf-container {
+    max-width: 1152px;
+    max-width: 115.2rem;
+  }
+}
+
 .bf-row {
   display: block;
-  margin-left: -24px;
-  margin-left: -2.4rem;
-  margin-right: -24px;
-  margin-right: -2.4rem;
+  margin-left: -12px;
+  margin-left: -1.2rem;
+  margin-right: -12px;
+  margin-right: -1.2rem;
+}
+@media (min-width: 768px) {
+  .bf-row {
+    margin-left: -24px;
+    margin-left: -2.4rem;
+    margin-right: -24px;
+    margin-right: -2.4rem;
+  }
 }
 .bf-row:before, .bf-row:after {
   content: " ";
@@ -844,10 +878,18 @@ th {
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 24px;
-  padding-left: 2.4rem;
-  padding-right: 24px;
-  padding-right: 2.4rem;
+  padding-left: 12px;
+  padding-left: 1.2rem;
+  padding-right: 12px;
+  padding-right: 1.2rem;
+}
+@media (min-width: 768px) {
+  [class^=bf-col-] {
+    padding-left: 24px;
+    padding-left: 2.4rem;
+    padding-right: 24px;
+    padding-right: 2.4rem;
+  }
 }
 
 .bf-col-12 {
@@ -898,13 +940,13 @@ th {
   width: 8.3333%;
 }
 
-@media (max-width: 57 6px) {
-  .bf-container--break-sm .bf-row {
+@media (max-width: 575px) {
+  .bf-container--break-xs .bf-row {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .bf-container--break-sm [class^=bf-col] {
+  .bf-container--break-xs [class^=bf-col] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -926,7 +968,7 @@ th {
     padding-right: 0;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .bf-container--break-lg .bf-row {
     margin-left: 0;
     margin-right: 0;

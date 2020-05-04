@@ -1,7 +1,7 @@
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: inherit;
+  color: $bf-white;
 	padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
 	padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
 	line-height: normal;
@@ -20,34 +20,45 @@
 
 	border: 0;
 	background-image: none; // FF mobile
-	background: $bf-gray-light;
+	background: $bf-gray-dark;
 	transition: all .2s;
-}
 
-.bf-btn.bf-btn--primary {
-  color: $bf-white;
-  background: $bf-blue-light;
-}
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		color: $bf-white;
+		background: darken($bf-gray-dark, 10%);
+	}
 
-.bf-btn:hover,
-.bf-btn:focus {
-	text-decoration: none;
-	color: inherit;
-  background: darken($bf-gray-light, 10%);
-}
+	&:active,
+	&:focus {
+		text-decoration: none;
+		color: $bf-white;
+		background: darken($bf-gray-dark, 10%);
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
+	}
 
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:focus {
-  color: $bf-white;
-  background: darken($bf-blue-light, 10%);
-}
+	&:focus {
+		outline: 0;
+	}
 
-.bf-btn:focus {
-	// ! do not remove the outline
-	// Accessibility Concerns
-	// https://developer.mozilla.org/en-US/docs/Web/CSS/:focus#Accessibility_Concerns
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
+	&.bf-btn--primary {
+		color: $bf-white;
+		background: $bf-blue-light;
+		
+		&:hover,
+		&:active,
+		&:focus {
+			color: $bf-white;
+			background: darken($bf-blue-light, 10%);
+		}
+
+		&:active,
+		&:focus {
+			box-shadow: 0 0 0 3px rgba(0, 86, 179, .25);
+		}
+	}
 }
 
 fieldset[disabled] .bf-btn
@@ -57,4 +68,5 @@ fieldset[disabled] .bf-btn
 	cursor: not-allowed !important; // Opera Mini fallback
 	pointer-events: none;
 	opacity: .5 !important;
+	box-shadow: none;
 }

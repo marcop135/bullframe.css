@@ -239,12 +239,12 @@ textarea {
 	padding: $bf-spacing-md-px;
 	padding: $bf-spacing-md-rem;
 
-	// remove the outline and add :focus colors/bgs
-	outline: 0 none;
-
+	&:active,
 	&:focus {
 		transition: all .2s;
 		border-color: $bf-black;
+		outline: 0;
+		box-shadow: 0 0 0 3px rgba(153, 153, 153, .5);
 	}
 }
 
@@ -260,7 +260,7 @@ label + [type="checkbox"] {
 	margin-left: $bf-spacing-lg-rem;
 }
 
-// Firefox: Get rid of the inner focus border
+// Firefox: Get rid of the inner focus border on older versions
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -273,10 +273,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-	// remove the outline and add :focus colors/bgs
-	outline: 0 none;
-
-	color: inherit;
+	color: $bf-white;
 	padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
 	padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
 	line-height: normal;
@@ -295,32 +292,25 @@ button,
 
 	border: 0;
 	background-image: none; // FF mobile
-	background: $bf-gray-light;
+	background: $bf-gray-dark;
 	transition: all .2s;
-}
 
-button:hover,
-[type="button"]:hover,
-[type="reset"]:hover,
-[type="submit"]:hover,
-button:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus {
-	// remove the outline and add :focus colors/bgs
-	outline: 0 none;
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		color: $bf-white;
+		background: darken($bf-gray-dark, 10%);
+	}
 
-	text-decoration: none;
-	color: inherit;
-	background: darken($bf-gray-light, 10%);
-}
+	&:active,
+	&:focus {
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
+	}
 
-button:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
+	&:focus {
+		outline: 0;
+	}
 }
 
 input:invalid,
@@ -331,7 +321,7 @@ select:invalid:focus,
 textarea:invalid:focus {
 	color: $bf-red;
 	border-color: $bf-red;
-	box-shadow: none;
+	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
 }
 
 // FF placeholder bug

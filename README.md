@@ -25,20 +25,31 @@ Include it via CDN in the `<head>`
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 ```
 
-Or start from these HTML5 snippets, adding some JS polyfills if you need a wide cross-browser support:
+Or start from these HTML5 snippets, adding some JS polyfills (html5shiv.js, respond.js, ie10-viewport-bug-workaround.js) if you need a wide cross-browser support.
 
-### IE11+ (minimal setup)
+### IE8+ and old browsers (verbose)
+
+1. (X)HTML compliant
+2. Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
+3. Grid system ready (`.bf-container` class)
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
+
+<!-- enable HTML5 elements, CSS3 media queries, and fix IE10 viewport on Windows 8 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/respond.min.js,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-gREdttsFCQA+/jAI4yYFCtTs3d2gbjqhjAyUdoQprlF40Ig05yfwvRpZuM9yO5O6" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <div class="bf-container">
+    <h1>Hello World!</h1>
+  </div>
 </body>
 </html>
 ```
@@ -63,20 +74,15 @@ Or start from these HTML5 snippets, adding some JS polyfills if you need a wide 
 </html>
 ```
 
-### IE8+ (verbose version)
+### IE11+ and modern browsers (minimal setup)
 
 ```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
-integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
-
-<!-- enable HTML5 elements, CSS3 media queries, and fix IE10 viewport on Windows 8 -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js,npm/respond.js@1.4.2/src/matchmedia.polyfill.min.js,npm/respond.js@1.4.2/src/matchmedia.addListener.min.js,npm/respond.js@1.4.2/src/respond.min.js,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-gREdttsFCQA+/jAI4yYFCtTs3d2gbjqhjAyUdoQprlF40Ig05yfwvRpZuM9yO5O6" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 </head>
 <body>
   <h1>Hello World!</h1>
@@ -84,18 +90,20 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-### IE11+ (verbose version)
+### IE11+ and modern browsers (verbose)
 
 ```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"  crossorigin="anonymous">
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <div class="bf-container">
+    <h1>Hello World!</h1>
+  </div>
 </body>
 </html>
 

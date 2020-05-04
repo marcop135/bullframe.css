@@ -101,37 +101,37 @@ h6 {
 h1 {
 	font-size: 3$bf-spacing-md-px;
 	font-size: $bf-spacing-xxl-rem;
-	margin: $bf-spacing-xl-px 0;
-	margin: $bf-spacing-xl-rem 0;
+	margin-bottom: $bf-spacing-xl-px 0;
+	margin-bottom: $bf-spacing-xl-rem 0;
 }
 
 h2 {
 	font-size: 30px;
 	font-size: 3rem;
-	margin: $bf-spacing-xl-px 0;
-	margin: $bf-spacing-xl-rem 0;
+	margin-bottom: $bf-spacing-xl-px 0;
+	margin-bottom: $bf-spacing-xl-rem 0;
 }
 
 h3 {
 	font-size: $bf-spacing-xl-px;
 	font-size: $bf-spacing-xl-rem;
-	margin: $bf-spacing-xl-px 0;
-	margin: $bf-spacing-xl-rem 0;
+	margin-bottom: $bf-spacing-xl-px 0;
+	margin-bottom: $bf-spacing-xl-rem 0;
 }
 
 h4 {
 	font-size: 20px;
 	font-size: 2rem;
-	margin: $bf-spacing-lg-px 0;
-	margin: $bf-spacing-lg-rem 0;
+	margin-bottom: $bf-spacing-lg-px 0;
+	margin-bottom: $bf-spacing-lg-rem 0;
 }
 
-h5
+h5,
 h6 {
 	font-size: 17px;
 	font-size: 1.7rem;
-	margin: $bf-spacing-lg-px 0;
-	margin: $bf-spacing-lg-rem 0;
+	margin-bottom: $bf-spacing-lg-px 0;
+	margin-bottom: $bf-spacing-lg-rem 0;
 }
 
 // Abbreviations (taken Bootstrap 4)

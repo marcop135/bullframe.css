@@ -60,9 +60,12 @@ textarea {
   background-color: $bf-gray-dark-extra;
   border-color: $bf-black;
 
+  &:active,
+
   &:focus {
     background-color: $bf-gray-dark-extra;
-	  border-color: $bf-gray;
+    border-color: $bf-gray;
+    box-shadow: 0 0 0 3px rgba(153, 153, 153, .5);
   }
 }
 
@@ -84,6 +87,11 @@ button,
     color: $bf-dark;
     background: $bf-gray-light;
   }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(153, 153, 153, .75);
+  }
 }
 
 .bf-btn.bf-btn--primary {
@@ -92,5 +100,10 @@ button,
   &:hover,
   &:focus {
     background: lighten($bf-blue-light, 5%);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .5);
   }
 }

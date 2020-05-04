@@ -11,12 +11,12 @@ params:
   description: "Solid, fluid, IE-friendly (S)CSS framework"
   authors: "Marco Pontili"
 
-  current_version: "3.0.0"
+  current_version: "2.9.0"
   repo: "https://github.com/marcop135/bullframe.css"
 
 download:
   source: "https://github.com/marcop135/bullframe.css/archive/master.zip"
-  dist: "https://github.com/marcop135/bullframe.css/releases/tag/v3.0.0/bullframe-css-master.zip"
+  dist: "https://github.com/marcop135/bullframe.css/releases/tag/v2.9.0/bullframe-css-master.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

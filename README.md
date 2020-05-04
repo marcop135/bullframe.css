@@ -4,34 +4,43 @@ _bullframe.css_ is a (S)CSS framework to be used as an alternative to CSS resets
 It's a solid starting-point for a **IE8+**, progressive, mobile-first responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
+## 😣 Yes, people still use Internet Explorer in 2020
+
+- Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
+- [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
+- [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop-mobile/worldwide/#monthly-201902-202002-bar)
+- Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) as well.
+
 ## Best features
 
-- Add responsiveness as normalize as much as possible HTML elements *out-of-the-box*
 - Support IE8+ and a wide range of desktop and mobile browsers
-- Mobile-First Responsive Web Design ready
-- Progressive Enhancement development ready
+- Add responsiveness as normalize as much as possible HTML elements *out-of-the-box*
+- Mobile-First Responsive Web Design focused
+- Progressive Enhancement focused
 - Flexible images and media elements (video, audio, iframe, embed) by default
 - Flexible, cross-browser HTML5 form elements by default
-- Simple 12-columns fluid grid system IE8+
-- Use utility classes (e.g. '`<p class=".h1">`', '`<div class="clearfix">`') or not (classless)
+- 12-columns fluid grid system IE-friendly
+- Utility classes (e.g. `<h2 class="h1">` or `<div class="clearfix">`), or not (classless framework)
 - Dark mode included
-- Lightweight: just 10KB~ minified/gzipped (Bootstrap is 10 times more)
+- just 10KB~ minified/gzipped (Bootstrap is 10 times more)
 
 ## How to use it
 
-Include it via CDN in the `<head>`
+### Include it via CDN in the `<head>`
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 ```
 
-Install it via NPM
+### Install it via NPM
 
 ... (TODO)
 
-Or start from these HTML5 snippets, adding some JS polyfills (html5shiv.js, respond.js, ie10-viewport-bug-workaround.js) if you need a wide cross-browser support.
+### Start from an HTML5 snippet
 
-### IE8+ and old browsers (verbose)
+Add some HTML markup, and a bunch of JS polyfills from a JSDelivr CDN (html5shiv.js, respond.js, ie10-viewport-bug-workaround.js) if you need a wide cross-browser support.
+
+#### IE8+ and old browsers (verbose)
 
 1. (X)HTML compliant
 2. Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
@@ -58,7 +67,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-### IE8+ (minimal setup)
+#### IE8+ (minimal setup)
 
 ```html
 <!DOCTYPE html>
@@ -78,7 +87,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-### IE11+ and modern browsers (minimal setup)
+#### IE11+ and modern browsers (minimal setup)
 
 ```html
 <!DOCTYPE html>
@@ -94,7 +103,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-### IE11+ and modern browsers (verbose)
+#### IE11+ and modern browsers (verbose)
 
 ```html
 <!DOCTYPE html>
@@ -113,7 +122,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 
 ```
 
-## Classless (no utilities)
+## Classless (no utilities, e.g. `<h2 class="h1">`)
 
 ```html
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">

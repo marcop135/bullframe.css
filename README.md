@@ -15,7 +15,7 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 - 12-columns fluid grid system IE-friendly
 - Utility classes (e.g. `<h2 class="h1">` or `<div class="clearfix">`), or not (classless framework)
 - Dark mode included
-- just 10KB~ minified/gzipped (Bootstrap is 10 times more)
+- just 20KB~ minified/gzipped (Bootstrap is 7 times more)
 
 ## 😣 Yes, people still use Internet Explorer in 2020
 

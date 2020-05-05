@@ -4,13 +4,6 @@ _bullframe.css_ is a (S)CSS framework to be used as an alternative to CSS resets
 It's a solid starting-point for a **IE8+**, progressive, mobile-first responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
-## 😣 Yes, people still use Internet Explorer in 2020
-
-- Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
-- [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
-- [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop-mobile/worldwide/#monthly-201902-202002-bar)
-- Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) as well.
-
 ## Best features
 
 - Support IE8+ and a wide range of desktop and mobile browsers
@@ -23,6 +16,13 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 - Utility classes (e.g. `<h2 class="h1">` or `<div class="clearfix">`), or not (classless framework)
 - Dark mode included
 - just 10KB~ minified/gzipped (Bootstrap is 10 times more)
+
+## 😣 Yes, people still use Internet Explorer in 2020
+
+- Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
+- [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
+- [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop-mobile/worldwide/#monthly-201902-202002-bar)
+- Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) as well.
 
 ## How to use it
 
@@ -170,7 +170,7 @@ Tested and compatible in:
 
 This project is tested in a wide range of browsers using [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
-![BrowserStack Logo](./docs/img/browserstack-logo.png)
+![BrowserStack Logo](./browserstack-logo.png)
 
 ## Contributors
 

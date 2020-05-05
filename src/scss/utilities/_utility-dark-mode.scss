@@ -79,31 +79,31 @@ button,
 [type="reset"],
 [type="submit"],
 .bf-btn {
-  color: $bf-dark;
-  background: darken($bf-gray-light, 10%);
+  background: $bf-gray-light;
 
   &:hover,
+  &:active,
   &:focus {
-    color: $bf-dark;
-    background: $bf-gray-light;
+    background: darken($bf-gray-light, 10%);
   }
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(153, 153, 153, .75);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .55);
   }
 }
 
 .bf-btn.bf-btn--primary {
-  background: $bf-blue-light;
+  background: $bf-blue;
   
   &:hover,
+  &:active,
   &:focus {
-    background: lighten($bf-blue-light, 5%);
+    background: darken($bf-blue, 5%)
   }
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, .5);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, .75);
   }
 }

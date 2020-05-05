@@ -273,7 +273,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-	color: $bf-white;
+	color: $bf-dark;
 	padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
 	padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
 	line-height: normal;
@@ -292,20 +292,20 @@ button,
 
 	border: 0;
 	background-image: none; // FF mobile
-	background: $bf-gray-dark;
+	background: $bf-gray-light;
 	transition: all .2s;
 
 	&:hover,
 	&:active,
 	&:focus {
 		text-decoration: none;
-		color: $bf-white;
-		background: darken($bf-gray-dark, 10%);
+		color: $bf-dark;
+		background: darken($bf-gray-light, 10%);
 	}
 
 	&:active,
 	&:focus {
-		box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, .15);
 	}
 
 	&:focus {

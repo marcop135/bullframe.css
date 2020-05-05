@@ -684,7 +684,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  color: #fff;
+  color: #222;
   padding: 8px 16px;
   padding: 0.8rem 1.6rem;
   line-height: normal;
@@ -702,7 +702,7 @@ button,
   border-radius: 0.3rem;
   border: 0;
   background-image: none;
-  background: #666;
+  background: #ccc;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -718,8 +718,8 @@ button:hover, button:active, button:focus,
 [type=submit]:active,
 [type=submit]:focus {
   text-decoration: none;
-  color: #fff;
-  background: #4d4d4d;
+  color: #222;
+  background: #b3b3b3;
 }
 button:active, button:focus,
 [type=button]:active,
@@ -728,8 +728,8 @@ button:active, button:focus,
 [type=reset]:focus,
 [type=submit]:active,
 [type=submit]:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 button:focus,
 [type=button]:focus,

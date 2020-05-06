@@ -1,76 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
+<html class="test" id="top" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta	name="viewport"	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>Documentation - bullframe.css (S)CSS framework</title>
-		<meta
-			name="description"
-			content="Solid, fluid, IE-friendly (S)CSS framework."
-		/>
+	<title>Documentation - bullframe.css (S)CSS framework</title>
+	<meta	name="description" content="Solid, fluid, IE-friendly (S)CSS framework.">
 
-		<link type="text/css" rel="stylesheet" href="../../dist/css/bullframe-darkmode-prefers.css" />
+	<link rel="stylesheet" href="../../dist/css/bullframe-darkmode-prefers.css">
 
-		<link type="text/css" rel="stylesheet" href="css/style.css" />
-		
+	<link rel="stylesheet" href="css/style.css">
+	
 
-		<!-- enable HTML5 elements and fix IE10 viewport on Windows 8 -->
-		<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5" crossorigin="anonymous"></script>
-	</head>
+	<!-- enable HTML5 elements and fix IE10 viewport on Windows 8 -->
+	<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5" crossorigin="anonymous"></script>
+</head>
 
-	<body class="bullframe-demo">
-		<div class="bf-container bf-container--break-xs">
-			<header>
-				<div class="bf-row">
-					<div class="bf-col-12">
-						<div class="dev-wrapper">
-							<h1>bullframe.css</h1>
-							<p class="bf-lead">Solid, fluid, IE-friendly (S)CSS framework.</p>
-							<a
-								class="bf-btn bf-btn--primary"
-								href="https://github.com/marcop135/bullframe.css/archive/master.zip"
-								title="bullframe.css source"
-								>Download</a
-							>
-							<a
-								class="bf-btn"
-								href="https://github.com/marcop135/bullframe.css"
-								title="bullframe.css github"
-								>GitHub</a
-							>							
-							<pre><code>$ git clone https://github.com/marcop135/bullframe.css.git</code></pre>
-						</div>
-						<!-- /dev-wrapper -->
-						<hr>
-						<p class="bf-lead">
-							Take a quick look at a wide range of HTML elements, divided into
-							several sections and rendered into unusual combinations.
-						</p>
-					</div>
-				</div>
-			</header>
+<body>
+	<div class="bf-container bf-container--break-xs">
 
-			<h2 id="texts" class="section-title">Text elements</h2>
+		<header class="bf-text-center bf-m-bottom-36">
+			<h1>bullframe.css</h1>
+			<p class="bf-lead">Solid, fluid, IE-friendly (S)CSS framework.</p>
+			<a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css/archive/master.zip">Download</a>
+			<a class="bf-btn"	href="https://github.com/marcop135/bullframe.css">GitHub</a>
+		</header>
+
+		<main>
+
+			<p class="bf-lead">
+				Take a quick look at a wide range of HTML elements, divided into
+				several sections and rendered into unusual combinations.
+			</p>
+
+			<h2 id="texts" class="h2--section">Text elements</h2>
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">Headings</h3>
-					<h1>Heading 1 <a href="#">with link</a></h1>
-					<h2>Heading 2 <a href="#">with link</a></h2>
-					<h3>Heading 3 <a href="#">with link</a></h3>
-					<h4>Heading 4 <a href="#">with link</a></h4>
-					<h5>Heading 5 <a href="#">with link</a></h5>
-					<h6>Heading 6 <a href="#">with link</a></h6>
+					<div class="bf-m-bottom-24">
+						<h3>Headings</h3>
+						<h1>Heading 1 <a href="#">with link</a></h1>
+						<h2>Heading 2 <a href="#">with link</a></h2>
+						<h3>Heading 3 <a href="#">with link</a></h3>
+						<h4>Heading 4 <a href="#">with link</a></h4>
+						<h5>Heading 5 <a href="#">with link</a></h5>
+						<h6>Heading 6 <a href="#">with link</a></h6>
+					</div>
+
+					<h3>Paragraphs with headings utilities</h3>
+					<p class="bf-h1">Heading 1</p>
+					<p class="bf-h2">Heading 2</p>
+					<p class="bf-h3">Heading 3</p>
 				</div>
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">Inline text elements</h3>
+					<h3>Inline text elements</h3>
 					<p>
 						The <a href="#">a element</a> example<br />
 						The <abbr>abbr element</abbr> and
@@ -107,7 +93,7 @@
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">Paragraphs</h3>
+					<h3>Paragraphs</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
 						commodo ligula eget dolor. Aenean massa. Cum sociis natoque
@@ -126,16 +112,16 @@
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">hidden attribute</h3>
+					<h3>hidden attribute</h3>
 					<p hidden="">This should be hidden in all browsers, apart from IE6</p>
 
-					<h3 class="sub-title">Template content</h3>
+					<h3>Template content</h3>
 					<template>
 						<h1>{{title}}</h1>
 						<content></content>
 					</template>
 
-					<h3 class="sub-title">Address</h3>
+					<h3>Address</h3>
 					<address>
 						Address: somewhere, world
 					</address>
@@ -146,7 +132,7 @@
 
 			<div class="bf-row">
 				<div class="bf-col-12">
-					<h3 class="sub-title">hr</h3>
+					<h3>hr</h3>
 					<hr />
 				</div>
 				<!-- /col -->
@@ -155,28 +141,28 @@
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">pre</h3>
+					<h3>pre</h3>
 					<pre>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-        </pre
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+				</pre
 					>
 				</div>
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">pre code</h3>
+					<h3>pre code</h3>
 					<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-  &lt;title &gt;...&lt;/title&gt;
-  &lt;link rel="stylesheet" href="bullframe.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main&gt;...&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+	&lt;html&gt;
+	&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+	&lt;title &gt;...&lt;/title&gt;
+	&lt;link rel="stylesheet" href="bullframe.css"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;main&gt;...&lt;/div&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;</code></pre>
 				</div>
 				<!-- /col -->
 			</div>
@@ -184,7 +170,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-12">
-					<h3 class="sub-title">blockquotes</h3>
+					<h3>blockquotes</h3>
 					<blockquote>
 						<p>
 							Some sort of famous witty quote marked up with a
@@ -204,7 +190,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-3">
-					<h3 class="sub-title">Ordered list</h3>
+					<h3>Ordered list</h3>
 					<ol>
 						<li>list item 1</li>
 						<li>
@@ -229,7 +215,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-3">
-					<h3 class="sub-title">Unordered list</h3>
+					<h3>Unordered list</h3>
 					<ul>
 						<li>list item 1</li>
 						<li>
@@ -254,7 +240,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-3">
-					<h3 class="sub-title">Definition list</h3>
+					<h3>Definition list</h3>
 					<dl>
 						<dt>Description name</dt>
 						<dd>Description value</dd>
@@ -267,7 +253,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-3">
-					<h3 class="sub-title">Unstyled list</h3>
+					<h3>Unstyled list</h3>
 					<ol class="bf-list-unstyled">
 						<li>list item 1</li>
 						<li>
@@ -295,7 +281,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-12">
-					<h2 id="embedded-content" class="section-title">Embedded content</h2>
+					<h2 id="embedded-content" class="h2--section">Embedded content</h2>
 				</div>
 				<!-- /col -->
 			</div>
@@ -303,7 +289,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">figure img figcaption</h3>
+					<h3>figure img figcaption</h3>
 					<figure>
 						<a href="#"
 							><img src="https://placeimg.com/800/400/any" alt=""
@@ -314,7 +300,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">SVG</h3>
+					<h3>SVG</h3>
 					<svg width="200px" height="200px">
 						<circle cx="0" cy="0" r="200" fill="#ff0000" />
 					</svg>
@@ -325,7 +311,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">HTML5 video with controls</h3>
+					<h3>HTML5 video with controls</h3>
 					<video controls>
 						<source
 							src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
@@ -340,7 +326,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">Audio with controls</h3>
+					<h3>Audio with controls</h3>
 					<audio controls>
 						<source
 							src="https://media.html5media.info/audio.mp3"
@@ -359,7 +345,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">YouTube iframe 16:9 (default)</h3>
+					<h3>YouTube iframe 16:9 (default)</h3>
 					<div class="bf-embed-responsive">
 						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
@@ -367,7 +353,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">YouTube iframe 4:3</h3>
+					<h3>YouTube iframe 4:3</h3>
 					<div class="bf-embed-responsive bf-embed-responsive--4-3">
 						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mM5_T-F1Yn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
@@ -378,7 +364,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-12">
-					<h2 id="forms" class="section-title">Forms</h2>
+					<h2 id="forms" class="h2--section">Forms</h2>
 				</div>
 				<!-- /col -->
 			</div>
@@ -397,7 +383,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">Inputs</h3>
+					<h3>Inputs</h3>
 
 					<form>
 						<fieldset>
@@ -405,79 +391,52 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 								HTML5 has several new input types for forms (legend).
 							</legend>
 
-							<div>
-								<label
-									>Text input as descendant of label
-									<input
-										type="text"
-										value="default value that goes on and on without stopping or punctuation"
-								/></label>
-							</div>
+							<label>Text input as descendant of label
+							<input
+								type="text"
+								value="default value that goes on and on without stopping or punctuation"
+							></label>
 
-							<div>
-								<label>Text input as sibling of label</label>
-								<input
+							<label>Text input as sibling of label</label>
+							<input
 									type="text"
 									value="default value that goes on and on without stopping or punctuation"
-								/>
-							</div>
+							>
 
-							<div><label>Email input</label> <input type="email" /></div>
+							<label>Email input</label> <input type="email" />
 
-							<div>
-								<label>Number input</label>
-								<input id="in" max="10" min="0" type="number" value="5" />
-							</div>
+							<label>Number input</label>
+							<input id="in" max="10" min="0" type="number" value="5">
 
-							<div><label>Tel input</label> <input type="tel" /></div>
+							<label>Tel input</label> <input type="tel">
 
-							<div><label>URL input</label> <input type="url" /></div>
+							<label>URL input</label> <input type="url">
 
-							<div>
-								<label>Date input</label>
-								<input id="idd" type="date" value="1970-01-01" />
-							</div>
+							<label>Date input</label>
+							<input id="idd" type="date" value="1970-01-01">
 
-							<div>
-								<label>Month input</label>
-								<input id="idm" type="month" value="1970-01" />
-							</div>
+							<label>Month input</label>
+							<input id="idm" type="month" value="1970-01">
 
-							<div>
-								<label>Week input</label>
-								<input id="idw" type="week" value="1970-W01" />
-							</div>
+							<label>Week input</label>
+							<input id="idw" type="week" value="1970-W01">
 
-							<div>
-								<label>Datetime-local input</label>
-								<input
-									id="idtl"
-									type="datetime-local"
-									value="1970-01-01T00:00"
-								/>
-							</div>
+							<label>Datetime-local input</label>
+							<input id="idtl" type="datetime-local"	value="1970-01-01T00:00">
 
-							<div>
-								<label>Color input</label>
-								<input id="ic" type="color" value="#000000" />
-							</div>
+							<label>Color input</label>
+							<input id="ic" type="color" value="#000000">
 
-							<div>
-								<label>Range input</label>
-								<input id="ir" type="range" value="10" />
-							</div>
+							<label>Range input</label>
+							<input id="ir" type="range" value="10" />
 
-							<div>
-								<label>Password input</label>
-								<input type="password" value="password" />
-							</div>
+							<label>Password input</label>
+							<input type="password" value="password">
 
-							<div>
-								<label>Search input</label>
-								<input id="search" name="search" type="search" />
-							</div>
+							<label>Search input</label>
+							<input id="search" name="search" type="search">
 
-							<div><label>File input</label> <input type="file" /></div>
+							<label>File input</label> <input type="file">
 
 							<div class="bf-row">
 								<div class="bf-col-6">
@@ -499,7 +458,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 				<div class="bf-col-6">
 					<form>
-						<h3 class="sub-title">Selects</h3>
+						<h3>Selects</h3>
 						<fieldset>
 							<legend>
 								Cross-browser, cross-platform consistency in webkit browsers.
@@ -557,7 +516,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 						</fieldset>
 					</form>
 
-					<h3 class="sub-title">Textareas</h3>
+					<h3>Textareas</h3>
 					<form>
 						<fieldset>
 							<label>Textarea</label>
@@ -572,7 +531,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 						</fieldset>
 					</form>
 
-					<h3 class="sub-title">Textareas (disabled)</h3>
+					<h3>Textareas (disabled)</h3>
 					<form>
 						<fieldset disabled>
 							<label>Textarea</label>
@@ -593,7 +552,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">Clickable inputs</h3>
+					<h3>Clickable inputs</h3>
 					<fieldset>
 						<div class="input-image">
 							<input 
@@ -611,7 +570,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 						<div>
 							<a class="bf-btn bf-btn--primary" href="#" title="button link">Primary button (link)</a>
 						</div>
-						<div><input disabled type="submit" value="Disabled (input)" /></div>
+						<div>
+							<input disabled type="submit" value="Disabled (input)" />
+						</div>
 						<div>
 							<a class="bf-btn bf-btn--primary disabled" href="#" title="button link">Disabled primary button (link)</a>
 						</div>
@@ -620,7 +581,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">Buttons</h3>
+					<h3>Buttons</h3>
 					<fieldset>
 						<div><button type="reset">Reset (button)</button></div>
 						<div><button type="button">Button (button)</button></div>
@@ -636,14 +597,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-12">
-					<h2 id="tables" class="section-title">Tables</h2>
+					<h2 id="tables" class="h2--section">Tables</h2>
 				</div>
 			</div>
 			<!-- /row -->
 
 			<div class="bf-row">
 				<div class="bf-col-6">
-					<h3 class="sub-title">Unstyled tabular data</h3>
+					<h3>Unstyled tabular data</h3>
 					<table>
 						<caption>
 							Jimi Hendrix - albums
@@ -689,7 +650,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<!-- /col -->
 
 				<div class="bf-col-6">
-					<h3 class="sub-title">Styled tabular data</h3>
+					<h3>Styled tabular data</h3>
 					<table class="bf-table">
 						<caption>
 							Jimi Hendrix - albums
@@ -738,7 +699,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-12">
-					<h3 class="sub-title">Styled responsive tabular data</h3>
+					<h3>Styled responsive tabular data</h3>
 					<div class="bf-table-responsive">
 						<table class="bf-table">
 							<caption>
@@ -828,14 +789,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 			<div class="bf-row">
 				<div class="bf-col-12">
-					<h2 id="grid-system" class="section-title">Grid System</h2>
-					<p>12 columns fluid Grid System</p>
+					<h2 id="grid-system" class="h2--section">Grid System</h2>
+					<p>12 columns fluid/responsive grid System</p>
 				</div>
 				<!-- /col -->
 			</div>
 			<!-- /row -->
 
-			<div class="grid">
+			<div class="grid bf-m-bottom-36">
 				<!-- 12 -->
 				<div class="bf-row">
 					<div class="bf-col-12">
@@ -1127,42 +1088,30 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 					<div class="bf-col-1">
 						<div class="wrapper">1 col</div>
 						<!-- /.wrapper -->
-					</div>
-					<!-- /col -->
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /grid -->
+					</div><!-- /col -->
+				</div><!-- /row -->
+			</div><!-- /grid -->
+		</main>
 
-			<div class="bf-row">
-				<div class="bf-col-12">
-					<div class="sharing">
-						<span class="bf-display-block bf-h1">Fork, clone or download it</span>
-						<a class="bf-display-block"
-							href="https://github.com/marcop135/bullframe.css"
-							>https://github.com/marcop135/bullframe.css</a
-						>
-						<code>
-							$ git clone https://github.com/marcop135/bullframe.css.git</code
-						>
-						<a
-							class="github-source"
-							href="https://github.com/marcop135/bullframe.css/archive/master.zip"
-							>Download bullframe.css</a
-						>
+		<footer>	
+			<div class="bf-row bf-m-bottom-36">
+				<div class="bf-col-12 bf-text-center">
+					
+					<div class="bf-m-bottom-36">
+						<h3>Clone or download it</h3>
+						<code class="bf-display-block bf-m-bottom-24">
+							$ git clone https://github.com/marcop135/bullframe.css.git
+						</code> 
+						<a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css/archive/master.zip">Download</a>
 					</div>
-					<!--/.social-btns -->
+					
+					<div class="bf-text-center">
+						<a class="bf-display-inline-block" href="#top">back to top</a>
+					</div>
+				</div><!-- /col -->
+			</div><!-- /row -->
+		</footer>
 
-					<span class="back-to-top">
-						<a href="#" title="back to top"
-							><i class="bf-h1">&uarr;</i> back to top</a
-						>
-					</span>
-				</div>
-				<!-- /col -->
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /.bf-container -->
-	</body>
+</div><!-- /.bf-container -->
+</body>
 </html>

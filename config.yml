@@ -9,14 +9,16 @@ publishDir: "_gh_pages"
 
 params:
   description: "Solid, fluid, IE-friendly (S)CSS framework"
-  authors: "Marco Pontili"
+  authors: "Marco Pontili, and contributors"
+  social_image_path: /docs/.vuepress/assets/img/brand/bullframe-css-social.png
+  social_logo_path: /docs/.vuepress/assets/img/brand/bullframe-css-social-logo.png
 
-  current_version: "3.0.0"
+  current_version: "3.0.0-beta"
   repo: "https://github.com/marcop135/bullframe.css"
 
 download:
   source: "https://github.com/marcop135/bullframe.css/archive/master.zip"
-  dist: "https://github.com/marcop135/bullframe.css/releases/tag/v3.0.0/bullframe-css-master.zip"
+  dist: "https://github.com/marcop135/bullframe.css/releases/tag/v3.0.0-beta/bullframe-css-master.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

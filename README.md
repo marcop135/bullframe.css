@@ -2,7 +2,7 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-_bullframe.css_ is a (S)CSS framework that works on every browsers, modern or not.
+bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 
 It's a solid starting-point for a **IE8+**, progressive, mobile-first responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
@@ -16,7 +16,7 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 - Flexible images and media elements (video, audio, iframe, embed) by default
 - Flexible, cross-browser HTML5 form elements by default
 - A simple 12-columns fluid/responsive grid system with IE8+ support
-- Get utility classes (e.g. `<h2 class="h1">` or `<div class="clearfix">`), or not (classless framework)
+- Get utility classes (e.g. `<h2 class="h1">` or `<div class="clearfix">`) or not (classless framework)
 - Dark mode included
 - CSS BEM
 - just 20KB~ or less minified/gzipped (Bootstrap is 7 times more)
@@ -126,7 +126,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 ## Support and Caveats
 
-CSS3 Media Queries via `respond.js` polyfill is limited. [Read more](https://github.com/scottjehl/Respond#support--caveats)
+... (TODO)
 
 ## Classless (no utilities, e.g. `<h2 class="h1">`)
 

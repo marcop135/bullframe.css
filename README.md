@@ -23,10 +23,10 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 
 - Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
 - [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
-- [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop-mobile/worldwide/#monthly-201902-202002-bar)
+- [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop/worldwide#monthly-201904-202004-bar)
 - Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) as well.
 
-## How to use it
+## Usage
 
 ### Include it via CDN in the `<head>`
 
@@ -44,9 +44,8 @@ Add some HTML markup, and a bunch of JS polyfills from a JSDelivr CDN (html5shiv
 
 #### IE8+ and old browsers (recommended)
 
-1. (X)HTML compliant
-2. Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
-3. Grid system ready (`.bf-container` class)
+1. Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
+2. Grid system ready (`.bf-container` class)
 
 ```html
 <!DOCTYPE html>

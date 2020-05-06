@@ -39,6 +39,11 @@ figure {
 	margin: 0;
 }
 
+figure,
+figcaption {
+	display: block;
+}
+
 video {
 	height: auto;
 }
@@ -57,6 +62,7 @@ svg:not(:root) {
 }
 
 progress {
+	display: inline-block;
 	vertical-align: baseline;
 	width: 100%;
 	max-width: 100%;

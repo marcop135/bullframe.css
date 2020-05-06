@@ -158,9 +158,9 @@ html [type="button"],
 	appearance: none;
 }
 
-// add again -webkit-appearance destroyed from the previous ruleset
 ::-webkit-file-upload-button {
-	appearance: button;
+  -webkit-appearance: button; // iOS and Safari
+  font: inherit; // Safari.
 }
 
 [type="date"],

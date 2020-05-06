@@ -18,7 +18,8 @@ hgroup,
 main,
 menu,
 nav,
-section {
+section,
+details {
   display: block;
 }
 
@@ -79,42 +80,49 @@ h5,
 h6 {
   font-family: inherit;
   color: inherit;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 h1 {
-  font-size: 6px;
+  font-size: 36px;
   font-size: 3.6rem;
-  margin-bottom: 24px 0;
-  margin-bottom: 2.4rem 0;
 }
 
 h2 {
   font-size: 30px;
   font-size: 3rem;
-  margin-bottom: 24px 0;
-  margin-bottom: 2.4rem 0;
 }
 
 h3 {
   font-size: 24px;
   font-size: 2.4rem;
-  margin-bottom: 24px 0;
-  margin-bottom: 2.4rem 0;
 }
 
 h4 {
   font-size: 20px;
   font-size: 2rem;
-  margin-bottom: 12px 0;
-  margin-bottom: 1.2rem 0;
 }
 
 h5,
 h6 {
   font-size: 17px;
   font-size: 1.7rem;
-  margin-bottom: 12px 0;
-  margin-bottom: 1.2rem 0;
 }
 
 abbr[title],
@@ -371,6 +379,11 @@ figure {
   margin: 0;
 }
 
+figure,
+figcaption {
+  display: block;
+}
+
 video {
   height: auto;
 }
@@ -389,6 +402,7 @@ svg:not(:root) {
 }
 
 progress {
+  display: inline-block;
   vertical-align: baseline;
   width: 100%;
   max-width: 100%;
@@ -546,7 +560,7 @@ html [type=button],
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-          appearance: button;
+  font: inherit;
 }
 
 [type=date],

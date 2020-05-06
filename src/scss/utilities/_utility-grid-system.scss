@@ -41,31 +41,9 @@
 }
 
 .bf-container {
-	// small screens
-	@media (min-width: 576px) {
-		max-width: 528px; // 528 + 24 padding left + 24 padding right = 576
-		max-width: 52.6rem;
-	}
-
-	// medium screens
-	@media (min-width: 768px) {
-		max-width: 720px; // 720 + 24 + 24 = 768
-		max-width: 72rem;
-	}
-
-	// large screens
-	@media (min-width: 992px) {
-		max-width: 960px; // 960 + 24 + 24 = 1024
-		max-width: 96rem;
-	}
-
-	// xl screens
-	@media (min-width: 1200px) {
-		max-width: 1152px; // 1152 + 24 + 24 = 1200
-		max-width: 115.2rem;
-	}
+	max-width: 1152px; // 1152 + 24 + 24 = 1200
+	max-width: 115.2rem;
 }
-
 
 .bf-row {
 	display: block;
@@ -162,6 +140,13 @@
 .bf-col-1 {
 	width: 8.3333%;
 }
+
+// ! this is IE9+
+// if you need CSS3 Media Queries support in IE8
+// you could use the respond.js polyfll https://github.com/scottjehl/Respond
+// 
+// ! but there are some important caveats
+// https://github.com/scottjehl/Respond#support--caveats
 
 // 'break' the columns and make them full-width
 @media (max-width: 575px) {

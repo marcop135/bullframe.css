@@ -1,4 +1,17 @@
 {
+	"name": "bullframe.css",
+	"version": "3.0.0-beta",
+	"description": "Solid, fluid, IE-friendly (S)CSS framework",
+	"main": "bullframe.css",
+	"style": "bullframe.css",
+	"files": [
+		"LICENSE",
+		"bullframe.css"
+	],
+	"repository": "marcop135/bullframe.css",
+	"license": "MIT",
+	"bugs": "https://github.com/marcop135/bullframe.css/issues",
+	"homepage": "https://marcop135.github.io/bullframe.css",
 	"scripts": {
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs"

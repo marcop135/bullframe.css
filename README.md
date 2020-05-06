@@ -1,5 +1,7 @@
 # bullframe.css
 
+[https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
+
 _bullframe.css_ is a (S)CSS framework to be used as an alternative to CSS resets.
 It's a solid starting-point for a **IE8+**, progressive, mobile-first responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
@@ -40,7 +42,7 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 
 Add some HTML markup, and a bunch of JS polyfills from a JSDelivr CDN (html5shiv.js, respond.js, ie10-viewport-bug-workaround.js) if you need a wide cross-browser support.
 
-#### IE8+ and old browsers (verbose)
+#### IE8+ and old browsers (recommended)
 
 1. (X)HTML compliant
 2. Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
@@ -50,7 +52,7 @@ Add some HTML markup, and a bunch of JS polyfills from a JSDelivr CDN (html5shiv
 <!DOCTYPE html>
 <html lang="">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
@@ -87,23 +89,7 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
 </html>
 ```
 
-#### IE11+ and modern browsers (minimal setup)
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
-</head>
-<body>
-  <h1>Hello World!</h1>
-</body>
-</html>
-```
-
-#### IE11+ and modern browsers (verbose)
+#### IE11+ and modern browsers (recommended)
 
 ```html
 <!DOCTYPE html>
@@ -119,7 +105,22 @@ integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ug
   </div>
 </body>
 </html>
+```
 
+#### IE11+ and modern browsers (minimal setup)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+</head>
+<body>
+  <h1>Hello World!</h1>
+</body>
+</html>
 ```
 
 ## Classless (no utilities, e.g. `<h2 class="h1">`)

@@ -14,12 +14,12 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 - Mobile-First Responsive Web Design focused
 - Progressive Enhancement focused
 - Flexible images and media elements (video, audio, iframe, embed) by default
-- Flexible, cross-browser HTML5 form elements by default
+- Flexible, cross-browser, bug-proof HTML5 form elements by default
 - A simple 12-columns fluid/responsive grid system with IE8+ support
 - Get utility classes (e.g. `<h2 class="h1">` or `<div class="clearfix">`) or not (classless framework)
 - Dark mode included
 - CSS BEM
-- just 20KB~ or less minified/gzipped (Bootstrap is 7 times more)
+- `bullframe-classless.min.css` is just 10KB~ 🎉
 
 ## 😣 Yes, people still use Internet Explorer in 2020
 

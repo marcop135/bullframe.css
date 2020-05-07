@@ -9,9 +9,7 @@ textarea {
 	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
-
-	// Old browsers and Opera Mini need this
-	line-height: 1.5;
+	line-height: inherit;
 }
 
 html input,
@@ -324,17 +322,6 @@ button,
 	}
 }
 
-input:invalid,
-select:invalid,
-textarea:invalid,
-input:invalid:focus,
-select:invalid:focus,
-textarea:invalid:focus {
-	color: $bf-red;
-	border-color: $bf-red;
-	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
-}
-
 // FF placeholder bug
 // Issue: If one change the text color of input fields, FF will change
 // the default color of placeholders too!
@@ -342,6 +329,18 @@ textarea:invalid:focus {
 input::placeholder,
 textarea::placeholder {
 	color: $bf-gray-dark;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid,
+
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
+	color: $bf-red;
+	border-color: $bf-red;
+	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
 }
 
 // disabled groups
@@ -355,8 +354,8 @@ button[disabled],
 input[disabled],
 select[disabled],
 textarea[disabled] {
-	cursor: default !important; // IE8-10 fallback
-	cursor: not-allowed !important; // Opera Mini fallback
+	cursor: default; // IE8-10 fallback
+	cursor: not-allowed; // Opera Mini fallback
 	pointer-events: none;
-	opacity: .5 !important;
+	opacity: .5;
 }

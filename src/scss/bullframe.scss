@@ -87,6 +87,10 @@
 // has requested that the system minimize the amount of animation or motion it uses.
 @import "utilities/utility-reduced-motion";
 
+// shamy quick fixes...
+// https://csswizardry.com/2013/04/shame-css/
+@import "shame";
+
 // this is useful for just for debugging purpouses
 // commented by default
 @import "utilities/utility-debugging";

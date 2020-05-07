@@ -8,10 +8,10 @@
 	<title>Test page — bullframe.css (S)CSS framework</title>
 	<meta	name="description" content="Solid, fluid, IE-friendly (S)CSS framework">
 
-	<link rel="stylesheet" href="../../dist/css/bullframe-dark-prefers.min.css">
+	<link rel="stylesheet" href="../../dist/css/bullframe-dark-prefers.css?v1234">
 
 	<!-- this is just for a nicer demo -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css?v1234">
 
 	<!-- enable HTML5 elements, and fix IE10 viewport on Windows 8 -->
 	<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@
 <body>
 	<div class="bf-container bf-container--break-md">
 
-		<header class="bf-text-center bf-m-bottom-24">
+		<header class="bf-text-center bf-m-bottom-24 bf-m-top-24">
 			<h1>bullframe.css</h1>
 			<p class="bf-lead">Solid, fluid, IE-friendly (S)CSS framework.</p>
 			<a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css/archive/master.zip">Download</a>
@@ -292,7 +292,7 @@
 					<h3>Linked figure with an image and a caption</h3>
 					<figure>
 						<a href="#">
-							<img class="lazy" data-src="https://placeimg.com/800/400/any" alt="just a placeholder">
+							<img src="https://placeimg.com/800/400/any" alt="just a placeholder">
 							<noscript>
 								<img src="https://placeimg.com/800/400/any" alt="just a placeholder">
 							</noscript>
@@ -313,33 +313,19 @@
 			<div class="bf-row">
 				<div class="bf-col-6">
 
-					<h3>HTML5 video with controls</h3>
-					<video class="lazy" data-src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" controls>
-						<source
-							data-src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
-						/>
-						<source
-							data-src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4"
-							type="video/mp4"
-						/>
-						Sorry, your browser doesn't support embedded videos.
-					</video>
-					<noscript>
-						<p>The video above doesn't work if JavaScript is disabled</p>
-						<video src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" controls>
-						<source
-							src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
-						/>
-						<source
-							src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4"
-							type="video/mp4"
-						/>
-						Sorry, your browser doesn't support embedded videos.
-					</video>
-					</noscript>
-
-				</div>
-				<div class="bf-col-6">
+					<div class="bf-m-bottom-24">
+						<h3>HTML5 video with controls</h3>
+						<video src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" poster="https://i.imgur.com/rAx3OXG.png" controls>
+							<source
+								src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
+							/>
+							<source
+								src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4"
+								type="video/mp4"
+							/>
+							Sorry, your browser doesn't support embedded videos.
+						</video>
+					</div>
 
 					<h3>Audio with controls</h3>
 					<audio controls>
@@ -353,15 +339,13 @@
 						/>
 						<p>Your browser does not support the HTML5 Audio element.</p>
 					</audio>
-
+					
 				</div>
-			</div>
-			<div class="bf-row">
 				<div class="bf-col-6">
 
 					<h3>YouTube iframe 16:9 (default)</h3>
 					<div class="bf-embed-responsive">
-						<iframe class="lazy" width="560" height="315" data-src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<noscript>
 							<p>The video above doesn't work if JavaScript is disabled</p>
 							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -369,18 +353,7 @@
 					</div>
 
 				</div>
-				<div class="bf-col-6">
-					
-					<h3>YouTube iframe 4:3</h3>
-					<div class="bf-embed-responsive bf-embed-responsive--4-3">
-						<iframe class="lazy" width="560" height="315" data-src="https://www.youtube-nocookie.com/embed/mM5_T-F1Yn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<noscript>
-							<p>The video above doesn't work if JavaScript is disabled</p>
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mM5_T-F1Yn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</noscript>
-					</div>
-
-				</div>
+			
 			</div>	
 			<div class="bf-row">
 				<div class="bf-col-6 bf-m-bottom-36">
@@ -1231,15 +1204,22 @@
 
 	</div>
 
-	<!-- lazyload https://github.com/verlok/lazyload -->
+	<!-- lazyload https://github.com/verlok/lazyload
 	<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script>
 	<script>
-		var lazyLoadInstance = new LazyLoad({
-			elements_selector: ".lazy"
-				// ... more custom settings?
-		});
-	</script>
+
+		// all browsers expect for the Opera Mini
+		// http://browserhacks.com/#hack-70b623e6ee3d3af7c3ca68b71c5fb29f
+		var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+
+		if (!isOperaMini) {
+			var lazyLoadInstance = new LazyLoad({
+				elements_selector: ".lazy"
+					// ... more custom settings?
+			});
+		}
+	</script> -->
 
 </body>
 </html>

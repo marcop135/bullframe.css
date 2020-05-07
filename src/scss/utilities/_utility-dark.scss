@@ -1,3 +1,5 @@
+// these are global styles
+
 html {
 	color: $bf-light;
 }
@@ -72,6 +74,8 @@ textarea {
 	}
 }
 
+// now again, but without [type="color"] and [type="range"]
+// since box-shadow just add more troubles to them
 [type="color"],
 [type="email"],
 [type="number"],

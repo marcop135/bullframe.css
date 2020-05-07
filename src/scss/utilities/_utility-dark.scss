@@ -1,19 +1,19 @@
 html {
-  color: $bf-light;
+	color: $bf-light;
 }
 
 body {
-  background-color: $bf-dark;
+	background-color: $bf-dark;
 }
 
 // anchors
 a {
-  color: lighten($bf-blue, 15%);
-  
-  &:hover,
-  &:focus {
-    color: lighten($bf-blue-light, 15%);
-  }
+	color: lighten($bf-blue, 15%);
+
+	&:hover,
+	&:focus {
+		color: lighten($bf-blue-light, 15%);
+	}
 }
 
 // typography
@@ -25,13 +25,13 @@ ins {
 	background-color: darken($bf-yellow-light, 40%);
 }
 
-kbd {
-  background-color: $bf-gray-light;
-  color: $bf-black;
-}
+// kbd {
+// 	background-color: $bf-gray-light;
+// 	color: $bf-black;
+// }
 
 hr {
-  border-color: $bf-gray-light;
+	border-color: $bf-gray-light;
 }
 
 // tables
@@ -41,6 +41,37 @@ hr {
 }
 
 // forms
+
+// Old browsers and Opera Mini don't fully support all type of inputs
+// e.g. [type="color"] and [type="range"]
+// so, let's try to add styles carefully and selective
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+[type="color"],
+[type="range"],
+select,
+textarea {
+	background-color: $bf-gray-dark-extra;
+  border-color: $bf-black;
+  
+	&:active,
+	&:focus {
+		background-color: $bf-gray-dark-extra;
+		border-color: $bf-gray;
+	}
+}
+
 [type="color"],
 [type="email"],
 [type="number"],
@@ -57,16 +88,10 @@ hr {
 [type="url"],
 select,
 textarea {
-  background-color: $bf-gray-dark-extra;
-  border-color: $bf-black;
-
-  &:active,
-
-  &:focus {
-    background-color: $bf-gray-dark-extra;
-    border-color: $bf-gray;
-    box-shadow: 0 0 0 3px rgba(153, 153, 153, .5);
-  }
+	&:active,
+	&:focus {
+		box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+	}
 }
 
 input::placeholder,
@@ -80,7 +105,7 @@ textarea:invalid,
 input:invalid:focus,
 select:invalid:focus,
 textarea:invalid:focus {
-  color: lighten($bf-red, 7.5%);
+	color: lighten($bf-red, 7.5%);
 	border-color: lighten($bf-red, 7.5%);
 }
 
@@ -89,31 +114,31 @@ button,
 [type="reset"],
 [type="submit"],
 .bf-btn {
-  background: $bf-gray-light;
+	background: $bf-gray-light;
 
-  &:hover,
-  &:active,
-  &:focus {
-    background: darken($bf-gray-light, 10%);
-  }
+	&:hover,
+	&:active,
+	&:focus {
+		background: darken($bf-gray-light, 10%);
+	}
 
-  &:active,
-  &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .45);
-  }
+	&:active,
+	&:focus {
+		box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+	}
 }
 
 .bf-btn.bf-btn--primary {
-  background: $bf-blue;
-  
-  &:hover,
-  &:active,
-  &:focus {
-    background: darken($bf-blue, 5%)
-  }
+	background: $bf-blue;
 
-  &:active,
-  &:focus {
-    box-shadow: 0 0 0 3px rgba(0, 86, 179, .75);
-  }
+	&:hover,
+	&:active,
+	&:focus {
+		background: darken($bf-blue, 5%);
+	}
+
+	&:active,
+	&:focus {
+		box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
+	}
 }

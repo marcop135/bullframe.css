@@ -429,84 +429,102 @@
 				</div>
 			</div>	
 			<div class="bf-row">
-				<div class="bf-col-6">
+				<div class="bf-col-6 bf-m-bottom-24">
 
 					<h3>Inputs</h3>
 
 					<form>
 						<fieldset>
-							<legend>
-								HTML5 has several new input types for forms (legend).
-							</legend>
+							<div class="bf-m-bottom-36">
+								<legend>
+									HTML5 has several new input types for forms (legend).
+								</legend>
 
-							<label>Text input as descendant of label
-							<input
-								type="text"
-								value="default value that goes on and on without stopping or punctuation"
-							></label>
-
-							<label>Text input as sibling of label</label>
-							<input
+								<label>Text input as descendant of label
+								<input
 									type="text"
 									value="default value that goes on and on without stopping or punctuation"
-							>
+								></label>
 
-							<label>Email input</label> 
-							<input type="email">
+								<label>Text input as sibling of label</label>
+								<input
+										type="text"
+										value="default value that goes on and on without stopping or punctuation"
+								>
 
-							<label>Number input</label>
-							<input id="in" max="10" min="0" type="number" value="5">
+								<label>Email input</label> 
+								<input type="email">
 
-							<label>Tel input</label> <input type="tel">
+								<label>Number input</label>
+								<input id="in" max="10" min="0" type="number" value="5">
 
-							<label>URL input</label> <input type="url">
+								<label>Tel input</label> <input type="tel">
 
-							<label>Date input</label>
-							<input id="idd" type="date" value="1970-01-01">
+								<label>URL input</label> <input type="url">
 
-							<label>Month input</label>
-							<input id="idm" type="month" value="1970-01">
+								<label>Date input</label>
+								<input id="idd" type="date" value="1970-01-01">
 
-							<label>Week input</label>
-							<input id="idw" type="week" value="1970-W01">
+								<label>Month input</label>
+								<input id="idm" type="month" value="1970-01">
 
-							<label>Datetime-local input</label>
-							<input id="idtl" type="datetime-local" value="1970-01-01T00:00">
+								<label>Week input</label>
+								<input id="idw" type="week" value="1970-W01">
 
-							<label>Color input</label>
-							<input id="ic" type="color" value="#000000">
+								<label>Datetime-local input</label>
+								<input id="idtl" type="datetime-local" value="1970-01-01T00:00">
 
-							<label>Range input</label>
-							<input id="ir" type="range" value="10">
+								<label>Color input</label>
+								<input id="ic" type="color" value="#000000">
 
-							<label>Password input</label>
-							<input type="password" value="password">
+								<label>Range input</label>
+								<input id="ir" type="range" value="10">
 
-							<label>Search input</label>
-							<input id="search" name="search" type="search">
+								<label>Password input</label>
+								<input type="password" value="password">
 
-							<label>File input</label> <input type="file">
+								<label>Search input</label>
+								<input id="search" name="search" type="search">
 
-							<div class="bf-row">
-								<div class="bf-col-6">
-
-									<div>
-										<label>
-											<input name="radio" type="radio">
-											Radio input
-										</label>
-									</div>
-
-									<div>
-										<label>
-											<input type="checkbox">
-											Checkbox input
-										</label>
-									</div>
-
-								</div>
+								<label>File input</label> <input type="file">
 							</div>
-							
+
+							<h3>Radio and checkbox inputs</h3>
+
+							<h4>Radios</h4>
+
+							<div class="bf-m-bottom-24">
+
+								<div>
+									<input type="radio" id="huey" name="drone" value="huey"
+												checked>
+									<label for="huey">Huey</label>
+								</div>
+
+								<div>
+									<input type="radio" id="dewey" name="drone" value="dewey">
+									<label for="dewey">Dewey</label>
+								</div>
+
+								<div>
+									<input type="radio" id="louie" name="drone" value="louie">
+									<label for="louie">Louie</label>
+								</div>
+								
+							</div>
+
+							<h4>Checkboxes</h4>
+							<div>
+								<input type="checkbox" id="scales" name="scales"
+											checked>
+								<label for="scales">Scales</label>
+							</div>
+
+							<div>
+								<input type="checkbox" id="horns" name="horns">
+								<label for="horns">Horns</label>
+							</div>
+
 						</fieldset>
 					</form>
 

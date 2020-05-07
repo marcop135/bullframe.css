@@ -226,8 +226,8 @@ samp {
 kbd {
 	background-color: $bf-dark;
 	color: $bf-white;
-	padding: $bf-spacing-sm-px;
-	padding: $bf-spacing-sm-rem;
+	padding: $bf-spacing-md-px / 3;
+	padding: $bf-spacing-md-px / 3;
 
 	// ! IE9+
 	// https://caniuse.com/#feat=border-radius

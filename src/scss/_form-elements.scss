@@ -142,7 +142,9 @@ button,
 html [type="button"], 
 [type="reset"],
 [type="submit"],
+
 [type="email"],
+[type="number"],
 [type="text"],
 [type="tel"],
 [type="date"],
@@ -154,7 +156,9 @@ html [type="button"],
 [type="password"],
 [type="search"],
 [type="search"]::-webkit-search-decoration,
-[type="search"]::-webkit-search-cancel-button {
+[type="search"]::-webkit-search-cancel-button,
+
+textarea {
 	appearance: none;
 }
 

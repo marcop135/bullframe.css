@@ -10,11 +10,6 @@
 	margin-bottom: 1.2rem;
 }
 
-.test header {
-	margin-top: 24px;
-	margin-top: 2.4rem;
-}
-
 @media (max-width: 575px) {
 	.test header {
 		margin-top: 12px;

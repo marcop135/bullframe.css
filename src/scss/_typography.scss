@@ -220,16 +220,16 @@ samp {
 	font-size: 90%;
 }
 
-kbd {
-	background-color: $bf-dark;
-	color: $bf-white;
-	padding: $bf-spacing-md-px / 3;
-	padding: $bf-spacing-md-px / 3;
+// kbd {
+// 	background-color: $bf-dark;
+// 	color: $bf-white;
+// 	padding: $bf-spacing-md-px / 3;
+// 	padding: $bf-spacing-md-px / 3;
 
-	// ! IE9+
-	// https://caniuse.com/#feat=border-radius
-	border-radius: $bf-spacing-sm-px;
-}
+// 	// ! IE9+
+// 	// https://caniuse.com/#feat=border-radius
+// 	border-radius: $bf-spacing-sm-px;
+// }
 
 // Prevent the duplicate application of `bolder` by the next rule 
 // in Safari 6

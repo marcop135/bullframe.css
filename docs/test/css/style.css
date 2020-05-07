@@ -98,7 +98,7 @@
 	margin-bottom: 0;
 }
 
-.test .grid .wrapper {
+.test .grid .col-wrapper {
 	background-color: #888;
 	height: 60px;
 	height: 6rem;
@@ -113,7 +113,7 @@
 	font-weight: 700;
 }
 
-.test .grid .bf-row:nth-child(odd) .wrapper {
+.test .grid .bf-row:nth-child(odd) .col-wrapper {
 	background-color: #ccc;
 	color: #000;
 }

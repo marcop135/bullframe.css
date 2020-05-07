@@ -8,10 +8,9 @@
 	<title>Documentation - bullframe.css (S)CSS framework</title>
 	<meta	name="description" content="Solid, fluid, IE-friendly (S)CSS framework.">
 
-	<link rel="stylesheet" href="../../dist/css/bullframe-darkmode-prefers.css">
+	<link rel="stylesheet" href="../../dist/css/bullframe-darkmode-prefers.min.css">
 
 	<link rel="stylesheet" href="css/style.css">
-	
 
 	<!-- enable HTML5 elements and fix IE10 viewport on Windows 8 -->
 	<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5" crossorigin="anonymous"></script>
@@ -288,9 +287,10 @@
 				<div class="bf-col-6">
 					<h3>figure img figcaption</h3>
 					<figure>
-						<a href="#"
-							><img src="https://placeimg.com/800/400/any" alt=""
-						/></a>
+						<a href="#">
+							<img class="lazy" data-src="https://placeimg.com/800/400/any" alt="">
+							<noscript><img src="https://placeimg.com/800/400/any" alt=""></noscript>
+						</a>
 						<figcaption>The image above is 800x400 pixels</figcaption>
 					</figure>
 				</div>
@@ -309,7 +309,19 @@
 			<div class="bf-row">
 				<div class="bf-col-6">
 					<h3>HTML5 video with controls</h3>
-					<video controls>
+					<video class="lazy" data-src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" controls>
+						<source
+							data-src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
+						/>
+						<source
+							data-src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4"
+							type="video/mp4"
+						/>
+						Sorry, your browser doesn't support embedded videos.
+					</video>
+					<noscript>
+						<p>The video above doesn't work if JavaScript is disabled</p>
+						<video src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" controls>
 						<source
 							src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
 						/>
@@ -319,6 +331,7 @@
 						/>
 						Sorry, your browser doesn't support embedded videos.
 					</video>
+					</noscript>
 				</div>
 				<!-- /col -->
 
@@ -344,7 +357,11 @@
 				<div class="bf-col-6">
 					<h3>YouTube iframe 16:9 (default)</h3>
 					<div class="bf-embed-responsive">
-						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe class="lazy" width="560" height="315" data-src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<noscript>
+							<p>The video above doesn't work if JavaScript is disabled</p>
+							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</noscript>
 					</div>
 				</div>
 				<!-- /col -->
@@ -352,7 +369,11 @@
 				<div class="bf-col-6">
 					<h3>YouTube iframe 4:3</h3>
 					<div class="bf-embed-responsive bf-embed-responsive--4-3">
-						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mM5_T-F1Yn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe class="lazy" width="560" height="315" data-src="https://www.youtube-nocookie.com/embed/mM5_T-F1Yn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<noscript>
+							<p>The video above doesn't work if JavaScript is disabled</p>
+							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mM5_T-F1Yn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</noscript>
 					</div>
 				</div>
 				<!-- /col -->
@@ -1110,5 +1131,15 @@
 		</footer>
 
 </div><!-- /.bf-container -->
+
+<!-- lazyload https://github.com/verlok/lazyload -->
+<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script>
+<script>
+	var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+			// ... more custom settings?
+	});
+</script>
 </body>
 </html>

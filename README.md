@@ -7,7 +7,9 @@ bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 It's a solid starting-point for a **IE8+**, progressive, mobile-first responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
-## 😣 Yes, people still use Internet Explorer in 2020
+## Internet Explorer usage
+
+Do people still use Internet Explorer?
 
 - Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
 - [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)

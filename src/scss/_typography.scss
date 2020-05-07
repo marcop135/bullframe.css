@@ -160,10 +160,7 @@ abbr[data-original-title] {
 blockquote {
 	margin: 0 0 $bf-spacing-xl-px 0;
 	margin-bottom: $bf-spacing-xl-rem;
-	padding-left: $bf-spacing-xl-px;
-	padding-left: $bf-spacing-xl-rem;
-	border-left: $bf-spacing-md-px solid $bf-gray;
-	border-left: .6rem solid $bf-gray;
+	padding-left: 0;
 	font-style: italic;
 }
 

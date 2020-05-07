@@ -243,6 +243,31 @@ textarea {
 	padding: $bf-spacing-md-rem;
 }
 
+// this is an hack for IE8
+// http://browserhacks.com/#hack-7e41bb4d3e33ad5da4d7d737b7bf3981
+
+// some inputs don't get the padding well
+
+@media \0screen\,screen\9 {
+	[type="email"],
+	[type="number"],
+	[type="password"],
+	[type="tel"],
+	[type="search"],
+	[type="text"],
+	[type="date"],
+	[type="datetime-local"],
+	[type="month"],
+	[type="time"],
+	[type="week"],
+	[type="time"],
+	[type="url"],
+	[type="color"],
+	[type="range"] {
+		height: 32px;
+	}
+}
+
 // Old browsers and Opera Mini don't fully support all type of inputs
 // e.g. [type="color"] and [type="range"]
 // so, let's try to add styles carefully and selective

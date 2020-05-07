@@ -15,9 +15,12 @@ textarea {
 html input,
 select,
 textarea,
-legend,
-label {
+legend {
 	width: 100%;
+}
+
+html label {
+	width: auto;
 }
 
 button,
@@ -159,7 +162,7 @@ html [type="button"],
 [type="search"]::-webkit-search-cancel-button,
 
 textarea {
-	appearance: none;
+	-webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
@@ -188,11 +191,6 @@ textarea {
 // https://caniuse.com/#feat=border-radius
 [type="radio"] {
 	border-radius: $bf-spacing-md-px;
-}
-
-[type="radio"],
-[type="checkbox"] {
-	padding: 0;
 }
 
 [type="range"] {
@@ -269,18 +267,6 @@ textarea,
 		border-color: $bf-black;
 		box-shadow: 0 0 0 3px rgba(153, 153, 153, .45);
 	}
-}
-
-label [type="radio"],
-label [type="checkbox"] {
-	margin-right: $bf-spacing-lg-px;
-	margin-right: $bf-spacing-lg-rem;
-}
-
-label + [type="radio"],
-label + [type="checkbox"] {
-	margin-left: $bf-spacing-lg-px;
-	margin-left: $bf-spacing-lg-rem;
 }
 
 // Firefox: Get rid of the inner focus border on older versions

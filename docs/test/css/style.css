@@ -82,7 +82,9 @@
 	margin-bottom: 2.4rem;
 }
 
-.test [type="image"] {
+.test [type="image"],
+.test [type="checkbox"],
+.test [type="radio"] {
 	margin-bottom: 0;
 }
 

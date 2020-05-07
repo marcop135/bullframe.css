@@ -74,6 +74,16 @@ textarea::placeholder {
 	color: $bf-gray;
 }
 
+input:invalid,
+select:invalid,
+textarea:invalid,
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
+  color: lighten($bf-red, 7.5%);
+	border-color: lighten($bf-red, 7.5%);
+}
+
 button,
 [type="button"],
 [type="reset"],
@@ -89,7 +99,7 @@ button,
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .55);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .45);
   }
 }
 

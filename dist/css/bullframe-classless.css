@@ -206,8 +206,8 @@ samp {
 kbd {
   background-color: #222;
   color: #fff;
-  padding: 3px;
-  padding: 0.3rem;
+  padding: 2px;
+  padding: 2px;
   border-radius: 3px;
 }
 
@@ -272,12 +272,8 @@ summary {
   cursor: pointer;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
-}
-
 a {
-  color: #0056b3;
+  color: #007bff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -636,6 +632,7 @@ textarea {
   padding: 6px;
   padding: 0.6rem;
 }
+
 [type=email]:active, [type=email]:focus,
 [type=number]:active,
 [type=number]:focus,
@@ -664,14 +661,19 @@ textarea {
 select:active,
 select:focus,
 textarea:active,
-textarea:focus {
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+textarea:focus,
+[type=radio]:active,
+[type=radio]:focus,
+[type=checkbox]:active,
+[type=checkbox]:focus {
+  -webkit-transition: border 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: border 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
   border-color: #000;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
-          box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+  -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
+          box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
 }
 
 label [type=radio],
@@ -744,12 +746,6 @@ button:active, button:focus,
 [type=submit]:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-}
-button:focus,
-[type=button]:focus,
-[type=reset]:focus,
-[type=submit]:focus {
-  outline: 0;
 }
 
 input:invalid,

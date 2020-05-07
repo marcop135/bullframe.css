@@ -206,8 +206,8 @@ samp {
 kbd {
   background-color: #222;
   color: #fff;
-  padding: 3px;
-  padding: 0.3rem;
+  padding: 2px;
+  padding: 2px;
   border-radius: 3px;
 }
 
@@ -277,7 +277,7 @@ summary {
 }
 
 a {
-  color: #0056b3;
+  color: #007bff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -303,6 +303,10 @@ a:not([href]):not([tabindex]):focus {
 
 a:not([href]):not([tabindex]):focus {
   outline: 0;
+}
+
+:focus {
+  outline: 1px solid orange;
 }
 
 menu,
@@ -1461,6 +1465,80 @@ dd.bf-list-unstyled {
   -webkit-overflow-scrolling: auto;
 }
 
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+img {
+    page-break-inside: avoid;
+  }
+
+  p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+h3 {
+    page-break-after: avoid;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
 .bf-reduced-motion * {

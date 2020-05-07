@@ -206,8 +206,8 @@ samp {
 kbd {
   background-color: #222;
   color: #fff;
-  padding: 3px;
-  padding: 0.3rem;
+  padding: 2px;
+  padding: 2px;
   border-radius: 3px;
 }
 
@@ -272,12 +272,8 @@ summary {
   cursor: pointer;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
-}
-
 a {
-  color: #0056b3;
+  color: #007bff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -303,6 +299,38 @@ a:not([href]):not([tabindex]):focus {
 
 a:not([href]):not([tabindex]):focus {
   outline: 0;
+}
+
+:focus {
+  outline: 2px solid orange;
+}
+
+button:focus,
+[type=button]:focus,
+[type=reset]:focus,
+[type=submit]:focus,
+[type=email]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=tel]:focus,
+[type=search]:focus,
+[type=text]:focus,
+[type=date]:focus,
+[type=datetime-local]:focus,
+[type=month]:focus,
+[type=time]:focus,
+[type=week]:focus,
+[type=time]:focus,
+[type=url]:focus,
+[type=radio]:focus,
+[type=checkbox]:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
 }
 
 menu,
@@ -636,6 +664,7 @@ textarea {
   padding: 6px;
   padding: 0.6rem;
 }
+
 [type=email]:active, [type=email]:focus,
 [type=number]:active,
 [type=number]:focus,
@@ -664,14 +693,19 @@ textarea {
 select:active,
 select:focus,
 textarea:active,
-textarea:focus {
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+textarea:focus,
+[type=radio]:active,
+[type=radio]:focus,
+[type=checkbox]:active,
+[type=checkbox]:focus {
+  -webkit-transition: border 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: border 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
   border-color: #000;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
-          box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+  -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
+          box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
 }
 
 label [type=radio],
@@ -744,12 +778,6 @@ button:active, button:focus,
 [type=submit]:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-}
-button:focus,
-[type=button]:focus,
-[type=reset]:focus,
-[type=submit]:focus {
-  outline: 0;
 }
 
 input:invalid,
@@ -1461,6 +1489,93 @@ dd.bf-list-unstyled {
   -webkit-overflow-scrolling: auto;
 }
 
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+img {
+    page-break-inside: avoid;
+  }
+
+  p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+h3 {
+    page-break-after: avoid;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bf-reduced-motion,
+.bf-reduced-motion * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+         -o-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
     color: #f0f0f0;
@@ -1576,6 +1691,16 @@ textarea::placeholder {
     color: #999;
   }
 
+  input:invalid,
+select:invalid,
+textarea:invalid,
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
+    color: #ff2626;
+    border-color: #ff2626;
+  }
+
   button,
 [type=button],
 [type=reset],
@@ -1607,8 +1732,8 @@ textarea::placeholder {
 [type=submit]:focus,
 .bf-btn:active,
 .bf-btn:focus {
-    -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.55);
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.55);
+    -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
   }
 
   .bf-btn.bf-btn--primary {
@@ -1622,91 +1747,3 @@ textarea::placeholder {
             box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
   }
 }
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-@media print {
-  *,
-*:before,
-*:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster */
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]:after,
-a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-img {
-    page-break-inside: avoid;
-  }
-
-  p,
-h2,
-h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-h3 {
-    page-break-after: avoid;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .bf-reduced-motion,
-.bf-reduced-motion * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-         -o-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-/*# sourceMappingURL=bullframe-darkmode-prefers.css.map */

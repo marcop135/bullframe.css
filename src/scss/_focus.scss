@@ -1,0 +1,77 @@
+// style the ':focus' outline everywhere
+// this is for consistency
+// e.g.
+// in webkit (Chrome, Safari) the outline is blue with a subtle box-shadow
+// in trident (IE) is just pointed black 
+// in gecko (FF) is pointed black, but it's a thiner
+// ...
+:focus {
+  outline: 2px solid orange;
+}
+
+// these form elements get some ':focus' styles that enhance and improve the focus
+// see '_form-elements.scss'
+// so, we can remove it safely
+//
+// ! but do not touch
+// [type="color"]
+// [type="range"]
+// [type="file"]
+// because usually are replaced with a custom verion
+// with JS or extra <div>s
+// https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+
+[type="radio"],
+[type="checkbox"],
+
+select,
+
+textarea {
+
+  &:focus {
+    outline: 0;
+  }
+
+}
+
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
+// 
+// Take from SuitCSS https://github.com/suitcss/base
+//
+// ! ':not' is IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
+// 
+// ! and ':focus-visible' 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+// 
+// don't have some much browser support now (May 2020)
+// https://caniuse.com/#feat=css-focus-visible
+//
+// but is good in a progressive enhancement future view
+//
+// and you could polyfill it for a wide cross-browser support right now
+// https://github.com/WICG/focus-visible
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}

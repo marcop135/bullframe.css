@@ -160,7 +160,7 @@ html [type="button"],
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button; // iOS and Safari
-  font: inherit; // Safari.
+  font: inherit; // Safari
 }
 
 [type="date"],
@@ -235,16 +235,35 @@ select,
 textarea {
 	background-color: $bf-white; // this is cross-browser
 	border: 1px solid $bf-gray;
-
 	padding: $bf-spacing-md-px;
 	padding: $bf-spacing-md-rem;
+}
+
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+
+select,
+textarea,
+
+[type="radio"],
+[type="checkbox"] {
 
 	&:active,
 	&:focus {
-		transition: all .2s;
+		transition: border .2s, background-color .2s, box-shadow .2s;
 		border-color: $bf-black;
-		outline: 0;
-		box-shadow: 0 0 0 3px rgba(153, 153, 153, .5);
+		box-shadow: 0 0 0 3px rgba(153, 153, 153, .45);
 	}
 }
 
@@ -306,10 +325,6 @@ button,
 	&:active,
 	&:focus {
 		box-shadow: 0 0 0 3px rgba(0, 0, 0, .15);
-	}
-
-	&:focus {
-		outline: 0;
 	}
 }
 

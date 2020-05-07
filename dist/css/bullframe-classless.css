@@ -142,10 +142,7 @@ abbr[data-original-title] {
 blockquote {
   margin: 0 0 24px 0;
   margin-bottom: 2.4rem;
-  padding-left: 24px;
-  padding-left: 2.4rem;
-  border-left: 6px solid #999;
-  border-left: 0.6rem solid #999;
+  padding-left: 0;
   font-style: italic;
 }
 
@@ -201,14 +198,6 @@ kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 90%;
-}
-
-kbd {
-  background-color: #222;
-  color: #fff;
-  padding: 2px;
-  padding: 2px;
-  border-radius: 3px;
 }
 
 b,
@@ -419,9 +408,12 @@ textarea {
 html input,
 select,
 textarea,
-legend,
-label {
+legend {
   width: 100%;
+}
+
+html label {
+  width: auto;
 }
 
 button,
@@ -538,6 +530,7 @@ html [type=button],
 [type=reset],
 [type=submit],
 [type=email],
+[type=number],
 [type=text],
 [type=tel],
 [type=date],
@@ -549,9 +542,9 @@ html [type=button],
 [type=password],
 [type=search],
 [type=search]::-webkit-search-decoration,
-[type=search]::-webkit-search-cancel-button {
+[type=search]::-webkit-search-cancel-button,
+textarea {
   -webkit-appearance: none;
-          appearance: none;
 }
 
 ::-webkit-file-upload-button {
@@ -578,11 +571,6 @@ textarea {
 
 [type=radio] {
   border-radius: 6px;
-}
-
-[type=radio],
-[type=checkbox] {
-  padding: 0;
 }
 
 [type=range] {
@@ -625,6 +613,8 @@ textarea {
 [type=week],
 [type=time],
 [type=url],
+[type=color],
+[type=range],
 select,
 textarea {
   background-color: #fff;
@@ -633,6 +623,25 @@ textarea {
   padding: 0.6rem;
 }
 
+@media \0 screen\,screen\9  {
+  [type=email],
+[type=number],
+[type=password],
+[type=tel],
+[type=search],
+[type=text],
+[type=date],
+[type=datetime-local],
+[type=month],
+[type=time],
+[type=week],
+[type=time],
+[type=url],
+[type=color],
+[type=range] {
+    height: 32px;
+  }
+}
 [type=email]:active, [type=email]:focus,
 [type=number]:active,
 [type=number]:focus,
@@ -674,18 +683,6 @@ textarea:focus,
   border-color: #000;
   -webkit-box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
           box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
-}
-
-label [type=radio],
-label [type=checkbox] {
-  margin-right: 12px;
-  margin-right: 1.2rem;
-}
-
-label + [type=radio],
-label + [type=checkbox] {
-  margin-left: 12px;
-  margin-left: 1.2rem;
 }
 
 button::-moz-focus-inner,
@@ -748,18 +745,6 @@ button:active, button:focus,
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 
-input:invalid,
-select:invalid,
-textarea:invalid,
-input:invalid:focus,
-select:invalid:focus,
-textarea:invalid:focus {
-  color: #FF0000;
-  border-color: #FF0000;
-  -webkit-box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
-          box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
-}
-
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #666;
 }
@@ -781,6 +766,18 @@ textarea::placeholder {
   color: #666;
 }
 
+input:invalid,
+select:invalid,
+textarea:invalid,
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
+  color: #FF0000;
+  border-color: #FF0000;
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
+          box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
+}
+
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
@@ -789,10 +786,10 @@ button[disabled],
 input[disabled],
 select[disabled],
 textarea[disabled] {
-  cursor: default !important;
-  cursor: not-allowed !important;
+  cursor: default;
+  cursor: not-allowed;
   pointer-events: none;
-  opacity: 0.5 !important;
+  opacity: 0.5;
 }
 
 table {

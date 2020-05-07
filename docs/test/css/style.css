@@ -13,9 +13,6 @@
 .test header {
 	margin-top: 24px;
 	margin-top: 2.4rem;
-	background-color: #ebebeb;
-	padding: 12px 24px;
-	padding: 1.2rem 2.4rem;
 }
 
 @media (max-width: 575px) {
@@ -27,7 +24,6 @@
 
 .test header h1 {
 	margin-bottom: 0;
-	text-transform: uppercase;
 }
 
 @media (min-width: 600px) {
@@ -57,13 +53,8 @@
 }
 
 .test .h2--section {
-	margin-top: 30px;
-	margin-top: 3rem;
-	background-color: #ebebeb;
-	margin-bottom: 24px;
-	margin-bottom: 2.4rem;
-	padding: 12px 24px;
-	padding: 1.2rem 2.4rem;
+	padding-top: 24px;
+	padding-botttom: 2.4rem;
 	text-transform: uppercase;
 }
 
@@ -129,15 +120,4 @@
 .test .back-to-top a i {
 	vertical-align: middle;
 	font-style: normal;
-}
-
-/* ! this is not cross-browser
- * e.g. IE, Opera Mini and more
- * https://caniuse.com/#feat=prefers-color-scheme
- */
-@media (prefers-color-scheme: dark) {
-	.test header,
-	.test .h2--section {
-		background-color: #444;
-	}
 }

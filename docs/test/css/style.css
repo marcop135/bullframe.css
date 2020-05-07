@@ -1,6 +1,4 @@
-html.test {
-	scroll-behavior: smooth;
-}
+/* just for a nicer demo */
 
 .test .bf-row {
 	margin-bottom: 24px;
@@ -15,14 +13,14 @@ html.test {
 .test header {
 	margin-top: 24px;
 	margin-top: 2.4rem;
-	border: 2px solid #222;
-	padding: 12px 24px 0 24px;
-	padding: 1.2rem 2.4rem 0 2.4rem;
+	background-color: #ebebeb;
+	padding: 12px 24px;
+	padding: 1.2rem 2.4rem;
 }
 
 @media (prefers-color-scheme: dark) {
 	.test header {
-		border-color: #f0f0f0;
+		background-color: #555;
 	}
 }
 
@@ -67,7 +65,7 @@ html.test {
 .test .h2--section {
 	margin-top: 30px;
 	margin-top: 3rem;
-	border: 2px solid #222;
+	background-color: #ebebeb;
 	margin-bottom: 24px;
 	margin-bottom: 2.4rem;
 	padding: 12px 24px;
@@ -77,7 +75,7 @@ html.test {
 
 @media (prefers-color-scheme: dark) {
 	.test .h2--section {
-		border-color: #f0f0f0;
+		background-color: #555;
 	}
 }
 

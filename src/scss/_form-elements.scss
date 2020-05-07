@@ -9,7 +9,9 @@ textarea {
 	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
-	line-height: inherit;
+
+	// Old browsers and Opera Mini need this
+	line-height: 1.5;
 }
 
 html input,
@@ -233,14 +235,19 @@ textarea {
 [type="week"],
 [type="time"],
 [type="url"],
+[type="color"],
+[type="range"],
 select,
 textarea {
-	background-color: $bf-white; // this is cross-browser
+	background-color: $bf-white;
 	border: 1px solid $bf-gray;
 	padding: $bf-spacing-md-px;
 	padding: $bf-spacing-md-rem;
 }
 
+// Old browsers and Opera Mini don't fully support all type of inputs
+// e.g. [type="color"] and [type="range"]
+// so, let's try to add styles carefully and selective
 [type="email"],
 [type="number"],
 [type="password"],
@@ -254,7 +261,6 @@ textarea {
 [type="week"],
 [type="time"],
 [type="url"],
-
 select,
 textarea,
 

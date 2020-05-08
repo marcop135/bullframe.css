@@ -101,11 +101,22 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
-integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
+
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+  integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
+  crossorigin="anonymous"
+>
 
 <!-- enable HTML5 elements and fix IE10 viewport on Windows 8 -->
-<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5" crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"
+  integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5"
+  crossorigin="anonymous"
+></script>
+
 <body>
   <div class="bf-container">
     <h1>Hello World!</h1>
@@ -124,7 +135,14 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css" integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"  crossorigin="anonymous">
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+  integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
+  crossorigin="anonymous"
+>
+
 </head>
 <body>
   <div class="bf-container">
@@ -207,14 +225,14 @@ This project is tested in a wide range of browsers using [BrowserStack](http://b
 
 ## Acknowledgements
 
-bullframe.css incorporates some of the styles found on:
+bullframe.css incorporates some of the styles found on some amazing CSS boilerplates and frameworks across the web. _Thank you!_
 
-- necolas/normalize.css [https://github.com/necolas/normalize.css](https://github.com/necolas/normalize.css)
-- h5bp/main.css [https://github.com/h5bp/main.css](https://github.com/h5bp/main.css)
-- twbs/bootstrap [https://github.com/twbs/bootstrap](https://github.com/twbs/bootstrap)
-- kognise/water.css [https://github.com/kognise/water.css](https://github.com/kognise/water.css)
-- csswizardry/inuit.css [https://github.com/csswizardry/inuit.css](https://github.com/csswizardry/inuit.css)
-- YUI3 CSS Grids library [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
+- @necolas /normalize.css for the extensive old browser bug fixing documentation [https://github.com/necolas/normalize.css](https://github.com/necolas/normalize.css)
+- @h5bp /main.css for the excellent '@print' styles and accessible utilities [https://github.com/h5bp/main.css](https://github.com/h5bp/main.css)
+- @twbs /bootstrap for _everything!_ [https://github.com/twbs/bootstrap](https://github.com/twbs/bootstrap)
+- @kognise /water.css for the "classless" concept and some forms tricks [https://github.com/kognise/water.css](https://github.com/kognise/water.css)
+- @csswizardry /inuit.css for the 'shame' file and advanced tips and tricks [https://github.com/csswizardry/inuit.css](https://github.com/csswizardry/inuit.css)
+- YUI3 CSS Grids library for the grid system inspiration [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
 
 ## License
 

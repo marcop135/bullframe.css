@@ -4,10 +4,10 @@
 
 bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 
-It's a solid starting-point for a **IE8+**, progressive, mobile-first responsive web design.
+It's a solid starting-point for a **IE8+**, progressive, responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
-Jump to: [Getting started - CDN](#CDN) - [Getting started - NPM](#npm)  - [Getting started - HTML](#HTML) - [Customization](#customization) - [Browser support](#browser-compatibility) - [Changelog](#changelog)
+Jump to: [Getting started: CDN](#CDN) - [Getting started: NPM](#npm)  - [Getting started: HTML IE8+](#ie8+-and-old-browsers) - [Getting started: HTML IE11+](#ie11+-and-old-browsers) - [Customization: No classes](#no-classes) - [Customization: Dark mode](#dark-mode) - [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a- sponsor)
 
 ---
 
@@ -15,8 +15,7 @@ Jump to: [Getting started - CDN](#CDN) - [Getting started - NPM](#npm)  - [Getti
 
 - Support IE8+ and a wide range of desktop and mobile browsers
 - Add responsive-ness and normalize as much as possible HTML elements *out-of-the-box*
-- Mobile-First Responsive Web Design focused
-- Progressive Enhancement focused
+- Progressive Responsive Web Design focused
 - Flexible images and media elements (video, audio, iframe, embed) by default
 - Flexible, cross-browser, bug-proof HTML5 form elements by default
 - A simple 12-columns fluid/responsive grid system with IE8+ support
@@ -136,7 +135,9 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 ## Customization
 
-### Classless (no classes, AKA no utilities)
+### Classless
+
+No classes, no utilities. Feel free to add yours and create your custom components.
 
 Just drop this CSS file in your webpage, and the job is done!
 Write semantic HTML and get nice styles and cross-browser normalization.
@@ -190,6 +191,8 @@ This project is tested in a wide range of browsers using [BrowserStack](http://b
 ## Become a sponsor
 
 [Sponsor me](https://github.com/sponsors/marcop135) and support my front-end efforts and open source!
+
+---
 
 ## Contributors
 

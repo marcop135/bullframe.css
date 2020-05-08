@@ -4,13 +4,13 @@
 
 bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 
-It's a solid starting-point for a **IE8+**, progressive, responsive web design.
+It's a solid starting-point for a IE8+, progressive, responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
 **Jump to:** <br>
-GETTING STARTED - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)<br>
-CUSTOMIZATION - [No classes (Classless)](#no-classes-classless) - [Dark mode](#dark-mode)<br>
-MORE - [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a-sponsor)
+Getting started - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)<br>
+Customization - [No classes (Classless)](#no-classes-classless) - [Dark mode](#dark-mode)<br>
+More - [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a-sponsor)
 
 ---
 
@@ -96,11 +96,11 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 ```html
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
 integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN" crossorigin="anonymous">
 
@@ -120,7 +120,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 ```html
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -195,8 +195,6 @@ This project is tested in a wide range of browsers using [BrowserStack](http://b
 
 [Sponsor me](https://github.com/sponsors/marcop135) and support my front-end efforts and open source!
 
----
-
 ## Contributors
 
 [@englishextra](https://github.com/englishextra) the project is still live thanks to you!
@@ -216,7 +214,7 @@ bullframe.css incorporates some of the styles found on:
 - twbs/bootstrap [https://github.com/twbs/bootstrap](https://github.com/twbs/bootstrap)
 - kognise/water.css [https://github.com/kognise/water.css](https://github.com/kognise/water.css)
 - csswizardry/inuit.css [https://github.com/csswizardry/inuit.css](https://github.com/csswizardry/inuit.css)
-- YUI3 CSS Grids [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
+- YUI3 CSS Grids library [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
 
 ## License
 

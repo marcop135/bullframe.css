@@ -63,6 +63,7 @@ Add some HTML markup, and two JS polyfills (if you need a wide cross-browser sup
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
 
 <!-- enable HTML5 elements, and fix IE10 viewport on Windows 8 -->
@@ -82,7 +83,9 @@ Add some HTML markup, and two JS polyfills (if you need a wide cross-browser sup
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+
 </head>
 <body>
   <h1>Hello World!</h1>
@@ -227,12 +230,11 @@ This project is tested in a wide range of browsers using [BrowserStack](http://b
 
 bullframe.css incorporates some of the styles found on some amazing CSS boilerplates and frameworks across the web. _Thank you!_
 
-- @necolas /normalize.css for the extensive old browser bug fixing documentation [https://github.com/necolas/normalize.css](https://github.com/necolas/normalize.css)
-- @h5bp /main.css for the excellent '@print' styles and accessible utilities [https://github.com/h5bp/main.css](https://github.com/h5bp/main.css)
-- @twbs /bootstrap for _everything!_ [https://github.com/twbs/bootstrap](https://github.com/twbs/bootstrap)
-- @kognise /water.css for the "classless" concept and some forms tricks [https://github.com/kognise/water.css](https://github.com/kognise/water.css)
-- @csswizardry /inuit.css for the 'shame' file and advanced tips and tricks [https://github.com/csswizardry/inuit.css](https://github.com/csswizardry/inuit.css)
-- YUI3 CSS Grids library for the grid system inspiration [http://yuilibrary.com/yui/docs/cssgrids/](http://yuilibrary.com/yui/docs/cssgrids/)
+- @necolas [/normalize.css](https://github.com/necolas/normalize.css) for the extensive old browsers bug fixing documentation
+- @h5bp [/main.css](https://github.com/h5bp/main.css) for the excellent print styles base and the keyboard utilities
+- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for _everything!_
+- @kognise [/water.css](https://github.com/kognise/water.css) for the "classless" concept inspiration and some form tricks
+- @csswizardry @inuitcss [/inuit.css](https://github.com/inuitcss/inuitcss) for some advanced Sass tips and tricks
 
 ## License
 

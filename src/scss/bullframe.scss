@@ -21,8 +21,10 @@
 // img, audio, video, svg, and more
 @import "embedded-content";
 
-// all about for elements
-@import "form-elements";
+// all about form elements
+@import "forms/global-normalization";
+@import "forms/global-styling";
+@import "forms/selects";
 
 // <table> and his elements
 @import "tables";
@@ -69,13 +71,13 @@
 // No IE, Opera Mini and Samsung browser support
 // https://caniuse.com/#feat=prefers-color-scheme
 //
-// @import "utilities/utility-dark-prefers";
+// @import "utilities/utility-global-dark-prefers";
 
 // add dark using an <html> or <body> class
 // e.g. '.dark p { color: white }'
 // uncomment it if you need a dark mode as default
 //
-// @import "utilities/utility-dark";
+// @import "utilities/utility-global-dark";
 
 // default print styles
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css

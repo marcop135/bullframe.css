@@ -10,36 +10,31 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 **Jump to:** <br>
 Getting started - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)<br>
 Customization - [No classes (Classless)](#no-classes-classless) - [Dark mode](#dark-mode)<br>
-More - [Browser support](#browser-compatibility) - [Changelog](#changelog) - _[Sponsor me!](#become-a-sponsor)_
+More - [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a-sponsor)
 
 ---
 
 ## Best features
 
-- IE8+ support and a wide range of desktop and mobile browsers
+- Support IE8+ and a wide range of desktop and mobile browsers
 - Add responsive-ness and normalize as much as possible HTML elements *out-of-the-box*
-- Progressive responsive web design focused
-- Responsive, cross-browser, HTML5 form elements by default
-- A simple 12-columns fluid grid system with IE8+ support
-
-- Sass architecture
-- CSS BEM
-- Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
-- Isolated utility classes to avoid conflicts between frameworks
+- Progressive Responsive Web Design focused
+- Flexible images and media elements (video, audio, iframe, embed) by default
+- Flexible, cross-browser, bug-proof HTML5 form elements by default
+- A simple 12-columns fluid/responsive grid system with IE8+ support
+- Get utility classes (e.g. `<h2 class="h1">`) or not (classless framework)
 - Dark mode included
-- `bullframe-classless.min.css` is just 10KB~
-- A lot of comments 🎉
+- CSS BEM
+- `bullframe-classless.min.css` is just 10KB~ 🎉
 
 ## Internet Explorer usage
 
 Do people still use Internet Explorer?
 
-Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
-[Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
-
-[Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop/worldwide#monthly-201904-202004-bar)
-
-Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) to get more developers' points of view.
+- Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
+- [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
+- [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop/worldwide#monthly-201904-202004-bar)
+- Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) to get more developers' points of view.
 
 ---
 

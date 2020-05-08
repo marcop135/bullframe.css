@@ -7,10 +7,10 @@ bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 It's a solid starting-point for a **IE8+**, progressive, responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
-Jump to: <br>
-[Getting started: CDN](#CDN) - [Getting started: NPM](#npm)  - [Getting started: HTML IE8+](#ie8+-and-old-browsers) - [Getting started: HTML IE11+](#ie11+-and-old-browsers)<br>
-[Customization: No classes](#no-classes) - [Customization: Dark mode](#dark-mode)<br>
-[Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a- sponsor)
+**Jump to:** <br>
+Getting started: [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8+-and-old-browsers) - [HTML template IE11+](#ie11+-and-old-browsers)<br>
+Customization: [No classes (Classless)](#no-classes-(classless)) - [Dark mode](#dark-mode)<br>
+More: [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a-sponsor)
 
 ---
 
@@ -138,7 +138,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 ## Customization
 
-### Classless
+### No classes (classless)
 
 No classes, no utilities. Feel free to add yours and create your custom components.
 

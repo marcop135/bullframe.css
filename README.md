@@ -8,9 +8,9 @@ It's a solid starting-point for a **IE8+**, progressive, responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
 **Jump to:** <br>
-Getting started: [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8+-and-old-browsers) - [HTML template IE11+](#ie11+-and-old-browsers)<br>
-Customization: [No classes (Classless)](#no-classes-(classless)) - [Dark mode](#dark-mode)<br>
-More: [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a-sponsor)
+GETTING STARTED - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)<br>
+CUSTOMIZATION - [No classes (Classless)](#no-classes-classless) - [Dark mode](#dark-mode)<br>
+MORE - [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a-sponsor)
 
 ---
 
@@ -74,7 +74,7 @@ Add some HTML markup, and two JS polyfills (if you need a wide cross-browser sup
 </html>
 ```
 
-#### IE11+ and modern browsers (minimal setup)
+#### IE11+ and modern browsers
 
 ```html
 <!DOCTYPE html>
@@ -205,7 +205,7 @@ This project is tested in a wide range of browsers using [BrowserStack](http://b
 
 ## Changelog
 
-[Changelog](https://github.com/marcop135/bullframe.css/blob/master/LICENSE.md)
+[Changelog](https://github.com/marcop135/bullframe.css/blob/master/CHANGELOG.md)
 
 ## Acknowledgements
 

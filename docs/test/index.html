@@ -8,17 +8,17 @@
 	<title>Test page — bullframe.css (S)CSS framework</title>
 	<meta	name="description" content="Solid, fluid, IE-friendly (S)CSS framework">
 
-	<link rel="stylesheet" href="../../dist/css/bullframe-dark.min.css?v1234">
+	<link rel="stylesheet" href="../../dist/css/bullframe-dark-prefers.css?cache-busting">
 
 	<!-- this is just for a nicer demo -->
-	<link rel="stylesheet" href="css/style.css?v1234">
+	<link rel="stylesheet" href="css/style.css?cache-busting">
 
 	<!-- enable HTML5 elements, and fix IE10 viewport on Windows 8 -->
-	<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0" integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5" crossorigin="anonymous"></script>
+	<script src="js/vendor/matchmedia.addListener.js"></script>
+	<script src="js/vendor/matchmedia.polyfill.js"></script>
+	<script src="js/vendor/respond.js"></script>
 		
-	<!-- enable CSS3 media queries in IE8
-	must be local and there are some caveats
-	https://github.com/scottjehl/Respond#support--caveats	-->
+	<!-- enable min/max-width CSS3 media queries in IE8 -->
 	<!--[if IE 8]>
 		<script src="js/vendor/matchmedia.addListener.js"></script>
 		<script src="js/vendor/matchmedia.polyfill.js"></script>
@@ -146,8 +146,11 @@
 			<div class="bf-row">
 				<div class="bf-col-12">
 
-					<h3>pre</h3>
-					<pre>(402 characters) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</pre>
+					<h3>pre (383 characters)</h3>
+					<pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</pre>
+
+					<h3>code (526 characters)</h3>
+					<code>html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}</code>
 
 				</div>
 			</div>
@@ -327,19 +330,21 @@
 							Sorry, your browser doesn't support embedded videos.
 						</video>
 					</div>
-
-					<h3>Audio with controls</h3>
-					<audio controls>
-						<source
-							src="https://media.html5media.info/audio.mp3"
-							type="audio/mp3"
-						/>
-						<source
-							src="https://media.html5media.info/audio.ogg"
-							type="audio/ogg"
-						/>
-						<p>Your browser does not support the HTML5 Audio element.</p>
-					</audio>
+					
+					<div class="bf-m-bottom-24">
+						<h3>Audio with controls</h3>
+						<audio controls>
+							<source
+								src="https://media.html5media.info/audio.mp3"
+								type="audio/mp3"
+							/>
+							<source
+								src="https://media.html5media.info/audio.ogg"
+								type="audio/ogg"
+							/>
+							<p>Your browser does not support the HTML5 Audio element.</p>
+						</audio>
+					</div>
 					
 				</div>
 				<div class="bf-col-6">

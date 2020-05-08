@@ -194,23 +194,27 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 
 ## Browser compatibility
 
-Tested and compatible in:
-
 ### Desktop browsers
 
 - IE 8+
-- Latest Stable: Firefox, Chrome, Edge, Safari, Opera
+- Latest two: Firefox, Chrome, Edge, Safari, Opera
 
 ### Mobile browsers
 
-- Latest Stable: Firefox, Chrome, Edge, Opera
-- Latest Stable: Opera Mini
+- Latest stable: Firefox, Chrome, Edge, Opera
+- Mobile Safari iOS 7+
 - IE Mobile 11
-- Mobile Safari iOS 4+
+
+### Proxy browsers
+
+- Latest Stable: Opera Mobile’s Turbo mode
+- Latest Stable: Opera Mini
+
+You can take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file for [Autoprefixer](https://github.com/postcss/autoprefixer)
 
 ### Tested on real browsers
 
-This project is tested in a wide range of browsers using [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
+This project is tested in a wide range of browsers using also [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
 ![BrowserStack Logo](./browserstack-logo.png)
 

@@ -1,0 +1,168 @@
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+[type="color"],
+[type="range"],
+select,
+textarea {
+	background-color: $bf-white;
+	border: 1px solid $bf-gray;
+	padding: $bf-spacing-md-px;
+	padding: $bf-spacing-md-rem;
+}
+
+// this is an hack for IE8
+// https://gist.github.com/yangfch3/2e48bca9c08bf883131d7917c4892fa2#ie-8
+
+// some inputs don't get the padding well
+// https://stackoverflow.com/questions/607198/padding-a-text-input-in-ie-possible
+
+@media \0screen {
+	[type="email"],
+	[type="number"],
+	[type="password"],
+	[type="tel"],
+	[type="search"],
+	[type="text"],
+	[type="date"],
+	[type="datetime-local"],
+	[type="month"],
+	[type="time"],
+	[type="week"],
+	[type="time"],
+	[type="url"],
+	[type="color"],
+	[type="range"] {
+		padding-top: 0;
+		padding-bottom: 0;
+		height: $bf-spacing-xxl-px + 2;
+		line-height: $bf-spacing-xxl-px + 2;
+	}
+}
+
+// Old browsers and Opera Mini don't fully support all type of inputs
+// e.g. [type="color"] and [type="range"]
+// so, let's try to add styles carefully and selective
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+select,
+textarea,
+
+[type="radio"],
+[type="checkbox"] {
+
+	&:active,
+	&:focus {
+		transition: border .2s, background-color .2s, box-shadow .2s;
+		border-color: $bf-black;
+		box-shadow: 0 0 0 3px rgba(153, 153, 153, .45);
+	}
+}
+
+// Firefox: Get rid of the inner focus border on older versions
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	padding: 0;
+	border-style: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	color: $bf-dark;
+	padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
+	padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
+	line-height: normal;
+	text-align: center;
+	margin: 0;
+	background-clip: padding-box;
+	vertical-align: baseline;
+	overflow: visible;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	user-select: none;
+
+	// ! IE9+
+	// https://caniuse.com/#feat=border-radius
+	border-radius: $bf-spacing-sm-px;
+	border-radius: $bf-spacing-sm-rem;
+
+	border: 0;
+	background-image: none; // FF mobile
+	background: $bf-gray-light;
+	transition: all .2s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		color: $bf-dark;
+		background: darken($bf-gray-light, 10%);
+	}
+
+	&:active,
+	&:focus {
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, .15);
+	}
+}
+
+// FF placeholder bug
+// Issue: If one change the text color of input fields, FF will change
+// the default color of placeholders too!
+// Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
+input::placeholder,
+textarea::placeholder {
+	color: $bf-gray-dark;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid,
+
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
+	color: $bf-red;
+	border-color: $bf-red;
+	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
+}
+
+// disabled groups
+fieldset[disabled] button,
+fieldset[disabled] input,
+fieldset[disabled] select,
+fieldset[disabled] textarea,
+
+// disabled singles
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled] {
+	cursor: default; // IE8-10 fallback
+	cursor: not-allowed; // Opera Mini fallback
+	pointer-events: none;
+	opacity: .5;
+}

@@ -7,7 +7,10 @@ bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 It's a solid starting-point for a **IE8+**, progressive, responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
-Jump to: [Getting started: CDN](#CDN) - [Getting started: NPM](#npm)  - [Getting started: HTML IE8+](#ie8+-and-old-browsers) - [Getting started: HTML IE11+](#ie11+-and-old-browsers) - [Customization: No classes](#no-classes) - [Customization: Dark mode](#dark-mode) - [Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a- sponsor)
+Jump to: <br>
+[Getting started: CDN](#CDN) - [Getting started: NPM](#npm)  - [Getting started: HTML IE8+](#ie8+-and-old-browsers) - [Getting started: HTML IE11+](#ie11+-and-old-browsers)<br>
+[Customization: No classes](#no-classes) - [Customization: Dark mode](#dark-mode)<br>
+[Browser support](#browser-compatibility) - [Changelog](#changelog) - [Sponsor me!](#become-a- sponsor)
 
 ---
 
@@ -85,7 +88,7 @@ Add some HTML markup, and two JS polyfills (if you need a wide cross-browser sup
   <h1>Hello World!</h1>
 </body>
 </html>
-```i
+```
 
 #### IE8+ and old browsers (recommended)
 
@@ -144,7 +147,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frameworks/).
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">
 ```
 
 ### Dark mode
@@ -152,14 +155,14 @@ More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frame
 This enables a dark (dark-mode) style by default in all browsers:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-dark.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-dark.min.css">
 ```
 
 And this, enables a dark-mode only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-dark-prefers.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-dark-prefers.min.css">
 ```
 
 ---

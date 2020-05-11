@@ -403,6 +403,10 @@ meter {
   max-width: 100%;
 }
 
+iframe {
+  border: 0;
+}
+
 html input,
 button,
 select,

@@ -11,7 +11,7 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 
 Getting started - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
 
-Customization - [No classes (Classless)](#no-classes-classless) - [Classes only](#just-classes) - [Dark mode](#dark-mode)
+Customization - [No classes (Classless)](#no-classes-classless) - [Utilities only](#just-utilities) - [Dark mode](#dark-mode)
 
 More - [Browser support](#browser-compatibility) - [Changelog](#changelog) - _[Sponsor me!](#become-a-sponsor)_
 
@@ -186,12 +186,12 @@ More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frame
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">
 ```
 
-### Just classes
+### Just utilities
 
 Get all the utility classes
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classes.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-utilities.min.css">
 ```
 
 ### Dark mode

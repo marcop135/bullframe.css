@@ -7,9 +7,12 @@ bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 It's a solid starting-point for a IE8+, progressive, responsive web design.
 Write semantic HTML, add some JS polyfills where needed, drop the styles you need, and you are ready to go everywhere!
 
-**Jump to:** <br>
-Getting started - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)<br>
-Customization - [No classes (Classless)](#no-classes-classless) - [Dark mode](#dark-mode)<br>
+**Jump to:**
+
+Getting started - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
+
+Customization - [No classes (Classless)](#no-classes-classless) - [Classes only](#just-classes) - [Dark mode](#dark-mode)
+
 More - [Browser support](#browser-compatibility) - [Changelog](#changelog) - _[Sponsor me!](#become-a-sponsor)_
 
 ---
@@ -173,6 +176,14 @@ More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frame
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">
+```
+
+### Just classes
+
+Get all the utility classes
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classes.min.css">
 ```
 
 ### Dark mode

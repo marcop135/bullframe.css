@@ -58,9 +58,9 @@
 	}
 }
 
-fieldset[disabled] .bf-btn
+fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
-.bf-btn.disabled {
+.bf-btn.bf-disabled {
 	cursor: default !important; // IE8-10 fallback
 	cursor: not-allowed !important; // Opera Mini fallback
 	pointer-events: none;

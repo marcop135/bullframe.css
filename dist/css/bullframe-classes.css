@@ -302,38 +302,38 @@ table th[class^=bf-col] {
   margin: 0 !important;
 }
 
-.bf-m-top-0 {
+.bf-m-t-0 {
   margin-top: 0 !important;
 }
 
-.bf-m-bottom-0 {
+.bf-m-b-0 {
   margin-bottom: 0 !important;
 }
 
-.bf-m-left-0 {
+.bf-m-l-0 {
   margin-left: 0 !important;
 }
 
-.bf-m-right-0 {
+.bf-m-r-0 {
   margin-right: 0 !important;
 }
 
-.bf-m-bottom-6 {
+.bf-m-b-6 {
   margin-bottom: 6px !important;
   margin-bottom: 1.2rem !important;
 }
 
-.bf-m-bottom-12 {
+.bf-m-b-12 {
   margin-bottom: 12px !important;
   margin-bottom: 1.2rem !important;
 }
 
-.bf-m-bottom-24 {
+.bf-m-b-24 {
   margin-bottom: 24px !important;
   margin-bottom: 2.4rem !important;
 }
 
-.bf-m-bottom-36 {
+.bf-m-b-36 {
   margin-bottom: 3 6px !important;
   margin-bottom: 3.6rem !important;
 }
@@ -342,11 +342,11 @@ table th[class^=bf-col] {
   padding: 0 !important;
 }
 
-.bf-p-top-0 {
+.bf-p-t-0 {
   padding-top: 0 !important;
 }
 
-.bf-p-bottom-0 {
+.bf-p-b-0 {
   padding-bottom: 0 !important;
 }
 
@@ -354,71 +354,71 @@ table th[class^=bf-col] {
   padding-left: 0 !important;
 }
 
-.bf-p-right-0 {
+.bf-p-r-0 {
   padding-right: 0 !important;
 }
 
-.bf-p-bottom-6 {
+.bf-p-b-6 {
   padding-bottom: 6px !important;
   padding-bottom: 1.2rem !important;
 }
 
-.bf-p-bottom-12 {
+.bf-p-b-12 {
   padding-bottom: 12px !important;
   padding-bottom: 1.2rem !important;
 }
 
-.bf-p-bottom-24 {
+.bf-p-b-24 {
   padding-bottom: 24px !important;
   padding-bottom: 2.4rem !important;
 }
 
-.bf-p-bottom-36 {
+.bf-p-b-36 {
   padding-bottom: 3 6px !important;
   padding-bottom: 3.6rem !important;
 }
 
-.bf-text-uppercase {
+.bf-t-transform-uppercase {
   text-transform: uppercase;
 }
 
-.bf-text-transform-none {
+.bf-t-transform-none {
   text-transform: none;
 }
 
-.bf-text-left {
+.bf-t-left {
   text-align: left;
 }
 
-.bf-text-center {
+.bf-t-center {
   text-align: center;
 }
 
-.bf-text-right {
+.bf-t-right {
   text-align: right;
 }
 
-.bf-text-shadow {
+.bf-t-shadow {
   text-shadow: 0 0 0.2rem #222;
 }
 
-.bf-text-italic {
+.bf-t-italic {
   font-style: italic;
 }
 
-.bf-text-style-normal {
+.bf-t-style-normal {
   font-style: normal;
 }
 
-.bf-text-weight-700 {
+.bf-t-weight-400 {
   font-weight: 400;
 }
 
-.bf-text-weight-400 {
+.bf-t-weight-400 {
   font-weight: 700;
 }
 
-.bf-text-truncate {
+.bf-t-truncate {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;

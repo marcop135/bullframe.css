@@ -45,7 +45,7 @@ hr {
 // forms
 
 // Old browsers and Opera Mini don't fully support all type of inputs
-// e.g. [type="color"] and [type="range"]
+// e.g. [type="range"]
 // so, let's try to add styles carefully and selective
 [type="email"],
 [type="number"],
@@ -60,7 +60,6 @@ hr {
 [type="week"],
 [type="time"],
 [type="url"],
-[type="color"],
 [type="range"],
 select,
 textarea {
@@ -74,9 +73,8 @@ textarea {
 	}
 }
 
-// now again, but without [type="color"] and [type="range"]
+// now again, but without [type="range"]
 // since box-shadow just add more troubles to them
-[type="color"],
 [type="email"],
 [type="number"],
 [type="password"],

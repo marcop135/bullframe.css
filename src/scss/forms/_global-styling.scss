@@ -11,7 +11,6 @@
 [type="week"],
 [type="time"],
 [type="url"],
-[type="color"],
 [type="range"],
 select,
 textarea {
@@ -41,7 +40,6 @@ textarea {
 	[type="week"],
 	[type="time"],
 	[type="url"],
-	[type="color"],
 	[type="range"] {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -51,7 +49,7 @@ textarea {
 }
 
 // Old browsers and Opera Mini don't fully support all type of inputs
-// e.g. [type="color"] and [type="range"]
+// e.g. [type="range"]
 // so, let's try to add styles carefully and selective
 [type="email"],
 [type="number"],

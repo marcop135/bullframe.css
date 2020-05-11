@@ -102,16 +102,21 @@ select:not([size]):not([multiple]) {
 }
 
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+.bf-placeholder {
 	color: $bf-gray;
 }
 
 input:invalid,
 select:invalid,
 textarea:invalid,
+
 input:invalid:focus,
 select:invalid:focus,
-textarea:invalid:focus {
+textarea:invalid:focus,
+
+.bf-invalid,
+.bf-invalid:focus {
 	color: lighten($bf-red, 7.5%);
 	border-color: lighten($bf-red, 7.5%);
 }

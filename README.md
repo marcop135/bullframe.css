@@ -77,7 +77,10 @@ Add some HTML markup, and two JS polyfills (if you need a wide cross-browser sup
 <script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"></script>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <div class="bf-container">
+    <h1>Hello World!</h1>
+  </div>
+
 </body>
 </html>
 ```
@@ -95,7 +98,10 @@ Add some HTML markup, and two JS polyfills (if you need a wide cross-browser sup
 
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <div class="bf-container">
+    <h1>Hello World!</h1>
+  </div>
+
 </body>
 </html>
 ```
@@ -131,6 +137,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
   <div class="bf-container">
     <h1>Hello World!</h1>
   </div>
+
 </body>
 </html>
 ```
@@ -158,6 +165,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
   <div class="bf-container">
     <h1>Hello World!</h1>
   </div>
+
 </body>
 </html>
 ```

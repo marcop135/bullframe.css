@@ -6,7 +6,7 @@
 	<meta	name="viewport"	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>Test page — bullframe.css (S)CSS framework</title>
-	<meta	name="description" content="Solid, fluid, IE-friendly (S)CSS framework">
+	<meta	name="description" content="A quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purpouse only.">
 
 	<link rel="stylesheet" href="../../dist/css/bullframe-dark-prefers.css?cache-busting">
 
@@ -26,6 +26,7 @@
 </head>
 
 <body>
+	<a class="bf-sr-only focusable" href="#main-content">Skip to main content</a>
 	<div class="bf-container bf-container--break-md">
 
 		<header class="bf-t-center bf-m-b-24 bf-m-t-24">
@@ -34,10 +35,9 @@
 			<a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css/archive/master.zip">Download</a>
 			<a class="bf-btn"	href="https://github.com/marcop135/bullframe.css">GitHub</a>
 			<p>This a is a quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purpouse only.</p>
-			<hr>
-		</header>
 
-		<main>
+			<hr>
+
 			<p class="bf-t-center">CSS build in use:<br>
 				<b><code>bullframe-dark-prefers.css</code></b>
 			</p>
@@ -52,7 +52,9 @@
 			</p>
 
 			<hr>
+		</header>
 
+		<main id="main-content">
 			<h2 id="texts" class="h2--section">Text elements</h2>
 
 			<div class="bf-row">

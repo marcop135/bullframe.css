@@ -512,7 +512,7 @@
 
 								<div>
 									<input type="radio" id="jake" name="drone" value="jake" disabled>
-									<label class="bf-disabled" for="jake">disabled</label>
+									<label class="bf-disabled" for="jake">Jake (disabled)</label>
 								</div>
 								
 							</div>
@@ -529,6 +529,11 @@
 								<label for="horns">Horns</label>
 							</div>
 
+							<div>
+								<input type="checkbox" id="wings" name="wings" disabled>
+								<label class="bf-disabled" for="wings">Wings (disabled)</label>
+							</div>
+
 						</fieldset>
 					</form>
 
@@ -541,16 +546,23 @@
 							<legend>
 								Cross-browser, cross-platform consistency in webkit browsers.
 							</legend>
-							<div>
-								<label for="s">Select field</label>
-								<select id="s">
-									<option>Option 01</option>
-									<option>Option 02</option>
-									<option>Option 03</option>
-									<option>Option 04</option>
-									<option>Option 05</option>
-								</select>
-							</div>
+							<label for="s">Select field</label>
+							<select id="s">
+								<option>Option 01</option>
+								<option>Option 02</option>
+								<option>Option 03</option>
+								<option>Option 04</option>
+								<option>Option 05</option>
+							</select>
+
+							<label class="bf-disabled" for="s2">Select field</label>
+							<select id="s2" disabled>
+								<option>Option 01</option>
+								<option>Option 02</option>
+								<option>Option 03</option>
+								<option>Option 04</option>
+								<option>Option 05</option>
+							</select>
 
 							<label for="select_multi">Select [size="2"]</label>
 							<select
@@ -632,28 +644,57 @@
 				<div class="bf-col-6">
 
 					<h3>Clickable inputs</h3>
-					<fieldset>
+					<fieldset class="bf-m-b-24">
+
 						<div class="input-image">
 							<input 
 								alt="Image (input)"
 								src="https://placeimg.com/130/40/any"
 								type="image"
-							/> <br><code>input type="image" (130x40px)</code>
+							><br>
+							<code>input type="image" (130x40px)</code>
 						</div>
-						<div><input type="reset" value="Reset (input)" /></div>
-						<div><input type="button" value="Button (input)" /></div>
-						<div><input type="submit" value="Submit (input)" /></div>
+						<div>
+							<input type="reset" value="Reset (input)">
+						</div>
+						<div>
+							<input type="button" value="Button (input)">
+						</div>
+						<div>
+							<input type="submit" value="Submit (input)">
+						</div>
 						<div>
 							<a class="bf-btn" href="#" title="button link">Button (link)</a>
 						</div>
 						<div>
 							<a class="bf-btn bf-btn--primary" href="#" title="button link">Primary button (link)</a>
 						</div>
-						<div>
-							<input disabled type="submit" value="Disabled (input)" />
+					</fieldset>
+
+					<fieldset disabled>
+						<h3>Clickable inputs (disabled)</h3>
+						<div class="input-image">
+							<input 
+								alt="Image (input)"
+								src="https://placeimg.com/130/40/any"
+								type="image"
+							><br>
+							<code>input type="image" (130x40px)</code>
 						</div>
 						<div>
-							<a class="bf-btn bf-btn--primary disabled" href="#" title="button link">Disabled primary button (link)</a>
+							<input type="reset" value="Reset (input)">
+						</div>
+						<div>
+							<input type="button" value="Button (input)">
+						</div>
+						<div>
+							<input type="submit" value="Submit (input)">
+						</div>
+						<div>
+							<a class="bf-btn" href="#" title="button link">Button (link)</a>
+						</div>
+						<div>
+							<a class="bf-btn bf-btn--primary" href="#" title="button link">Primary button (link)</a>
 						</div>
 					</fieldset>
 
@@ -661,14 +702,31 @@
 				<div class="bf-col-6">
 
 					<h3>Buttons</h3>
-					<fieldset>
-						<div><button type="reset">Reset (button)</button></div>
-						<div><button type="button">Button (button)</button></div>
-						<div><button type="submit">Submit (button)</button></div>
-						<div><button class="bf-btn bf-btn--primary" type="submit">Primary submit (button) </button></div>
-						<div><button disabled type="submit">Disabled (button)</button></div>
-						<div><button class="bf-btn bf-btn--primary" type="submit" disabled>Disabled primary submit (button) </button></div>
+					<fieldset class="bf-m-b-24">
+						<div>
+							<button type="reset">Reset (button)</button></div>
+						<div>
+							<button type="button">Button (button)</button></div>
+						<div>
+							<button type="submit">Submit (button)</button></div>
+						<div>
+							<button class="bf-btn bf-btn--primary" type="submit">Primary submit (button)</button>
+						</div>
 					</fieldset>
+
+					<h3>Buttons (disabled)</h3>
+					<fieldset disabled>
+						<div>
+							<button type="reset">Reset (button)</button></div>
+						<div>
+							<button type="button">Button (button)</button></div>
+						<div>
+							<button type="submit">Submit (button)</button></div>
+						<div>
+							<button class="bf-btn bf-btn--primary" type="submit">Primary submit (button)</button>
+						</div>
+					</fieldset>
+
 
 				</div>
 			</div>

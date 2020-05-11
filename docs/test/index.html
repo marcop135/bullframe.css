@@ -14,9 +14,8 @@
 	<link rel="stylesheet" href="css/style.css?cache-busting">
 
 	<!-- enable HTML5 elements, and fix IE10 viewport on Windows 8 -->
-	<script src="js/vendor/matchmedia.addListener.js"></script>
-	<script src="js/vendor/matchmedia.polyfill.js"></script>
-	<script src="js/vendor/respond.js"></script>
+	<script src="js/vendor/html5shiv.js"></script>
+	<script src="js/vendor/ie10-viewport-bug-workaround.js"></script>
 		
 	<!-- enable min/max-width CSS3 media queries in IE8 -->
 	<!--[if IE 8]>
@@ -34,14 +33,24 @@
 			<p class="bf-lead">Solid, fluid, IE-friendly (S)CSS framework.</p>
 			<a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css/archive/master.zip">Download</a>
 			<a class="bf-btn"	href="https://github.com/marcop135/bullframe.css">GitHub</a>
-			<p>Take a quick look at a wide range of HTML elements, divided into	several sections and rendered into unusual combinations.</p>
+			<p>This a is a quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purpouse only.</p>
 			<hr>
 		</header>
 
 		<main>
-			<p class="bf-t-center bf-m-b-0">Build in use:<br>
-				<code>bullframe-dark-prefers.css</code>
+			<p class="bf-t-center">CSS build in use:<br>
+				<b><code>bullframe-dark-prefers.css</code></b>
 			</p>
+			<p class="bf-t-center">Polyfills in use:<br>
+				<code>html5shiv.js</code><br>
+				<code>ie10-viewport-bug-workaround.js</code>
+			</p>
+			<p class="bf-t-center bf-m-b-0"><code>[if IE 8]</code> polyfills in use:<br>
+				<code>matchmedia.addListener.js</code><br>
+				<code>matchmedia.polyfill.js</code><br>
+				<code>respond.js</code>
+			</p>
+
 			<hr>
 
 			<h2 id="texts" class="h2--section">Text elements</h2>
@@ -1177,15 +1186,16 @@
 				<div class="bf-col-12 bf-t-center">
 					
 					<div class="bf-m-b-36">
-						<h3>Clone or download it</h3>
+						<h3>Fork, download or contribute</h3>
 						<code class="bf-display-block bf-m-b-24">
 							$ git clone https://github.com/marcop135/bullframe.css.git
 						</code> 
 						<a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css/archive/master.zip">Download</a>
+						<a class="bf-btn"	href="https://github.com/marcop135/bullframe.css">GitHub</a>
 					</div>
 					
 					<div class="bf-t-center">
-						<a class="bf-display-inline-block" href="#top">back to top</a>
+						<a class="bf-display-inline-block" href="#top">Back to top</a>
 					</div>
 
 				</div>

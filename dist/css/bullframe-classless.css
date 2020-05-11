@@ -66,7 +66,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
 }
 
@@ -164,7 +172,7 @@ q {
 mark {
   background-color: #ff0;
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 ins {
@@ -209,7 +217,7 @@ strong {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 dfn {
@@ -387,7 +395,8 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-progress {
+progress,
+meter {
   display: inline-block;
   vertical-align: baseline;
   width: 100%;
@@ -488,7 +497,7 @@ legend {
 }
 
 label {
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 6px;
   margin-bottom: 0.6rem;
 }
@@ -516,7 +525,7 @@ optgroup {
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 button,
@@ -680,6 +689,7 @@ fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
+fieldset[disabled] label,
 button[disabled],
 input[disabled],
 select[disabled],
@@ -857,6 +867,6 @@ caption {
 }
 
 th {
-  font-weight: 700;
+  font-weight: 600;
 }
 /*# sourceMappingURL=bullframe-classless.css.map */

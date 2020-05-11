@@ -66,7 +66,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
 }
 
@@ -164,7 +172,7 @@ q {
 mark {
   background-color: #ff0;
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 ins {
@@ -209,7 +217,7 @@ strong {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 dfn {
@@ -428,7 +436,8 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-progress {
+progress,
+meter {
   display: inline-block;
   vertical-align: baseline;
   width: 100%;
@@ -529,7 +538,7 @@ legend {
 }
 
 label {
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 6px;
   margin-bottom: 0.6rem;
 }
@@ -557,7 +566,7 @@ optgroup {
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 button,
@@ -721,6 +730,7 @@ fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
+fieldset[disabled] label,
 button[disabled],
 input[disabled],
 select[disabled],
@@ -898,7 +908,7 @@ caption {
 }
 
 th {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .bf-container,
@@ -1237,7 +1247,7 @@ table th[class^=bf-col] {
 }
 
 .bf-m-b-36 {
-  margin-bottom: 3 6px !important;
+  margin-bottom: 36px !important;
   margin-bottom: 3.6rem !important;
 }
 
@@ -1253,7 +1263,7 @@ table th[class^=bf-col] {
   padding-bottom: 0 !important;
 }
 
-.bf-p-left-0 {
+.bf-p-l-0 {
   padding-left: 0 !important;
 }
 
@@ -1261,9 +1271,29 @@ table th[class^=bf-col] {
   padding-right: 0 !important;
 }
 
+.bf-p-t-6 {
+  padding-top: 6px !important;
+  padding-top: 0.6rem !important;
+}
+
+.bf-p-t-12 {
+  padding-top: 12px !important;
+  padding-top: 1.2rem !important;
+}
+
+.bf-p-t-24 {
+  padding-top: 24px !important;
+  padding-top: 2.4rem !important;
+}
+
+.bf-p-t-36 {
+  padding-top: 36px !important;
+  padding-top: 3.6rem !important;
+}
+
 .bf-p-b-6 {
   padding-bottom: 6px !important;
-  padding-bottom: 1.2rem !important;
+  padding-bottom: 0.6rem !important;
 }
 
 .bf-p-b-12 {
@@ -1277,7 +1307,7 @@ table th[class^=bf-col] {
 }
 
 .bf-p-b-36 {
-  padding-bottom: 3 6px !important;
+  padding-bottom: 36px !important;
   padding-bottom: 3.6rem !important;
 }
 
@@ -1317,7 +1347,15 @@ table th[class^=bf-col] {
   font-weight: 400;
 }
 
-.bf-t-weight-400 {
+.bf-t-weight-500 {
+  font-weight: 600;
+}
+
+.bf-t-weight-600 {
+  font-weight: 600;
+}
+
+.bf-t-weight-700 {
   font-weight: 700;
 }
 
@@ -1355,7 +1393,7 @@ table th[class^=bf-col] {
 .bf-h4,
 .bf-h5,
 .bf-h6 {
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 0;
 }
 
@@ -1450,13 +1488,28 @@ p.bf-lead {
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
-fieldset[disabled] .bf-btn .bf-btn[disabled],
-.bf-btn.disabled {
+fieldset[disabled] .bf-btn,
+.bf-btn[disabled],
+.bf-btn.bf-disabled {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none;
   opacity: 0.5 !important;
   box-shadow: none;
+}
+
+.bf-disabled {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
+
+.bf-invalid,
+.bf-invalid:focus {
+  color: #FF0000;
+  border-color: #FF0000;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
 }
 
 .bf-list-unstyled,
@@ -1502,6 +1555,8 @@ dd.bf-list-unstyled {
   padding: 4px;
   padding: 0.4rem;
   border-bottom: 1px solid #999;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
 }
 
 .bf-table-responsive {
@@ -1723,7 +1778,8 @@ textarea:focus {
 }
 
 select:not([size]):not([multiple]) {
-  background: #333 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
+  background-color: #333;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -1748,7 +1804,9 @@ select:invalid,
 textarea:invalid,
 input:invalid:focus,
 select:invalid:focus,
-textarea:invalid:focus {
+textarea:invalid:focus,
+.bf-invalid,
+.bf-invalid:focus {
   color: #ff2626;
   border-color: #ff2626;
 }

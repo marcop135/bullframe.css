@@ -434,10 +434,24 @@
 										value="default value that goes on and on without stopping or punctuation"
 								>
 
+								<label class="bf-disabled">Text input as sibling of label (disabled)</label>
+								<input
+										type="text"
+										value="default value that goes on and on without stopping or punctuation"
+										disabled
+								>
+
 								<label>Text input as descendant of label (not recommended)
 								<input
 									type="text"
 									value="default value that goes on and on without stopping or punctuation"
+								></label>
+
+								<label class="bf-disabled">Text input as descendant of label (disabled, not recommended)
+								<input
+									type="text"
+									value="default value that goes on and on without stopping or punctuation"
+									disabled
 								></label>
 
 								<label>Email input</label> 
@@ -494,6 +508,11 @@
 								<div>
 									<input type="radio" id="louie" name="drone" value="louie">
 									<label for="louie">Louie</label>
+								</div>
+
+								<div>
+									<input type="radio" id="jake" name="drone" value="jake" disabled>
+									<label class="bf-disabled" for="jake">disabled</label>
 								</div>
 								
 							</div>

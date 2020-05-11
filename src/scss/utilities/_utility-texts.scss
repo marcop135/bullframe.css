@@ -1,46 +1,46 @@
-.bf-text-uppercase {
+.bf-t-transform-uppercase {
 	text-transform: uppercase;
 }
 
-.bf-text-transform-none {
+.bf-t-transform-none {
 	text-transform: none;
 }
 
-.bf-text-left {
+.bf-t-left {
 	text-align: left;
 }
 
-.bf-text-center {
+.bf-t-center {
 	text-align: center;
 }
 
-.bf-text-right {
+.bf-t-right {
 	text-align: right;
 }
 
-.bf-text-shadow {
+.bf-t-shadow {
 	text-shadow: 0 0 .2rem $bf-dark;
 }
 
-.bf-text-italic {
+.bf-t-italic {
 	font-style: italic;
 }
 
 // useful to 'reset' <i> inherited style
-.bf-text-style-normal {
+.bf-t-style-normal {
 	font-style: normal;
 }
 
 // useful to 'reset' <b> inherited style
-.bf-text-weight-700 {
+.bf-t-weight-400 {
 	font-weight: 400;
 }
 
-.bf-text-weight-400 {
+.bf-t-weight-400 {
 	font-weight: 700;
 }
 
-.bf-text-truncate {
+.bf-t-truncate {
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;

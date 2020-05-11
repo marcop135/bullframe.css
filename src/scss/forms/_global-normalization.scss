@@ -243,6 +243,23 @@ button,
 
 }
 
+button, 
+select,
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="range"],
+input[type="radio"],
+
+// always show a pointer cursor
+// IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+	cursor: pointer;
+}
 
 // FF placeholder bug
 // Issue: If one change the text color of input fields, FF will change
@@ -265,16 +282,6 @@ textarea:invalid:focus {
 	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
 }
 
-// always show a pointer cursor
-// IE9+
-// https://caniuse.com/#feat=mdn-css_selectors_not
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
-	cursor: pointer;
-}
-
 // disabled groups
 fieldset[disabled] button,
 fieldset[disabled] input,
@@ -286,8 +293,8 @@ button[disabled],
 input[disabled],
 select[disabled],
 textarea[disabled] {
-	cursor: default; // IE8-10 fallback
-	cursor: not-allowed; // Opera Mini fallback
-	pointer-events: none;
-	opacity: .5;
+	cursor: default !important; // IE8-10 fallback
+	cursor: not-allowed !important; // Opera Mini fallback
+	pointer-events: none !important;
+	opacity: .5 !important;
 }

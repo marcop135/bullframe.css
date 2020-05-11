@@ -1,0 +1,13 @@
+.bf-disabled {
+  cursor: default !important; // IE8-10 fallback
+	cursor: not-allowed !important; // Opera Mini fallback
+	pointer-events: none !important;
+	opacity: .5 !important;
+}
+
+.bf-invalid,
+.bf-invalid:focus {
+  color: $bf-red;
+	border-color: $bf-red;
+	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
+}

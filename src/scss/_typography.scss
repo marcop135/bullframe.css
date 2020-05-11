@@ -84,7 +84,15 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
+	font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin-top: 0;
 }
 
@@ -184,7 +192,7 @@ q {
 mark {
 	background-color: $bf-yellow;
 	color: $bf-black;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 ins {
@@ -245,7 +253,7 @@ strong {
 // Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
-	font-weight: bolder;
+	font-weight: 600;
 }
 
 dfn {

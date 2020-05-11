@@ -61,7 +61,8 @@ svg:not(:root) {
 	overflow: hidden;
 }
 
-progress {
+progress,
+meter {
 	display: inline-block;
 	vertical-align: baseline;
 	width: 100%;

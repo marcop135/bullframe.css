@@ -102,8 +102,7 @@ select:not([size]):not([multiple]) {
 }
 
 input::placeholder,
-textarea::placeholder,
-.bf-placeholder {
+textarea::placeholder {
 	color: $bf-gray;
 }
 

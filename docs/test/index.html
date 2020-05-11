@@ -366,15 +366,19 @@
 
 					<h3 class="sub-title">Progress</h3>
 					<div class="bf-m-b-24">
-						<label for="progress">Progress</label>
-						<progress id="progress" value="65" max="100"></progress>
+						<label for="file">File progress:</label>
+						<progress id="file" max="100" value="70"> 70% </progress>
 					</div>
 
 					<h3 class="sub-title">Meter</h3>
-					<div class="meter">
-						<label for="meter">Meter</label>
-						<meter id="meter" min="200" max="500" value="350">350 degrees</meter>
-					</div>
+					<label for="fuel">Fuel level:</label>
+					<meter id="fuel"
+								min="0" max="100"
+								low="33" high="66" optimum="80"
+								value="50">
+							at 50/100
+					</meter>
+
 
 				</div>
 				<div class="bf-col-6">

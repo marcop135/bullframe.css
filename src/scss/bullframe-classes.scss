@@ -1,0 +1,46 @@
+// colors and spacing variables
+// this is for an easy customisation
+@import "variables/colors";
+@import "variables/spacing";
+
+// a set of default opinionated utilities
+// always put this as far as possible from the rest of the styles
+// 'print' and 'reduced-motion' are just an exception because target
+// exclusively a user behaviours
+//
+// take a look at all the Bootstrap's utilities
+// https://github.com/twbs/bootstrap/tree/v4.4.1/scss/utilities
+
+// the 12 columns IE8+ grid system
+@import "utilities/utility-grid-system";
+
+// clearfix, sr-only, float, inline/block/flex, and more
+@import "utilities/utility-layout";
+
+// reset margins and paddings adding a class
+@import "utilities/utility-spacing";
+
+// font families, text truncated, text alignment, and more
+@import "utilities/utility-texts";
+
+// '.btn' and '.btn--primary'
+@import "utilities/utility-buttons";
+
+// font families, text truncated, text alignment, and more
+@import "utilities/utility-lists";
+
+// embed without worries iframes, video or whatever needed
+@import "utilities/utility-embeds";
+
+// use this and the tables won't break the layout horizontally anymore
+@import "utilities/utility-tables";
+
+// default print styles
+// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+@import "utilities/utility-print";
+
+@import "utilities/utility-reduced-motion";
+
+// this is useful for just for debugging purpouses
+// commented by default
+@import "utilities/utility-debugging";

@@ -37,7 +37,7 @@ body {
 	// Read more:
 	// https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
 	font-family: 
-	
+
 		// Safari for OS X and iOS (San Francisco)
 		-apple-system,
 
@@ -231,7 +231,10 @@ pre {
 	hyphens: none;
 	// this is a not standard CSS property, so it's for IE only
 	// https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
-	-ms-overflow-style: scrollbar;
+	//
+	// Disable auto-hiding scrollbar in legacy Edge 
+	// https://github.com/twbs/bootstrap/pull/30685
+	-ms-overflow-style: auto;
 }
 
 pre,

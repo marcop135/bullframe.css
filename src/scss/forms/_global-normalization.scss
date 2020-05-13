@@ -2,15 +2,30 @@
 
 html input,
 button,
+
 select,
 optgroup,
+
 textarea {
 	color: inherit;
-	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
 }
+
+html input,
+button,
+
+[type="radio"],
+[type="checkbox"], 
+
+select,
+optgroup,
+
+textarea {
+	margin: 0
+}
+
 
 html input,
 select,
@@ -19,15 +34,15 @@ legend {
 	width: 100%;
 }
 
-html label {
-	width: auto;
-}
+// re-set width auto where needed
+html label,
 
 button,
 [type="image"],
 [type="submit"],
 [type="reset"],
 html [type="button"],
+
 [type="radio"],
 [type="checkbox"] {
 	width: auto;
@@ -35,10 +50,13 @@ html [type="button"],
 
 // inline-block display gives the best cross-browser combination
 // and allow several properties
-label,
 html input,
+
+label,
+
 select,
 textarea,
+
 button,
 html [type="button"],
 [type="reset"],

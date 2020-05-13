@@ -9,11 +9,11 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 
 **Jump to:**
 
-Getting started - [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
+Getting started: [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
 
-Customization - [No classes (Classless)](#no-classes-classless) - [Utilities only](#just-utilities) - [Dark mode](#dark-mode)
+Customization: [No classes (Classless)](#no-classes-classless) - [Utilities only](#just-utilities) - [Dark mode](#dark-mode)
 
-More - [Browser support](#browser-compatibility) - [Changelog](#changelog) - _[Sponsor me!](#become-a-sponsor)_
+[Browser support](#browser-compatibility) - [Changelog](#changelog) - _[Sponsor me!](#become-a-sponsor)_
 
 ---
 

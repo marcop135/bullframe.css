@@ -267,17 +267,10 @@ button,
 select,
 input[type="submit"],
 input[type="button"],
-input[type="checkbox"],
-input[type="range"],
-input[type="radio"],
-
-// always show a pointer cursor
-// IE9+
-// https://caniuse.com/#feat=mdn-css_selectors_not
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
+[type="checkbox"],
+[type="range"],
+[type="radio"],
+[role="button"] {
 	cursor: pointer;
 }
 

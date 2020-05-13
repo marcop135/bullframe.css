@@ -435,7 +435,7 @@ table th[class^=bf-col] {
 }
 
 .bf-t-weight-500 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .bf-t-weight-600 {
@@ -480,6 +480,7 @@ table th[class^=bf-col] {
 .bf-h4,
 .bf-h5,
 .bf-h6 {
+  font-weight: 700;
   font-weight: 600;
   margin-top: 0;
 }
@@ -692,9 +693,9 @@ a:visited {
   }
 
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+      * Don't show links that are fragment identifiers,
+      * or use the `javascript:` pseudo protocol
+      */
   a[href^="#"]:after,
 a[href^="javascript:"]:after {
     content: "";
@@ -711,9 +712,9 @@ blockquote {
   }
 
   /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+      * Printing Tables:
+      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+      */
   thead {
     display: table-header-group;
   }
@@ -733,6 +734,15 @@ h3 {
   h2,
 h3 {
     page-break-after: avoid;
+  }
+}
+@media print {
+  .table-responsive {
+    overflow: auto;
+  }
+
+  .table-responsive table {
+    width: auto;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -27,7 +27,7 @@ More - [Browser support](#browser-compatibility) - [Changelog](#changelog) - _[S
 - Sass architecture
 - CSS BEM
 - Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
-- Isolated utility classes to avoid conflicts between frameworks
+- Isolated utility classes to avoid conflicts between frameworks' classes
 - Dark mode included
 - `bullframe-classless.min.css` is just 10KB~
 - A lot of comments 🎉

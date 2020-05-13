@@ -84,6 +84,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-weight: 700; // fallback for font families without 600 */
 	font-weight: 600;
 }
 
@@ -192,6 +193,7 @@ q {
 mark {
 	background-color: $bf-yellow;
 	color: $bf-black;
+	font-weight: 700; // fallback for font families without 600 */
 	font-weight: 600;
 }
 
@@ -253,6 +255,7 @@ strong {
 // Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
+	font-weight: 700; // fallback for font families without 600 */
 	font-weight: 600;
 }
 

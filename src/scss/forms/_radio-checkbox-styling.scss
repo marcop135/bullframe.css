@@ -1,7 +1,20 @@
-// [type="radio"] {
+// Ideas:
 
-// }
+// 1.
+// no extra elements but a bit overcomplex and instable
+//
+// 2020 toggles by Aaron Iker
+// https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+// https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
+// 
+// modern browsers only support the "@supports" media rules
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
+// https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
+// so, the following styles match only FF and Chrome right now (April 2020), 
+// and are future-friendly because more browser compatibility will come
 
-// [type="checkbox"] {
-  
-// }
+// 2.
+// extra HTML elements and attributes but standardized and accessible
+//
+// Bootstrap's custom checkboxes and radios
+// https://getbootstrap.com/docs/4.5/components/forms/#checkboxes-and-radios-1

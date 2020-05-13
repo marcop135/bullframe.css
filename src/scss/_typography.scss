@@ -37,26 +37,40 @@ body {
 	// Read more:
 	// https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
 	font-family: 
+	
 		// Safari for OS X and iOS (San Francisco)
 		-apple-system,
+
 		// Chrome < 56 for OS X (San Francisco)
 		BlinkMacSystemFont,
+
 		// Windows
 		"Segoe UI",
+
 		// Android
 		Roboto,
+
 		// Linux with KDE 
 		Oxygen-Sans, 
+
 		// Ubuntu (all variants)
 		Ubuntu,
+
 		// Linux with GNOME Shell
 		Cantarell,
+
 		// macOS 10.10 and below
 		"Helvetica Neue", Helvetica,
+
 		// Basic web fallback
-		Arial, sans-serif,
+		Arial, 
+		"Noto Sans",
+		sans-serif,
+
 		// emoji fonts
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Apple Color Emoji", 
+		"Segoe UI Emoji", 
+		"Segoe UI Symbol",
 		"Noto Color Emoji";
 
 	// this enable font ligatures

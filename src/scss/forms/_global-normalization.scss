@@ -116,6 +116,7 @@ legend {
 }
 
 label {
+	font-weight: 700; // fallback for font families without 600 */
 	font-weight: 600;
 	margin-bottom: $bf-spacing-md-px;
 	margin-bottom: $bf-spacing-md-rem;
@@ -144,6 +145,7 @@ optgroup {
 	font-family: inherit;
 	font-size: inherit;
 	font-style: inherit;
+	font-weight: 700; // fallback for font families without 600 */
 	font-weight: 600;
 }
 

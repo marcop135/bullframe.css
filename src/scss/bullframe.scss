@@ -70,6 +70,10 @@
 // use this and the tables won't break the layout horizontally anymore
 @import "utilities/utility-tables";
 
+// a base set of mixins 
+@import "mixins/mixin-layout";
+@import "mixins/mixin-texts";
+
 // add dark mode via prefers-color-scheme media queries
 // https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 // No IE, Opera Mini and Samsung browser support

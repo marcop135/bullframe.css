@@ -2,23 +2,16 @@
 // https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
 // https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
 //
-// currently, a few modern browsers support the "@supports" media rules
+// currently (April 2020), a few modern browsers support the "@supports" media rules
 // https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
 // https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
+//
 // Anyway are safe and future-friendly because more browser compatibility
 // will come
 
 @supports (appearance: none) {
 	[type="checkbox"],
 	[type="radio"] {
-		--active: #275efe;
-		--active-inner: #fff;
-		--focus: 2px rgba(39, 94, 254, 0.3);
-		--border: #bbc1e1;
-		--border-hover: #275efe;
-		--background: #fff;
-		--disabled: #f6f8ff;
-		--disabled-inner: #e1e6f9;
 		appearance: none;
 
 		height: 20px;
@@ -50,7 +43,6 @@
 		&:checked {
 			background-color: $bf-blue;
 			border-color: $bf-black;
-			--o: 1;
 		}
 	}
 
@@ -68,11 +60,7 @@
 			left: 7px;
 			top: 4px;
 
-			transform: rotate(var(--r, 20deg));
-		}
-
-		&:checked {
-			--r: 43deg;
+			transform: rotate(43deg);
 		}
 	}
 
@@ -85,12 +73,9 @@
 
 			border-radius: 50%;
 			background: $bf-white;
-			opacity: var(--o, 0);
-			transform: scale(var(--s, 0.7));
+			
+			transform: scale(.4);
 		}
 
-		&:checked {
-			--s: 0.5;
-		}
 	}
 }

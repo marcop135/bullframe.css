@@ -1,7 +1,14 @@
+.bf-focused {
+	transition: border .2s, background-color .2s, box-shadow .2s;
+	border-color: $bf-black;
+	box-shadow: 0 0 0 3px rgba(153, 153, 153, .45);
+}
+
 .bf-disabled {
   cursor: default !important; // IE8-10 fallback
-	cursor: not-allowed !important; // Opera Mini fallback
+	cursor: not-allowed !important;
 	pointer-events: none !important;
+	box-shadow: none !important;
 	opacity: .5 !important;
 }
 
@@ -11,3 +18,4 @@
 	border-color: $bf-red;
 	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
 }
+

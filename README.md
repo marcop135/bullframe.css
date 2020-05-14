@@ -55,7 +55,7 @@ Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/124
 
 ### npm
 
-`$ npm install bullframe.css`
+`$ npm i bullframe.css`
 
 ### HTML
 

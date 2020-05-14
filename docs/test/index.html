@@ -92,7 +92,7 @@
 						The <em>em element</em> example<br>
 						The <em>i element</em> example<br>
 						The img element
-						<img src="https://placeimg.com/16/16/any" alt="just a placeholder"> example<br>
+						<img src="https://placeimg.com/16/16/any" alt="just a placeholder" loading="lazy"> example<br>
 						The <ins>ins element</ins> example<br>
 						The <kbd>kbd element</kbd> example<br>
 						The <mark>mark element</mark> example<br>
@@ -307,10 +307,7 @@
 					<h3>Linked figure with an image and a caption</h3>
 					<figure>
 						<a href="#">
-							<img src="https://placeimg.com/800/400/any" alt="just a placeholder">
-							<noscript>
-								<img src="https://placeimg.com/800/400/any" alt="just a placeholder">
-							</noscript>
+							<img src="https://placeimg.com/800/400/any" alt="just a placeholder" loading="lazy">
 						</a>
 						<figcaption>The image above is 800x400 pixels</figcaption>
 					</figure>
@@ -362,11 +359,7 @@
 
 					<h3>YouTube iframe 16:9 (default)</h3>
 					<div class="bf-embed-responsive">
-						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<noscript>
-							<p>The video above doesn't work if JavaScript is disabled</p>
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</noscript>
+						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 					</div>
 
 				</div>
@@ -645,6 +638,7 @@
 								alt="Image (input)"
 								src="https://placeimg.com/130/40/any"
 								type="image"
+								loading="lazy"
 							><br>
 							<code>input type="image" (130x40px)</code>
 						</div>
@@ -672,6 +666,7 @@
 								alt="Image (input)"
 								src="https://placeimg.com/130/40/any"
 								type="image"
+								loading="lazy"
 							><br>
 							<code>input type="image" (130x40px)</code>
 						</div>

@@ -1,10 +1,11 @@
 // classless (no-classes) version
 // https://css-tricks.com/no-class-css-frameworks/
 
-// colors and spacing variables
+// colors, spacing and breakpoint variables
 // this is for an easy customisation
 @import "variables/colors";
 @import "variables/spacing";
+@import "variables/breakpoints";
 
 // all about box-sizing and display
 @import "layout";

@@ -87,7 +87,7 @@
 
 * **dropped IE7 support**
 * updated IE8+ normalization
-* updated `html5sviv.js` polyfill to v3.7.3
+* updated `html5shiv.js` polyfill to v3.7.3
 
 ## 2.1.1 (November 6, 2014)
 

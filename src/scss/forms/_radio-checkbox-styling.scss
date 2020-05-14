@@ -1,20 +1,96 @@
-// Ideas:
-
-// 1.
-// no extra elements but a bit overcomplex and instable
-//
-// 2020 toggles by Aaron Iker
+// heavily inspired by '2020 toggles' by Aaron Iker
 // https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
 // https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
-// 
-// modern browsers only support the "@supports" media rules
+//
+// currently, a few modern browsers support the "@supports" media rules
 // https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
 // https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
-// so, the following styles match only FF and Chrome right now (April 2020), 
-// and are future-friendly because more browser compatibility will come
+// Anyway are safe and future-friendly because more browser compatibility
+// will come
 
-// 2.
-// extra HTML elements and attributes but standardized and accessible
-//
-// Bootstrap's custom checkboxes and radios
-// https://getbootstrap.com/docs/4.5/components/forms/#checkboxes-and-radios-1
+@supports (appearance: none) {
+	[type="checkbox"],
+	[type="radio"] {
+		--active: #275efe;
+		--active-inner: #fff;
+		--focus: 2px rgba(39, 94, 254, 0.3);
+		--border: #bbc1e1;
+		--border-hover: #275efe;
+		--background: #fff;
+		--disabled: #f6f8ff;
+		--disabled-inner: #e1e6f9;
+		appearance: none;
+
+		height: 20px;
+		height: 2rem;
+		width: 20px;
+		width: 2rem;
+
+		vertical-align: top;
+		position: relative;
+
+		border: 1px solid $bf-gray;
+
+		& + label {
+			line-height: 20px;
+			line-height: 2rem;
+			vertical-align: top;
+			margin-left: $bf-spacing-md-px;
+			margin-left: $bf-spacing-md-rem;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			left: 0;
+			top: 0;
+			position: absolute;
+		}
+
+		&:checked {
+			background-color: $bf-blue;
+			border-color: $bf-black;
+			--o: 1;
+		}
+	}
+
+	[type="checkbox"] {
+		&:after {
+			width: 5px;
+			width: 0.5rem;
+			height: 9px;
+			height: 0.9rem;
+
+			border: 2px solid $bf-white;
+			border-top: 0;
+			border-left: 0;
+
+			left: 7px;
+			top: 4px;
+
+			transform: rotate(var(--r, 20deg));
+		}
+
+		&:checked {
+			--r: 43deg;
+		}
+	}
+
+	[type="radio"] {
+		&:after {
+			width: 19px;
+			width: 1.9rem;
+			height: 18px;
+			height: 1.8rem;
+
+			border-radius: 50%;
+			background: $bf-white;
+			opacity: var(--o, 0);
+			transform: scale(var(--s, 0.7));
+		}
+
+		&:checked {
+			--s: 0.5;
+		}
+	}
+}

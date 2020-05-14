@@ -333,7 +333,7 @@ input[disabled]:checked,
 select[disabled],
 textarea[disabled] {
 	cursor: default !important; // IE8-10 fallback
-	cursor: not-allowed !important; // Opera Mini fallback
+	cursor: not-allowed !important;
 	pointer-events: none !important;
 	box-shadow: none !important;
 	opacity: .5 !important;

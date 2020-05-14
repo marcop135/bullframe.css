@@ -198,6 +198,7 @@ pre {
       -ms-hyphens: none;
           hyphens: none;
   -ms-overflow-style: auto;
+  display: block;
 }
 
 pre,
@@ -208,8 +209,13 @@ samp {
   font-size: 90%;
 }
 
+code {
+  word-wrap: break-word;
+}
+
 pre code {
-  font-size: 100%;
+  font-size: inherit;
+  word-break: normal;
 }
 
 b,
@@ -533,6 +539,10 @@ output {
 button,
 select {
   text-transform: none;
+}
+
+select {
+  word-wrap: normal;
 }
 
 optgroup {

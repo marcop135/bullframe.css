@@ -198,6 +198,7 @@ pre {
       -ms-hyphens: none;
           hyphens: none;
   -ms-overflow-style: auto;
+  display: block;
 }
 
 pre,
@@ -208,8 +209,13 @@ samp {
   font-size: 90%;
 }
 
+code {
+  word-wrap: break-word;
+}
+
 pre code {
-  font-size: 100%;
+  font-size: inherit;
+  word-break: normal;
 }
 
 b,
@@ -574,6 +580,10 @@ output {
 button,
 select {
   text-transform: none;
+}
+
+select {
+  word-wrap: normal;
 }
 
 optgroup {
@@ -1001,6 +1011,16 @@ th {
   }
 }
 
+.bf-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.bf-no-gutters > [class^=bf-col] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .bf-col-12 {
   width: 100%;
 }
@@ -1372,6 +1392,10 @@ table th[class^=bf-col] {
   font-weight: 700;
 }
 
+.bf-text-break {
+  word-wrap: break-word;
+}
+
 .bf-t-truncate {
   max-width: 100%;
   overflow: hidden;
@@ -1663,12 +1687,22 @@ h3 {
   }
 }
 @media print {
-  .table-responsive {
+  body,
+.bf-container {
+    min-width: 992px !important;
+  }
+
+  .bf-table-responsive {
     overflow: auto;
   }
 
-  .table-responsive table {
+  .bf-table-responsive table {
     width: auto;
+  }
+
+  .bf-table-responsive table,
+.bf-table {
+    border-collapse: collapse !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {

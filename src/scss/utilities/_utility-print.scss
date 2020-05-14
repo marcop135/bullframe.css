@@ -65,7 +65,18 @@
 	}
 }
 
+
+// this bullframe.css specific
+
 @media print {
+
+	// adjust the grid system making the layout always fixed
+
+	body,
+	.bf-container {
+    min-width: 992px !important;
+	}
+	
   // a few fixes for '_utility_tables.scss'
   //
   // a <table> with a responsive container (.table-responsive) is cut
@@ -73,11 +84,17 @@
   // let's re-set the overflow of that container on 'auto'
   // and let the <table> element flows without a fixed/flexible with
 
-	.table-responsive {
+	.bf-table-responsive {
 		overflow: auto;
 	}
 
-	.table-responsive table {
+	.bf-table-responsive table {
 		width: auto;
 	}
+
+	.bf-table-responsive table,
+	.bf-table {
+		border-collapse: collapse !important;
+	}
+
 }

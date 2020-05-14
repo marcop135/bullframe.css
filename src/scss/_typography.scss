@@ -235,6 +235,8 @@ pre {
 	// Disable auto-hiding scrollbar in legacy Edge 
 	// https://github.com/twbs/bootstrap/pull/30685
 	-ms-overflow-style: auto;
+	
+	display: block;
 }
 
 pre,
@@ -247,8 +249,13 @@ samp {
 	font-size: 90%;
 }
 
+code {
+	word-wrap: break-word;
+}
+
 pre code {
-	font-size: 100%;
+	font-size: inherit;
+  word-break: normal;
 }
 
 // kbd {

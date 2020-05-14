@@ -259,7 +259,7 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 
 - @necolas [/normalize.css](https://github.com/necolas/normalize.css) for the extensive old browsers bug fixing documentation
 - @h5bp [/main.css](https://github.com/h5bp/main.css) for the excellent print styles base and the keyboard utilities
-- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some typography tricks, responsive embeds, base24 SVG icons, button styles and spacing utilities
+- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, base24 SVG icons, button styles, grid system breakpoints and spacing utilities _(a lot!)_
 - @kognise [/water.css](https://github.com/kognise/water.css) for the "classless" concept inspiration and some form tricks
 - @csswizardry @inuitcss [/inuit.css](https://github.com/inuitcss/inuitcss) for some advanced Sass tips and tricks
 

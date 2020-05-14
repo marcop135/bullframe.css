@@ -18,6 +18,9 @@ a {
 
 // this is taken from Bootstrap's reboot
 // https://getbootstrap.com/docs/4.4/content/reboot/
+//
+// ':not' is IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
 a:not([href]):not([tabindex]) {
 	color: inherit;
 	text-decoration: none;

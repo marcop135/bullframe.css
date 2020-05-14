@@ -73,6 +73,10 @@ textarea {
 	}
 }
 
+.bf-focused {
+	border-color: $bf-gray;
+}
+
 // now again, but without [type="range"]
 // since box-shadow just add more troubles to them
 [type="email"],
@@ -94,6 +98,10 @@ textarea {
 	&:focus {
 		box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
 	}
+}
+
+.bf-focused {
+	box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
 }
 
 select:not([size]):not([multiple]) {

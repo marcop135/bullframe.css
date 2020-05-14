@@ -1631,10 +1631,17 @@ fieldset[disabled] .bf-btn,
   box-shadow: none;
 }
 
+.bf-focused {
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
+}
+
 .bf-disabled {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
+  box-shadow: none !important;
   opacity: 0.5 !important;
 }
 
@@ -1898,6 +1905,10 @@ textarea:focus {
     border-color: #999;
   }
 
+  .bf-focused {
+    border-color: #999;
+  }
+
   [type=email]:active, [type=email]:focus,
 [type=number]:active,
 [type=number]:focus,
@@ -1927,6 +1938,10 @@ select:active,
 select:focus,
 textarea:active,
 textarea:focus {
+    box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+  }
+
+  .bf-focused {
     box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
   }
 

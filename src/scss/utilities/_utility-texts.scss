@@ -48,6 +48,10 @@
 	font-weight: 700;
 }
 
+.bf-text-break {
+  word-wrap: break-word;
+}
+
 .bf-t-truncate {
 	max-width: 100%;
 	overflow: hidden;

@@ -1,33 +1,33 @@
-// micro-clearfix 
+// micro-clearfix
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .bf-clearfix:before,
 .bf-clearfix:after {
-	content: " ";
-	display: table;
+  content: " ";
+  display: table;
 }
 
 .bf-clearfix:after {
-	clear: both;
+  clear: both;
 }
 
 .bf-hide {
-	display: none !important;
+  display: none !important;
 }
 
 // assistive text for screen reader only (e.g. form labels)
 .bf-hidden {
-	display: none !important;
-	visibility: hidden !important;
+  display: none !important;
+  visibility: hidden !important;
 }
 
 .bf-text-hide {
-	font: 0/0 a;
-	color: transparent;
-	text-shadow: none;
-	background-color: transparent;
-	border: 0;
-	margin: 0;
-	padding: 0;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -41,15 +41,15 @@
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
 .bf-sr-only {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /*
@@ -71,62 +71,62 @@
 }
 
 .bf-invisible {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .bf-visible {
-	visibility: visible;
+  visibility: visible;
 }
 
 .bf-display-block {
-	display: block;
+  display: block;
 }
 
 .bf-display-block-center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bf-display-inline {
-	display: inline;
+  display: inline;
 }
 
 .bf-display-inline-block {
-	display: inline-block;
+  display: inline-block;
 }
 
 // IE10+
 // https://caniuse.com/#feat=flexbox
 .bf-display-flex {
-	display: flex !important;
+  display: flex !important;
 }
 
 .bf-display-inline-flex {
-	display: inline-flex !important;
+  display: inline-flex !important;
 }
 
 .bf-float-right {
-	float: right;
+  float: right;
 }
 
 .bf-float-left {
-	float: left;
+  float: left;
 }
 
 .bf-position-fixed {
-	position: fixed;
+  position: fixed;
 }
 
 // cross-browser vertically and horizontally center alignment
 // http://css-tricks.com/centering-in-the-unknown/
 .bf-align-center-unknown {
-	display: table;
-	width: 100%;
+  display: table;
+  width: 100%;
 }
 
 .bf-align-center-unknown--item {
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }

@@ -7,11 +7,11 @@
 // preferably to the point where all non-essential movement is removed.
 
 @media (prefers-reduced-motion: reduce) {
-	.bf-reduced-motion,
-	.bf-reduced-motion * {
-		animation-duration: .01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: .01ms !important;
-		scroll-behavior: auto !important;
-	}
+  .bf-reduced-motion,
+  .bf-reduced-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

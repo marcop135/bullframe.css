@@ -11,6 +11,9 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
 
+  // ! this is not a standard feature, is webkit only
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color
+  
   // remove a tap background when a link or interactive element is focused
   // if is touch
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

@@ -8,7 +8,11 @@
 @import "layout";
 
 // this a wide range of text elements bug fixing and improvements
-@import "typography";
+@import "typography/html-body";
+@import "typography/headings";
+@import "typography/blockquotes";
+@import "typography/monospaced-elements";
+@import "typography/typography-misc";
 
 // <a> linkage
 @import "anchors";

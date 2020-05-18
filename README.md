@@ -299,6 +299,10 @@ This project is tested in a wide range of browsers using also [BrowserStack](htt
 
 [@englishextra](https://github.com/englishextra) the project is still live thanks to you!
 
+## Contributing
+
+Please read the [contribution guidelines](https://github.com/marcop135/bullframe.css/blob/master/CONTRIBUTING.md).
+
 ---
 
 ## Changelog

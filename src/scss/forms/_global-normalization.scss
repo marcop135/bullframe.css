@@ -123,6 +123,12 @@ label {
 	margin-bottom: $bf-spacing-md-rem;
 }
 
+label input,
+label select,
+label textarea {
+	font-size: 110%;
+}
+
 [type="number"]::-webkit-outer-spin-button,
 [type="number"]::-webkit-inner-spin-button {
 	height: auto;

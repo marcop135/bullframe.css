@@ -1,5 +1,30 @@
 # Changes to bullframe.css
 
+## 3.0.0 (May 18, 2020)
+
+* **CSS to SCSS (Sass architecture refactoring)**
+* added gulp.js file processing
+* added CSS BEM syntax
+* added npm
+* added CDN
+* added Dark mode
+* added new test page
+* added HTML snippets
+* added screenshots
+* added extended browser compatiblity list
+* added proxy browsers support
+* added logo
+* added travis CI
+* added utility classes isolation
+* added reduced motion support
+* added responsive typography
+* added custom `select`
+* added custom radios and checkboxes
+* added much more information in README.md
+* added CONTRIBUTING.md
+* added CODE_OF_CONDUCT.md
+* ...and much more!
+
 ## 2.9.0 (April 13, 2020)
 
 * added Linux OS support to native font stack `font-family` list

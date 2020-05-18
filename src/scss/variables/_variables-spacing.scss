@@ -1,0 +1,22 @@
+// customise this spacing selection as needed
+
+// the REM unit is the default,
+// preceded by the PX unit as fallback for old browsers (IE)
+// https://caniuse.com/#search=rem
+//
+// e.g.
+// html { font-size: 62.5%; }
+// body { font-size: 16px; }
+// h1 { font-size: 30px; font-size: 3rem; }
+
+$bf-spacing-sm-px: 3px;
+$bf-spacing-md-px: 6px;
+$bf-spacing-lg-px: 12px;
+$bf-spacing-xl-px: 24px;
+$bf-spacing-xxl-px: 36px;
+
+$bf-spacing-sm-rem: 0.3rem;
+$bf-spacing-md-rem: 0.6rem;
+$bf-spacing-lg-rem: 1.2rem;
+$bf-spacing-xl-rem: 2.4rem;
+$bf-spacing-xxl-rem: 3.6rem;

@@ -1,0 +1,92 @@
+// Abbreviations (taken from Bootstrap 4)
+//
+// 1. Remove the bottom border in Firefox 39-.
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 3. Add explicit cursor to indicate changed behavior.
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  text-decoration: underline; // 2
+  text-decoration: underline dotted; // 2
+  cursor: help; // 2
+  border-bottom: 0; // 2
+  text-decoration-skip-ink: none;
+  text-decoration-skip: none;
+}
+
+mark {
+  background-color: $bf-yellow;
+  color: $bf-black;
+  font-weight: 700; // fallback for font families without 600 */
+  font-weight: 600;
+}
+
+ins {
+  background-color: $bf-yellow-light;
+  color: $bf-black;
+  text-decoration: none;
+}
+
+// Prevent the duplicate application of `bolder` by the next rule
+// in Safari 6
+b,
+strong {
+  font-weight: inherit;
+}
+
+// Add the correct font weight in Chrome, Edge, and Safari
+b,
+strong {
+  font-weight: 700; // fallback for font families without 600 */
+  font-weight: 600;
+}
+
+dfn {
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -8px;
+  top: -0.8rem;
+}
+
+sub {
+  bottom: -4px;
+  bottom: -0.4rem;
+}
+
+small {
+  font-size: 80%;
+}
+
+hr {
+  box-sizing: content-box;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $bf-gray;
+  margin: $bf-spacing-xl-px 0;
+  margin: $bf-spacing-xl-rem 0;
+  padding: 0;
+  overflow: visible; // Show the overflow in Edge and IE
+}
+
+address {
+  font-style: normal;
+  margin-bottom: $bf-spacing-lg-px;
+  margin-bottom: $bf-spacing-lg-rem;
+  line-height: inherit;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}

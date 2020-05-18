@@ -1,0 +1,85 @@
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+img,
+canvas,
+audio,
+video,
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+audio,
+video,
+canvas,
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+  border-style: none;
+}
+
+// useful for CMS generated images
+// but causes layout breaking
+// img[width],
+// img[height] {
+// 	max-width: none;
+// }
+
+figure {
+  margin: 0;
+}
+
+figure,
+figcaption {
+  display: block;
+}
+
+video {
+  height: auto;
+}
+
+video,
+audio {
+  width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+progress,
+meter {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 100%;
+}
+
+// remove default border in old browsers
+// and for embeds (e.g. youtube) that don't remove the border with the attribute
+// frameborder="0"
+// eg.
+// <iframe width="560" height="315"
+// src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0"
+// frameborder="0"
+// allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+// allowfullscreen>
+// </iframe>
+iframe {
+  border: 0;
+}

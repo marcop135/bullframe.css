@@ -1,0 +1,32 @@
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  text-align: inherit;
+}
+
+caption {
+  padding-top: $bf-spacing-md-px;
+  padding-top: $bf-spacing-md-rem;
+  padding-bottom: $bf-spacing-md-px;
+  padding-bottom: $bf-spacing-md-rem;
+  color: $bf-gray;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  font-weight: 700; // fallback for font families without 600 */
+  font-weight: 600;
+}

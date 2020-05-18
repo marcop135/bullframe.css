@@ -1,0 +1,62 @@
+// custom <select> arrow and appearance with a base64 embedded SVG icon
+// https://css-tricks.com/probably-dont-base64-svg/#article-header-id-2
+//
+// this is inspired from https://github.com/kognise/water.css
+// and from Bootstrap custom select
+// https://getbootstrap.com/docs/4.4/components/input-group/#custom-select
+
+// ! :not and calc() are IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
+// https://caniuse.com/#feat=calc
+//
+// ! 12px = the icon width/height, and must be in pixels because
+// calc() is just for values
+// https://css-tricks.com/a-complete-guide-to-calc-in-css/#0-calc-is-for-values
+//
+// a select with a [multiple] attribute doesn't show an arrow by default
+// a select with a [size] attribute gets and arrow on iOS (Webkit) for instance
+// but on Chrome and FF desktop
+// so, is not safe to style every kind of <select>
+//
+// remove the arrow and the appearance, especially on Webkit
+select:not([size]):not([multiple]) {
+  appearance: none;
+}
+
+// IE10+
+// The '::-ms-expand' CSS pseudo-element is a Microsoft extension that represents
+// the button of a <select> menu control that opens or closes the drop-down
+// menu. Typically it is a triangle that points downward.
+// https://developer.mozilla.org/en-US/docs/Web/CSS/::-ms-expand
+select::-ms-expand {
+  display: none;
+}
+
+select:not([size]):not([multiple]) {
+  background: $bf-white
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.85rem center/8px 10px;
+
+  padding-right: 12px + $bf-spacing-lg-px;
+  padding-right: 1.2rem + $bf-spacing-lg-rem;
+}
+
+// since '::-ms-expand' is IE10+ only
+// and IE8 doesn't recognize the ':not' selector, so didn't get those rulesets
+// https://caniuse.com/#feat=mdn-css_selectors_not
+//
+// let's revert the standard styles on IE9 via CSS hacks
+// and hide the custom <select> arrow
+//
+
+// IE9 only hack
+// https://gist.github.com/yangfch3/2e48bca9c08bf883131d7917c4892fa2#ie-9-only
+@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  select {
+    padding-right: $bf-spacing-md-px;
+
+    // re-set the default properties
+    background-image: none;
+    background-repeat: repeat;
+  }
+}

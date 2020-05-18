@@ -56,7 +56,9 @@ Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/124
 
 ### npm
 
-`$ npm i bullframe.css`
+With [npm](https://www.npmjs.com/package/bullframe.css) do:
+
+`npm install bullframe.css`
 
 ### HTML
 

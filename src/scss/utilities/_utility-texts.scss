@@ -1,51 +1,51 @@
 .bf-t-transform-uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .bf-t-transform-none {
-	text-transform: none;
+  text-transform: none;
 }
 
 .bf-t-left {
-	text-align: left;
+  text-align: left;
 }
 
 .bf-t-center {
-	text-align: center;
+  text-align: center;
 }
 
 .bf-t-right {
-	text-align: right;
+  text-align: right;
 }
 
 .bf-t-shadow {
-	text-shadow: 0 0 .2rem $bf-dark;
+  text-shadow: 0 0 0.2rem $bf-dark;
 }
 
 .bf-t-italic {
-	font-style: italic;
+  font-style: italic;
 }
 
 // useful to 'reset' <i> inherited style
 .bf-t-style-normal {
-	font-style: normal;
+  font-style: normal;
 }
 
 // useful to 'reset' <b> inherited style
 .bf-t-weight-400 {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 .bf-t-weight-500 {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 .bf-t-weight-600 {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 .bf-t-weight-700 {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .bf-text-break {
@@ -53,40 +53,39 @@
 }
 
 .bf-t-truncate {
-	max-width: 100%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	word-wrap: normal;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 
 .bf-no-select {
-	user-select: none;
+  user-select: none;
 
-	// this is a not standard CSS property, so it's for webkit only
-	// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout
-	// useful on iOS
-	// https://css-tricks.com/force-selection-text-block/#article-header-id-7
-	// https://ishadeed.com/article/selection-in-css scroll down to 
-	// 'selection on mobile' section
-	-webkit-touch-callout: none;
+  // this is a not standard CSS property, so it's for webkit only
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout
+  // useful on iOS
+  // https://css-tricks.com/force-selection-text-block/#article-header-id-7
+  // https://ishadeed.com/article/selection-in-css scroll down to
+  // 'selection on mobile' section
+  -webkit-touch-callout: none;
 }
 
-
 .bf-font-sans-serif {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
-		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-		"Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 .bf-font-serif {
-	font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .bf-font-monospace {
-	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-		"Courier New", monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 .bf-h1,
@@ -95,68 +94,74 @@
 .bf-h4,
 .bf-h5,
 .bf-h6 {
-	font-weight: 700; // fallback for font families without 600 */
-	font-weight: 600;
-	margin-top: 0;
+  font-weight: 700; // fallback for font families without 600 */
+  font-weight: 600;
+  margin-top: 0;
 }
 
 .bf-h1,
 .bf-h2,
 .bf-h3 {
-	margin-bottom: $bf-spacing-xl-px;
-	margin-bottom: $bf-spacing-xl-px;
+  margin-bottom: $bf-spacing-xl-px;
+  margin-bottom: $bf-spacing-xl-px;
 }
 
 .bf-h4,
 .bf-h5,
 .bf-h6 {
-	margin-bottom: $bf-spacing-lg-px;
-	margin-bottom: $bf-spacing-lg-px;
+  margin-bottom: $bf-spacing-lg-px;
+  margin-bottom: $bf-spacing-lg-px;
 }
 
 .bf-h1 {
-	font-size: 36px;
-	font-size: 3.6rem;
+  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 .bf-h2 {
-	font-size: 30px;
-	font-size: 3rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 
 .bf-h3 {
-	font-size: 24px;
-	font-size: 2.4rem;
+  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .bf-h4 {
-	font-size: 20px;
-	font-size: 2rem;
+  font-size: 20px;
+  font-size: 2rem;
 }
 
 .bf-h5,
 .bf-h6 {
-	font-size: 17px;
-	font-size: 1.7rem;
+  font-size: 17px;
+  font-size: 1.7rem;
 }
 
 p.bf-lead {
-	font-size: 120%;
+  font-size: 120%;
 }
 
 // responsive typography
 // Read and view more https://codepen.io/marcop135/pen/eYmPmJm
 //
-// ! calc() is IE9+, all IE versions have bugs, and Opera Mini is not supported
-// https://caniuse.com/#feat=calc
-@media (min-width: 320px) {
-  body.bf-responsive-typography {
-    font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
-  }  
-}
+// ! currently (April 2020), a few modern browsers support the "@supports" media rules
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
+// https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
+//
+// Anyway are safe and future-friendly because more browser compatibility
+// will come
+@supports (appearance: none) {
+  @media (min-width: 320px) {
+    body.bf-responsive-typography {
+      font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
+    }
+  }
 
-@media (min-width: 1000px) {
-  body.bf-responsive-typography {
-   font-size: 2rem;
+  @media (min-width: 1000px) {
+    body.bf-responsive-typography {
+      font-size: 2rem;
+    }
   }
 }

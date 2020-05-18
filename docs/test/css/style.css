@@ -12,12 +12,13 @@
 
 @media (max-width: 575px) {
 	.test header {
-		margin-top: 12px;
 		margin-bottom: 1.2rem;
 	}
 }
 
 .test header h1 {
+	margin-top: 12px;
+	margin-top: 1.2rem;
 	margin-bottom: 0;
 }
 

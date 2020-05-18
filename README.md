@@ -1,8 +1,8 @@
 # bullframe.css
 
-[https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
-
 ![bullframe.css logo](./docs/images/logo-extended.png)
+
+[https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
 bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
 

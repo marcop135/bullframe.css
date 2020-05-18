@@ -3,9 +3,10 @@
 
 // colors, spacing and breakpoint variables
 // this is for an easy customisation
-@import "variables/colors";
-@import "variables/spacing";
-@import "variables/breakpoints";
+@import "variables/variables-colors";
+@import "variables/variables-texts";
+@import "variables/variables-spacing";
+@import "variables/variables-breakpoints";
 
 // all about box-sizing and display
 @import "layout";

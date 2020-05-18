@@ -1,0 +1,50 @@
+
+p,
+pre {
+	margin: 0 0 $bf-spacing-xl-px 0;
+	margin: 0 0 $bf-spacing-xl-rem 0;
+}
+
+pre {
+	overflow: auto;
+	word-break: break-all; // webkit
+	word-wrap: break-word;
+	white-space: pre;
+	hyphens: none;
+	// this is a not standard CSS property, so it's for IE only
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
+	//
+	// Disable auto-hiding scrollbar in legacy Edge 
+	// https://github.com/twbs/bootstrap/pull/30685
+	-ms-overflow-style: auto;
+	
+	display: block;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+		"Courier New", monospace;
+
+	// a monospaced text font should looks bigger, so a smaller font-size
+	// is preferred
+	font-size: .875em;
+}
+
+code {
+	word-wrap: break-word;
+}
+
+pre code {
+	font-size: inherit;
+  word-break: normal;
+}
+
+// kbd {
+// 	background-color: $bf-dark;
+// 	color: $bf-white;
+// 	padding: $bf-spacing-md-px / 3;
+// 	padding: $bf-spacing-md-px / 3;
+// }

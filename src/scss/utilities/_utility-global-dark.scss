@@ -69,12 +69,12 @@ textarea {
   &:active,
   &:focus {
     background-color: $bf-gray-dark-extra;
-    border-color: $bf-gray;
+    border-color: lighten($bf-blue, 5%);
   }
 }
 
 .bf-focused {
-  border-color: $bf-gray;
+  border-color: lighten($bf-blue, 5%);
 }
 
 // now again, but without [type="range"]
@@ -96,12 +96,12 @@ select,
 textarea {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
   }
 }
 
 .bf-focused {
-  box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.5);
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
 }
 
 select:not([size]):not([multiple]) {

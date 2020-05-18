@@ -35,7 +35,7 @@ tramp
 
 # cask packages
 .cask/
-dist/
+# dist/
 
 # Flycheck
 flycheck_*.el
@@ -626,6 +626,4 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/vim,linux,macos,emacs,windows,webstorm,sublimetext,visualstudio,visualstudiocode
-
-# Prepros.io configuration file
-prepros.config
+README.html

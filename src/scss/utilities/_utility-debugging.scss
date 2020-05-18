@@ -1,0 +1,23 @@
+// as simple as it is
+
+// * {
+//  outline: 1px solid hotpink;
+// }
+
+// something more powerful...
+//
+// ! :not is IE9+
+// https://caniuse.com/#feat=mdn-css_selectors_not
+//
+// /*! debug.css v0.0.1 | MIT License | zaydek.github.com/debug.css */
+// :not(g):not(path) {
+// 	color:                 hsla(210, 100%, 100%, 0.9) !important;
+// 	background:            hsla(210, 100%,  50%, 0.5) !important;
+// 	outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+// 	box-shadow: none !important;
+// 	filter:     none !important;
+// }
+
+// a interesting guide about CSS debugging from Ben Frain
+// https://benfrain.com/debugging-css/

@@ -1,0 +1,161 @@
+// these are global styles
+
+html {
+  color: $bf-light;
+}
+
+body {
+  background-color: $bf-dark;
+}
+
+// anchors
+a {
+  color: lighten($bf-blue, 20%);
+
+  &:hover,
+  &:focus {
+    color: lighten($bf-blue-light, 20%);
+  }
+}
+
+// typography
+mark {
+  background-color: darken($bf-yellow, 5%);
+}
+
+ins {
+  background-color: darken($bf-yellow-light, 40%);
+}
+
+// kbd {
+// 	background-color: $bf-gray-light;
+// 	color: $bf-black;
+// }
+
+hr {
+  border-color: $bf-gray-light;
+}
+
+// tables
+.bf-table th,
+.bf-table td {
+  border-color: $bf-gray-dark;
+}
+
+// forms
+
+// Old browsers and Opera Mini don't fully support all type of inputs
+// e.g. [type="range"]
+// so, let's try to add styles carefully and selective
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+[type="range"],
+select,
+textarea {
+  background-color: $bf-gray-dark-extra;
+  border-color: $bf-black;
+
+  &:active,
+  &:focus {
+    background-color: $bf-gray-dark-extra;
+    border-color: lighten($bf-blue, 5%);
+  }
+}
+
+.bf-focused {
+  border-color: lighten($bf-blue, 5%);
+}
+
+// now again, but without [type="range"]
+// since box-shadow just add more troubles to them
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+select,
+textarea {
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
+  }
+}
+
+.bf-focused {
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
+}
+
+select:not([size]):not([multiple]) {
+  background-color: $bf-gray-dark-extra;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $bf-gray;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid,
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus,
+.bf-invalid,
+.bf-invalid:focus {
+  color: lighten($bf-red, 7.5%);
+  border-color: lighten($bf-red, 7.5%);
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+.bf-btn {
+  background: $bf-gray-light;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($bf-gray-light, 10%);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+  }
+}
+
+.bf-btn.bf-btn--primary {
+  background: $bf-blue;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($bf-blue, 5%);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
+  }
+}

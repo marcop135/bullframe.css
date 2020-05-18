@@ -36,6 +36,13 @@
 	}
 }
 
+.test .description {
+	max-width: 800px;
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .test header a {
 	margin-right: 12px;
 	margin-right: 1.2rem;

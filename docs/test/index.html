@@ -25,13 +25,13 @@
 	<![endif]-->
 </head>
 
-<body>
+<body class="bf-responsive-typography">
 	<a class="bf-sr-only focusable" href="#main-content">Skip to main content</a>
 	<div class="bf-container bf-container--break-md">
 
 		<header class="bf-t-center bf-m-b-24 bf-m-t-24">
 			<h1>bullframe.css</h1>
-			<p class="bf-lead">Solid, fluid, IE-friendly (S)CSS framework.</p>
+			<p class="bf-lead">Solid, fluid, IE-friendly (S)CSS framework</p>
 			<a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css/archive/master.zip">Download</a>
 			<a class="bf-btn"	href="https://github.com/marcop135/bullframe.css">GitHub</a>
 			<p>This a is a quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purpouse only.</p>
@@ -327,14 +327,13 @@
 
 					<div class="bf-m-b-24">
 						<h3>HTML5 video with controls</h3>
-						<video src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" poster="https://i.imgur.com/rAx3OXG.png" controls>
+						<video poster="https://i.imgur.com/rAx3OXG.png" controls width="250">
 							<source
 								src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
-							/>
+								type="video/webm">
 							<source
 								src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4"
-								type="video/mp4"
-							/>
+								type="video/mp4">
 							Sorry, your browser doesn't support embedded videos.
 						</video>
 					</div>
@@ -359,7 +358,7 @@
 
 					<h3>YouTube iframe 16:9 (default)</h3>
 					<div class="bf-embed-responsive">
-						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 					</div>
 
 				</div>
@@ -416,10 +415,10 @@
 
 					<form>
 						<fieldset>
-							<div class="bf-m-b-36">
-								<legend>
+							<legend>
 									HTML5 has several new input types for forms (legend).
 								</legend>
+							<div class="bf-m-b-36">							
 
 								<label>Text input as sibling of label</label>
 								<input
@@ -645,7 +644,6 @@
 								alt="Image (input)"
 								src="https://placeimg.com/130/40/any"
 								type="image"
-								loading="lazy"
 							><br>
 							<code>input type="image" (130x40px)</code>
 						</div>
@@ -673,7 +671,6 @@
 								alt="Image (input)"
 								src="https://placeimg.com/130/40/any"
 								type="image"
-								loading="lazy"
 							><br>
 							<code>input type="image" (130x40px)</code>
 						</div>

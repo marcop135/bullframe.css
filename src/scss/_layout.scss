@@ -5,7 +5,7 @@
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 article,
@@ -21,17 +21,17 @@ menu,
 nav,
 section,
 details {
-	display: block;
+  display: block;
 }
 
 template {
-	display: none;
+  display: none;
 }
 
 // Always hide an element with the `hidden` HTML attribute (from PureCSS).
 // Needed for proper display in IE 10-. */
 [hidden] {
-	display: none !important;
+  display: none !important;
 }
 
 // Fix IE 10 on Windows Phone 8 Viewport only

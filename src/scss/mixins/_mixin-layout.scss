@@ -28,12 +28,12 @@
     width: auto;
   }
 }
- 
+
 @mixin bf-clearfix {
   &::before,
   &::after {
     content: " ";
-	  display: table;
+    display: table;
   }
 
   &::after {

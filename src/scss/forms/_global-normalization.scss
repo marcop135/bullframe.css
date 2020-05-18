@@ -2,162 +2,151 @@
 
 html input,
 button,
-
 select,
 optgroup,
-
 textarea {
-	color: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 html input,
 button,
-
 [type="radio"],
-[type="checkbox"], 
-
+[type="checkbox"],
 select,
 optgroup,
-
 textarea {
-	margin: 0
+  margin: 0;
 }
-
 
 html input,
 select,
 textarea,
 legend {
-	width: 100%;
+  width: 100%;
 }
 
 // re-set width auto where needed
 html label,
-
 button,
 [type="image"],
 [type="submit"],
 [type="reset"],
 html [type="button"],
-
 [type="radio"],
 [type="checkbox"] {
-	width: auto;
+  width: auto;
 }
 
 // inline-block display gives the best cross-browser combination
 // and allow several properties
 html input,
-
 label,
-
 select,
 textarea,
-
 button,
 html [type="button"],
 [type="reset"],
 [type="submit"],
 output {
-	display: inline-block;
+  display: inline-block;
 }
 
 [type="file"] {
-	display: block;
-	background-color: transparent;
+  display: block;
+  background-color: transparent;
 }
 
 ::-webkit-file-upload-button {
-	font: inherit;
+  font: inherit;
 }
 
 button,
 html input,
 select,
 textarea {
-	background-image: none; // FF mobile
+  background-image: none; // FF mobile
 }
 
 input,
 select,
 textarea {
-	vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 form {
-	margin: 0;
+  margin: 0;
 }
 
 // 1. Remove intrinsic min-width of fieldset
 // https://github.com/necolas/normalize.css/pull/269
 fieldset {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	min-width: 0; // 1.
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0; // 1.
 }
 
 legend {
-	display: block;
-	display: table \9; // enable line-wrapping in IE8+
-	max-width: 100%;
-	white-space: normal; // enable line-wrapping in FF4/5
-	border: 0;
-	padding: 0;
-	font-weight: 400;
-	margin-bottom: $bf-spacing-md-px;
-	margin-bottom: $bf-spacing-md-rem;
-	font-size: inherit;
-	line-height: inherit;
-	color: inherit;
+  display: block;
+  display: table \9; // enable line-wrapping in IE8+
+  max-width: 100%;
+  white-space: normal; // enable line-wrapping in FF4/5
+  border: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: $bf-spacing-md-px;
+  margin-bottom: $bf-spacing-md-rem;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 label {
-	font-weight: 700; // fallback for font families without 600 */
-	font-weight: 600;
-	font-size: 90%;
-	margin-bottom: $bf-spacing-md-px;
-	margin-bottom: $bf-spacing-md-rem;
+  font-weight: 700; // fallback for font families without 600 */
+  font-weight: 600;
+  font-size: 90%;
+  margin-bottom: $bf-spacing-md-px;
+  margin-bottom: $bf-spacing-md-rem;
 }
 
 label input,
 label select,
 label textarea {
-	font-size: 110%;
+  font-size: 110%;
 }
 
 [type="number"]::-webkit-outer-spin-button,
 [type="number"]::-webkit-inner-spin-button {
-	height: auto;
+  height: auto;
 }
 
 [type="search"] {
-	outline-offset: -$bf-spacing-sm-px;
-	outline-offset: -$bf-spacing-sm-rem;
+  outline-offset: -$bf-spacing-sm-px;
+  outline-offset: -$bf-spacing-sm-rem;
 }
 
 output {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 button,
 select {
-	text-transform: none;
+  text-transform: none;
 }
 
 select {
-	word-wrap: normal;
+  word-wrap: normal;
 }
 
 optgroup {
-	font-family: inherit;
-	font-size: inherit;
-	font-style: inherit;
-	font-weight: 700; // fallback for font families without 600 */
-	font-weight: 600;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: 700; // fallback for font families without 600 */
+  font-weight: 600;
 }
 
 // remove -webkit-appearance listing every single elements that needed it
@@ -183,7 +172,7 @@ html [type="button"],
 [type="search"]::-webkit-search-cancel-button,
 
 textarea {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
@@ -195,7 +184,7 @@ textarea {
 [type="time"],
 [type="datetime-local"],
 [type="month"] {
-	appearance: listbox;
+  appearance: listbox;
 }
 
 // ! IE9+
@@ -204,51 +193,51 @@ button,
 input,
 select,
 textarea {
-	border-radius: $bf-spacing-sm-px;
-	border-radius: $bf-spacing-sm-rem;
+  border-radius: $bf-spacing-sm-px;
+  border-radius: $bf-spacing-sm-rem;
 }
 
 // ! IE9+
 // https://caniuse.com/#feat=border-radius
 [type="radio"] {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 [type="checkbox"] {
-	border-radius: $bf-spacing-md-px;
-	border-radius: $bf-spacing-md-rem;
+  border-radius: $bf-spacing-md-px;
+  border-radius: $bf-spacing-md-rem;
 }
 
 [type="radio"],
 [type="checkbox"] {
-	background-color: $bf-white;
+  background-color: $bf-white;
 }
 
 [type="range"] {
-	background-color: transparent; // FF and Chrome mobile
+  background-color: transparent; // FF and Chrome mobile
 }
 
 select[size],
 select[multiple] {
-	height: auto;
+  height: auto;
 }
 
 select[multiple] {
-	background-image: none; // FF mobile
+  background-image: none; // FF mobile
 }
 
 optgroup::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 textarea {
-	height: auto;
-	min-height: 60px;
-	min-height: 6rem;
-	overflow: auto;
-	vertical-align: top;
-	resize: vertical;
+  height: auto;
+  min-height: 60px;
+  min-height: 6rem;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
 }
 
 // Firefox: Get rid of the inner focus border on older versions
@@ -256,35 +245,34 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-	padding: 0;
-	border-style: none;
+  padding: 0;
+  border-style: none;
 }
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-	line-height: normal;
-	text-align: center;
-	margin: 0;
-	background-clip: padding-box;
-	vertical-align: baseline;
-	overflow: visible;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	user-select: none;
-	border: 0;
-	background-image: none; // FF mobile
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  border: 0;
+  background-image: none; // FF mobile
 
-	&:hover,
-	&:active,
-	&:focus {
-		text-decoration: none;
-		color: $bf-dark;
-	}
-
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $bf-dark;
+  }
 }
 
-button, 
+button,
 select,
 input[type="submit"],
 input[type="button"],
@@ -292,7 +280,7 @@ input[type="button"],
 [type="range"],
 [type="radio"],
 [role="button"] {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 // FF placeholder bug
@@ -301,19 +289,18 @@ input[type="button"],
 // Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
-	color: $bf-gray-dark;
+  color: $bf-gray-dark;
 }
 
 input:invalid,
 select:invalid,
 textarea:invalid,
-
 input:invalid:focus,
 select:invalid:focus,
 textarea:invalid:focus {
-	color: $bf-red;
-	border-color: $bf-red;
-	box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
+  color: $bf-red;
+  border-color: $bf-red;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
 }
 
 // disabled groups
@@ -338,9 +325,9 @@ input[disabled]:checked,
 
 select[disabled],
 textarea[disabled] {
-	cursor: default !important; // IE8-10 fallback
-	cursor: not-allowed !important;
-	pointer-events: none !important;
-	box-shadow: none !important;
-	opacity: .5 !important;
+  cursor: default !important; // IE8-10 fallback
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  box-shadow: none !important;
+  opacity: 0.5 !important;
 }

@@ -266,3 +266,11 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 ## License
 
 The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
+
+---
+
+## Todos
+
+- Add more screenshots
+- Add CodePens
+- Add a complete documentation

@@ -10,8 +10,8 @@ publishDir: "_gh_pages"
 params:
   description: "Solid, fluid, IE-friendly (S)CSS framework"
   authors: "Marco Pontili, and contributors"
-  social_image_path: /docs/.vuepress/assets/img/brand/bullframe-css-social.png
-  social_logo_path: /docs/.vuepress/assets/img/brand/bullframe-css-social-logo.png
+  social_image_path: /docs/images/logo-social.png
+  social_logo_path: ./docs/images/logo.png
 
   current_version: "3.0.0-beta"
   repo: "https://github.com/marcop135/bullframe.css"

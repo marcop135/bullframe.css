@@ -62,6 +62,8 @@ Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/124
 
 Add some HTML markup, and two JS polyfills (if you need a wide cross-browser support).
 
+Tip: iff you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-first responsive design), you could polyfill it with [respond.js](https://github.com/scottjehl/Respond).
+
 #### IE8+ and old browsers
 
 ```html

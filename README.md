@@ -9,7 +9,7 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 
 **Jump to:**
 
-Getting started: [CDN](#CDN) - [npm](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
+Getting started: [Download](#download) - [CDN](#CDN) - [npm](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
 
 Customization: [No classes (Classless)](#no-classes-classless) - [Utilities only](#just-utilities) - [Dark mode](#dark-mode)
 
@@ -46,7 +46,55 @@ Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/124
 
 ---
 
+## What's included
+
+You'll see something like this:
+
+```text
+bullframe.css/
+└── dist/
+    └── sourcemaps/
+    │   ├── ...
+    ├── css/
+    │   ├── bullframe-classless.css
+    │   ├── bullframe-classless.min.css
+    │   ├── bullframe-dark-prefers.css
+    │   ├── bullframe-dark-prefers.min.css
+    │   ├── bullframe-dark.css
+    │   ├── bullframe-dark.min.css
+    │   ├── bullframe-utilities.css
+    │   ├── bullframe-utilities.min.css
+    │   ├── bullframe.css
+    │   ├── bullframe.min.css
+└── src/scss/
+    └── forms/
+    │   ├── ...
+    └── mixins/
+    │   ├── ...
+    └── typography/
+    │   ├── ...
+    └── utilities/
+    │   ├── ...
+    └── variables/
+    │   ├── ...
+    ...
+    ├── bullframe-classless.scss
+    ├── bullframe-dark-prefers.scss
+    ├── bullframe-dark.scss
+    ├── bullframe-utilities.scss
+    ├── bullframe.scss
+└── gulpfile.js
+└── index.html
+...
+```
+
+---
+
 ## Getting started
+
+### Download
+
+[Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip)
 
 ### CDN
 
@@ -56,9 +104,11 @@ Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/124
 
 ### npm
 
-With [npm](https://www.npmjs.com/package/bullframe.css) do:
+Once you have installed [Node.js], you can run this command to install bullframe.css into your project:
 
 `npm install bullframe.css`
+
+[What is npm?](https://www.npmjs.com/get-npm)
 
 ### HTML
 

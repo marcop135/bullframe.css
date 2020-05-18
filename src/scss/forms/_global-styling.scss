@@ -1,0 +1,128 @@
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+[type="range"],
+select,
+textarea {
+  background-color: $bf-white;
+  border: 1px solid $bf-gray;
+  padding: $bf-spacing-md-px ($bf-spacing-lg-px * 0.75);
+  padding: $bf-spacing-md-rem ($bf-spacing-lg-px * 0.75);
+}
+
+// this is an hack for IE8
+// https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea
+
+// some inputs don't get the padding well
+// https://stackoverflow.com/questions/607198/padding-a-text-input-in-ie-possible
+
+@media \0screen {
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"],
+  [type="time"],
+  [type="url"],
+  [type="range"] {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: $bf-spacing-xxl-px + 2;
+    line-height: $bf-spacing-xxl-px + 2;
+  }
+}
+
+// this is an hack for IE9+
+// https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea
+//
+// fix input 'line-height' without declaring 'height' adding an extra HTML class
+// as Bootstrap does
+// https://github.com/twbs/bootstrap/blob/v4.5.0/dist/css/bootstrap.css#L2039
+//
+// philosophy: flexibility is better than overkill control
+@media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"],
+  [type="time"],
+  [type="url"],
+  [type="range"] {
+    line-height: 1.2;
+  }
+}
+
+// Old browsers and Opera Mini don't fully support all type of inputs
+// e.g. [type="range"]
+// so, let's try to add styles carefully and selective
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="time"],
+[type="url"],
+select,
+textarea,
+[type="radio"],
+[type="checkbox"] {
+  &:active,
+  &:focus {
+    transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+    border-color: $bf-blue;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+  }
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  color: $bf-dark;
+  padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
+  background: $bf-gray-light;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $bf-dark;
+    background: darken($bf-gray-light, 10%);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  }
+}

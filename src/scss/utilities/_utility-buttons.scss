@@ -1,0 +1,69 @@
+.bf-btn {
+  display: inline-block;
+  cursor: pointer;
+  color: $bf-dark;
+  padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+
+  // ! IE9+
+  // https://caniuse.com/#feat=border-radius
+  border-radius: $bf-spacing-sm-px;
+  border-radius: $bf-spacing-sm-rem;
+
+  border: 0;
+  background-image: none; // FF mobile
+  background: $bf-gray-light;
+  transition: all 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $bf-dark;
+    background: darken($bf-gray-light, 10%);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.bf-btn--primary {
+    color: $bf-white;
+    background: $bf-blue;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $bf-white;
+      background: darken($bf-blue, 10%);
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+    }
+  }
+}
+
+fieldset[disabled] .bf-btn,
+.bf-btn[disabled],
+.bf-btn.bf-disabled {
+  cursor: default !important; // IE8-10 fallback
+  cursor: not-allowed !important; // Opera Mini fallback
+  pointer-events: none;
+  opacity: 0.5 !important;
+  box-shadow: none;
+}

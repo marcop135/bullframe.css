@@ -1,0 +1,106 @@
+// this is something similar to Bootstrap's spacing utility
+// https://getbootstrap.com/docs/4.4/utilities/spacing/
+
+// margins and paddings classes
+
+.bf-m-0 {
+  margin: 0 !important;
+}
+
+.bf-m-t-0 {
+  margin-top: 0 !important;
+}
+
+.bf-m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.bf-m-l-0 {
+  margin-left: 0 !important;
+}
+
+.bf-m-r-0 {
+  margin-right: 0 !important;
+}
+
+.bf-m-b-6 {
+  margin-bottom: $bf-spacing-md-px !important;
+  margin-bottom: $bf-spacing-md-rem !important;
+}
+
+.bf-m-b-12 {
+  margin-bottom: $bf-spacing-lg-px !important;
+  margin-bottom: $bf-spacing-lg-rem !important;
+}
+
+.bf-m-b-24 {
+  margin-bottom: $bf-spacing-xl-px !important;
+  margin-bottom: $bf-spacing-xl-rem !important;
+}
+
+.bf-m-b-36 {
+  margin-bottom: $bf-spacing-xxl-px !important;
+  margin-bottom: $bf-spacing-xxl-rem !important;
+}
+
+// paddings
+
+.bf-p-0 {
+  padding: 0 !important;
+}
+
+.bf-p-t-0 {
+  padding-top: 0 !important;
+}
+
+.bf-p-b-0 {
+  padding-bottom: 0 !important;
+}
+
+.bf-p-l-0 {
+  padding-left: 0 !important;
+}
+
+.bf-p-r-0 {
+  padding-right: 0 !important;
+}
+
+.bf-p-t-6 {
+  padding-top: $bf-spacing-md-px !important;
+  padding-top: $bf-spacing-md-rem !important;
+}
+
+.bf-p-t-12 {
+  padding-top: $bf-spacing-lg-px !important;
+  padding-top: $bf-spacing-lg-rem !important;
+}
+
+.bf-p-t-24 {
+  padding-top: $bf-spacing-xl-px !important;
+  padding-top: $bf-spacing-xl-rem !important;
+}
+
+.bf-p-t-36 {
+  padding-top: $bf-spacing-xxl-px !important;
+  padding-top: $bf-spacing-xxl-rem !important;
+}
+
+.bf-p-b-6 {
+  padding-bottom: $bf-spacing-md-px !important;
+  padding-bottom: $bf-spacing-md-rem !important;
+}
+
+.bf-p-b-12 {
+  padding-bottom: $bf-spacing-lg-px !important;
+  padding-bottom: $bf-spacing-lg-rem !important;
+}
+
+.bf-p-b-24 {
+  padding-bottom: $bf-spacing-xl-px !important;
+  padding-bottom: $bf-spacing-xl-rem !important;
+}
+
+.bf-p-b-36 {
+  padding-bottom: $bf-spacing-xxl-px !important;
+  padding-bottom: $bf-spacing-xxl-rem !important;
+}

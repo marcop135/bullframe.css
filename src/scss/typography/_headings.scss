@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; // fallback for font families without 600 */
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  color: inherit;
+  line-height: 1.2;
+  margin-bottom: $bf-spacing-xl-px;
+  margin-bottom: $bf-spacing-xl-px;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: $bf-spacing-xl-px;
+  margin-bottom: $bf-spacing-xl-px;
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: $bf-spacing-lg-px;
+  margin-bottom: $bf-spacing-lg-px;
+}
+
+h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+h5,
+h6 {
+  font-size: 17px;
+  font-size: 1.7rem;
+}

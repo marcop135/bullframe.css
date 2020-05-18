@@ -1,7 +1,9 @@
-// colors and spacing variables
+// colors, spacing and breakpoint variables
 // this is for an easy customisation
-@import "variables/colors";
-@import "variables/spacing";
+@import "variables/variables-colors";
+@import "variables/variables-texts";
+@import "variables/variables-spacing";
+@import "variables/variables-breakpoints";
 
 // a set of default opinionated utilities
 // always put this as far as possible from the rest of the styles

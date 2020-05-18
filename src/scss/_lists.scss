@@ -2,9 +2,9 @@ menu,
 ol,
 ul,
 dl {
-	margin: 0 0 $bf-spacing-xl-px 0;
-	margin: 0 0 $bf-spacing-xl-rem 0;
-	padding: 0;
+  margin: 0 0 $bf-spacing-xl-px 0;
+  margin: 0 0 $bf-spacing-xl-rem 0;
+  padding: 0;
 }
 
 menu ul,
@@ -14,26 +14,26 @@ ul ol,
 ol ol,
 ol ul,
 dd {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 ul,
 ol {
-	margin-left: $bf-spacing-xl-px;
-	margin-left: $bf-spacing-xl-rem;
+  margin-left: $bf-spacing-xl-px;
+  margin-left: $bf-spacing-xl-rem;
 }
 
 nav ol,
 nav ul {
-	list-style: none;
-	list-style-image: none;
-	margin-left: 0;
+  list-style: none;
+  list-style-image: none;
+  margin-left: 0;
 }
 
 dt {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 dd {
-	margin-left: 0;
+  margin-left: 0;
 }

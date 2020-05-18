@@ -1,9 +1,9 @@
 // ! ':not' is IE9+
 // https://caniuse.com/#feat=mdn-css_selectors_not
-// 
-// ! and ':focus-visible' 
+//
+// ! and ':focus-visible'
 // https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
-// 
+//
 // don't have some much browser support now (May 2020)
 // https://caniuse.com/#feat=css-focus-visible
 //
@@ -12,7 +12,7 @@
 // and you could polyfill it for a wide cross-browser support right now
 // https://github.com/WICG/focus-visible
 //
-// remove focus if is not keyboard 
+// remove focus if is not keyboard
 // and if these elements are not focused globally
 :focus:not(:focus-visible) {
   outline: none;
@@ -21,7 +21,7 @@
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
 // This prevents an unwanted focus outline from appearing around elements that
 // might still respond to pointer events.
-// 
+//
 // Taken from SuitCSS https://github.com/suitcss/base
 //
 // Copyright 2020 Harry Roberts
@@ -46,7 +46,7 @@
 // this is for consistency
 // e.g.
 // in webkit (Chrome, Safari) the outline is blue with a subtle box-shadow
-// in trident (IE) is just pointed black 
+// in trident (IE) is just pointed black
 // in gecko (FF) is pointed black, but it's a thiner
 // ...
 a:focus,
@@ -74,7 +74,6 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"],
-
 [type="email"],
 [type="number"],
 [type="password"],
@@ -88,16 +87,11 @@ button,
 [type="week"],
 [type="time"],
 [type="url"],
-
 [type="radio"],
 [type="checkbox"],
-
 select,
-
 textarea {
-
   &:focus {
     outline: 0;
   }
-
 }

@@ -543,6 +543,18 @@ p.bf-lead {
   font-size: 120%;
 }
 
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+  @media (min-width: 320px) {
+    body.bf-responsive-typography {
+      font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
+    }
+  }
+  @media (min-width: 1000px) {
+    body.bf-responsive-typography {
+      font-size: 2rem;
+    }
+  }
+}
 .bf-btn {
   display: inline-block;
   cursor: pointer;
@@ -602,8 +614,8 @@ fieldset[disabled] .bf-btn,
 
 .bf-focused {
   transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-  border-color: #000;
-  box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.45);
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
 .bf-disabled {
@@ -616,8 +628,8 @@ fieldset[disabled] .bf-btn,
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: #FF0000;
-  border-color: #FF0000;
+  color: #ff0000;
+  border-color: #ff0000;
   box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
 }
 
@@ -714,9 +726,9 @@ a:visited {
   }
 
   /*
-      * Don't show links that are fragment identifiers,
-      * or use the `javascript:` pseudo protocol
-      */
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
   a[href^="#"]:after,
 a[href^="javascript:"]:after {
     content: "";
@@ -733,9 +745,9 @@ blockquote {
   }
 
   /*
-      * Printing Tables:
-      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-      */
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group;
   }

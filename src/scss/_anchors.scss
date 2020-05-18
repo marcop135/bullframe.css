@@ -1,19 +1,19 @@
 a {
-	color: $bf-blue; // bootstrap blue
-	text-decoration: none;
+  color: $bf-blue; // bootstrap blue
+  text-decoration: none;
 
-	// IE10+: Remove grey background on active links
-	background-color: transparent;
+  // IE10+: Remove grey background on active links
+  background-color: transparent;
 
-	// Remove gaps in links underline in iOS 8+ and Safari 8+.
-	text-decoration-skip: objects;
-	text-decoration-skip-ink: objects;
+  // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  text-decoration-skip: objects;
+  text-decoration-skip-ink: objects;
 
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-		color: $bf-blue-light;
-	}
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $bf-blue-light;
+  }
 }
 
 // this is taken from Bootstrap's reboot
@@ -22,16 +22,16 @@ a {
 // ':not' is IE9+
 // https://caniuse.com/#feat=mdn-css_selectors_not
 a:not([href]):not([tabindex]) {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]):hover,
 a:not([href]):not([tabindex]):focus {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]):focus {
-	outline: 0;
+  outline: 0;
 }

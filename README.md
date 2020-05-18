@@ -9,7 +9,7 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 
 **Jump to:**
 
-Getting started: [CDN](#CDN) - [NPM](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
+Getting started: [CDN](#CDN) - [npm](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
 
 Customization: [No classes (Classless)](#no-classes-classless) - [Utilities only](#just-utilities) - [Dark mode](#dark-mode)
 
@@ -26,9 +26,10 @@ Customization: [No classes (Classless)](#no-classes-classless) - [Utilities only
 - A simple 12-columns fluid grid system with IE8+ support
 - Sass architecture
 - CSS BEM
+- Responsive typography
+- Dark mode
 - Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
 - Isolated utility classes to avoid conflicts between frameworks' classes
-- Dark mode included
 - `bullframe-classless.min.css` is just 10KB~
 - A lot of comments 🎉
 
@@ -180,7 +181,6 @@ No classes, no utilities. Feel free to add yours and create your custom componen
 
 Just drop this CSS file in your webpage, and the job is done!
 Write semantic HTML and get nice styles and cross-browser normalization.
-More info [on this CSS-tricks article](https://css-tricks.com/no-class-css-frameworks/).
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">

@@ -144,3 +144,19 @@ p.bf-lead {
 	font-size: 120%;
 }
 
+// responsive typography
+// Read and view more https://codepen.io/marcop135/pen/eYmPmJm
+//
+// ! calc() is IE9+, all IE versions have bugs, and Opera Mini is not supported
+// https://caniuse.com/#feat=calc
+@media (min-width: 320px) {
+  body.bf-responsive-typography {
+    font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
+  }  
+}
+
+@media (min-width: 1000px) {
+  body.bf-responsive-typography {
+   font-size: 2rem;
+  }
+}

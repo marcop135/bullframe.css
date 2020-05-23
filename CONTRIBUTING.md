@@ -34,7 +34,7 @@ Guidelines for bug reports:
 
 3. **Isolate the problem** – create a live example (e.g., on
    [Codepen](http://codepen.io)) of a [reduced test
-   case](http://css-tricks.com/6263-reduced-test-cases/).
+   case](https://css-tricks.com/reduced-test-cases/).
 
 A good bug report shouldn't leave others needing to chase you up for more
 information. Please try to be as detailed as possible in your report. What is
@@ -112,7 +112,7 @@ project:
 4. Commit your changes in logical chunks. Please adhere to these [git commit
    message conventions](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
    or your code is unlikely be merged into the main project. Use Git's
-   [interactive rebase](https://help.github.com/articles/interactive-rebase)
+   [interactive rebase](https://hackernoon.com/beginners-guide-to-interactive-rebasing-346a3f9c3a6d)
    feature to tidy up your commits before making them public..
 
 5. Locally rebase the upstream development branch into your topic branch:
@@ -169,7 +169,7 @@ cutting new releases.
 
 1. Include all new functional changes in the CHANGELOG.
 2. Use a dedicated commit to increment the version. The version needs to be
-   added to the CHANGELOG (inc. date), the `package.json`, and `normalize.css`
+   added to the CHANGELOG (inc. date), the `package.json`, and `bullframe.css`
    files.
 3. The commit message must be of `v0.0.0` format.
 4. Create an annotated tag for the version: `git tag -m "v0.0.0" 0.0.0`.

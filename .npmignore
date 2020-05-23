@@ -1,0 +1,8 @@
+/.git
+/.github
+.editorconfig
+.gitignore
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+.config.yml
+CONTRIBUTING.md

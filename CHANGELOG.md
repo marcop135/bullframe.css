@@ -1,9 +1,17 @@
 # Changes to bullframe.css
 
+## 3.1.0 (May 23, 2020)
+
+* fixed broken CDN URL paths [#6](https://github.com/marcop135/bullframe.css/issues/6)
+* fixed `video` `width` bug [#10](https://github.com/marcop135/bullframe.css/issues/10)
+* fixed `contributing` and `code_of_conduct` broken links and missing content
+* added `index.html` minor enhancements [commit](https://github.com/marcop135/bullframe.css/commit/96b267fed9c9507591ed115c4a78e54d79f0c121)
+* added minor package files and folders structure enhancements
+
 ## 3.0.0 (May 18, 2020)
 
 * **CSS to SCSS (Sass architecture refactoring)**
-* added gulp.js file processing
+* added `gulp.js` file processing
 * added CSS BEM syntax
 * added npm
 * added CDN

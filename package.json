@@ -21,5 +21,26 @@
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-rename": "2.0.0",
 		"browser-sync": "^2.26.7"
-	}
+	},
+  "keywords": [
+    "css",
+    "css-framework",
+    "ie8",
+    "responsive-web-design",
+    "fluid",
+    "reset-css",
+    "normalize-css",
+    "boilerplate",
+    "flexible",
+    "scss",
+    "sass",
+    "internet-explorer",
+    "ie9",
+    "ie10",
+    "ie11",
+    "gulpjs",
+    "typography",
+    "dark-theme",
+    "darkmode"
+  ]
 }

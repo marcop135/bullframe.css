@@ -99,7 +99,7 @@ bullframe.css/
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css">
 ```
 
 ### npm
@@ -126,7 +126,7 @@ Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-fi
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css">
 
 <!-- enable HTML5 elements, and fix IE10 viewport on Windows 8 -->
 <script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"></script>
@@ -149,7 +149,7 @@ Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-fi
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css">
 
 </head>
 <body>
@@ -176,7 +176,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css"
   integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
   crossorigin="anonymous"
 >
@@ -210,7 +210,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe.min.css"
+  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css"
   integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
   crossorigin="anonymous"
 >
@@ -237,7 +237,7 @@ Just drop this CSS file in your webpage, and the job is done!
 Write semantic HTML and get nice styles and cross-browser normalization.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-classless.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-classless.min.css">
 ```
 
 ### Just utilities
@@ -245,7 +245,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 Get all the utility classes
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-utilities.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-utilities.min.css">
 ```
 
 ### Dark mode
@@ -253,14 +253,14 @@ Get all the utility classes
 This enables a dark (dark-mode) style by default in all browsers:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-dark.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-dark.min.css">
 ```
 
 And this, enables a dark-mode only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/bullframe-dark-prefers.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
 ```
 
 ---

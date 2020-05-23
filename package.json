@@ -1,6 +1,6 @@
 {
 	"name": "bullframe.css",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "Solid, fluid, IE-friendly (S)CSS framework",
 	"main": "bullframe.css",
 	"style": "bullframe.css",

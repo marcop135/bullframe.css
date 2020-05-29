@@ -11,11 +11,26 @@ Write semantic HTML, add some JS polyfills where needed, drop the styles you nee
 
 **Jump to:**
 
-Getting started: [Download](#download) - [CDN](#CDN) - [npm](#npm) - [HTML template IE8+](#ie8-and-old-browsers) - [HTML template IE11+](#ie11-and-modern-browsers)
+Getting started:
 
-Customization: [No classes (Classless)](#no-classes-classless) - [Utilities only](#just-utilities) - [Dark mode](#dark-mode)
+- [Download](#download)
+- [CDN](#CDN)
+- [npm](#npm)
+- [HTML template IE8+](#ie8-and-old-browsers)
+- [HTML template IE11+](#ie11-and-modern-browsers)
 
-[Test page](https://marcop135.github.io/bullframe.css/) - [Browser support](#browser-compatibility) - [Changelog](#changelog) - _[Sponsor me!](#become-a-sponsor)_
+Customization:
+
+- [No classes (Classless)](#no-classes-classless)
+- [Utilities only](#just-utilities)
+- [Dark mode](#dark-mode)
+
+More:
+
+- [Test page](https://marcop135.github.io/bullframe.css/)
+- [Browser support](#browser-compatibility)
+- [Changelog](#changelog)
+- _[Sponsor me!](#become-a-sponsor)_
 
 ---
 

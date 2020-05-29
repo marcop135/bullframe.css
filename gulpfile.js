@@ -36,6 +36,7 @@ function serve(done) {
 
 // File paths to watch
 const files = {
+  htmlPath: "*.html",
   scssPath: "src/scss/**/*.scss",
 };
 
@@ -77,7 +78,7 @@ function scssTask() {
 // If any change, run scss, js and image tasks simultaneously
 // then reload via browsersync
 function watchTask() {
-  watch([files.scssPath], series(parallel(scssTask), reload));
+  watch([files.htmlPath, files.scssPath], series(parallel(scssTask), reload));
 }
 
 // Export the default Gulp task so it can be run

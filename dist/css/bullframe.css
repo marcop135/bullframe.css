@@ -1475,6 +1475,7 @@ dd.bf-list-unstyled {
 .bf-table-responsive.scrollbar {
   -webkit-overflow-scrolling: auto; }
 
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -1482,9 +1483,9 @@ dd.bf-list-unstyled {
    ========================================================================== */
 @media print {
   *,
-  *:before,
-  *:after {
-    background: transparent !important;
+  *::before,
+  *::after {
+    background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
     box-shadow: none !important;
@@ -1492,16 +1493,16 @@ dd.bf-list-unstyled {
   a,
   a:visited {
     text-decoration: underline; }
-  a[href]:after {
+  a[href]::after {
     content: " (" attr(href) ")"; }
-  abbr[title]:after {
+  abbr[title]::after {
     content: " (" attr(title) ")"; }
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
     content: ""; }
   pre {
     white-space: pre-wrap !important; }
@@ -1510,9 +1511,9 @@ dd.bf-list-unstyled {
     border: 1px solid #999;
     page-break-inside: avoid; }
   /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
   thead {
     display: table-header-group; }
   tr,

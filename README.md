@@ -47,19 +47,20 @@ More:
 - Dark mode
 - Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
 - Isolated utility classes to avoid conflicts between frameworks' classes
-- `bullframe-classless.min.css` is just 10KB~
-- A lot of comments 🎉
+- `bullframe-classless.min.css` is just 10KB~ 🎉
 
-## Internet Explorer usage
+## Internet Explorer usage and support
 
 Do people still use Internet Explorer?
 
-Short answer: **yes!** Enterprise-level companies, accessibility-focused projects and some non-tech-savvy older people.
+Short answer: **yes!** enterprise-level companies, legacy business applications, accessibility-focused projects and some non-tech-savvy older people.
 [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
 
 [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop/worldwide#monthly-201904-202004-bar)
 
 Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) to get more developers' points of view.
+
+! Bootstrap v5 [will drop IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
 
 ---
 

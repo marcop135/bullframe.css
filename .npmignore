@@ -1,5 +1,6 @@
 /.git
 /.github
+/docs/screenshots
 .editorconfig
 .gitignore
 CHANGELOG.md

@@ -61,6 +61,10 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+svg:not([fill]) {
+  fill: currentColor;
+}
+
 progress,
 meter {
   display: inline-block;

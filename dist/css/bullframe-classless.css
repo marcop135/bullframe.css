@@ -153,7 +153,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.875em; }
 
 code {
@@ -346,6 +346,9 @@ audio:not([controls]) {
 svg:not(:root) {
   overflow: hidden; }
 
+svg:not([fill]) {
+  fill: currentColor; }
+
 progress,
 meter {
   display: inline-block;
@@ -354,7 +357,7 @@ meter {
   max-width: 100%; }
 
 iframe {
-  border: 0; }
+  border-style: none; }
 
 html input,
 button,

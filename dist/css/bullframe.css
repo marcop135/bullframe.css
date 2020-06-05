@@ -445,9 +445,6 @@ output {
   display: block;
   background-color: transparent; }
 
-::-webkit-file-upload-button {
-  font: inherit; }
-
 button,
 html input,
 select,
@@ -568,6 +565,7 @@ textarea {
 
 [type="radio"],
 [type="checkbox"] {
+  padding: 0;
   background-color: #fff; }
 
 [type="range"] {
@@ -580,10 +578,6 @@ select[multiple] {
 select[multiple] {
   background-image: none; }
 
-optgroup::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
 textarea {
   height: auto;
   min-height: 60px;
@@ -592,10 +586,7 @@ textarea {
   vertical-align: top;
   resize: vertical; }
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+::-moz-focus-inner {
   padding: 0;
   border-style: none; }
 
@@ -652,6 +643,9 @@ input::placeholder,
 textarea::placeholder {
   color: #666; }
 
+:-moz-ui-invalid {
+  box-shadow: none; }
+
 input:invalid,
 select:invalid,
 textarea:invalid,
@@ -702,7 +696,7 @@ textarea {
   background-color: #fff;
   border: 1px solid #999;
   padding: 6px 9px;
-  padding: 0.6rem 9px; }
+  padding: 0.6rem 0.9rem; }
 
 @media \0screen {
   [type="email"],
@@ -822,6 +816,14 @@ select:not([size]):not([multiple]) {
   padding-right: 24px;
   padding-right: 2.4rem; }
 
+*[dir="rtl"] select:not([size]):not([multiple]),
+select[dir="rtl"]:not([size]):not([multiple]) {
+  background-position: left 0.85rem top 50%;
+  padding-right: 9px;
+  padding-right: 0.9rem;
+  padding-left: 24px;
+  padding-left: 2.4rem; }
+
 @media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select {
     padding-right: 6px;
@@ -834,17 +836,24 @@ select:not([size]):not([multiple]) {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
-    height: 2.8rem;
-    width: 2.8rem;
+    height: 2rem;
+    width: 2rem;
     vertical-align: top;
     position: relative;
     border: 1px solid #999; }
     [type="checkbox"] + label,
     [type="radio"] + label {
-      line-height: 2.8rem;
+      line-height: 2rem;
       vertical-align: top;
       margin-left: 6px;
       margin-left: 0.6rem; }
+    *[dir="rtl"] [type="checkbox"] + label,
+    [type="checkbox"][dir="rtl"] + label, *[dir="rtl"]
+    [type="radio"] + label,
+    [type="radio"][dir="rtl"] + label {
+      margin-left: 0;
+      margin-right: 6px;
+      margin-right: 0.6rem; }
     [type="checkbox"]:after,
     [type="radio"]:after {
       content: "";
@@ -854,31 +863,25 @@ select:not([size]):not([multiple]) {
     [type="radio"]:checked {
       background-color: #007bff;
       border-color: #000; }
-  [type="checkbox"]:after {
-    width: 0.6rem;
-    height: 1rem;
-    border: 2px solid #fff;
-    border-top: 0;
-    border-left: 0;
-    left: 1rem;
-    top: 0.7rem;
-    -webkit-transform: rotate(43deg);
-            transform: rotate(43deg); }
   [type="radio"]:after {
-    width: 2.8rem;
-    height: 2.8rem;
-    left: 0;
-    top: 0;
+    width: 2rem;
+    height: 2rem;
+    left: -0.05rem;
+    top: -0.05rem;
     border-radius: 50%;
     background: #fff;
     -webkit-transform: scale(0.35);
-            transform: scale(0.35); } }
-
-@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    [type="radio"]:after {
-      left: -0.05rem;
-      top: -0.05rem; } } }
+            transform: scale(0.35); }
+  [type="checkbox"]:after {
+    width: 0.6rem;
+    height: 0.8rem;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    left: 35%;
+    top: 20%;
+    -webkit-transform: rotate(43deg);
+            transform: rotate(43deg); } }
 
 table {
   max-width: 100%;

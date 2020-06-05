@@ -223,11 +223,6 @@ select[multiple] {
   background-image: none; // FF mobile
 }
 
-optgroup::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
 textarea {
   height: auto;
   min-height: 60px;
@@ -237,14 +232,12 @@ textarea {
   resize: vertical;
 }
 
-// Firefox: Get rid of the inner focus border on older versions
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+// Remove the inner border and padding of focus outlines in Firefox
+::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
+
 
 button,
 [type="button"],
@@ -289,6 +282,12 @@ textarea::placeholder {
   color: $bf-gray-dark;
 }
 
+// remove :invalid styles in FF
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+// re-style :invalid state
 input:invalid,
 select:invalid,
 textarea:invalid,

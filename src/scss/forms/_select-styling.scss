@@ -37,8 +37,30 @@ select:not([size]):not([multiple]) {
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
 
-  padding-right: 12px + $bf-spacing-lg-px;
-  padding-right: 1.2rem + $bf-spacing-lg-rem;
+  padding-right: $bf-spacing-lg-px + $bf-spacing-lg-px;
+  padding-right: $bf-spacing-lg-rem + $bf-spacing-lg-rem;
+}
+
+// add support for RTL languages
+// 'appearance: none' removes the default styling but introduces a bug 
+// that occurs when a right to the left language (e.g. Arabic) is set
+// 
+// Read more 
+// 1. http://bootstrap.rtlcss.com
+// 2. https://rtlstyling.com/
+*[dir="rtl"] select:not([size]):not([multiple]),
+select[dir="rtl"]:not([size]):not([multiple]) {
+
+  // move the arrow icon to the left
+  background-position: left 0.85rem top 50%;
+    
+  // go back to default forms padding
+  padding-right: ($bf-spacing-lg-px * 0.75);
+  padding-right: ($bf-spacing-lg-rem * 0.75);
+
+  // add custom left padding, matching the custom LTR one
+  padding-left: $bf-spacing-lg-px + $bf-spacing-lg-px;
+  padding-left: $bf-spacing-lg-rem + $bf-spacing-lg-rem;
 }
 
 // since '::-ms-expand' is IE10+ only

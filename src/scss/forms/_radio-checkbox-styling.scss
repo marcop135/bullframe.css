@@ -29,6 +29,17 @@
       margin-left: $bf-spacing-md-rem;
     }
 
+    // add support for RTL languages
+    // Read more 
+    // 1. http://bootstrap.rtlcss.com
+    // 2. https://rtlstyling.com/
+    *[dir="rtl"] & + label,
+    &[dir="rtl"] + label {
+      margin-left: 0;
+      margin-right: $bf-spacing-md-px;
+      margin-right: $bf-spacing-md-rem;
+    }
+
     &:after {
       content: "";
       display: block;

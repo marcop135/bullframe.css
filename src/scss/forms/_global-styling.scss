@@ -17,7 +17,7 @@ textarea {
   background-color: $bf-white;
   border: 1px solid $bf-gray;
   padding: $bf-spacing-md-px ($bf-spacing-lg-px * 0.75);
-  padding: $bf-spacing-md-rem ($bf-spacing-lg-px * 0.75);
+  padding: $bf-spacing-md-rem ($bf-spacing-lg-rem * 0.75);
 }
 
 // this is an hack for IE8

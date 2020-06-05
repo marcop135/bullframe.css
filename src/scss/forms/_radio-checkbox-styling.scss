@@ -2,7 +2,7 @@
 // https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
 // https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
 //
-// currently (April 2020), a few modern browsers support the "@supports" media rules
+// currently (May 2020), a few modern browsers support the "@supports" media rules
 // https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
 // https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
 //
@@ -14,8 +14,8 @@
   [type="radio"] {
     appearance: none;
 
-    height: 2.8rem;
-    width: 2.8rem;
+    height: 2rem;
+    width: 2rem;
 
     vertical-align: top;
     position: relative;
@@ -23,7 +23,7 @@
     border: 1px solid $bf-gray;
 
     & + label {
-      line-height: 2.8rem;
+      line-height: 2rem;
       vertical-align: top;
       margin-left: $bf-spacing-md-px;
       margin-left: $bf-spacing-md-rem;
@@ -41,29 +41,13 @@
     }
   }
 
-  [type="checkbox"] {
-    &:after {
-      width: 0.6rem;
-      height: 1rem;
-
-      border: 2px solid $bf-white;
-      border-top: 0;
-      border-left: 0;
-
-      left: 1rem;
-      top: 0.7rem;
-
-      transform: rotate(43deg);
-    }
-  }
-
   [type="radio"] {
     &:after {
-      width: 2.8rem;
-      height: 2.8rem;
+      width: 2rem;
+      height: 2rem;
 
-      left: 0;
-      top: 0;
+      left: -0.05rem;
+      top: -0.05rem;
 
       border-radius: 50%;
       background: $bf-white;
@@ -71,17 +55,20 @@
       transform: scale(0.35);
     }
   }
-}
 
-// webkit only CSS hack
-// https://css-tricks.com/snippets/css/browser-specific-hacks/
-//
-// move the radio white dot just a bit
-@supports (appearance: none) {
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    [type="radio"]:after {
-      left: -0.05rem;
-      top: -0.05rem;
+  [type="checkbox"] {
+    &:after {
+      width: 0.6rem;
+      height: 0.8rem;
+
+      border: 2px solid $bf-white;
+      border-top: 0;
+      border-left: 0;
+
+      left: 35%;
+      top: 20%;
+
+      transform: rotate(43deg);
     }
   }
 }

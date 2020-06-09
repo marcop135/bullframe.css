@@ -325,7 +325,7 @@ This project is tested in a wide range of browsers using also [BrowserStack](htt
 
 ## Contributing
 
-Please read the [contribution guidelines](https://github.com/marcop135/bullframe.css/blob/master/CONTRIBUTING.md).
+Please read the [contribution guidelines](https://github.com/marcop135/bullframe.css/blob/master/.github/CONTRIBUTING.md).
 
 ---
 

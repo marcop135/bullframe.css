@@ -399,19 +399,9 @@ table th[class^="bf-col"] {
 .bf-h6 {
   font-weight: 700;
   font-weight: 600;
-  margin-top: 0; }
-
-.bf-h1,
-.bf-h2,
-.bf-h3 {
-  margin-bottom: 24px;
-  margin-bottom: 24px; }
-
-.bf-h4,
-.bf-h5,
-.bf-h6 {
+  margin-top: 0;
   margin-bottom: 12px;
-  margin-bottom: 12px; }
+  margin-bottom: 1.2rem; }
 
 .bf-h1 {
   font-size: 36px;

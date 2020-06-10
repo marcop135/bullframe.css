@@ -498,6 +498,7 @@ html [type="button"],
 [type="search"],
 [type="search"]::-webkit-search-decoration,
 [type="search"]::-webkit-search-cancel-button,
+input[list],
 textarea {
   -webkit-appearance: none; }
 
@@ -655,6 +656,7 @@ textarea[disabled] {
 [type="time"],
 [type="url"],
 [type="range"],
+input[list],
 select,
 textarea {
   background-color: #fff;
@@ -676,7 +678,8 @@ textarea {
   [type="week"],
   [type="time"],
   [type="url"],
-  [type="range"] {
+  [type="range"],
+  input[list] {
     padding-top: 0;
     padding-bottom: 0;
     height: 38px;
@@ -696,7 +699,8 @@ textarea {
   [type="week"],
   [type="time"],
   [type="url"],
-  [type="range"] {
+  [type="range"],
+  input[list] {
     line-height: 1.2; } }
 
 [type="email"]:active, [type="email"]:focus,
@@ -724,6 +728,8 @@ textarea {
 [type="time"]:focus,
 [type="url"]:active,
 [type="url"]:focus,
+input[list]:active,
+input[list]:focus,
 select:active,
 select:focus,
 textarea:active,

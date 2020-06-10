@@ -61,6 +61,7 @@ hr {
 [type="time"],
 [type="url"],
 [type="range"],
+input[list],
 select,
 textarea {
   background-color: $bf-gray-dark-extra;
@@ -92,6 +93,7 @@ textarea {
 [type="week"],
 [type="time"],
 [type="url"],
+input[list],
 select,
 textarea {
   &:active,

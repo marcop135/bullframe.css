@@ -118,20 +118,8 @@
   font-weight: 700; // fallback for font families without 600 */
   font-weight: 600;
   margin-top: 0;
-}
-
-.bf-h1,
-.bf-h2,
-.bf-h3 {
-  margin-bottom: $bf-spacing-xl-px;
-  margin-bottom: $bf-spacing-xl-px;
-}
-
-.bf-h4,
-.bf-h5,
-.bf-h6 {
   margin-bottom: $bf-spacing-lg-px;
-  margin-bottom: $bf-spacing-lg-px;
+  margin-bottom: $bf-spacing-lg-rem;
 }
 
 .bf-h1 {

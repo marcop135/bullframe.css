@@ -89,6 +89,7 @@ button,
 [type="url"],
 [type="radio"],
 [type="checkbox"],
+input[list],
 select,
 textarea {
   &:focus {

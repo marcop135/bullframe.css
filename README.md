@@ -24,6 +24,7 @@ Getting started:
 - [npm](#npm)
 - [HTML template IE8+](#ie8-and-old-browsers)
 - [HTML template IE11+](#ie11-and-modern-browsers)
+- [Codepen collection](#codepen)
 
 Customization:
 
@@ -247,6 +248,10 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 </html>
 ```
 
+## Codepen
+
+Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made template of your choice.
+
 ---
 
 ## Customization
@@ -309,7 +314,7 @@ You can take a look at the [.browserslistrc](https://github.com/marcop135/bullfr
 
 ### Tested on real browsers
 
-This project is tested in a wide range of browsers using also [BrowserStack](http://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
+This project is tested in a wide range of browsers using also [BrowserStack](https://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
 ![BrowserStack Logo](./docs/images/browserstack-logo.png)
 
@@ -352,5 +357,4 @@ The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.o
 ## Todos
 
 - Add more screenshots
-- Add CodePens
 - Add a complete documentation

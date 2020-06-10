@@ -23,7 +23,8 @@
 	<!-- this is just for a nicer demo -->
 	<link rel="stylesheet" href="docs/test/css/style.css">
 
-	<!-- enable HTML5 elements and fix IE10 viewport on Windows 8 -->
+	<!-- enable HTML5 elements in all browsers,
+	and fix IE10 viewport on Windows 8 -->
 	<script src="docs/test/js/vendor/html5shiv.js?v3.7.3"></script>
 	<script src="docs/test/js/vendor/ie10-viewport-bug-workaround.js?v1.0.0"></script>
 </head>
@@ -553,11 +554,17 @@
 					<form>
 						<h3>Selects</h3>
 						<fieldset>
-							<legend>
-								Cross-browser, cross-platform consistency in webkit browsers.
-							</legend>
 							<label for="s">Select field</label>
 							<select id="s">
+								<option>Option 01</option>
+								<option>Option 02</option>
+								<option>Option 03</option>
+								<option>Option 04</option>
+								<option>Option 05</option>
+							</select>
+
+							<label for="s-ltr">Select field (RTL)</label>
+							<select id="s-ltr" dir="rtl">
 								<option>Option 01</option>
 								<option>Option 02</option>
 								<option>Option 03</option>

@@ -72,7 +72,7 @@ select[dir="rtl"]:not([size]):not([multiple]) {
 //
 
 // IE9 only hack
-// https://gist.github.com/yangfch3/2e48bca9c08bf883131d7917c4892fa2#ie-9-only
+// https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
 @media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select {
     padding-right: $bf-spacing-md-px;

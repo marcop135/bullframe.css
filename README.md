@@ -1,6 +1,6 @@
 # bullframe.css
 
-![bullframe.css logo](./docs/images/logo-extended.png)
+![bullframe.css logo](./docs/images/logo-full.png)
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 

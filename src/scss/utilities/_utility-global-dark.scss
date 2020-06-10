@@ -70,12 +70,12 @@ textarea {
   &:active,
   &:focus {
     background-color: $bf-gray-dark-extra;
-    border-color: lighten($bf-blue, 5%);
+    border-color: lighten($bf-blue, 10%);
   }
 }
 
 .bf-focused {
-  border-color: lighten($bf-blue, 5%);
+  border-color: lighten($bf-blue, 10%);
 }
 
 // now again, but without [type="range"]

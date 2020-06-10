@@ -35,7 +35,8 @@ Customization:
 More:
 
 - [Test page](https://marcop135.github.io/bullframe.css/)
-- [Browser support](#browser-compatibility)
+- [Browser compatibility](#browser-compatibility)
+- [Screenshots](#screenshots)
 - [Changelog](#changelog)
 - _[Sponsor me!](#become-a-sponsor)_
 
@@ -320,6 +321,14 @@ This project is tested in a wide range of browsers using also [BrowserStack](htt
 
 ---
 
+### Screenshots
+
+How can I quickly see if every HTML element works well on all browsers?
+
+Take a look at some [screenshots and screencasts](https://github.com/marcop135/bullframe.css/tree/master/docs/screenshots-screencasts), organized by rendering engines (blink, gecko, trident, webkit).
+
+---
+
 ## Become a sponsor
 
 [Sponsor me](https://github.com/sponsors/marcop135) and support my front-end efforts and open source!
@@ -356,5 +365,4 @@ The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.o
 
 ## Todos
 
-- Add more screenshots
 - Add a complete documentation

@@ -8,8 +8,6 @@
 	<title>Test page — bullframe.css (S)CSS framework</title>
 	<meta	name="description" content="A quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purpouse only.">
 
-	<link rel="stylesheet" href="dist/css/bullframe-dark-prefers.css">
-
 	<!-- https://realfavicongenerator.net/ -->
 	<link rel="apple-touch-icon" sizes="180x180" href="docs/icons/apple-touch-icon.png?v=PYqzMzgx6v">
 	<link rel="icon" type="image/png" sizes="32x32" href="docs/icons/favicon-32x32.png?v=PYqzMzgx6v">
@@ -20,15 +18,14 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#f95c1f">
 
+	<link rel="stylesheet" href="dist/css/bullframe-dark-prefers.css">
+
 	<!-- this is just for a nicer demo -->
 	<link rel="stylesheet" href="docs/test/css/style.css">
 
 	<!-- enable HTML5 elements and fix IE10 viewport on Windows 8 -->
-	<script
-		src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"
-		integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5"
-		crossorigin="anonymous"
-	></script>
+	<script src="docs/test/js/vendor/html5shiv.js?v3.7.3"></script>
+	<script src="docs/test/js/vendor/ie10-viewport-bug-workaround.js?v1.0.0"></script>
 </head>
 
 <body class="bf-responsive-typography bf-reduced-motion">
@@ -79,6 +76,9 @@
 					<p class="bf-h1">Heading 1</p>
 					<p class="bf-h2">Heading 2</p>
 					<p class="bf-h3">Heading 3</p>
+					<p class="bf-h4">Heading 4</p>
+					<p class="bf-h5">Heading 5</p>
+					<p class="bf-h6">Heading 6</p>
 				</div>		
 				<div class="bf-col-6">
 
@@ -565,7 +565,7 @@
 								<option>Option 05</option>
 							</select>
 
-							<label class="bf-disabled" for="s2">Select field</label>
+							<label class="bf-disabled" for="s2">Select field (disabled)</label>
 							<select id="s2" disabled>
 								<option>Option 01</option>
 								<option>Option 02</option>

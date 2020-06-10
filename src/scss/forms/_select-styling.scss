@@ -73,11 +73,23 @@ select[dir="rtl"]:not([size]):not([multiple]) {
 
 // IE9 only hack
 // https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
-@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
-  select {
-    padding-right: $bf-spacing-md-px;
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) { 
 
-    // re-set the default properties
+  // re-set the defaul padding
+  select:not([size]):not([multiple]) {
+    padding-right: ($bf-spacing-lg-px * 0.75);
+  }
+  // RTL
+  *[dir="rtl"] select:not([size]):not([multiple]),
+  select[dir="rtl"]:not([size]):not([multiple]) {
+    padding-left: ($bf-spacing-lg-px * 0.75);
+  }
+
+  // re-set the default properties
+  select:not([size]):not([multiple]),
+  // RTL
+  *[dir="rtl"] select:not([size]):not([multiple]),
+  select[dir="rtl"]:not([size]):not([multiple]) {
     background-image: none;
     background-repeat: repeat;
   }

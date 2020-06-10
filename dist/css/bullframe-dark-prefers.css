@@ -80,20 +80,8 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.2;
-  margin-bottom: 24px;
-  margin-bottom: 24px; }
-
-h1,
-h2,
-h3 {
-  margin-bottom: 24px;
-  margin-bottom: 24px; }
-
-h4,
-h5,
-h6 {
   margin-bottom: 12px;
-  margin-bottom: 12px; }
+  margin-bottom: 1.2rem; }
 
 h1 {
   font-size: 36px;
@@ -832,9 +820,15 @@ select[dir="rtl"]:not([size]):not([multiple]) {
   padding-left: 24px;
   padding-left: 2.4rem; }
 
-@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
-  select {
-    padding-right: 6px;
+@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  select:not([size]):not([multiple]) {
+    padding-right: 9px; }
+  *[dir="rtl"] select:not([size]):not([multiple]),
+  select[dir="rtl"]:not([size]):not([multiple]) {
+    padding-left: 9px; }
+  select:not([size]):not([multiple]),
+  *[dir="rtl"] select:not([size]):not([multiple]),
+  select[dir="rtl"]:not([size]):not([multiple]) {
     background-image: none;
     background-repeat: repeat; } }
 
@@ -1318,19 +1312,9 @@ table th[class^="bf-col"] {
 .bf-h6 {
   font-weight: 700;
   font-weight: 600;
-  margin-top: 0; }
-
-.bf-h1,
-.bf-h2,
-.bf-h3 {
-  margin-bottom: 24px;
-  margin-bottom: 24px; }
-
-.bf-h4,
-.bf-h5,
-.bf-h6 {
+  margin-top: 0;
   margin-bottom: 12px;
-  margin-bottom: 12px; }
+  margin-bottom: 1.2rem; }
 
 .bf-h1 {
   font-size: 36px;
@@ -1635,9 +1619,9 @@ dd.bf-list-unstyled {
     textarea:active,
     textarea:focus {
       background-color: #333;
-      border-color: #1a88ff; }
+      border-color: #3395ff; }
   .bf-focused {
-    border-color: #1a88ff; }
+    border-color: #3395ff; }
   [type="email"]:active, [type="email"]:focus,
   [type="number"]:active,
   [type="number"]:focus,

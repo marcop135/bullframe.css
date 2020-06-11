@@ -4,14 +4,14 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is a (S)CSS framework that works on every browsers, modern or not.
+bullframe.css is an (S)CSS framework that works on every browsers, modern or not.
 
 It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([atoms](https://atomicdesign.bradfrost.com/chapter-2/#atoms)) for your Sass project.
 
 1. Add a good HTML template
 2. Write semantic HTML5
 3. Add a few utility classes (optional)
-4. Add common JS polyfills for good old browsers support (optional)
+4. Add JS polyfills (optional)
 5. Drop the custom styles you need
 6. _...ready to go everywhere!_
 

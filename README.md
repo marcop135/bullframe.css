@@ -4,7 +4,7 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is an (S)CSS framework that works on every browsers, modern or not.
+bullframe.css is an (S)CSS framework that works on every browser, modern or not.
 
 It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([atoms](https://atomicdesign.bradfrost.com/chapter-2/#atoms)) for your Sass project.
 
@@ -61,7 +61,7 @@ More:
 
 Do people still use Internet Explorer?
 
-Short answer: **yes!** enterprise-level companies, legacy business applications, accessibility-focused projects and some non-tech-savvy older people.
+Short answer: **yes!** Enterprise-level companies, legacy business applications, accessibility-focused projects and some non-tech-savvy older people.
 [Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
 
 [Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop/worldwide#monthly-201904-202004-bar)
@@ -128,7 +128,7 @@ bullframe.css/
 
 ### npm
 
-Once you have installed [Node.js], you can run this command to install bullframe.css into your project:
+Once you have installed [Node.js](https://nodejs.org/en/download/), you can run this command to install bullframe.css into your project:
 
 `npm install bullframe.css`
 

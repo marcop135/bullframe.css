@@ -1,67 +1,67 @@
 .bf-t-transform-uppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .bf-t-transform-none {
-  text-transform: none;
+  text-transform: none !important;
 }
 
 .bf-t-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .bf-t-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .bf-t-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 0.2rem $bf-dark;
+  text-shadow: 0 0 0.2rem $bf-dark !important;
 }
 
 .bf-t-italic {
-  font-style: italic;
+  font-style: italic !important;
 }
 
 // useful to 'reset' <i> inherited style
 .bf-t-style-normal {
-  font-style: normal;
+  font-style: normal !important;
 }
 
 // useful to 'reset' <b> inherited style
 .bf-t-weight-400 {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .bf-t-weight-500 {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .bf-t-weight-600 {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .bf-t-weight-700 {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .bf-text-break {
-  word-wrap: break-word;
+  word-wrap: break-word !important;
 }
 
 .bf-t-truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
 }
 
 .bf-no-select {
-  user-select: none;
+  user-select: none !important;
 
   // this is a not standard CSS property, so it's for webkit only
   // https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout
@@ -69,7 +69,7 @@
   // https://css-tricks.com/force-selection-text-block/#article-header-id-7
   // https://ishadeed.com/article/selection-in-css scroll down to
   // 'selection on mobile' section
-  -webkit-touch-callout: none;
+  -webkit-touch-callout: none !important;
 }
 
 .bf-font-sans-serif {
@@ -85,13 +85,13 @@
   /* macOS 10.10 and below */ "Helvetica Neue", Helvetica,
   /* Basic web fallback */ Arial, sans-serif,
   /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-  "Noto Color Emoji";
+  "Noto Color Emoji" !important;
 }
 
 .bf-font-serif {
   font-family: Georgia, Times, "Times New Roman", serif,
   /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-  "Noto Color Emoji";
+  "Noto Color Emoji" !important;
 }
 
 .bf-font-monospace {
@@ -106,7 +106,7 @@
   /* fallback */ monospace,
 
   /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
+    "Noto Color Emoji" !important;
 }
 
 .bf-h1,
@@ -115,41 +115,41 @@
 .bf-h4,
 .bf-h5,
 .bf-h6 {
-  font-weight: 700; // fallback for font families without 600 */
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: $bf-spacing-lg-px;
-  margin-bottom: $bf-spacing-lg-rem;
+  font-weight: 700 !important; // fallback for font families without 600 */
+  font-weight: 600 !important;
+  margin-top: 0 !important;
+  margin-bottom: $bf-spacing-lg-px !important;
+  margin-bottom: $bf-spacing-lg-rem !important;
 }
 
 .bf-h1 {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 36px !important;
+  font-size: 3.6rem !important;
 }
 
 .bf-h2 {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 30px !important;
+  font-size: 3rem !important;
 }
 
 .bf-h3 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 24px !important;
+  font-size: 2.4rem !important;
 }
 
 .bf-h4 {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 20px !important;
+  font-size: 2rem !important;
 }
 
 .bf-h5,
 .bf-h6 {
-  font-size: 17px;
-  font-size: 1.7rem;
+  font-size: 17px !important;
+  font-size: 1.7rem !important;
 }
 
 p.bf-lead {
-  font-size: 120%;
+  font-size: 120% !important;
 }
 
 // responsive typography

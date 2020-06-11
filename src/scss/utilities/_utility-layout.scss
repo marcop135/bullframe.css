@@ -21,13 +21,13 @@
 }
 
 .bf-text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
+  font: 0/0 a !important;
+  color: transparent !important;
+  text-shadow: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /*
@@ -41,15 +41,15 @@
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
 .bf-sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }
 
 /*
@@ -71,29 +71,29 @@
 }
 
 .bf-invisible {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .bf-visible {
-  visibility: visible;
+  visibility: visible !important;
 }
 
 .bf-display-block {
-  display: block;
+  display: block !important;
 }
 
 .bf-display-block-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .bf-display-inline {
-  display: inline;
+  display: inline !important;
 }
 
 .bf-display-inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 // IE10+
@@ -107,27 +107,27 @@
 }
 
 .bf-float-right {
-  float: right;
+  float: right !important;
 }
 
 .bf-float-left {
-  float: left;
+  float: left !important;
 }
 
 .bf-position-fixed {
-  position: fixed;
+  position: fixed !important;
 }
 
 // https://css-tricks.com/centering-css-complete-guide
 // Is the element of unknown width and height?
 // ! 'transform' is IE10 + https://caniuse.com/#feat=transforms2d
 .bf-align-center-unknown {
-  position: relative
+  position: relative !important
 }
 
 .bf-align-center-unknown--item {
-  position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
 }

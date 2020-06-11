@@ -282,21 +282,14 @@ textarea::placeholder {
   color: $bf-gray-dark;
 }
 
-// remove :invalid styles in FF
+// remove ':invalid' styles in FF
+// https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
+//
+// for form validation in JavaScript
+// use '.bf-invalid' class in /utilities/_utility-form-states.scss' instead 
+// documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
 :-moz-ui-invalid {
   box-shadow: none;
-}
-
-// re-style :invalid state
-input:invalid,
-select:invalid,
-textarea:invalid,
-input:invalid:focus,
-select:invalid:focus,
-textarea:invalid:focus {
-  color: $bf-red;
-  border-color: $bf-red;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25);
 }
 
 // disabled groups

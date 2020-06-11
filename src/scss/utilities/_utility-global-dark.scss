@@ -106,6 +106,12 @@ textarea {
   box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
 }
 
+.bf-invalid,
+.bf-invalid:focus {
+  color: lighten($bf-red, 7.5%) !important;
+  border-color: lighten($bf-red, 7.5%) !important;;
+}
+
 select:not([size]):not([multiple]) {
   background-color: $bf-gray-dark-extra;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
@@ -127,18 +133,6 @@ select:not([size]):not([multiple]) {
 input::placeholder,
 textarea::placeholder {
   color: $bf-gray;
-}
-
-input:invalid,
-select:invalid,
-textarea:invalid,
-input:invalid:focus,
-select:invalid:focus,
-textarea:invalid:focus,
-.bf-invalid,
-.bf-invalid:focus {
-  color: lighten($bf-red, 7.5%);
-  border-color: lighten($bf-red, 7.5%);
 }
 
 button,

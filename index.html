@@ -6,7 +6,7 @@
 	<meta	name="viewport"	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>Test page — bullframe.css (S)CSS framework</title>
-	<meta	name="description" content="A quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purpouse only.">
+	<meta	name="description" content="A quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purpose only.">
 
 	<!-- https://realfavicongenerator.net/ -->
 	<link rel="apple-touch-icon" sizes="180x180" href="docs/icons/apple-touch-icon.png?v=PYqzMzgx6v">
@@ -442,13 +442,13 @@
 								<label>Text input as descendant of label (not recommended)
 								<input
 									type="text"
-									value="default value that goes on and on without stopping or punctuation"
+									value="default value"
 								></label>
 
 								<label class="bf-disabled">Text input as descendant of label (disabled, not recommended)
 								<input
 									type="text"
-									value="default value that goes on and on without stopping or punctuation"
+									value="default value"
 									disabled
 								></label>
 
@@ -456,11 +456,18 @@
 								<input 
 										class="bf-focused"
 										type="text"
-										value="default value that goes on and on without stopping or punctuation"
+										value="default value"
 								>
 
-								<label>Email input</label> 
-								<input type="email">
+								<label>Text input (invalid)</label>
+								<input 
+										class="bf-invalid"
+										type="text"
+										value="invalid value"
+								>
+
+								<label>Email input (required)</label> 
+								<input type="email" required>
 
 								<label>Number input</label>
 								<input id="in" max="10" min="0" type="number" value="5">

@@ -599,16 +599,6 @@ textarea::placeholder {
 :-moz-ui-invalid {
   box-shadow: none; }
 
-input:invalid,
-select:invalid,
-textarea:invalid,
-input:invalid:focus,
-select:invalid:focus,
-textarea:invalid:focus {
-  color: #ff0000;
-  border-color: #ff0000;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25); }
-
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] input:after,

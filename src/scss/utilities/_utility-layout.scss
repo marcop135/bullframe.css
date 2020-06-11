@@ -118,15 +118,16 @@
   position: fixed;
 }
 
-// cross-browser vertically and horizontally center alignment
-// http://css-tricks.com/centering-in-the-unknown/
+// https://css-tricks.com/centering-css-complete-guide
+// Is the element of unknown width and height?
+// ! 'transform' is IE10 + https://caniuse.com/#feat=transforms2d
 .bf-align-center-unknown {
-  display: table;
-  width: 100%;
+  position: relative
 }
 
 .bf-align-center-unknown--item {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

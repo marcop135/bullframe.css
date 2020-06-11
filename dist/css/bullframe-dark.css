@@ -637,16 +637,6 @@ textarea::placeholder {
 :-moz-ui-invalid {
   box-shadow: none; }
 
-input:invalid,
-select:invalid,
-textarea:invalid,
-input:invalid:focus,
-select:invalid:focus,
-textarea:invalid:focus {
-  color: #ff0000;
-  border-color: #ff0000;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25); }
-
 fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] input:after,
@@ -1072,13 +1062,13 @@ table th[class^="bf-col"] {
   visibility: hidden !important; }
 
 .bf-text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0; }
+  font: 0/0 a !important;
+  color: transparent !important;
+  text-shadow: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important; }
 
 /*
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
@@ -1091,15 +1081,15 @@ table th[class^="bf-col"] {
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
 .bf-sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px; }
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important; }
 
 /*
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
@@ -1119,24 +1109,24 @@ table th[class^="bf-col"] {
   width: auto; }
 
 .bf-invisible {
-  visibility: hidden; }
+  visibility: hidden !important; }
 
 .bf-visible {
-  visibility: visible; }
+  visibility: visible !important; }
 
 .bf-display-block {
-  display: block; }
+  display: block !important; }
 
 .bf-display-block-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important; }
 
 .bf-display-inline {
-  display: inline; }
+  display: inline !important; }
 
 .bf-display-inline-block {
-  display: inline-block; }
+  display: inline-block !important; }
 
 .bf-display-flex {
   display: -webkit-flex !important;
@@ -1147,22 +1137,23 @@ table th[class^="bf-col"] {
   display: inline-flex !important; }
 
 .bf-float-right {
-  float: right; }
+  float: right !important; }
 
 .bf-float-left {
-  float: left; }
+  float: left !important; }
 
 .bf-position-fixed {
-  position: fixed; }
+  position: fixed !important; }
 
 .bf-align-center-unknown {
-  display: table;
-  width: 100%; }
+  position: relative !important; }
 
 .bf-align-center-unknown--item {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle; }
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important; }
 
 .bf-m-0 {
   margin: 0 !important; }
@@ -1243,66 +1234,66 @@ table th[class^="bf-col"] {
   padding-bottom: 3.6rem !important; }
 
 .bf-t-transform-uppercase {
-  text-transform: uppercase; }
+  text-transform: uppercase !important; }
 
 .bf-t-transform-none {
-  text-transform: none; }
+  text-transform: none !important; }
 
 .bf-t-left {
-  text-align: left; }
+  text-align: left !important; }
 
 .bf-t-center {
-  text-align: center; }
+  text-align: center !important; }
 
 .bf-t-right {
-  text-align: right; }
+  text-align: right !important; }
 
 .bf-t-shadow {
-  text-shadow: 0 0 0.2rem #222; }
+  text-shadow: 0 0 0.2rem #222 !important; }
 
 .bf-t-italic {
-  font-style: italic; }
+  font-style: italic !important; }
 
 .bf-t-style-normal {
-  font-style: normal; }
+  font-style: normal !important; }
 
 .bf-t-weight-400 {
-  font-weight: 400; }
+  font-weight: 400 !important; }
 
 .bf-t-weight-500 {
-  font-weight: 500; }
+  font-weight: 500 !important; }
 
 .bf-t-weight-600 {
-  font-weight: 600; }
+  font-weight: 600 !important; }
 
 .bf-t-weight-700 {
-  font-weight: 700; }
+  font-weight: 700 !important; }
 
 .bf-text-break {
-  word-wrap: break-word; }
+  word-wrap: break-word !important; }
 
 .bf-t-truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal; }
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important; }
 
 .bf-no-select {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-touch-callout: none; }
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+  -webkit-touch-callout: none !important; }
 
 .bf-font-sans-serif {
-  font-family: Catamaran, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  font-family: Catamaran, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; }
 
 .bf-font-serif {
-  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; }
 
 .bf-font-monospace {
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; }
 
 .bf-h1,
 .bf-h2,
@@ -1310,35 +1301,35 @@ table th[class^="bf-col"] {
 .bf-h4,
 .bf-h5,
 .bf-h6 {
-  font-weight: 700;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem; }
+  font-weight: 700 !important;
+  font-weight: 600 !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  margin-bottom: 1.2rem !important; }
 
 .bf-h1 {
-  font-size: 36px;
-  font-size: 3.6rem; }
+  font-size: 36px !important;
+  font-size: 3.6rem !important; }
 
 .bf-h2 {
-  font-size: 30px;
-  font-size: 3rem; }
+  font-size: 30px !important;
+  font-size: 3rem !important; }
 
 .bf-h3 {
-  font-size: 24px;
-  font-size: 2.4rem; }
+  font-size: 24px !important;
+  font-size: 2.4rem !important; }
 
 .bf-h4 {
-  font-size: 20px;
-  font-size: 2rem; }
+  font-size: 20px !important;
+  font-size: 2rem !important; }
 
 .bf-h5,
 .bf-h6 {
-  font-size: 17px;
-  font-size: 1.7rem; }
+  font-size: 17px !important;
+  font-size: 1.7rem !important; }
 
 p.bf-lead {
-  font-size: 120%; }
+  font-size: 120% !important; }
 
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   @media (min-width: 320px) {
@@ -1398,9 +1389,9 @@ fieldset[disabled] .bf-btn,
   box-shadow: none; }
 
 .bf-focused {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25); }
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
+  border-color: #007bff !important;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important; }
 
 .bf-disabled {
   cursor: default !important;
@@ -1411,9 +1402,9 @@ fieldset[disabled] .bf-btn,
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: #ff0000;
-  border-color: #ff0000;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25); }
+  color: #ff0000 !important;
+  border-color: #ff0000 !important;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important; }
 
 .bf-list-unstyled,
 menu ul.bf-list-unstyled,
@@ -1666,9 +1657,20 @@ textarea:focus {
 .bf-focused {
   box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5); }
 
+.bf-invalid,
+.bf-invalid:focus {
+  color: #ff2626 !important;
+  border-color: #ff2626 !important; }
+
 select:not([size]):not([multiple]) {
   background-color: #333;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"); }
+
+@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  select:not([size]):not([multiple]),
+  *[dir="rtl"] select:not([size]):not([multiple]),
+  select[dir="rtl"]:not([size]):not([multiple]) {
+    background-image: none; } }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #999; }
@@ -1682,17 +1684,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 input::placeholder,
 textarea::placeholder {
   color: #999; }
-
-input:invalid,
-select:invalid,
-textarea:invalid,
-input:invalid:focus,
-select:invalid:focus,
-textarea:invalid:focus,
-.bf-invalid,
-.bf-invalid:focus {
-  color: #ff2626;
-  border-color: #ff2626; }
 
 button,
 [type="button"],

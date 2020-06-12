@@ -460,24 +460,96 @@ p.bf-lead {
 
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
-.bf-btn.bf-disabled {
+.bf-btn:disabled
+.bf-btn[aria-disabled="true"] {
   cursor: default !important;
   cursor: not-allowed !important;
-  pointer-events: none;
-  opacity: 0.5 !important;
-  box-shadow: none; }
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+  box-shadow: none !important;
+  opacity: 0.5 !important; }
 
 .bf-focused {
   transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
   border-color: #007bff !important;
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important; }
 
-.bf-disabled {
+.bf-disabled,
+.bf-disabled:hover,
+.bf-disabled:active,
+.bf-disabled:focus,
+.bf-disabled:after,
+.bf-disabled:before,
+.bf-disabled:invalid,
+.bf-disabled:checked {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   box-shadow: none !important;
-  opacity: 0.5 !important; }
+  opacity: 0.5 !important;
+  background-color: #fff;
+  border-color: #999; }
+
+label.bf-disabled {
+  background-color: transparent;
+  border-color: transparent; }
+
+button.bf-disabled,
+[type="button"].bf-disabled,
+[type="reset"].bf-disabled,
+[type="submit"].bf-disabled,
+.bf-btn.bf-disabled {
+  cursor: default;
+  cursor: not-allowed;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: none;
+  opacity: 0.5;
+  color: #222;
+  background: #ccc; }
+  button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
+  [type="button"].bf-disabled:hover,
+  [type="button"].bf-disabled:active,
+  [type="button"].bf-disabled:focus,
+  [type="reset"].bf-disabled:hover,
+  [type="reset"].bf-disabled:active,
+  [type="reset"].bf-disabled:focus,
+  [type="submit"].bf-disabled:hover,
+  [type="submit"].bf-disabled:active,
+  [type="submit"].bf-disabled:focus,
+  .bf-btn.bf-disabled:hover,
+  .bf-btn.bf-disabled:active,
+  .bf-btn.bf-disabled:focus {
+    box-shadow: none;
+    color: #222;
+    background: #ccc; }
+
+.bf-btn--primary.bf-disabled {
+  cursor: default;
+  cursor: not-allowed;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: none;
+  opacity: 0.5;
+  color: #fff;
+  background: #007bff; }
+  .bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus {
+    box-shadow: none;
+    color: #fff;
+    background: #007bff; }
 
 .bf-invalid,
 .bf-invalid:focus {

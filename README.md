@@ -138,7 +138,9 @@ Once you have installed [Node.js](https://nodejs.org/en/download/), you can run 
 
 Add some HTML markup, and two JS polyfills (if you need a wide cross-browser support).
 
-Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-first responsive design), you could polyfill it with [respond.js](https://github.com/scottjehl/Respond).
+Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-first responsive design), you could polyfill it with [respond.js](https://github.com/scottjehl/Respond). 
+
+[IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
 
 #### IE8+ and old browsers
 

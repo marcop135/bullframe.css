@@ -15,23 +15,13 @@
   margin-left: auto;
 
   // spacing
-  padding-left: $bf-spacing-lg-px; // 12
-  padding-left: $bf-spacing-lg-rem;
-  padding-right: $bf-spacing-lg-px;
-  padding-right: $bf-spacing-lg-rem;
-
-  // ! this is IE9+
-  // if you need CSS3 Media Queries support in IE8
-  // you could use the respond.js polyfll https://github.com/scottjehl/Respond
   //
-  // ! but there are some important caveats
-  // https://github.com/scottjehl/Respond#support--caveats
-  @media (min-width: 768px) {
-    padding-left: $bf-spacing-xl-px; // 24
-    padding-left: $bf-spacing-xl-rem;
-    padding-right: $bf-spacing-xl-px;
-    padding-right: $bf-spacing-xl-rem;
-  }
+  // match the default Bootstrap Grid gutter width
+  // https://getbootstrap.com/docs/3.4/css/#grid-options
+  padding-left: 15px;
+  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-right: 1.5rem;
 
   // clearfix
   &:before,
@@ -53,17 +43,10 @@
 .bf-row {
   display: block;
 
-  margin-left: -$bf-spacing-lg-px;
-  margin-left: -$bf-spacing-lg-rem;
-  margin-right: -$bf-spacing-lg-px;
-  margin-right: -$bf-spacing-lg-rem;
-
-  @media (min-width: 768px) {
-    margin-left: -$bf-spacing-xl-px;
-    margin-left: -$bf-spacing-xl-rem;
-    margin-right: -$bf-spacing-xl-px;
-    margin-right: -$bf-spacing-xl-rem;
-  }
+  margin-left: -15px;
+  margin-left: -1.5rem;
+  margin-right: -15px;
+  margin-right: -1.5rem;
 
   // clearfix
   &:before,
@@ -85,17 +68,10 @@
   position: relative;
   min-height: 1px;
 
-  padding-left: $bf-spacing-lg-px;
-  padding-left: $bf-spacing-lg-rem;
-  padding-right: $bf-spacing-lg-px;
-  padding-right: $bf-spacing-lg-rem;
-
-  @media (min-width: 768px) {
-    padding-left: $bf-spacing-xl-px;
-    padding-left: $bf-spacing-xl-rem;
-    padding-right: $bf-spacing-xl-px;
-    padding-right: $bf-spacing-xl-rem;
-  }
+  padding-left: 15px;
+  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-right: 1.5rem;
 }
 
 .bf-no-gutters {
@@ -219,6 +195,7 @@ table th[class^="bf-col"] {
 // Want more?
 // IE8+
 // Pure CSS grids (ex YUI library) https://purecss.io/grids/
+// IE8+ (with JS polyfill)
 // Bootstrap v3 grid system https://getbootstrap.com/docs/3.4/css/#grid 
 //
 // moder browsers only (partial IE11 support)

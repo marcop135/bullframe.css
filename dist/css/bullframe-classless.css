@@ -418,8 +418,7 @@ fieldset {
   min-width: 0; }
 
 legend {
-  display: block;
-  display: table \9;
+  display: table;
   max-width: 100%;
   white-space: normal;
   border: 0;
@@ -599,27 +598,6 @@ textarea::placeholder {
 :-moz-ui-invalid {
   box-shadow: none; }
 
-fieldset[disabled] button,
-fieldset[disabled] input,
-fieldset[disabled] input:after,
-fieldset[disabled] input:before,
-fieldset[disabled] input:checked,
-fieldset[disabled] select,
-fieldset[disabled] textarea,
-fieldset[disabled] label,
-button[disabled],
-input[disabled],
-input[disabled]:after,
-input[disabled]:before,
-input[disabled]:checked,
-select[disabled],
-textarea[disabled] {
-  cursor: default !important;
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-  box-shadow: none !important;
-  opacity: 0.5 !important; }
-
 [type="email"],
 [type="number"],
 [type="password"],
@@ -750,6 +728,48 @@ button,
   [type="submit"]:active,
   [type="submit"]:focus {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15); }
+
+fieldset[disabled] button,
+fieldset[disabled] input,
+fieldset[disabled] input:after,
+fieldset[disabled] input:before,
+fieldset[disabled] input:checked,
+fieldset[disabled] select,
+fieldset[disabled] textarea,
+fieldset[disabled] label,
+button[disabled],
+input[disabled],
+input[disabled]:after,
+input[disabled]:before,
+input[disabled]:checked,
+select[disabled],
+textarea[disabled],
+label[disabled],
+button:disabled,
+input:disabled,
+input:disabled:after,
+input:disabled:before,
+input:disabled:checked,
+select:disabled,
+textarea:disabled,
+label:disabled,
+button[aria-disabled="true"],
+input[aria-disabled="true"],
+input[aria-disabled="true"]:after,
+input[aria-disabled="true"]:before,
+input[aria-disabled="true"]:checked,
+select[aria-disabled="true"],
+textarea[aria-disabled="true"],
+label[aria-disabled="true"] {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+  box-shadow: none !important;
+  opacity: 0.5 !important; }
 
 select:not([size]):not([multiple]) {
   -webkit-appearance: none;

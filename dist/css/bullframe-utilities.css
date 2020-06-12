@@ -5,17 +5,10 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 12px;
-  padding-left: 1.2rem;
-  padding-right: 12px;
-  padding-right: 1.2rem; }
-  @media (min-width: 768px) {
-    .bf-container,
-    .bf-container--fluid {
-      padding-left: 24px;
-      padding-left: 2.4rem;
-      padding-right: 24px;
-      padding-right: 2.4rem; } }
+  padding-left: 15px;
+  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-right: 1.5rem; }
   .bf-container:before, .bf-container:after,
   .bf-container--fluid:before,
   .bf-container--fluid:after {
@@ -31,16 +24,10 @@
 
 .bf-row {
   display: block;
-  margin-left: -12px;
-  margin-left: -1.2rem;
-  margin-right: -12px;
-  margin-right: -1.2rem; }
-  @media (min-width: 768px) {
-    .bf-row {
-      margin-left: -24px;
-      margin-left: -2.4rem;
-      margin-right: -24px;
-      margin-right: -2.4rem; } }
+  margin-left: -15px;
+  margin-left: -1.5rem;
+  margin-right: -15px;
+  margin-right: -1.5rem; }
   .bf-row:before, .bf-row:after {
     content: " ";
     display: table; }
@@ -51,16 +38,10 @@
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 12px;
-  padding-left: 1.2rem;
-  padding-right: 12px;
-  padding-right: 1.2rem; }
-  @media (min-width: 768px) {
-    [class^="bf-col-"] {
-      padding-left: 24px;
-      padding-left: 2.4rem;
-      padding-right: 24px;
-      padding-right: 2.4rem; } }
+  padding-left: 15px;
+  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-right: 1.5rem; }
 
 .bf-no-gutters {
   margin-right: 0;

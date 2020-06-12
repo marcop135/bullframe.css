@@ -20,7 +20,12 @@
   padding-right: $bf-spacing-lg-px;
   padding-right: $bf-spacing-lg-rem;
 
-  // medium screens
+  // ! this is IE9+
+  // if you need CSS3 Media Queries support in IE8
+  // you could use the respond.js polyfll https://github.com/scottjehl/Respond
+  //
+  // ! but there are some important caveats
+  // https://github.com/scottjehl/Respond#support--caveats
   @media (min-width: 768px) {
     padding-left: $bf-spacing-xl-px; // 24
     padding-left: $bf-spacing-xl-rem;
@@ -158,7 +163,7 @@
 // ! but there are some important caveats
 // https://github.com/scottjehl/Respond#support--caveats
 
-// 'break' the columns and make them full-width
+// 'break' the grid and make the columns full-width
 @media (max-width: 575px) {
   .bf-container--break-xs .bf-row {
     margin-left: 0;
@@ -174,7 +179,6 @@
   }
 }
 
-// 'break' the columns and make them full-width
 @media (max-width: 767px) {
   .bf-container--break-md .bf-row {
     margin-left: 0;
@@ -205,9 +209,17 @@
   }
 }
 
-// fix missing table cell borders when using 'col-' classes for column sizing
+// fix missing table cell borders when using 'bf-col-' classes for column sizing
 // https://github.com/twbs/bootstrap/issues/11623
 table td[class^="bf-col"],
 table th[class^="bf-col"] {
   position: static;
 }
+
+// Want more?
+// IE8+
+// Pure CSS grids (ex YUI library) https://purecss.io/grids/
+// Bootstrap v3 grid system https://getbootstrap.com/docs/3.4/css/#grid 
+//
+// moder browsers only (partial IE11 support)
+// Bulma Flexbox grid system https://bulma.io/documentation/columns/

@@ -401,6 +401,7 @@ table th[class^="bf-col"] {
   font-weight: 700 !important;
   font-weight: 600 !important;
   margin-top: 0 !important;
+  line-height: 1.2 !important;
   margin-bottom: 12px !important;
   margin-bottom: 1.2rem !important; }
 

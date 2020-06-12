@@ -60,10 +60,12 @@
 
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
-.bf-btn.bf-disabled {
-  cursor: default !important; // IE8-10 fallback
-  cursor: not-allowed !important; // Opera Mini fallback
-  pointer-events: none;
+.bf-btn:disabled
+.bf-btn[aria-disabled="true"] {
+  cursor: default !important; // fallback
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  box-shadow: none !important;
   opacity: 0.5 !important;
-  box-shadow: none;
 }

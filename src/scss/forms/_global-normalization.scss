@@ -86,8 +86,7 @@ fieldset {
 }
 
 legend {
-  display: block;
-  display: table \9; // enable line-wrapping in IE8+
+  display: table; // Correct the text wrapping in Edge and IE.
   max-width: 100%;
   white-space: normal; // enable line-wrapping in FF4/5
   border: 0;
@@ -98,6 +97,9 @@ legend {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+}
+
+@media screen\0 {
 }
 
 label {

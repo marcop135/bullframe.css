@@ -432,25 +432,32 @@
 										value="default value that goes on and on without stopping or punctuation"
 								>
 
-								<label class="bf-disabled">Text input as sibling of label (disabled)</label>
+								<label>Text input as descendant of label (not recommended)
+								<input
+									type="text"
+									value="default value that goes on and on without stopping or punctuation"
+								></label>
+
+								<label disabled>Text input as sibling of label (disabled)</label>
 								<input
 										type="text"
 										value="default value that goes on and on without stopping or punctuation"
 										disabled
 								>
 
-								<label class="bf-disabled">Text input as sibling of label (aria-disabled)</label>
+								<label aria-disabled="true">Text input as sibling of label (aria-disabled)</label>
 								<input
 										type="text"
 										value="default value that goes on and on without stopping or punctuation"
 										aria-disabled="true"
 								>
 
-								<label>Text input as descendant of label (not recommended)
+								<label class="bf-disabled">Text input as sibling of label (.bf-disabled)</label>
 								<input
-									type="text"
-									value="default value"
-								></label>
+										type="text"
+										value="default value that goes on and on without stopping or punctuation"
+										class="bf-disabled"
+								>
 
 								<label class="bf-disabled">Text input as descendant of label (disabled, not recommended)
 								<input
@@ -745,16 +752,16 @@
 						</div>
 					</fieldset>
 
-					<h3>Buttons (disabled)</h3>
-					<fieldset disabled>
+					<h3>Buttons (.bf-disabled)</h3>
+					<fieldset>
 						<div>
-							<button type="reset">Reset (button)</button></div>
+							<button type="reset" class="bf-disabled">Reset (button)</button></div>
 						<div>
-							<button type="button">Button (button)</button></div>
+							<button type="button" class="bf-disabled">Button (button)</button></div>
 						<div>
-							<button type="submit">Submit (button)</button></div>
+							<button type="submit" class="bf-disabled">Submit (button)</button></div>
 						<div>
-							<button class="bf-btn bf-btn--primary" type="submit">Primary submit (button)</button>
+							<button class="bf-btn bf-btn--primary bf-disabled" type="submit">Primary submit (button)</button>
 						</div>
 					</fieldset>
 

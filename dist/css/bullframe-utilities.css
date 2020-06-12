@@ -6,9 +6,9 @@
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
-  padding-left: 15px;
+  padding-left: 1.5rem;
   padding-right: 15px;
-  padding-right: 15px; }
+  padding-right: 1.5rem; }
   .bf-container:before, .bf-container:after,
   .bf-container--fluid:before,
   .bf-container--fluid:after {
@@ -25,9 +25,9 @@
 .bf-row {
   display: block;
   margin-left: -15px;
-  margin-left: -15px;
+  margin-left: -1.5rem;
   margin-right: -15px;
-  margin-right: -15px; }
+  margin-right: -1.5rem; }
   .bf-row:before, .bf-row:after {
     content: " ";
     display: table; }
@@ -39,9 +39,9 @@
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-left: 15px;
+  padding-left: 1.5rem;
   padding-right: 15px;
-  padding-right: 15px; }
+  padding-right: 1.5rem; }
 
 .bf-no-gutters {
   margin-right: 0;

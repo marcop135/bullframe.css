@@ -18,10 +18,10 @@
   //
   // match the default Bootstrap Grid gutter width
   // https://getbootstrap.com/docs/3.4/css/#grid-options
-  padding-left: 15px;
-  padding-left: 1.5rem;
-  padding-right: 15px;
-  padding-right: 1.5rem;
+  padding-left: $bf-spacing-grid-gutter-px;
+  padding-left: $bf-spacing-grid-gutter-rem;
+  padding-right: $bf-spacing-grid-gutter-px;
+  padding-right: $bf-spacing-grid-gutter-rem;
 
   // clearfix
   &:before,
@@ -43,10 +43,10 @@
 .bf-row {
   display: block;
 
-  margin-left: -15px;
-  margin-left: -1.5rem;
-  margin-right: -15px;
-  margin-right: -1.5rem;
+  margin-left: -$bf-spacing-grid-gutter-px;
+  margin-left: -$bf-spacing-grid-gutter-rem;
+  margin-right: -$bf-spacing-grid-gutter-px;
+  margin-right: -$bf-spacing-grid-gutter-rem;
 
   // clearfix
   &:before,
@@ -68,10 +68,10 @@
   position: relative;
   min-height: 1px;
 
-  padding-left: 15px;
-  padding-left: 1.5rem;
-  padding-right: 15px;
-  padding-right: 1.5rem;
+  padding-left: $bf-spacing-grid-gutter-px;
+  padding-left: $bf-spacing-grid-gutter-rem;
+  padding-right: $bf-spacing-grid-gutter-px;
+  padding-right: $bf-spacing-grid-gutter-rem;
 }
 
 .bf-no-gutters {

@@ -4,7 +4,7 @@
 // currently (June 2020) Firefox only
 // https://caniuse.com/#feat=mdn-css_properties_scrollbar-color
 html {
-  scrollbar-color: $bf-gray-dark $bf-dark;
+  scrollbar-color: darken($bf-gray-dark, 5%) $bf-dark-extra;
 }
 
 // these features are not standard, and blink and webkit only
@@ -17,7 +17,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $bf-gray-dark;
+  background-color: darken($bf-gray-dark, 5%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -25,5 +25,5 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $bf-dark;
+  background-color: $bf-dark-extra;
 }

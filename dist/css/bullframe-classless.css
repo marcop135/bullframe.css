@@ -170,9 +170,7 @@ abbr[data-original-title] {
 
 mark {
   background-color: #ff0;
-  color: #000;
-  font-weight: 700;
-  font-weight: 600; }
+  color: #000; }
 
 ins {
   background-color: #ff9;
@@ -185,8 +183,7 @@ strong {
 
 b,
 strong {
-  font-weight: 700;
-  font-weight: 600; }
+  font-weight: bolder; }
 
 dfn {
   font-style: italic; }
@@ -432,7 +429,6 @@ legend {
 
 label {
   font-weight: 700;
-  font-weight: 600;
   font-size: 90%;
   margin-bottom: 6px;
   margin-bottom: 0.6rem; }

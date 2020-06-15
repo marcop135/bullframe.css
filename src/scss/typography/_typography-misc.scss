@@ -22,8 +22,6 @@ abbr[data-original-title] {
 mark {
   background-color: $bf-yellow;
   color: $bf-black;
-  font-weight: 700; // fallback for font families without 600 */
-  font-weight: 600;
 }
 
 ins {
@@ -42,8 +40,7 @@ strong {
 // Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
-  font-weight: 700; // fallback for font families without 600 */
-  font-weight: 600;
+  font-weight: bolder;
 }
 
 dfn {

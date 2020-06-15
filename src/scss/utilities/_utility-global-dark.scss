@@ -1,13 +1,15 @@
-// these are global styles
+// these are global stylest tha that ovveride all the "light" styles
 
+// import dark scrollbars utility module
 @import "utility-global-dark-scrollbars";
 
+// the basics: background and texts
 html {
   color: $bf-light;
 }
 
 body {
-  background-color: $bf-dark-extra;
+  background-color: lighten($bf-dark-extra, 7.5%);
 }
 
 // anchors
@@ -20,7 +22,7 @@ a {
   }
 }
 
-// typography
+// typography elements that need tiny adjustments
 mark {
   background-color: darken($bf-yellow, 10%);
 }
@@ -28,11 +30,6 @@ mark {
 ins {
   background-color: darken($bf-yellow-light, 45%);
 }
-
-// kbd {
-// 	background-color: $bf-gray-light;
-// 	color: $bf-black;
-// }
 
 hr {
   border-color: $bf-gray-light;
@@ -44,11 +41,9 @@ hr {
   border-color: $bf-gray-dark;
 }
 
+
 // forms
 
-// Old browsers and Opera Mini don't fully support all type of inputs
-// e.g. [type="range"]
-// so, let's try to add styles carefully and selective
 [type="email"],
 [type="number"],
 [type="password"],
@@ -65,23 +60,19 @@ hr {
 [type="range"],
 input[list],
 select,
+select:not([size]):not([multiple]),
 textarea {
-  background-color: $bf-gray-dark-extra;
+  background-color: lighten($bf-dark-extra, 2.5%);
   border-color: $bf-black;
+  color: $bf-gray-light;
 
   &:active,
   &:focus {
-    background-color: $bf-gray-dark-extra;
+    background-color: lighten($bf-dark-extra, 2.5%);
     border-color: lighten($bf-blue, 10%);
   }
 }
 
-.bf-focused {
-  border-color: lighten($bf-blue, 10%);
-}
-
-// now again, but without [type="range"]
-// since box-shadow just add more troubles to them
 [type="email"],
 [type="number"],
 [type="password"],
@@ -97,33 +88,33 @@ textarea {
 [type="url"],
 input[list],
 select,
+select:not([size]):not([multiple]),
 textarea {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
   }
 }
 
 .bf-focused {
-  box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
+  border-color: lighten($bf-blue, 10%);
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5) !important;
 }
 
 .bf-invalid,
 .bf-invalid:focus {
   color: lighten($bf-red, 7.5%) !important;
-  border-color: lighten($bf-red, 7.5%) !important;;
+  border-color: lighten($bf-red, 7.5%) !important;
 }
 
 select:not([size]):not([multiple]) {
-  background-color: $bf-gray-dark-extra;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
 
 // IE9 only hack
 // https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
-@media screen and (min-width:0\0) and (min-resolution: .001dpcm) { 
-
-  // re-set the default properties
+@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  // hide custom arrow
   select:not([size]):not([multiple]),
   // RTL
   *[dir="rtl"] select:not([size]):not([multiple]),
@@ -161,6 +152,17 @@ button.bf-disabled,
   }
 }
 
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+.bf-btn {
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+  }
+}
+
 .bf-btn--primary.bf-disabled,
 .bf-btn.bf-btn--primary {
   background: $bf-blue;
@@ -170,7 +172,10 @@ button.bf-disabled,
   &:focus {
     background: darken($bf-blue, 5%);
   }
+}
 
+.bf-btn--primary.bf-disabled,
+.bf-btn.bf-btn--primary {
   &:active,
   &:focus {
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);

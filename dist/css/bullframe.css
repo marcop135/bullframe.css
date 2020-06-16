@@ -78,7 +78,7 @@ h5,
 h6 {
   font-family: inherit;
   color: inherit;
-  line-height: 1.2;
+  line-height: 1.25;
   margin-bottom: 12px;
   margin-bottom: 1.2rem; }
 
@@ -209,9 +209,10 @@ small {
 hr {
   box-sizing: content-box;
   display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #999;
+  height: 0;
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
   margin: 24px 0;
   margin: 2.4rem 0;
   padding: 0;
@@ -322,6 +323,10 @@ dt {
 dd {
   margin-left: 0; }
 
+nav li:before {
+  content: "\200B";
+  position: absolute; }
+
 audio,
 canvas,
 progress,
@@ -355,6 +360,10 @@ figure,
 figcaption {
   display: block; }
 
+figcaption {
+  line-height: 1.375;
+  font-size: 90%; }
+
 video {
   height: auto; }
 
@@ -377,6 +386,22 @@ meter {
   vertical-align: baseline;
   width: 100%;
   max-width: 100%; }
+
+progress[value] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  height: 20px;
+  height: 2rem;
+  background: #ccc;
+  color: #007bff; }
+
+progress[value]::-webkit-progress-bar {
+  background: #ccc; }
+
+progress[value]::-webkit-progress-value {
+  background: #007bff; }
 
 iframe {
   border-style: none; }
@@ -461,12 +486,13 @@ legend {
   margin-bottom: 6px;
   margin-bottom: 0.6rem;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 1.375;
   color: inherit; }
 
 label {
   font-weight: 700;
   font-size: 90%;
+  line-height: 1.375;
   margin-bottom: 6px;
   margin-bottom: 0.6rem; }
 
@@ -911,11 +937,12 @@ caption {
   padding-bottom: 0.6rem;
   color: #999;
   text-align: left;
-  caption-side: bottom; }
+  caption-side: bottom;
+  line-height: 1.375;
+  font-size: 90%; }
 
 th {
-  font-weight: 700;
-  font-weight: 600; }
+  font-weight: 700; }
 
 .bf-container,
 .bf-container--fluid {
@@ -1602,11 +1629,16 @@ dt {
     border-collapse: collapse !important; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .bf-reduced-motion,
-  .bf-reduced-motion * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+  *,
+  ::before,
+  ::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important; } }
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important; } }

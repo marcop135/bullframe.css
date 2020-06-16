@@ -684,11 +684,16 @@ dt {
     border-collapse: collapse !important; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .bf-reduced-motion,
-  .bf-reduced-motion * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+  *,
+  ::before,
+  ::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important; } }
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important; } }

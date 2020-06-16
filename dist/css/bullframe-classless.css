@@ -40,9 +40,9 @@ html {
 
 body {
   margin: 0;
-  line-height: 1.5;
   font-size: 17px;
   font-size: 1.7rem;
+  line-height: 1.5;
   font-weight: 400;
   text-align: left;
   font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

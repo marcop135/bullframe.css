@@ -45,7 +45,8 @@ figcaption {
 }
 
 figcaption {
-  line-height: 1.375;
+  line-height: 1.375; 
+  font-size: 90%;
 }
 
 video {
@@ -80,12 +81,15 @@ meter {
 // remove default border in old browsers
 // and for embeds (e.g. youtube) that don't remove the border with the attribute
 // frameborder="0"
-// eg.
-// <iframe width="560" height="315"
-// src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0"
-// frameborder="0"
-// allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-// allowfullscreen>
+//
+// e.g.
+// <iframe 
+//  width="560" 
+//  height="315"
+//  src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0"
+//  frameborder="0"
+//  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+//  allowfullscreen>
 // </iframe>
 iframe {
   border-style: none;

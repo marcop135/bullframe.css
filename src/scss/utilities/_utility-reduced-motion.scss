@@ -6,12 +6,21 @@
 // interface that minimizes the amount of movement or animation,
 // preferably to the point where all non-essential movement is removed.
 
+// taken from https://github.com/jensimmons/cssremedy
+//
+// 1. Immediately jump any animation to the end point
+// 2. Remove transitions & fixed background attachment
+// See: https://github.com/mozdevs/cssremedy/issues/11
 @media (prefers-reduced-motion: reduce) {
-  .bf-reduced-motion,
-  .bf-reduced-motion * {
-    animation-duration: 0.01ms !important;
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    background-attachment: initial !important;
     scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
   }
 }

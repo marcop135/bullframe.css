@@ -155,23 +155,15 @@ p.bf-lead {
 
 // responsive typography
 // Read and view more https://codepen.io/marcop135/pen/eYmPmJm
-//
-// ! currently (April 2020), a few modern browsers support the "@supports" media rules
-// https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
-// https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
-//
-// Anyway are safe and future-friendly because more browser compatibility
-// will come
-@supports (appearance: none) {
-  @media (min-width: 320px) {
-    body.bf-responsive-typography {
-      font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
-    }
-  }
-
-  @media (min-width: 1000px) {
-    body.bf-responsive-typography {
-      font-size: 2rem;
-    }
+@media (min-width: 320px) {
+  body.bf-responsive-typography {
+    font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
   }
 }
+
+@media (min-width: 1000px) {
+  body.bf-responsive-typography {
+    font-size: 2rem;
+  }
+}
+

@@ -95,7 +95,7 @@ legend {
   margin-bottom: $bf-spacing-md-px;
   margin-bottom: $bf-spacing-md-rem;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 1.375;
   color: inherit;
 }
 
@@ -105,6 +105,7 @@ legend {
 label {
   font-weight: 700;
   font-size: 90%;
+  line-height: 1.375;
   margin-bottom: $bf-spacing-md-px;
   margin-bottom: $bf-spacing-md-rem;
 }

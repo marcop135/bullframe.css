@@ -24,9 +24,9 @@ caption {
   color: $bf-gray;
   text-align: left;
   caption-side: bottom;
+  line-height: 1.375;
 }
 
 th {
-  font-weight: 700; // fallback for font families without 600 */
-  font-weight: 600;
+  font-weight: 700;
 }

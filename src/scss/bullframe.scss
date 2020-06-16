@@ -8,40 +8,40 @@
 @import "variables/variables-breakpoints";
 
 // all about box-sizing and display
-@import "layout";
+@import "misc/misc-layout";
 
 // this a wide range of text elements bug fixing and improvements
-@import "typography/html-body";
-@import "typography/headings";
-@import "typography/blockquotes";
-@import "typography/monospaced-elements";
+@import "typography/typography-html-body";
+@import "typography/typography-headings";
+@import "typography/typography-blockquotes";
+@import "typography/typography-monospaced-elements";
 @import "typography/typography-misc";
 
 // <a> linkage
-@import "anchors";
+@import "misc/misc-anchors";
 
 // outline styles
-@import "focus";
+@import "misc/misc-focus";
 
 // <ul>, <ol> and <dl>
-@import "lists";
+@import "misc/misc-lists";
 
 // img, audio, video, svg, and more
-@import "embedded-content";
+@import "misc/misc-embedded-content";
 
 // all about form elements
-@import "forms/global-normalization";
-@import "forms/global-styling";
-@import "forms/select-styling";
-@import "forms/radio-checkbox-styling";
+@import "forms/forms-normalization";
+@import "forms/forms-styling";
+@import "forms/forms-styling-select";
+@import "forms/forms-styling-radio-checkbox";
 
 // <table> and his elements
-@import "tables";
+@import "misc/misc-tables";
 
 // this is just quick way to customise your styles
 // below these styles, you shouldn't override nothing but remove them
 // commented by default
-@import "author-styles";
+@import "misc/misc-author-styles";
 
 // a set of default opinionated utilities
 // always put this as far as possible from the rest of the styles
@@ -107,7 +107,7 @@
 
 // shamy quick fixes...
 // https://csswizardry.com/2013/04/shame-css/
-@import "shame";
+@import "misc/misc-shame";
 
 // this is useful for just for debugging purpouses
 // commented by default

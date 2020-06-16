@@ -154,16 +154,29 @@ p.bf-lead {
 }
 
 // responsive typography
-// Read and view more https://codepen.io/marcop135/pen/eYmPmJm
+// https://codepen.io/marcop135/pen/eYmPmJm
+// https://css-tricks.com/snippets/css/fluid-typography/
+// 
+// old browsers that don't support CSS variables ignore what follows 
+// (mostly IE and Opera Mini)
+// in this way, old browsers will ignore 'calc' property too, avoiding issues
+// https://caniuse.com/#feat=calc
+// https://caniuse.com/#feat=css-variables
+// https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+body.bf-responsive-typography {
+  --body-rt-font-size-flex: calc(1.7rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 2rem;
+}
+
 @media (min-width: 320px) {
   body.bf-responsive-typography {
-    font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
+    font-size: var(--body-rt-font-size-flex);
   }
 }
 
 @media (min-width: 1000px) {
   body.bf-responsive-typography {
-    font-size: 2rem;
+    font-size: var(--body-rt-font-size-max);
   }
 }
 

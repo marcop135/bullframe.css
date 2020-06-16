@@ -45,7 +45,7 @@ figcaption {
 }
 
 figcaption {
-  line-height: 1.375; 
+  line-height: 1.375;
   font-size: 90%;
 }
 
@@ -78,13 +78,41 @@ meter {
   max-width: 100%;
 }
 
+// <progress> normalization
+// 
+// https://css-tricks.com/html5-progress-element/
+progress[value] {
+  appearance: none; // reset the default appearance
+  border: none; // Get rid of default border in Firefox
+
+  height: 20px;
+  height: 2rem;
+
+  // progress bar background color
+  background: $bf-gray-light;
+
+  // progress value background color in IE10+
+  color: $bf-blue;
+}
+
+// ! this is not a standard feature, is webkit only
+// https://developer.mozilla.org/en-US/docs/Web/CSS/%3A%3A-webkit-progress-bar
+//
+// progress value background color in webkit
+progress[value]::-webkit-progress-bar {
+  background: $bf-gray-light;
+}
+progress[value]::-webkit-progress-value {
+  background: $bf-blue;
+}
+
 // remove default border in old browsers
 // and for embeds (e.g. youtube) that don't remove the border with the attribute
 // frameborder="0"
 //
 // e.g.
-// <iframe 
-//  width="560" 
+// <iframe
+//  width="560"
 //  height="315"
 //  src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0"
 //  frameborder="0"

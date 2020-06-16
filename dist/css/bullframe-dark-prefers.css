@@ -1,6 +1,5 @@
-@charset "UTF-8";
 /*! bullframe.css (dark-prefers) */
-/*! bullframe.css v3.1.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.2.0 | MIT License | https://github.com/marcop135/bullframe.css */
 *,
 *:before,
 *:after {
@@ -1630,9 +1629,12 @@ dt {
     border-collapse: collapse !important; } }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  .bf-reduced-motion,
+  .bf-reduced-motion::before,
+  .bf-reduced-motion::after,
+  .bf-reduced-motion *,
+  .bf-reduced-motion *::before,
+  .bf-reduced-motion *::after {
     -webkit-animation-delay: -1ms !important;
             animation-delay: -1ms !important;
     -webkit-animation-duration: 1ms !important;

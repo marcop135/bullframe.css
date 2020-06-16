@@ -72,9 +72,10 @@ small {
 hr {
   box-sizing: content-box;
   display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid $bf-gray;
+  height: 0;
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
   margin: $bf-spacing-xl-px 0;
   margin: $bf-spacing-xl-rem 0;
   padding: 0;

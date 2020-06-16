@@ -1355,13 +1355,13 @@ table th[class^="bf-col"] {
 p.bf-lead {
   font-size: 120% !important; }
 
-@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
-  @media (min-width: 320px) {
-    body.bf-responsive-typography {
-      font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680)); } }
-  @media (min-width: 1000px) {
-    body.bf-responsive-typography {
-      font-size: 2rem; } } }
+@media (min-width: 320px) {
+  body.bf-responsive-typography {
+    font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680)); } }
+
+@media (min-width: 1000px) {
+  body.bf-responsive-typography {
+    font-size: 2rem; } }
 
 .bf-btn {
   display: inline-block;

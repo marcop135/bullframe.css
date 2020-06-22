@@ -1,5 +1,5 @@
-@charset "UTF-8";
 /*! bullframe.css (classless) v3.2.1 | MIT License | https://github.com/marcop135/bullframe.css */
+
 *,
 *:before,
 *:after {
@@ -453,7 +453,7 @@ legend {
   color: inherit; }
 
 label {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
   margin-bottom: 6px;

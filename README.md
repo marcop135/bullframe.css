@@ -204,7 +204,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
   type="text/css"
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
-  integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
+  integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
   crossorigin="anonymous"
 >
 
@@ -238,7 +238,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
-  integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
+  integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
   crossorigin="anonymous"
 >
 

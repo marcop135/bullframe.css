@@ -48,8 +48,8 @@ html {
 
 body {
   margin: 0;
-  font-size: 17px;
-  font-size: 1.7rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 400;
   text-align: left;
@@ -91,8 +91,8 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -117,13 +117,13 @@ h4 {
 
 h5,
 h6 {
-  font-size: 17px;
-  font-size: 1.7rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 blockquote {
-  margin: 0 0 24px 0;
-  margin-bottom: 2.4rem;
+  margin: 0 0 20px 0;
+  margin-bottom: 2rem;
   padding-left: 0;
   font-style: italic;
 }
@@ -146,8 +146,8 @@ q {
 }
 
 pre {
-  margin: 0 0 24px 0;
-  margin: 0 0 2.4rem 0;
+  margin: 0 0 20px 0;
+  margin: 0 0 2rem 0;
 }
 
 pre {
@@ -182,8 +182,8 @@ pre code {
 }
 
 p {
-  margin: 0 0 24px 0;
-  margin: 0 0 2.4rem 0;
+  margin: 0 0 20px 0;
+  margin: 0 0 2rem 0;
 }
 
 abbr[title],
@@ -254,16 +254,16 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: 24px 0;
-  margin: 2.4rem 0;
+  margin: 20px 0;
+  margin: 2rem 0;
   padding: 0;
   overflow: visible;
 }
 
 address {
   font-style: normal;
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
   line-height: inherit;
 }
 
@@ -348,8 +348,8 @@ menu,
 ol,
 ul,
 dl {
-  margin: 0 0 24px 0;
-  margin: 0 0 2.4rem 0;
+  margin: 0 0 20px 0;
+  margin: 0 0 2rem 0;
   padding: 0;
 }
 
@@ -365,8 +365,8 @@ dd {
 
 ul,
 ol {
-  margin-left: 24px;
-  margin-left: 2.4rem;
+  margin-left: 20px;
+  margin-left: 2rem;
 }
 
 nav ol,
@@ -572,8 +572,8 @@ legend {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -583,8 +583,8 @@ label {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 label input,
@@ -599,8 +599,8 @@ label textarea {
 }
 
 [type="search"] {
-  outline-offset: -3px;
-  outline-offset: -0.3rem;
+  outline-offset: -2.5px;
+  outline-offset: -0.25rem;
 }
 
 output {
@@ -665,8 +665,8 @@ button,
 input,
 select,
 textarea {
-  border-radius: 3px;
-  border-radius: 0.3rem;
+  border-radius: 2.5px;
+  border-radius: 0.25rem;
 }
 
 [type="radio"] {
@@ -674,8 +674,8 @@ textarea {
 }
 
 [type="checkbox"] {
-  border-radius: 6px;
-  border-radius: 0.6rem;
+  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 [type="radio"],
@@ -799,8 +799,8 @@ select,
 textarea {
   background-color: #fff;
   border: 1px solid #999;
-  padding: 6px 9px;
-  padding: 0.6rem 0.9rem;
+  padding: 5px 7.5px;
+  padding: 0.5rem 0.75rem;
 }
 
 @media \0screen {
@@ -821,8 +821,8 @@ textarea {
   input[list] {
     padding-top: 0;
     padding-bottom: 0;
-    height: 38px;
-    line-height: 38px;
+    height: 32px;
+    line-height: 32px;
   }
 }
 
@@ -893,8 +893,8 @@ button,
 [type="reset"],
 [type="submit"] {
   color: #222;
-  padding: 8px 16px;
-  padding: 0.8rem 1.6rem;
+  padding: 6.66667px 13.33333px;
+  padding: 0.66667rem 1.33333rem;
   background: #ccc;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 }
@@ -914,6 +914,7 @@ button:focus,
   color: #222;
   background: #b3b3b3;
 }
+
 button:active,
 button:focus,
 [type="button"]:active,
@@ -982,26 +983,26 @@ select:not([size]):not([multiple]) {
   background: #fff
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
-  padding-right: 24px;
-  padding-right: 2.4rem;
+  padding-right: 20px;
+  padding-right: 2rem;
 }
 
 *[dir="rtl"] select:not([size]):not([multiple]),
 select[dir="rtl"]:not([size]):not([multiple]) {
   background-position: left 0.85rem top 50%;
-  padding-right: 9px;
-  padding-right: 0.9rem;
-  padding-left: 24px;
-  padding-left: 2.4rem;
+  padding-right: 7.5px;
+  padding-right: 0.75rem;
+  padding-left: 20px;
+  padding-left: 2rem;
 }
 
 @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select:not([size]):not([multiple]) {
-    padding-right: 9px;
+    padding-right: 7.5px;
   }
   *[dir="rtl"] select:not([size]):not([multiple]),
   select[dir="rtl"]:not([size]):not([multiple]) {
-    padding-left: 9px;
+    padding-left: 7.5px;
   }
   select:not([size]):not([multiple]),
   *[dir="rtl"] select:not([size]):not([multiple]),
@@ -1019,26 +1020,26 @@ select[dir="rtl"]:not([size]):not([multiple]) {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    height: 2rem;
-    width: 2rem;
+    height: 1.8rem;
+    width: 1.8rem;
     vertical-align: top;
     position: relative;
     border: 1px solid #999;
   }
   [type="checkbox"] + label,
   [type="radio"] + label {
-    line-height: 2rem;
+    line-height: 1.8rem;
     vertical-align: top;
-    margin-left: 6px;
-    margin-left: 0.6rem;
+    margin-left: 5px;
+    margin-left: 0.5rem;
   }
   *[dir="rtl"] [type="checkbox"] + label,
   [type="checkbox"][dir="rtl"] + label,
   *[dir="rtl"] [type="radio"] + label,
   [type="radio"][dir="rtl"] + label {
     margin-left: 0;
-    margin-right: 6px;
-    margin-right: 0.6rem;
+    margin-right: 5px;
+    margin-right: 0.5rem;
   }
   [type="checkbox"]:after,
   [type="radio"]:after {
@@ -1052,8 +1053,8 @@ select[dir="rtl"]:not([size]):not([multiple]) {
     border-color: #000;
   }
   [type="radio"]:after {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     left: -0.05rem;
     top: -0.05rem;
     border-radius: 50%;
@@ -1093,10 +1094,10 @@ th {
 }
 
 caption {
-  padding-top: 6px;
-  padding-top: 0.6rem;
-  padding-bottom: 6px;
-  padding-bottom: 0.6rem;
+  padding-top: 5px;
+  padding-top: 0.5rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
   color: #999;
   text-align: left;
   caption-side: bottom;
@@ -1143,11 +1144,13 @@ th {
   margin-right: -15px;
   margin-right: -1.5rem;
 }
+
 .bf-row:before,
 .bf-row:after {
   content: " ";
   display: table;
 }
+
 .bf-row:after {
   clear: both;
 }
@@ -1416,24 +1419,24 @@ table th[class^="bf-col"] {
   margin-right: 0 !important;
 }
 
-.bf-m-b-6 {
-  margin-bottom: 6px !important;
-  margin-bottom: 0.6rem !important;
+.bf-m-b-1 {
+  margin-bottom: 5px !important;
+  margin-bottom: 0.5rem !important;
 }
 
-.bf-m-b-12 {
-  margin-bottom: 12px !important;
-  margin-bottom: 1.2rem !important;
+.bf-m-b-2 {
+  margin-bottom: 10px !important;
+  margin-bottom: 1rem !important;
 }
 
-.bf-m-b-24 {
-  margin-bottom: 24px !important;
-  margin-bottom: 2.4rem !important;
+.bf-m-b-3 {
+  margin-bottom: 20px !important;
+  margin-bottom: 2rem !important;
 }
 
-.bf-m-b-36 {
-  margin-bottom: 36px !important;
-  margin-bottom: 3.6rem !important;
+.bf-m-b-4 {
+  margin-bottom: 30px !important;
+  margin-bottom: 3rem !important;
 }
 
 .bf-p-0 {
@@ -1456,44 +1459,44 @@ table th[class^="bf-col"] {
   padding-right: 0 !important;
 }
 
-.bf-p-t-6 {
-  padding-top: 6px !important;
-  padding-top: 0.6rem !important;
+.bf-p-t-1 {
+  padding-top: 5px !important;
+  padding-top: 0.5rem !important;
 }
 
-.bf-p-t-12 {
-  padding-top: 12px !important;
-  padding-top: 1.2rem !important;
+.bf-p-t-2 {
+  padding-top: 10px !important;
+  padding-top: 1rem !important;
 }
 
-.bf-p-t-24 {
-  padding-top: 24px !important;
-  padding-top: 2.4rem !important;
+.bf-p-t-3 {
+  padding-top: 20px !important;
+  padding-top: 2rem !important;
 }
 
-.bf-p-t-36 {
-  padding-top: 36px !important;
-  padding-top: 3.6rem !important;
+.bf-p-t-4 {
+  padding-top: 30px !important;
+  padding-top: 3rem !important;
 }
 
-.bf-p-b-6 {
-  padding-bottom: 6px !important;
-  padding-bottom: 0.6rem !important;
+.bf-p-b-1 {
+  padding-bottom: 5px !important;
+  padding-bottom: 0.5rem !important;
 }
 
-.bf-p-b-12 {
-  padding-bottom: 12px !important;
-  padding-bottom: 1.2rem !important;
+.bf-p-b-2 {
+  padding-bottom: 10px !important;
+  padding-bottom: 1rem !important;
 }
 
-.bf-p-b-24 {
-  padding-bottom: 24px !important;
-  padding-bottom: 2.4rem !important;
+.bf-p-b-3 {
+  padding-bottom: 20px !important;
+  padding-bottom: 2rem !important;
 }
 
-.bf-p-b-36 {
-  padding-bottom: 36px !important;
-  padding-bottom: 3.6rem !important;
+.bf-p-b-4 {
+  padding-bottom: 30px !important;
+  padding-bottom: 3rem !important;
 }
 
 .bf-t-transform-uppercase {
@@ -1592,8 +1595,8 @@ table th[class^="bf-col"] {
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: 12px !important;
-  margin-bottom: 1.2rem !important;
+  margin-bottom: 10px !important;
+  margin-bottom: 1rem !important;
 }
 
 .bf-h1 {
@@ -1618,8 +1621,8 @@ table th[class^="bf-col"] {
 
 .bf-h5,
 .bf-h6 {
-  font-size: 17px !important;
-  font-size: 1.7rem !important;
+  font-size: 16px !important;
+  font-size: 1.6rem !important;
 }
 
 p.bf-lead {
@@ -1627,8 +1630,8 @@ p.bf-lead {
 }
 
 body.bf-responsive-typography {
-  --body-rt-font-size-flex: calc(1.7rem + 3 * ((100vw - 320px) / 680));
-  --body-rt-font-size-max: 2rem;
+  --body-rt-font-size-flex: calc(1.6rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 1.9rem;
 }
 
 @media (min-width: 320px) {
@@ -1647,8 +1650,8 @@ body.bf-responsive-typography {
   display: inline-block;
   cursor: pointer;
   color: #222;
-  padding: 8px 16px;
-  padding: 0.8rem 1.6rem;
+  padding: 6.66667px 13.33333px;
+  padding: 0.66667rem 1.33333rem;
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -1660,8 +1663,8 @@ body.bf-responsive-typography {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 3px;
-  border-radius: 0.3rem;
+  border-radius: 2.5px;
+  border-radius: 0.25rem;
   border: 0;
   background-image: none;
   background: #ccc;
@@ -1855,11 +1858,11 @@ dt {
 
 .bf-table th,
 .bf-table td {
-  padding: 4px;
-  padding: 0.4rem;
+  padding: 3.33333px;
+  padding: 0.33333rem;
   border-bottom: 1px solid #999;
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 .bf-table-responsive {
@@ -1870,8 +1873,8 @@ dt {
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 .bf-table-responsive.scrollbar {
@@ -2048,7 +2051,7 @@ input[list],
 select,
 select:not([size]):not([multiple]),
 textarea {
-  background-color: #171717;
+  background-color: #111;
   border-color: #000;
   color: #ccc;
 }
@@ -2088,7 +2091,7 @@ select:not([size]):not([multiple]):active,
 select:not([size]):not([multiple]):focus,
 textarea:active,
 textarea:focus {
-  background-color: #171717;
+  background-color: #111;
   border-color: #3395ff;
 }
 

@@ -145,8 +145,8 @@
 
 .bf-h5,
 .bf-h6 {
-  font-size: 17px !important;
-  font-size: 1.7rem !important;
+  font-size: 16px !important;
+  font-size: 1.6rem !important;
 }
 
 p.bf-lead {
@@ -164,8 +164,8 @@ p.bf-lead {
 // https://caniuse.com/#feat=css-variables
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 body.bf-responsive-typography {
-  --body-rt-font-size-flex: calc(1.7rem + 3 * ((100vw - 320px) / 680));
-  --body-rt-font-size-max: 2rem;
+  --body-rt-font-size-flex: calc(1.6rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 1.9rem;
 }
 
 @media (min-width: 320px) {

@@ -346,24 +346,24 @@ Get all the utility classes
 - `.bf-m-b-0`
 - `.bf-m-l-0`
 - `.bf-m-r-0`
-- `.bf-m-b-6`
-- `.bf-m-b-12`
-- `.bf-m-b-24`
-- `.bf-m-b-36`
+- `.bf-m-b-1`
+- `.bf-m-b-2`
+- `.bf-m-b-3`
+- `.bf-m-b-4`
 -
 - `.bf-p-0`
 - `.bf-p-t-0`
 - `.bf-p-b-0`
 - `.bf-p-l-0`
 - `.bf-p-r-0`
-- `.bf-p-t-6`
-- `.bf-p-t-12`
-- `.bf-p-t-24`
-- `.bf-p-t-36`
-- `.bf-p-b-6`
-- `.bf-p-b-12`
-- `.bf-p-b-24`
-- `.bf-p-b-36`
+- `.bf-p-t-1`
+- `.bf-p-t-2`
+- `.bf-p-t-3`
+- `.bf-p-t-4`
+- `.bf-p-b-1`
+- `.bf-p-b-2`
+- `.bf-p-b-3`
+- `.bf-p-b-4`
 
 ### Texts
 

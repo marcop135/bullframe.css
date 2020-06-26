@@ -58,13 +58,13 @@ input[list],
 select,
 select:not([size]):not([multiple]),
 textarea {
-  background-color: lighten($bf-dark-extra, 2.5%);
+  background-color: $bf-dark-extra;
   border-color: $bf-black;
   color: $bf-gray-light;
 
   &:active,
   &:focus {
-    background-color: lighten($bf-dark-extra, 2.5%);
+    background-color: $bf-dark-extra;
     border-color: lighten($bf-blue, 10%);
   }
 }

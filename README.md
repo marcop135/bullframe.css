@@ -338,6 +338,12 @@ Get all the utility classes
 -
 - `.bf-align-center-unknown`
 - `.bf-align-center-unknown--item`
+-
+- `.bf-width-25`
+- `.bf-width-33`
+- `.bf-width-50`
+- `.bf-width-100`
+- `.bf-width-auto`
 
 ### Spacing
 

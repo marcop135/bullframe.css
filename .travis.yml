@@ -1,9 +1,0 @@
-# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
-
-language: node_js
-
-node_js:
-  - node
-
-- name: Super-Linter
-uses: github/super-linter@v2.1.0

@@ -2,5 +2,5 @@
 /.github
 /docs/screenshots-screencasts
 CHANGELOG.md
-.travis.yml
+config.yml
 SECURITY.md

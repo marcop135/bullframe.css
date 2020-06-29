@@ -24,7 +24,7 @@ Getting started:
 - [npm](#npm)
 - [HTML template IE8+](#ie8-and-old-browsers)
 - [HTML template IE11+](#ie11-and-modern-browsers)
-- [Codepen collection](#codepen)
+- [Codepen](#codepen)
 
 Customization:
 
@@ -265,6 +265,12 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 ## Codepen
 
 Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
+
+### Use bullframe.css as a CodePen template
+
+- [Light theme (default)](https://codepen.io/pen?template=WNrwNNM)
+- [Dark theme](https://codepen.io/pen?template=ExPmzBV)
+- [Dark `prefers-color-scheme`](https://codepen.io/pen?template=NWxjVQO)
 
 ## Customization
 

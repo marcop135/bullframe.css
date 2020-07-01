@@ -302,9 +302,7 @@ Get all the utility classes
 - `.bf-container--break-xs`
 - `.bf-container--break-md`
 - `.bf-container--break-lg`
--
 - `.bf-row`
--
 - `.bf-col-1`
 - `.bf-col-2`
 - `.bf-col-3`
@@ -321,7 +319,6 @@ Get all the utility classes
 #### Layout
 
 - `.bf-clearfix`
--
 - `.bf-hide`
 - `.bf-hidden`
 - `.bf-text-hide`
@@ -329,22 +326,17 @@ Get all the utility classes
 - `.bf-sr-only.focusable`
 - `.bf-invisible`
 - `.bf-visible`
--
 - `.bf-display-block`
 - `.bf-display-block-center`
--
 - `.bf-display-inline`
 - `.bf-display-inline-block`
 - `.bf-display-flex`
 - `.bf-display-inline-flex`
--
 - `.bf-float-right`
 - `.bf-float-left`
 - `.bf-position-fixed`
--
 - `.bf-align-center-unknown`
 - `.bf-align-center-unknown--item`
--
 - `.bf-width-25`
 - `.bf-width-33`
 - `.bf-width-50`
@@ -362,7 +354,6 @@ Get all the utility classes
 - `.bf-m-b-2`
 - `.bf-m-b-3`
 - `.bf-m-b-4`
--
 - `.bf-p-0`
 - `.bf-p-t-0`
 - `.bf-p-b-0`
@@ -381,29 +372,22 @@ Get all the utility classes
 
 - `.bf-t-transform-uppercase`
 - `.bf-t-transform-none`
--
 - `.bf-t-left`
 - `.bf-t-center`
 - `.bf-t-right`
--
 - `.bf-t-shadow`
--
 - `.bf-t-italic`
 - `.bf-t-style-normal`
--
 - `.bf-t-weight-400`
 - `.bf-t-weight-500`
 - `.bf-t-weight-600`
 - `.bf-t-weight-700`
--
 - `.bf-text-break`
 - `.bf-text-truncate`
 - `.bf-no-select`
--
 - `.bf-font-sans-serif`
 - `.bf-font-serif`
 - `.bf-font-monospace`
--
 - `.bf-h1`
 - `.bf-h2`
 - `.bf-h3`
@@ -411,7 +395,6 @@ Get all the utility classes
 - `.bf-h5`
 - `.bf-h6`
 - `.bf-lead`
--
 - `.bf-responsive-typography`
 
 ### Lists

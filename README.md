@@ -378,10 +378,12 @@ Get all the utility classes
 - `.bf-t-shadow`
 - `.bf-t-italic`
 - `.bf-t-style-normal`
+- `.bf-t-weight-300`
 - `.bf-t-weight-400`
 - `.bf-t-weight-500`
 - `.bf-t-weight-600`
 - `.bf-t-weight-700`
+- `.bf-t-weight-800`
 - `.bf-text-break`
 - `.bf-text-truncate`
 - `.bf-no-select`

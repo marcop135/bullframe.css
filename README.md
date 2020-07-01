@@ -133,15 +133,23 @@ Once you have installed [Node.js](https://nodejs.org/en/download/), you can run 
 
 `npm install bullframe.css`
 
+[What is Node?](https://en.m.wikipedia.org/wiki/Nodejs)
 [What is npm?](https://www.npmjs.com/get-npm)
 
 ### Gulp.js
 
-After installing bullframe.css from npm, you could use [gulp.js](https://gulpjs.com/docs/en/getting-started/quick-start) to re-compile all files, and customize your Sass project as needed.
+After installing bullframe.css from npm, you may use [gulp.js](https://gulpjs.com/docs/en/getting-started/quick-start) to re-compile all files, and customize your Sass project as needed.
 
-1. Install all dependencies: `npm install`
-2. Install the gulp command line utility: `npm install --global gulp-cli`
-3. Run gulp: `gulp`
+``` bash
+# install dependencies
+npm install
+
+# install the gulp command line utility
+npm install --global gulp-cli
+
+# run gulp
+gulp
+```
 
 [What is gulp.js?](https://en.m.wikipedia.org/wiki/Gulp.js)
 
@@ -432,13 +440,13 @@ Get all the utility classes
 
 ### Dark mode
 
-This enables a dark (dark-mode) style by default in all browsers:
+This enables a dark (dark-mode) theme by default in all browsers:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
 ```
 
-And this, enables a dark-mode only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
+And this, enables dark only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 ```html

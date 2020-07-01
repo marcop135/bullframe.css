@@ -510,6 +510,7 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 - @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, base24 SVG icons, button styles, grid system breakpoints and spacing utilities _(a lot!)_
 - @kognise [/water.css](https://github.com/kognise/water.css) for the "classless" concept inspiration and some form tricks
 - @csswizardry @inuitcss [/inuit.css](https://github.com/inuitcss/inuitcss) for some advanced Sass tips and tricks
+- @jensimmons [/cssremedy](https://github.com/jensimmons/cssremedy) for the prefers-reduced-motion snippet
 
 ## License
 

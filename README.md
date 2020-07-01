@@ -54,7 +54,7 @@ More:
 - Dark mode
 - Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
 - Isolated utility classes to avoid conflicts between frameworks' classes
-- `bullframe-classless.min.css` is just 10KB~ 🎉
+- [`bullframe-classless.min.css`](https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe-classless.min.css) is just 10KB~ min+gzip 🎉
 
 ## Internet Explorer usage and support
 

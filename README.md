@@ -340,6 +340,7 @@ Get all the utility classes
 - `.bf-width-25`
 - `.bf-width-33`
 - `.bf-width-50`
+- `.bf-width-75`
 - `.bf-width-100`
 - `.bf-width-auto`
 

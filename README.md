@@ -1,6 +1,6 @@
 # bullframe.css
 
-![bullframe.css logo](./docs/images/logo-full.png)
+![bullframe.css logo](./docs/images-readme/logo-full.png)
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
@@ -477,7 +477,7 @@ You can take a look at the [.browserslistrc](https://github.com/marcop135/bullfr
 
 This project is tested in a wide range of browsers using also [BrowserStack](https://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
-![BrowserStack Logo](./docs/images/browserstack-logo.png)
+![BrowserStack Logo](./docs/images-readme/browserstack-logo.png)
 
 ### Screenshots
 

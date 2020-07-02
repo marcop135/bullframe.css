@@ -2,9 +2,9 @@
   "name": "bullframe.css",
   "version": "3.3.0",
   "description": "Solid, fluid, IE-friendly (S)CSS framework",
-  "main": "gulpfile.js",
+  "main": "dist/css/bullframe.min.css",
   "directories": {
-    "doc": "docs"
+    "doc": "docs/"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,21 +16,21 @@
   "keywords": [
     "css",
     "css-framework",
+    "internet-explorer",
+    "cross-browser",
     "ie8",
+    "ie9",
+    "ie10",
+    "ie11",
     "responsive-web-design",
     "fluid",
     "reset-css",
     "normalize-css",
     "boilerplate",
-    "flexible",
     "scss",
     "sass",
-    "internet-explorer",
-    "ie9",
-    "ie10",
-    "ie11",
-    "gulpjs",
     "typography",
+    "dark",
     "dark-theme",
     "darkmode"
   ],

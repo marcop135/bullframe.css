@@ -1,5 +1,5 @@
-/*! bullframe.css (classless) v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */
-
+/*! bullframe.css v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! custom build: bullframe-utilities */
 .bf-container,
 .bf-container--fluid {
   box-sizing: content-box;
@@ -12,8 +12,7 @@
   padding-right: 1.5rem;
 }
 
-.bf-container:before,
-.bf-container:after,
+.bf-container:before, .bf-container:after,
 .bf-container--fluid:before,
 .bf-container--fluid:after {
   display: table;
@@ -26,8 +25,8 @@
 }
 
 .bf-container {
-  max-width: 1152px;
-  max-width: 115.2rem;
+  max-width: 1140px;
+  max-width: 114rem;
 }
 
 .bf-row {
@@ -37,8 +36,8 @@
   margin-right: -15px;
   margin-right: -1.5rem;
 }
-.bf-row:before,
-.bf-row:after {
+
+.bf-row:before, .bf-row:after {
   content: " ";
   display: table;
 }
@@ -288,7 +287,7 @@ table th[class^="bf-col"] {
   top: 50% !important;
   left: 50% !important;
   -webkit-transform: translate(-50%, -50%) !important;
-  transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
 }
 
 .bf-width-25 {
@@ -485,28 +484,22 @@ table th[class^="bf-col"] {
 
 .bf-no-select {
   -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   -webkit-touch-callout: none !important;
 }
 
 .bf-font-sans-serif {
-  font-family: Catamaran, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji" !important;
+  font-family: Catamaran, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .bf-font-serif {
-  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .bf-font-monospace {
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
-    "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .bf-h1,
@@ -584,9 +577,9 @@ body.bf-responsive-typography {
   overflow: visible;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-radius: 2.5px;
   border-radius: 0.25rem;
   border: 0;
@@ -594,45 +587,46 @@ body.bf-responsive-typography {
   background: #ccc;
   transition: all 0.2s;
 }
-.bf-btn:hover,
-.bf-btn:active,
-.bf-btn:focus {
+
+.bf-btn:hover, .bf-btn:active, .bf-btn:focus {
   text-decoration: none;
   color: #222;
   background: #b3b3b3;
 }
-.bf-btn:active,
-.bf-btn:focus {
+
+.bf-btn:active, .bf-btn:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
+
 .bf-btn:focus {
   outline: 0;
 }
+
 .bf-btn.bf-btn--primary {
   color: #fff;
   background: #007bff;
 }
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+
+.bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
   color: #fff;
   background: #0062cc;
 }
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+
+.bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
-.bf-btn:disabled .bf-btn[aria-disabled="true"] {
+.bf-btn:disabled
+.bf-btn[aria-disabled="true"] {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
   -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
 }
@@ -655,9 +649,9 @@ fieldset[disabled] .bf-btn,
   cursor: not-allowed !important;
   pointer-events: none !important;
   -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
   background-color: #fff;
@@ -678,17 +672,16 @@ button.bf-disabled,
   cursor: not-allowed;
   pointer-events: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   box-shadow: none;
   opacity: 0.5;
   color: #222;
   background: #ccc;
 }
-button.bf-disabled:hover,
-button.bf-disabled:active,
-button.bf-disabled:focus,
+
+button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
 [type="button"].bf-disabled:hover,
 [type="button"].bf-disabled:active,
 [type="button"].bf-disabled:focus,
@@ -711,17 +704,16 @@ button.bf-disabled:focus,
   cursor: not-allowed;
   pointer-events: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   box-shadow: none;
   opacity: 0.5;
   color: #fff;
   background: #007bff;
 }
-.bf-btn--primary.bf-disabled:hover,
-.bf-btn--primary.bf-disabled:active,
-.bf-btn--primary.bf-disabled:focus {
+
+.bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus {
   box-shadow: none;
   color: #fff;
   background: #007bff;
@@ -758,14 +750,17 @@ dt {
   padding: 0;
   overflow: hidden;
 }
+
 .bf-embed-responsive::before {
   display: block;
   content: "";
   padding-top: 56.25%;
 }
+
 .bf-embed-responsive.bf-embed-responsive--4-3::before {
   padding-top: 75%;
 }
+
 .bf-embed-responsive .bf-embed-responsive--item,
 .bf-embed-responsive iframe,
 .bf-embed-responsive embed,
@@ -895,11 +890,11 @@ dt {
   .bf-reduced-motion *::before,
   .bf-reduced-motion *::after {
     -webkit-animation-delay: -1ms !important;
-    animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
     -webkit-animation-duration: 1ms !important;
-    animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
     -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     background-attachment: initial !important;
     scroll-behavior: auto !important;
     transition-delay: 0s !important;

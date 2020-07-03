@@ -1,5 +1,5 @@
-/*! bullframe.css (classless) v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */
-
+/*! bullframe.css v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! custom build: bullframe-classless */
 *,
 *:before,
 *:after {
@@ -36,8 +36,8 @@ template {
 
 html {
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   font-size: 62.5%;
   color: #222;
   font-family: sans-serif;
@@ -52,14 +52,12 @@ body {
   line-height: 1.5;
   font-weight: 400;
   text-align: left;
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
-    Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
   background-color: #fff;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 h1,
@@ -155,8 +153,8 @@ pre {
   word-wrap: break-word;
   white-space: pre;
   -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
   -ms-overflow-style: auto;
   display: block;
 }
@@ -165,9 +163,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
-    "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.875em;
 }
 
@@ -190,13 +186,13 @@ abbr[data-original-title] {
   cursor: help;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
   -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   -webkit-text-decoration-skip: none;
-  text-decoration-skip: none;
+          text-decoration-skip: none;
 }
 
 mark {
@@ -276,12 +272,12 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  text-decoration-skip: objects;
+          text-decoration-skip: objects;
   -webkit-text-decoration-skip-ink: objects;
-  text-decoration-skip-ink: objects;
+          text-decoration-skip-ink: objects;
 }
-a:hover,
-a:focus {
+
+a:hover, a:focus {
   text-decoration: underline;
   color: #0056b3;
 }
@@ -421,8 +417,8 @@ meter {
 
 progress[value] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
   height: 20px;
   height: 2rem;
@@ -614,8 +610,8 @@ textarea {
 [type="datetime-local"],
 [type="month"] {
   -webkit-appearance: listbox;
-  -moz-appearance: listbox;
-  appearance: listbox;
+     -moz-appearance: listbox;
+          appearance: listbox;
 }
 
 button,
@@ -680,15 +676,14 @@ button,
   overflow: visible;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border: 0;
   background-image: none;
 }
-button:hover,
-button:active,
-button:focus,
+
+button:hover, button:active, button:focus,
 [type="button"]:hover,
 [type="button"]:active,
 [type="button"]:focus,
@@ -713,18 +708,15 @@ input[type="button"],
   cursor: pointer;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #666;
 }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   color: #666;
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #666;
 }
 
@@ -783,8 +775,7 @@ textarea {
   }
 }
 
-@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75),
-  screen and (min-width: 0\0) and (min-resolution: 72dpi) {
+@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75), screen and (min-width: 0\0) and (min-resolution: 72dpi) {
   [type="email"],
   [type="number"],
   [type="password"],
@@ -804,8 +795,7 @@ textarea {
   }
 }
 
-[type="email"]:active,
-[type="email"]:focus,
+[type="email"]:active, [type="email"]:focus,
 [type="number"]:active,
 [type="number"]:focus,
 [type="password"]:active,
@@ -855,9 +845,8 @@ button,
   background: #ccc;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 }
-button:hover,
-button:active,
-button:focus,
+
+button:hover, button:active, button:focus,
 [type="button"]:hover,
 [type="button"]:active,
 [type="button"]:focus,
@@ -871,8 +860,8 @@ button:focus,
   color: #222;
   background: #b3b3b3;
 }
-button:active,
-button:focus,
+
+button:active, button:focus,
 [type="button"]:active,
 [type="button"]:focus,
 [type="reset"]:active,
@@ -918,17 +907,17 @@ label[aria-disabled="true"] {
   cursor: not-allowed !important;
   pointer-events: none !important;
   -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
 }
 
 select:not([size]):not([multiple]) {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 select::-ms-expand {
@@ -936,9 +925,7 @@ select::-ms-expand {
 }
 
 select:not([size]):not([multiple]) {
-  background: #fff
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-    no-repeat right 0.85rem center/8px 10px;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
   padding-right: 20px;
   padding-right: 2rem;
 }
@@ -968,14 +955,12 @@ select[dir="rtl"]:not([size]):not([multiple]) {
   }
 }
 
-@supports (
-  (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)
-) {
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   [type="checkbox"],
   [type="radio"] {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     height: 1.8rem;
     width: 1.8rem;
     vertical-align: top;
@@ -990,8 +975,8 @@ select[dir="rtl"]:not([size]):not([multiple]) {
     margin-left: 0.5rem;
   }
   *[dir="rtl"] [type="checkbox"] + label,
-  [type="checkbox"][dir="rtl"] + label,
-  *[dir="rtl"] [type="radio"] + label,
+  [type="checkbox"][dir="rtl"] + label, *[dir="rtl"]
+  [type="radio"] + label,
   [type="radio"][dir="rtl"] + label {
     margin-left: 0;
     margin-right: 5px;
@@ -1016,7 +1001,7 @@ select[dir="rtl"]:not([size]):not([multiple]) {
     border-radius: 50%;
     background: #fff;
     -webkit-transform: scale(0.35);
-    transform: scale(0.35);
+            transform: scale(0.35);
   }
   [type="checkbox"]:after {
     width: 0.6rem;
@@ -1027,7 +1012,7 @@ select[dir="rtl"]:not([size]):not([multiple]) {
     left: 35%;
     top: 20%;
     -webkit-transform: rotate(43deg);
-    transform: rotate(43deg);
+            transform: rotate(43deg);
   }
 }
 

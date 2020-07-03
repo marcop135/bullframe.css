@@ -32,7 +32,8 @@
     "typography",
     "dark",
     "dark-theme",
-    "darkmode"
+    "darkmode",
+    "gulpfriendly"
   ],
   "author": "Marco Pontili",
   "license": "MIT",

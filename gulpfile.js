@@ -49,7 +49,7 @@ function scssTask() {
       .pipe(sourcemaps.init())
 
       // compile SCSS to CSS
-      .pipe(sass())
+      .pipe(sass.sync({outputStyle: "expanded"}))
 
       // PostCSS plugins
       .pipe(postcss([autoprefixer()]))

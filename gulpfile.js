@@ -15,6 +15,7 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const sourcemaps = require("gulp-sourcemaps");
 const rename = require("gulp-rename");
+const replace = require("gulp-replace");
 const browserSync = require("browser-sync");
 
 const server = browserSync.create();
@@ -50,6 +51,13 @@ function scssTask() {
 
       // compile SCSS to CSS
       .pipe(sass.sync({outputStyle: "expanded"}))
+
+      // replace Node-sass auto-built charset with a useful comment
+      // https://stackoverflow.com/a/51886455/4027098
+      .pipe(replace(
+        '@charset "UTF-8";', 
+        '/*! bullframe.css v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */',
+        ))
 
       // PostCSS plugins
       .pipe(postcss([autoprefixer()]))

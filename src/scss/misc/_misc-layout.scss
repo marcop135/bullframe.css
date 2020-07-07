@@ -1,8 +1,9 @@
 // known issues in IE8 and IE9 with box-sizing
 // https://css-tricks.com/box-sizing/#article-header-id-5
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

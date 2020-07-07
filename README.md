@@ -353,7 +353,7 @@ Get all the utility classes
 - `.bf-width-100`
 - `.bf-width-auto`
 
-### Spacing
+#### Spacing
 
 - `.bf-m-0`
 - `.bf-m-t-0`
@@ -378,7 +378,7 @@ Get all the utility classes
 - `.bf-p-b-3`
 - `.bf-p-b-4`
 
-### Texts
+#### Texts
 
 - `.bf-t-transform-uppercase`
 - `.bf-t-transform-none`
@@ -409,14 +409,16 @@ Get all the utility classes
 - `.bf-lead`
 - `.bf-responsive-typography`
 
-### Lists
+#### Lists
 
 - `.bf-list-unstyled`
 
-### Tables
+#### Tables
 
 - `.bf-table`
 - `.bf-table-responsive`
+- `.bf-table--zebra`
+- `.bf-table-responsive--zebra`
 
 #### Embeds
 
@@ -435,7 +437,7 @@ Get all the utility classes
 - `.bf-disabled`
 - `.bf-invalid`
 
-### Reduced motion
+#### Reduced motion
 
 - `.bf-reduced-motion`
 

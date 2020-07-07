@@ -164,51 +164,6 @@ Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-fi
 
 #### IE8+ and old browsers
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
-
-<!-- enable HTML5 elements, and fix IE10 viewport on Windows 8 -->
-<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"></script>
-</head>
-<body>
-  <div class="bf-container">
-    <h1>Hello World!</h1>
-  </div>
-
-</body>
-</html>
-```
-
-#### IE11+ and modern browsers
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
-
-</head>
-<body>
-  <div class="bf-container">
-    <h1>Hello World!</h1>
-  </div>
-
-</body>
-</html>
-```
-
-#### IE8+ and old browsers (recommended)
-
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
 ```html
@@ -243,7 +198,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 </html>
 ```
 
-#### IE11+ and modern browsers (recommended)
+#### IE11+ and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 

@@ -4,11 +4,13 @@ pre {
 }
 
 pre {
+  display: block;
   overflow: auto;
   word-break: break-all; // webkit
   word-wrap: break-word;
   white-space: pre;
   hyphens: none;
+
   // this is a not standard CSS property, so it's for IE only
   // https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
   //
@@ -32,7 +34,6 @@ samp {
   /* KDE Plasma 4+ */ "Oxygen Mono",
   /* Linux/OpenOffice fallback */ "Liberation Mono", 
   /* fallback */ monospace,
-
   /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
 
@@ -51,6 +52,7 @@ a > code {
 
 pre code {
   font-size: inherit;
+  color: inherit;
   word-break: normal;
 }
 

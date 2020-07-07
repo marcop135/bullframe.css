@@ -1,8 +1,8 @@
 /*! bullframe.css v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */
 /*! custom build: bullframe-classless */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

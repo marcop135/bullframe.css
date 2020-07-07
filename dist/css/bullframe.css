@@ -147,6 +147,7 @@ pre {
 }
 
 pre {
+  display: block;
   overflow: auto;
   word-break: break-all;
   word-wrap: break-word;
@@ -170,8 +171,13 @@ code {
   word-wrap: break-word;
 }
 
+a > code {
+  color: inherit;
+}
+
 pre code {
   font-size: inherit;
+  color: inherit;
   word-break: normal;
 }
 

@@ -45,6 +45,10 @@ code {
   word-wrap: break-word;
 }
 
+a > code {
+  color: inherit;
+}
+
 pre code {
   font-size: inherit;
   word-break: normal;

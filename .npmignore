@@ -1,9 +1,6 @@
 /.git
 /.github
 /docs/screenshots-screencasts
-.editorconfig
-.gitignore
-CHANGELOG.md
-CODE_OF_CONDUCT.md
-.config.yml
-CONTRIBUTING.md
+config.yml
+browserconfig.xml
+SECURITY.md

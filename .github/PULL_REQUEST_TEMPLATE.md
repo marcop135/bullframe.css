@@ -1,31 +1,44 @@
-<!-- PLEASE READ THE FOLLOWING INSTRUCTIONS -->
-<!-- DO NOT REBUILD THE CSS OUTPUT IN YOUR PR -->
+# Pull request template
 
-<!-- Choose one of the following: -->
-This is a **new feature | improvement | bugfix | documentation fix**.
-<!-- New feature? Update the CHANGELOG.md too, and eventually the Docs. -->
-<!-- Improvement? Explain how and why. -->
-<!-- Bugfix? Reference that issue as well. -->
+Please read the following instructions
 
-### Proposed solution
+Do not rebuild the CSS output in your PR
 
-<!-- Which specific problem does this PR solve and how?  -->
-<!-- If it fixes a particular Issue, add "Fixes #ISSUE_NUMBER" in your title -->
+## What is
 
-### Tradeoffs
+- new feature
+- improvement
+- bugfix
+- documentation fix
 
-<!-- What are the drawbacks of this solution? Are there alternative ones? -->
-<!-- Think of performance, build time, usability, complexity, coupling…) -->
+New feature? Update the [CHANGELOG.md](https://github.com/marcop135/bullframe.css/blob/master/CHANGELOG.md) too, and eventually the Docs
 
-### Testing Done
+Improvement? Explain how and why
 
-None.
+Bugfix? Reference that issue as well
 
-<!-- How have you confirmed this feature works? -->
-<!-- Please explain more than "Yes". -->
+## Proposed solution
 
-### Changelog updated?
+Which specific problem does this PR solve and how?
 
-No.
+If it fixes a particular Issue, add "Fixes #ISSUE_NUMBER" in your title
 
-<!-- Thanks! -->
+## Tradeoffs
+
+What are the drawbacks of this solution? Are there alternative ones?
+
+Think of performance, build time, usability, complexity, coupling…)
+
+## Testing Done
+
+How have you confirmed this feature works?
+
+Please explain more than "Yes".
+
+## Changelog updated
+
+You did it?
+
+---
+
+_Thanks!_

@@ -1,6 +1,6 @@
 # bullframe.css
 
-![bullframe.css logo](./docs/images/logo-full.png)
+![bullframe.css logo](./docs/images-readme/logo-full.png)
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
@@ -24,7 +24,7 @@ Getting started:
 - [npm](#npm)
 - [HTML template IE8+](#ie8-and-old-browsers)
 - [HTML template IE11+](#ie11-and-modern-browsers)
-- [Codepen collection](#codepen)
+- [Codepen](#codepen)
 
 Customization:
 
@@ -54,7 +54,7 @@ More:
 - Dark mode
 - Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
 - Isolated utility classes to avoid conflicts between frameworks' classes
-- `bullframe-classless.min.css` is just 10KB~ 🎉
+- [`bullframe-classless.min.css`](https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe-classless.min.css) is just 10KB~ min+gzip 🎉
 
 ## Internet Explorer usage and support
 
@@ -124,7 +124,7 @@ bullframe.css/
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
 ```
 
 ### npm
@@ -133,7 +133,26 @@ Once you have installed [Node.js](https://nodejs.org/en/download/), you can run 
 
 `npm install bullframe.css`
 
+[What is Node?](https://en.m.wikipedia.org/wiki/Nodejs)
+
 [What is npm?](https://www.npmjs.com/get-npm)
+
+### Gulp.js
+
+After installing bullframe.css from npm, you may use [gulp.js](https://gulpjs.com/docs/en/getting-started/quick-start) to re-compile all files, and customize your Sass project as needed.
+
+``` bash
+# install dependencies
+npm install
+
+# install the gulp command line utility
+npm install --global gulp-cli
+
+# run gulp
+gulp
+```
+
+[What is gulp.js?](https://en.m.wikipedia.org/wiki/Gulp.js)
 
 ### HTML
 
@@ -144,51 +163,6 @@ Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-fi
 [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
 
 #### IE8+ and old browsers
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css">
-
-<!-- enable HTML5 elements, and fix IE10 viewport on Windows 8 -->
-<script src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"></script>
-</head>
-<body>
-  <div class="bf-container">
-    <h1>Hello World!</h1>
-  </div>
-
-</body>
-</html>
-```
-
-#### IE11+ and modern browsers
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css">
-
-</head>
-<body>
-  <div class="bf-container">
-    <h1>Hello World!</h1>
-  </div>
-
-</body>
-</html>
-```
-
-#### IE8+ and old browsers (recommended)
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
@@ -203,8 +177,8 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css"
-  integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
+  href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
+  integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
   crossorigin="anonymous"
 >
 
@@ -224,7 +198,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 </html>
 ```
 
-#### IE11+ and modern browsers (recommended)
+#### IE11+ and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
@@ -237,8 +211,8 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe.min.css"
-  integrity="sha384-xL9PVrDQt5lFLFaPOMR1xJKpBz83hP1cjuND8oIMxl3kIM6yFyp7xzRChkB5ugUN"
+  href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
+  integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
   crossorigin="anonymous"
 >
 
@@ -256,6 +230,12 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
 
+### Use bullframe.css as a CodePen template
+
+- [Light theme (default)](https://codepen.io/pen?template=WNrwNNM)
+- [Dark theme](https://codepen.io/pen?template=ExPmzBV)
+- [Dark `prefers-color-scheme`](https://codepen.io/pen?template=NWxjVQO)
+
 ## Customization
 
 ### No classes (classless)
@@ -266,7 +246,7 @@ Just drop this CSS file in your webpage, and the job is done!
 Write semantic HTML and get nice styles and cross-browser normalization.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-classless.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css">
 ```
 
 ### Just utilities
@@ -274,7 +254,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 Get all the utility classes
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-utilities.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
 ```
 
 ### Utilities - A Quick Overview
@@ -286,9 +266,7 @@ Get all the utility classes
 - `.bf-container--break-xs`
 - `.bf-container--break-md`
 - `.bf-container--break-lg`
--
 - `.bf-row`
--
 - `.bf-col-1`
 - `.bf-col-2`
 - `.bf-col-3`
@@ -305,7 +283,6 @@ Get all the utility classes
 #### Layout
 
 - `.bf-clearfix`
--
 - `.bf-hide`
 - `.bf-hidden`
 - `.bf-text-hide`
@@ -313,75 +290,71 @@ Get all the utility classes
 - `.bf-sr-only.focusable`
 - `.bf-invisible`
 - `.bf-visible`
--
 - `.bf-display-block`
 - `.bf-display-block-center`
--
 - `.bf-display-inline`
 - `.bf-display-inline-block`
 - `.bf-display-flex`
 - `.bf-display-inline-flex`
--
 - `.bf-float-right`
 - `.bf-float-left`
 - `.bf-position-fixed`
--
 - `.bf-align-center-unknown`
 - `.bf-align-center-unknown--item`
+- `.bf-width-25`
+- `.bf-width-33`
+- `.bf-width-50`
+- `.bf-width-75`
+- `.bf-width-100`
+- `.bf-width-auto`
 
-### Spacing
+#### Spacing
 
 - `.bf-m-0`
 - `.bf-m-t-0`
 - `.bf-m-b-0`
 - `.bf-m-l-0`
 - `.bf-m-r-0`
-- `.bf-m-b-6`
-- `.bf-m-b-12`
-- `.bf-m-b-24`
-- `.bf-m-b-36`
--
+- `.bf-m-b-1`
+- `.bf-m-b-2`
+- `.bf-m-b-3`
+- `.bf-m-b-4`
 - `.bf-p-0`
 - `.bf-p-t-0`
 - `.bf-p-b-0`
 - `.bf-p-l-0`
 - `.bf-p-r-0`
-- `.bf-p-t-6`
-- `.bf-p-t-12`
-- `.bf-p-t-24`
-- `.bf-p-t-36`
-- `.bf-p-b-6`
-- `.bf-p-b-12`
-- `.bf-p-b-24`
-- `.bf-p-b-36`
+- `.bf-p-t-1`
+- `.bf-p-t-2`
+- `.bf-p-t-3`
+- `.bf-p-t-4`
+- `.bf-p-b-1`
+- `.bf-p-b-2`
+- `.bf-p-b-3`
+- `.bf-p-b-4`
 
-### Texts
+#### Texts
 
 - `.bf-t-transform-uppercase`
 - `.bf-t-transform-none`
--
 - `.bf-t-left`
 - `.bf-t-center`
 - `.bf-t-right`
--
 - `.bf-t-shadow`
--
 - `.bf-t-italic`
 - `.bf-t-style-normal`
--
+- `.bf-t-weight-300`
 - `.bf-t-weight-400`
 - `.bf-t-weight-500`
 - `.bf-t-weight-600`
 - `.bf-t-weight-700`
--
+- `.bf-t-weight-800`
 - `.bf-text-break`
 - `.bf-text-truncate`
 - `.bf-no-select`
--
 - `.bf-font-sans-serif`
 - `.bf-font-serif`
 - `.bf-font-monospace`
--
 - `.bf-h1`
 - `.bf-h2`
 - `.bf-h3`
@@ -389,17 +362,18 @@ Get all the utility classes
 - `.bf-h5`
 - `.bf-h6`
 - `.bf-lead`
--
 - `.bf-responsive-typography`
 
-### Lists
+#### Lists
 
 - `.bf-list-unstyled`
 
-### Tables
+#### Tables
 
 - `.bf-table`
 - `.bf-table-responsive`
+- `.bf-table--zebra`
+- `.bf-table-responsive--zebra`
 
 #### Embeds
 
@@ -418,23 +392,23 @@ Get all the utility classes
 - `.bf-disabled`
 - `.bf-invalid`
 
-### Reduced motion
+#### Reduced motion
 
 - `.bf-reduced-motion`
 
 ### Dark mode
 
-This enables a dark (dark-mode) style by default in all browsers:
+This enables a dark (dark-mode) theme by default in all browsers:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-dark.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
 ```
 
-And this, enables a dark-mode only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
+And this, enables dark only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
 ```
 
 ## Browser compatibility
@@ -461,7 +435,7 @@ You can take a look at the [.browserslistrc](https://github.com/marcop135/bullfr
 
 This project is tested in a wide range of browsers using also [BrowserStack](https://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
-![BrowserStack Logo](./docs/images/browserstack-logo.png)
+![BrowserStack Logo](./docs/images-readme/browserstack-logo.png)
 
 ### Screenshots
 
@@ -491,9 +465,10 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 
 - @necolas [/normalize.css](https://github.com/necolas/normalize.css) for the extensive old browsers bug fixing documentation
 - @h5bp [/main.css](https://github.com/h5bp/main.css) for the excellent print styles base and the keyboard utilities
-- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, base24 SVG icons, button styles, grid system breakpoints and spacing utilities _(a lot!)_
+- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, reboot styles, base24 SVG icons, button styles, grid system breakpoints and spacing utilities _(a lot!)_
 - @kognise [/water.css](https://github.com/kognise/water.css) for the "classless" concept inspiration and some form tricks
 - @csswizardry @inuitcss [/inuit.css](https://github.com/inuitcss/inuitcss) for some advanced Sass tips and tricks
+- @jensimmons [/cssremedy](https://github.com/jensimmons/cssremedy) for the prefers-reduced-motion snippet
 
 ## License
 

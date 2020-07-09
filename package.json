@@ -1,12 +1,10 @@
 {
   "name": "bullframe.css",
-  "version": "3.3.0",
+  "version": "3.2.0",
   "description": "Solid, fluid, IE-friendly (S)CSS framework",
-  "main": "dist/css/bullframe.css",
-  "unpkg": "dist/css/bullframe.css",
-  "jsdelivr": "dist/css/bullframe.css",
+  "main": "gulpfile.js",
   "directories": {
-    "doc": "docs/"
+    "doc": "docs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,24 +16,23 @@
   "keywords": [
     "css",
     "css-framework",
-    "internet-explorer",
-    "cross-browser",
     "ie8",
-    "ie9",
-    "ie10",
-    "ie11",
     "responsive-web-design",
     "fluid",
     "reset-css",
     "normalize-css",
     "boilerplate",
+    "flexible",
     "scss",
     "sass",
+    "internet-explorer",
+    "ie9",
+    "ie10",
+    "ie11",
+    "gulpjs",
     "typography",
-    "dark",
     "dark-theme",
-    "darkmode",
-    "gulpfriendly"
+    "darkmode"
   ],
   "author": "Marco Pontili",
   "license": "MIT",
@@ -44,14 +41,13 @@
   },
   "homepage": "https://marcop135.github.io/bullframe.css/",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-postcss": "^8.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "cssnano": "^4.1.10",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-rename": "2.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {}
+    "browser-sync": "^2.26.7"
+  }
 }

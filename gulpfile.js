@@ -13,8 +13,8 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+const sourcemaps = require("gulp-sourcemaps");
 const rename = require("gulp-rename");
-const replace = require("gulp-replace");
 const browserSync = require("browser-sync");
 
 const server = browserSync.create();
@@ -29,7 +29,6 @@ function serve(done) {
   server.init({
     server: {
       baseDir: "./",
-      index: "./docs/test/index.html",
     },
   });
   done();
@@ -37,52 +36,42 @@ function serve(done) {
 
 // File paths to watch
 const files = {
-  htmlPath: "docs/test/*.html",
+  htmlPath: "*.html",
   scssPath: "src/scss/**/*.scss",
 };
 
 // Sass task
 function scssTask() {
   return (
-    src(files.scssPath, {
-      sourcemaps: true,
-    })
-    
-    // compile SCSS to CSS
-    .pipe(sass.sync({ outputStyle: "expanded" }))
+    src(files.scssPath)
+      // initialize sourcemaps first
+      .pipe(sourcemaps.init())
 
-    // replace Node-sass auto-built charset with a useful comment
-    // https://stackoverflow.com/a/51886455/4027098
-    .pipe(
-      replace(
-        '@charset "UTF-8";',
-        "/*! bullframe.css v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */"
-      )
+      // compile SCSS to CSS
+      .pipe(sass())
+
+      // PostCSS plugins
+      .pipe(postcss([autoprefixer()]))
+
+      // write pre-minifies styles
+      .pipe(dest("dist/css"))
+
+      // PostCSS plugins
+      .pipe(postcss([cssnano()]))
+
+      // write sourcemaps files
+      .pipe(sourcemaps.write("./sourcemaps"))
+
+      // rename files
+      .pipe(
+        rename({
+          suffix: ".min",
+        })
     )
-
-    // PostCSS plugins
-    .pipe(postcss([autoprefixer()]))
-
-    // write pre-minifies styles
-    .pipe(dest("dist/css"))
-
-    // PostCSS plugins
-    .pipe(postcss([cssnano()]))
-
-    // rename files
-    .pipe(
-      rename({
-        suffix: ".min",
-      })
-    )
-
+      
     // put final CSS in dist folder
-    .pipe(
-      dest("dist/css", {
-        sourcemaps: ".",
-      })
-    )
-  );
+    .pipe(dest("dist/css"))
+  ); 
 }
 
 // watch task: watch SCSS, JS, image and HTML files for changes

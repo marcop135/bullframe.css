@@ -99,8 +99,11 @@ legend {
   color: inherit;
 }
 
+@media screen\0 {
+}
+
 label {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 90%;
   line-height: 1.375;
   margin-bottom: $bf-spacing-md-px;

@@ -29,7 +29,7 @@ function serve(done) {
   server.init({
     server: {
       baseDir: "./",
-      index: "./docs/test/index.html",
+      index: "./index.html",
     },
   });
   done();
@@ -37,7 +37,7 @@ function serve(done) {
 
 // File paths to watch
 const files = {
-  htmlPath: "docs/test/*.html",
+  htmlPath: "./*.html",
   scssPath: "src/scss/**/*.scss",
 };
 

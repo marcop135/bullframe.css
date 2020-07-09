@@ -2,4 +2,5 @@
 /.github
 /docs/screenshots-screencasts
 config.yml
+browserconfig.xml
 SECURITY.md

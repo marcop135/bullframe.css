@@ -1,24 +1,24 @@
 /* just for a nicer demo */
 
 .test .bf-row {
-  margin-bottom: 20px;
-  margin-bottom: 2rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .test [class^="bf-col"] {
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
 }
 
 @media (max-width: 575px) {
   .test header {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
 }
 
 .test header h1 {
-  margin-top: 10px;
-  margin-top: 1rem;
+  margin-top: 12px;
+  margin-top: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -48,8 +48,8 @@
 }
 
 .test header a {
-  margin-right: 10px;
-  margin-right: 1rem;
+  margin-right: 12px;
+  margin-right: 1.2rem;
 }
 
 @media (min-width: 600px) {
@@ -60,14 +60,14 @@
 }
 
 .test .h2--section {
-  padding-top: 20px;
-  padding-bottom: 2rem;
+  padding-top: 24px;
+  padding-bottom: 2.4rem;
   text-transform: uppercase;
 }
 
 .test legend {
-  padding-bottom: 10px;
-  padding-bottom: 1rem;
+  padding-bottom: 12px;
+  padding-bottom: 1.2rem;
 }
 
 .test button,
@@ -76,8 +76,8 @@
 .test input,
 .test select,
 .test textarea {
-  margin-bottom: 20px;
-  margin-bottom: 2rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .test [type="image"],
@@ -112,8 +112,8 @@
   }
 
   .test .grid [class*="bf-col-"] {
-    margin-bottom: 20px;
-    margin-bottom: 2rem;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 }
 

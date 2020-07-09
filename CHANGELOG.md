@@ -1,5 +1,17 @@
 # Changes to bullframe.css
 
+## 3.3.0 (July 09, 2020)
+
+* changed grid system container `max-width` to match Bootstrap Grid (now is 1140px + gutters)
+* chanced margin/padding utilities naming
+* added refinements to `.bf-table` and `.bf-table-responsive` utilities
+  * added zebra striping utility
+* added more `font-weight` utilities
+* added more width-related utilities
+* changed JSDelivr CDN paths from GitHub to npm
+* updated screenshots and screencasts files
+* added GitHub, Gulp, npm and Sass minor improvements
+
 ## 3.2.0 (June 16, 2020)
 
 * changed grid gutter width to match Bootstrap Grid

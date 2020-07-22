@@ -78,8 +78,6 @@ You'll see something like this:
 ```text
 bullframe.css/
 └── dist/
-    └── sourcemaps/
-    │   ├── ...
     ├── css/
     │   ├── bullframe-classless.css
     │   ├── bullframe-classless.min.css
@@ -91,6 +89,8 @@ bullframe.css/
     │   ├── bullframe-utilities.min.css
     │   ├── bullframe.css
     │   ├── bullframe.min.css
+    │   ├── bullframe.min.css.map
+    │   ├── ...
 └── src/scss/
     └── forms/
     │   ├── ...

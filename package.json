@@ -1,10 +1,10 @@
 {
   "name": "bullframe.css",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "Solid, fluid, IE-friendly (S)CSS framework",
-  "main": "dist/css/bullframe.css",
-  "unpkg": "dist/css/bullframe.css",
   "jsdelivr": "dist/css/bullframe.css",
+  "unpkg": "dist/css/bullframe.css",
+  "main": "dist/css/bullframe.css",
   "directories": {
     "doc": "docs/"
   },

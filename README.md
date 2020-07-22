@@ -67,7 +67,7 @@ Short answer: **yes!** Enterprise-level companies, legacy business applications,
 
 Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) to get more developers' points of view.
 
-! Bootstrap v5 [will drop IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
+! Bootstrap v5 [dropped IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
 
 ---
 
@@ -90,8 +90,7 @@ bullframe.css/
     │   ├── bullframe.css
     │   ├── bullframe.min.css
     │   ├── ...
-    │   ├── bullframe-classless.css
-    │   ├── ...
+    │   ├── bullframe-classless.css.map
     │   ├── bullframe.min.css.map
     │   ├── ...
 └── src/scss/

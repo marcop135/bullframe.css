@@ -1,5 +1,22 @@
 # Changes to bullframe.css
 
+## 3.2.0 (June 16, 2020)
+
+* changed grid gutter width to match Bootstrap Grid
+* added support for RTL [12](https://github.com/marcop135/bullframe.css/issues/12)
+* added `datalist` normalization [13](https://github.com/marcop135/bullframe.css/issues/13)
+* added `progress` normalization
+* added dark theme scrollbars normalization
+* added webkit/blink/gecko/trident screenshots/screencasts
+* added quick overview of the utilities in README.md
+* added more examples in `index.html`
+* added SCSS file structure improvements
+* added responsive typography improvements
+* added form states (e.g. `:invalid`) improvements [#14](https://github.com/marcop135/bullframe.css/issues/14)
+* added `prefers-reduced-motion: reduce` improvements
+* added `line-height` improvements
+* added `font-weight` improvements
+
 ## 3.1.0 (May 23, 2020)
 
 * fixed broken CDN URL paths [#6](https://github.com/marcop135/bullframe.css/issues/6)

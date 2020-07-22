@@ -154,24 +154,29 @@ p.bf-lead {
 }
 
 // responsive typography
-// Read and view more https://codepen.io/marcop135/pen/eYmPmJm
-//
-// ! currently (April 2020), a few modern browsers support the "@supports" media rules
-// https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
-// https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
-//
-// Anyway are safe and future-friendly because more browser compatibility
-// will come
-@supports (appearance: none) {
-  @media (min-width: 320px) {
-    body.bf-responsive-typography {
-      font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680));
-    }
-  }
+// https://codepen.io/marcop135/pen/eYmPmJm
+// https://css-tricks.com/snippets/css/fluid-typography/
+// 
+// old browsers that don't support CSS variables ignore what follows 
+// (mostly IE and Opera Mini)
+// in this way, old browsers will ignore 'calc' property too, avoiding issues
+// https://caniuse.com/#feat=calc
+// https://caniuse.com/#feat=css-variables
+// https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+body.bf-responsive-typography {
+  --body-rt-font-size-flex: calc(1.7rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 2rem;
+}
 
-  @media (min-width: 1000px) {
-    body.bf-responsive-typography {
-      font-size: 2rem;
-    }
+@media (min-width: 320px) {
+  body.bf-responsive-typography {
+    font-size: var(--body-rt-font-size-flex);
   }
 }
+
+@media (min-width: 1000px) {
+  body.bf-responsive-typography {
+    font-size: var(--body-rt-font-size-max);
+  }
+}
+

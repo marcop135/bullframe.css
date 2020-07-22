@@ -58,13 +58,13 @@ input[list],
 select,
 select:not([size]):not([multiple]),
 textarea {
-  background-color: lighten($bf-dark-extra, 2.5%);
+  background-color: $bf-dark-extra;
   border-color: $bf-black;
   color: $bf-gray-light;
 
   &:active,
   &:focus {
-    background-color: lighten($bf-dark-extra, 2.5%);
+    background-color: $bf-dark-extra;
     border-color: lighten($bf-blue, 10%);
   }
 }
@@ -176,4 +176,15 @@ button,
   &:focus {
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
   }
+}
+
+.bf-table th,
+.bf-table td {
+  border-color: $bf-gray-dark;
+}
+
+// zebra striping
+.bf-table--zebra tbody tr:nth-child(odd),
+.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  background-color: $bf-gray-dark-extra;
 }

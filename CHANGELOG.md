@@ -1,5 +1,13 @@
 # Changes to bullframe.css
 
+## 3.3.3 (July 22, 2020)
+
+* bump version to fix npm registry
+
+## 3.3.2 (July 22, 2020)
+
+* deprecate this version to fix an error with npm publish
+
 ## 3.3.1 (July 22, 2020)
 
 * fix "What's included" and "Gulp.js" sections in README.md

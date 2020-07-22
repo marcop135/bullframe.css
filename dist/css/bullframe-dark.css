@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! bullframe.css (dark) */
-/*! bullframe.css v3.1.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.2.0 | MIT License | https://github.com/marcop135/bullframe.css */
 *,
 *:before,
 *:after {
@@ -42,9 +42,9 @@ html {
 
 body {
   margin: 0;
-  line-height: 1.5;
   font-size: 17px;
   font-size: 1.7rem;
+  line-height: 1.5;
   font-weight: 400;
   text-align: left;
   font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1356,13 +1356,17 @@ table th[class^="bf-col"] {
 p.bf-lead {
   font-size: 120% !important; }
 
-@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
-  @media (min-width: 320px) {
-    body.bf-responsive-typography {
-      font-size: calc(1.7rem + 3 * ((100vw - 320px) / 680)); } }
-  @media (min-width: 1000px) {
-    body.bf-responsive-typography {
-      font-size: 2rem; } } }
+body.bf-responsive-typography {
+  --body-rt-font-size-flex: calc(1.7rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 2rem; }
+
+@media (min-width: 320px) {
+  body.bf-responsive-typography {
+    font-size: var(--body-rt-font-size-flex); } }
+
+@media (min-width: 1000px) {
+  body.bf-responsive-typography {
+    font-size: var(--body-rt-font-size-max); } }
 
 .bf-btn {
   display: inline-block;
@@ -1630,9 +1634,12 @@ dt {
     border-collapse: collapse !important; } }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  .bf-reduced-motion,
+  .bf-reduced-motion::before,
+  .bf-reduced-motion::after,
+  .bf-reduced-motion *,
+  .bf-reduced-motion *::before,
+  .bf-reduced-motion *::after {
     -webkit-animation-delay: -1ms !important;
             animation-delay: -1ms !important;
     -webkit-animation-duration: 1ms !important;

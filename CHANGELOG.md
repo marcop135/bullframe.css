@@ -1,5 +1,11 @@
 # Changes to bullframe.css
 
+## 3.3.1 (July 22, 2020)
+
+* fix "What's included" and "Gulp.js" sections in README.md
+* fix JSDelivr `package.json` settings
+* minor code improvements
+
 ## 3.3.0 (July 09, 2020)
 
 * changed grid system container `max-width` to match Bootstrap Grid (now is 1140px + gutters)

@@ -89,6 +89,9 @@ bullframe.css/
     │   ├── bullframe-utilities.min.css
     │   ├── bullframe.css
     │   ├── bullframe.min.css
+    │   ├── ...
+    │   ├── bullframe-classless.css
+    │   ├── ...
     │   ├── bullframe.min.css.map
     │   ├── ...
 └── src/scss/
@@ -143,7 +146,8 @@ After installing bullframe.css from npm, you may use [gulp.js](https://gulpjs.co
 
 ``` bash
 # navigate to /node_modules/bullframe.css
-# and install all dependencies
+
+# install all dependencies
 npm install
 
 # run gulp and have fun!

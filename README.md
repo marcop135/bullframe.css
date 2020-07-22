@@ -142,13 +142,11 @@ Once you have installed [Node.js](https://nodejs.org/en/download/), you can run 
 After installing bullframe.css from npm, you may use [gulp.js](https://gulpjs.com/docs/en/getting-started/quick-start) to re-compile all files, and customize your Sass project as needed.
 
 ``` bash
-# install dependencies
+# navigate to /node_modules/bullframe.css
+# and install all dependencies
 npm install
 
-# install the gulp command line utility
-npm install --global gulp-cli
-
-# run gulp
+# run gulp and have fun!
 gulp
 ```
 

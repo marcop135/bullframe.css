@@ -47,41 +47,40 @@ function scssTask() {
     src(files.scssPath, {
       sourcemaps: true,
     })
-    
-    // compile SCSS to CSS
-    .pipe(sass.sync({ outputStyle: "expanded" }))
+      // compile SCSS to CSS
+      .pipe(sass.sync({ outputStyle: "expanded" }))
 
-    // replace Node-sass auto-built charset with a useful comment
-    // https://stackoverflow.com/a/51886455/4027098
-    .pipe(
-      replace(
-        '@charset "UTF-8";',
-        "/*! bullframe.css v3.3.1 | MIT License | https://github.com/marcop135/bullframe.css */"
+      // replace Node-sass auto-built charset with a useful comment
+      // https://stackoverflow.com/a/51886455/4027098
+      .pipe(
+        replace(
+          '@charset "UTF-8";',
+          "/*! bullframe.css v3.3.1 | MIT License | https://github.com/marcop135/bullframe.css */"
+        )
       )
-    )
 
-    // PostCSS plugins
-    .pipe(postcss([autoprefixer()]))
+      // PostCSS plugins
+      .pipe(postcss([autoprefixer()]))
 
-    // write pre-minifies styles
-    .pipe(dest("dist/css"))
+      // write pre-minifies styles
+      .pipe(dest("dist/css"))
 
-    // PostCSS plugins
-    .pipe(postcss([cssnano()]))
+      // PostCSS plugins
+      .pipe(postcss([cssnano()]))
 
-    // rename files
-    .pipe(
-      rename({
-        suffix: ".min",
-      })
-    )
+      // rename files
+      .pipe(
+        rename({
+          suffix: ".min",
+        })
+      )
 
-    // put final CSS in dist folder
-    .pipe(
-      dest("dist/css", {
-        sourcemaps: ".",
-      })
-    )
+      // put final CSS in dist folder
+      .pipe(
+        dest("dist/css", {
+          sourcemaps: ".",
+        })
+      )
   );
 }
 

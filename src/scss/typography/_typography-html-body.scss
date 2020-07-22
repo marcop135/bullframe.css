@@ -21,9 +21,9 @@ html {
 
 body {
   margin: 0;
-  line-height: $bf-line-height; // '1.5' by default
-  font-size: 17px;
-  font-size: 1.7rem;
+  font-size: $bf-body-font-size-px; // '17px' by default
+  font-size: $bf-body-font-size-rem; // '1.7rem' by default
+  line-height: $bf-body-line-height; // '1.5' by default
 
   // this is useful to inherit values for some elements (e.g. forms)
   font-weight: 400;

@@ -29,18 +29,17 @@ Getting started:
 Customization:
 
 - [No classes (Classless)](#no-classes-classless)
+- [Dark theme](#dark-mode)
 - [Utilities only](#just-utilities)
-- [Dark mode](#dark-mode)
 
 More:
 
 - [Test page](https://marcop135.github.io/bullframe.css/)
 - [Browser compatibility](#browser-compatibility)
+- [Utilities overview](#utilities---a-quick-overview)
 - [Screenshots](#screenshots)
 - [Changelog](#changelog)
 - _[Sponsor me!](#become-a-sponsor)_
-
----
 
 ## Best features
 
@@ -95,6 +94,8 @@ bullframe.css/
 └── src/scss/
     └── forms/
     │   ├── ...
+    └── misc/
+    │   ├── ...
     └── mixins/
     │   ├── ...
     └── typography/
@@ -138,7 +139,7 @@ Once you have installed [Node.js](https://nodejs.org/en/download/), you can run 
 
 Add some HTML markup, and two JS polyfills (if you need a wide cross-browser support).
 
-Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-first responsive design), you could polyfill it with [respond.js](https://github.com/scottjehl/Respond). 
+Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-first responsive design), you could polyfill it with [respond.js](https://github.com/scottjehl/Respond).
 
 [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
 
@@ -207,7 +208,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
   crossorigin="anonymous"
 >
 
-<!-- enable HTML5 elements and fix IE10 viewport on Windows 8 -->
+<!-- enable HTML5 element, and fix IE10 viewport on Windows 8 -->
 <script
   src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"
   integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5"
@@ -253,9 +254,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 ## Codepen
 
-Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made template of your choice.
-
----
+Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
 
 ## Customization
 
@@ -278,6 +277,151 @@ Get all the utility classes
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-utilities.min.css">
 ```
 
+### Utilities - A Quick Overview
+
+#### Grid system
+
+- `.bf-container`
+- `.bf-container--fluid`
+- `.bf-container--break-xs`
+- `.bf-container--break-md`
+- `.bf-container--break-lg`
+-
+- `.bf-row`
+-
+- `.bf-col-1`
+- `.bf-col-2`
+- `.bf-col-3`
+- `.bf-col-4`
+- `.bf-col-5`
+- `.bf-col-6`
+- `.bf-col-7`
+- `.bf-col-8`
+- `.bf-col-9`
+- `.bf-col-10`
+- `.bf-col-11`
+- `.bf-col-12`
+
+#### Layout
+
+- `.bf-clearfix`
+-
+- `.bf-hide`
+- `.bf-hidden`
+- `.bf-text-hide`
+- `.bf-sr-only`
+- `.bf-sr-only.focusable`
+- `.bf-invisible`
+- `.bf-visible`
+-
+- `.bf-display-block`
+- `.bf-display-block-center`
+-
+- `.bf-display-inline`
+- `.bf-display-inline-block`
+- `.bf-display-flex`
+- `.bf-display-inline-flex`
+-
+- `.bf-float-right`
+- `.bf-float-left`
+- `.bf-position-fixed`
+-
+- `.bf-align-center-unknown`
+- `.bf-align-center-unknown--item`
+
+### Spacing
+
+- `.bf-m-0`
+- `.bf-m-t-0`
+- `.bf-m-b-0`
+- `.bf-m-l-0`
+- `.bf-m-r-0`
+- `.bf-m-b-6`
+- `.bf-m-b-12`
+- `.bf-m-b-24`
+- `.bf-m-b-36`
+-
+- `.bf-p-0`
+- `.bf-p-t-0`
+- `.bf-p-b-0`
+- `.bf-p-l-0`
+- `.bf-p-r-0`
+- `.bf-p-t-6`
+- `.bf-p-t-12`
+- `.bf-p-t-24`
+- `.bf-p-t-36`
+- `.bf-p-b-6`
+- `.bf-p-b-12`
+- `.bf-p-b-24`
+- `.bf-p-b-36`
+
+### Texts
+
+- `.bf-t-transform-uppercase`
+- `.bf-t-transform-none`
+-
+- `.bf-t-left`
+- `.bf-t-center`
+- `.bf-t-right`
+-
+- `.bf-t-shadow`
+-
+- `.bf-t-italic`
+- `.bf-t-style-normal`
+-
+- `.bf-t-weight-400`
+- `.bf-t-weight-500`
+- `.bf-t-weight-600`
+- `.bf-t-weight-700`
+-
+- `.bf-text-break`
+- `.bf-text-truncate`
+- `.bf-no-select`
+-
+- `.bf-font-sans-serif`
+- `.bf-font-serif`
+- `.bf-font-monospace`
+-
+- `.bf-h1`
+- `.bf-h2`
+- `.bf-h3`
+- `.bf-h4`
+- `.bf-h5`
+- `.bf-h6`
+- `.bf-lead`
+-
+- `.bf-responsive-typography`
+
+### Lists
+
+- `.bf-list-unstyled`
+
+### Tables
+
+- `.bf-table`
+- `.bf-table-responsive`
+
+#### Embeds
+
+- `.bf-embed-responsive`
+- `.bf-embed-responsive--4-3`
+- `.bf-embed-responsive--item`
+
+#### Buttons
+
+- `.bf-btn`
+- `.bf-btn--primary`
+
+#### Form states
+
+- `.bf-focused`
+- `.bf-disabled`
+- `.bf-invalid`
+
+### Reduced motion
+
+- `.bf-reduced-motion`
+
 ### Dark mode
 
 This enables a dark (dark-mode) style by default in all browsers:
@@ -292,8 +436,6 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marcop135/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
 ```
-
----
 
 ## Browser compatibility
 
@@ -321,15 +463,11 @@ This project is tested in a wide range of browsers using also [BrowserStack](htt
 
 ![BrowserStack Logo](./docs/images/browserstack-logo.png)
 
----
-
 ### Screenshots
 
 How can I quickly see if every HTML element works well on all browsers?
 
 Take a look at some [screenshots and screencasts](https://github.com/marcop135/bullframe.css/tree/master/docs/screenshots-screencasts), organized by rendering engines (blink, gecko, trident, webkit).
-
----
 
 ## Become a sponsor
 
@@ -342,8 +480,6 @@ Take a look at some [screenshots and screencasts](https://github.com/marcop135/b
 ## Contributing
 
 Please read the [contribution guidelines](https://github.com/marcop135/bullframe.css/blob/master/.github/CONTRIBUTING.md).
-
----
 
 ## Changelog
 
@@ -362,8 +498,6 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 ## License
 
 The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
-
----
 
 ## Todos
 

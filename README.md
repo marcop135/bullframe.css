@@ -126,7 +126,7 @@ bullframe.css/
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
 ### npm
@@ -178,8 +178,8 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
-  integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
+  href="https://cdn.jsdelivr.net/npm/bullframe.css"
+  integrity="sha384-G9NqhEFruTekgP8aMANt31Dg5wifFfFO01DUBZOOdreFdrvqq2I2E5sXI+lwNbxc"
   crossorigin="anonymous"
 >
 
@@ -212,8 +212,8 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
-  integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
+  href="https://cdn.jsdelivr.net/npm/bullframe.css"
+  integrity="sha384-G9NqhEFruTekgP8aMANt31Dg5wifFfFO01DUBZOOdreFdrvqq2I2E5sXI+lwNbxc"
   crossorigin="anonymous"
 >
 

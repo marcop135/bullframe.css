@@ -28,7 +28,7 @@ Getting started:
 
 Customization:
 
-- [No classes (Classless)](#no-classes-classless)
+- [No classes (Class-less)](#no-classes-class-less)
 - [Dark theme](#dark-mode)
 - [Utilities only](#just-utilities)
 
@@ -239,7 +239,7 @@ Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) a
 
 ## Customization
 
-### No classes (classless)
+### No classes (class-less)
 
 No classes, no utilities. Feel free to add yours and create your custom components.
 
@@ -248,6 +248,18 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css">
+
+<!-- center the page styling the <body> element (optional) -->
+<style>
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    padding: 1.5rem;
+    max-width: 800px;
+    max-width: 80rem;
+  }
+</style>
 ```
 
 ### Just utilities
@@ -258,7 +270,7 @@ Get all the utility classes
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
 ```
 
-### Utilities - A Quick Overview
+### Utilities - Reference
 
 #### Grid system
 

@@ -125,8 +125,18 @@ bullframe.css/
 
 ### CDN
 
+Get the latest release of the main build
+
+JSDelivr (production version, optimized for size and speed)
+
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
+```
+
+UNPKG
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/bullframe.css">
 ```
 
 ### npm

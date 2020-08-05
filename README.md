@@ -30,13 +30,13 @@ Customization:
 
 - [No classes (Class-less)](#no-classes-class-less)
 - [Dark theme](#dark-mode)
-- [Utilities only](#just-utilities)
+- [Utilities only](#utilities---build)
 
 More:
 
 - [Test page](https://marcop135.github.io/bullframe.css/)
 - [Browser compatibility](#browser-compatibility)
-- [Utilities overview](#utilities---a-quick-overview)
+- [Utilities Reference](#utilities---reference)
 - [Screenshots](#screenshots)
 - [Changelog](#changelog)
 - _[Sponsor me!](#become-a-sponsor)_
@@ -272,9 +272,9 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
-### Just utilities
+### Utilities - build
 
-Get all the utility classes
+Just give me all the utilities:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
@@ -282,26 +282,28 @@ Get all the utility classes
 
 ### Utilities - Reference
 
-#### Grid system
+### Grid system
 
-- `.bf-container`
-- `.bf-container--fluid`
-- `.bf-container--break-xs`
-- `.bf-container--break-md`
-- `.bf-container--break-lg`
-- `.bf-row`
-- `.bf-col-1`
-- `.bf-col-2`
-- `.bf-col-3`
-- `.bf-col-4`
-- `.bf-col-5`
-- `.bf-col-6`
-- `.bf-col-7`
-- `.bf-col-8`
-- `.bf-col-9`
-- `.bf-col-10`
-- `.bf-col-11`
-- `.bf-col-12`
+| Utility class | Description |
+| ------------- | ----------- |
+| .bf-container | Text... |
+| .bf-container--fluid | Text... |
+| .bf-container--break-xs | Text... |
+| .bf-container--break-md | Text... |
+| .bf-container--break-lg | Text... |
+| .bf-row | Text... |
+| .bf-col-1 | Text... |
+| .bf-col-2 | Text... |
+| .bf-col-3 | Text... |
+| .bf-col-4 | Text... |
+| .bf-col-5 | Text... |
+| .bf-col-6 | Text... |
+| .bf-col-7 | Text... |
+| .bf-col-8 | Text... |
+| .bf-col-9 | Text... |
+| .bf-col-10 | Text... |
+| .bf-col-11 | Text... |
+| .bf-col-12 | Text... |
 
 #### Layout
 

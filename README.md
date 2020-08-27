@@ -346,7 +346,7 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-m-b-0` | Sets the `margin-bottom` to `0` |
 | `.bf-m-l-0` | Sets the `margin-left` to `0` |
 | `.bf-m-r-0` | Sets the `margin-right` to `0` |
-| `.bf-m-b-1` | Sets the `margin-bottom` to a custom value |
+| `.bf-m-b-1` | Sets the `margin-bottom` to a custom value that matches the grid system gutter |
 | `.bf-m-b-2` | Sets the `margin-bottom` to a custom value |
 | `.bf-m-b-3` | Sets the `margin-bottom` to a custom value |
 | `.bf-m-b-4` | Sets the `margin-bottom` to a custom value |
@@ -355,11 +355,11 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-p-b-0` | Sets the `padding-bottom` to `0` |
 | `.bf-p-l-0` | Sets the `padding-left` to `0` |
 | `.bf-p-r-0` | Sets the `padding-right` to `0` |
-| `.bf-p-t-1` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-1` | Sets the `padding-top` to a custom value that matches the grid system gutter |
 | `.bf-p-t-2` | Sets the `padding-top` to a custom value |
 | `.bf-p-t-3` | Sets the `padding-top` to a custom value |
 | `.bf-p-t-4` | Sets the `padding-top` to a custom value |
-| `.bf-p-t-1` | Sets the `padding-bottom` to a custom value |
+| `.bf-p-t-1` | Sets the `padding-bottom` to a custom value that matches the grid system gutter |
 | `.bf-p-b-2` | Sets the `padding-bottom` to a custom value |
 | `.bf-p-b-3` | Sets the `padding-bottom` to a custom value |
 | `.bf-p-b-4` | Sets the `padding-bottom` to a custom value |
@@ -395,7 +395,7 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-h5` | Matches the font styling of a `h5` |
 | `.bf-h6` | Matches the font styling of a `h6` |
 | `.bf-lead` | Sets `font-size` to `125%` |
-| `.bf-responsive-typography` | Scales `font-size` from a minimum of 16px to a maximum of 19px using `calc` and CSS custom properties, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm), [read more](https://codepen.io/marcop135/pen/eYmPmJm) |
+| `.bf-responsive-typography` | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties`, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm), [read more](https://codepen.io/marcop135/pen/eYmPmJm) |
 
 #### Lists
 

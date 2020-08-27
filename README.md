@@ -280,13 +280,11 @@ Just give me all the utilities:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
 ```
 
----
-
 ### Utilities - Reference
 
 #### Grid system
 
-container > row > col
+A set of utilities to create and customise a simple but powerful IE8+ flexible Grid System
 
 | Utility class | Description |
 | ------------- | ----------- |
@@ -296,18 +294,18 @@ container > row > col
 | `.bf-container--break-md` | Collapses all the columns when the viewport is 767px and below |
 | `.bf-container--break-lg` | Collapses all the columns when the viewport is 991px and below |
 | `.bf-row` | Sets a block container with a custom negative margin |
-| `.bf-col-1` | Sets a floated container with a custom padding and a `width` of 8.3333% |
-| `.bf-col-2` | Sets a floated container with a custom padding and a `width` of 16.666666666666664% |
-| `.bf-col-3` | Sets a floated container with a custom padding and a `width` of 33.33333333333333% |
-| `.bf-col-4` | Sets a floated container with a custom padding and a `width` of 25% |
-| `.bf-col-5` | Sets a floated container with a custom padding and a `width` of 41.66666666666667% |
-| `.bf-col-6` | Sets a floated container with a custom padding and a `width` of 50% |
-| `.bf-col-7` | Sets a floated container with a custom padding and a `width` of 58.333333333333336% |
-| `.bf-col-8` | Sets a floated container with a custom padding and a `width` of 66.66666666666666% |
-| `.bf-col-9` | Sets a floated container with a custom padding and a `width` of 75% |
-| `.bf-col-10` | Sets a floated container with a custom padding and a `width` of 83.33333333333334% |
-| `.bf-col-11` | Sets a floated container with a custom padding and a `width` of 91.66666666666666% |
-| `.bf-col-12` | Sets a floated container with a custom padding and a `width` of 100% |
+| `.bf-col-1` | Sets a floated container with a custom padding and a `width` of `8.3333%` |
+| `.bf-col-2` | Sets a floated container with a custom padding and a `width` of `16.666666666666664%` |
+| `.bf-col-3` | Sets a floated container with a custom padding and a `width` of ``33.33333333333333%` |
+| `.bf-col-4` | Sets a floated container with a custom padding and a `width` of `25%` |
+| `.bf-col-5` | Sets a floated container with a custom padding and a `width` of `41.66666666666667%` |
+| `.bf-col-6` | Sets a floated container with a custom padding and a `width` of `50%` |
+| `.bf-col-7` | Sets a floated container with a custom padding and a `width` of `58.333333333333336%` |
+| `.bf-col-8` | Sets a floated container with a custom padding and a `width` of `66.66666666666666%` |
+| `.bf-col-9` | Sets a floated container with a custom padding and a `width` of `75%` |
+| `.bf-col-10` | Sets a floated container with a custom padding and a `width` of `83.33333333333334%` |
+| `.bf-col-11` | Sets a floated container with a custom padding and a `width` of `91.66666666666666%` |
+| `.bf-col-12` | Sets a floated container with a custom padding and a `width` of `100%` |
 
 #### Layout
 
@@ -380,7 +378,7 @@ container > row > col
 | `.bf-t-style-normal` | Sets `font-style` to a `normal` |
 | `.bf-t-weight-300` | Sets `font-weight` to `300` (AKA light) |
 | `.bf-t-weight-400` | Sets `font-weight` to `400` (AKA normal) |
-| `.bf-t-weight-500` | Sets `font-weight` to `500` (AKA medium ) |
+| `.bf-t-weight-500` | Sets `font-weight` to `500` (AKA medium) |
 | `.bf-t-weight-600` | Sets `font-weight` to `600` (AKA semi-bold) |
 | `.bf-t-weight-700` | Sets `font-weight` to `700` (AKA bold) |
 | `.bf-t-weight-800` | Sets `font-weight` to `800` (AKA black) |
@@ -442,8 +440,6 @@ container > row > col
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
-
----
 
 ### Dark mode
 
@@ -522,7 +518,3 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 ## License
 
 The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
-
-## Todos
-
-- Add a complete documentation

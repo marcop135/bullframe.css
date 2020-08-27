@@ -44,7 +44,7 @@
   },
   "homepage": "https://marcop135.github.io/bullframe.css/",
   "devDependencies": {
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.26.12",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -55,6 +55,6 @@
   },
   "dependencies": {},
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   }
 }

@@ -1533,6 +1533,7 @@ table th[class^="bf-col"] {
 }
 
 .bf-t-shadow {
+  text-shadow: 0 0 2px #222 !important;
   text-shadow: 0 0 0.2rem #222 !important;
 }
 

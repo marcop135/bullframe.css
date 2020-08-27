@@ -280,146 +280,170 @@ Just give me all the utilities:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
 ```
 
+---
+
 ### Utilities - Reference
 
-### Grid system
+#### Grid system
+
+container > row > col
 
 | Utility class | Description |
 | ------------- | ----------- |
-| .bf-container | Text... |
-| .bf-container--fluid | Text... |
-| .bf-container--break-xs | Text... |
-| .bf-container--break-md | Text... |
-| .bf-container--break-lg | Text... |
-| .bf-row | Text... |
-| .bf-col-1 | Text... |
-| .bf-col-2 | Text... |
-| .bf-col-3 | Text... |
-| .bf-col-4 | Text... |
-| .bf-col-5 | Text... |
-| .bf-col-6 | Text... |
-| .bf-col-7 | Text... |
-| .bf-col-8 | Text... |
-| .bf-col-9 | Text... |
-| .bf-col-10 | Text... |
-| .bf-col-11 | Text... |
-| .bf-col-12 | Text... |
+| `.bf-container` | Sets a centered block container with a `max-width` of 1140px, and a custom padding |
+| `.bf-container--fluid` | Sets a fluid centered block container with a custom padding |
+| `.bf-container--break-xs` | Collapses all the columns when the viewport is 575px and below |
+| `.bf-container--break-md` | Collapses all the columns when the viewport is 767px and below |
+| `.bf-container--break-lg` | Collapses all the columns when the viewport is 991px and below |
+| `.bf-row` | Sets a block container with a custom negative margin |
+| `.bf-col-1` | Sets a floated container with a custom padding and a `width` of 8.3333% |
+| `.bf-col-2` | Sets a floated container with a custom padding and a `width` of 16.666666666666664% |
+| `.bf-col-3` | Sets a floated container with a custom padding and a `width` of 33.33333333333333% |
+| `.bf-col-4` | Sets a floated container with a custom padding and a `width` of 25% |
+| `.bf-col-5` | Sets a floated container with a custom padding and a `width` of 41.66666666666667% |
+| `.bf-col-6` | Sets a floated container with a custom padding and a `width` of 50% |
+| `.bf-col-7` | Sets a floated container with a custom padding and a `width` of 58.333333333333336% |
+| `.bf-col-8` | Sets a floated container with a custom padding and a `width` of 66.66666666666666% |
+| `.bf-col-9` | Sets a floated container with a custom padding and a `width` of 75% |
+| `.bf-col-10` | Sets a floated container with a custom padding and a `width` of 83.33333333333334% |
+| `.bf-col-11` | Sets a floated container with a custom padding and a `width` of 91.66666666666666% |
+| `.bf-col-12` | Sets a floated container with a custom padding and a `width` of 100% |
 
 #### Layout
 
-- `.bf-clearfix`
-- `.bf-hide`
-- `.bf-hidden`
-- `.bf-text-hide`
-- `.bf-sr-only`
-- `.bf-sr-only.focusable`
-- `.bf-invisible`
-- `.bf-visible`
-- `.bf-display-block`
-- `.bf-display-block-center`
-- `.bf-display-inline`
-- `.bf-display-inline-block`
-- `.bf-display-flex`
-- `.bf-display-inline-flex`
-- `.bf-float-right`
-- `.bf-float-left`
-- `.bf-position-fixed`
-- `.bf-align-center-unknown`
-- `.bf-align-center-unknown--item`
-- `.bf-width-25`
-- `.bf-width-33`
-- `.bf-width-50`
-- `.bf-width-75`
-- `.bf-width-100`
-- `.bf-width-auto`
+| Utility class       | Description         |
+| -------------       | -------------       |
+| `.bf-clearfix` | Clears the float, [read more](http://nicolasgallagher.com/micro-clearfix-hack/) |
+| `.bf-hide` | Sets the `display` to `none` |
+| `.bf-hidden` | Sets the `display` to `none` and the `visibility` to `hidden` |
+| `.bf-text-hide` | Hides a text (AKA CSS image replacement) using a font `hack` and a combination o properties |
+| `.bf-sr-only` | Shows a text only if screen reader |
+| `.bf-sr-only.focusable` | Shows a text only if screen reader and focused |
+| `.bf-invisible` | Sets the `visibility` to `hidden` |
+| `.bf-visible` | Sets the `visibility` to `visible` |
+| `.bf-display-block` | Sets the `display` to `block` |
+| `.bf-display-block-center` | Sets the `display` to `block` and the left/right margins to `auto` |
+| `.bf-display-inline` | Sets the `display` to `inline` |
+| `.bf-display-inline-block` | Sets the `display` to `inline-block` |
+| `.bf-display-flex` | Sets the `display` to `flex` |
+| `.bf-display-inline-flex` | Sets the `display` to `inline-flex` |
+| `.bf-float-left` | Sets the `float` to `left` |
+| `.bf-float-right` | Sets the `float` to `right` |
+| `.bf-position-fixed` | Sets the `position` to `fixed` |
+| `.bf-align-center-unknown` | Sets the `position` to `relative` |
+| `.bf-align-center-unknown--item` | Centers an element with unknown height and width to a relative positioned parent, IE10+, [read more](https://css-tricks.com/centering-css-complete-guide) |
+| `.bf-width-25` | Sets the `width` to `25%` |
+| `.bf-width-33` | Sets the `width` to `33.33333333333333%` |
+| `.bf-width-50` | Sets the `width` to `50%` |
+| `.bf-width-75` | Sets the `width` to `75%` |
+| `.bf-width-100` | Sets the `width` to `100%` |
+| `.bf-width-auto` | Sets the `width` to `auto` |
 
 #### Spacing
 
-- `.bf-m-0`
-- `.bf-m-t-0`
-- `.bf-m-b-0`
-- `.bf-m-l-0`
-- `.bf-m-r-0`
-- `.bf-m-b-1`
-- `.bf-m-b-2`
-- `.bf-m-b-3`
-- `.bf-m-b-4`
-- `.bf-p-0`
-- `.bf-p-t-0`
-- `.bf-p-b-0`
-- `.bf-p-l-0`
-- `.bf-p-r-0`
-- `.bf-p-t-1`
-- `.bf-p-t-2`
-- `.bf-p-t-3`
-- `.bf-p-t-4`
-- `.bf-p-b-1`
-- `.bf-p-b-2`
-- `.bf-p-b-3`
-- `.bf-p-b-4`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-m-0` | Sets the `margin` to `0` |
+| `.bf-m-t-0` | Sets the `margin-top` to `0` |
+| `.bf-m-b-0` | Sets the `margin-bottom` to `0` |
+| `.bf-m-l-0` | Sets the `margin-left` to `0` |
+| `.bf-m-r-0` | Sets the `margin-right` to `0` |
+| `.bf-m-b-1` | Sets the `margin-bottom` to a custom value |
+| `.bf-m-b-2` | Sets the `margin-bottom` to a custom value |
+| `.bf-m-b-3` | Sets the `margin-bottom` to a custom value |
+| `.bf-m-b-4` | Sets the `margin-bottom` to a custom value |
+| `.bf-p-0` | Sets the `padding` to `0` |
+| `.bf-p-t-0` | Sets the `padding-top` to `0` |
+| `.bf-p-b-0` | Sets the `padding-bottom` to `0` |
+| `.bf-p-l-0` | Sets the `padding-left` to `0` |
+| `.bf-p-r-0` | Sets the `padding-right` to `0` |
+| `.bf-p-t-1` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-2` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-3` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-4` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-1` | Sets the `padding-bottom` to a custom value |
+| `.bf-p-b-2` | Sets the `padding-bottom` to a custom value |
+| `.bf-p-b-3` | Sets the `padding-bottom` to a custom value |
+| `.bf-p-b-4` | Sets the `padding-bottom` to a custom value |
 
 #### Texts
 
-- `.bf-t-transform-uppercase`
-- `.bf-t-transform-none`
-- `.bf-t-left`
-- `.bf-t-center`
-- `.bf-t-right`
-- `.bf-t-shadow`
-- `.bf-t-italic`
-- `.bf-t-style-normal`
-- `.bf-t-weight-300`
-- `.bf-t-weight-400`
-- `.bf-t-weight-500`
-- `.bf-t-weight-600`
-- `.bf-t-weight-700`
-- `.bf-t-weight-800`
-- `.bf-text-break`
-- `.bf-text-truncate`
-- `.bf-no-select`
-- `.bf-font-sans-serif`
-- `.bf-font-serif`
-- `.bf-font-monospace`
-- `.bf-h1`
-- `.bf-h2`
-- `.bf-h3`
-- `.bf-h4`
-- `.bf-h5`
-- `.bf-h6`
-- `.bf-lead`
-- `.bf-responsive-typography`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-t-transform-uppercase` | Sets `transform` to a `uppercase` (AKA capitalizes a text) |
+| `.bf-t-transform-none` | Sets `transform` to a `none` |
+| `.bf-t-left` | Sets `text-align` to a `left` |
+| `.bf-t-center` | Sets `text-align` to a `center` |
+| `.bf-t-right` | Sets `text-align` to a `right` |
+| `.bf-t-shadow` | Sets a basic text shadow |
+| `.bf-t-italic` | Sets `font-style` to a `italic` |
+| `.bf-t-style-normal` | Sets `font-style` to a `normal` |
+| `.bf-t-weight-300` | Sets `font-weight` to `300` (AKA light) |
+| `.bf-t-weight-400` | Sets `font-weight` to `400` (AKA normal) |
+| `.bf-t-weight-500` | Sets `font-weight` to `500` (AKA medium ) |
+| `.bf-t-weight-600` | Sets `font-weight` to `600` (AKA semi-bold) |
+| `.bf-t-weight-700` | Sets `font-weight` to `700` (AKA bold) |
+| `.bf-t-weight-800` | Sets `font-weight` to `800` (AKA black) |
+| `.bf-text-break` | Sets `word-wrap` to a `break-word`, applied by default to the `body` |
+| `.bf-text-truncate` | Truncates a very long text and replaces the missing text with an ellipsis |
+| `.bf-no-select` | Blocks user text selection |
+| `.bf-font-sans-serif` | Sets `font-family` to a `sans-serif`, and a combination of cross-browser system UI sans-serif font families  |
+| `.bf-font-serif` | Sets `font-family` to a `serif`, and a combination of cross-browser system UI serif font families |
+| `.bf-font-monospace` | Sets `font-family` to a `monospace`, a combination of widely supported monospaced font families |
+| `.bf-h1` | Matches the font styling of a `h1` |
+| `.bf-h2` | Matches the font styling of a `h2` |
+| `.bf-h3` | Matches the font styling of a `h3` |
+| `.bf-h4` | Matches the font styling of a `h4` |
+| `.bf-h5` | Matches the font styling of a `h5` |
+| `.bf-h6` | Matches the font styling of a `h6` |
+| `.bf-lead` | Sets `font-size` to `125%` |
+| `.bf-responsive-typography` | Scales `font-size` from a minimum of 16px to a maximum of 19px using `calc` and CSS custom properties, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm), [read more](https://codepen.io/marcop135/pen/eYmPmJm) |
 
 #### Lists
 
-- `.bf-list-unstyled`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-list-unstyled` | Removes margins, paddings and `li` list styles from `ul`, `ol` and `dd` elements |
 
 #### Tables
 
-- `.bf-table`
-- `.bf-table-responsive`
-- `.bf-table--zebra`
-- `.bf-table-responsive--zebra`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-table` | Sets a border and custom paddings and margins to a table |
+| `.bf-table-responsive` | Adds responsiveness to a table container |
+| `.bf-table--zebra` | Increases a table readability adding horizontal zebra stripes |
+| `.bf-table-responsive--zebra` | Increases a responsive table readability adding horizontal zebra stripes |
 
 #### Embeds
 
-- `.bf-embed-responsive`
-- `.bf-embed-responsive--4-3`
-- `.bf-embed-responsive--item`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-embed-responsive` | Adds responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpouse element_ (e.g. youtube embed)  |
+| `.bf-embed-responsive--4-3` | Sets a 4:3 ratio responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpouse element_ container (e.g. youtube embed) |
+| `.bf-embed-responsive--item` | A _general purpouse element_ element that behaves like a `video` |
 
 #### Buttons
 
-- `.bf-btn`
-- `.bf-btn--primary`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-btn` | Creates a standard gray-looking button (e.g. `<a class="bf-btn" href="...">...</a>`)|
+| `.bf-btn--primary` | Creates a primary blue-looking button |
 
 #### Form states
 
-- `.bf-focused`
-- `.bf-disabled`
-- `.bf-invalid`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-focused` | Sets a blue-looking focused ring and shadow around an `input`, `textarea` or `select` |
+| `.bf-disabled` | Sets `opacity` to `0.5`, and resets a combinations of properties to the default value if is disabled  |
+| `.bf-invalid` | Sets a red-looking focused ring and shadow around an invalid `input`, `textarea` or `select` |
 
 #### Reduced motion
 
-- `.bf-reduced-motion`
+| Utility class | Description |
+| ------------- | ----------- |
+| `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
+
+---
 
 ### Dark mode
 

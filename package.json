@@ -52,9 +52,5 @@
     "gulp-rename": "2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {},
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

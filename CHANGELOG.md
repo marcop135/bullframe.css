@@ -1,5 +1,12 @@
 # Changes to bullframe.css
 
+## 3.3.4 (September 03, 2020)
+
+* added an utilities reference in README.md
+* fixed a grid system [bug](https://github.com/marcop135/bullframe.css/commit/d26c1dd21c808bda6472913073c72a8048a56d8f) related to `.bf-col-3` and `bf-col-4` utilities
+* added support for GitHub Packages registry
+* added UNPKG CDN in README.md
+
 ## 3.3.3 (July 22, 2020)
 
 * bump version to fix npm registry
@@ -10,8 +17,8 @@
 
 ## 3.3.1 (July 22, 2020)
 
-* fix "What's included" and "Gulp.js" sections in README.md
-* fix JSDelivr `package.json` settings
+* fixed "What's included" and "Gulp.js" sections in README.md
+* fixed JSDelivr `package.json` settings
 * minor code improvements
 
 ## 3.3.0 (July 09, 2020)

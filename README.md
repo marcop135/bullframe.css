@@ -1,6 +1,6 @@
 # bullframe.css
 
-![bullframe.css logo](./docs/images-readme/logo-full.png)
+![bullframe.css logo](https://raw.githubusercontent.com/marcop135/bullframe.css/master/docs/images-readme/logo-full.png)
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
@@ -299,7 +299,7 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-row` | Sets a block container with a custom negative margin |
 | `.bf-col-1` | Sets a floated container with a custom padding and a `width` of `8.3333%` |
 | `.bf-col-2` | Sets a floated container with a custom padding and a `width` of `16.666666666666664%` |
-| `.bf-col-3` | Sets a floated container with a custom padding and a `width` of ``33.33333333333333%` |
+| `.bf-col-3` | Sets a floated container with a custom padding and a `width` of `33.33333333333333%` |
 | `.bf-col-4` | Sets a floated container with a custom padding and a `width` of `25%` |
 | `.bf-col-5` | Sets a floated container with a custom padding and a `width` of `41.66666666666667%` |
 | `.bf-col-6` | Sets a floated container with a custom padding and a `width` of `50%` |
@@ -483,7 +483,7 @@ You can take a look at the [.browserslistrc](https://github.com/marcop135/bullfr
 
 This project is tested in a wide range of browsers using also [BrowserStack](https://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
 
-![BrowserStack Logo](./docs/images-readme/browserstack-logo.png)
+![BrowserStack Logo](https://raw.githubusercontent.com/marcop135/bullframe.css/master/docs/images-readme/browserstack-logo.png)
 
 ### Screenshots
 
@@ -520,4 +520,4 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 
 ## License
 
-The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT "The MIT License")
+The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT) "The MIT License"

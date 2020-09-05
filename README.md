@@ -299,8 +299,8 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-row` | Sets a block container with a custom negative margin |
 | `.bf-col-1` | Sets a floated container with a custom padding and a `width` of `8.3333%` |
 | `.bf-col-2` | Sets a floated container with a custom padding and a `width` of `16.666666666666664%` |
-| `.bf-col-3` | Sets a floated container with a custom padding and a `width` of `33.33333333333333%` |
-| `.bf-col-4` | Sets a floated container with a custom padding and a `width` of `25%` |
+| `.bf-col-3` | Sets a floated container with a custom padding and a `width` of `25%` |
+| `.bf-col-4` | Sets a floated container with a custom padding and a `width` of `33.33333333333333%` |
 | `.bf-col-5` | Sets a floated container with a custom padding and a `width` of `41.66666666666667%` |
 | `.bf-col-6` | Sets a floated container with a custom padding and a `width` of `50%` |
 | `.bf-col-7` | Sets a floated container with a custom padding and a `width` of `58.333333333333336%` |

@@ -118,6 +118,20 @@ label textarea {
   height: auto;
 }
 
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
 [type="search"] {
   outline-offset: -$bf-spacing-sm-px;
   outline-offset: -$bf-spacing-sm-rem;
@@ -134,6 +148,11 @@ select {
 
 select {
   word-wrap: normal;
+}
+
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 optgroup {

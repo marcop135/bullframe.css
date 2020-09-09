@@ -23,8 +23,8 @@ Getting started:
 - [Download](#download)
 - [CDN](#CDN)
 - [npm](#npm)
-- [HTML template IE8+](#ie8-and-old-browsers)
-- [HTML template IE11+](#ie11-and-modern-browsers)
+- [HTML template IE8+](#old-browsers-(IE8+))
+- [HTML template IE11+](#modern-browsers-(IE11+))
 - [Codepen](#codepen)
 
 Customization:
@@ -174,68 +174,74 @@ Add some HTML markup, and two JS polyfills (if you need a wide cross-browser sup
 
 Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-first responsive design), you could polyfill it with [respond.js](https://github.com/scottjehl/Respond).
 
-[IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
+Tip: Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
-#### IE8+ and old browsers
+Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
 
-Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
+#### Old browsers (IE8+)
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HMTL template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- bullframe.css: use latest compiled and minified version -->
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
+    integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
+    crossorigin="anonymous">
 
-<link
-  type="text/css"
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css"
-  integrity="sha384-G9NqhEFruTekgP8aMANt31Dg5wifFfFO01DUBZOOdreFdrvqq2I2E5sXI+lwNbxc"
-  crossorigin="anonymous"
->
-
-<!-- enable HTML5 element, and fix IE10 viewport on Windows 8 -->
-<script
-  src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"
-  integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5"
-  crossorigin="anonymous"
-></script>
+  <!-- polyfills: enable HTML5 elements in old browsers, and fix IE10 viewport on Windows 8 -->
+  <script
+    src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"
+    integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5"
+    crossorigin="anonymous"
+  ></script>
+</head>
 
 <body>
   <div class="bf-container">
-    <h1>Hello World!</h1>
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is a bullframe.css starter template</p>
   </div>
-
+  
 </body>
 </html>
 ```
 
-#### IE11+ and modern browsers
+#### Modern browsers (IE11+)
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css"
-  integrity="sha384-G9NqhEFruTekgP8aMANt31Dg5wifFfFO01DUBZOOdreFdrvqq2I2E5sXI+lwNbxc"
-  crossorigin="anonymous"
->
-
+  <meta charset="utf-8">
+  <title>HMTL template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- bullframe.css: use latest compiled and minified version -->
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
+    integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
+    crossorigin="anonymous">
 </head>
+
 <body>
   <div class="bf-container">
-    <h1>Hello World!</h1>
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is a bullframe.css starter template</p>
   </div>
-
+  
 </body>
 </html>
 ```

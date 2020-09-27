@@ -1,5 +1,11 @@
 # Changes to bullframe.css
 
+## 3.3.5 (September 27, 2020)
+
+* revert latest grid system column [fixes](https://github.com/marcop135/bullframe.css/commit/3bc68dee997c5b8530a5e498dd55dfc24347fcc3)
+* added more table normalization styles
+* added more webkit form normalization styles
+
 ## 3.3.4 (September 03, 2020)
 
 * added an utilities reference in README.md

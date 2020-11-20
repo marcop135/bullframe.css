@@ -178,12 +178,24 @@ button,
   }
 }
 
+
+// focus
+a:focus,
+input:focus {
+  outline-color: darken(orange, 7.5%);
+}
+
+:focus-visible {
+  outline-color: darken(orange, 7.5%);
+}
+
+// tables
+
 .bf-table th,
 .bf-table td {
   border-color: $bf-gray-dark;
 }
 
-// zebra striping
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
   background-color: $bf-gray-dark-extra;

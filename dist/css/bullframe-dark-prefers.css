@@ -294,7 +294,9 @@ a:not([href]):not([tabindex]) {
 }
 
 a:not([href]):not([tabindex]):hover,
-a:not([href]):not([tabindex]):focus {
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
@@ -2290,6 +2292,13 @@ dt {
   .bf-btn.bf-btn--primary:active,
   .bf-btn.bf-btn--primary:focus {
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
+  }
+  a:focus,
+  input:focus {
+    outline-color: #d98c00;
+  }
+  :focus-visible {
+    outline-color: #d98c00;
   }
   .bf-table th,
   .bf-table td {

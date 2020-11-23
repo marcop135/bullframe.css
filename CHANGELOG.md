@@ -1,5 +1,10 @@
 # Changes to bullframe.css
 
+## 3.3.6 (November 20, 2020)
+
+* added new anchors normalization [styles](https://github.com/marcop135/bullframe.css/commit/435c8e1cade4be9f0bed65f5d8a9ed5deb2278dd)
+* improved focus outline color contrast in dark mode
+
 ## 3.3.5 (September 27, 2020)
 
 * revert latest grid system column [fixes](https://github.com/marcop135/bullframe.css/commit/3bc68dee997c5b8530a5e498dd55dfc24347fcc3)

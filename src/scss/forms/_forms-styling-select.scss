@@ -63,34 +63,3 @@ select[dir="rtl"]:not([size]):not([multiple]) {
   padding-left: $bf-spacing-lg-rem + $bf-spacing-lg-rem;
 }
 
-// since '::-ms-expand' is IE10+ only
-// and IE8 doesn't recognize the ':not' selector, so didn't get those rulesets
-// https://caniuse.com/#feat=mdn-css_selectors_not
-//
-// let's revert the standard styles on IE9 via CSS hacks
-// and hide the custom <select> arrow
-//
-
-// IE9 only hack
-// https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
-@media screen and (min-width:0\0) and (min-resolution: .001dpcm) { 
-
-  // re-set the defaul padding
-  select:not([size]):not([multiple]) {
-    padding-right: ($bf-spacing-lg-px * 0.75);
-  }
-  // RTL
-  *[dir="rtl"] select:not([size]):not([multiple]),
-  select[dir="rtl"]:not([size]):not([multiple]) {
-    padding-left: ($bf-spacing-lg-px * 0.75);
-  }
-
-  // re-set the default properties
-  select:not([size]):not([multiple]),
-  // RTL
-  *[dir="rtl"] select:not([size]):not([multiple]),
-  select[dir="rtl"]:not([size]):not([multiple]) {
-    background-image: none;
-    background-repeat: repeat;
-  }
-}

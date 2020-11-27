@@ -61,13 +61,13 @@
 */
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  clip: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  position: static !important;
+  white-space: inherit !important;
+  width: auto !important;
 }
 
 .bf-invisible {

@@ -1,5 +1,10 @@
 # Changes to bullframe.css
 
+## 3.3.7 (November 27, 2020)
+
+* 9de3155 enhancement: remove ie8-9 hacks and create two new builds ie10+
+* d0daf8e fix: add missing !important to `.bf-sr-only.focusable` declaration
+
 ## 3.3.6 (November 20, 2020)
 
 * added new anchors normalization [styles](https://github.com/marcop135/bullframe.css/commit/435c8e1cade4be9f0bed65f5d8a9ed5deb2278dd)

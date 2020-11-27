@@ -30,7 +30,8 @@ Getting started:
 Customization:
 
 - [No classes (Class-less)](#no-classes-class-less)
-- [Dark theme](#dark-mode)
+- [IE10+](#No-IE-hacks,-IE10+-support---build)
+- [Dark mode](#dark-theme)
 - [Utilities only](#utilities---build)
 
 More:
@@ -72,6 +73,11 @@ Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/124
 
 ! Bootstrap v5 [dropped IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
 
+### No weird IE hacks and IE10+ support
+
+I used some IE hacks to fix form elements in IE8 and IE9.
+If you don't like hacks in your (S)CSS code, there are two builds IE10+ `bullframe-ie10+.css` and `bullframe-utilities-ie10+.css` where IE8-9 hacks are removed.
+
 ## What's included
 
 You'll see something like this:
@@ -86,8 +92,12 @@ bullframe.css/
     │   ├── bullframe-dark-prefers.min.css
     │   ├── bullframe-dark.css
     │   ├── bullframe-dark.min.css
+    │   ├── bullframe-ie10+.css
+    │   ├── bullframe-ie10+.min.css
     │   ├── bullframe-utilities.css
     │   ├── bullframe-utilities.min.css
+    │   ├── bullframe-utilities-ie10+.css
+    │   ├── bullframe-utilities-ie10+.min.css
     │   ├── bullframe.css
     │   ├── bullframe.min.css
     │   ├── ...
@@ -281,12 +291,39 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
+### No IE hacks, IE10+ support - build
+
+bullframe.css
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css">
+```
+
+bullframe.css classless
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
+```
+
 ### Utilities - build
 
 Just give me all the utilities:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
+```
+
+### Dark theme
+
+This enables a dark (dark mode) theme by default in all browsers:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
+```
+
+And this, enables dark only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
+Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
 ```
 
 ### Utilities - Reference
@@ -449,21 +486,6 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
-
-### Dark mode
-
-This enables a dark (dark-mode) theme by default in all browsers:
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
-```
-
-And this, enables dark only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
-Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
-```
 
 ## Browser compatibility
 

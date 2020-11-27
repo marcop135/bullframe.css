@@ -778,49 +778,6 @@ textarea {
   padding: 0.5rem 0.75rem;
 }
 
-@media \0screen {
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="week"],
-  [type="time"],
-  [type="url"],
-  [type="range"],
-  input[list] {
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 32px;
-    line-height: 32px;
-  }
-}
-
-@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75), screen and (min-width: 0\0) and (min-resolution: 72dpi) {
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="week"],
-  [type="time"],
-  [type="url"],
-  [type="range"],
-  input[list] {
-    line-height: 1.2;
-  }
-}
-
 [type="email"]:active, [type="email"]:focus,
 [type="number"]:active,
 [type="number"]:focus,
@@ -938,6 +895,49 @@ label[aria-disabled="true"] {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
+}
+
+@media \0screen {
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"],
+  [type="time"],
+  [type="url"],
+  [type="range"],
+  input[list] {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75), screen and (min-width: 0\0) and (min-resolution: 72dpi) {
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"],
+  [type="time"],
+  [type="url"],
+  [type="range"],
+  input[list] {
+    line-height: 1.2;
+  }
 }
 
 select:not([size]):not([multiple]) {

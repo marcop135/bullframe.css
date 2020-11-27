@@ -938,49 +938,6 @@ label[aria-disabled="true"] {
   opacity: 0.5 !important;
 }
 
-@media \0screen {
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="week"],
-  [type="time"],
-  [type="url"],
-  [type="range"],
-  input[list] {
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 32px;
-    line-height: 32px;
-  }
-}
-
-@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75), screen and (min-width: 0\0) and (min-resolution: 72dpi) {
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="week"],
-  [type="time"],
-  [type="url"],
-  [type="range"],
-  input[list] {
-    line-height: 1.2;
-  }
-}
-
 select:not([size]):not([multiple]) {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1004,22 +961,6 @@ select[dir="rtl"]:not([size]):not([multiple]) {
   padding-right: 0.75rem;
   padding-left: 20px;
   padding-left: 2rem;
-}
-
-@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
-  select:not([size]):not([multiple]) {
-    padding-right: 7.5px;
-  }
-  *[dir="rtl"] select:not([size]):not([multiple]),
-  select[dir="rtl"]:not([size]):not([multiple]) {
-    padding-left: 7.5px;
-  }
-  select:not([size]):not([multiple]),
-  *[dir="rtl"] select:not([size]):not([multiple]),
-  select[dir="rtl"]:not([size]):not([multiple]) {
-    background-image: none;
-    background-repeat: repeat;
-  }
 }
 
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {

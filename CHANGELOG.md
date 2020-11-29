@@ -3,6 +3,7 @@
 ## 3.3.8 (November 29, 2020)
 
 * added `README.md` fixes and improvements
+* reinforced mixins declarations
 
 ## 3.3.7 (November 27, 2020)
 

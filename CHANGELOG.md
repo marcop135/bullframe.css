@@ -1,9 +1,13 @@
 # Changes to bullframe.css
 
+## 3.3.8 (November 29, 2020)
+
+* added `README.md` fixes and improvements
+
 ## 3.3.7 (November 27, 2020)
 
-* 9de3155 enhancement: remove ie8-9 hacks and create two new builds ie10+
-* d0daf8e fix: add missing !important to `.bf-sr-only.focusable` declaration
+* removed ie8-9 hacks and create two new builds ie10+
+* fixed missing `!important`s to `.bf-sr-only.focusable` declaration
 
 ## 3.3.6 (November 20, 2020)
 

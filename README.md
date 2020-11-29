@@ -23,14 +23,14 @@ Getting started:
 - [Download](#download)
 - [CDN](#CDN)
 - [npm](#npm)
-- [HTML template IE8+](#IE8+-and-old-browsers)
-- [HTML template IE11+](#ie11+-and-modern-browsers)
+- [HTML template IE8+](#ie8-and-old-browsers)
+- [HTML template IE11+](#ie11-and-modern-browsers)
 - [Codepen](#codepen)
 
 Customization:
 
 - [No classes (Class-less)](#no-classes-class-less)
-- [No IE hacks](#no-ie-hacks-ie10-support---build)
+- [No IE hacks](#no-ie-hacks-ie10---build)
 - [Dark mode](#dark-theme)
 - [Utilities only](#utilities---build)
 
@@ -296,7 +296,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 bullframe.css
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
 ```
 
 bullframe.css classless

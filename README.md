@@ -23,14 +23,14 @@ Getting started:
 - [Download](#download)
 - [CDN](#CDN)
 - [npm](#npm)
-- [HTML template IE8+](#old-browsers-(IE8+))
-- [HTML template IE11+](#modern-browsers-(IE11+))
+- [HTML template IE8+](#IE8+-and-old-browsers)
+- [HTML template IE11+](#ie11+-and-modern-browsers)
 - [Codepen](#codepen)
 
 Customization:
 
 - [No classes (Class-less)](#no-classes-class-less)
-- [IE10+](#No-IE-hacks,-IE10+-support---build)
+- [No IE hacks](#no-ie-hacks-ie10-support---build)
 - [Dark mode](#dark-theme)
 - [Utilities only](#utilities---build)
 
@@ -188,7 +188,7 @@ Tip: Improve the JS polyfills security via the `integrity` and `crossorigin` att
 
 Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
 
-#### Old browsers (IE8+)
+#### IE8+ and old browsers
 
 ```html
 <!doctype html>
@@ -218,14 +218,14 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 <body>
   <div class="bf-container">
     <!-- Add your site or application content here -->
-    <p>Hello world! This is a bullframe.css starter template</p>
+    <p>Hello world! This is a bullframe.css IE8+ starter template</p>
   </div>
   
 </body>
 </html>
 ```
 
-#### Modern browsers (IE11+)
+#### IE11+ and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
@@ -241,15 +241,15 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
   <link
     type="text/css"
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
-    integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
+    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css"
+    integrity="sha384-EfcW9YC4HRjVRc1MalllL1YMixPPE9Uu47eUGKvM8mHU+u16QvYZeS5JzLa93lxm"
     crossorigin="anonymous">
 </head>
 
 <body>
   <div class="bf-container">
     <!-- Add your site or application content here -->
-    <p>Hello world! This is a bullframe.css starter template</p>
+    <p>Hello world! This is a bullframe.css IE11+ starter template</p>
   </div>
   
 </body>
@@ -291,14 +291,16 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
-### No IE hacks, IE10+ support - build
+### No IE hacks, IE10+ - build
 
 bullframe.css
+
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
 ```
 
 bullframe.css classless
+
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
 ```

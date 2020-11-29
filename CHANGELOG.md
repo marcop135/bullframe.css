@@ -1,5 +1,9 @@
 # Changes to bullframe.css
 
+## 3.3.9 (November 29, 2020)
+
+* fixed broken anchors and URLs in README.md
+
 ## 3.3.8 (November 29, 2020)
 
 * added `README.md` fixes and improvements

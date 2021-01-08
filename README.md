@@ -30,9 +30,9 @@ Getting started:
 Customization:
 
 - [No classes (Class-less)](#no-classes-class-less)
-- [No IE hacks](#no-ie-hacks-ie10---build)
+- [No IE hacks](#no-ie-hacks-ie10)
 - [Dark mode](#dark-theme)
-- [Utilities only](#utilities---build)
+- [Utilities only](#utilities)
 
 More:
 
@@ -71,7 +71,7 @@ Short answer: **yes!** Enterprise-level companies, legacy business applications,
 
 Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) to get more developers' points of view.
 
-! Bootstrap v5 [dropped IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
+Bootstrap v5 [dropped IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
 
 ### No weird IE hacks and IE10+ support
 
@@ -140,13 +140,13 @@ bullframe.css/
 
 Get the latest release of the main build
 
-JSDelivr (production version, optimized for size and speed)
+JSDelivr (latest release, ready for production)
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
-UNPKG
+UNPKG (latest release, not ready for production)
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/bullframe.css">
@@ -291,7 +291,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
-### No IE hacks, IE10+ - build
+### No IE hacks, IE10+
 
 bullframe.css
 
@@ -305,7 +305,7 @@ bullframe.css classless
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
 ```
 
-### Utilities - build
+### Utilities
 
 Just give me all the utilities:
 

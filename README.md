@@ -56,6 +56,7 @@ More:
 - CSS BEM
 - Responsive typography
 - Dark mode
+- RTL support
 - Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
 - Isolated utility classes to avoid conflicts between frameworks' classes
 - [`bullframe-classless.min.css`](https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe-classless.min.css) is just 10KB~ min+gzip 🎉
@@ -262,6 +263,8 @@ Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) a
 
 ### Use bullframe.css as a CodePen template
 
+Click on the links below, and start a new pen in CodePen using bullframe.css.
+
 - [Light theme (default)](https://codepen.io/pen?template=WNrwNNM)
 - [Dark theme](https://codepen.io/pen?template=ExPmzBV)
 - [Dark `prefers-color-scheme`](https://codepen.io/pen?template=NWxjVQO)
@@ -278,7 +281,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css">
 
-<!-- center the page styling the <body> element (optional) -->
+<!-- (optional) center the page styling the <body> element -->
 <style>
   body {
     margin-left: auto;

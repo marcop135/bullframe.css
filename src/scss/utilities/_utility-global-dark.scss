@@ -37,7 +37,6 @@ ins {
   border-color: $bf-gray-dark;
 }
 
-
 // forms
 
 [type="email"],
@@ -119,6 +118,31 @@ select:not([size]):not([multiple]) {
   }
 }
 
+// range
+
+// all modern browsers but not IE
+@supports (appearance: none) {
+
+  // override above declaration
+  [type="range"] {
+    background-color: transparent;
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  // darker background
+  // the rulesets must be separated 
+  [type="range"]::-webkit-slider-runnable-track {
+    background-color: $bf-dark-extra;
+  }
+
+  [type="range"]::-moz-range-track {
+    background-color: $bf-dark-extra;
+  }
+}
+
 input::placeholder,
 textarea::placeholder {
   color: $bf-gray;
@@ -178,15 +202,14 @@ button,
   }
 }
 
-
 // focus
 a:focus,
 input:focus {
-  outline-color: darken(orange, 7.5%);
+  outline-color: darken(orange, 15%);
 }
 
 :focus-visible {
-  outline-color: darken(orange, 7.5%);
+  outline-color: darken(orange, 15%);
 }
 
 // tables

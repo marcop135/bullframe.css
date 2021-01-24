@@ -1,5 +1,14 @@
 # Changes to bullframe.css
 
+## 3.4.1 (January 24, 2021)
+
+* add missing v3.4.0 `CHANGELOG.md`
+
+## 3.4.0 (January 24, 2021)
+
+* add `input range` styling in modern browsers only
+* update video source paths accordingly to MDN[(#22)](https://github.com/marcop135/bullframe.css/issues/12)
+
 ## 3.3.9 (November 29, 2020)
 
 * fixed broken anchors and URLs in README.md

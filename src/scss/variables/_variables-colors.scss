@@ -4,6 +4,8 @@
 
 // customise/enlarge this small selection as needed
 
+// hex to rgba online converter http://www.hex2rgba.devoth.com/
+
 // backgrounds, texts and borders
 $bf-white: #fff; // rgba(255,255,255,1)
 $bf-light: #f0f0f0; // rgba(240,240,240,1)
@@ -20,9 +22,10 @@ $bf-black: #000; // rgba(0,0,0,1)
 $bf-yellow-light: #ff9; // rgba(255,255,153,1)
 $bf-yellow: #ff0; // rgba(255,255,0,1)
 
-// anchors
+// anchors and accent
 $bf-blue: #007bff; // rgba(0,123,255,1)
 $bf-blue-light: #0056b3; // rgba(0,86,179,1)
+$bf-blue-light-extra: #bed8fe; //rgba(190, 216, 254, 1)
 
 // invalid forms
 $bf-red: #ff0000; // rgba(255,0,0,1)

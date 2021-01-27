@@ -30,8 +30,8 @@ Getting started:
 Customization:
 
 - [No classes (Class-less)](#no-classes-class-less)
-- [No IE hacks](#no-ie-hacks-ie10)
 - [Dark mode](#dark-theme)
+- [No IE hacks](#no-ie-hacks-ie10)
 - [Utilities only](#utilities)
 
 More:
@@ -93,8 +93,6 @@ bullframe.css/
     │   ├── bullframe-dark-prefers.min.css
     │   ├── bullframe-dark.css
     │   ├── bullframe-dark.min.css
-    │   ├── bullframe-ie10+.css
-    │   ├── bullframe-ie10+.min.css
     │   ├── bullframe-utilities.css
     │   ├── bullframe-utilities.min.css
     │   ├── bullframe-utilities-ie10+.css
@@ -124,6 +122,7 @@ bullframe.css/
     ├── bullframe-dark.scss
     ├── bullframe-utilities.scss
     ├── bullframe.scss
+    ...
 └── gulpfile.js
 └── index.html
 ...
@@ -294,28 +293,6 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
-### No IE hacks, IE10+
-
-bullframe.css
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
-```
-
-bullframe.css classless
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
-```
-
-### Utilities
-
-Just give me all the utilities:
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
-```
-
 ### Dark theme
 
 This enables a dark (dark mode) theme by default in all browsers:
@@ -329,6 +306,40 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
+```
+
+### No IE hacks, IE10+
+
+bullframe.css ie10+
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
+```
+
+bullframe.css classless ie10+
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
+```
+
+bullframe.css dark ie10+
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-ie10+.min.css">
+```
+
+bullframe.css dark-prefers ie10+
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers-ie10+.min.css">
+```
+
+### Utilities
+
+Just give me all the utilities:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
 ```
 
 ### Utilities - Reference
@@ -389,31 +400,6 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-width-auto` | Sets the `width` to `auto` |
 
 #### Spacing
-
-| Utility class | Description |
-| ------------- | ----------- |
-| `.bf-m-0` | Sets the `margin` to `0` |
-| `.bf-m-t-0` | Sets the `margin-top` to `0` |
-| `.bf-m-b-0` | Sets the `margin-bottom` to `0` |
-| `.bf-m-l-0` | Sets the `margin-left` to `0` |
-| `.bf-m-r-0` | Sets the `margin-right` to `0` |
-| `.bf-m-b-1` | Sets the `margin-bottom` to a custom value that matches the grid system gutter |
-| `.bf-m-b-2` | Sets the `margin-bottom` to a custom value |
-| `.bf-m-b-3` | Sets the `margin-bottom` to a custom value |
-| `.bf-m-b-4` | Sets the `margin-bottom` to a custom value |
-| `.bf-p-0` | Sets the `padding` to `0` |
-| `.bf-p-t-0` | Sets the `padding-top` to `0` |
-| `.bf-p-b-0` | Sets the `padding-bottom` to `0` |
-| `.bf-p-l-0` | Sets the `padding-left` to `0` |
-| `.bf-p-r-0` | Sets the `padding-right` to `0` |
-| `.bf-p-t-1` | Sets the `padding-top` to a custom value that matches the grid system gutter |
-| `.bf-p-t-2` | Sets the `padding-top` to a custom value |
-| `.bf-p-t-3` | Sets the `padding-top` to a custom value |
-| `.bf-p-t-4` | Sets the `padding-top` to a custom value |
-| `.bf-p-t-1` | Sets the `padding-bottom` to a custom value that matches the grid system gutter |
-| `.bf-p-b-2` | Sets the `padding-bottom` to a custom value |
-| `.bf-p-b-3` | Sets the `padding-bottom` to a custom value |
-| `.bf-p-b-4` | Sets the `padding-bottom` to a custom value |
 
 #### Texts
 

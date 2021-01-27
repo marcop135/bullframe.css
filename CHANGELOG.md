@@ -1,5 +1,9 @@
 # Changes to bullframe.css
 
+## 3.4.2 (January 27, 2021)
+
+* add missing ie10+ builds for dark and dark-prefers
+
 ## 3.4.1 (January 24, 2021)
 
 * add missing v3.4.0 `CHANGELOG.md`

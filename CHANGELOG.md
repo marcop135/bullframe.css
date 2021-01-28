@@ -1,16 +1,20 @@
 # Changes to bullframe.css
 
+## 3.4.3 (January 28, 2021)
+
+* added missing center alignment for `.bf-display-block-center` utility
+
 ## 3.4.2 (January 27, 2021)
 
-* add missing ie10+ builds for dark and dark-prefers
+* added missing ie10+ builds for dark and dark-prefers
 
 ## 3.4.1 (January 24, 2021)
 
-* add missing v3.4.0 `CHANGELOG.md`
+* added missing v3.4.0 `CHANGELOG.md`
 
 ## 3.4.0 (January 24, 2021)
 
-* add `input range` styling in modern browsers only
+* added `input range` styling in modern browsers only
 * update video source paths accordingly to MDN[(#22)](https://github.com/marcop135/bullframe.css/issues/12)
 
 ## 3.3.9 (November 29, 2020)

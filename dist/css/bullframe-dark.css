@@ -1,4 +1,4 @@
-/*! bullframe.css v3.4.1 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.4.3 | MIT License | https://github.com/marcop135/bullframe.css */
 /*! custom build: bullframe-dark */
 *,
 *::before,
@@ -1453,6 +1453,7 @@ table th[class^="bf-col"] {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  text-align: center !important;
 }
 
 .bf-display-inline {

@@ -382,7 +382,7 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-invisible` | Sets the `visibility` to `hidden` |
 | `.bf-visible` | Sets the `visibility` to `visible` |
 | `.bf-display-block` | Sets the `display` to `block` |
-| `.bf-display-block-center` | Sets the `display` to `block` and the left/right margins to `auto` |
+| `.bf-display-block-center` | Sets the `display` to `block`, the left/right margins to `auto` and `text-align` to center |
 | `.bf-display-inline` | Sets the `display` to `inline` |
 | `.bf-display-inline-block` | Sets the `display` to `inline-block` |
 | `.bf-display-flex` | Sets the `display` to `flex` |

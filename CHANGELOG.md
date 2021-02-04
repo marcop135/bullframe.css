@@ -1,5 +1,9 @@
 # Changes to bullframe.css
 
+## 3.4.4 (February 04, 2021)
+
+* added missing classless/classless-ie10+ dark/dark-prefers builds
+
 ## 3.4.3 (January 28, 2021)
 
 * added missing center alignment for `.bf-display-block-center` utility

@@ -379,6 +379,8 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 | `.bf-col-11` | Sets a floated container with a custom padding and a `width` of `91.66666666666666%` |
 | `.bf-col-12` | Sets a floated container with a custom padding and a `width` of `100%` |
 
+Breakpoints: 576, 768, 992 and 1200 pixels
+
 #### Layout
 
 | Utility class       | Description         |

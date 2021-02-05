@@ -1,4 +1,4 @@
-// Just in case, add custom pure CSS styles here
+// Just in case, add custom pure CSS here
 
 // 1. change skin
 
@@ -13,29 +13,17 @@
 //   font-size: rem
 // }
 
-// body,
-// html input,
-// button,
-// select,
-// optgroup,
-// textarea {
-//   line-height: ;
-// }
-
 // a {
 //   color: ;
-//   text-decoration: ;
 // }
 
 // a:hover,
 // a:focus {
 //   color: ;
-//   text-decoration: ;
 // }
 
 // 2. customize form elements
 
-// [type="color"],
 // [type="email"],
 // [type="number"],
 // [type="password"],
@@ -43,23 +31,23 @@
 // [type="search"],
 // [type="text"],
 // [type="date"],
-// [type="datetime"],
 // [type="datetime-local"],
 // [type="month"],
 // [type="time"],
 // [type="week"],
 // [type="time"],
 // [type="url"],
+// input[list],
 // select,
 // textarea {
 //   background-color: ;
-//   border: 1px solid ;
+//   border-color: ;
 //   padding: px;
 //   padding: rem;
 // }
 
 // button,
-// .btn,
+// .bf-btn,
 // [type="button"],
 // [type="reset"],
 // [type="submit"] {
@@ -70,12 +58,16 @@
 // }
 
 // button:hover,
-// .btn:hover,
+// .bf-btn:hover,
 // [type="button"]:hover,
 // [type="reset"]:hover,
 // [type="submit"]:hover,
+// .bf-btn:active,
+// [type="button"]:active,
+// [type="reset"]:active,
+// [type="submit"]:active
 // button:focus,
-// .btn:focus,
+// .bf-btn:focus,
 // [type="button"]:focus,
 // [type="reset"]:focus,
 // [type="submit"]:focus {

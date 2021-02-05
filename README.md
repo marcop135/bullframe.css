@@ -4,7 +4,7 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is an (S)CSS framework that works on every browser, modern or not.
+bullframe.css is an (S)CSS framework that works in all browsers, modern or not.
 
 It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([atoms](https://atomicdesign.bradfrost.com/chapter-2/#atoms)) for your Sass project.
 
@@ -77,7 +77,7 @@ Bootstrap v5 [dropped IE10 and IE11 support](https://github.com/twbs/bootstrap/p
 ### No weird IE hacks and IE10+ support
 
 I used some IE hacks to fix form elements in IE8 and IE9.
-If you don't like hacks in your (S)CSS code, there are two builds IE10+ `bullframe-ie10+.css` and `bullframe-utilities-ie10+.css` where IE8-9 hacks are removed.
+If you don't like hacks in your (S)CSS code, there are six IE10+ build like `bullframe-ie10+.css` and `bullframe-utilities-ie10+.css` where IE8-9 hacks are removed.
 
 ## What's included
 
@@ -287,9 +287,9 @@ Write semantic HTML and get nice styles and cross-browser normalization.
   body {
     margin-left: auto;
     margin-right: auto;
-    padding: 15px;
+    padding: 15px; /* for old IE only */
     padding: 1.5rem;
-    max-width: 800px;
+    max-width: 800px; /* for old IE only */
     max-width: 80rem;
   }
 </style>

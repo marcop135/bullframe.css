@@ -4,7 +4,7 @@
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
 }
 
-.bf-disabled, 
+.bf-disabled,
 .bf-disabled:hover,
 .bf-disabled:active,
 .bf-disabled:focus,
@@ -25,13 +25,13 @@
 
 label.bf-disabled {
   background-color: transparent;
-  border-color: transparent
+  border-color: transparent;
 }
 
 button.bf-disabled,
-[type="button"].bf-disabled,
-[type="reset"].bf-disabled,
-[type="submit"].bf-disabled,
+[type='button'].bf-disabled,
+[type='reset'].bf-disabled,
+[type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
   cursor: default;
   cursor: not-allowed;
@@ -43,13 +43,13 @@ button.bf-disabled,
   color: $bf-dark;
   background: $bf-gray-light;
 
-    &:hover,
-    &:active,
-    &:focus {
-      box-shadow: none;
-      color: $bf-dark;
-      background: $bf-gray-light;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    color: $bf-dark;
+    background: $bf-gray-light;
+  }
 }
 
 .bf-btn--primary.bf-disabled {
@@ -63,13 +63,13 @@ button.bf-disabled,
   color: $bf-white;
   background: $bf-blue;
 
-    &:hover,
-    &:active,
-    &:focus {
-      box-shadow: none;
-      color: $bf-white;
-      background: $bf-blue;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    color: $bf-white;
+    background: $bf-blue;
+  }
 }
 
 .bf-invalid,

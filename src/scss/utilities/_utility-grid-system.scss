@@ -27,7 +27,7 @@
   &:before,
   &:after {
     display: table;
-    content: " ";
+    content: ' ';
   }
 
   &:after {
@@ -51,7 +51,7 @@
   // clearfix
   &:before,
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
   }
 
@@ -60,7 +60,7 @@
   }
 }
 
-[class^="bf-col-"] {
+[class^='bf-col-'] {
   // the block display is triggered by 'float: left'
   // display: block;
 
@@ -79,7 +79,7 @@
   margin-left: 0;
 }
 
-.bf-no-gutters > [class^="bf-col"] {
+.bf-no-gutters > [class^='bf-col'] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -146,7 +146,7 @@
     margin-right: 0;
   }
 
-  .bf-container--break-xs [class^="bf-col"] {
+  .bf-container--break-xs [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -161,7 +161,7 @@
     margin-right: 0;
   }
 
-  .bf-container--break-md [class^="bf-col"] {
+  .bf-container--break-md [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -176,7 +176,7 @@
     margin-right: 0;
   }
 
-  .bf-container--break-lg [class^="bf-col"] {
+  .bf-container--break-lg [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -187,8 +187,8 @@
 
 // fix missing table cell borders when using 'bf-col-' classes for column sizing
 // https://github.com/twbs/bootstrap/issues/11623
-table td[class^="bf-col"],
-table th[class^="bf-col"] {
+table td[class^='bf-col'],
+table th[class^='bf-col'] {
   position: static;
 }
 
@@ -198,7 +198,7 @@ table th[class^="bf-col"] {
 // Pure CSS grids (ex YUI library) https://purecss.io/grids/
 //
 // IE8+ (with JS polyfill)
-// Bootstrap v3 grid system https://getbootstrap.com/docs/3.4/css/#grid 
+// Bootstrap v3 grid system https://getbootstrap.com/docs/3.4/css/#grid
 //
 // moder browsers only (partial IE11 support)
 // Bulma Flexbox grid system https://bulma.io/documentation/columns/

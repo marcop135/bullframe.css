@@ -1,16 +1,16 @@
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="time"],
-[type="url"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='time'],
+[type='week'],
+[type='time'],
+[type='url'],
 input[list],
 select,
 textarea {
@@ -23,24 +23,24 @@ textarea {
 // Old browsers and Opera Mini don't fully support all type of inputs
 // e.g. [type="range"]
 // so, let's try to add styles carefully and selective
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="time"],
-[type="url"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='time'],
+[type='week'],
+[type='time'],
+[type='url'],
 input[list],
 select,
 textarea,
-[type="radio"],
-[type="checkbox"] {
+[type='radio'],
+[type='checkbox'] {
   &:active,
   &:focus {
     transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
@@ -50,9 +50,9 @@ textarea,
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   color: $bf-dark;
   padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
   padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);

@@ -1,4 +1,4 @@
-/*! bullframe.css v3.4.5 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.4.6 | MIT License | https://github.com/marcop135/bullframe.css */
 /*! custom build: bullframe-classless-dark-ie10+ */
 /*! custom build: bullframe-classless-ie10+ */
 *,
@@ -136,7 +136,7 @@ blockquote small {
 }
 
 blockquote small:before {
-  content: "\2014 \00A0";
+  content: '\2014 \00A0';
 }
 
 q {
@@ -347,7 +347,7 @@ dd {
 }
 
 nav li:before {
-  content: "\200B";
+  content: '\200B';
   position: absolute;
 }
 

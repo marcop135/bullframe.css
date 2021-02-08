@@ -13,8 +13,8 @@ textarea {
 
 html input,
 button,
-[type="radio"],
-[type="checkbox"],
+[type='radio'],
+[type='checkbox'],
 select,
 optgroup,
 textarea {
@@ -31,12 +31,12 @@ legend {
 // re-set width auto where needed
 html label,
 button,
-[type="image"],
-[type="submit"],
-[type="reset"],
-html [type="button"],
-[type="radio"],
-[type="checkbox"] {
+[type='image'],
+[type='submit'],
+[type='reset'],
+html [type='button'],
+[type='radio'],
+[type='checkbox'] {
   width: auto;
 }
 
@@ -47,14 +47,14 @@ label,
 select,
 textarea,
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"],
+html [type='button'],
+[type='reset'],
+[type='submit'],
 output {
   display: inline-block;
 }
 
-[type="file"] {
+[type='file'] {
   display: block;
   background-color: transparent;
 }
@@ -113,8 +113,8 @@ label textarea {
   font-size: 110%;
 }
 
-[type="number"]::-webkit-outer-spin-button,
-[type="number"]::-webkit-inner-spin-button {
+[type='number']::-webkit-outer-spin-button,
+[type='number']::-webkit-inner-spin-button {
   height: auto;
 }
 
@@ -132,7 +132,7 @@ label textarea {
   padding: 0;
 }
 
-[type="search"] {
+[type='search'] {
   outline-offset: -$bf-spacing-sm-px;
   outline-offset: -$bf-spacing-sm-rem;
 }
@@ -193,10 +193,10 @@ textarea {
   font: inherit; // Safari
 }
 
-[type="date"],
-[type="time"],
-[type="datetime-local"],
-[type="month"] {
+[type='date'],
+[type='time'],
+[type='datetime-local'],
+[type='month'] {
   appearance: listbox;
 }
 
@@ -212,22 +212,22 @@ textarea {
 
 // ! IE9+
 // https://caniuse.com/#feat=border-radius
-[type="radio"] {
+[type='radio'] {
   border-radius: 50%;
 }
 
-[type="checkbox"] {
+[type='checkbox'] {
   border-radius: $bf-spacing-md-px;
   border-radius: $bf-spacing-md-rem;
 }
 
-[type="radio"],
-[type="checkbox"] {
+[type='radio'],
+[type='checkbox'] {
   padding: 0;
   background-color: $bf-white;
 }
 
-[type="range"] {
+[type='range'] {
   background-color: transparent; // FF and Chrome mobile
 }
 
@@ -256,9 +256,9 @@ textarea {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -280,12 +280,12 @@ button,
 
 button,
 select,
-input[type="submit"],
-input[type="button"],
-[type="checkbox"],
-[type="range"],
-[type="radio"],
-[role="button"] {
+input[type='submit'],
+input[type='button'],
+[type='checkbox'],
+[type='range'],
+[type='radio'],
+[role='button'] {
   cursor: pointer;
 }
 
@@ -302,7 +302,7 @@ textarea::placeholder {
 // https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
 //
 // for form validation in JavaScript
-// use '.bf-invalid' class in /utilities/_utility-form-states.scss' instead 
+// use '.bf-invalid' class in /utilities/_utility-form-states.scss' instead
 // documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
 :-moz-ui-invalid {
   box-shadow: none;

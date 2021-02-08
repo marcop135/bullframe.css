@@ -42,18 +42,17 @@ select:not([size]):not([multiple]) {
 }
 
 // add support for RTL languages
-// 'appearance: none' removes the default styling but introduces a bug 
+// 'appearance: none' removes the default styling but introduces a bug
 // that occurs when a right to the left language (e.g. Arabic) is set
-// 
-// Read more 
+//
+// Read more
 // 1. http://bootstrap.rtlcss.com
 // 2. https://rtlstyling.com/
-*[dir="rtl"] select:not([size]):not([multiple]),
-select[dir="rtl"]:not([size]):not([multiple]) {
-
+*[dir='rtl'] select:not([size]):not([multiple]),
+select[dir='rtl']:not([size]):not([multiple]) {
   // move the arrow icon to the left
   background-position: left 0.85rem top 50%;
-    
+
   // go back to default forms padding
   padding-right: ($bf-spacing-lg-px * 0.75);
   padding-right: ($bf-spacing-lg-rem * 0.75);
@@ -62,4 +61,3 @@ select[dir="rtl"]:not([size]):not([multiple]) {
   padding-left: $bf-spacing-lg-px + $bf-spacing-lg-px;
   padding-left: $bf-spacing-lg-rem + $bf-spacing-lg-rem;
 }
-

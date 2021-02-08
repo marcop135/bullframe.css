@@ -2,7 +2,7 @@
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .bf-clearfix:before,
 .bf-clearfix:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -123,14 +123,14 @@
 // Is the element of unknown width and height?
 // ! 'transform' is IE10 + https://caniuse.com/#feat=transforms2d
 .bf-align-center-unknown {
-  position: relative !important
+  position: relative !important;
 }
 
 .bf-align-center-unknown--item {
   position: absolute !important;
-	top: 50% !important;
-	left: 50% !important;
-	transform: translate(-50%, -50%) !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 .bf-width-25 {

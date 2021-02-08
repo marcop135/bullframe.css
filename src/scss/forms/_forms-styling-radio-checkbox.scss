@@ -10,8 +10,8 @@
 // will come
 
 @supports (appearance: none) {
-  [type="checkbox"],
-  [type="radio"] {
+  [type='checkbox'],
+  [type='radio'] {
     appearance: none;
 
     height: 1.8rem;
@@ -30,18 +30,18 @@
     }
 
     // add support for RTL languages
-    // Read more 
+    // Read more
     // 1. http://bootstrap.rtlcss.com
     // 2. https://rtlstyling.com/
-    *[dir="rtl"] & + label,
-    &[dir="rtl"] + label {
+    *[dir='rtl'] & + label,
+    &[dir='rtl'] + label {
       margin-left: 0;
       margin-right: $bf-spacing-md-px;
       margin-right: $bf-spacing-md-rem;
     }
 
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
     }
@@ -52,7 +52,7 @@
     }
   }
 
-  [type="radio"] {
+  [type='radio'] {
     &:after {
       width: 1.8rem;
       height: 1.8rem;
@@ -67,7 +67,7 @@
     }
   }
 
-  [type="checkbox"] {
+  [type='checkbox'] {
     &:after {
       width: 0.6rem;
       height: 0.8rem;

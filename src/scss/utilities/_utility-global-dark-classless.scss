@@ -1,7 +1,7 @@
 // these are global stylest tha that ovveride all the "light" styles
 
 // import dark scrollbars utility module
-@import "utility-global-dark-scrollbars";
+@import 'utility-global-dark-scrollbars';
 
 // the basics: background and texts
 html {
@@ -33,20 +33,20 @@ ins {
 
 // forms
 
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="time"],
-[type="url"],
-[type="range"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='time'],
+[type='week'],
+[type='time'],
+[type='url'],
+[type='range'],
 input[list],
 select,
 select:not([size]):not([multiple]),
@@ -62,19 +62,19 @@ textarea {
   }
 }
 
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="time"],
-[type="url"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='time'],
+[type='week'],
+[type='time'],
+[type='url'],
 input[list],
 select,
 select:not([size]):not([multiple]),
@@ -105,9 +105,8 @@ select:not([size]):not([multiple]) {
 
 // all modern browsers but not IE
 @supports (appearance: none) {
-
   // override above declaration
-  [type="range"] {
+  [type='range'] {
     background-color: transparent;
 
     &:focus {
@@ -116,12 +115,12 @@ select:not([size]):not([multiple]) {
   }
 
   // darker background
-  // the rulesets must be separated 
-  [type="range"]::-webkit-slider-runnable-track {
+  // the rulesets must be separated
+  [type='range']::-webkit-slider-runnable-track {
     background-color: $bf-dark-extra;
   }
 
-  [type="range"]::-moz-range-track {
+  [type='range']::-moz-range-track {
     background-color: $bf-dark-extra;
   }
 }
@@ -132,9 +131,9 @@ textarea::placeholder {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   background: $bf-gray-light;
 
   &:hover,
@@ -150,9 +149,9 @@ button,
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   &:active,
   &:focus {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);

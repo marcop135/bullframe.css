@@ -20,7 +20,7 @@
 
 .bf-t-shadow {
   text-shadow: 0 0 2px $bf-dark !important;
-  text-shadow: 0 0 0.2rem $bf-dark !important;  
+  text-shadow: 0 0 0.2rem $bf-dark !important;
 }
 
 .bf-t-italic {
@@ -84,38 +84,31 @@
 .bf-font-sans-serif {
   font-family:
   /* webfont */ Catamaran,
-  /* Safari for OS X and iOS (San Francisco) */ -apple-system,
-  /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
-  /* Windows */ "Segoe UI", 
-  /* Android */ Roboto,
-  /* Linux with KDE */ Oxygen-Sans, 
-  /* Ubuntu (all variants) */ Ubuntu,
-  /* Linux with GNOME Shell */ Cantarell,
-  /* macOS 10.10 and below */ "Helvetica Neue", Helvetica,
-  /* Basic web fallback */ Arial, sans-serif,
-  /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-  "Noto Color Emoji" !important;
+    /* Safari for OS X and iOS (San Francisco) */ -apple-system,
+    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
+    /* Windows */ 'Segoe UI', /* Android */ Roboto,
+    /* Linux with KDE */ Oxygen-Sans, /* Ubuntu (all variants) */ Ubuntu,
+    /* Linux with GNOME Shell */ Cantarell,
+    /* macOS 10.10 and below */ 'Helvetica Neue', Helvetica,
+    /* Basic web fallback */ Arial, sans-serif,
+    /* emoji fonts */ 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji' !important;
 }
 
 .bf-font-serif {
-  font-family: Georgia, Times, "Times New Roman", serif,
-  /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-  "Noto Color Emoji" !important;
+  font-family: Georgia, Times, 'Times New Roman', serif,
+    /* emoji fonts */ 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji' !important;
 }
 
 .bf-font-monospace {
   font-family:
-  /* macOS 10.10+ */ "Menlo", 
-  /* Windows 6+ */ "Consolas",
-  /* Android 4+ */ "Roboto Mono", 
-  /* Ubuntu 10.10+ */ "Ubuntu Monospace",
-  /* KDE Plasma 5+ */ "Noto Mono", 
-  /* KDE Plasma 4+ */ "Oxygen Mono",
-  /* Linux/OpenOffice fallback */ "Liberation Mono", 
-  /* fallback */ monospace,
-
-  /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji" !important;
+  /* macOS 10.10+ */ 'Menlo', /* Windows 6+ */ 'Consolas',
+    /* Android 4+ */ 'Roboto Mono', /* Ubuntu 10.10+ */ 'Ubuntu Monospace',
+    /* KDE Plasma 5+ */ 'Noto Mono', /* KDE Plasma 4+ */ 'Oxygen Mono',
+    /* Linux/OpenOffice fallback */ 'Liberation Mono', /* fallback */ monospace,
+    /* emoji fonts */ 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji' !important;
 }
 
 .bf-h1,
@@ -165,8 +158,8 @@ p.bf-lead {
 // responsive typography
 // https://codepen.io/marcop135/pen/eYmPmJm
 // https://css-tricks.com/snippets/css/fluid-typography/
-// 
-// old browsers that don't support CSS variables ignore what follows 
+//
+// old browsers that don't support CSS variables ignore what follows
 // (mostly IE and Opera Mini)
 // in this way, old browsers will ignore 'calc' property too, avoiding issues
 // https://caniuse.com/#feat=calc
@@ -188,4 +181,3 @@ body.bf-responsive-typography {
     font-size: var(--body-rt-font-size-max);
   }
 }
-

@@ -40,7 +40,7 @@ body {
     // Chrome < 56 for OS X (San Francisco)
     BlinkMacSystemFont,
     // Windows
-    "Segoe UI",
+    'Segoe UI',
     // Android
     Roboto,
     // Linux with KDE
@@ -50,14 +50,14 @@ body {
     // Linux with GNOME Shell
     Cantarell,
     // macOS 10.10 and below
-    "Helvetica Neue",
+    'Helvetica Neue',
     Helvetica,
     // Basic web fallback
     Arial,
-    "Noto Sans", sans-serif,
+    'Noto Sans', sans-serif,
     // emoji fonts
-    "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   // this enable font ligatures
   text-rendering: optimizeLegibility;

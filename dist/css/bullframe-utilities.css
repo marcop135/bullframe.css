@@ -1,5 +1,5 @@
 /*! bullframe.css v3.4.5 | MIT License | https://github.com/marcop135/bullframe.css */
-/*! custom build: bullframe-utilities */
+/* custom build: bullframe-utilities */
 .bf-container,
 .bf-container--fluid {
   box-sizing: content-box;
@@ -16,7 +16,7 @@
 .bf-container--fluid:before,
 .bf-container--fluid:after {
   display: table;
-  content: " ";
+  content: ' ';
 }
 
 .bf-container:after,
@@ -38,7 +38,7 @@
 }
 
 .bf-row:before, .bf-row:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -46,7 +46,7 @@
   clear: both;
 }
 
-[class^="bf-col-"] {
+[class^='bf-col-'] {
   float: left;
   position: relative;
   min-height: 1px;
@@ -61,7 +61,7 @@
   margin-left: 0;
 }
 
-.bf-no-gutters > [class^="bf-col"] {
+.bf-no-gutters > [class^='bf-col'] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -119,7 +119,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-xs [class^="bf-col"] {
+  .bf-container--break-xs [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -133,7 +133,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-md [class^="bf-col"] {
+  .bf-container--break-md [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -147,7 +147,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-lg [class^="bf-col"] {
+  .bf-container--break-lg [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -156,14 +156,14 @@
   }
 }
 
-table td[class^="bf-col"],
-table th[class^="bf-col"] {
+table td[class^='bf-col'],
+table th[class^='bf-col'] {
   position: static;
 }
 
 .bf-clearfix:before,
 .bf-clearfix:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -620,8 +620,8 @@ body.bf-responsive-typography {
 
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
-.bf-btn:disabled
-.bf-btn[aria-disabled="true"] {
+.bf-btn:disabled,
+.bf-btn[aria-disabled='true'] {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -666,9 +666,9 @@ label.bf-disabled {
 }
 
 button.bf-disabled,
-[type="button"].bf-disabled,
-[type="reset"].bf-disabled,
-[type="submit"].bf-disabled,
+[type='button'].bf-disabled,
+[type='reset'].bf-disabled,
+[type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
   cursor: default;
   cursor: not-allowed;
@@ -684,15 +684,15 @@ button.bf-disabled,
 }
 
 button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
-[type="button"].bf-disabled:hover,
-[type="button"].bf-disabled:active,
-[type="button"].bf-disabled:focus,
-[type="reset"].bf-disabled:hover,
-[type="reset"].bf-disabled:active,
-[type="reset"].bf-disabled:focus,
-[type="submit"].bf-disabled:hover,
-[type="submit"].bf-disabled:active,
-[type="submit"].bf-disabled:focus,
+[type='button'].bf-disabled:hover,
+[type='button'].bf-disabled:active,
+[type='button'].bf-disabled:focus,
+[type='reset'].bf-disabled:hover,
+[type='reset'].bf-disabled:active,
+[type='reset'].bf-disabled:focus,
+[type='submit'].bf-disabled:hover,
+[type='submit'].bf-disabled:active,
+[type='submit'].bf-disabled:focus,
 .bf-btn.bf-disabled:hover,
 .bf-btn.bf-disabled:active,
 .bf-btn.bf-disabled:focus {
@@ -755,7 +755,7 @@ dt {
 
 .bf-embed-responsive::before {
   display: block;
-  content: "";
+  content: '';
   padding-top: 56.25%;
 }
 
@@ -837,9 +837,9 @@ dt {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
   }
   pre {
     white-space: pre-wrap !important;

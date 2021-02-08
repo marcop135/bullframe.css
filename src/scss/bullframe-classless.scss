@@ -3,42 +3,42 @@
 
 // colors, spacing and breakpoint variables
 // this is for an easy customisation
-@import "variables/variables-colors";
-@import "variables/variables-texts";
-@import "variables/variables-spacing";
-@import "variables/variables-breakpoints";
+@import 'variables/variables-colors';
+@import 'variables/variables-texts';
+@import 'variables/variables-spacing';
+@import 'variables/variables-breakpoints';
 
 // all about box-sizing and display
-@import "misc/misc-layout";
+@import 'misc/misc-layout';
 
 // this a wide range of text elements bug fixing and improvements
-@import "typography/typography-html-body";
-@import "typography/typography-headings";
-@import "typography/typography-blockquotes";
-@import "typography/typography-monospaced-elements";
-@import "typography/typography-misc";
+@import 'typography/typography-html-body';
+@import 'typography/typography-headings';
+@import 'typography/typography-blockquotes';
+@import 'typography/typography-monospaced-elements';
+@import 'typography/typography-misc';
 
 // <a> linkage
-@import "misc/misc-anchors";
+@import 'misc/misc-anchors';
 
 // <ul>, <ol> and <dl>
-@import "misc/misc-lists";
+@import 'misc/misc-lists';
 
 // img, audio, video, svg, and more
-@import "misc/misc-embedded-content";
+@import 'misc/misc-embedded-content';
 
 // all about form elements
-@import "forms/forms-normalization";
-@import "forms/forms-styling";
-@import "forms/forms-styling-ie-hacks";
-@import "forms/forms-styling-select";
-@import "forms/forms-styling-select-ie-hacks";
-@import "forms/forms-styling-radio-checkbox";
+@import 'forms/forms-normalization';
+@import 'forms/forms-styling';
+@import 'forms/forms-styling-ie-hacks';
+@import 'forms/forms-styling-select';
+@import 'forms/forms-styling-select-ie-hacks';
+@import 'forms/forms-styling-radio-checkbox';
 
 // <table> and his elements
-@import "misc/misc-tables";
+@import 'misc/misc-tables';
 
 // this is just quick way to customise your styles
 // below these styles, you shouldn't override nothing but remove them
 // commented by default
-@import "misc/misc-author-styles-in-css";
+@import 'misc/misc-author-styles-in-css';

@@ -60,8 +60,8 @@
 
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
-.bf-btn:disabled
-.bf-btn[aria-disabled="true"] {
+.bf-btn:disabled,
+.bf-btn[aria-disabled='true'] {
   cursor: default !important; // fallback
   cursor: not-allowed !important;
   pointer-events: none !important;

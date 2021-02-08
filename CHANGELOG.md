@@ -1,5 +1,10 @@
 # Changes to bullframe.css
 
+## 3.4.5 (February 08, 2021)
+
+* moved SCSS files and `Gulpfile.js` from double quotes to single ones
+* added Prettify formatting support
+
 ## 3.4.4 (February 04, 2021)
 
 * added missing classless/classless-ie10+ dark/dark-prefers builds

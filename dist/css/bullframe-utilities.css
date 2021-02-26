@@ -1,4 +1,4 @@
-/*! bullframe.css v3.4.6 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.4.7 | MIT License | https://github.com/marcop135/bullframe.css */
 /* custom build: bullframe-utilities */
 .bf-container,
 .bf-container--fluid {
@@ -587,7 +587,7 @@ body.bf-responsive-typography {
   border: 0;
   background-image: none;
   background: #ccc;
-  transition: all 0.2s;
+  transition: all .2s;
 }
 
 .bf-btn:hover, .bf-btn:active, .bf-btn:focus {
@@ -630,11 +630,11 @@ fieldset[disabled] .bf-btn,
       -ms-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  opacity: 0.5 !important;
+  opacity: .5 !important;
 }
 
 .bf-focused {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
+  transition: border .2s, background-color .2s, box-shadow .2s !important;
   border-color: #007bff !important;
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
 }
@@ -655,7 +655,7 @@ fieldset[disabled] .bf-btn,
       -ms-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  opacity: 0.5 !important;
+  opacity: .5 !important;
   background-color: #fff;
   border-color: #999;
 }
@@ -678,7 +678,7 @@ button.bf-disabled,
       -ms-user-select: none;
           user-select: none;
   box-shadow: none;
-  opacity: 0.5;
+  opacity: .5;
   color: #222;
   background: #ccc;
 }
@@ -710,7 +710,7 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
       -ms-user-select: none;
           user-select: none;
   box-shadow: none;
-  opacity: 0.5;
+  opacity: .5;
   color: #fff;
   background: #007bff;
 }
@@ -759,7 +759,7 @@ dt {
   padding-top: 56.25%;
 }
 
-.bf-embed-responsive.bf-embed-responsive--4-3::before {
+.bf-embed-responsive .bf-embed-responsive--4-3::before {
   padding-top: 75%;
 }
 

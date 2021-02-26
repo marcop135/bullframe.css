@@ -57,18 +57,6 @@ body {
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
   background-color: #fff;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  font-weight: 600;
 }
 
 h1,
@@ -78,14 +66,8 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  font-weight: 700;
+  font-weight: 600;
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
@@ -166,7 +148,7 @@ code,
 kbd,
 samp {
   font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.875em;
+  font-size: .875em;
 }
 
 code {
@@ -237,12 +219,12 @@ sup {
 
 sup {
   top: -8px;
-  top: -0.8rem;
+  top: -.8rem;
 }
 
 sub {
   bottom: -4px;
-  bottom: -0.4rem;
+  bottom: -.4rem;
 }
 
 small {
@@ -813,7 +795,7 @@ textarea:focus,
 [type='radio']:focus,
 [type='checkbox']:active,
 [type='checkbox']:focus {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: border .2s, background-color .2s, box-shadow .2s;
   border-color: #007bff;
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
@@ -826,7 +808,7 @@ button,
   padding: 6.66667px 13.33333px;
   padding: 0.66667rem 1.33333rem;
   background: #ccc;
-  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition: color .2s, background .2s, box-shadow .2s;
 }
 
 button:hover, button:active, button:focus,
@@ -894,7 +876,7 @@ label[aria-disabled="true"] {
       -ms-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  opacity: 0.5 !important;
+  opacity: .5 !important;
 }
 
 @media \0screen {
@@ -958,7 +940,7 @@ select:not([size]):not([multiple]) {
 
 *[dir='rtl'] select:not([size]):not([multiple]),
 select[dir='rtl']:not([size]):not([multiple]) {
-  background-position: left 0.85rem top 50%;
+  background-position: left .85rem top 50%;
   padding-right: 7.5px;
   padding-right: 0.75rem;
   padding-left: 20px;
@@ -1022,16 +1004,16 @@ select[dir='rtl']:not([size]):not([multiple]) {
   [type='radio']:after {
     width: 1.8rem;
     height: 1.8rem;
-    left: -0.05rem;
-    top: -0.05rem;
+    left: -.05rem;
+    top: -.05rem;
     border-radius: 50%;
     background: #fff;
     -webkit-transform: scale(0.35);
             transform: scale(0.35);
   }
   [type='checkbox']:after {
-    width: 0.6rem;
-    height: 0.8rem;
+    width: .6rem;
+    height: .8rem;
     border: 2px solid #fff;
     border-top: 0;
     border-left: 0;

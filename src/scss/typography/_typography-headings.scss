@@ -4,30 +4,17 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 0;
+
   font-weight: 700; // fallback
   font-weight: 600;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
   margin-bottom: $bf-spacing-lg-px;
   margin-bottom: $bf-spacing-lg-rem;
+
+
 }
 
 h1 {

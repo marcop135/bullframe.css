@@ -21,7 +21,7 @@
   border: 0;
   background-image: none; // FF mobile
   background: $bf-gray-light;
-  transition: all 0.2s;
+  transition: all .2s;
 
   &:hover,
   &:active,
@@ -33,7 +33,7 @@
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .15);
   }
 
   &:focus {
@@ -53,7 +53,7 @@
 
     &:active,
     &:focus {
-      box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+      box-shadow: 0 0 0 3px rgba(0, 86, 179, .25);
     }
   }
 }
@@ -67,5 +67,5 @@ fieldset[disabled] .bf-btn,
   pointer-events: none !important;
   user-select: none !important;
   box-shadow: none !important;
-  opacity: 0.5 !important;
+  opacity: .5 !important;
 }

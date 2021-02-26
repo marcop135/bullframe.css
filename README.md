@@ -1,5 +1,12 @@
 # bullframe.css
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/bullframe.css"><img align="center" src="https://img.shields.io/npm/v/bullframe.css.svg" alt="NPM page"></a>
+  <a href="https://github.com/kognise/water.css/blob/master/LICENSE.md"><img align="center" src="https://img.shields.io/github/license/kognise/water.css.svg" alt="MIT license"></a>
+</p>
+
+<br>
+
 ![bullframe.css logo](./docs/images-readme/logo-full.png)
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
@@ -23,9 +30,9 @@ Getting started:
 - [Download](#download)
 - [CDN](#CDN)
 - [npm](#npm)
-- [HTML template IE8+](#ie8-and-old-browsers)
-- [HTML template IE11+](#ie11-and-modern-browsers)
-- [Codepen](#codepen)
+- [HTML template for all browsers](#all-browsers---ie8)
+- [HTML template for modern browsers](#ie11-and-modern-browsers)
+- [Codepen templates](#codepen)
 
 Customization:
 
@@ -158,7 +165,9 @@ UNPKG (latest release, not ready for production)
 
 Once you have installed [Node.js](https://nodejs.org/en/download/), you can run this command to install bullframe.css into your project:
 
-`npm install bullframe.css`
+``` bash
+npm install bullframe.css
+```
 
 [What is Node?](https://en.m.wikipedia.org/wiki/Nodejs)
 
@@ -190,7 +199,7 @@ Tip: Improve the JS polyfills security via the `integrity` and `crossorigin` att
 
 Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
 
-#### IE8+ and old browsers
+#### All browsers - IE8+
 
 ```html
 <!doctype html>
@@ -198,7 +207,7 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HMTL template</title>
+  <title>bullframe.css starter template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <!-- bullframe.css: use latest compiled and minified version -->
@@ -227,7 +236,7 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 </html>
 ```
 
-#### IE11+ and modern browsers
+#### IE11 and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
@@ -236,7 +245,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HMTL template</title>
+  <title>bullframe.css starter template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <!-- bullframe.css: use latest compiled and minified version -->

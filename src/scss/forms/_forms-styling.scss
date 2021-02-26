@@ -16,8 +16,8 @@ select,
 textarea {
   background-color: $bf-white;
   border: 1px solid $bf-gray;
-  padding: $bf-spacing-md-px ($bf-spacing-lg-px * 0.75);
-  padding: $bf-spacing-md-rem ($bf-spacing-lg-rem * 0.75);
+  padding: $bf-spacing-md-px ($bf-spacing-lg-px * .75);
+  padding: $bf-spacing-md-rem ($bf-spacing-lg-rem * .75);
 }
 
 // Old browsers and Opera Mini don't fully support all type of inputs
@@ -43,9 +43,9 @@ textarea,
 [type='checkbox'] {
   &:active,
   &:focus {
-    transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+    transition: border .2s, background-color .2s, box-shadow .2s;
     border-color: $bf-blue;
-    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, .25);
   }
 }
 
@@ -57,7 +57,7 @@ button,
   padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
   padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
   background: $bf-gray-light;
-  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition: color .2s, background .2s, box-shadow .2s;
 
   &:hover,
   &:active,
@@ -69,7 +69,7 @@ button,
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .15);
   }
 }
 
@@ -117,5 +117,5 @@ label[aria-disabled="true"] {
   pointer-events: none !important;
   user-select: none !important;
   box-shadow: none !important;
-  opacity: 0.5 !important;
+  opacity: .5 !important;
 }

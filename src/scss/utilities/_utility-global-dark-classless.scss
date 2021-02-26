@@ -81,7 +81,7 @@ select:not([size]):not([multiple]),
 textarea {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
   }
 }
 
@@ -91,7 +91,7 @@ select:not([size]):not([multiple]) {
 
 // IE9 only hack
 // https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
-@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+@media screen and (min-width: 0\0) and (min-resolution: .001dpcm) {
   // hide custom arrow
   select:not([size]):not([multiple]),
   // RTL
@@ -144,7 +144,7 @@ button,
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .45);
   }
 }
 
@@ -154,7 +154,7 @@ button,
 [type='submit'] {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .45);
   }
 }
 

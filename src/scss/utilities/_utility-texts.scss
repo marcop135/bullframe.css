@@ -20,7 +20,7 @@
 
 .bf-t-shadow {
   text-shadow: 0 0 2px $bf-dark !important;
-  text-shadow: 0 0 0.2rem $bf-dark !important;
+  text-shadow: 0 0 .2rem $bf-dark !important;
 }
 
 .bf-t-italic {
@@ -89,7 +89,7 @@
     /* Windows */ 'Segoe UI', /* Android */ Roboto,
     /* Linux with KDE */ Oxygen-Sans, /* Ubuntu (all variants) */ Ubuntu,
     /* Linux with GNOME Shell */ Cantarell,
-    /* macOS 10.10 and below */ 'Helvetica Neue', Helvetica,
+    /* macOS 1.10 and below */ 'Helvetica Neue', Helvetica,
     /* Basic web fallback */ Arial, sans-serif,
     /* emoji fonts */ 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji' !important;
@@ -103,8 +103,8 @@
 
 .bf-font-monospace {
   font-family:
-  /* macOS 10.10+ */ 'Menlo', /* Windows 6+ */ 'Consolas',
-    /* Android 4+ */ 'Roboto Mono', /* Ubuntu 10.10+ */ 'Ubuntu Monospace',
+  /* macOS 1.10+ */ 'Menlo', /* Windows 6+ */ 'Consolas',
+    /* Android 4+ */ 'Roboto Mono', /* Ubuntu 1.10+ */ 'Ubuntu Monospace',
     /* KDE Plasma 5+ */ 'Noto Mono', /* KDE Plasma 4+ */ 'Oxygen Mono',
     /* Linux/OpenOffice fallback */ 'Liberation Mono', /* fallback */ monospace,
     /* emoji fonts */ 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',

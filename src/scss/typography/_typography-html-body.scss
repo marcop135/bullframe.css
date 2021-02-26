@@ -67,13 +67,4 @@ body {
   word-wrap: break-word;
 
   background-color: $bf-white;
-
-  // 3D effects are problematic in WebKit because
-  // backface-visibility not hidden, so we can add backface support
-  // to the body element
-  // http://css-tricks.com/almanac/properties/b/backface-visibility/
-
-  // this is a not standard CSS property, so it's for webkit only
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
-  backface-visibility: hidden;
 }

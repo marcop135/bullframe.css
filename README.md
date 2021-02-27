@@ -113,17 +113,11 @@ bullframe.css/
     │   ├── ...
 └── src/scss/
     └── forms/
-    │   ├── ...
     └── misc/
-    │   ├── ...
     └── mixins/
-    │   ├── ...
     └── typography/
-    │   ├── ...
     └── utilities/
-    │   ├── ...
     └── variables/
-    │   ├── ...
     ...
     ├── bullframe-classless.scss
     ├── bullframe-dark-prefers.scss
@@ -133,7 +127,6 @@ bullframe.css/
     ...
 └── gulpfile.js
 └── index.html
-└── package.json
 ...
 ```
 
@@ -201,6 +194,9 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 
 #### All browsers - IE8+
 
+<details>
+  <summary><strong>Show snippet</strong></summary>
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -236,9 +232,14 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 </html>
 ```
 
+</details>
+
 #### IE11 and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
+
+<details>
+  <summary><strong>Show snippet</strong></summary>
 
 ```html
 <!doctype html>
@@ -266,6 +267,8 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 </body>
 </html>
 ```
+
+</details>
 
 ## Codepen
 
@@ -363,12 +366,12 @@ Just give me all the utilities:
 
 ### Utilities - Reference
 
+<details>
+  <summary><strong>Show section</strong></summary>
+
 #### Grid system
 
 A set of utilities to create and customise a simple but powerful IE8+ flexible Grid System
-
-<details>
-  <summary><strong>Show Section</strong></summary>
 
 | Utility class | Description |
 | ------------- | ----------- |
@@ -393,12 +396,7 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 
 Breakpoints: 576, 768, 992 and 1200 pixels
 
-</details>
-
 #### Layout
-
-<details>
-  <summary><strong>Show Section</strong></summary>
 
 | Utility class       | Description         |
 | -------------       | -------------       |
@@ -428,12 +426,7 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-width-100` | Sets the `width` to `100%` |
 | `.bf-width-auto` | Sets the `width` to `auto` |
 
-</details>
-
 #### Spacing
-
-<details>
-  <summary><strong>Show Section</strong></summary>
 
   | Utility class | Description |
 | ------------- | ----------- |
@@ -459,13 +452,9 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-p-b-2` | Sets the `padding-bottom` to a custom value |
 | `.bf-p-b-3` | Sets the `padding-bottom` to a custom value |
 | `.bf-p-b-4` | Sets the `padding-bottom` to a custom value |
-</details>
 
 #### Texts
 
-<details>
-  <summary><strong>Show Section</strong></summary>
-  
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-t-transform-uppercase` | Sets `transform` to a `uppercase` (AKA capitalizes a text) |
@@ -496,7 +485,6 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-h6` | Matches the font styling of a `h6` |
 | `.bf-lead` | Sets `font-size` to `125%` |
 | `.bf-responsive-typography` | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties`, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm), [read more](https://codepen.io/marcop135/pen/eYmPmJm) |
-</details>
 
 #### Lists
 

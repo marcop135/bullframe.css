@@ -367,6 +367,9 @@ Just give me all the utilities:
 
 A set of utilities to create and customise a simple but powerful IE8+ flexible Grid System
 
+<details>
+  <summary><strong>Show Section</strong></summary>
+
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-container` | Sets a centered block container with a `max-width` of 1140px, and a custom padding |
@@ -390,7 +393,12 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 
 Breakpoints: 576, 768, 992 and 1200 pixels
 
+</details>
+
 #### Layout
+
+<details>
+  <summary><strong>Show Section</strong></summary>
 
 | Utility class       | Description         |
 | -------------       | -------------       |
@@ -420,10 +428,44 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-width-100` | Sets the `width` to `100%` |
 | `.bf-width-auto` | Sets the `width` to `auto` |
 
+</details>
+
 #### Spacing
+
+<details>
+  <summary><strong>Show Section</strong></summary>
+
+  | Utility class | Description |
+| ------------- | ----------- |
+| `.bf-m-0` | Sets the `margin` to `0` |
+| `.bf-m-t-0` | Sets the `margin-top` to `0` |
+| `.bf-m-b-0` | Sets the `margin-bottom` to `0` |
+| `.bf-m-l-0` | Sets the `margin-left` to `0` |
+| `.bf-m-r-0` | Sets the `margin-right` to `0` |
+| `.bf-m-b-1` | Sets the `margin-bottom` to a custom value that matches the grid system gutter |
+| `.bf-m-b-2` | Sets the `margin-bottom` to a custom value |
+| `.bf-m-b-3` | Sets the `margin-bottom` to a custom value |
+| `.bf-m-b-4` | Sets the `margin-bottom` to a custom value |
+| `.bf-p-0` | Sets the `padding` to `0` |
+| `.bf-p-t-0` | Sets the `padding-top` to `0` |
+| `.bf-p-b-0` | Sets the `padding-bottom` to `0` |
+| `.bf-p-l-0` | Sets the `padding-left` to `0` |
+| `.bf-p-r-0` | Sets the `padding-right` to `0` |
+| `.bf-p-t-1` | Sets the `padding-top` to a custom value that matches the grid system gutter |
+| `.bf-p-t-2` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-3` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-4` | Sets the `padding-top` to a custom value |
+| `.bf-p-t-1` | Sets the `padding-bottom` to a custom value that matches the grid system gutter |
+| `.bf-p-b-2` | Sets the `padding-bottom` to a custom value |
+| `.bf-p-b-3` | Sets the `padding-bottom` to a custom value |
+| `.bf-p-b-4` | Sets the `padding-bottom` to a custom value |
+</details>
 
 #### Texts
 
+<details>
+  <summary><strong>Show Section</strong></summary>
+  
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-t-transform-uppercase` | Sets `transform` to a `uppercase` (AKA capitalizes a text) |
@@ -454,6 +496,7 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-h6` | Matches the font styling of a `h6` |
 | `.bf-lead` | Sets `font-size` to `125%` |
 | `.bf-responsive-typography` | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties`, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm), [read more](https://codepen.io/marcop135/pen/eYmPmJm) |
+</details>
 
 #### Lists
 

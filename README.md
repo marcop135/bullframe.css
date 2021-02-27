@@ -39,7 +39,6 @@ Customization:
 - [No classes (Class-less)](#no-classes-class-less)
 - [Dark mode](#dark-themes)
 - [No IE hacks](#no-ie-hacks-ie10)
-- [Utilities only](#utilities)
 
 More:
 
@@ -317,72 +316,10 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
 ```
 
-<details>
-  <summary><strong>Show CDN section</strong></summary>
-
-dark mode
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
-```
-
-dark-prefers mode
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
-```
-
-</details>
-
 ### No IE hacks, IE10+
 
 I used some IE hacks to fix form elements in IE8 and IE9.
 If you don't like hacks in your (S)CSS code, there are six IE10+ builds (e.g. `bullframe-ie10+.css` or `bullframe-utilities-ie10+.css`) where IE8-9 hacks are removed.
-
-<details>
-  <summary><strong>Show CDN section</strong></summary>
-
-bullframe.css ie10+
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
-```
-
-bullframe.css dark ie10+
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-ie10+.min.css">
-```
-
-bullframe.css dark-prefers ie10+
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers-ie10+.min.css">
-```
-
-bullframe.css classless ie10+
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-ie10+.min.css">
-```
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-dark-ie10+.min.css">
-```
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-dark-prefers-ie10+.min.css">
-
-```
-</details>
-
-### Utilities
-
-Just give me all the utilities:
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-utilities.min.css">
-```
 
 ### Utilities - Reference
 

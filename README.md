@@ -37,7 +37,7 @@ Getting started:
 Customization:
 
 - [No classes (Class-less)](#no-classes-class-less)
-- [Dark mode](#dark-theme)
+- [Dark mode](#dark-themes)
 - [No IE hacks](#no-ie-hacks-ie10)
 - [Utilities only](#utilities)
 
@@ -307,7 +307,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
-### Dark theme
+### Dark themes
 
 This enables a dark (dark mode) theme by default in all browsers:
 
@@ -529,6 +529,8 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
+
+</details>
 
 ## Browser compatibility
 

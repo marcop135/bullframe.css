@@ -81,11 +81,6 @@ Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/124
 
 Bootstrap v5 [dropped IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
 
-### No weird IE hacks and IE10+ support
-
-I used some IE hacks to fix form elements in IE8 and IE9.
-If you don't like hacks in your (S)CSS code, there are six IE10+ build like `bullframe-ie10+.css` and `bullframe-utilities-ie10+.css` where IE8-9 hacks are removed.
-
 ## What's included
 
 You'll see something like this:
@@ -309,7 +304,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 
 ### Dark themes
 
-This enables a dark (dark mode) theme by default in all browsers:
+This build enables a dark (dark mode) theme by default in all browsers:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
@@ -322,7 +317,30 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
 ```
 
+<details>
+  <summary><strong>Show CDN section</strong></summary>
+
+dark mode
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
+```
+
+dark-prefers mode
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
+```
+
+</details>
+
 ### No IE hacks, IE10+
+
+I used some IE hacks to fix form elements in IE8 and IE9.
+If you don't like hacks in your (S)CSS code, there are six IE10+ builds (e.g. `bullframe-ie10+.css` or `bullframe-utilities-ie10+.css`) where IE8-9 hacks are removed.
+
+<details>
+  <summary><strong>Show CDN section</strong></summary>
 
 bullframe.css ie10+
 
@@ -354,7 +372,9 @@ bullframe.css classless ie10+
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless-dark-prefers-ie10+.min.css">
+
 ```
+</details>
 
 ### Utilities
 

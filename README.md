@@ -21,7 +21,11 @@ It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([
 4. Add JS polyfills (optional)
 5. _...ready to go everywhere!_
 
+<br>
+
 ---
+
+<br>
 
 **Jump to:**
 
@@ -49,7 +53,11 @@ More:
 - [Changelog](#changelog)
 - _[Sponsor me!](#become-a-sponsor)_
 
+<br>
+
 ---
+
+<br>
 
 ## Best features
 
@@ -124,7 +132,11 @@ bullframe.css/
 ...
 ```
 
+<br>
+
 ---
+
+<br>
 
 ## Getting started
 
@@ -188,9 +200,6 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 
 #### All browsers - IE8+
 
-<details>
-  <summary><strong>Show snippet</strong></summary>
-
 ```html
 <!doctype html>
 <html lang="en">
@@ -226,14 +235,9 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 </html>
 ```
 
-</details>
-
 #### IE11 and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
-
-<details>
-  <summary><strong>Show snippet</strong></summary>
 
 ```html
 <!doctype html>
@@ -262,8 +266,6 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 </html>
 ```
 
-</details>
-
 ## Codepen
 
 Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
@@ -276,13 +278,19 @@ Click on the links below, and start a new pen in CodePen using bullframe.css.
 - [Dark theme](https://codepen.io/pen?template=ExPmzBV)
 - [Dark `prefers-color-scheme`](https://codepen.io/pen?template=NWxjVQO)
 
+<br>
+
+---
+
+<br>
+
 ## Customization
 
 ### No classes (class-less)
 
 No classes, no utilities. Feel free to add yours and create your custom components.
 
-Just drop this CSS file in your webpage, and the job is done!
+Just drop the snippet below in the `<head>` of your webpage, and the job is done!
 Write semantic HTML and get nice styles and cross-browser normalization.
 
 ```html
@@ -303,14 +311,22 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 
 ### Dark themes
 
-This build enables a dark (dark mode) theme by default in all browsers:
+There are two builds that enable a dark (dark mode) theme by default in all browsers.
+
+`bullframe-dark.css`
+
+CDN
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
 ```
 
-And this, enables dark only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
+`bullframe-dark-prefers.css`
+
+Enables dark only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
+
+CDN
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
@@ -320,6 +336,12 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 
 I used some IE hacks to fix form elements in IE8 and IE9.
 If you don't like hacks in your (S)CSS code, there are six IE10+ builds (e.g. `bullframe-ie10+.css` or `bullframe-utilities-ie10+.css`) where IE8-9 hacks are removed.
+
+CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
+```
 
 ### Utilities - Reference
 
@@ -488,6 +510,12 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
 
 </details>
+
+<br>
+
+---
+
+<br>
 
 ## Browser compatibility
 

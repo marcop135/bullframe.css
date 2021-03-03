@@ -1,8 +1,8 @@
 # bullframe.css
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/bullframe.css"><img align="center" src="https://img.shields.io/npm/v/bullframe.css.svg" alt="NPM page"></a>
-  <a href="https://github.com/kognise/water.css/blob/master/LICENSE.md"><img align="center" src="https://img.shields.io/github/license/kognise/water.css.svg" alt="MIT license"></a>
+<p>
+  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg" alt="NPM page"></a>
+  <a href="https://github.com/kognise/water.css/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/kognise/water.css.svg" alt="MIT license"></a>
 </p>
 
 <br>
@@ -24,8 +24,6 @@ It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([
 <br>
 
 ---
-
-<br>
 
 **Jump to:**
 
@@ -56,8 +54,6 @@ More:
 <br>
 
 ---
-
-<br>
 
 ## Best features
 
@@ -135,8 +131,6 @@ bullframe.css/
 <br>
 
 ---
-
-<br>
 
 ## Getting started
 
@@ -282,8 +276,6 @@ Click on the links below, and start a new pen in CodePen using bullframe.css.
 
 ---
 
-<br>
-
 ## Customization
 
 ### No classes (class-less)
@@ -404,6 +396,27 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-width-75` | Sets the `width` to `75%` |
 | `.bf-width-100` | Sets the `width` to `100%` |
 | `.bf-width-auto` | Sets the `width` to `auto` |
+| `.bf-z-index-1` | Set `z-index` to 1 |
+| `.bf-z-index-2` | Set `z-index` to 2 |
+| `.bf-z-index-3` | Set `z-index` to 3 |
+| `.bf-z-index-4` | Set `z-index` to 4 |
+| `.bf-z-index-5` | Set `z-index` to 5 |
+| `.bf-z-index-6` | Set `z-index` to 6 |
+| `.bf-z-index-7` | Set `z-index` to 7 |
+| `.bf-z-index-8` | Set `z-index` to 8 |
+| `.bf-z-index-9` | Set `z-index` to 9 |
+| `.bf-z-index-10` | Set `z-index` to 10 |
+| `.bf-z-index-20` | Set `z-index` to 20 |
+| `.bf-z-index-30` | Set `z-index` to 30 |
+| `.bf-z-index-40` | Set `z-index` to 40 |
+| `.bf-z-index-50` | Set `z-index` to 50 |
+| `.bf-z-index-60` | Set `z-index` to 60 |
+| `.bf-z-index-70` | Set `z-index` to 70 |
+| `.bf-z-index-80` | Set `z-index` to 80 |
+| `.bf-z-index-90` | Set `z-index` to 90 |
+| `.bf-z-index-100` | Set `z-index` to 100 |
+| `.bf-z-index-200` | Set `z-index` to 200 |
+| `.bf-z-index-300` | Set `z-index` to 300 |
 
 #### Spacing
 
@@ -463,7 +476,7 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-h5` | Matches the font styling of a `h5` |
 | `.bf-h6` | Matches the font styling of a `h6` |
 | `.bf-lead` | Sets `font-size` to `125%` |
-| `.bf-responsive-typography` | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties`, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm), [read more](https://codepen.io/marcop135/pen/eYmPmJm) |
+| `.bf-responsive-typography` | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties`, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm) |
 
 #### Lists
 
@@ -514,8 +527,6 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 <br>
 
 ---
-
-<br>
 
 ## Browser compatibility
 

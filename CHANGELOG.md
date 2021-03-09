@@ -1,7 +1,10 @@
 # Changes to bullframe.css
 
-## 3.5.0 (?, 2021)
+## 3.5.0 (February 09, 2021)
 
+* added new flexbox-powered grid system mixins
+* added new flexbox-powered align utility
+* added new text-truncate multiline text mixin and utility using `line-clamp` property (no IE)
 * added new `z-index` utility
 * added extra [debugging](https://github.com/marcop135/bullframe.css/blob/v3.4.6/src/scss/utilities/_utility-debugging.scss#L31) utility test to check performances, thanks @tkadlec
 

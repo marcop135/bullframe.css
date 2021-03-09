@@ -1706,6 +1706,26 @@ table th[class^='bf-col'] {
   word-wrap: normal !important;
 }
 
+.bf-t-truncate--multiline-2 {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  white-space: normal !important;
+}
+
+.bf-t-truncate--multiline-3 {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  white-space: normal !important;
+}
+
 .bf-no-select {
   -webkit-user-select: none !important;
      -moz-user-select: none !important;

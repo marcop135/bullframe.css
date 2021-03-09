@@ -55,6 +55,9 @@
 // the 12 columns IE8+ grid system
 @import 'utilities/utility-grid-system';
 
+// a flexbox-powered grid system alternative (IE10+)
+@import 'mixins/mixin-grid-flex';
+
 // clearfix, sr-only, float, inline/block/flex, and more
 @import 'utilities/utility-layout';
 

@@ -1,5 +1,10 @@
 # Changes to bullframe.css
 
+## 3.5.0 (?, 2021)
+
+* added new `z-index` utility
+* added extra [debugging](https://github.com/marcop135/bullframe.css/blob/v3.4.6/src/scss/utilities/_utility-debugging.scss#L31) utility test to check performances, thanks @tkadlec
+
 ## 3.4.5 (February 08, 2021)
 
 * moved SCSS files and `Gulpfile.js` from double quotes to single ones
@@ -60,7 +65,7 @@
 
 ## 3.3.3 (July 22, 2020)
 
-* bump version to fix npm registry
+* bumped version to fix npm registry
 
 ## 3.3.2 (July 22, 2020)
 

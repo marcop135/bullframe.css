@@ -1480,6 +1480,15 @@ table th[class^='bf-col'] {
           transform: translate(-50%, -50%) !important;
 }
 
+.bf-align-center-flex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
 .bf-width-25 {
   width: 25% !important;
 }

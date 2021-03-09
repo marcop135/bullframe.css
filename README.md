@@ -337,12 +337,14 @@ CDN
 
 ### Utilities - Reference
 
+A set of utilities to create and customise bullframe.css:
+
 <details>
   <summary><strong>Show section</strong></summary>
 
 #### Grid system
 
-A set of utilities to create and customise a simple but powerful IE8+ flexible Grid System
+A simple but powerful IE8+ flexible Grid System (+ a Flexbox IE10+ alternative)
 
 | Utility class | Description |
 | ------------- | ----------- |
@@ -367,6 +369,37 @@ A set of utilities to create and customise a simple but powerful IE8+ flexible G
 
 Breakpoints: 576, 768, 992 and 1200 pixels
 
+##### Grid system with Flexbox (IE10+)
+
+You may use `/mixins/_mixin-grid-flex.scss` mixins to easily create a Grid System in Flexbox with no extra HTML classes. 
+Add some `margin` as a gutter where needed.
+
+``` scss
+// create a Flexbox parent
+@mixin flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Make a child 50% of the width
+@mixin flex-50 {
+  flex: 0 0 100%;
+}
+
+// Make a child 70% of the width
+@mixin flex-70 {
+  flex: 0 0 70%;
+}
+
+// Make a child 25% of the width
+@mixin flex-25 {
+  flex: 0 0 25%;
+}
+
+...
+...
+```
+
 #### Layout
 
 | Utility class       | Description         |
@@ -390,6 +423,7 @@ Breakpoints: 576, 768, 992 and 1200 pixels
 | `.bf-position-fixed` | Sets the `position` to `fixed` |
 | `.bf-align-center-unknown` | Sets the `position` to `relative` |
 | `.bf-align-center-unknown--item` | Centers an element with unknown height and width to a relative positioned parent, IE10+, [read more](https://css-tricks.com/centering-css-complete-guide) |
+| `.bf-align-center-flex` | Centers all elements with known height and width to a flexbox container, IE10+, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) |
 | `.bf-width-25` | Sets the `width` to `25%` |
 | `.bf-width-33` | Sets the `width` to `33.33333333333333%` |
 | `.bf-width-50` | Sets the `width` to `50%` |

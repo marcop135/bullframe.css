@@ -26,11 +26,9 @@
 @mixin bf-text-truncate--multiline-2 {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-  white-space: nowrap !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
-  white-space: normal !important;
 }
 
 @mixin bf-text-truncate--multiline-3 {

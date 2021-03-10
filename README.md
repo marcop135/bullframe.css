@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg" alt="NPM page"></a>
-  <a href="https://github.com/kognise/water.css/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/kognise/water.css.svg" alt="MIT license"></a>
+  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg" alt="MIT license"></a>
 </p>
 
 <br>

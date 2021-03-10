@@ -61,6 +61,11 @@
 // clearfix, sr-only, float, inline/block/flex, and more
 @import 'utilities/utility-layout';
 
+// CSS filters 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+// https://caniuse.com/css-filters
+@import 'utilities/utility-filters';
+
 @import 'utilities/utility-z-index';
 
 // reset margins and paddings adding a class

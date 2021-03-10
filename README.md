@@ -422,6 +422,7 @@ Add some `margin` as a gutter where needed.
 | `.bf-float-left` | Sets the `float` to `left` |
 | `.bf-float-right` | Sets the `float` to `right` |
 | `.bf-position-fixed` | Sets the `position` to `fixed` |
+| `.bf-position-sticky` | Sets the `position` to `sticky` and `top` to `0` |
 | `.bf-align-center-unknown` | Sets the `position` to `relative` |
 | `.bf-align-center-unknown--item` | Centers an element with unknown height and width to a relative positioned parent, IE10+, [read more](https://css-tricks.com/centering-css-complete-guide) |
 | `.bf-align-center-flex` | Centers all elements with known height and width to a flexbox container, IE10+, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) |
@@ -453,9 +454,18 @@ Add some `margin` as a gutter where needed.
 | `.bf-z-index-200` | Set `z-index` to 200 |
 | `.bf-z-index-300` | Set `z-index` to 300 |
 
+#### Filters
+
+| Utility class       | Description         |
+| -------------       | -------------       |
+| `.bf-filter-invert` | Sets `filter` to `invert(100%)`  |
+| `.bf-filter-grayscale` | Sets `filter` to `grayscale(1)`  |
+| `.bf-filter-blur` | Sets `filter` to `blur(.3rem)`  |
+| `.bf-filter-none` | Sets `filter` to `none`  |
+
 #### Spacing
 
-  | Utility class | Description |
+| Utility class | Description |
 | ------------- | ----------- |
 | `.bf-m-0` | Sets the `margin` to `0` |
 | `.bf-m-t-0` | Sets the `margin-top` to `0` |

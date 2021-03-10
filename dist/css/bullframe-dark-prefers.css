@@ -1519,6 +1519,31 @@ table th[class^='bf-col'] {
   width: auto !important;
 }
 
+.bf-filter-invert {
+  -webkit-filter: invert(100%) !important;
+          filter: invert(100%) !important;
+}
+
+.bf-filter-dim-images {
+  -webkit-filter: brightness(0.8) contrast(1.2);
+          filter: brightness(0.8) contrast(1.2);
+}
+
+.bf-filter-grayscale {
+  -webkit-filter: grayscale(1) !important;
+          filter: grayscale(1) !important;
+}
+
+.bf-filter-blur {
+  -webkit-filter: blur(0.3rem) !important;
+          filter: blur(0.3rem) !important;
+}
+
+.bf-filter-none {
+  -webkit-filter: none !important;
+          filter: none !important;
+}
+
 .bf-z-index-1 {
   z-index: 1;
 }

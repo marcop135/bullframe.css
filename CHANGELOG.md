@@ -1,5 +1,9 @@
 # Changes to bullframe.css
 
+## 3.5.1 (??, 2021)
+
+* purged `white-space` declarations from new text truncate multiline mixins and utility
+
 ## 3.5.0 (February 09, 2021)
 
 * added new flexbox-powered grid system mixins (IE10+)

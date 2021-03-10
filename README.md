@@ -1,8 +1,9 @@
 # bullframe.css
 
 <p>
-  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg" alt="NPM page"></a>
-  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg" alt="MIT license"></a>
+  <a href="https://www.npmjs.com/package/bullframe.css"><img alt="NPM page" src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square"></a>
+  <a href="https://github.com/marcop135/bullframe.css/commits/"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square"></a>
+  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license"></a>
 </p>
 
 <br>

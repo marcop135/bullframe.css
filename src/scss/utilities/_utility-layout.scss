@@ -115,8 +115,15 @@
   float: left !important;
 }
 
+// ≠ IE
+// https://caniuse.com/css-sticky
 .bf-position-fixed {
   position: fixed !important;
+}
+
+.bf-position-sticky {
+  position: sticky !important;
+  top: 0 !important;
 }
 
 // https://css-tricks.com/centering-css-complete-guide

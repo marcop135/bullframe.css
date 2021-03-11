@@ -25,6 +25,18 @@ template {
   display: none;
 }
 
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+}
+
 [hidden] {
   display: none !important;
 }
@@ -1081,8 +1093,8 @@ select[dir='rtl']:not([size]):not([multiple]) {
     margin-top: -.25rem;
     background-color: #007bff;
     border-radius: 1.5rem;
-    -webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
   [type='range']::-webkit-slider-thumb:active {
     background-color: #007bff;
@@ -1095,8 +1107,8 @@ select[dir='rtl']:not([size]):not([multiple]) {
     height: 1.5rem;
     background-color: #007bff;
     border-radius: 1.5rem;
-    -moz-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -moz-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
   [type='range']::-moz-range-thumb:active {
     background-color: #007bff;

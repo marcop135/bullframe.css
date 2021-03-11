@@ -27,6 +27,19 @@ template {
   display: none;
 }
 
+// Remove the tapping delay in IE 10
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+}
+
 // Always hide an element with the `hidden` HTML attribute (from PureCSS).
 // Needed for proper display in IE 10-. */
 [hidden] {

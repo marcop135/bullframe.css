@@ -1,8 +1,10 @@
 # Changes to bullframe.css
 
-## 3.5.1 (??, 2021)
+## 3.6.0 (??, 2021)
 
-* purged `white-space` declarations from new text truncate multiline mixins and utility
+* added new `filter` utility module (≠ IE / Opera Mini)
+* added new `bf-position-sticky` utility class  (≠ IE)
+* purged `white-space` declarations from text truncate multiline mixins and utility
 
 ## 3.5.0 (February 09, 2021)
 

@@ -109,6 +109,9 @@
 // has requested that the system minimize the amount of animation or motion it uses.
 @import 'utilities/utility-reduced-motion';
 
+// improve several ARIA roles appearance
+@import 'misc/mis-accessibility';
+
 // shamy quick fixes...
 // https://csswizardry.com/2013/04/shame-css/
 @import 'misc/misc-shame';

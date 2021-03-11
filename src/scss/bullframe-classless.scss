@@ -38,6 +38,13 @@
 // <table> and his elements
 @import 'misc/misc-tables';
 
+// improve several ARIA roles appearance
+@import 'misc/mis-accessibility';
+
+// shamy quick fixes...
+// https://csswizardry.com/2013/04/shame-css/
+@import 'misc/misc-shame';
+
 // this is just quick way to customise your styles
 // below these styles, you shouldn't override nothing but remove them
 // commented by default

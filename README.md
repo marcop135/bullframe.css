@@ -34,7 +34,7 @@ Getting started:
 - [CDN](#CDN)
 - [npm](#npm)
 - [HTML template for all browsers](#all-browsers---ie8)
-- [HTML template for modern browsers](#ie11-and-modern-browsers)
+- [HTML template for modern browsers](#ie10-and-modern-browsers)
 - [Codepen templates](#codepen)
 
 Customization:
@@ -230,7 +230,7 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 </html>
 ```
 
-#### IE11 and modern browsers
+#### IE10 and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
@@ -254,7 +254,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <body>
   <div class="bf-container">
     <!-- Add your site or application content here -->
-    <p>Hello world! This is a bullframe.css IE11+ starter template</p>
+    <p>Hello world! This is a bullframe.css 10+ starter template</p>
   </div>
   
 </body>

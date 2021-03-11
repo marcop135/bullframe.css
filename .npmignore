@@ -1,5 +1,6 @@
 /.git
 /.github
+/dist/*.map
 /docs/screenshots-screencasts
 .gitignore
 .gitattributes

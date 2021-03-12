@@ -1,9 +1,8 @@
 # bullframe.css
 
 <p>
-  <a href="https://www.npmjs.com/package/bullframe.css"><img alt="NPM page" src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square"></a>
-  <a href="https://github.com/marcop135/bullframe.css/commits/"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square"></a>
-  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license"></a>
+  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg" alt="NPM page"></a>
+  <a href="https://github.com/kognise/water.css/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/kognise/water.css.svg" alt="MIT license"></a>
 </p>
 
 <br>
@@ -34,7 +33,7 @@ Getting started:
 - [CDN](#CDN)
 - [npm](#npm)
 - [HTML template for all browsers](#all-browsers---ie8)
-- [HTML template for modern browsers](#ie10-and-modern-browsers)
+- [HTML template for modern browsers](#ie11-and-modern-browsers)
 - [Codepen templates](#codepen)
 
 Customization:
@@ -160,6 +159,9 @@ UNPKG (latest release, not ready for production)
 Once you have installed [Node.js](https://nodejs.org/en/download/), you can run this command to install bullframe.css into your project:
 
 ``` bash
+# create a package.json file
+# $ npm init
+
 npm install bullframe.css
 ```
 
@@ -230,7 +232,7 @@ Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/
 </html>
 ```
 
-#### IE10 and modern browsers
+#### IE11 and modern browsers
 
 Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
 
@@ -254,7 +256,7 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
 <body>
   <div class="bf-container">
     <!-- Add your site or application content here -->
-    <p>Hello world! This is a bullframe.css 10+ starter template</p>
+    <p>Hello world! This is a bullframe.css IE11+ starter template</p>
   </div>
   
 </body>
@@ -422,7 +424,6 @@ Add some `margin` as a gutter where needed.
 | `.bf-float-left` | Sets the `float` to `left` |
 | `.bf-float-right` | Sets the `float` to `right` |
 | `.bf-position-fixed` | Sets the `position` to `fixed` |
-| `.bf-position-sticky` | Sets the `position` to `sticky` and `top` to `0` |
 | `.bf-align-center-unknown` | Sets the `position` to `relative` |
 | `.bf-align-center-unknown--item` | Centers an element with unknown height and width to a relative positioned parent, IE10+, [read more](https://css-tricks.com/centering-css-complete-guide) |
 | `.bf-align-center-flex` | Centers all elements with known height and width to a flexbox container, IE10+, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) |
@@ -454,18 +455,9 @@ Add some `margin` as a gutter where needed.
 | `.bf-z-index-200` | Set `z-index` to 200 |
 | `.bf-z-index-300` | Set `z-index` to 300 |
 
-#### Filters
-
-| Utility class       | Description         |
-| -------------       | -------------       |
-| `.bf-filter-invert` | Sets `filter` to `invert(100%)`  |
-| `.bf-filter-grayscale` | Sets `filter` to `grayscale(1)`  |
-| `.bf-filter-blur` | Sets `filter` to `blur(.3rem)`  |
-| `.bf-filter-none` | Sets `filter` to `none`  |
-
 #### Spacing
 
-| Utility class | Description |
+  | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-m-0` | Sets the `margin` to `0` |
 | `.bf-m-t-0` | Sets the `margin-top` to `0` |

@@ -1408,12 +1408,37 @@ table th[class^='bf-col'] {
   display: inline-flex !important;
 }
 
-.bf-float-right {
-  float: right !important;
+.bf-display-flex--justify-start {
+  -webkit-justify-content: flex-start !important;
+          justify-content: flex-start !important;
+}
+
+.bf-display-flex--justify-end {
+  -webkit-justify-content: flex-end !important;
+          justify-content: flex-end !important;
+}
+
+.bf-display-flex--justify-center {
+  -webkit-justify-content: center !important;
+          justify-content: center !important;
+}
+
+.bf-display-flex--wrap {
+  -webkit-flex-wrap: wrap !important;
+          flex-wrap: wrap !important;
+}
+
+.bf-display-flex--nowrap {
+  -webkit-flex-wrap: nowrap !important;
+          flex-wrap: nowrap !important;
 }
 
 .bf-float-left {
   float: left !important;
+}
+
+.bf-float-right {
+  float: right !important;
 }
 
 .bf-position-fixed {

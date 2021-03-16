@@ -1,8 +1,9 @@
 # bullframe.css
 
 <p>
-  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg" alt="NPM page"></a>
-  <a href="https://github.com/kognise/water.css/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/kognise/water.css.svg" alt="MIT license"></a>
+  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page"></a>
+  <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit">
+  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license"></a>
 </p>
 
 <br>
@@ -11,7 +12,7 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is an (S)CSS framework that works in all browsers, modern or not.
+bullframe.css is a Sass (SCSS) framework that works in all browsers, modern or not.
 
 It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([atoms](https://atomicdesign.bradfrost.com/chapter-2/#atoms)) for your Sass project.
 
@@ -369,13 +370,14 @@ A simple but powerful IE8+ flexible Grid System (+ a Flexbox IE10+ alternative)
 | `.bf-col-10` | Sets a floated container with a custom padding and a `width` of `83.33333333333334%` |
 | `.bf-col-11` | Sets a floated container with a custom padding and a `width` of `91.66666666666666%` |
 | `.bf-col-12` | Sets a floated container with a custom padding and a `width` of `100%` |
-| `.no-gutters` | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0`. To be applied to rows and cols |
+| `.no-gutters` | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0` — to be applied to row and column containers |
 
 Breakpoints: 576, 768, 992 and 1200 pixels
 
 ##### Grid system with Flexbox (IE10+)
 
-You may use `/mixins/_mixin-grid-flex.scss` mixins to easily create a Grid System in Flexbox with no extra HTML classes. 
+You may use `/mixins/_mixin-grid-flex.scss` mixins to easily create a Grid System in Flexbox with no extra HTML classes.
+
 Add some `margin` as a gutter where needed.
 
 ``` scss

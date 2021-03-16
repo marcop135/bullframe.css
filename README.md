@@ -369,6 +369,7 @@ A simple but powerful IE8+ flexible Grid System (+ a Flexbox IE10+ alternative)
 | `.bf-col-10` | Sets a floated container with a custom padding and a `width` of `83.33333333333334%` |
 | `.bf-col-11` | Sets a floated container with a custom padding and a `width` of `91.66666666666666%` |
 | `.bf-col-12` | Sets a floated container with a custom padding and a `width` of `100%` |
+| `.no-gutters` | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0`. To be applied to rows and cols |
 
 Breakpoints: 576, 768, 992 and 1200 pixels
 
@@ -380,23 +381,23 @@ Add some `margin` as a gutter where needed.
 ``` scss
 // create a Flexbox parent
 @mixin flex-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 // Make a child 50% of the width
 @mixin flex-50 {
-  flex: 0 0 100%;
+  flex: 0 0 100% !important;
 }
 
 // Make a child 70% of the width
 @mixin flex-70 {
-  flex: 0 0 70%;
+  flex: 0 0 70% !important;
 }
 
 // Make a child 25% of the width
 @mixin flex-25 {
-  flex: 0 0 25%;
+  flex: 0 0 25% !important;
 }
 
 ...
@@ -421,6 +422,11 @@ Add some `margin` as a gutter where needed.
 | `.bf-display-inline-block` | Sets the `display` to `inline-block` |
 | `.bf-display-flex` | Sets the `display` to `flex` |
 | `.bf-display-inline-flex` | Sets the `display` to `inline-flex` |
+| `.bf-display-flex--justify-start` | Sets `justify-content` to `flex-start` |
+| `.bf-display-flex--justify-end` | Sets `justify-content` to `flex-end` |
+| `.bf-display-flex--justify-center` | Sets `justify-content` to `center` |
+| `.bf-display-flex--wrap` | Sets `flex-wrap` to `wrap` |
+| `.bf-display-flex--nowrap` | Sets `flex-wrap` to `nowrap` |
 | `.bf-float-left` | Sets the `float` to `left` |
 | `.bf-float-right` | Sets the `float` to `right` |
 | `.bf-position-fixed` | Sets the `position` to `fixed` |

@@ -97,8 +97,10 @@
   display: inline-block !important;
 }
 
+
 // IE10+
 // https://caniuse.com/#feat=flexbox
+
 .bf-display-flex {
   display: flex !important;
 }
@@ -107,13 +109,34 @@
   display: inline-flex !important;
 }
 
-.bf-float-right {
-  float: right !important;
+.bf-display-flex--justify-start {
+  justify-content: flex-start !important;
+}
+
+.bf-display-flex--justify-end {
+  justify-content: flex-end !important;
+}
+
+.bf-display-flex--justify-center {
+  justify-content: center !important;
+}
+
+.bf-display-flex--wrap {
+  flex-wrap: wrap !important;
+}
+
+.bf-display-flex--nowrap {
+  flex-wrap: nowrap !important;
 }
 
 .bf-float-left {
   float: left !important;
 }
+
+.bf-float-right {
+  float: right !important;
+}
+
 
 // ≠ IE
 // https://caniuse.com/css-sticky
@@ -140,12 +163,7 @@
   transform: translate(-50%, -50%) !important;
 }
 
-// align items in a flex container
-// 
-// this is IE10+
-// https://caniuse.com/flexbox
-//
-// add it to parent
+// align items horizontally and vertically
 // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 .bf-align-center-flex {
   display: flex;

@@ -1,11 +1,11 @@
 # Changes to bullframe.css
 
-## 3.6.0 (????, 2021)
+## 3.6.0 (March 16, 2021)
 
 * added new flexbox utilites into `_utility-layout.scss` (IE10+)
 * added new `filter` utility module (≠ IE / Opera Mini)
 * added new `bf-position-sticky` utility class  (≠ IE)
-* added ARIA roles appearance improvements (a11y)
+* added ARIA roles appearance improvements into `_misc-accessibility.scss` (a11y)
 * removed touch action manipulation defaults in IE10
 * purged `white-space` declarations from text truncate multiline mixins and utility
 

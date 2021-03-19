@@ -193,13 +193,6 @@ textarea {
   font: inherit; // Safari
 }
 
-[type='date'],
-[type='time'],
-[type='datetime-local'],
-[type='month'] {
-  appearance: listbox;
-}
-
 // ! IE9+
 // https://caniuse.com/#feat=border-radius
 button,

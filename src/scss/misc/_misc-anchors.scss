@@ -4,11 +4,7 @@ a {
 
   // IE10+: Remove grey background on active links
   background-color: transparent;
-
-  // Remove gaps in links underline in iOS 8+ and Safari 8+.
-  text-decoration-skip: objects;
-  text-decoration-skip-ink: objects;
-
+  
   &:hover,
   &:focus {
     text-decoration: underline;

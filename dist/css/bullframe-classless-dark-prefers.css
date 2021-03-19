@@ -190,10 +190,6 @@ abbr[data-original-title] {
           text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  -webkit-text-decoration-skip: none;
-          text-decoration-skip: none;
 }
 
 mark {
@@ -272,10 +268,6 @@ a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-          text-decoration-skip: objects;
-  -webkit-text-decoration-skip-ink: objects;
-          text-decoration-skip-ink: objects;
 }
 
 a:hover, a:focus {
@@ -624,15 +616,6 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
-}
-
-[type='date'],
-[type='time'],
-[type='datetime-local'],
-[type='month'] {
-  -webkit-appearance: listbox;
-     -moz-appearance: listbox;
-          appearance: listbox;
 }
 
 button,

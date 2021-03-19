@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page"></a>
-  <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit">
+  <a href="https://github.com/marcop135/bullframe.css/commits"><img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit"></a>
   <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license"></a>
 </p>
 
@@ -14,7 +14,7 @@
 
 bullframe.css is a Sass (SCSS) framework that works in all browsers, modern or not.
 
-It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([atoms](https://atomicdesign.bradfrost.com/chapter-2/#atoms)) for your Sass project.
+It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
 
 1. Add a good HTML template
 2. Write semantic HTML5

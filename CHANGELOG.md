@@ -1,5 +1,9 @@
 # Changes to bullframe.css
 
+## 3.7.0 (???, 2021)
+
+* Set html/body `height` and `body` `min-height` to `100%` to help with backgrounds and centering
+
 ## 3.6.0 (March 16, 2021)
 
 * added new flexbox utilites into `_utility-layout.scss` (IE10+)

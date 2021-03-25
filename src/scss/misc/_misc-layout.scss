@@ -1,3 +1,15 @@
+// stretch the body background and help with centering elements
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+
 // known issues in IE8 and IE9 with box-sizing
 // https://css-tricks.com/box-sizing/#article-header-id-5
 

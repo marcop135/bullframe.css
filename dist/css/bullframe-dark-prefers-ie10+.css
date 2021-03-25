@@ -1,5 +1,14 @@
-/*! bullframe.css v3.6.1 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.7.0 | MIT License | https://github.com/marcop135/bullframe.css */
 /*! custom build: bullframe-dark-prefers-ie10+ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
 *,
 *::before,
 *::after {

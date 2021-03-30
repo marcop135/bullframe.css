@@ -24,38 +24,6 @@ It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([
 
 <br>
 
----
-
-**Jump to:**
-
-Getting started:
-
-- [Download](#download)
-- [CDN](#CDN)
-- [npm](#npm)
-- [HTML template for all browsers](#all-browsers---ie8)
-- [HTML template for modern browsers](#ie11-and-modern-browsers)
-- [Codepen templates](#codepen)
-
-Customization:
-
-- [No classes (Class-less)](#no-classes-class-less)
-- [Dark mode](#dark-themes)
-- [No IE hacks](#no-ie-hacks-ie10)
-
-More:
-
-- [Test page](https://marcop135.github.io/bullframe.css/)
-- [Browser compatibility](#browser-compatibility)
-- [Utilities Reference](#utilities---reference)
-- [Screenshots](#screenshots)
-- [Changelog](#changelog)
-- _[Sponsor me!](#become-a-sponsor)_
-
-<br>
-
----
-
 ## Best features
 
 - IE8+ support and a wide range of desktop and mobile browsers

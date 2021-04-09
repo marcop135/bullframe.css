@@ -1027,8 +1027,8 @@ select[dir='rtl']:not([size]):not([multiple]) {
     margin-top: -.25rem;
     background-color: #007bff;
     border-radius: 1.5rem;
-    -webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
   [type='range']::-webkit-slider-thumb:active {
     background-color: #007bff;
@@ -1041,8 +1041,8 @@ select[dir='rtl']:not([size]):not([multiple]) {
     height: 1.5rem;
     background-color: #007bff;
     border-radius: 1.5rem;
-    -moz-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -moz-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
   [type='range']::-moz-range-thumb:active {
     background-color: #007bff;
@@ -1593,6 +1593,26 @@ table th[class^='bf-col'] {
   margin-right: 0 !important;
 }
 
+.bf-m-1 {
+  margin-bottom: 5px !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.bf-m-2 {
+  margin-bottom: 10px !important;
+  margin-bottom: 1rem !important;
+}
+
+.bf-m-3 {
+  margin-bottom: 20px !important;
+  margin-bottom: 2rem !important;
+}
+
+.bf-m-4 {
+  margin-bottom: 30px !important;
+  margin-bottom: 3rem !important;
+}
+
 .bf-m-b-1 {
   margin-bottom: 5px !important;
   margin-bottom: 0.5rem !important;
@@ -1631,6 +1651,26 @@ table th[class^='bf-col'] {
 
 .bf-p-r-0 {
   padding-right: 0 !important;
+}
+
+.bf-p-1 {
+  padding-bottom: 5px !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.bf-p-2 {
+  padding-bottom: 10px !important;
+  padding-bottom: 1rem !important;
+}
+
+.bf-p-3 {
+  padding-bottom: 20px !important;
+  padding-bottom: 2rem !important;
+}
+
+.bf-p-4 {
+  padding-bottom: 30px !important;
+  padding-bottom: 3rem !important;
 }
 
 .bf-p-t-1 {

@@ -2,7 +2,8 @@
 
 ## 3.7.0 (???, 2021)
 
-* Set html/body `height` and `body` `min-height` to `100%` to help with backgrounds and centering
+* [bug fixes] Add missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)
+* [breaking changes] Set html/body `height` and `body` `min-height` to `100%` to help with backgrounds and centering [(8239677)](https://github.com/marcop135/bullframe.css/commit/82396770e62ebebc03a1075e8952f603c1834897)
 
 ## 3.6.0 (March 16, 2021)
 
@@ -45,7 +46,7 @@
 ## 3.4.0 (January 24, 2021)
 
 * added `input range` styling in modern browsers only
-* update video source paths accordingly to MDN[(#22)](https://github.com/marcop135/bullframe.css/issues/12)
+* update video source paths accordingly to MDN [(#22)](https://github.com/marcop135/bullframe.css/issues/12)
 
 ## 3.3.9 (November 29, 2020)
 

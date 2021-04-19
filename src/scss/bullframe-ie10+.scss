@@ -6,7 +6,7 @@
 @import 'variables/variables-breakpoints';
 
 // all about box-sizing and display
-@import 'misc/misc-layout';
+@import 'miscellaneous/misc-layout';
 
 // this a wide range of text elements bug fixing and improvements
 @import 'typography/typography-html-body';
@@ -16,16 +16,16 @@
 @import 'typography/typography-misc';
 
 // <a> linkage
-@import 'misc/misc-anchors';
+@import 'miscellaneous/misc-anchors';
 
 // outline styles
-@import 'misc/misc-focus';
+@import 'miscellaneous/misc-focus';
 
 // <ul>, <ol> and <dl>
-@import 'misc/misc-lists';
+@import 'miscellaneous/misc-lists';
 
 // img, audio, video, svg, and more
-@import 'misc/misc-embedded-content';
+@import 'miscellaneous/misc-embedded-content';
 
 // all about form elements
 @import 'forms/forms-normalization';
@@ -35,12 +35,12 @@
 @import 'forms/forms-styling-range';
 
 // <table> and his elements
-@import 'misc/misc-tables';
+@import 'miscellaneous/misc-tables';
 
 // this is just quick way to customise your styles
 // below these styles, you shouldn't override nothing but remove them
 // commented by default
-@import 'misc/misc-author-styles-in-css';
+@import 'miscellaneous/misc-author-styles-in-css';
 
 // a set of default opinionated utilities
 // always put this as far as possible from the rest of the styles
@@ -110,11 +110,11 @@
 @import 'utilities/utility-reduced-motion';
 
 // improve several ARIA roles appearance
-@import 'misc/misc-accessibility';
+@import 'miscellaneous/misc-accessibility';
 
 // shamy quick fixes...
 // https://csswizardry.com/2013/04/shame-css/
-@import 'misc/misc-shame';
+@import 'miscellaneous/misc-shame';
 
 // this is useful for just for debugging purpouses
 // commented by default

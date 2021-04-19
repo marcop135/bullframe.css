@@ -9,7 +9,7 @@
 @import "variables/variables-breakpoints";
 
 // all about box-sizing and display
-@import "misc/misc-layout";
+@import "miscellaneous/misc-layout";
 
 // this a wide range of text elements bug fixing and improvements
 @import "typography/typography-html-body";
@@ -19,13 +19,13 @@
 @import "typography/typography-misc";
 
 // <a> linkage
-@import "misc/misc-anchors";
+@import "miscellaneous/misc-anchors";
 
 // <ul>, <ol> and <dl>
-@import "misc/misc-lists";
+@import "miscellaneous/misc-lists";
 
 // img, audio, video, svg, and more
-@import "misc/misc-embedded-content";
+@import "miscellaneous/misc-embedded-content";
 
 // all about form elements
 @import "forms/forms-normalization";
@@ -35,9 +35,9 @@
 @import "forms/forms-styling-range";
 
 // <table> and his elements
-@import "misc/misc-tables";
+@import "miscellaneous/misc-tables";
 
 // this is just quick way to customise your styles
 // below these styles, you shouldn't override nothing but remove them
 // commented by default
-@import "misc/misc-author-styles-in-css";
+@import "miscellaneous/misc-author-styles-in-css";

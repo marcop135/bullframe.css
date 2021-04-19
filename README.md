@@ -80,7 +80,7 @@ bullframe.css/
     │   ├── ...
 └── src/scss/
     └── forms/
-    └── misc/
+    └── miscellaneous/
     └── mixins/
     └── typography/
     └── utilities/

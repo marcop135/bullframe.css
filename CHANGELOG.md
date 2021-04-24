@@ -1,6 +1,6 @@
 # Changes to bullframe.css
 
-## 3.7.0 (????, 2021)
+## 3.7.0 (April 24, 2021)
 
 * [breaking changes] Set html/body `height` and `body` `min-height` to `100%` to help with backgrounds and centering [(8239677)](https://github.com/marcop135/bullframe.css/)
 * [bug fixes] Add missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)

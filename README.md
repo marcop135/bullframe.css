@@ -311,9 +311,6 @@ CDN
 
 A set of utilities to create and customise bullframe.css:
 
-<details>
-  <summary><strong>Show section</strong></summary>
-
 #### Grid system
 
 A simple but powerful IE8+ flexible Grid System (+ a Flexbox IE10+ alternative)
@@ -536,8 +533,6 @@ Add some `margin` as a gutter where needed.
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
-
-</details>
 
 <br>
 

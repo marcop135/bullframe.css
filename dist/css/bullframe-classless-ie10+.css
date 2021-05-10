@@ -1,14 +1,5 @@
 /*! bullframe.css v3.7.1 | MIT License | https://github.com/marcop135/bullframe.css */
 /*! custom build: bullframe-classless-ie10+ */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-}
-
 *,
 *::before,
 *::after {

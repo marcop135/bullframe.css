@@ -2,7 +2,7 @@
 
 ## 3.7.1 (???, 2021)
 
-
+* [breaking changes] Revert html/body `height` and `body` `min-height` to `auto` (default value)
 
 ## 3.7.0 (April 24, 2021)
 

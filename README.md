@@ -3,6 +3,7 @@
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page"></a>
   <a href="https://github.com/marcop135/bullframe.css/commits"><img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit"></a>
+  <a href="https://snyk.io/test/npm/bullframe.css"><img src="https://snyk.io/test/npm/bullframe.css/badge.svg?style=flat-square" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/npm/bullframe.css" style="max-width:100%;"></a>
   <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license"></a>
 </p>
 

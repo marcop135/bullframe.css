@@ -118,11 +118,18 @@ JSDelivr (latest release, ready for production)
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
+Skypack (latest release, ready for production)
+
+```html
+<link rel="stylesheet" href="https://cdn.skypack.dev/bullframe.css/dist/css/bullframe.min.css">
+```
+
 UNPKG (latest release, not ready for production)
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/bullframe.css">
 ```
+
 
 ### npm
 

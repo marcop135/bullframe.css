@@ -942,7 +942,7 @@ select[dir='rtl']:not([size]):not([multiple]) {
   padding-left: 2rem;
 }
 
-@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0), screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select:not([size]):not([multiple]) {
     padding-right: 7.5px;
   }
@@ -1232,7 +1232,7 @@ caption {
   }
 }
 
-@media screen and (prefers-color-scheme: dark) and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+@media screen and (prefers-color-scheme: dark) and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0), screen and (prefers-color-scheme: dark) and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select:not([size]):not([multiple]),
   *[dir="rtl"] select:not([size]):not([multiple]),
   select[dir="rtl"]:not([size]):not([multiple]) {

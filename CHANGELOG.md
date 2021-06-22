@@ -1,5 +1,9 @@
 # Changes to bullframe.css
 
+## 3.8.1 (June 22, 2021)
+
+* [bug fixes] Add missing compiled CSS files
+
 ## 3.8.0 (June 22, 2021)
 
 * [breaking changes] Revert html/body `height` and `body` `min-height` to `auto` (default value) to avoid web app scrollbar issues

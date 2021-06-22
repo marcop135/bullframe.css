@@ -1,8 +1,10 @@
 # Changes to bullframe.css
 
-## 3.7.1 (???, 2021)
+## 3.8.0 (June 22, 2021)
 
-* [breaking changes] Revert html/body `height` and `body` `min-height` to `auto` (default value)
+* [breaking changes] Revert html/body `height` and `body` `min-height` to `auto` (default value) to avoid web app scrollbar issues
+* Add support for Skypack CDN
+* Add Synk vuln badge in `README.md`
 
 ## 3.7.0 (April 24, 2021)
 
@@ -56,7 +58,7 @@
 
 ## 3.3.9 (November 29, 2020)
 
-* fixed broken anchors and URLs in README.md
+* fixed broken anchors and URLs in `README.md`
 
 ## 3.3.8 (November 29, 2020)
 
@@ -81,10 +83,10 @@
 
 ## 3.3.4 (September 03, 2020)
 
-* added an utilities reference in README.md
+* added an utilities reference in `README.md`
 * fixed a grid system [bug](https://github.com/marcop135/bullframe.css/commit/d26c1dd21c808bda6472913073c72a8048a56d8f) related to `.bf-col-3` and `bf-col-4` utilities
 * added support for GitHub Packages registry
-* added UNPKG CDN in README.md
+* added UNPKG CDN in `README.md`
 
 ## 3.3.3 (July 22, 2020)
 
@@ -96,7 +98,7 @@
 
 ## 3.3.1 (July 22, 2020)
 
-* fixed "What's included" and "Gulp.js" sections in README.md
+* fixed "What's included" and "Gulp.js" sections in `README.md`
 * fixed JSDelivr `package.json` settings
 * minor code improvements
 
@@ -120,7 +122,7 @@
 * added `progress` normalization
 * added dark theme scrollbars normalization
 * added webkit/blink/gecko/trident screenshots/screencasts
-* added quick overview of the utilities in README.md
+* added quick overview of the utilities in `README.md`
 * added more examples in `index.html`
 * added SCSS file structure improvements
 * added responsive typography improvements
@@ -157,7 +159,7 @@
 * added responsive typography
 * added custom `select`
 * added custom radios and checkboxes
-* added much more information in README.md
+* added much more information in `README.md`
 * added CONTRIBUTING.md
 * added CODE_OF_CONDUCT.md
 * ...and much more!

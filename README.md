@@ -482,9 +482,9 @@ Add some `margin` as a gutter where needed.
 | `.bf-t-weight-700` | Sets `font-weight` to `700` (AKA bold) |
 | `.bf-t-weight-800` | Sets `font-weight` to `800` (AKA black) |
 | `.bf-text-break` | Sets `word-wrap` to a `break-word`, applied by default to the `body` |
-| `.bf-text-truncate` | Truncates a very long text and replaces the missing text with an ellipsis |
-| `.bf-text-truncate--multiline-2` | Truncates a long doubled line text and replaces the missing text with an ellipsis (no IE) |
-| `.bf-text-truncate--multiline-3` | Truncates a long tripled line text and replaces the missing text with an ellipsis (no IE) |
+| `.bf-t-truncate` | Truncates a very long text and replaces the missing text with an ellipsis |
+| `.bf-t-truncate--multiline-2` | Truncates a long doubled line text and replaces the missing text with an ellipsis (no IE) |
+| `.bf-t-truncate--multiline-3` | Truncates a long tripled line text and replaces the missing text with an ellipsis (no IE) |
 | `.bf-no-select` | Blocks user text selection |
 | `.bf-font-sans-serif` | Sets `font-family` to a `sans-serif`, and a combination of cross-browser system UI sans-serif font families  |
 | `.bf-font-serif` | Sets `font-family` to a `serif`, and a combination of cross-browser system UI serif font families |

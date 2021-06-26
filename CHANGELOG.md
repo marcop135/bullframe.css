@@ -1,9 +1,9 @@
 # Changes to bullframe.css
 
-## 3.8.2 (???, 2021)
+## 3.8.2 (June 26, 2021)
 
-* Upgrade cssnano, autoprefixer and postcss to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
-
+* Upgrade cssnano, autoprefixer and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
+* Clean up `README.md`
 
 ## 3.8.1 (June 22, 2021)
 

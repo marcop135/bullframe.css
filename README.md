@@ -3,7 +3,6 @@
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page"></a>
   <a href="https://github.com/marcop135/bullframe.css/commits"><img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit"></a>
-  <a href="https://snyk.io/test/npm/bullframe.css"><img src="https://snyk.io/test/npm/bullframe.css/badge.svg?style=flat-square" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/npm/bullframe.css" style="max-width:100%;"></a>
   <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license"></a>
 </p>
 
@@ -15,7 +14,7 @@
 
 bullframe.css is a Sass (SCSS) framework that works in all browsers, modern or not.
 
-It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
+It's a cross-browser (blink/webkit/gecko/trident), responsive, IE8+ collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
 
 1. Add a good HTML template
 2. Write semantic HTML5
@@ -40,19 +39,6 @@ It's a cross-browser, responsive, IE8+ collection of default HTML UI elements ([
 - Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
 - Isolated utility classes to avoid conflicts between frameworks' classes
 - [`bullframe-classless.min.css`](https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe-classless.min.css) is just 10KB~ min+gzip 🎉
-
-## Internet Explorer usage and support
-
-Do people still use Internet Explorer?
-
-Short answer: **yes!** Enterprise-level companies, legacy business applications, accessibility-focused projects and some non-tech-savvy older people.
-[Long answer](https://www.quora.com/Do-people-still-use-Internet-Explorer-in-2020)
-
-[Browser worldwide usage comparison](https://gs.statcounter.com/browser-market-share/desktop/worldwide#monthly-201904-202004-bar)
-
-Read this [Lea Verou’s Twitter thread](https://twitter.com/LeaVerou/status/1246252696602128384) to get more developers' points of view.
-
-Bootstrap v5 [dropped IE10 and IE11 support](https://github.com/twbs/bootstrap/pull/30377). Read the [Hacker News thread](https://news.ycombinator.com/item?id=22802003).
 
 ## What's included
 
@@ -109,8 +95,6 @@ bullframe.css/
 [Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip)
 
 ### CDN
-
-Get the latest release of the main build
 
 JSDelivr (latest release, ready for production)
 
@@ -268,14 +252,12 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css">
 
-<!-- (optional) center the page styling the <body> element -->
+<!-- Center the page (optional)  -->
 <style>
   body {
     margin-left: auto;
     margin-right: auto;
-    padding: 15px; /* for old IE only */
     padding: 1.5rem;
-    max-width: 800px; /* for old IE only */
     max-width: 80rem;
   }
 </style>

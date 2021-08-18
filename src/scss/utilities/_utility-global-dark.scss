@@ -31,12 +31,6 @@ ins {
   background-color: darken($bf-yellow-light, 45%);
 }
 
-// tables
-.bf-table th,
-.bf-table td {
-  border-color: $bf-gray-dark;
-}
-
 // forms
 
 [type='email'],
@@ -48,7 +42,6 @@ ins {
 [type='date'],
 [type='datetime-local'],
 [type='month'],
-[type='time'],
 [type='week'],
 [type='time'],
 [type='url'],
@@ -77,7 +70,6 @@ textarea {
 [type='date'],
 [type='datetime-local'],
 [type='month'],
-[type='time'],
 [type='week'],
 [type='time'],
 [type='url'],
@@ -87,13 +79,13 @@ select:not([size]):not([multiple]),
 textarea {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, .5);
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
   }
 }
 
 .bf-focused {
   border-color: lighten($bf-blue, 10%);
-  box-shadow: 0 0 0 3px rgba(3, 102, 214, .5) !important;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5) !important;
 }
 
 .bf-invalid,
@@ -108,7 +100,7 @@ select:not([size]):not([multiple]) {
 
 // IE9 only hack
 // https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
-@media screen and (min-width: 0\0) and (min-resolution: .001dpcm) {
+@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   // hide custom arrow
   select:not([size]):not([multiple]),
   // RTL
@@ -167,7 +159,7 @@ button.bf-disabled,
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .45);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
   }
 }
 
@@ -178,7 +170,7 @@ button,
 .bf-btn {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .45);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
   }
 }
 
@@ -197,7 +189,7 @@ button,
 .bf-btn.bf-btn--primary {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(0, 86, 179, .75);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
   }
 }
 

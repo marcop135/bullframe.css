@@ -13,7 +13,6 @@ abbr[data-original-title] {
   cursor: help;
   text-decoration: underline; // 2
   text-decoration: underline dotted; // 2
-  cursor: help; // 2
   border-bottom: 0; // 2
 }
 
@@ -36,6 +35,7 @@ strong {
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari
+/* stylelint-disable-next-line */
 b,
 strong {
   font-weight: bolder;
@@ -55,12 +55,12 @@ sup {
 
 sup {
   top: -8px;
-  top: -.8rem;
+  top: -0.8rem;
 }
 
 sub {
   bottom: -4px;
-  bottom: -.4rem;
+  bottom: -0.4rem;
 }
 
 small {

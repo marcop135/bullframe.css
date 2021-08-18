@@ -1,4 +1,5 @@
 @mixin bf-text-hide {
+  /* stylelint-disable-next-line */
   font: 0/0 a !important;
   color: transparent !important;
   text-shadow: none !important;
@@ -19,8 +20,8 @@
 // truncate a multiline text via line-clamp
 //
 // no IE support
-// https://caniuse.com/css-line-clamp 
-// 
+// https://caniuse.com/css-line-clamp
+//
 // demo https://codepen.io/devam-soni/pen/PoqaKWm
 
 @mixin bf-text-truncate--multiline-2 {

@@ -181,6 +181,7 @@ table th[class^='bf-col'] {
 }
 
 .bf-text-hide {
+  /* stylelint-disable-next-line */
   font: 0/0 a !important;
   color: transparent !important;
   text-shadow: none !important;

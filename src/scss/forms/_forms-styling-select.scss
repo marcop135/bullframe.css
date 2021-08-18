@@ -21,6 +21,15 @@
 // remove the arrow and the appearance, especially on Webkit
 select:not([size]):not([multiple]) {
   appearance: none;
+
+  // add a new svg arrow
+  background: $bf-white
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.85rem center/8px 10px;
+
+  // space the arrow
+  padding-right: $bf-spacing-lg-px + $bf-spacing-lg-px;
+  padding-right: $bf-spacing-lg-rem + $bf-spacing-lg-rem;
 }
 
 // IE10+
@@ -30,15 +39,6 @@ select:not([size]):not([multiple]) {
 // https://developer.mozilla.org/en-US/docs/Web/CSS/::-ms-expand
 select::-ms-expand {
   display: none;
-}
-
-select:not([size]):not([multiple]) {
-  background: $bf-white
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-    no-repeat right .85rem center/8px 10px;
-
-  padding-right: $bf-spacing-lg-px + $bf-spacing-lg-px;
-  padding-right: $bf-spacing-lg-rem + $bf-spacing-lg-rem;
 }
 
 // add support for RTL languages
@@ -51,11 +51,11 @@ select:not([size]):not([multiple]) {
 *[dir='rtl'] select:not([size]):not([multiple]),
 select[dir='rtl']:not([size]):not([multiple]) {
   // move the arrow icon to the left
-  background-position: left .85rem top 50%;
+  background-position: left 0.85rem top 50%;
 
   // go back to default forms padding
-  padding-right: ($bf-spacing-lg-px * .75);
-  padding-right: ($bf-spacing-lg-rem * .75);
+  padding-right: ($bf-spacing-lg-px * 0.75);
+  padding-right: ($bf-spacing-lg-rem * 0.75);
 
   // add custom left padding, matching the custom LTR one
   padding-left: $bf-spacing-lg-px + $bf-spacing-lg-px;

@@ -21,6 +21,7 @@
 }
 
 .bf-text-hide {
+  /* stylelint-disable-next-line */
   font: 0/0 a !important;
   color: transparent !important;
   text-shadow: none !important;
@@ -97,7 +98,6 @@
   display: inline-block !important;
 }
 
-
 // IE10+
 // https://caniuse.com/#feat=flexbox
 
@@ -136,7 +136,6 @@
 .bf-float-right {
   float: right !important;
 }
-
 
 // ≠ IE
 // https://caniuse.com/css-sticky

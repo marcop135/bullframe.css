@@ -16,14 +16,14 @@ html {
   height: 1.5rem;
 }
 
+::-webkit-scrollbar-track {
+  background-color: $bf-dark-extra;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: darken($bf-gray-dark, 5%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: lighten($bf-gray-dark, 10%);
-}
-
-::-webkit-scrollbar-track {
-  background-color: $bf-dark-extra;
 }

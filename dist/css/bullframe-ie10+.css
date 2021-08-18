@@ -138,9 +138,6 @@ q {
 pre {
   margin: 0 0 20px 0;
   margin: 0 0 2rem 0;
-}
-
-pre {
   display: block;
   overflow: auto;
   word-break: break-all;
@@ -158,7 +155,7 @@ code,
 kbd,
 samp {
   font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
 code {
@@ -322,7 +319,6 @@ button:focus,
 [type='month']:focus,
 [type='time']:focus,
 [type='week']:focus,
-[type='time']:focus,
 [type='url']:focus,
 [type='radio']:focus,
 [type='checkbox']:focus,
@@ -782,7 +778,6 @@ textarea::placeholder {
 [type='date'],
 [type='datetime-local'],
 [type='month'],
-[type='time'],
 [type='week'],
 [type='time'],
 [type='url'],
@@ -812,8 +807,6 @@ textarea {
 [type='datetime-local']:focus,
 [type='month']:active,
 [type='month']:focus,
-[type='time']:active,
-[type='time']:focus,
 [type='week']:active,
 [type='week']:focus,
 [type='time']:active,
@@ -830,7 +823,7 @@ textarea:focus,
 [type='radio']:focus,
 [type='checkbox']:active,
 [type='checkbox']:focus {
-  transition: border .2s, background-color .2s, box-shadow .2s;
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
   border-color: #007bff;
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
@@ -843,7 +836,7 @@ button,
   padding: 6.66667px 13.33333px;
   padding: 0.66667rem 1.33333rem;
   background: #ccc;
-  transition: color .2s, background .2s, box-shadow .2s;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
 button:hover, button:active, button:focus,
@@ -911,7 +904,7 @@ label[aria-disabled="true"] {
       -ms-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  opacity: .5 !important;
+  opacity: 0.5 !important;
 }
 
 select:not([size]):not([multiple]) {
@@ -1888,8 +1881,8 @@ body.bf-responsive-typography {
   border-radius: 0.25rem;
   border: 0;
   background-image: none;
-  background: #ccc;
-  transition: all .2s;
+  background-color: #ccc;
+  transition: all 0.2s;
 }
 
 .bf-btn:hover, .bf-btn:active, .bf-btn:focus {
@@ -1932,7 +1925,7 @@ fieldset[disabled] .bf-btn,
       -ms-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  opacity: .5 !important;
+  opacity: 0.5 !important;
 }
 
 .bf-focused {

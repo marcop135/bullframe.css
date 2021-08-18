@@ -792,8 +792,8 @@ body.bf-responsive-typography {
   border-radius: 0.25rem;
   border: 0;
   background-image: none;
-  background: #ccc;
-  transition: all .2s;
+  background-color: #ccc;
+  transition: all 0.2s;
 }
 
 .bf-btn:hover, .bf-btn:active, .bf-btn:focus {
@@ -836,7 +836,7 @@ fieldset[disabled] .bf-btn,
       -ms-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  opacity: .5 !important;
+  opacity: 0.5 !important;
 }
 
 .bf-focused {

@@ -183,10 +183,7 @@ button,
   &:focus {
     background: darken($bf-blue, 5%);
   }
-}
 
-.bf-btn--primary.bf-disabled,
-.bf-btn.bf-btn--primary {
   &:active,
   &:focus {
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);

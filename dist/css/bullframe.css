@@ -147,7 +147,6 @@ pre {
       -ms-hyphens: none;
           hyphens: none;
   -ms-overflow-style: auto;
-  display: block;
 }
 
 pre,
@@ -1062,11 +1061,11 @@ select[dir='rtl']:not([size]):not([multiple]) {
             appearance: none;
     width: 1.5rem;
     height: 1.5rem;
-    margin-top: -.25rem;
+    margin-top: -0.25rem;
     background-color: #007bff;
     border-radius: 1.5rem;
-    -webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   [type='range']::-webkit-slider-thumb:active {
     background-color: #007bff;
@@ -1079,8 +1078,8 @@ select[dir='rtl']:not([size]):not([multiple]) {
     height: 1.5rem;
     background-color: #007bff;
     border-radius: 1.5rem;
-    -moz-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   [type='range']::-moz-range-thumb:active {
     background-color: #007bff;
@@ -1089,7 +1088,7 @@ select[dir='rtl']:not([size]):not([multiple]) {
     color: transparent;
     border-color: transparent;
     width: 100%;
-    height: .65rem;
+    height: 0.65rem;
     cursor: pointer;
     background-color: #e9e9e9;
   }
@@ -1097,7 +1096,7 @@ select[dir='rtl']:not([size]):not([multiple]) {
     color: transparent;
     border-color: transparent;
     width: 100%;
-    height: .65rem;
+    height: 0.65rem;
     cursor: pointer;
     background-color: #e9e9e9;
   }
@@ -1112,9 +1111,6 @@ select[dir='rtl']:not([size]):not([multiple]) {
   }
   [type='range']::-moz-focus-outer {
     border: 0;
-  }
-  [type='range']:focus::-webkit-slider-thumb {
-    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
   [type='range']:focus::-moz-range-thumb {
     box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);

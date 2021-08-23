@@ -149,7 +149,6 @@ pre {
       -ms-hyphens: none;
           hyphens: none;
   -ms-overflow-style: auto;
-  display: block;
 }
 
 pre,
@@ -1287,16 +1286,6 @@ button:hover, button:active, button:focus,
 [type='submit']:active,
 [type='submit']:focus {
   background: #b3b3b3;
-}
-
-button:active, button:focus,
-[type='button']:active,
-[type='button']:focus,
-[type='reset']:active,
-[type='reset']:focus,
-[type='submit']:active,
-[type='submit']:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
 }
 
 button:active, button:focus,

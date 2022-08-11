@@ -12,25 +12,21 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is a Sass (SCSS) framework that works in all browsers, modern or not.
+bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers (IE11+).
 
-It's a cross-browser (blink/webkit/gecko/trident), responsive, IE8+ collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
+It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
 
-1. Add a good HTML template
-2. Write semantic HTML5
-3. Add a few utility classes (optional)
-4. Add JS polyfills (optional)
-5. _...ready to go everywhere!_
+**Just add bullframe.css, write semantic HTML5, and you are ready to go everywhere!**
 
 <br>
 
 ## Best features
 
-- IE8+ support and a wide range of desktop and mobile browsers
+- Wide range of desktop and mobile browsers support
 - Add responsive-ness and normalize as much as possible HTML elements *out-of-the-box*
 - Progressive responsive web design focused
 - Responsive, cross-browser, HTML5 form elements by default
-- A simple 12-columns fluid grid system with IE8+ support
+- A simple 12-columns fluid grid system
 - Sass architecture
 - CSS BEM
 - Responsive typography
@@ -148,55 +144,6 @@ gulp
 
 ### HTML
 
-Add some HTML markup, and two JS polyfills (if you need a wide cross-browser support).
-
-Tip: if you need min/max-width CSS3 Media Queries support in IE8 (e.g. mobile-first responsive design), you could polyfill it with [respond.js](https://github.com/scottjehl/Respond).
-
-Tip: Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
-
-Caveats: [IE8 and Respond.js](https://getbootstrap.com/docs/3.4/getting-started/#support-ie8-respondjs) caveats.
-
-#### All browsers - IE8+
-
-```html
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>bullframe.css starter template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <!-- bullframe.css: use latest compiled and minified version -->
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css"
-    integrity="sha384-HpmTC4+Y1tpRsyC0caOaOtsqEfBQqC12iB2WOT0CAHGE116qurJw2PwlJI62SIUH"
-    crossorigin="anonymous">
-
-  <!-- polyfills: enable HTML5 elements in old browsers, and fix IE10 viewport on Windows 8 -->
-  <script
-    src="https://cdn.jsdelivr.net/combine/npm/html5shiv@3.7.3,npm/ie10-viewport-bug-workaround.js@1.0.0"
-    integrity="sha384-qBVh9Nh9vwp+qqJMBTOrfjBPwz5RMDGc4lscK3+4F6dtIUo89TeUhS9wiDPhgpi5"
-    crossorigin="anonymous"
-  ></script>
-</head>
-
-<body>
-  <div class="bf-container">
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is a bullframe.css IE8+ starter template</p>
-  </div>
-  
-</body>
-</html>
-```
-
-#### IE11 and modern browsers
-
-Improve the JS polyfills security via the `integrity` and `crossorigin` attributes. [Read more](https://stackoverflow.com/questions/32039568/what-are-the-integrity-and-crossorigin-attributes)
-
 ```html
 <!doctype html>
 <html lang="en">
@@ -207,17 +154,14 @@ Improve the JS polyfills security via the `integrity` and `crossorigin` attribut
   
   <!-- bullframe.css: use latest compiled and minified version -->
   <link
-    type="text/css"
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css"
-    integrity="sha384-EfcW9YC4HRjVRc1MalllL1YMixPPE9Uu47eUGKvM8mHU+u16QvYZeS5JzLa93lxm"
-    crossorigin="anonymous">
+    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
 </head>
 
 <body>
   <div class="bf-container">
     <!-- Add your site or application content here -->
-    <p>Hello world! This is a bullframe.css IE11+ starter template</p>
+    <p>Hello world! This is a bullframe.css starter template</p>
   </div>
   
 </body>
@@ -244,7 +188,9 @@ Click on the links below, and start a new pen in CodePen using bullframe.css.
 
 ### No classes (class-less)
 
+What means "classless"?
 No classes, no utilities. Feel free to add yours and create your custom components.
+Read more on [css-tricks.com](https://css-tricks.com/no-class-css-frameworks/).
 
 Just drop the snippet below in the `<head>` of your webpage, and the job is done!
 Write semantic HTML and get nice styles and cross-browser normalization.
@@ -286,24 +232,13 @@ CDN
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
 ```
 
-### No IE hacks, IE10+
-
-I used some IE hacks to fix form elements in IE8 and IE9.
-If you don't like hacks in your (S)CSS code, there are six IE10+ builds (e.g. `bullframe-ie10+.css` or `bullframe-utilities-ie10+.css`) where IE8-9 hacks are removed.
-
-CDN
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
-```
-
 ### Utilities - Reference
 
 A set of utilities to create and customise bullframe.css:
 
 #### Grid system
 
-A simple but powerful IE8+ flexible Grid System (+ a Flexbox IE10+ alternative)
+*Breakpoints: 576, 768, 992 and 1200 pixels*
 
 | Utility class | Description |
 | ------------- | ----------- |
@@ -326,40 +261,6 @@ A simple but powerful IE8+ flexible Grid System (+ a Flexbox IE10+ alternative)
 | `.bf-col-11` | Sets a floated container with a custom padding and a `width` of `91.66666666666666%` |
 | `.bf-col-12` | Sets a floated container with a custom padding and a `width` of `100%` |
 | `.no-gutters` | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0` — to be applied to row and column containers |
-
-Breakpoints: 576, 768, 992 and 1200 pixels
-
-##### Grid system with Flexbox (IE10+)
-
-You may use `/mixins/_mixin-grid-flex.scss` mixins to easily create a Grid System in Flexbox with no extra HTML classes.
-
-Add some `margin` as a gutter where needed.
-
-``` scss
-// create a Flexbox parent
-@mixin flex-container {
-  display: flex !important;
-  flex-wrap: wrap !important;
-}
-
-// Make a child 50% of the width
-@mixin flex-50 {
-  flex: 0 0 100% !important;
-}
-
-// Make a child 70% of the width
-@mixin flex-70 {
-  flex: 0 0 70% !important;
-}
-
-// Make a child 25% of the width
-@mixin flex-25 {
-  flex: 0 0 25% !important;
-}
-
-...
-...
-```
 
 #### Layout
 
@@ -478,7 +379,7 @@ Add some `margin` as a gutter where needed.
 | `.bf-h5` | Matches the font styling of a `h5` |
 | `.bf-h6` | Matches the font styling of a `h6` |
 | `.bf-lead` | Sets `font-size` to `125%` |
-| `.bf-responsive-typography` | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties`, **ignored in IE and Opera Mini**, [see a demo](https://codepen.io/marcop135/pen/eYmPmJm) |
+| `.bf-responsive-typography` | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties` |
 
 #### Lists
 
@@ -532,37 +433,20 @@ Add some `margin` as a gutter where needed.
 
 ### Desktop browsers
 
-- IE 8+
+- IE 11+
 - Latest stable two: Firefox, Chrome, Edge, Safari, Opera
 
 ### Mobile browsers
 
-- Latest stable: Firefox, Chrome, Edge, Opera
-- Mobile Safari iOS 7+
-- IE Mobile 11
+- Latest stable: Firefox, Chrome, Edge, Opera, Mobile Safari
 
-### Proxy browsers
-
-- Latest Stable: Opera Mobile’s Turbo mode
-- Latest Stable: Opera Mini
-
-You can take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file for [Autoprefixer](https://github.com/postcss/autoprefixer)
-
-### Tested on real browsers
-
-This project is tested in a wide range of browsers using also [BrowserStack](https://browserstack.com/) live, thanks to the BrowserStack Open Source initiative.
-
-![BrowserStack Logo](./docs/images-readme/browserstack-logo.png)
+You might take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file for [Autoprefixer](https://github.com/postcss/autoprefixer)
 
 ### Screenshots
 
 How can I quickly see if every HTML element works well on all browsers?
 
 Take a look at some [screenshots and screencasts](https://github.com/marcop135/bullframe.css/tree/master/docs/screenshots-screencasts), organized by rendering engines (blink, gecko, trident, webkit).
-
-## Become a sponsor
-
-[Sponsor me](https://github.com/sponsors/marcop135) and support my front-end efforts and open source!
 
 ## Contributors
 

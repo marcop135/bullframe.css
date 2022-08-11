@@ -13,8 +13,10 @@
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
 bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers.
+
 It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
-It could be easily used for marketing pages, blog posts, e-commerce product listings, help and documentation.
+
+You could be easily use it for marketing pages, blog posts, e-commerce product listings, help and documentation.
 
 **Just add bullframe.css, write semantic HTML5, and you are ready to go everywhere!**
 

@@ -2,8 +2,8 @@
   display: inline-block;
   cursor: pointer;
   color: $bf-dark;
-  padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
+  padding: calc($bf-spacing-xl-px / 3) (calc($bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: calc($bf-spacing-xl-rem / 3) (calc($bf-spacing-xl-rem / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;

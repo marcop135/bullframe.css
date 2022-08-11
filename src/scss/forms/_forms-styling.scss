@@ -52,8 +52,8 @@ button,
 [type='reset'],
 [type='submit'] {
   color: $bf-dark;
-  padding: ($bf-spacing-xl-px / 3) (($bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: ($bf-spacing-xl-rem / 3) (($bf-spacing-xl-rem / 3) * 2);
+  padding: calc($bf-spacing-xl-px / 3) (calc($bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: calc($bf-spacing-xl-rem / 3) (calc($bf-spacing-xl-rem / 3) * 2);
   background: $bf-gray-light;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 

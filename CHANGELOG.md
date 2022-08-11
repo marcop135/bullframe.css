@@ -1,6 +1,6 @@
 # Changes to bullframe.css
 
-## 4.0.0 (August 11, 2022)
+## 4.0.1 (August 11, 2022)
 
 * [breaking changes] **Dropped support for I8, IE9, and IE10 support**
 * [breaking changes] Upgraded all npm packages to minor and major latest versions (e.g. gulp-sass v5 now in use)

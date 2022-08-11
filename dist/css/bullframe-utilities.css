@@ -1,4 +1,4 @@
-/*! bullframe.css v4.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v4.0.1 | MIT License | https://github.com/marcop135/bullframe.css */
 /* custom build: bullframe-utilities */
 .bf-container,
 .bf-container--fluid {
@@ -11,11 +11,12 @@
   padding-right: 15px;
   padding-right: 1.5rem;
 }
-.bf-container:before, .bf-container:after,
+.bf-container:before,
+.bf-container:after,
 .bf-container--fluid:before,
 .bf-container--fluid:after {
   display: table;
-  content: " ";
+  content: ' ';
 }
 .bf-container:after,
 .bf-container--fluid:after {
@@ -34,15 +35,16 @@
   margin-right: -15px;
   margin-right: -1.5rem;
 }
-.bf-row:before, .bf-row:after {
-  content: " ";
+.bf-row:before,
+.bf-row:after {
+  content: ' ';
   display: table;
 }
 .bf-row:after {
   clear: both;
 }
 
-[class^=bf-col-] {
+[class^='bf-col-'] {
   float: left;
   position: relative;
   min-height: 1px;
@@ -57,7 +59,7 @@
   margin-left: 0;
 }
 
-.bf-no-gutters > [class^=bf-col] {
+.bf-no-gutters > [class^='bf-col'] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -115,7 +117,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-xs [class^=bf-col] {
+  .bf-container--break-xs [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -128,7 +130,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-md [class^=bf-col] {
+  .bf-container--break-md [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -141,7 +143,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-lg [class^=bf-col] {
+  .bf-container--break-lg [class^='bf-col'] {
     width: 100%;
     float: none;
     margin-left: 0;
@@ -149,14 +151,14 @@
     padding-right: 0;
   }
 }
-table td[class^=bf-col],
-table th[class^=bf-col] {
+table td[class^='bf-col'],
+table th[class^='bf-col'] {
   position: static;
 }
 
 .bf-clearfix:before,
 .bf-clearfix:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -263,27 +265,27 @@ table th[class^=bf-col] {
 
 .bf-display-flex--justify-start {
   -webkit-justify-content: flex-start !important;
-          justify-content: flex-start !important;
+  justify-content: flex-start !important;
 }
 
 .bf-display-flex--justify-end {
   -webkit-justify-content: flex-end !important;
-          justify-content: flex-end !important;
+  justify-content: flex-end !important;
 }
 
 .bf-display-flex--justify-center {
   -webkit-justify-content: center !important;
-          justify-content: center !important;
+  justify-content: center !important;
 }
 
 .bf-display-flex--wrap {
   -webkit-flex-wrap: wrap !important;
-          flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
 }
 
 .bf-display-flex--nowrap {
   -webkit-flex-wrap: nowrap !important;
-          flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
 
 .bf-float-left {
@@ -313,16 +315,16 @@ table th[class^=bf-col] {
   top: 50% !important;
   left: 50% !important;
   -webkit-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 .bf-align-center-flex {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   -webkit-justify-content: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .bf-width-25 {
@@ -351,27 +353,27 @@ table th[class^=bf-col] {
 
 .bf-filter-invert {
   -webkit-filter: invert(100%) !important;
-          filter: invert(100%) !important;
+  filter: invert(100%) !important;
 }
 
 .bf-filter-dim-images {
   -webkit-filter: brightness(0.8) contrast(1.2);
-          filter: brightness(0.8) contrast(1.2);
+  filter: brightness(0.8) contrast(1.2);
 }
 
 .bf-filter-grayscale {
   -webkit-filter: grayscale(1) !important;
-          filter: grayscale(1) !important;
+  filter: grayscale(1) !important;
 }
 
 .bf-filter-blur {
   -webkit-filter: blur(0.3rem) !important;
-          filter: blur(0.3rem) !important;
+  filter: blur(0.3rem) !important;
 }
 
 .bf-filter-none {
   -webkit-filter: none !important;
-          filter: none !important;
+  filter: none !important;
 }
 
 .bf-z-index-1 {
@@ -685,21 +687,27 @@ table th[class^=bf-col] {
 
 .bf-no-select {
   -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
   -webkit-touch-callout: none !important;
 }
 
 .bf-font-sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji' !important;
 }
 
 .bf-font-serif {
-  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: Georgia, Times, 'Times New Roman', serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
 }
 
 .bf-font-monospace {
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: 'Menlo', 'Consolas', 'Roboto Mono', 'Ubuntu Monospace',
+    'Noto Mono', 'Oxygen Mono', 'Liberation Mono', monospace,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
 }
 
 .bf-h1,
@@ -775,8 +783,8 @@ body.bf-responsive-typography {
   overflow: visible;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   border-radius: 2.5px;
   border-radius: 0.25rem;
   border: 0;
@@ -784,12 +792,15 @@ body.bf-responsive-typography {
   background-color: #ccc;
   transition: all 0.2s;
 }
-.bf-btn:hover, .bf-btn:active, .bf-btn:focus {
+.bf-btn:hover,
+.bf-btn:active,
+.bf-btn:focus {
   text-decoration: none;
   color: #222;
   background: #b3b3b3;
 }
-.bf-btn:active, .bf-btn:focus {
+.bf-btn:active,
+.bf-btn:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 .bf-btn:focus {
@@ -799,24 +810,27 @@ body.bf-responsive-typography {
   color: #fff;
   background: #007bff;
 }
-.bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
   color: #fff;
   background: #0062cc;
 }
-.bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
 .bf-btn:disabled,
-.bf-btn[aria-disabled=true] {
+.bf-btn[aria-disabled='true'] {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
   -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
 }
@@ -839,8 +853,8 @@ fieldset[disabled] .bf-btn,
   cursor: not-allowed !important;
   pointer-events: none !important;
   -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
   background-color: #fff;
@@ -853,31 +867,33 @@ label.bf-disabled {
 }
 
 button.bf-disabled,
-[type=button].bf-disabled,
-[type=reset].bf-disabled,
-[type=submit].bf-disabled,
+[type='button'].bf-disabled,
+[type='reset'].bf-disabled,
+[type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
   cursor: default;
   cursor: not-allowed;
   pointer-events: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   box-shadow: none;
   opacity: 0.5;
   color: #222;
   background: #ccc;
 }
-button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
-[type=button].bf-disabled:hover,
-[type=button].bf-disabled:active,
-[type=button].bf-disabled:focus,
-[type=reset].bf-disabled:hover,
-[type=reset].bf-disabled:active,
-[type=reset].bf-disabled:focus,
-[type=submit].bf-disabled:hover,
-[type=submit].bf-disabled:active,
-[type=submit].bf-disabled:focus,
+button.bf-disabled:hover,
+button.bf-disabled:active,
+button.bf-disabled:focus,
+[type='button'].bf-disabled:hover,
+[type='button'].bf-disabled:active,
+[type='button'].bf-disabled:focus,
+[type='reset'].bf-disabled:hover,
+[type='reset'].bf-disabled:active,
+[type='reset'].bf-disabled:focus,
+[type='submit'].bf-disabled:hover,
+[type='submit'].bf-disabled:active,
+[type='submit'].bf-disabled:focus,
 .bf-btn.bf-disabled:hover,
 .bf-btn.bf-disabled:active,
 .bf-btn.bf-disabled:focus {
@@ -891,14 +907,16 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   cursor: not-allowed;
   pointer-events: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   box-shadow: none;
   opacity: 0.5;
   color: #fff;
   background: #007bff;
 }
-.bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus {
+.bf-btn--primary.bf-disabled:hover,
+.bf-btn--primary.bf-disabled:active,
+.bf-btn--primary.bf-disabled:focus {
   box-shadow: none;
   color: #fff;
   background: #007bff;
@@ -937,13 +955,17 @@ dt {
 }
 .bf-embed-responsive::before {
   display: block;
-  content: "";
+  content: '';
   padding-top: 56.25%;
 }
 .bf-embed-responsive .bf-embed-responsive--4-3::before {
   padding-top: 75%;
 }
-.bf-embed-responsive .bf-embed-responsive--item, .bf-embed-responsive iframe, .bf-embed-responsive embed, .bf-embed-responsive object, .bf-embed-responsive video {
+.bf-embed-responsive .bf-embed-responsive--item,
+.bf-embed-responsive iframe,
+.bf-embed-responsive embed,
+.bf-embed-responsive object,
+.bf-embed-responsive video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -991,8 +1013,8 @@ dt {
    ========================================================================== */
 @media print {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
@@ -1000,49 +1022,49 @@ dt {
     text-shadow: none !important;
   }
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
   }
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-  a[href^="#"]::after,
-a[href^="javascript:"]::after {
-    content: "";
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
   }
   pre {
     white-space: pre-wrap !important;
   }
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
 }
 @media print {
   body,
-.bf-container {
+  .bf-container {
     min-width: 992px !important;
   }
   .bf-table-responsive {
@@ -1052,23 +1074,23 @@ h3 {
     width: auto;
   }
   .bf-table-responsive table,
-.bf-table {
+  .bf-table {
     border-collapse: collapse !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
-.bf-reduced-motion::before,
-.bf-reduced-motion::after,
-.bf-reduced-motion *,
-.bf-reduced-motion *::before,
-.bf-reduced-motion *::after {
+  .bf-reduced-motion::before,
+  .bf-reduced-motion::after,
+  .bf-reduced-motion *,
+  .bf-reduced-motion *::before,
+  .bf-reduced-motion *::after {
     -webkit-animation-delay: -1ms !important;
-            animation-delay: -1ms !important;
+    animation-delay: -1ms !important;
     -webkit-animation-duration: 1ms !important;
-            animation-duration: 1ms !important;
+    animation-duration: 1ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     background-attachment: initial !important;
     scroll-behavior: auto !important;
     transition-delay: 0s !important;

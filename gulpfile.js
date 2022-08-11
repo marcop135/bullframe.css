@@ -8,8 +8,11 @@
 // instead of gulp.series()
 const { src, dest, watch, series, parallel } = require('gulp');
 
+// Upgrade gulp-sass to v5
+// https://github.com/dlmanning/gulp-sass/tree/master#migrating-to-version-5
+const sass = require('gulp-sass')(require('sass'));
+
 // Import all the Gulp-related packages we want to use
-const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');

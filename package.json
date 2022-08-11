@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "3.8.3",
+  "version": "3.9.0",
   "description": "Solid, fluid, IE-friendly Sass (SCSS) framework",
   "jsdelivr": "dist/css/bullframe.css",
   "unpkg": "dist/css/bullframe.css",

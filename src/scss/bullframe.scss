@@ -30,9 +30,7 @@
 // all about form elements
 @import 'forms/forms-normalization';
 @import 'forms/forms-styling';
-@import 'forms/forms-styling-ie-hacks';
 @import 'forms/forms-styling-select';
-@import 'forms/forms-styling-select-ie-hacks';
 @import 'forms/forms-styling-radio-checkbox';
 @import 'forms/forms-styling-range';
 
@@ -60,11 +58,6 @@
 
 // clearfix, sr-only, float, inline/block/flex, and more
 @import 'utilities/utility-layout';
-
-// CSS filters 
-// https://developer.mozilla.org/en-US/docs/Web/CSS/filter
-// https://caniuse.com/css-filters
-@import 'utilities/utility-filters';
 
 @import 'utilities/utility-z-index';
 

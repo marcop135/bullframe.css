@@ -1,9 +1,15 @@
 # Changes to bullframe.css
 
+## 4.0.0 (August 11, 2022)
+
+* [breaking changes] **Dropped support for I8, IE9, and IE10 support**
+* [breaking changes] Upgraded all npm packages to minor and major latest versions (e.g. gulp-sass v5 now in use)
+* Cleaned up `README.md`
+
 ## 3.8.2 (June 26, 2021)
 
-* Upgrade cssnano, autoprefixer and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
-* Clean up `README.md`
+* Upgraded cssnano, autoprefixer and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
+* Cleaned up `README.md`
 
 ## 3.8.1 (June 22, 2021)
 
@@ -11,14 +17,14 @@
 
 ## 3.8.0 (June 22, 2021)
 
-* [breaking changes] Revert html/body `height` and `body` `min-height` to `auto` (default value) to avoid web app scrollbar issues
-* Add support for Skypack CDN
-* Add Synk vuln badge in `README.md`
+* [breaking changes] Reverted html/body `height` and `body` `min-height` to `auto` (default value) to avoid web app scrollbar issues
+* Added support for Skypack CDN
+* Added Synk vuln badge in `README.md`
 
 ## 3.7.0 (April 24, 2021)
 
 * [breaking changes] Set html/body `height` and `body` `min-height` to `100%` to help with backgrounds and centering [(8239677)](https://github.com/marcop135/bullframe.css/)
-* [bug fixes] Add missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)
+* [bug fixes] Added missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)
 * [enhancements] Removed W3C-invalid CSS properties/values from SCSS files [(2791b83)](https://github.com/marcop135/bullframe.css/commit/2791b83eab872abe92a2fd6cc3b3bc8d684fcc36)
 * [enhancements] Added Sass [@debug](https://sass-lang.com/documentation/at-rules/debug) rule to debugging utility [(969fcf3c)](https://github.com/marcop135/bullframe.css/commit/969fcf3ccb474f5bc5888841d479216b3e54de0a)
 

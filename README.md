@@ -12,7 +12,7 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers (IE11+).
+bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers.
 It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
 It could be easily used for marketing pages, blog posts, e-commerce product listings, help and documentation.
 
@@ -103,7 +103,6 @@ UNPKG (latest release, not ready for production)
 ```html
 <link rel="stylesheet" href="https://unpkg.com/bullframe.css">
 ```
-
 
 ### npm
 
@@ -419,8 +418,8 @@ A set of utilities to create and customise bullframe.css:
 
 ### Desktop browsers
 
-- IE 11+
 - Latest stable two: Firefox, Chrome, Edge, Safari, Opera
+- IE 11+
 
 ### Mobile browsers
 

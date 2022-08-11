@@ -1,6 +1,3 @@
-// known issues in IE8 and IE9 with box-sizing
-// https://css-tricks.com/box-sizing/#article-header-id-5
-
 *,
 *::before,
 *::after {
@@ -27,27 +24,7 @@ template {
   display: none;
 }
 
-// Remove the tapping delay in IE 10
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-  -ms-touch-action: manipulation;
-}
-
-// Always hide an element with the `hidden` HTML attribute (from PureCSS).
-// Needed for proper display in IE 10-. */
+// Always hide an element with the `hidden` HTML attribute
 [hidden] {
   display: none !important;
-}
-
-// Fix IE 10 on Windows Phone 8 Viewport only
-// https://getbootstrap.com/docs/3.3/getting-started/#support-ie10-width
-@-ms-viewport {
-  width: device-width;
 }

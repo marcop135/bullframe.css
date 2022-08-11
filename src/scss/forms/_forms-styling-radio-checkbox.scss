@@ -2,7 +2,6 @@
 // https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
 // https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
 //
-// currently (June 2020), a few modern browsers support the "@supports" media rules
 // https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
 // https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
 //
@@ -57,20 +56,20 @@
       width: 1.8rem;
       height: 1.8rem;
 
-      left: -.05rem;
-      top: -.05rem;
+      left: -0.05rem;
+      top: -0.05rem;
 
       border-radius: 50%;
       background: $bf-white;
 
-      transform: scale(.35);
+      transform: scale(0.35);
     }
   }
 
   [type='checkbox'] {
     &:after {
-      width: .6rem;
-      height: .8rem;
+      width: 0.6rem;
+      height: 0.8rem;
 
       border: 2px solid $bf-white;
       border-top: 0;

@@ -30,20 +30,12 @@
 // all about form elements
 @import 'forms/forms-normalization';
 @import 'forms/forms-styling';
-@import 'forms/forms-styling-ie-hacks';
 @import 'forms/forms-styling-select';
-@import 'forms/forms-styling-select-ie-hacks';
 @import 'forms/forms-styling-radio-checkbox';
+@import 'forms/forms-styling-range';
 
 // <table> and his elements
 @import 'miscellaneous/misc-tables';
-
-// improve several ARIA roles appearance
-@import 'miscellaneous/misc-accessibility';
-
-// shamy quick fixes...
-// https://csswizardry.com/2013/04/shame-css/
-@import 'miscellaneous/misc-shame';
 
 // this is just quick way to customise your styles
 // below these styles, you shouldn't override nothing but remove them

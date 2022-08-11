@@ -13,14 +13,10 @@
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
 bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers (IE11+).
-
 It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
-
 It could be easily used for marketing pages, blog posts, e-commerce product listings, help and documentation.
 
 **Just add bullframe.css, write semantic HTML5, and you are ready to go everywhere!**
-
-<br>
 
 ## Best features
 
@@ -81,10 +77,6 @@ bullframe.css/
 └── index.html
 ...
 ```
-
-<br>
-
----
 
 ## Getting started
 
@@ -181,10 +173,6 @@ Click on the links below, and start a new pen in CodePen using bullframe.css.
 - [Light theme (default)](https://codepen.io/pen?template=WNrwNNM)
 - [Dark theme](https://codepen.io/pen?template=ExPmzBV)
 - [Dark `prefers-color-scheme`](https://codepen.io/pen?template=NWxjVQO)
-
-<br>
-
----
 
 ## Customization
 
@@ -426,10 +414,6 @@ A set of utilities to create and customise bullframe.css:
 | Utility class | Description |
 | ------------- | ----------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
-
-<br>
-
----
 
 ## Browser compatibility
 

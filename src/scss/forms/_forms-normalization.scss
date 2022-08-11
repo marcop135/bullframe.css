@@ -150,8 +150,10 @@ select {
   word-wrap: normal;
 }
 
-[list]::-webkit-calendar-picker-indicator {
-  display: none;
+// Taken from Bootstrap Reboot v5.2
+// https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
+[list]:not([type='date']):not([type='datetime-local']):not([type='month']):not([type='week']):not([type='time'])::-webkit-calendar-picker-indicator {
+  display: none !important;
 }
 
 optgroup {

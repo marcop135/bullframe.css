@@ -24,17 +24,15 @@ You could be easily use it for marketing pages, blog posts, e-commerce product l
 
 - Wide range of desktop and mobile browsers support
 - Add responsive-ness and normalize as much as possible HTML elements *out-of-the-box*
-- Progressive responsive web design focused
 - Responsive, cross-browser, HTML5 form elements by default
-- A simple 12-columns fluid grid system
 - Sass architecture
 - CSS BEM
 - Responsive typography
 - Dark mode
 - RTL support
-- Get utility classes (e.g. `<h2 class="bf-h1">`) or not (no-class / classless framework)
-- Isolated utility classes to avoid conflicts between frameworks' classes
-- [`bullframe-classless.min.css`](https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe-classless.min.css) is just 10KB~ min+gzip 🎉
+- Gulp-friendly
+- Get all utility classes (e.g. `<h2 class="bf-h1">`) or no classes at all (no-class / classless framework)
+- [`bullframe-classless.min.css`](https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe-classless.min.css) is just 13KB~ minified 🎉
 
 ## What's included
 
@@ -49,8 +47,6 @@ bullframe.css/
     │   ├── ...
     │   ├── bullframe-dark.css
     │   ├── bullframe-dark.min.css
-    │   ├── bullframe-dark-prefers.css
-    │   ├── bullframe-dark-prefers.min.css
     │   ├── ...
     │   ├── bullframe-utilities.css
     │   ├── bullframe-utilities.min.css
@@ -88,19 +84,19 @@ bullframe.css/
 
 ### CDN
 
-JSDelivr (latest release, ready for production)
+JSDelivr
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
-Skypack (latest release, ready for production)
+Skypack
 
 ```html
 <link rel="stylesheet" href="https://cdn.skypack.dev/bullframe.css/dist/css/bullframe.min.css">
 ```
 
-UNPKG (latest release, not ready for production)
+UNPKG
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/bullframe.css">

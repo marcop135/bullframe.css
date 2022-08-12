@@ -202,9 +202,9 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 
 ### Dark themes
 
-There are two builds that enable a dark (dark mode) theme by default in all browsers.
+There are two builds: `bullframe-dark.css` enable a dark theme, and `bullframe-dark-prefers.css` follows the system default settings.
 
-`bullframe-dark.css`
+#### `bullframe-dark.css`
 
 CDN
 
@@ -212,9 +212,9 @@ CDN
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
 ```
 
-`bullframe-dark-prefers.css`
+#### `bullframe-dark-prefers.css`
 
-Enables dark only if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
+It enables the dark theme IONLY if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 CDN

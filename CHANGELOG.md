@@ -1,5 +1,11 @@
 # Changes to bullframe.css
 
+## 4.1.0 (August 30, 2023)
+
+* Moved from `dark-prefers` to `system-default`, but no breaking changes!
+* Updated `.browserlistrc`
+* Cleaned up and improved `README.md`
+
 ## 4.0.1 (August 12, 2022)
 
 * Updated `.browserlistrc`

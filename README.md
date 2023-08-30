@@ -90,18 +90,6 @@ JSDelivr
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
-Skypack
-
-```html
-<link rel="stylesheet" href="https://cdn.skypack.dev/bullframe.css/dist/css/bullframe.min.css">
-```
-
-UNPKG
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/bullframe.css">
-```
-
 ### npm
 
 Once you have installed [Node.js](https://nodejs.org/en/download/), you can run this command to install bullframe.css into your project:

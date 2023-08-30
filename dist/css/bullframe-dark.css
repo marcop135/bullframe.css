@@ -728,10 +728,6 @@ input[type=button],
   cursor: pointer;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #666;
-}
-
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #666;
 }
@@ -946,8 +942,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
     top: -0.05rem;
     border-radius: 50%;
     background: #fff;
-    -webkit-transform: scale(0.35);
-            transform: scale(0.35);
+    transform: scale(0.35);
   }
   [type=checkbox]:after {
     width: 0.6rem;
@@ -957,8 +952,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
     border-left: 0;
     left: 35%;
     top: 20%;
-    -webkit-transform: rotate(43deg);
-            transform: rotate(43deg);
+    transform: rotate(43deg);
   }
 }
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
@@ -1333,38 +1327,31 @@ table th[class^=bf-col] {
 }
 
 .bf-display-flex {
-  display: -webkit-flex !important;
   display: flex !important;
 }
 
 .bf-display-inline-flex {
-  display: -webkit-inline-flex !important;
   display: inline-flex !important;
 }
 
 .bf-display-flex--justify-start {
-  -webkit-justify-content: flex-start !important;
-          justify-content: flex-start !important;
+  justify-content: flex-start !important;
 }
 
 .bf-display-flex--justify-end {
-  -webkit-justify-content: flex-end !important;
-          justify-content: flex-end !important;
+  justify-content: flex-end !important;
 }
 
 .bf-display-flex--justify-center {
-  -webkit-justify-content: center !important;
-          justify-content: center !important;
+  justify-content: center !important;
 }
 
 .bf-display-flex--wrap {
-  -webkit-flex-wrap: wrap !important;
-          flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
 }
 
 .bf-display-flex--nowrap {
-  -webkit-flex-wrap: nowrap !important;
-          flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
 
 .bf-float-left {
@@ -1380,7 +1367,6 @@ table th[class^=bf-col] {
 }
 
 .bf-position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
 }
@@ -1393,17 +1379,13 @@ table th[class^=bf-col] {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 .bf-align-center-flex {
-  display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .bf-width-25 {
@@ -2338,9 +2320,6 @@ select[dir=rtl]:not([size]):not([multiple]) {
   [type=range]::-moz-range-track {
     background-color: #111;
   }
-}
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #999;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #999;

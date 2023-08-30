@@ -252,38 +252,31 @@ table th[class^=bf-col] {
 }
 
 .bf-display-flex {
-  display: -webkit-flex !important;
   display: flex !important;
 }
 
 .bf-display-inline-flex {
-  display: -webkit-inline-flex !important;
   display: inline-flex !important;
 }
 
 .bf-display-flex--justify-start {
-  -webkit-justify-content: flex-start !important;
-          justify-content: flex-start !important;
+  justify-content: flex-start !important;
 }
 
 .bf-display-flex--justify-end {
-  -webkit-justify-content: flex-end !important;
-          justify-content: flex-end !important;
+  justify-content: flex-end !important;
 }
 
 .bf-display-flex--justify-center {
-  -webkit-justify-content: center !important;
-          justify-content: center !important;
+  justify-content: center !important;
 }
 
 .bf-display-flex--wrap {
-  -webkit-flex-wrap: wrap !important;
-          flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
 }
 
 .bf-display-flex--nowrap {
-  -webkit-flex-wrap: nowrap !important;
-          flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
 
 .bf-float-left {
@@ -299,7 +292,6 @@ table th[class^=bf-col] {
 }
 
 .bf-position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
 }
@@ -312,17 +304,13 @@ table th[class^=bf-col] {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 .bf-align-center-flex {
-  display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .bf-width-25 {
@@ -350,28 +338,23 @@ table th[class^=bf-col] {
 }
 
 .bf-filter-invert {
-  -webkit-filter: invert(100%) !important;
-          filter: invert(100%) !important;
+  filter: invert(100%) !important;
 }
 
 .bf-filter-dim-images {
-  -webkit-filter: brightness(0.8) contrast(1.2);
-          filter: brightness(0.8) contrast(1.2);
+  filter: brightness(0.8) contrast(1.2);
 }
 
 .bf-filter-grayscale {
-  -webkit-filter: grayscale(1) !important;
-          filter: grayscale(1) !important;
+  filter: grayscale(1) !important;
 }
 
 .bf-filter-blur {
-  -webkit-filter: blur(0.3rem) !important;
-          filter: blur(0.3rem) !important;
+  filter: blur(0.3rem) !important;
 }
 
 .bf-filter-none {
-  -webkit-filter: none !important;
-          filter: none !important;
+  filter: none !important;
 }
 
 .bf-z-index-1 {

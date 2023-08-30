@@ -12,13 +12,11 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers.
+bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers. It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
 
-It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
+You could be easily use it for marketing sites, landing pages, mini sites, micro sites, blog posts, e-commerce product listings, help and documentation.
 
-You could be easily use it for marketing pages, blog posts, e-commerce product listings, help and documentation.
-
-**Just add bullframe.css, write semantic HTML5, and you are ready to go everywhere!**
+**Just add bullframe.css, write semantic HTML5, and you are ready to go!**
 
 ## Best features
 
@@ -32,7 +30,6 @@ You could be easily use it for marketing pages, blog posts, e-commerce product l
 - RTL support
 - Gulp-friendly
 - Get all utility classes (e.g. `<h2 class="bf-h1">`) or no classes at all (no-class / classless framework)
-- [`bullframe-classless.min.css`](https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe-classless.min.css) is just 13KB~ minified 🎉
 
 ## What's included
 
@@ -66,7 +63,7 @@ bullframe.css/
     └── variables/
     ...
     ├── bullframe-classless.scss
-    ├── bullframe-dark-prefers.scss
+    ├── bullframe-system-default.scss
     ├── bullframe-dark.scss
     ├── bullframe-utilities.scss
     ├── bullframe.scss
@@ -155,9 +152,9 @@ Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) a
 
 Click on the links below, and start a new pen in CodePen using bullframe.css.
 
-- [Light theme (default)](https://codepen.io/pen?template=WNrwNNM)
-- [Dark theme](https://codepen.io/pen?template=ExPmzBV)
-- [Dark `prefers-color-scheme`](https://codepen.io/pen?template=NWxjVQO)
+- [Light Theme (default)](https://codepen.io/pen?template=WNrwNNM)
+- [Dark Theme](https://codepen.io/pen?template=ExPmzBV)
+- [System Default (`prefers-color-scheme`)](https://codepen.io/pen?template=NWxjVQO)
 
 ## Customization
 
@@ -186,7 +183,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 
 ### Dark themes
 
-There are two builds: `bullframe-dark.css` enable a dark theme, and `bullframe-dark-prefers.css` follows the system default settings.
+There are two builds: `bullframe-dark.css` enable a dark theme, and `bullframe-system-default.css` follows the system default settings.
 
 #### `bullframe-dark.css`
 
@@ -196,7 +193,7 @@ CDN
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
 ```
 
-#### `bullframe-dark-prefers.css`
+#### `bullframe-system-default.css`
 
 It enables the dark theme IONLY if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
@@ -204,7 +201,7 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark-prefers.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-system-default.min.css">
 ```
 
 ### Utilities - Reference

@@ -687,10 +687,6 @@ input[type=button],
   cursor: pointer;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #666;
-}
-
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #666;
 }
@@ -905,8 +901,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
     top: -0.05rem;
     border-radius: 50%;
     background: #fff;
-    -webkit-transform: scale(0.35);
-            transform: scale(0.35);
+    transform: scale(0.35);
   }
   [type=checkbox]:after {
     width: 0.6rem;
@@ -916,8 +911,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
     border-left: 0;
     left: 35%;
     top: 20%;
-    -webkit-transform: rotate(43deg);
-            transform: rotate(43deg);
+    transform: rotate(43deg);
   }
 }
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
@@ -1200,9 +1194,6 @@ select[dir=rtl]:not([size]):not([multiple]) {
   [type=range]::-moz-range-track {
     background-color: #111;
   }
-}
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #999;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #999;

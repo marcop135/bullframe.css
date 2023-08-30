@@ -134,7 +134,7 @@ gulp
   <!-- bullframe.css: use latest compiled and minified version -->
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-ie10+.min.css">
+    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
 </head>
 
 <body>

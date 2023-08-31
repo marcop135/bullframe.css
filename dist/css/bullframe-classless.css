@@ -859,7 +859,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
 
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   [type=checkbox],
-[type=radio] {
+  [type=radio] {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -870,27 +870,27 @@ select[dir=rtl]:not([size]):not([multiple]) {
     border: 1px solid #999;
   }
   [type=checkbox] + label,
-[type=radio] + label {
+  [type=radio] + label {
     line-height: 1.8rem;
     vertical-align: top;
     margin-left: 5px;
     margin-left: 0.5rem;
   }
   *[dir=rtl] [type=checkbox] + label, [type=checkbox][dir=rtl] + label,
-*[dir=rtl] [type=radio] + label,
-[type=radio][dir=rtl] + label {
+  *[dir=rtl] [type=radio] + label,
+  [type=radio][dir=rtl] + label {
     margin-left: 0;
     margin-right: 5px;
     margin-right: 0.5rem;
   }
   [type=checkbox]:after,
-[type=radio]:after {
+  [type=radio]:after {
     content: "";
     display: block;
     position: absolute;
   }
   [type=checkbox]:checked,
-[type=radio]:checked {
+  [type=radio]:checked {
     background-color: #007bff;
     border-color: #000;
   }

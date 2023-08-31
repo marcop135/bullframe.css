@@ -900,7 +900,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
 
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   [type=checkbox],
-[type=radio] {
+  [type=radio] {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -911,27 +911,27 @@ select[dir=rtl]:not([size]):not([multiple]) {
     border: 1px solid #999;
   }
   [type=checkbox] + label,
-[type=radio] + label {
+  [type=radio] + label {
     line-height: 1.8rem;
     vertical-align: top;
     margin-left: 5px;
     margin-left: 0.5rem;
   }
   *[dir=rtl] [type=checkbox] + label, [type=checkbox][dir=rtl] + label,
-*[dir=rtl] [type=radio] + label,
-[type=radio][dir=rtl] + label {
+  *[dir=rtl] [type=radio] + label,
+  [type=radio][dir=rtl] + label {
     margin-left: 0;
     margin-right: 5px;
     margin-right: 0.5rem;
   }
   [type=checkbox]:after,
-[type=radio]:after {
+  [type=radio]:after {
     content: "";
     display: block;
     position: absolute;
   }
   [type=checkbox]:checked,
-[type=radio]:checked {
+  [type=radio]:checked {
     background-color: #007bff;
     border-color: #000;
   }
@@ -2029,8 +2029,8 @@ dt {
    ========================================================================== */
 @media print {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
@@ -2038,7 +2038,7 @@ dt {
     text-shadow: none !important;
   }
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
   a[href]::after {
@@ -2052,35 +2052,35 @@ a:visited {
      * or use the `javascript:` pseudo protocol
      */
   a[href^="#"]::after,
-a[href^="javascript:"]::after {
+  a[href^="javascript:"]::after {
     content: "";
   }
   pre {
     white-space: pre-wrap !important;
   }
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
 }
 @media print {
   body,
-.bf-container {
+  .bf-container {
     min-width: 992px !important;
   }
   .bf-table-responsive {
@@ -2090,23 +2090,20 @@ h3 {
     width: auto;
   }
   .bf-table-responsive table,
-.bf-table {
+  .bf-table {
     border-collapse: collapse !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
-.bf-reduced-motion::before,
-.bf-reduced-motion::after,
-.bf-reduced-motion *,
-.bf-reduced-motion *::before,
-.bf-reduced-motion *::after {
-    -webkit-animation-delay: -1ms !important;
-            animation-delay: -1ms !important;
-    -webkit-animation-duration: 1ms !important;
-            animation-duration: 1ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  .bf-reduced-motion::before,
+  .bf-reduced-motion::after,
+  .bf-reduced-motion *,
+  .bf-reduced-motion *::before,
+  .bf-reduced-motion *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
     background-attachment: initial !important;
     scroll-behavior: auto !important;
     transition-delay: 0s !important;
@@ -2185,93 +2182,93 @@ h3 {
     background-color: #b3b300;
   }
   [type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-[type=range],
-input[list],
-select,
-select:not([size]):not([multiple]),
-textarea {
+  [type=number],
+  [type=password],
+  [type=tel],
+  [type=search],
+  [type=text],
+  [type=date],
+  [type=datetime-local],
+  [type=month],
+  [type=week],
+  [type=time],
+  [type=url],
+  [type=range],
+  input[list],
+  select,
+  select:not([size]):not([multiple]),
+  textarea {
     background-color: #111;
     border-color: #000;
     color: #ccc;
   }
   [type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-[type=range]:active,
-[type=range]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-select:not([size]):not([multiple]):active,
-select:not([size]):not([multiple]):focus,
-textarea:active,
-textarea:focus {
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  [type=range]:active,
+  [type=range]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size]):not([multiple]):active,
+  select:not([size]):not([multiple]):focus,
+  textarea:active,
+  textarea:focus {
     background-color: #111;
     border-color: #3395ff;
   }
   [type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-select:not([size]):not([multiple]):active,
-select:not([size]):not([multiple]):focus,
-textarea:active,
-textarea:focus {
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size]):not([multiple]):active,
+  select:not([size]):not([multiple]):focus,
+  textarea:active,
+  textarea:focus {
     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
   }
   .bf-focused {
@@ -2279,7 +2276,7 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5) !important;
   }
   .bf-invalid,
-.bf-invalid:focus {
+  .bf-invalid:focus {
     color: #ff2626 !important;
     border-color: #ff2626 !important;
   }
@@ -2289,8 +2286,8 @@ textarea:focus {
 }
 @media screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (-webkit-min-device-pixel-ratio: 0), screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
   select:not([size]):not([multiple]),
-*[dir=rtl] select:not([size]):not([multiple]),
-select[dir=rtl]:not([size]):not([multiple]) {
+  *[dir=rtl] select:not([size]):not([multiple]),
+  select[dir=rtl]:not([size]):not([multiple]) {
     background-image: none;
   }
 }
@@ -2309,131 +2306,115 @@ select[dir=rtl]:not([size]):not([multiple]) {
       background-color: #111;
     }
   }
-}
-@media (prefers-color-scheme: dark) {
   input::-moz-placeholder, textarea::-moz-placeholder {
     color: #999;
   }
   input::placeholder,
-textarea::placeholder {
+  textarea::placeholder {
     color: #999;
   }
-}
-@media (prefers-color-scheme: dark) {
   button,
-[type=button],
-[type=reset],
-[type=submit],
-.bf-btn,
-button.bf-disabled,
-[type=button].bf-disabled,
-[type=reset].bf-disabled,
-[type=submit].bf-disabled,
-.bf-btn.bf-disabled {
+  [type=button],
+  [type=reset],
+  [type=submit],
+  .bf-btn,
+  button.bf-disabled,
+  [type=button].bf-disabled,
+  [type=reset].bf-disabled,
+  [type=submit].bf-disabled,
+  .bf-btn.bf-disabled {
     background: #ccc;
   }
   button:hover, button:active, button:focus,
-[type=button]:hover,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:active,
-[type=submit]:focus,
-.bf-btn:hover,
-.bf-btn:active,
-.bf-btn:focus,
-button.bf-disabled:hover,
-button.bf-disabled:active,
-button.bf-disabled:focus,
-[type=button].bf-disabled:hover,
-[type=button].bf-disabled:active,
-[type=button].bf-disabled:focus,
-[type=reset].bf-disabled:hover,
-[type=reset].bf-disabled:active,
-[type=reset].bf-disabled:focus,
-[type=submit].bf-disabled:hover,
-[type=submit].bf-disabled:active,
-[type=submit].bf-disabled:focus,
-.bf-btn.bf-disabled:hover,
-.bf-btn.bf-disabled:active,
-.bf-btn.bf-disabled:focus {
+  [type=button]:hover,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:hover,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:hover,
+  [type=submit]:active,
+  [type=submit]:focus,
+  .bf-btn:hover,
+  .bf-btn:active,
+  .bf-btn:focus,
+  button.bf-disabled:hover,
+  button.bf-disabled:active,
+  button.bf-disabled:focus,
+  [type=button].bf-disabled:hover,
+  [type=button].bf-disabled:active,
+  [type=button].bf-disabled:focus,
+  [type=reset].bf-disabled:hover,
+  [type=reset].bf-disabled:active,
+  [type=reset].bf-disabled:focus,
+  [type=submit].bf-disabled:hover,
+  [type=submit].bf-disabled:active,
+  [type=submit].bf-disabled:focus,
+  .bf-btn.bf-disabled:hover,
+  .bf-btn.bf-disabled:active,
+  .bf-btn.bf-disabled:focus {
     background: #b3b3b3;
   }
   button:active, button:focus,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:active,
-[type=submit]:focus,
-.bf-btn:active,
-.bf-btn:focus,
-button.bf-disabled:active,
-button.bf-disabled:focus,
-[type=button].bf-disabled:active,
-[type=button].bf-disabled:focus,
-[type=reset].bf-disabled:active,
-[type=reset].bf-disabled:focus,
-[type=submit].bf-disabled:active,
-[type=submit].bf-disabled:focus,
-.bf-btn.bf-disabled:active,
-.bf-btn.bf-disabled:focus {
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:active,
+  [type=submit]:focus,
+  .bf-btn:active,
+  .bf-btn:focus,
+  button.bf-disabled:active,
+  button.bf-disabled:focus,
+  [type=button].bf-disabled:active,
+  [type=button].bf-disabled:focus,
+  [type=reset].bf-disabled:active,
+  [type=reset].bf-disabled:focus,
+  [type=submit].bf-disabled:active,
+  [type=submit].bf-disabled:focus,
+  .bf-btn.bf-disabled:active,
+  .bf-btn.bf-disabled:focus {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
   }
-}
-@media (prefers-color-scheme: dark) {
   button:active, button:focus,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:active,
-[type=submit]:focus,
-.bf-btn:active,
-.bf-btn:focus {
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:active,
+  [type=submit]:focus,
+  .bf-btn:active,
+  .bf-btn:focus {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
   }
-}
-@media (prefers-color-scheme: dark) {
   .bf-btn--primary.bf-disabled,
-.bf-btn.bf-btn--primary {
+  .bf-btn.bf-btn--primary {
     background: #007bff;
   }
   .bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus,
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+  .bf-btn.bf-btn--primary:hover,
+  .bf-btn.bf-btn--primary:active,
+  .bf-btn.bf-btn--primary:focus {
     background: #006fe6;
   }
   .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus,
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+  .bf-btn.bf-btn--primary:active,
+  .bf-btn.bf-btn--primary:focus {
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
   }
-}
-@media (prefers-color-scheme: dark) {
   a:focus,
-input:focus {
+  input:focus {
     outline-color: #b37400;
   }
-}
-@media (prefers-color-scheme: dark) {
   :focus-visible {
     outline-color: #b37400;
   }
-}
-@media (prefers-color-scheme: dark) {
   .bf-table th,
-.bf-table td {
+  .bf-table td {
     border-color: #666;
   }
-}
-@media (prefers-color-scheme: dark) {
   .bf-table--zebra tbody tr:nth-child(odd),
-.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  .bf-table-responsive--zebra tbody tr:nth-child(odd) {
     background-color: #333;
   }
 }

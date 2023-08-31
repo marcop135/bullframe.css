@@ -1,5 +1,6 @@
 /*! bullframe.css v4.1.1 | MIT License | https://github.com/marcop135/bullframe.css */
-/*! custom build: bullframe-classless-dark-prefers */ /*! custom build: bullframe-classless */
+/*! custom build: bullframe-classless-dark-prefers */
+/*! custom build: bullframe-classless */
 *,
 *::before,
 *::after {
@@ -859,7 +860,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
 
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   [type=checkbox],
-[type=radio] {
+  [type=radio] {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -870,27 +871,27 @@ select[dir=rtl]:not([size]):not([multiple]) {
     border: 1px solid #999;
   }
   [type=checkbox] + label,
-[type=radio] + label {
+  [type=radio] + label {
     line-height: 1.8rem;
     vertical-align: top;
     margin-left: 5px;
     margin-left: 0.5rem;
   }
   *[dir=rtl] [type=checkbox] + label, [type=checkbox][dir=rtl] + label,
-*[dir=rtl] [type=radio] + label,
-[type=radio][dir=rtl] + label {
+  *[dir=rtl] [type=radio] + label,
+  [type=radio][dir=rtl] + label {
     margin-left: 0;
     margin-right: 5px;
     margin-right: 0.5rem;
   }
   [type=checkbox]:after,
-[type=radio]:after {
+  [type=radio]:after {
     content: "";
     display: block;
     position: absolute;
   }
   [type=checkbox]:checked,
-[type=radio]:checked {
+  [type=radio]:checked {
     background-color: #007bff;
     border-color: #000;
   }
@@ -1070,93 +1071,93 @@ caption {
     background-color: #b3b300;
   }
   [type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-[type=range],
-input[list],
-select,
-select:not([size]):not([multiple]),
-textarea {
+  [type=number],
+  [type=password],
+  [type=tel],
+  [type=search],
+  [type=text],
+  [type=date],
+  [type=datetime-local],
+  [type=month],
+  [type=week],
+  [type=time],
+  [type=url],
+  [type=range],
+  input[list],
+  select,
+  select:not([size]):not([multiple]),
+  textarea {
     background-color: #111;
     border-color: #000;
     color: #ccc;
   }
   [type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-[type=range]:active,
-[type=range]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-select:not([size]):not([multiple]):active,
-select:not([size]):not([multiple]):focus,
-textarea:active,
-textarea:focus {
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  [type=range]:active,
+  [type=range]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size]):not([multiple]):active,
+  select:not([size]):not([multiple]):focus,
+  textarea:active,
+  textarea:focus {
     background-color: #111;
     border-color: #3395ff;
   }
   [type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-select:not([size]):not([multiple]):active,
-select:not([size]):not([multiple]):focus,
-textarea:active,
-textarea:focus {
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size]):not([multiple]):active,
+  select:not([size]):not([multiple]):focus,
+  textarea:active,
+  textarea:focus {
     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
   }
   select:not([size]):not([multiple]) {
@@ -1165,8 +1166,8 @@ textarea:focus {
 }
 @media screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (-webkit-min-device-pixel-ratio: 0), screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
   select:not([size]):not([multiple]),
-*[dir=rtl] select:not([size]):not([multiple]),
-select[dir=rtl]:not([size]):not([multiple]) {
+  *[dir=rtl] select:not([size]):not([multiple]),
+  select[dir=rtl]:not([size]):not([multiple]) {
     background-image: none;
   }
 }
@@ -1185,52 +1186,44 @@ select[dir=rtl]:not([size]):not([multiple]) {
       background-color: #111;
     }
   }
-}
-@media (prefers-color-scheme: dark) {
   input::-moz-placeholder, textarea::-moz-placeholder {
     color: #999;
   }
   input::placeholder,
-textarea::placeholder {
+  textarea::placeholder {
     color: #999;
   }
-}
-@media (prefers-color-scheme: dark) {
   button,
-[type=button],
-[type=reset],
-[type=submit] {
+  [type=button],
+  [type=reset],
+  [type=submit] {
     background: #ccc;
   }
   button:hover, button:active, button:focus,
-[type=button]:hover,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:active,
-[type=submit]:focus {
+  [type=button]:hover,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:hover,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:hover,
+  [type=submit]:active,
+  [type=submit]:focus {
     background: #b3b3b3;
   }
   button:active, button:focus,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:active,
-[type=submit]:focus {
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:active,
+  [type=submit]:focus {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
   }
-}
-@media (prefers-color-scheme: dark) {
   a:focus,
-input:focus {
+  input:focus {
     outline-color: #b37400;
   }
-}
-@media (prefers-color-scheme: dark) {
   :focus-visible {
     outline-color: #b37400;
   }

@@ -195,7 +195,7 @@ CDN
 
 #### `bullframe-system-default.css`
 
-It enables the dark theme IONLY if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
+It enables the dark theme ONLY if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
 Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 CDN

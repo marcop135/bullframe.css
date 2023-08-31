@@ -14,22 +14,22 @@
 
 bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers. It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
 
-You could be easily use it for marketing sites, landing pages, mini sites, micro sites, blog posts, e-commerce product listings, help and documentation.
+You could be easily use it for marketing sites, landing pages, mini sites, micro sites, blog posts, e-commerce product listings, help and documentation, and more.
 
-**Just add bullframe.css, write semantic HTML5, and you are ready to go!**
+**Just add bullframe.css in your webpage, write semantic HTML, and you are ready to go!**
 
 ## Best features
 
 - Wide range of desktop and mobile browsers support
-- Add responsive-ness and normalize as much as possible HTML elements *out-of-the-box*
-- Responsive, cross-browser, HTML5 form elements by default
+- Responsive-ness and style normalization *out-of-the-box*
+- Cross-browser form elements by default
 - Sass architecture
 - CSS BEM
 - Responsive typography
-- Dark mode
+- Dark mode and theming support
 - RTL support
 - Gulp-friendly
-- Get all utility classes (e.g. `<h2 class="bf-h1">`) or no classes at all (no-class / classless framework)
+- Classless-friendly
 
 ## What's included
 
@@ -175,9 +175,21 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
-### Dark themes
+### Theming
 
-There are two builds: `bullframe-dark.css` enable a dark theme, and `bullframe-system-default.css` follows the system default settings.
+There are three builds available:
+
+1. `bullframe.css`: the light theme
+2. `bullframe-dark.css`: the dark theme
+3. `bullframe-system-default.css`: the theme set as system default by the user (which can be light or dark). Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
+
+#### `bullframe.css`
+
+CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
+```
 
 #### `bullframe-dark.css`
 
@@ -188,9 +200,6 @@ CDN
 ```
 
 #### `bullframe-system-default.css`
-
-It enables the dark theme ONLY if the user prefers it, in browsers that support the `prefers-color-scheme` media query.
-Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 CDN
 

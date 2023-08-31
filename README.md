@@ -127,19 +127,13 @@ gulp
   <meta charset="utf-8">
   <title>bullframe.css starter template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <!-- bullframe.css: use latest compiled and minified version -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe.min.css">
 </head>
-
 <body>
   <div class="bf-container">
     <!-- Add your site or application content here -->
     <p>Hello world! This is a bullframe.css starter template</p>
   </div>
-  
 </body>
 </html>
 ```
@@ -168,7 +162,7 @@ Just drop the snippet below in the `<head>` of your webpage, and the job is done
 Write semantic HTML and get nice styles and cross-browser normalization.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-classless.min.css">
 
 <!-- Center the page (optional)  -->
 <style>
@@ -201,7 +195,7 @@ Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefe
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-system-default.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
 ### Utilities - Reference

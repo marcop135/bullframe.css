@@ -181,7 +181,7 @@ There are three builds available:
 
 1. `bullframe.css`: the light theme
 2. `bullframe-dark.css`: the dark theme
-3. `bullframe-system-default.css`: the theme set as system default by the user (which can be light or dark). Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
+3. `bullframe-system-default.css`: the theme set by the user as default (which can be light or dark). Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 #### `bullframe.css`
 
@@ -209,7 +209,7 @@ CDN
 
 ### Utilities - Reference
 
-A set of utilities to create and customise bullframe.css:
+A set of utilities for bullframe.css customisation:
 
 #### Grid system
 
@@ -415,7 +415,7 @@ You might take a look at the [.browserslistrc](https://github.com/marcop135/bull
 
 ### Screenshots
 
-How can I quickly see if every HTML element works well on all browsers?
+How can I quickly determine if every HTML element works well on all browsers?
 
 Take a look at some [screenshots and screencasts](https://github.com/marcop135/bullframe.css/tree/master/docs/screenshots-screencasts), organized by rendering engines (blink, gecko, trident, webkit).
 

@@ -1,8 +1,13 @@
 # Changes to bullframe.css
 
+## 4.1.2 (February 23, 2024)
+
+* Updated all npm dependencies
+* Fixed typos in README.md
+
 ## 4.1.1 (August 31, 2023)
 
-* Update all npm dependencies
+* Updated all npm dependencies
 * Improved documentation
 
 ## 4.1.0 (August 30, 2023)

@@ -128,8 +128,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
-  -webkit-hyphens: none;
-          hyphens: none;
+  hyphens: none;
   -ms-overflow-style: auto;
 }
 
@@ -781,7 +780,7 @@ button:hover, button:active, button:focus,
 [type=submit]:focus {
   text-decoration: none;
   color: #222;
-  background: #b3b3b3;
+  background: rgb(178.5, 178.5, 178.5);
 }
 button:active, button:focus,
 [type=button]:active,

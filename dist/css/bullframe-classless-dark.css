@@ -129,8 +129,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
-  -webkit-hyphens: none;
-          hyphens: none;
+  hyphens: none;
   -ms-overflow-style: auto;
 }
 
@@ -782,7 +781,7 @@ button:hover, button:active, button:focus,
 [type=submit]:focus {
   text-decoration: none;
   color: #222;
-  background: #b3b3b3;
+  background: rgb(178.5, 178.5, 178.5);
 }
 button:active, button:focus,
 [type=button]:active,
@@ -1036,7 +1035,7 @@ caption {
 }
 
 html {
-  scrollbar-color: #595959 #111;
+  scrollbar-color: rgb(89.25, 89.25, 89.25) #111;
 }
 
 ::-webkit-scrollbar {
@@ -1049,11 +1048,11 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #595959;
+  background-color: rgb(89.25, 89.25, 89.25);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: gray;
+  background-color: rgb(127.5, 127.5, 127.5);
 }
 
 html {
@@ -1061,14 +1060,14 @@ html {
 }
 
 body {
-  background-color: #242424;
+  background-color: rgb(36.125, 36.125, 36.125);
 }
 
 a {
-  color: #66b0ff;
+  color: rgb(102, 175.8, 255);
 }
 a:hover, a:focus {
-  color: #1a88ff;
+  color: rgb(26, 136.0223463687, 255);
 }
 
 mark {
@@ -1076,7 +1075,7 @@ mark {
 }
 
 ins {
-  background-color: #b3b300;
+  background-color: rgb(178.5, 178.5, 0);
 }
 
 [type=email],
@@ -1134,7 +1133,7 @@ select:not([size]):not([multiple]):focus,
 textarea:active,
 textarea:focus {
   background-color: #111;
-  border-color: #3395ff;
+  border-color: rgb(51, 149.4, 255);
 }
 
 [type=email]:active, [type=email]:focus,
@@ -1220,7 +1219,7 @@ button:hover, button:active, button:focus,
 [type=submit]:hover,
 [type=submit]:active,
 [type=submit]:focus {
-  background: #b3b3b3;
+  background: rgb(178.5, 178.5, 178.5);
 }
 button:active, button:focus,
 [type=button]:active,
@@ -1234,9 +1233,9 @@ button:active, button:focus,
 
 a:focus,
 input:focus {
-  outline-color: #b37400;
+  outline-color: rgb(178.5, 115.5, 0);
 }
 
 :focus-visible {
-  outline-color: #b37400;
+  outline-color: rgb(178.5, 115.5, 0);
 }

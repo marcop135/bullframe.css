@@ -770,7 +770,7 @@ body.bf-responsive-typography {
 .bf-btn:hover, .bf-btn:active, .bf-btn:focus {
   text-decoration: none;
   color: #222;
-  background: #b3b3b3;
+  background: rgb(178.5, 178.5, 178.5);
 }
 .bf-btn:active, .bf-btn:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
@@ -784,7 +784,7 @@ body.bf-responsive-typography {
 }
 .bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
   color: #fff;
-  background: #0062cc;
+  background: rgb(0, 98.4, 204);
 }
 .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);

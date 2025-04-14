@@ -93,7 +93,7 @@ bullframe.css/
 JSDelivr
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@^4.0.0">
 ```
 
 ### npm
@@ -197,7 +197,7 @@ There are three builds available:
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe.min.css">
 ```
 
 #### `bullframe-dark.css`
@@ -205,15 +205,7 @@ CDN
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css">
-```
-
-#### `bullframe-system-default.css`
-
-CDN
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-system-default.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/">
 ```
 
 ### Utilities - Reference
@@ -222,7 +214,7 @@ A set of utilities for bullframe.css customisation:
 
 #### Grid system
 
-*Breakpoints: 576, 768, 992 and 1200 pixels*
+Breakpoints: 576, 768, 992 and 1200 pixels.
 
 | Utility class | Description |
 | ------------- | ----------- |

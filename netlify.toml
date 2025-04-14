@@ -1,0 +1,10 @@
+[build]
+  base = "dist"
+  publish = "/"
+  command = "gulp"
+
+[build.environment]
+
+[[redirects]]
+
+[[plugins]]

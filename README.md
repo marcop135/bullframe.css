@@ -1,9 +1,18 @@
 # bullframe.css
 
 <p>
-  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page"></a>
-  <a href="https://github.com/marcop135/bullframe.css/commits"><img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit"></a>
-  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license"></a>
+  <a href="https://www.npmjs.com/package/bullframe.css">
+    <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page">
+  </a>
+  <a href="https://app.netlify.com/sites/bullframecss/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/20dc2e1f-4af2-49a1-ae68-941eb189c61a/deploy-status" alt="Netlify Status">
+  </a>
+  <a href="https://github.com/marcop135/bullframe.css/commits">
+    <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit">
+  </a>
+  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license">
+  </a>
 </p>
 
 <br>
@@ -375,9 +384,9 @@ A set of utilities for bullframe.css customisation:
 
 | Utility class | Description |
 | ------------- | ----------- |
-| `.bf-embed-responsive` | Adds responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpouse element_ (e.g. youtube embed)  |
-| `.bf-embed-responsive--4-3` | Sets a 4:3 ratio responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpouse element_ container (e.g. youtube embed) |
-| `.bf-embed-responsive--item` | A _general purpouse element_ element that behaves like a `video` |
+| `.bf-embed-responsive` | Adds responsiveness to an `iframe`, `embed`, `object`, `video` or *general purpouse element* (e.g. youtube embed)  |
+| `.bf-embed-responsive--4-3` | Sets a 4:3 ratio responsiveness to an `iframe`, `embed`, `object`, `video` or *general purpouse element* container (e.g. youtube embed) |
+| `.bf-embed-responsive--item` | A *general purpouse element* element that behaves like a `video` |
 
 #### Buttons
 
@@ -433,11 +442,11 @@ Please read the [contribution guidelines](https://github.com/marcop135/bullframe
 
 ## Acknowledgements
 
-bullframe.css incorporates some of the styles found on some amazing CSS boilerplates and frameworks across the web. _Thank you!_
+bullframe.css incorporates some of the styles found on some amazing CSS boilerplates and frameworks across the web. *Thank you!*
 
 - @necolas [/normalize.css](https://github.com/necolas/normalize.css) for the extensive old browsers bug fixing documentation
 - @h5bp [/main.css](https://github.com/h5bp/main.css) for the excellent print styles base and the keyboard utilities
-- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, reboot styles, base24 SVG icons, button styles, grid system breakpoints and spacing utilities _(a lot!)_
+- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, reboot styles, base24 SVG icons, button styles, grid system breakpoints and spacing utilities *(a lot!)*
 - @kognise [/water.css](https://github.com/kognise/water.css) for the "classless" concept inspiration and some form tricks
 - @csswizardry @inuitcss [/inuit.css](https://github.com/inuitcss/inuitcss) for some advanced Sass tips and tricks
 - @jensimmons [/cssremedy](https://github.com/jensimmons/cssremedy) for the prefers-reduced-motion snippet

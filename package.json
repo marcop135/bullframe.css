@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "description": "Solid, fluid, cross-browser Sass (SCSS) framework.",
   "jsdelivr": "dist/css/bullframe.css",
   "unpkg": "dist/css/bullframe.css",

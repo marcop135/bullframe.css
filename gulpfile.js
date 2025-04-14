@@ -55,7 +55,7 @@ function scssTask() {
       .pipe(
         replace(
           '@charset "UTF-8";',
-          '/*! bullframe.css v4.2.0 | MIT License | https://github.com/marcop135/bullframe.css */'
+          '/*! bullframe.css v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */'
         )
       )
 

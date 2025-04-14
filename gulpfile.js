@@ -1,6 +1,4 @@
-// Gulp-starter repository
-// File processing boilerplate for HTML, Sass, JS, PNG, JPEG, GIF and SVG files with Gulp.js
-// https://github.com/marcop135/gulp-starter
+// Gulpfile for bullframe.css
 'use strict';
 
 // Initialize modules
@@ -31,8 +29,8 @@ function reload(done) {
 function serve(done) {
   server.init({
     server: {
-      baseDir: './',
-      index: './index.html',
+      baseDir: './dist/',
+      index: './test/index.html',
     },
   });
   done();
@@ -40,7 +38,6 @@ function serve(done) {
 
 // File paths to watch
 const files = {
-  htmlPath: './*.html',
   scssPath: 'src/scss/**/*.scss',
 };
 
@@ -91,7 +88,7 @@ function scssTask() {
 // If any change, run scss, js and image tasks simultaneously
 // then reload via browsersync
 function watchTask() {
-  watch([files.htmlPath, files.scssPath], series(parallel(scssTask), reload));
+  watch([files.scssPath], series(parallel(scssTask), reload));
 }
 
 // Export the default Gulp task so it can be run

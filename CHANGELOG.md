@@ -1,5 +1,9 @@
 # Changes to bullframe.css
 
+## 4.2.0 (April 14, 2025)
+
+* Added support for Netlify deploy
+
 ## 4.1.2 (February 23, 2024)
 
 * Updated all npm dependencies

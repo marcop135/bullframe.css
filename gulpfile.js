@@ -30,7 +30,7 @@ function serve(done) {
   server.init({
     server: {
       baseDir: './dist/',
-      index: './test/index.html',
+      index: './index.html',
     },
   });
   done();

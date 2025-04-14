@@ -5,7 +5,7 @@
   margin-bottom: 2rem;
 }
 
-.test [class^="bf-col"] {
+.test [class^='bf-col'] {
   margin-bottom: 10px;
   margin-bottom: 1rem;
 }
@@ -23,7 +23,7 @@
 }
 
 .test header h1 span {
-  color: #f95c1f
+  color: #f95c1f;
 }
 
 @media (min-width: 600px) {
@@ -80,9 +80,9 @@
   margin-bottom: 2rem;
 }
 
-.test [type="image"],
-.test [type="checkbox"],
-.test [type="radio"] {
+.test [type='image'],
+.test [type='checkbox'],
+.test [type='radio'] {
   margin-bottom: 0;
 }
 
@@ -111,7 +111,7 @@
     margin-bottom: 0;
   }
 
-  .test .grid [class*="bf-col-"] {
+  .test .grid [class*='bf-col-'] {
     margin-bottom: 20px;
     margin-bottom: 2rem;
   }

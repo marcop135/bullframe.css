@@ -1,3 +1,6 @@
+@use 'variables/variables-colors';
+@use 'variables/variables-spacing';
+
 .bf-t-transform-uppercase {
   text-transform: uppercase !important;
 }
@@ -19,8 +22,8 @@
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px $bf-dark !important;
-  text-shadow: 0 0 .2rem $bf-dark !important;
+  text-shadow: 0 0 2px variables-colors.$bf-dark !important;
+  text-shadow: 0 0 0.2rem variables-colors.$bf-dark !important;
 }
 
 .bf-t-italic {
@@ -85,7 +88,6 @@
   -webkit-box-orient: vertical !important;
 }
 
-
 .bf-no-select {
   user-select: none !important;
 
@@ -137,8 +139,8 @@
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: $bf-spacing-lg-px !important;
-  margin-bottom: $bf-spacing-lg-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-lg-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-lg-rem !important;
 }
 
 .bf-h1 {

@@ -1,6 +1,9 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 blockquote {
-  margin: 0 0 $bf-spacing-xl-px 0;
-  margin-bottom: $bf-spacing-xl-rem;
+  margin: 0 0 variables-spacing.$bf-spacing-xl-px 0;
+  margin-bottom: variables-spacing.$bf-spacing-xl-rem;
   padding-left: 0;
   font-style: italic;
 }
@@ -10,7 +13,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: $bf-gray;
+  color: variables-colors.$bf-gray;
   display: block;
 }
 

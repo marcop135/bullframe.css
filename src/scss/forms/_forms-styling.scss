@@ -1,3 +1,6 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 [type='email'],
 [type='number'],
 [type='password'],
@@ -13,10 +16,12 @@
 input[list],
 select,
 textarea {
-  background-color: $bf-white;
-  border: 1px solid $bf-gray;
-  padding: $bf-spacing-md-px ($bf-spacing-lg-px * 0.75);
-  padding: $bf-spacing-md-rem ($bf-spacing-lg-rem * 0.75);
+  background-color: variables-colors.$bf-white;
+  border: 1px solid / variables-colors.$bf-gray;
+  padding: variables-spacing.$bf-spacing-md-px
+    (variables-spacing.$bf-spacing-lg-px * 0.75);
+  padding: variables-spacing.$bf-spacing-md-rem
+    (variables-spacing.$bf-spacing-lg-rem * 0.75);
 }
 
 // Old browsers and Opera Mini don't fully support all type of inputs
@@ -42,7 +47,7 @@ textarea,
   &:active,
   &:focus {
     transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-    border-color: $bf-blue;
+    border-color: variables-colors.$bf-blue;
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
   }
 }
@@ -51,18 +56,20 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  color: $bf-dark;
-  padding: calc($bf-spacing-xl-px / 3) (calc($bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: calc($bf-spacing-xl-rem / 3) (calc($bf-spacing-xl-rem / 3) * 2);
-  background: $bf-gray-light;
+  color: variables-colors.$bf-dark;
+  padding: calc(variables-spacing.$bf-spacing-xl-px / 3)
+    (calc(variables-spacing.$bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: calc(variables-spacing.$bf-spacing-xl-rem / 3)
+    (calc(variables-spacing.$bf-spacing-xl-rem / 3) * 2);
+  background: variables-colors.$bf-gray-light;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: $bf-dark;
-    background: darken($bf-gray-light, 10%);
+    color: variables-colors.$bf-dark;
+    background: darken(variables-colors.$bf-gray-light, 10%);
   }
 
   &:active,

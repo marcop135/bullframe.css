@@ -1,3 +1,5 @@
+@use 'variables/variables-spacing';
+
 h1,
 h2,
 h3,
@@ -11,10 +13,8 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: $bf-spacing-lg-px;
-  margin-bottom: $bf-spacing-lg-rem;
-
-
+  margin-bottom: variables-spacing.$bf-spacing-lg-px;
+  margin-bottom: variables-spacing.$bf-spacing-lg-rem;
 }
 
 h1 {

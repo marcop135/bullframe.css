@@ -1,14 +1,16 @@
+@use 'variables/variables-colors';
+
 a {
-  color: $bf-blue; // bootstrap blue
+  color: variables-colors.$bf-blue; // bootstrap blue
   text-decoration: none;
 
   // IE10+: Remove grey background on active links
   background-color: transparent;
-  
+
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: $bf-blue-light;
+    color: variables-colors.$bf-blue-light;
   }
 }
 

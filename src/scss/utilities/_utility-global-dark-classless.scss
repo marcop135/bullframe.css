@@ -1,34 +1,36 @@
-// these are global stylest tha that ovveride all the "light" styles
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+@use 'variables/variables-texts';
+@use 'utility-global-dark-scrollbars';
 
-// import dark scrollbars utility module
-@import 'utility-global-dark-scrollbars';
+// these are global stylest tha that ovveride all the "light" styles
 
 // the basics: background and texts
 html {
-  color: $bf-light;
+  color: variables-colors.$bf-light;
 }
 
 body {
-  background-color: lighten($bf-dark-extra, 7.5%);
+  background-color: lighten(variables-colors.$bf-dark-extra, 7.5%);
 }
 
 // anchors
 a {
-  color: lighten($bf-blue, 20%);
+  color: lighten(variables-colors.$bf-blue, 20%);
 
   &:hover,
   &:focus {
-    color: lighten($bf-blue-light, 20%);
+    color: lighten(variables-colors.$bf-blue-light, 20%);
   }
 }
 
 // typography elements that need tiny adjustments
 mark {
-  background-color: darken($bf-yellow, 10%);
+  background-color: darken(variables-colors.$bf-yellow, 10%);
 }
 
 ins {
-  background-color: darken($bf-yellow-light, 45%);
+  background-color: darken(variables-colors.$bf-yellow-light, 45%);
 }
 
 // forms
@@ -50,14 +52,14 @@ input[list],
 select,
 select:not([size]):not([multiple]),
 textarea {
-  background-color: $bf-dark-extra;
-  border-color: $bf-black;
-  color: $bf-gray-light;
+  background-color: variables-colors.$bf-dark-extra;
+  border-color: variables-colors.$bf-black;
+  color: variables-colors.$bf-gray-light;
 
   &:active,
   &:focus {
-    background-color: $bf-dark-extra;
-    border-color: lighten($bf-blue, 10%);
+    background-color: variables-colors.$bf-dark-extra;
+    border-color: lighten(variables-colors.$bf-blue, 10%);
   }
 }
 
@@ -115,29 +117,29 @@ select:not([size]):not([multiple]) {
   // darker background
   // the rulesets must be separated
   [type='range']::-webkit-slider-runnable-track {
-    background-color: $bf-dark-extra;
+    background-color: variables-colors.$bf-dark-extra;
   }
 
   [type='range']::-moz-range-track {
-    background-color: $bf-dark-extra;
+    background-color: variables-colors.$bf-dark-extra;
   }
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: $bf-gray;
+  color: variables-colors.$bf-gray;
 }
 
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  background: $bf-gray-light;
+  background: variables-colors.$bf-gray-light;
 
   &:hover,
   &:active,
   &:focus {
-    background: darken($bf-gray-light, 10%);
+    background: darken(variables-colors.$bf-gray-light, 10%);
   }
 
   &:active,

@@ -1,7 +1,10 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 .bf-focused {
-  transition: border .2s, background-color .2s, box-shadow .2s !important;
-  border-color: $bf-blue !important;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, .25) !important;
+  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
+  border-color: variables-colors.$bf-blue !important;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
 }
 
 .bf-disabled,
@@ -17,10 +20,10 @@
   pointer-events: none !important;
   user-select: none !important;
   box-shadow: none !important;
-  opacity: .5 !important;
+  opacity: 0.5 !important;
 
-  background-color: $bf-white;
-  border-color: $bf-gray;
+  background-color: variables-colors.$bf-white;
+  border-color: variables-colors.$bf-gray;
 }
 
 label.bf-disabled {
@@ -38,17 +41,17 @@ button.bf-disabled,
   pointer-events: none;
   user-select: none;
   box-shadow: none;
-  opacity: .5;
+  opacity: 0.5;
 
-  color: $bf-dark;
-  background: $bf-gray-light;
+  color: variables-colors.$bf-dark;
+  background: variables-colors.$bf-gray-light;
 
   &:hover,
   &:active,
   &:focus {
     box-shadow: none;
-    color: $bf-dark;
-    background: $bf-gray-light;
+    color: variables-colors.$bf-dark;
+    background: variables-colors.$bf-gray-light;
   }
 }
 
@@ -58,23 +61,23 @@ button.bf-disabled,
   pointer-events: none;
   user-select: none;
   box-shadow: none;
-  opacity: .5;
+  opacity: 0.5;
 
-  color: $bf-white;
-  background: $bf-blue;
+  color: variables-colors.$bf-white;
+  background: variables-colors.$bf-blue;
 
   &:hover,
   &:active,
   &:focus {
     box-shadow: none;
-    color: $bf-white;
-    background: $bf-blue;
+    color: variables-colors.$bf-white;
+    background: variables-colors.$bf-blue;
   }
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: $bf-red !important;
-  border-color: $bf-red !important;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, .25) !important;
+  color: variables-colors.$bf-red !important;
+  border-color: variables-colors.$bf-red !important;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
 }

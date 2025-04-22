@@ -1,5 +1,5 @@
-/*! custom build: bullframe-classless-system-default */
-// https://css-tricks.com/no-class-css-frameworks/
-
-@import 'bullframe-classless';
-@import 'utilities/utility-global-system-default-classless';
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+@use 'variables/variables-texts';
+@use 'bullframe-classless';
+@use 'utilities/utility-global-system-default-classless';

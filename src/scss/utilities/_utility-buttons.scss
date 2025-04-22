@@ -1,9 +1,12 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: $bf-dark;
-  padding: calc($bf-spacing-xl-px / 3) (calc($bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: calc($bf-spacing-xl-rem / 3) (calc($bf-spacing-xl-rem / 3) * 2);
+  color: variables-colors.$bf-dark;
+  padding: calc(variables-spacing.$bf-spacing-xl-px / 3)
+    (calc(variables-spacing.$bf-spacing-xl-px / 3) * 2); // 8px 16px
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -12,23 +15,19 @@
   overflow: visible;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   user-select: none;
-
-  // ! IE9+
-  // https://caniuse.com/#feat=border-radius
-  border-radius: $bf-spacing-sm-px;
-  border-radius: $bf-spacing-sm-rem;
+  border-radius: variables-spacing.$bf-spacing-sm-rem;
 
   border: 0;
   background-image: none; // FF mobile
-  background-color: $bf-gray-light;
+  background-color: variables-colors.$bf-gray-light;
   transition: all 0.2s;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: $bf-dark;
-    background: darken($bf-gray-light, 10%);
+    color: variables-colors.$bf-dark;
+    background: darken(variables-colors.$bf-gray-light, 10%);
   }
 
   &:active,
@@ -41,14 +40,14 @@
   }
 
   &.bf-btn--primary {
-    color: $bf-white;
-    background: $bf-blue;
+    color: variables-colors.$bf-white;
+    background: variables-colors.$bf-blue;
 
     &:hover,
     &:active,
     &:focus {
-      color: $bf-white;
-      background: darken($bf-blue, 10%);
+      color: variables-colors.$bf-white;
+      background: darken(variables-colors.$bf-blue, 10%);
     }
 
     &:active,
@@ -68,4 +67,5 @@ fieldset[disabled] .bf-btn,
   user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
+  background-color: variables-colors.$bf-gray-light;
 }

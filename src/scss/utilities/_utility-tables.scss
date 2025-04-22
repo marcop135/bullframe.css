@@ -1,10 +1,13 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 .bf-table th,
 .bf-table td {
-  padding: $bf-spacing-lg-px;
-  padding: $bf-spacing-lg-rem;
-  border-bottom: 1px solid $bf-gray;
-  margin-bottom: $bf-spacing-md-px;
-  margin-bottom: $bf-spacing-md-rem;
+  padding: variables-spacing.$bf-spacing-lg-px;
+  padding: variables-spacing.$bf-spacing-lg-rem;
+  border-bottom: 1px solid variables-colors.$bf-gray;
+  margin-bottom: variables-spacing.$bf-spacing-md-px;
+  margin-bottom: variables-spacing.$bf-spacing-md-rem;
 }
 
 // responsive tables
@@ -22,8 +25,8 @@
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: $bf-spacing-md-px;
-  margin-bottom: $bf-spacing-md-rem;
+  margin-bottom: variables-spacing.$bf-spacing-md-px;
+  margin-bottom: variables-spacing.$bf-spacing-md-rem;
 }
 
 // force webkit scrollbars appearance
@@ -36,5 +39,5 @@
 // zebra striping
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: $bf-gray-light-extra;
+  background-color: variables-colors.$bf-gray-light-extra;
 }

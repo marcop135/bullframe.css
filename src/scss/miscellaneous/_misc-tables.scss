@@ -1,3 +1,6 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 table {
   max-width: 100%;
   border-collapse: collapse;
@@ -29,11 +32,11 @@ th {
 }
 
 caption {
-  padding-top: $bf-spacing-md-px;
-  padding-top: $bf-spacing-md-rem;
-  padding-bottom: $bf-spacing-md-px;
-  padding-bottom: $bf-spacing-md-rem;
-  color: $bf-gray;
+  padding-top: variables-spacing.$bf-spacing-md-px;
+  padding-top: variables-spacing.$bf-spacing-md-rem;
+  padding-bottom: variables-spacing.$bf-spacing-md-px;
+  padding-bottom: variables-spacing.$bf-spacing-md-rem;
+  color: variables-colors.$bf-gray;
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;

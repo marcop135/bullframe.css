@@ -1,3 +1,5 @@
+@use 'variables/variables-spacing';
+
 // this is something similar to Bootstrap's spacing utility
 // https://getbootstrap.com/docs/4.4/utilities/spacing/
 
@@ -24,43 +26,43 @@
 }
 
 .bf-m-1 {
-  margin-bottom: $bf-spacing-md-px !important;
-  margin-bottom: $bf-spacing-md-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-md-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-md-rem !important;
 }
 
 .bf-m-2 {
-  margin-bottom: $bf-spacing-lg-px !important;
-  margin-bottom: $bf-spacing-lg-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-lg-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-lg-rem !important;
 }
 
 .bf-m-3 {
-  margin-bottom: $bf-spacing-xl-px !important;
-  margin-bottom: $bf-spacing-xl-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-xl-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-xl-rem !important;
 }
 
 .bf-m-4 {
-  margin-bottom: $bf-spacing-xxl-px !important;
-  margin-bottom: $bf-spacing-xxl-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-xxl-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-xxl-rem !important;
 }
 
 .bf-m-b-1 {
-  margin-bottom: $bf-spacing-md-px !important;
-  margin-bottom: $bf-spacing-md-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-md-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-md-rem !important;
 }
 
 .bf-m-b-2 {
-  margin-bottom: $bf-spacing-lg-px !important;
-  margin-bottom: $bf-spacing-lg-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-lg-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-lg-rem !important;
 }
 
 .bf-m-b-3 {
-  margin-bottom: $bf-spacing-xl-px !important;
-  margin-bottom: $bf-spacing-xl-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-xl-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-xl-rem !important;
 }
 
 .bf-m-b-4 {
-  margin-bottom: $bf-spacing-xxl-px !important;
-  margin-bottom: $bf-spacing-xxl-rem !important;
+  margin-bottom: variables-spacing.$bf-spacing-xxl-px !important;
+  margin-bottom: variables-spacing.$bf-spacing-xxl-rem !important;
 }
 
 // paddings
@@ -86,61 +88,61 @@
 }
 
 .bf-p-1 {
-  padding-bottom: $bf-spacing-md-px !important;
-  padding-bottom: $bf-spacing-md-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-md-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-md-rem !important;
 }
 
 .bf-p-2 {
-  padding-bottom: $bf-spacing-lg-px !important;
-  padding-bottom: $bf-spacing-lg-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-lg-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-lg-rem !important;
 }
 
 .bf-p-3 {
-  padding-bottom: $bf-spacing-xl-px !important;
-  padding-bottom: $bf-spacing-xl-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-xl-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-xl-rem !important;
 }
 
 .bf-p-4 {
-  padding-bottom: $bf-spacing-xxl-px !important;
-  padding-bottom: $bf-spacing-xxl-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-xxl-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-xxl-rem !important;
 }
 
 .bf-p-t-1 {
-  padding-top: $bf-spacing-md-px !important;
-  padding-top: $bf-spacing-md-rem !important;
+  padding-top: variables-spacing.$bf-spacing-md-px !important;
+  padding-top: variables-spacing.$bf-spacing-md-rem !important;
 }
 
 .bf-p-t-2 {
-  padding-top: $bf-spacing-lg-px !important;
-  padding-top: $bf-spacing-lg-rem !important;
+  padding-top: variables-spacing.$bf-spacing-lg-px !important;
+  padding-top: variables-spacing.$bf-spacing-lg-rem !important;
 }
 
 .bf-p-t-3 {
-  padding-top: $bf-spacing-xl-px !important;
-  padding-top: $bf-spacing-xl-rem !important;
+  padding-top: variables-spacing.$bf-spacing-xl-px !important;
+  padding-top: variables-spacing.$bf-spacing-xl-rem !important;
 }
 
 .bf-p-t-4 {
-  padding-top: $bf-spacing-xxl-px !important;
-  padding-top: $bf-spacing-xxl-rem !important;
+  padding-top: variables-spacing.$bf-spacing-xxl-px !important;
+  padding-top: variables-spacing.$bf-spacing-xxl-rem !important;
 }
 
 .bf-p-b-1 {
-  padding-bottom: $bf-spacing-md-px !important;
-  padding-bottom: $bf-spacing-md-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-md-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-md-rem !important;
 }
 
 .bf-p-b-2 {
-  padding-bottom: $bf-spacing-lg-px !important;
-  padding-bottom: $bf-spacing-lg-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-lg-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-lg-rem !important;
 }
 
 .bf-p-b-3 {
-  padding-bottom: $bf-spacing-xl-px !important;
-  padding-bottom: $bf-spacing-xl-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-xl-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-xl-rem !important;
 }
 
 .bf-p-b-4 {
-  padding-bottom: $bf-spacing-xxl-px !important;
-  padding-bottom: $bf-spacing-xxl-rem !important;
+  padding-bottom: variables-spacing.$bf-spacing-xxl-px !important;
+  padding-bottom: variables-spacing.$bf-spacing-xxl-rem !important;
 }

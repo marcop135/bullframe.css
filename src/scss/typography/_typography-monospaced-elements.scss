@@ -1,6 +1,8 @@
+@use 'variables/variables-spacing';
+
 pre {
-  margin: 0 0 $bf-spacing-xl-px 0;
-  margin: 0 0 $bf-spacing-xl-rem 0;
+  margin: 0 0 variables-spacing.$bf-spacing-xl-px 0;
+  margin: 0 0 variables-spacing.$bf-spacing-xl-rem 0;
 
   display: block;
   overflow: auto;

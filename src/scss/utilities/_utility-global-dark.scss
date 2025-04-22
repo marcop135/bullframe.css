@@ -1,34 +1,38 @@
-// these are global stylest tha that ovveride all the "light" styles
+// these are global styles tha that ovveride all the "light" styles
+
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+@use 'variables/variables-texts';
 
 // import dark scrollbars utility module
-@import 'utility-global-dark-scrollbars';
+@use 'utility-global-dark-scrollbars';
 
 // the basics: background and texts
 html {
-  color: $bf-light;
+  color: variables-colors.$bf-light;
 }
 
 body {
-  background-color: lighten($bf-dark-extra, 7.5%);
+  background-color: lighten(variables-colors.$bf-dark-extra, 7.5%);
 }
 
 // anchors
 a {
-  color: lighten($bf-blue, 20%);
+  color: lighten(variables-colors.$bf-blue, 20%);
 
   &:hover,
   &:focus {
-    color: lighten($bf-blue-light, 20%);
+    color: lighten(variables-colors.$bf-blue-light, 20%);
   }
 }
 
 // typography elements that need tiny adjustments
 mark {
-  background-color: darken($bf-yellow, 10%);
+  background-color: darken(variables-colors.$bf-yellow, 10%);
 }
 
 ins {
-  background-color: darken($bf-yellow-light, 45%);
+  background-color: darken(variables-colors.$bf-yellow-light, 45%);
 }
 
 // forms
@@ -50,14 +54,14 @@ input[list],
 select,
 select:not([size]):not([multiple]),
 textarea {
-  background-color: $bf-dark-extra;
-  border-color: $bf-black;
-  color: $bf-gray-light;
+  background-color: variables-colors.$bf-dark-extra;
+  border-color: variables-colors.$bf-black;
+  color: variables-colors.$bf-gray-light;
 
   &:active,
   &:focus {
-    background-color: $bf-dark-extra;
-    border-color: lighten($bf-blue, 10%);
+    background-color: variables-colors.$bf-dark-extra;
+    border-color: lighten(variables-colors.$bf-blue, 10%);
   }
 }
 
@@ -84,14 +88,14 @@ textarea {
 }
 
 .bf-focused {
-  border-color: lighten($bf-blue, 10%);
+  border-color: lighten(variables-colors.$bf-blue, 10%);
   box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5) !important;
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: lighten($bf-red, 7.5%) !important;
-  border-color: lighten($bf-red, 7.5%) !important;
+  color: lighten(variables-colors.$bf-red, 7.5%) !important;
+  border-color: lighten(variables-colors.$bf-red, 7.5%) !important;
 }
 
 select:not([size]):not([multiple]) {
@@ -126,17 +130,17 @@ select:not([size]):not([multiple]) {
   // darker background
   // the rulesets must be separated
   [type='range']::-webkit-slider-runnable-track {
-    background-color: $bf-dark-extra;
+    background-color: variables-colors.$bf-dark-extra;
   }
 
   [type='range']::-moz-range-track {
-    background-color: $bf-dark-extra;
+    background-color: variables-colors.$bf-dark-extra;
   }
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: $bf-gray;
+  color: variables-colors.$bf-gray;
 }
 
 button,
@@ -149,12 +153,12 @@ button.bf-disabled,
 [type='reset'].bf-disabled,
 [type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
-  background: $bf-gray-light;
+  background: variables-colors.$bf-gray-light;
 
   &:hover,
   &:active,
   &:focus {
-    background: darken($bf-gray-light, 10%);
+    background: darken(variables-colors.$bf-gray-light, 10%);
   }
 
   &:active,
@@ -176,12 +180,12 @@ button,
 
 .bf-btn--primary.bf-disabled,
 .bf-btn.bf-btn--primary {
-  background: $bf-blue;
+  background: variables-colors.$bf-blue;
 
   &:hover,
   &:active,
   &:focus {
-    background: darken($bf-blue, 5%);
+    background: darken(variables-colors.$bf-blue, 5%);
   }
 
   &:active,
@@ -204,10 +208,10 @@ input:focus {
 
 .bf-table th,
 .bf-table td {
-  border-color: $bf-gray-dark;
+  border-color: variables-colors.$bf-gray-dark;
 }
 
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: $bf-gray-dark-extra;
+  background-color: variables-colors.$bf-gray-dark-extra;
 }

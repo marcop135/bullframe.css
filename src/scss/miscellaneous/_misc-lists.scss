@@ -1,9 +1,12 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 menu,
 ol,
 ul,
 dl {
-  margin: 0 0 $bf-spacing-xl-px 0;
-  margin: 0 0 $bf-spacing-xl-rem 0;
+  margin: 0 0 variables-spacing.$bf-spacing-xl-px 0;
+  margin: 0 0 variables-spacing.$bf-spacing-xl-rem 0;
   padding: 0;
 }
 
@@ -19,8 +22,8 @@ dd {
 
 ul,
 ol {
-  margin-left: $bf-spacing-xl-px;
-  margin-left: $bf-spacing-xl-rem;
+  margin-left: variables-spacing.$bf-spacing-xl-px;
+  margin-left: variables-spacing.$bf-spacing-xl-rem;
 }
 
 nav ol,

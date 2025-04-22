@@ -1,5 +1,4 @@
 /*! bullframe.css v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
-/*! custom build: bullframe-classless */
 *,
 *::before,
 *::after {
@@ -537,7 +536,6 @@ label textarea {
 }
 
 [type=search] {
-  outline-offset: -2.5px;
   outline-offset: -0.25rem;
 }
 
@@ -598,7 +596,6 @@ button,
 input,
 select,
 textarea {
-  border-radius: 2.5px;
   border-radius: 0.25rem;
 }
 
@@ -607,7 +604,6 @@ textarea {
 }
 
 [type=checkbox] {
-  border-radius: 5px;
   border-radius: 0.5rem;
 }
 
@@ -715,7 +711,7 @@ input[list],
 select,
 textarea {
   background-color: #fff;
-  border: 1px solid #999;
+  border: 1px solid/#999;
   padding: 5px 7.5px;
   padding: 0.5rem 0.75rem;
 }
@@ -866,7 +862,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
     width: 1.8rem;
     vertical-align: top;
     position: relative;
-    border: 1px solid #999;
+    border: 1px solid/#999;
   }
   [type=checkbox] + label,
   [type=radio] + label {
@@ -905,7 +901,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
   [type=checkbox]:after {
     width: 0.6rem;
     height: 0.8rem;
-    border: 2px solid #fff;
+    border: 2px solid/#fff;
     border-top: 0;
     border-left: 0;
     left: 35%;
@@ -970,16 +966,16 @@ select[dir=rtl]:not([size]):not([multiple]) {
     outline: none;
   }
   [type=range]:focus::-webkit-slider-thumb {
-    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
   [type=range]:focus::-moz-slider-thumb {
-    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
   [type=range]::-moz-focus-outer {
     border: 0;
   }
   [type=range]:focus::-moz-range-thumb {
-    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
   [type=range]:disabled {
     pointer-events: none;

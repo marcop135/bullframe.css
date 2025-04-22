@@ -8,6 +8,9 @@
 // Anyway are safe and future-friendly because more browser compatibility
 // will come
 
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 @supports (appearance: none) {
   [type='checkbox'],
   [type='radio'] {
@@ -19,13 +22,13 @@
     vertical-align: top;
     position: relative;
 
-    border: 1px solid $bf-gray;
+    border: 1px solid / variables-colors.$bf-gray;
 
     + label {
       line-height: 1.8rem;
       vertical-align: top;
-      margin-left: $bf-spacing-md-px;
-      margin-left: $bf-spacing-md-rem;
+      margin-left: variables-spacing.$bf-spacing-md-px;
+      margin-left: variables-spacing.$bf-spacing-md-rem;
     }
 
     // add support for RTL languages
@@ -35,8 +38,8 @@
     *[dir='rtl'] & + label,
     &[dir='rtl'] + label {
       margin-left: 0;
-      margin-right: $bf-spacing-md-px;
-      margin-right: $bf-spacing-md-rem;
+      margin-right: variables-spacing.$bf-spacing-md-px;
+      margin-right: variables-spacing.$bf-spacing-md-rem;
     }
 
     &:after {
@@ -46,8 +49,8 @@
     }
 
     &:checked {
-      background-color: $bf-blue;
-      border-color: $bf-black;
+      background-color: variables-colors.$bf-blue;
+      border-color: variables-colors.$bf-black;
     }
   }
 
@@ -60,7 +63,7 @@
       top: -0.05rem;
 
       border-radius: 50%;
-      background: $bf-white;
+      background: variables-colors.$bf-white;
 
       transform: scale(0.35);
     }
@@ -71,7 +74,7 @@
       width: 0.6rem;
       height: 0.8rem;
 
-      border: 2px solid $bf-white;
+      border: 2px solid / variables-colors.$bf-white;
       border-top: 0;
       border-left: 0;
 

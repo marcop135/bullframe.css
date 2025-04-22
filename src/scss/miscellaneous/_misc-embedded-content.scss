@@ -1,3 +1,5 @@
+@use 'variables/variables-colors';
+
 audio,
 canvas,
 progress,
@@ -89,10 +91,10 @@ progress[value] {
   height: 2rem;
 
   // progress bar background color
-  background: $bf-gray-light;
+  background: variables-colors.$bf-gray-light;
 
   // progress value background color in IE10+
-  color: $bf-blue;
+  color: variables-colors.$bf-blue;
 }
 
 // ! this is not a standard feature, is webkit only
@@ -100,10 +102,10 @@ progress[value] {
 //
 // progress value background color in webkit
 progress[value]::-webkit-progress-bar {
-  background: $bf-gray-light;
+  background: variables-colors.$bf-gray-light;
 }
 progress[value]::-webkit-progress-value {
-  background: $bf-blue;
+  background: variables-colors.$bf-blue;
 }
 
 // remove default border in old browsers

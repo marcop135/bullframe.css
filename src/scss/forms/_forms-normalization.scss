@@ -1,3 +1,6 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 // normalization, enhancement and responsiveness
 
 html input,
@@ -92,8 +95,8 @@ legend {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: $bf-spacing-md-px;
-  margin-bottom: $bf-spacing-md-rem;
+  margin-bottom: variables-spacing.$bf-spacing-md-px;
+  margin-bottom: variables-spacing.$bf-spacing-md-rem;
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -103,8 +106,8 @@ label {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: $bf-spacing-md-px;
-  margin-bottom: $bf-spacing-md-rem;
+  margin-bottom: variables-spacing.$bf-spacing-md-px;
+  margin-bottom: variables-spacing.$bf-spacing-md-rem;
 }
 
 label input,
@@ -133,8 +136,7 @@ label textarea {
 }
 
 [type='search'] {
-  outline-offset: -$bf-spacing-sm-px;
-  outline-offset: -$bf-spacing-sm-rem;
+  outline-offset: calc(-1 * variables-spacing.$bf-spacing-sm-rem);
 }
 
 output {
@@ -203,8 +205,7 @@ button,
 input,
 select,
 textarea {
-  border-radius: $bf-spacing-sm-px;
-  border-radius: $bf-spacing-sm-rem;
+  border-radius: variables-spacing.$bf-spacing-sm-rem;
 }
 
 // ! IE9+
@@ -214,14 +215,13 @@ textarea {
 }
 
 [type='checkbox'] {
-  border-radius: $bf-spacing-md-px;
-  border-radius: $bf-spacing-md-rem;
+  border-radius: variables-spacing.$bf-spacing-md-rem;
 }
 
 [type='radio'],
 [type='checkbox'] {
   padding: 0;
-  background-color: $bf-white;
+  background-color: variables-colors.$bf-white;
 }
 
 [type='range'] {
@@ -271,7 +271,7 @@ button,
   &:active,
   &:focus {
     text-decoration: none;
-    color: $bf-dark;
+    color: variables-colors.$bf-dark;
   }
 }
 
@@ -292,7 +292,7 @@ input[type='button'],
 // Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
-  color: $bf-gray-dark;
+  color: variables-colors.$bf-gray-dark;
 }
 
 // remove ':invalid' styles in FF

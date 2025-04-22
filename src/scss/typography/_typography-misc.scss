@@ -1,6 +1,9 @@
+@use 'variables/variables-spacing';
+@use 'variables/variables-colors';
+
 p {
-  margin: 0 0 $bf-spacing-xl-px 0;
-  margin: 0 0 $bf-spacing-xl-rem 0;
+  margin: 0 0 variables-spacing.$bf-spacing-xl-px 0;
+  margin: 0 0 variables-spacing.$bf-spacing-xl-rem 0;
 }
 
 // Abbreviations (taken from Bootstrap 4)
@@ -17,13 +20,13 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: $bf-yellow;
-  color: $bf-black;
+  background-color: variables-colors.$bf-yellow;
+  color: variables-colors.$bf-black;
 }
 
 ins {
-  background-color: $bf-yellow-light;
-  color: $bf-black;
+  background-color: variables-colors.$bf-yellow-light;
+  color: variables-colors.$bf-black;
   text-decoration: none;
 }
 
@@ -74,16 +77,16 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: $bf-spacing-xl-px 0;
-  margin: $bf-spacing-xl-rem 0;
+  margin: variables-spacing.$bf-spacing-xl-px 0;
+  margin: variables-spacing.$bf-spacing-xl-rem 0;
   padding: 0;
   overflow: visible; // Show the overflow in Edge and IE
 }
 
 address {
   font-style: normal;
-  margin-bottom: $bf-spacing-lg-px;
-  margin-bottom: $bf-spacing-lg-rem;
+  margin-bottom: variables-spacing.$bf-spacing-lg-px;
+  margin-bottom: variables-spacing.$bf-spacing-lg-rem;
   line-height: inherit;
 }
 

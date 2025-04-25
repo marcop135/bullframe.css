@@ -1,16 +1,12 @@
-// Gulpfile for bullframe.css
 'use strict';
 
 // Initialize modules
-// Import specific gulp API functions lets us write them below as series()
-// instead of gulp.series()
 const { src, dest, watch, series, parallel } = require('gulp');
 
 // Upgrade gulp-sass to v5
-// https://github.com/dlmanning/gulp-sass/tree/master#migrating-to-version-5
 const sass = require('gulp-sass')(require('sass'));
 
-// Import all the Gulp-related packages we want to use
+// Import all the Gulp-related packages
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -20,7 +16,7 @@ const browserSync = require('browser-sync');
 
 const server = browserSync.create();
 
-// setup the BrowserSync server
+// Setup the BrowserSync server
 function reload(done) {
   server.reload();
   done();
@@ -30,7 +26,7 @@ function serve(done) {
   server.init({
     server: {
       baseDir: './dist/',
-      index: './index.html',
+      index: '../docs/test-page/index.html',
     },
   });
   done();
@@ -43,55 +39,36 @@ const files = {
 
 // Sass task
 function scssTask() {
-  return (
-    src(files.scssPath, {
-      sourcemaps: true,
-    })
-      // compile SCSS to CSS
-      .pipe(sass.sync({ outputStyle: 'expanded' }))
-
-      // replace Node-sass auto-built charset with a useful comment
-      // https://stackoverflow.com/a/51886455/4027098
-      .pipe(
-        replace(
-          '@charset "UTF-8";',
-          '/*! bullframe.css v4.2.0 | MIT License | https://github.com/marcop135/bullframe.css */'
-        )
+  return src(files.scssPath, { sourcemaps: true })
+    .pipe(
+      sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError)
+    ) // Compile SCSS to CSS
+    .pipe(
+      replace(
+        '@charset "UTF-8";',
+        '/*! bullframe.css v4.2.1 | MIT License | https://github.com/marcop135/bullframe.css */'
       )
-
-      // PostCSS plugins
-      .pipe(postcss([autoprefixer()]))
-
-      // write pre-minifies styles
-      .pipe(dest('dist/css'))
-
-      // PostCSS plugins
-      .pipe(postcss([cssnano()]))
-
-      // rename files
-      .pipe(
-        rename({
-          suffix: '.min',
-        })
-      )
-
-      // put final CSS in dist folder
-      .pipe(
-        dest('dist/css', {
-          sourcemaps: '.',
-        })
-      )
-  );
+    ) // Replace Node-sass auto-built charset with a useful comment
+    .pipe(postcss([autoprefixer()])) // Apply PostCSS plugins
+    .pipe(dest('dist/css')) // Write pre-minified styles
+    .pipe(postcss([cssnano()])) // Minify CSS
+    .pipe(
+      rename({
+        suffix: '.min',
+      })
+    ) // Rename files
+    .pipe(dest('dist/css', { sourcemaps: '.' })); // Output final CSS
 }
 
-// watch task: watch SCSS, JS, image and HTML files for changes
-// If any change, run scss, js and image tasks simultaneously
-// then reload via browsersync
+
+// Watch task: watch SCSS, JS, image, and HTML files for changes
 function watchTask() {
   watch([files.scssPath], series(parallel(scssTask), reload));
 }
 
-// Export the default Gulp task so it can be run
-// Runs the scss, js, image and cache busting tasks simultaneously
-// start local server and watch tasks
-exports.default = series(parallel(scssTask), serve, watchTask);
+// Export the default Gulp task
+exports.default = series(
+  parallel(scssTask),
+  serve,
+  watchTask
+);

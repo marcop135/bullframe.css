@@ -30,7 +30,7 @@ function serve(done) {
   server.init({
     server: {
       baseDir: './dist/',
-      index: './index.html',
+      index: '../docs/test-page/index.html',
     },
   });
   done();
@@ -39,6 +39,7 @@ function serve(done) {
 // File paths to watch
 const files = {
   scssPath: 'src/scss/**/*.scss',
+  htmlPath: 'docs/**/*.html',
 };
 
 // Sass task
@@ -55,7 +56,7 @@ function scssTask() {
       .pipe(
         replace(
           '@charset "UTF-8";',
-          '/*! bullframe.css v4.2.0 | MIT License | https://github.com/marcop135/bullframe.css */'
+          '/*! bullframe.css v4.2.1 | MIT License | https://github.com/marcop135/bullframe.css */'
         )
       )
 

@@ -39,6 +39,8 @@ function serve(done) {
 // File paths to watch
 const files = {
   scssPath: 'src/scss/**/*.scss',
+  jsPath: 'src/js/**/*.js',
+  imgPath: 'src/img/**/*',
   htmlPath: 'docs/**/*.html',
 };
 

@@ -1,40 +1,46 @@
-# Changes to bullframe.css
+# CHANGELOG
+
+## 4.2.1 (April 26, 2025)
+
+* Fix and simplify the structure of the `/docs` directory [(#42)](https://github.com/marcop135/bullframe.css/issues/42)
+* Add support for GitHub Packages registry
+* Removed screenshots and screencasts from the repository to speed up npm installation
 
 ## 4.2.0 (April 14, 2025)
 
-* Added support for Netlify deploy
+* Add support for Netlify deploy
 
 ## 4.1.2 (February 23, 2024)
 
-* Updated all npm dependencies
-* Fixed typos in README.md
+* Update all npm dependencies
+* Fix typos in README.md
 
 ## 4.1.1 (August 31, 2023)
 
-* Updated all npm dependencies
-* Improved documentation
+* Update all npm dependencies
+* Improve documentation
 
 ## 4.1.0 (August 30, 2023)
 
-* Moved from `dark-prefers` to `system-default`, but no breaking changes!
-* Updated `.browserlistrc`
-* Cleaned up and improved `README.md`
+* Move from `dark-prefers` to `system-default`, but no breaking changes!
+* Update `.browserlistrc`
+* Clean up and improve `README.md`
 
 ## 4.0.1 (August 12, 2022)
 
-* Updated `.browserlistrc`
-* Updated `package.json` description and tags
+* Update `.browserlistrc`
+* Update `package.json` description and tags
 
 ## 4.0.0 (August 11, 2022)
 
-* [breaking changes] **Dropped support for I8, IE9, and IE10**
-* [breaking changes] Upgraded all npm packages to minor and major latest versions (e.g. gulp-sass v5 now in use)
-* Cleaned up `README.md`
+* [breaking changes] Drop support for IE8, IE9, and IE10
+* [breaking changes] Upgrade all npm packages to minor and major latest versions (e.g. gulp-sass v5 now in use)
+* Clean up `README.md`
 
 ## 3.8.2 (June 26, 2021)
 
-* Upgraded cssnano, autoprefixer and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
-* Cleaned up `README.md`
+* Upgrade cssnano, autoprefixer, and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
+* Clean up `README.md`
 
 ## 3.8.1 (June 22, 2021)
 
@@ -42,33 +48,33 @@
 
 ## 3.8.0 (June 22, 2021)
 
-* [breaking changes] Reverted html/body `height` and `body` `min-height` to `auto` (default value) to avoid web app scrollbar issues
-* Added support for Skypack CDN
-* Added Synk vuln badge in `README.md`
+* [breaking changes] Revert html/body `height` and `body` `min-height` to `auto` (default value) to avoid web app scrollbar issues
+* Add support for Skypack CDN
+* Add Synk vuln badge in `README.md`
 
 ## 3.7.0 (April 24, 2021)
 
 * [breaking changes] Set html/body `height` and `body` `min-height` to `100%` to help with backgrounds and centering [(8239677)](https://github.com/marcop135/bullframe.css/)
-* [bug fixes] Added missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)
-* [enhancements] Removed W3C-invalid CSS properties/values from SCSS files [(2791b83)](https://github.com/marcop135/bullframe.css/commit/2791b83eab872abe92a2fd6cc3b3bc8d684fcc36)
-* [enhancements] Added Sass [@debug](https://sass-lang.com/documentation/at-rules/debug) rule to debugging utility [(969fcf3c)](https://github.com/marcop135/bullframe.css/commit/969fcf3ccb474f5bc5888841d479216b3e54de0a)
+* [bug fixes] Add missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)
+* [enhancements] Remove W3C-invalid CSS properties/values from SCSS files [(2791b83)](https://github.com/marcop135/bullframe.css/commit/2791b83eab872abe92a2fd6cc3b3bc8d684fcc36)
+* [enhancements] Add Sass [@debug](https://sass-lang.com/documentation/at-rules/debug) rule to debugging utility [(969fcf3c)](https://github.com/marcop135/bullframe.css/commit/969fcf3ccb474f5bc5888841d479216b3e54de0a)
 
 ## 3.6.0 (March 16, 2021)
 
-* added new flexbox utilites into `_utility-layout.scss` (IE10+)
-* added new `filter` utility module (≠ IE / Opera Mini)
-* added new `bf-position-sticky` utility class  (≠ IE)
-* added ARIA roles appearance improvements into `_misc-accessibility.scss` (a11y)
-* removed touch action manipulation defaults in IE10
-* purged `white-space` declarations from text truncate multiline mixins and utility
+* Add new flexbox utilities into `_utility-layout.scss` (IE10+)
+* Add new `filter` utility module (≠ IE / Opera Mini)
+* Add new `bf-position-sticky` utility class (≠ IE)
+* Add ARIA roles appearance improvements into `_misc-accessibility.scss` (a11y)
+* Remove touch action manipulation defaults in IE10
+* Purge `white-space` declarations from text truncate multiline mixins and utility
 
 ## 3.5.0 (February 09, 2021)
 
-* added new flexbox-powered grid system mixins (IE10+)
-* added new flexbox-powered align utility (IE10+)
-* added new text-truncate multiline text mixin and utility using `line-clamp` property (≠ IE)
-* added new `z-index` utility
-* added extra [debugging](https://github.com/marcop135/bullframe.css/blob/v3.4.6/src/scss/utilities/_utility-debugging.scss#L31) utility test to check performances, thanks @tkadlec
+* Add new flexbox-powered grid system mixins (IE10+)
+* Add new flexbox-powered align utility (IE10+)
+* Add new text-truncate multiline text mixin and utility using `line-clamp` property (≠ IE)
+* Add new `z-index` utility
+* Add extra [debugging](https://github.com/marcop135/bullframe.css/blob/v3.4.6/src/scss/utilities/_utility-debugging.scss#L31) utility test to check performances, thanks @tkadlec
 
 ## 3.4.5 (February 08, 2021)
 

@@ -8,21 +8,150 @@
 
   <title>Test page — bullframe.css Sass (SCSS) framework</title>
   <meta name="description"
-    content="A quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purposes only." />
+    content="Explore bullframe.css, a robust and fluid Sass (SCSS) framework for cross-browser compatibility. View a comprehensive range of HTML elements in dynamic combinations, designed for thorough testing and responsive design." />
 
   <!-- https://realfavicongenerator.net/ -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png?v=PYqzMzgx6v" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png?v=PYqzMzgx6v" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png?v=PYqzMzgx6v" />
-  <link rel="mask-icon" href="./icons/safari-pinned-tab.svg?v=PYqzMzgx6v" color="#f95c1f" />
-  <link rel="shortcut icon" href="./icons/favicon.ico?v=PYqzMzgx6v" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=PYqzMzgx6v" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png?v=PYqzMzgx6v" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png?v=PYqzMzgx6v" />
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg?v=PYqzMzgx6v" color="#f95c1f" />
+  <link rel="shortcut icon" href="assets/icons/favicon.ico?v=PYqzMzgx6v" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#f95c1f" />
 
-  <link rel="stylesheet" href="css/bullframe-system-default.min.css?v4.2.0" />
+  <link rel="stylesheet" href="./css/bullframe-system-default.min.css?v4.2.1" />
 
-  <!-- this is just for a nicer demo -->
-  <link rel="stylesheet" href="assets-demo/css/style.css" />
+  <!-- custom styles -->
+  <style>
+    .test .bf-row {
+      margin-bottom: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .test [class^='bf-col'] {
+      margin-bottom: 10px;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 575px) {
+      .test header {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .test header h1 {
+      margin-top: 10px;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .test header h1 span {
+      color: #f95c1f;
+    }
+
+    @media (min-width: 600px) {
+      .test header h1 {
+        font-size: 55px;
+        font-size: 5.5rem;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .test header h1 {
+        font-size: 70px;
+        font-size: 7rem;
+      }
+    }
+
+    .test .description {
+      max-width: 800px;
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .test header a {
+      margin-right: 10px;
+      margin-right: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .test .h2--section {
+        font-size: 40px;
+        font-size: 4rem;
+      }
+    }
+
+    .test .h2--section {
+      padding-top: 20px;
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    .test legend {
+      padding-bottom: 10px;
+      padding-bottom: 1rem;
+    }
+
+    .test button,
+    .test .bf-btn,
+    .test .input-image,
+    .test input,
+    .test select,
+    .test textarea {
+      margin-bottom: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .test [type='image'],
+    .test [type='checkbox'],
+    .test [type='radio'] {
+      margin-bottom: 0;
+    }
+
+    .test .grid .col-wrapper {
+      background-color: #888;
+      height: 60px;
+      height: 6rem;
+      line-height: 60px;
+      line-height: 6rem;
+      overflow-y: hidden;
+      color: #fff;
+      font-size: 80%;
+      text-align: center;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    .test .grid .bf-row:nth-child(odd) .col-wrapper {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    @media (max-width: 767px) {
+      .test .grid .bf-row {
+        margin-bottom: 0;
+      }
+
+      .test .grid [class*='bf-col-'] {
+        margin-bottom: 20px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .test .back-to-top {
+      text-align: center;
+      display: block;
+      margin: 60px 0 120px 0;
+      margin: 6rem 0 12rem 0;
+    }
+
+    .test .back-to-top a i {
+      vertical-align: middle;
+      font-style: normal;
+    }
+  </style>
 </head>
 
 <body class="bf-responsive-typography bf-reduced-motion">

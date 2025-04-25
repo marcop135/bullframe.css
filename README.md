@@ -17,7 +17,7 @@
 
 <br>
 
-![bullframe.css logo](./docs/images-readme/logo-full.png)
+![bullframe.css logo](./docs/assets/images/branding/logo-full.png)
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 

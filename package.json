@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Solid, fluid, cross-browser Sass (SCSS) framework.",
   "jsdelivr": "dist/css/bullframe.css",
   "unpkg": "dist/css/bullframe.css",
@@ -13,7 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcop135/bullframe.css.git"
+    "url": "https://github.com/marcop135/bullframe.css.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "css",

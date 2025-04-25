@@ -3,7 +3,6 @@
 ## 4.2.1 (April 26, 2025)
 
 * Fix and simplify the structure of the `/docs` directory [(#42)](https://github.com/marcop135/bullframe.css/issues/42)
-* Add support for GitHub Packages registry
 * Removed screenshots and screencasts from the repository to speed up npm installation
 
 ## 4.2.0 (April 14, 2025)

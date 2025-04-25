@@ -15,9 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/marcop135/bullframe.css.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "keywords": [
     "css",
     "css-framework",

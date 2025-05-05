@@ -1,4 +1,4 @@
-# bullframe.css
+# bullframe.css 5
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">
@@ -21,7 +21,7 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is a Sass (SCSS) framework that works in a wide range of desktop and mobile browsers. It's a cross-browser and responsive collection of default HTML UI elements ([atoms](https://bradfrost.com/blog/post/atomic-web-design)) for your Sass project.
+bullframe.css is a Sass (SCSS) framework that is compatible with a wide range of desktop and mobile browsers. It is a cross-browser, responsive collection of default HTML elements, simple components, and CSS utilities for your Sass project.
 
 You could be easily use it for marketing sites, landing pages, mini sites, micro sites, blog posts, e-commerce product listings, help and documentation, and more.
 
@@ -29,7 +29,7 @@ You could be easily use it for marketing sites, landing pages, mini sites, micro
 
 ## Best features
 
-- Wide range of desktop and mobile browsers support
+- Desktop and mobile browsers support
 - Responsive-ness and style normalization *out-of-the-box*
 - Cross-browser form elements by default
 - Sass architecture
@@ -37,7 +37,7 @@ You could be easily use it for marketing sites, landing pages, mini sites, micro
 - Responsive typography
 - Dark mode and theming support
 - RTL support
-- Gulp-friendly
+- Vite-friendly
 - Classless-friendly
 
 ## What's included
@@ -72,12 +72,12 @@ bullframe.css/
     └── variables/
     ...
     ├── bullframe-classless.scss
-    ├── bullframe-system-default.scss
     ├── bullframe-dark.scss
     ├── bullframe-utilities.scss
+    ├── bullframe-system-default.scss
     ├── bullframe.scss
     ...
-└── gulpfile.js
+└── vite.config.js
 └── index.html
 ...
 ```
@@ -93,7 +93,7 @@ bullframe.css/
 JSDelivr
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@^4.0.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5">
 ```
 
 ### npm
@@ -111,9 +111,9 @@ npm install bullframe.css
 
 [What is npm?](https://www.npmjs.com/get-npm)
 
-### Gulp.js
+### Vite.js
 
-After installing bullframe.css from npm, you may use [gulp.js](https://gulpjs.com/docs/en/getting-started/quick-start) to re-compile all files, and customize your Sass project as needed.
+You have the flexibility to compile your custom CSS as needed. After installing bullframe.css from npm, you can utilize Vite (included) to compile all `.scss` files and tailor your Sass project to your requirements.
 
 ``` bash
 # navigate to /node_modules/bullframe.css
@@ -121,11 +121,11 @@ After installing bullframe.css from npm, you may use [gulp.js](https://gulpjs.co
 # install all dependencies
 npm install
 
-# run gulp and have fun!
-gulp
+# run vite and have fun!
+npm run dev
 ```
 
-[What is gulp.js?](https://en.m.wikipedia.org/wiki/Gulp.js)
+[What is Vite?](https://vite.dev)
 
 ### HTML
 
@@ -149,6 +149,8 @@ gulp
 
 ## Codepen
 
+> [!TIP]
+
 Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
 
 ### Use bullframe.css as a CodePen template
@@ -162,6 +164,8 @@ Click on the links below, and start a new pen in CodePen using bullframe.css.
 ## Customization
 
 ### No classes (class-less)
+
+> [!TIP]
 
 What means "classless"?
 No classes, no utilities. Feel free to add yours and create your custom components.
@@ -186,6 +190,9 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 
 ### Theming
 
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
 There are three builds available:
 
 1. `bullframe.css`: the light theme
@@ -205,8 +212,15 @@ CDN
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-dark.min.css">
 ```
+
+#### `bullframe-system-default.css`
+
+CDN
+
+```html 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-system-default.min.css">
 
 ### Utilities - Reference
 
@@ -406,23 +420,12 @@ Breakpoints: 576, 768, 992 and 1200 pixels.
 ### Desktop browsers
 
 - Latest stable two: Firefox, Chrome, Edge, Safari, Opera
-- IE 11+
 
 ### Mobile browsers
 
 - Latest stable: Firefox, Chrome, Edge, Opera, Mobile Safari
 
 You might take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file for [Autoprefixer](https://github.com/postcss/autoprefixer)
-
-### Screenshots
-
-How can I quickly determine if every HTML element works well on all browsers?
-
-Take a look at some [screenshots and screencasts](https://github.com/marcop135/bullframe.css/tree/master/docs/screenshots-screencasts), organized by rendering engines (blink, gecko, trident, webkit).
-
-## Contributors
-
-[@englishextra](https://github.com/englishextra) the project is still live thanks to you!
 
 ## Contributing
 
@@ -431,17 +434,6 @@ Please read the [contribution guidelines](https://github.com/marcop135/bullframe
 ## Changelog
 
 [Changelog](https://github.com/marcop135/bullframe.css/blob/master/CHANGELOG.md)
-
-## Acknowledgements
-
-bullframe.css incorporates some of the styles found on some amazing CSS boilerplates and frameworks across the web. *Thank you!*
-
-- @necolas [/normalize.css](https://github.com/necolas/normalize.css) for the extensive old browsers bug fixing documentation
-- @h5bp [/main.css](https://github.com/h5bp/main.css) for the excellent print styles base and the keyboard utilities
-- @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, reboot styles, base24 SVG icons, button styles, grid system breakpoints and spacing utilities *(a lot!)*
-- @kognise [/water.css](https://github.com/kognise/water.css) for the "classless" concept inspiration and some form tricks
-- @csswizardry @inuitcss [/inuit.css](https://github.com/inuitcss/inuitcss) for some advanced Sass tips and tricks
-- @jensimmons [/cssremedy](https://github.com/jensimmons/cssremedy) for the prefers-reduced-motion snippet
 
 ## License
 

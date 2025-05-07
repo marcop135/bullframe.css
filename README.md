@@ -17,7 +17,11 @@
 
 <br>
 
-![bullframe.css logo](./docs/images-readme/logo-full.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/images-readme/logo-full-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./docs/images-readme/logo-full.png">
+  <img alt="Fallback image description" src="./docs/images-readme/logo-full.png">
+</picture>
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 

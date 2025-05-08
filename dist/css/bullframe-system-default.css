@@ -127,7 +127,8 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
-  hyphens: none;
+  -webkit-hyphens: none;
+          hyphens: none;
   -ms-overflow-style: auto;
 }
 
@@ -721,10 +722,6 @@ input[type=button],
 [type=radio],
 [role=button] {
   cursor: pointer;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #666;
 }
 
 input::placeholder,
@@ -1362,6 +1359,7 @@ table th[class^=bf-col] {
 }
 
 .bf-position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
 }

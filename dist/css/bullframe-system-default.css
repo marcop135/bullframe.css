@@ -724,6 +724,10 @@ input[type=button],
   cursor: pointer;
 }
 
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #666;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: #666;
@@ -1359,7 +1363,6 @@ table th[class^=bf-col] {
 }
 
 .bf-position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
 }

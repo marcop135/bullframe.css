@@ -683,6 +683,10 @@ input[type=button],
   cursor: pointer;
 }
 
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #666;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: #666;

@@ -154,8 +154,7 @@ npm run dev
 ## Codepen
 
 > [!TIP]
-
-Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
+> Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
 
 ### Use bullframe.css as a CodePen template
 

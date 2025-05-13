@@ -683,6 +683,10 @@ input[type=button],
   cursor: pointer;
 }
 
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #666;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: #666;
@@ -1186,6 +1190,9 @@ select:not([size]):not([multiple]) {
   [type=range]::-moz-range-track {
     background-color: #111;
   }
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #999;
 }
 input::placeholder,
 textarea::placeholder {

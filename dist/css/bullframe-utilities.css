@@ -290,7 +290,6 @@ table th[class^=bf-col] {
 }
 
 .bf-position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
 }

@@ -1,4 +1,4 @@
-/*! Bullframe CSS v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v4.2.2 | MIT License | https://github.com/marcop135/bullframe.css */
 *,
 *::before,
 *::after {
@@ -127,8 +127,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
-  -webkit-hyphens: none;
-          hyphens: none;
+  hyphens: none;
   -ms-overflow-style: auto;
 }
 

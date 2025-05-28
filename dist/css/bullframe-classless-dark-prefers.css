@@ -998,6 +998,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
 table {
   max-width: 100%;
   border-collapse: collapse;
+  border-color: currentcolor;
 }
 
 thead,

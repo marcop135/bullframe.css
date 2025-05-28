@@ -1,4 +1,4 @@
-# bullframe.css
+# bullframe.css v4.x
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">

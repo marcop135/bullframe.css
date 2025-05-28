@@ -1,4 +1,4 @@
-# bullframe.css 5
+# Bullframe CSS v5
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">
@@ -25,11 +25,11 @@
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-bullframe.css is a Sass (SCSS) framework that is compatible with a wide range of desktop and mobile browsers. It is a cross-browser, responsive collection of default HTML elements, simple components, and CSS utilities for your Sass project.
+Bullframe CSS is a Sass (SCSS) framework that is compatible with a wide range of desktop and mobile browsers. It is a cross-browser, responsive collection of default HTML elements, simple components, and CSS utilities for your Sass project.
 
 You could be easily use it for marketing sites, landing pages, mini sites, micro sites, blog posts, e-commerce product listings, help and documentation, and more.
 
-**Just add bullframe.css in your webpage, write semantic HTML, and you are ready to go!**
+**Just add Bullframe CSS in your webpage, write semantic HTML, and you are ready to go!**
 
 ## Best features
 
@@ -102,7 +102,7 @@ JSDelivr
 
 ### npm
 
-Once you have installed [Node.js](https://nodejs.org/en/download/), you can run this command to install bullframe.css into your project:
+Once you have installed [Node.js](https://nodejs.org/en/download/), you can run this command to install Bullframe CSS into your project:
 
 ``` bash
 # create a package.json file
@@ -117,7 +117,7 @@ npm install bullframe.css
 
 ### Vite.js
 
-You have the flexibility to compile your custom CSS as needed. After installing bullframe.css from npm, you can utilize Vite (included) to compile all `.scss` files and tailor your Sass project to your requirements.
+You have the flexibility to compile your custom CSS as needed. After installing Bullframe CSS from npm, you can utilize Vite (included) to compile all `.scss` files and tailor your Sass project to your requirements.
 
 ``` bash
 # navigate to /node_modules/bullframe.css
@@ -138,14 +138,14 @@ npm run dev
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>bullframe.css starter template</title>
+  <title>Bullframe CSS starter template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe.min.css">
 </head>
 <body>
   <div class="bf-container">
     <!-- Add your site or application content here -->
-    <p>Hello world! This is a bullframe.css starter template</p>
+    <p>Hello world! This is a Bullframe CSS starter template</p>
   </div>
 </body>
 </html>
@@ -156,9 +156,9 @@ npm run dev
 > [!TIP]
 > Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
 
-### Use bullframe.css as a CodePen template
+### Use Bullframe CSS as a CodePen template
 
-Click on the links below, and start a new pen in CodePen using bullframe.css.
+Click on the links below, and start a new pen in CodePen using Bullframe CSS.
 
 - [Light Theme (default)](https://codepen.io/pen?template=WNrwNNM)
 - [Dark Theme](https://codepen.io/pen?template=ExPmzBV)
@@ -227,7 +227,7 @@ CDN
 
 ### Utilities - Reference
 
-A set of utilities for bullframe.css customisation:
+A set of utilities for Bullframe CSS customisation:
 
 #### Grid system
 
@@ -426,9 +426,9 @@ Breakpoints: 576, 768, 992 and 1200 pixels.
 
 ### Mobile browsers
 
-- Latest stable: Firefox, Chrome, Edge, Opera, Mobile Safari
+- Latest stable two: Firefox, Chrome, Edge, Opera, Mobile Safari
 
-You might take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file for [Autoprefixer](https://github.com/postcss/autoprefixer)
+You might take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file.
 
 ## Contributing
 
@@ -440,9 +440,8 @@ Please read the [contribution guidelines](https://github.com/marcop135/bullframe
 
 ## License
 
-The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT) "The MIT License"
+This project is licensed under the [MIT License](LICENSE).
 
-## 👤 Author
+## Author
 
 Created with passion by [Marco Pontili](https://marcopontili.com) - [GitHub](https://github.com/marcop135).
-

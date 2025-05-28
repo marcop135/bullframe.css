@@ -4,6 +4,21 @@
 
 * ???
 
+## 4.2.2 (May 28, 2025)
+
+* Remove text indentation from table contents
+* Correct table border color inheritance
+* Clearly define browser support in `README.md`
+* Remove attempted support for GitHub Packages
+* Add maps to npm package
+* Ignore more common files in npm package
+
+## 4.2.1 (April 26, 2025)
+
+* Fix and simplify the structure of the `/docs` directory [(#42)](https://github.com/marcop135/bullframe.css/issues/42)
+* Removed screenshots and screencasts from the repository to speed up npm installation
+* Start support for GitHub Packages registry
+
 ## 4.2.0 (2025-04-14)
 
 * Add support for Netlify deploy

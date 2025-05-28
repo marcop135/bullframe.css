@@ -18,9 +18,7 @@
   "keywords": [
     "css",
     "css-framework",
-    "internet-explorer",
     "cross-browser",
-    "ie11",
     "responsive-web-design",
     "fluid",
     "reset-css",
@@ -31,8 +29,7 @@
     "typography",
     "dark",
     "dark-theme",
-    "darkmode",
-    "gulpfriendly"
+    "darkmode"
   ],
   "author": "Marco Pontili",
   "license": "MIT",

@@ -1,22 +1,22 @@
 // Gulpfile for Bullframe CSS
-'use strict';
+"use strict";
 
 // Initialize modules
 // Import specific gulp API functions lets us write them below as series()
 // instead of gulp.series()
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel } = require("gulp");
 
 // Upgrade gulp-sass to v5
 // https://github.com/dlmanning/gulp-sass/tree/master#migrating-to-version-5
-const sass = require('gulp-sass')(require('sass'));
+const sass = require("gulp-sass")(require("sass"));
 
 // Import all the Gulp-related packages we want to use
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const rename = require('gulp-rename');
-const replace = require('gulp-replace');
-const browserSync = require('browser-sync');
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const rename = require("gulp-rename");
+const replace = require("gulp-replace");
+const browserSync = require("browser-sync");
 
 const server = browserSync.create();
 
@@ -29,8 +29,8 @@ function reload(done) {
 function serve(done) {
   server.init({
     server: {
-      baseDir: './dist/',
-      index: './index.html',
+      baseDir: "./dist/",
+      index: "./index.html",
     },
   });
   done();
@@ -38,7 +38,7 @@ function serve(done) {
 
 // File paths to watch
 const files = {
-  scssPath: 'src/scss/**/*.scss',
+  scssPath: "src/scss/**/*.scss",
 };
 
 // Sass task
@@ -48,14 +48,14 @@ function scssTask() {
       sourcemaps: true,
     })
       // compile SCSS to CSS
-      .pipe(sass.sync({ outputStyle: 'expanded' }))
+      .pipe(sass.sync({ outputStyle: "expanded" }))
 
       // replace Node-sass auto-built charset with a useful comment
       // https://stackoverflow.com/a/51886455/4027098
       .pipe(
         replace(
           '@charset "UTF-8";',
-          '/*! Bullframe CSS v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */'
+          "/*! bullframecss v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */"
         )
       )
 
@@ -63,7 +63,7 @@ function scssTask() {
       .pipe(postcss([autoprefixer()]))
 
       // write pre-minifies styles
-      .pipe(dest('dist/css'))
+      .pipe(dest("dist/css"))
 
       // PostCSS plugins
       .pipe(postcss([cssnano()]))
@@ -71,14 +71,14 @@ function scssTask() {
       // rename files
       .pipe(
         rename({
-          suffix: '.min',
+          suffix: ".min",
         })
       )
 
       // put final CSS in dist folder
       .pipe(
-        dest('dist/css', {
-          sourcemaps: '.',
+        dest("dist/css", {
+          sourcemaps: ".",
         })
       )
   );

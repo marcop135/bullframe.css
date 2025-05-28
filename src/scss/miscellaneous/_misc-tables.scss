@@ -7,6 +7,9 @@ table {
   // Correct table border color inheritance in Chrome and Safari
   // https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016
   border-color: currentcolor;
+  // Remove text indentation from table contents in Chrome and Safari
+  // https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297
+  text-indent: 0;
 }
 
 thead,

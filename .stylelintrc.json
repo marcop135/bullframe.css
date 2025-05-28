@@ -1,5 +1,6 @@
 {
-  "extends": "stylelint-config-standard-scss",
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-scss"],
   "rules": {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
@@ -13,6 +14,7 @@
     "scss/comment-no-empty": null,
     "scss/double-slash-comment-empty-line-before": null,
     "rule-empty-line-before": null,
+    "comment-empty-line-before": null,
     "at-rule-empty-line-before": null,
     "declaration-empty-line-before": null,
     "media-feature-range-notation": "prefix",

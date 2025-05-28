@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.2.2 (MM? DD? YYYY?)
+
+...
+
 ## 4.2.1 (April 26, 2025)
 
 * Fix and simplify the structure of the `/docs` directory [(#42)](https://github.com/marcop135/bullframe.css/issues/42)

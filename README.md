@@ -1,4 +1,4 @@
-# Bullframe CSS v5
+# Bullframe CSS v5.x
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">
@@ -192,9 +192,6 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 ```
 
 ### Theming
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
 
 There are three builds available:
 

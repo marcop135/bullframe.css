@@ -441,3 +441,8 @@ Please read the [contribution guidelines](https://github.com/marcop135/bullframe
 ## License
 
 The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT) "The MIT License"
+
+## 👤 Author
+
+Created with passion by [Marco Pontili](https://marcopontili.com) - [GitHub](https://github.com/marcop135).
+

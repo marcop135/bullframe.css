@@ -216,6 +216,10 @@ small {
   font-size: 80%;
 }
 
+p:has(small) {
+  line-height: 1.25;
+}
+
 hr {
   box-sizing: content-box;
   display: block;

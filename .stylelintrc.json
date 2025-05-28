@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-recommended", "stylelint-config-standard-scss"],
+  "extends": ["stylelint-config-standard-scss"],
   "plugins": ["stylelint-scss"],
   "rules": {
     "block-no-empty": true,

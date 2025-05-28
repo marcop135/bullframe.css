@@ -1,4 +1,4 @@
-// Gulpfile for bullframe.css
+// Gulpfile for Bullframe CSS
 'use strict';
 
 // Initialize modules

@@ -205,8 +205,15 @@ CDN
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-dark.min.css">
 ```
+
+#### `bullframe-system-default.css`
+
+CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-system-default.min.css">
 
 ### Utilities - Reference
 

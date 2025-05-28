@@ -410,15 +410,9 @@ Breakpoints: 576, 768, 992 and 1200 pixels.
 
 ### Mobile browsers
 
-- Latest stable: Firefox, Chrome, Edge, Opera, Mobile Safari
+- Latest stable two: Firefox, Chrome, Edge, Opera, Mobile Safari
 
 You might take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file for [Autoprefixer](https://github.com/postcss/autoprefixer)
-
-### Screenshots
-
-How can I quickly determine if every HTML element works well on all browsers?
-
-Take a look at some [screenshots and screencasts](https://github.com/marcop135/bullframe.css/tree/master/docs/screenshots-screencasts), organized by rendering engines (blink, gecko, trident, webkit).
 
 ## Contributors
 
@@ -444,8 +438,8 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 
 ## License
 
-The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT) "The MIT License"
+This project is licensed under the [MIT License](LICENSE).
 
-## 👤 Author
+## Author
 
 Created with passion by [Marco Pontili](https://marcopontili.com) - [GitHub](https://github.com/marcop135).

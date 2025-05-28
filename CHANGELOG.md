@@ -8,6 +8,7 @@
 
 * Remove text indentation from table contents
 * Correct table border color inheritance
+* Update stylelint configuration and remove deprecated package
 * Clearly define browser support in `README.md`
 * Remove attempted support for GitHub Packages
 * Add maps to npm package

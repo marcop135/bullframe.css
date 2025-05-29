@@ -1,4 +1,4 @@
-# bullframe.css
+# bullframe.css v4.x
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">
@@ -205,8 +205,15 @@ CDN
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-dark.min.css">
 ```
+
+#### `bullframe-system-default.css`
+
+CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-system-default.min.css">
 
 ### Utilities - Reference
 
@@ -410,15 +417,9 @@ Breakpoints: 576, 768, 992 and 1200 pixels.
 
 ### Mobile browsers
 
-- Latest stable: Firefox, Chrome, Edge, Opera, Mobile Safari
+- Latest stable two: Firefox, Chrome, Edge, Opera, Mobile Safari
 
 You might take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file for [Autoprefixer](https://github.com/postcss/autoprefixer)
-
-### Screenshots
-
-How can I quickly determine if every HTML element works well on all browsers?
-
-Take a look at some [screenshots and screencasts](https://github.com/marcop135/bullframe.css/tree/master/docs/screenshots-screencasts), organized by rendering engines (blink, gecko, trident, webkit).
 
 ## Contributors
 
@@ -440,9 +441,12 @@ bullframe.css incorporates some of the styles found on some amazing CSS boilerpl
 - @h5bp [/main.css](https://github.com/h5bp/main.css) for the excellent print styles base and the keyboard utilities
 - @twbs [/bootstrap](https://github.com/twbs/bootstrap) for some neat typography tricks, responsive embeds, reboot styles, base24 SVG icons, button styles, grid system breakpoints and spacing utilities *(a lot!)*
 - @kognise [/water.css](https://github.com/kognise/water.css) for the "classless" concept inspiration and some form tricks
-- @csswizardry @inuitcss [/inuit.css](https://github.com/inuitcss/inuitcss) for some advanced Sass tips and tricks
 - @jensimmons [/cssremedy](https://github.com/jensimmons/cssremedy) for the prefers-reduced-motion snippet
 
 ## License
 
-The MIT License (MIT) - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT) "The MIT License"
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+Created with passion by [Marco Pontili](https://marcopontili.com) - [GitHub](https://github.com/marcop135).

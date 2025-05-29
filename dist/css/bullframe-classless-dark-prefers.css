@@ -1,4 +1,4 @@
-/*! bullframe.css v4.2.1 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v4.2.2 | MIT License | https://github.com/marcop135/bullframe.css */
 /*! custom build: bullframe-classless-dark-prefers */
 /*! custom build: bullframe-classless */
 *,
@@ -995,6 +995,8 @@ select[dir=rtl]:not([size]):not([multiple]) {
 table {
   max-width: 100%;
   border-collapse: collapse;
+  border-color: currentcolor;
+  text-indent: 0;
 }
 
 thead,

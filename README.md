@@ -4,9 +4,6 @@
   <a href="https://www.npmjs.com/package/bullframe.css">
     <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page">
   </a>
-  <a href="https://app.netlify.com/sites/bullframecss/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/20dc2e1f-4af2-49a1-ae68-941eb189c61a/deploy-status" alt="Netlify Status">
-  </a>
   <a href="https://github.com/marcop135/bullframe.css/commits">
     <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit">
   </a>

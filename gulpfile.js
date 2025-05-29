@@ -40,13 +40,11 @@ const files = {
 // Sass task
 function scssTask() {
   return src(files.scssPath, { sourcemaps: true })
-    .pipe(
-      sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError)
-    ) // Compile SCSS to CSS
+    .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError)) // Compile SCSS to CSS
     .pipe(
       replace(
         '@charset "UTF-8";',
-        '/*! bullframe.css v4.2.1 | MIT License | https://github.com/marcop135/bullframe.css */'
+        '/*! bullframe.css v4.2.2 | MIT License | https://github.com/marcop135/bullframe.css */'
       )
     ) // Replace Node-sass auto-built charset with a useful comment
     .pipe(postcss([autoprefixer()])) // Apply PostCSS plugins
@@ -60,15 +58,10 @@ function scssTask() {
     .pipe(dest('dist/css', { sourcemaps: '.' })); // Output final CSS
 }
 
-
 // Watch task: watch SCSS, JS, image, and HTML files for changes
 function watchTask() {
   watch([files.scssPath], series(parallel(scssTask), reload));
 }
 
 // Export the default Gulp task
-exports.default = series(
-  parallel(scssTask),
-  serve,
-  watchTask
-);
+exports.default = series(parallel(scssTask), serve, watchTask);

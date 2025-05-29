@@ -214,6 +214,7 @@ CDN
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-system-default.min.css">
+```
 
 ### Utilities - Reference
 

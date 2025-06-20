@@ -1,20 +1,15 @@
-// taken from sanitize.css
-// https://github.com/csstools/sanitize.css/blob/12.0.1/sanitize.css
+// Taken from sanitize.css
+// https://github.com/csstools/sanitize.css/blob/v13.0.0/sanitize.css
+
+/* Accessibility
+ * ========================================================================== */
 
 /**
  * Change the cursor on busy elements in all browsers (opinionated).
  */
 
- [aria-busy="true"] {
+[aria-busy="true" i] {
   cursor: progress;
-}
-
-/*
- * Change the cursor on control elements in all browsers (opinionated).
- */
-
-[aria-controls] {
-  cursor: pointer;
 }
 
 /*
@@ -22,7 +17,7 @@
  * inoperable elements in all browsers (opinionated).
  */
 
-[aria-disabled="true"],
+[aria-disabled="true" i],
 [disabled] {
   cursor: not-allowed;
 }
@@ -32,11 +27,11 @@
  * in all browsers (opinionated).
  */
 
-[aria-hidden="false"][hidden] {
+[aria-hidden="false" i][hidden] {
   display: initial;
 }
 
-[aria-hidden="false"][hidden]:not(:focus) {
+[aria-hidden="false" i][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }

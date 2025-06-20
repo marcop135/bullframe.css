@@ -1,6 +1,7 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
-@use 'variables/variables-texts';
+@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-texts" as bfVarsTexts;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "sass:color";
 
 // standard property
 // 'scrollbar-color'
@@ -8,8 +9,8 @@
 // currently (June 2020) Firefox only
 // https://caniuse.com/#feat=mdn-css_properties_scrollbar-color
 html {
-  scrollbar-color: darken(variables-colors.$bf-gray-dark, 5%)
-    variables-colors.$bf-dark-extra;
+  scrollbar-color: darken(bfVarsColors.$bf-gray-dark, 5%)
+    bfVarsColors.$bf-dark-extra;
 }
 
 // these features are not standard, and blink and webkit only
@@ -22,13 +23,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: variables-colors.$bf-dark-extra;
+  background-color: bfVarsColors.$bf-dark-extra;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: darken(variables-colors.$bf-gray-dark, 5%);
+  background-color: darken(bfVarsColors.$bf-gray-dark, 5%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: lighten(variables-colors.$bf-gray-dark, 10%);
+  background-color: lighten(bfVarsColors.$bf-gray-dark, 10%);
 }

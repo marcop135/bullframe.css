@@ -10,7 +10,7 @@ $debug: false;
 }
 
 // ...or something more powerful
-// 
+//
 // Debug CSS
 // https://gist.github.com/zaydek-old/6b2e55258734deabbd2b4a284321d6f6
 //
@@ -26,89 +26,6 @@ $debug: false;
 //     box-shadow: none !important;
 //     filter: none !important;
 //   }
-// }
-
-
-
-// -----------------------------------------------------------------------------
-
-// // CSS used to highlight potential performance issues
-// // https://gist.github.com/tkadlec/683b26344cde774170b94c0fcf0088b4
-
-// :root {
-//   --violation-color: red; /* used for clear issues */
-//   --warning-color: orange; /* used for potential issues we should look into */
-// }
-
-// /* IMAGES */
-
-// /*
-//   * Lazy-Loaded Images Check
-//   * ====
-//   * Highlight any lazy loaded images so we can see if any are inside the viewport
-//   *
-//   * Uses an outline so it can pair with Unsized Images and Legacy Format checks
-//   * Credit: https://twitter.com/csswizardry/status/1346477682544951296
-//   */
-// img[loading='lazy'] {
-//   outline: 10px solid var(--warning-color) !important;
-// }
-
-// /*
-//   * Unsized Images Check
-//   * ====
-//   * Highlight images that don't have a height or width attribute set
-//   *
-//   * Uses a border so it can pair with Lazy-Loaded and Legacy Format checks
-//   */
-// img:not([height]),
-// img:not([width]) {
-//   border: 10px solid var(--violation-color) !important;
-// }
-
-// /*
-//   * Legacy Format Check
-//   * ====
-//   * Highlight tiff's and bmp's because we can do better
-//   * Also JPG's because maybe we can use something like webp or avif instead
-//   *
-//   * Use opacity so we don't conflict with Lazy-Loaded and Unsized Images checks
-//   */
-// img[src*='.jpg'],
-// img[src*='.tiff'],
-// img[src*='.bmp'] {
-//   opacity: .5 !important;
-// }
-
-// /* SCRIPTS */
-
-// /* Synchronous Scripts Check
-//  * ====
-//  * Display any blocking synchronous scripts
-//  *
-//  * Credit: https://twitter.com/csswizardry/status/1336007323337285633
-//  */
-// head,
-// script[src] {
-//   display: block;
-//   border: 10px solid var(--violation-color);
-// }
-// /*
-//  * Display the URL/filepath of external scripts
-//  */
-// script[src]::before {
-//   content: attr(src);
-//   font-size: 1rem;
-// }
-
-// /*
-//  * Hide other head content and non-blocking scripts
-//  */
-// head *,
-// script[src][async],
-// script[src][defer],
-// script[src][type='module'] {
-//   display: none;
 // }
 
 // Read more

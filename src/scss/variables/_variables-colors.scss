@@ -1,6 +1,9 @@
-// ! CSS Variables (Custom Properties) are not IE-friendly
-// https://caniuse.com/#feat=css-variables
-// let's Sass do the job instead
+@use "sass:color";
+
+// TIP: make colors lighter/darker with Sass
+// https://sass-lang.com/documentation/modules/color/
+// e.g., lighter: "color: color.adjust($gray, $lightness: 15%);"
+// e.g., darker: "color: color.adjust($gray, $lightness: -15%);"
 
 // customise/enlarge this small selection as needed
 

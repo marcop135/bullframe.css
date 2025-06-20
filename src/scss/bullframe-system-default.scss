@@ -1,5 +1,5 @@
-@use 'variables/variables-texts';
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
-@use 'bullframe';
-@use 'utilities/utility-global-system-default';
+@use "variables/variables-texts" as bfVarsTexts;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "bullframe" as Bullframe;
+@use "utilities/utility-global-system-default" as bfUtilGlobalSystemDefault;

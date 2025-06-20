@@ -1,3 +1,7 @@
+@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "sass:color";
+
 // heavily inspired by '2020 toggles' by Aaron Iker
 // https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
 // https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
@@ -8,12 +12,9 @@
 // Anyway are safe and future-friendly because more browser compatibility
 // will come
 
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
-
 @supports (appearance: none) {
-  [type='checkbox'],
-  [type='radio'] {
+  [type="checkbox"],
+  [type="radio"] {
     appearance: none;
 
     height: 1.8rem;
@@ -22,39 +23,39 @@
     vertical-align: top;
     position: relative;
 
-    border: 1px solid / variables-colors.$bf-gray;
+    border: 1px solid / bfVarsColors.$bf-gray;
 
     + label {
       line-height: 1.8rem;
       vertical-align: top;
-      margin-left: variables-spacing.$bf-spacing-md-px;
-      margin-left: variables-spacing.$bf-spacing-md-rem;
+      margin-left: bfVarsSpacing.$bf-spacing-md-px;
+      margin-left: bfVarsSpacing.$bf-spacing-md-rem;
     }
 
     // add support for RTL languages
     // Read more
     // 1. http://bootstrap.rtlcss.com
     // 2. https://rtlstyling.com/
-    *[dir='rtl'] & + label,
-    &[dir='rtl'] + label {
+    *[dir="rtl"] & + label,
+    &[dir="rtl"] + label {
       margin-left: 0;
-      margin-right: variables-spacing.$bf-spacing-md-px;
-      margin-right: variables-spacing.$bf-spacing-md-rem;
+      margin-right: bfVarsSpacing.$bf-spacing-md-px;
+      margin-right: bfVarsSpacing.$bf-spacing-md-rem;
     }
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
     }
 
     &:checked {
-      background-color: variables-colors.$bf-blue;
-      border-color: variables-colors.$bf-black;
+      background-color: bfVarsColors.$bf-blue;
+      border-color: bfVarsColors.$bf-black;
     }
   }
 
-  [type='radio'] {
+  [type="radio"] {
     &:after {
       width: 1.8rem;
       height: 1.8rem;
@@ -63,18 +64,18 @@
       top: -0.05rem;
 
       border-radius: 50%;
-      background: variables-colors.$bf-white;
+      background: bfVarsColors.$bf-white;
 
       transform: scale(0.35);
     }
   }
 
-  [type='checkbox'] {
+  [type="checkbox"] {
     &:after {
       width: 0.6rem;
       height: 0.8rem;
 
-      border: 2px solid / variables-colors.$bf-white;
+      border: 2px solid / bfVarsColors.$bf-white;
       border-top: 0;
       border-left: 0;
 

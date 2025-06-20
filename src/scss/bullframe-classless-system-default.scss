@@ -1,5 +1,6 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
-@use 'variables/variables-texts';
-@use 'bullframe-classless';
-@use 'utilities/utility-global-system-default-classless';
+@use "variables/variables-texts" as bfVarsTexts;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "bullframe" as BullframeClassless;
+@use "utilities/utility-global-system-default-classless" as
+  bfUtilGlobalSystemDefaultClassless;

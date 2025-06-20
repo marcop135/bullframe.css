@@ -1,9 +1,11 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
+@use "variables/variables-texts" as bfVarsTexts;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "sass:color";
 
 .bf-focused {
   transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
-  border-color: variables-colors.$bf-blue !important;
+  border-color: bfVarsColors.$bf-blue !important;
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
 }
 
@@ -22,8 +24,8 @@
   box-shadow: none !important;
   opacity: 0.5 !important;
 
-  background-color: variables-colors.$bf-white;
-  border-color: variables-colors.$bf-gray;
+  background-color: bfVarsColors.$bf-white;
+  border-color: bfVarsColors.$bf-gray;
 }
 
 label.bf-disabled {
@@ -32,9 +34,9 @@ label.bf-disabled {
 }
 
 button.bf-disabled,
-[type='button'].bf-disabled,
-[type='reset'].bf-disabled,
-[type='submit'].bf-disabled,
+[type="button"].bf-disabled,
+[type="reset"].bf-disabled,
+[type="submit"].bf-disabled,
 .bf-btn.bf-disabled {
   cursor: default;
   cursor: not-allowed;
@@ -43,15 +45,15 @@ button.bf-disabled,
   box-shadow: none;
   opacity: 0.5;
 
-  color: variables-colors.$bf-dark;
-  background: variables-colors.$bf-gray-light;
+  color: bfVarsColors.$bf-dark;
+  background: bfVarsColors.$bf-gray-light;
 
   &:hover,
   &:active,
   &:focus {
     box-shadow: none;
-    color: variables-colors.$bf-dark;
-    background: variables-colors.$bf-gray-light;
+    color: bfVarsColors.$bf-dark;
+    background: bfVarsColors.$bf-gray-light;
   }
 }
 
@@ -63,21 +65,21 @@ button.bf-disabled,
   box-shadow: none;
   opacity: 0.5;
 
-  color: variables-colors.$bf-white;
-  background: variables-colors.$bf-blue;
+  color: bfVarsColors.$bf-white;
+  background: bfVarsColors.$bf-blue;
 
   &:hover,
   &:active,
   &:focus {
     box-shadow: none;
-    color: variables-colors.$bf-white;
-    background: variables-colors.$bf-blue;
+    color: bfVarsColors.$bf-white;
+    background: bfVarsColors.$bf-blue;
   }
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: variables-colors.$bf-red !important;
-  border-color: variables-colors.$bf-red !important;
+  color: bfVarsColors.$bf-red !important;
+  border-color: bfVarsColors.$bf-red !important;
   box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
 }

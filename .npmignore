@@ -1,9 +1,19 @@
-/.git
-/.github
-/dist/*.map
-/docs/screenshots-screencasts
-.gitignore
-.gitattributes
-.prettierrc
-.editorconfig
-package-lock.json
+node_modules
+# dist
+.eslintcache
+.stylelintcache
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+.sass-cache/
+
+# Local environment files
+*.env
+*.local
+
+

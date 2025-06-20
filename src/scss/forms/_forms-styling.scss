@@ -1,75 +1,76 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
+@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "sass:color";
 
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='time'],
-[type='url'],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="time"],
+[type="url"],
 input[list],
 select,
 textarea {
-  background-color: variables-colors.$bf-white;
-  border: 1px solid / variables-colors.$bf-gray;
-  padding: variables-spacing.$bf-spacing-md-px
-    (variables-spacing.$bf-spacing-lg-px * 0.75);
-  padding: variables-spacing.$bf-spacing-md-rem
-    (variables-spacing.$bf-spacing-lg-rem * 0.75);
+  background-color: bfVarsColors.$bf-white;
+  border: 1px solid / bfVarsColors.$bf-gray;
+  padding: bfVarsSpacing.$bf-spacing-md-px
+    (bfVarsSpacing.$bf-spacing-lg-px * 0.75);
+  padding: bfVarsSpacing.$bf-spacing-md-rem
+    (bfVarsSpacing.$bf-spacing-lg-rem * 0.75);
 }
 
 // Old browsers and Opera Mini don't fully support all type of inputs
 // e.g. [type="range"]
 // so, let's try to add styles carefully and selective
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='time'],
-[type='url'],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="time"],
+[type="url"],
 input[list],
 select,
 textarea,
-[type='radio'],
-[type='checkbox'] {
+[type="radio"],
+[type="checkbox"] {
   &:active,
   &:focus {
     transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-    border-color: variables-colors.$bf-blue;
+    border-color: bfVarsColors.$bf-blue;
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
   }
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  color: variables-colors.$bf-dark;
-  padding: calc(variables-spacing.$bf-spacing-xl-px / 3)
-    (calc(variables-spacing.$bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: calc(variables-spacing.$bf-spacing-xl-rem / 3)
-    (calc(variables-spacing.$bf-spacing-xl-rem / 3) * 2);
-  background: variables-colors.$bf-gray-light;
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  color: bfVarsColors.$bf-dark;
+  padding: calc(bfVarsSpacing.$bf-spacing-xl-px / 3)
+    (calc(bfVarsSpacing.$bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: calc(bfVarsSpacing.$bf-spacing-xl-rem / 3)
+    (calc(bfVarsSpacing.$bf-spacing-xl-rem / 3) * 2);
+  background: bfVarsColors.$bf-gray-light;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: variables-colors.$bf-dark;
-    background: darken(variables-colors.$bf-gray-light, 10%);
+    color: bfVarsColors.$bf-dark;
+    background: darken(bfVarsColors.$bf-gray-light, 10%);
   }
 
   &:active,
@@ -108,7 +109,7 @@ select:disabled,
 textarea:disabled,
 label:disabled,
 
-// aria 
+// aria
 button[aria-disabled="true"],
 input[aria-disabled="true"],
 input[aria-disabled="true"]:after,

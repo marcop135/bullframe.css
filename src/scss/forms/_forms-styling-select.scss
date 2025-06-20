@@ -1,3 +1,7 @@
+@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "sass:color";
+
 // custom <select> arrow and appearance with a base64 embedded SVG icon
 // https://css-tricks.com/probably-dont-base64-svg/#article-header-id-2
 //
@@ -8,9 +12,6 @@
 // ! :not and calc() are IE9+
 // https://caniuse.com/#feat=mdn-css_selectors_not
 // https://caniuse.com/#feat=calc
-
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
 
 // ! 12px = the icon width/height, and must be in pixels because
 // calc() is just for values
@@ -26,15 +27,15 @@ select:not([size]):not([multiple]) {
   appearance: none;
 
   // add a new svg arrow
-  background: variables-colors.$bf-white
+  background: bfVarsColors.$bf-white
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
 
   // space the arrow
-  padding-right: variables-spacing.$bf-spacing-lg-px +
-    variables-spacing.$bf-spacing-lg-px;
-  padding-right: variables-spacing.$bf-spacing-lg-rem +
-    variables-spacing.$bf-spacing-lg-rem;
+  padding-right: bfVarsSpacing.$bf-spacing-lg-px +
+    bfVarsSpacing.$bf-spacing-lg-px;
+  padding-right: bfVarsSpacing.$bf-spacing-lg-rem +
+    bfVarsSpacing.$bf-spacing-lg-rem;
 }
 
 // IE10+
@@ -53,18 +54,18 @@ select::-ms-expand {
 // Read more
 // 1. http://bootstrap.rtlcss.com
 // 2. https://rtlstyling.com/
-*[dir='rtl'] select:not([size]):not([multiple]),
-select[dir='rtl']:not([size]):not([multiple]) {
+*[dir="rtl"] select:not([size]):not([multiple]),
+select[dir="rtl"]:not([size]):not([multiple]) {
   // move the arrow icon to the left
   background-position: left 0.85rem top 50%;
 
   // go back to default forms padding
-  padding-right: (variables-spacing.$bf-spacing-lg-px * 0.75);
-  padding-right: (variables-spacing.$bf-spacing-lg-rem * 0.75);
+  padding-right: (bfVarsSpacing.$bf-spacing-lg-px * 0.75);
+  padding-right: (bfVarsSpacing.$bf-spacing-lg-rem * 0.75);
 
   // add custom left padding, matching the custom LTR one
-  padding-left: variables-spacing.$bf-spacing-lg-px +
-    variables-spacing.$bf-spacing-lg-px;
-  padding-left: variables-spacing.$bf-spacing-lg-rem +
-    variables-spacing.$bf-spacing-lg-rem;
+  padding-left: bfVarsSpacing.$bf-spacing-lg-px +
+    bfVarsSpacing.$bf-spacing-lg-px;
+  padding-left: bfVarsSpacing.$bf-spacing-lg-rem +
+    bfVarsSpacing.$bf-spacing-lg-rem;
 }

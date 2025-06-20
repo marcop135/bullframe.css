@@ -1,4 +1,5 @@
-@use 'variables/variables-colors';
+@use "variables/variables-colors" as bfVarsColors;
+@use "sass:color";
 
 audio,
 canvas,
@@ -91,10 +92,10 @@ progress[value] {
   height: 2rem;
 
   // progress bar background color
-  background: variables-colors.$bf-gray-light;
+  background: bfVarsColors.$bf-gray-light;
 
   // progress value background color in IE10+
-  color: variables-colors.$bf-blue;
+  color: bfVarsColors.$bf-blue;
 }
 
 // ! this is not a standard feature, is webkit only
@@ -102,10 +103,10 @@ progress[value] {
 //
 // progress value background color in webkit
 progress[value]::-webkit-progress-bar {
-  background: variables-colors.$bf-gray-light;
+  background: bfVarsColors.$bf-gray-light;
 }
 progress[value]::-webkit-progress-value {
-  background: variables-colors.$bf-blue;
+  background: bfVarsColors.$bf-blue;
 }
 
 // remove default border in old browsers
@@ -114,13 +115,10 @@ progress[value]::-webkit-progress-value {
 //
 // e.g.
 // <iframe
-//  width="560"
-//  height="315"
-//  src="https://www.youtube-nocookie.com/embed/Z-4v4I7Gzk0"
-//  frameborder="0"
-//  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-//  allowfullscreen>
-// </iframe>
+//  width=" 560 "
+//  height=" 315 "
+//  src=" https:
+//www.youtube-nocookie.com/embed/Z-4v4I7Gzk0"
 iframe {
   border-style: none;
 }

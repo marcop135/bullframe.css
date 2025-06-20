@@ -1,80 +1,81 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
-@use 'variables/variables-texts';
-@use 'utility-global-dark-scrollbars';
+@use "variables/variables-texts" as bfVarsTexts;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "utility-global-dark-scrollbars" as bfUtilGlobalDarkScrollbars;
+@use "sass:color";
 
 // these are global stylest tha that ovveride all the "light" styles
 
 // the basics: background and texts
 html {
-  color: variables-colors.$bf-light;
+  color: bfVarsColors.$bf-light;
 }
 
 body {
-  background-color: lighten(variables-colors.$bf-dark-extra, 7.5%);
+  background-color: lighten(bfVarsColors.$bf-dark-extra, 7.5%);
 }
 
 // anchors
 a {
-  color: lighten(variables-colors.$bf-blue, 20%);
+  color: lighten(bfVarsColors.$bf-blue, 20%);
 
   &:hover,
   &:focus {
-    color: lighten(variables-colors.$bf-blue-light, 20%);
+    color: lighten(bfVarsColors.$bf-blue-light, 20%);
   }
 }
 
 // typography elements that need tiny adjustments
 mark {
-  background-color: darken(variables-colors.$bf-yellow, 10%);
+  background-color: darken(bfVarsColors.$bf-yellow, 10%);
 }
 
 ins {
-  background-color: darken(variables-colors.$bf-yellow-light, 45%);
+  background-color: darken(bfVarsColors.$bf-yellow-light, 45%);
 }
 
 // forms
 
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='time'],
-[type='url'],
-[type='range'],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="time"],
+[type="url"],
+[type="range"],
 input[list],
 select,
 select:not([size]):not([multiple]),
 textarea {
-  background-color: variables-colors.$bf-dark-extra;
-  border-color: variables-colors.$bf-black;
-  color: variables-colors.$bf-gray-light;
+  background-color: bfVarsColors.$bf-dark-extra;
+  border-color: bfVarsColors.$bf-black;
+  color: bfVarsColors.$bf-gray-light;
 
   &:active,
   &:focus {
-    background-color: variables-colors.$bf-dark-extra;
-    border-color: lighten(variables-colors.$bf-blue, 10%);
+    background-color: bfVarsColors.$bf-dark-extra;
+    border-color: lighten(bfVarsColors.$bf-blue, 10%);
   }
 }
 
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='time'],
-[type='url'],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="time"],
+[type="url"],
 input[list],
 select,
 select:not([size]):not([multiple]),
@@ -106,7 +107,7 @@ select:not([size]):not([multiple]) {
 // all modern browsers but not IE
 @supports (appearance: none) {
   // override above declaration
-  [type='range'] {
+  [type="range"] {
     background-color: transparent;
 
     &:focus {
@@ -116,30 +117,30 @@ select:not([size]):not([multiple]) {
 
   // darker background
   // the rulesets must be separated
-  [type='range']::-webkit-slider-runnable-track {
-    background-color: variables-colors.$bf-dark-extra;
+  [type="range"]::-webkit-slider-runnable-track {
+    background-color: bfVarsColors.$bf-dark-extra;
   }
 
-  [type='range']::-moz-range-track {
-    background-color: variables-colors.$bf-dark-extra;
+  [type="range"]::-moz-range-track {
+    background-color: bfVarsColors.$bf-dark-extra;
   }
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: variables-colors.$bf-gray;
+  color: bfVarsColors.$bf-gray;
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  background: variables-colors.$bf-gray-light;
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background: bfVarsColors.$bf-gray-light;
 
   &:hover,
   &:active,
   &:focus {
-    background: darken(variables-colors.$bf-gray-light, 10%);
+    background: darken(bfVarsColors.$bf-gray-light, 10%);
   }
 
   &:active,

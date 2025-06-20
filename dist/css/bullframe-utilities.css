@@ -641,6 +641,7 @@ table th[class^=bf-col] {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
+  line-clamp: 2 !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
 }
@@ -649,6 +650,7 @@ table th[class^=bf-col] {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
+  line-clamp: 3 !important;
   -webkit-line-clamp: 3 !important;
   -webkit-box-orient: vertical !important;
 }

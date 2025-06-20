@@ -1,13 +1,15 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
+@use "variables/variables-texts" as bfVarsTexts;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "sass:color";
 
 .bf-table th,
 .bf-table td {
-  padding: variables-spacing.$bf-spacing-lg-px;
-  padding: variables-spacing.$bf-spacing-lg-rem;
-  border-bottom: 1px solid variables-colors.$bf-gray;
-  margin-bottom: variables-spacing.$bf-spacing-md-px;
-  margin-bottom: variables-spacing.$bf-spacing-md-rem;
+  padding: bfVarsSpacing.$bf-spacing-lg-px;
+  padding: bfVarsSpacing.$bf-spacing-lg-rem;
+  border-bottom: 1px solid bfVarsColors.$bf-gray;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
 }
 
 // responsive tables
@@ -25,8 +27,8 @@
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: variables-spacing.$bf-spacing-md-px;
-  margin-bottom: variables-spacing.$bf-spacing-md-rem;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
 }
 
 // force webkit scrollbars appearance
@@ -39,5 +41,5 @@
 // zebra striping
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: variables-colors.$bf-gray-light-extra;
+  background-color: bfVarsColors.$bf-gray-light-extra;
 }

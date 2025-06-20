@@ -1,5 +1,6 @@
-@use 'variables/variables-texts';
-@use 'variables/variables-colors';
+@use "variables/variables-texts" as bfVarsTexts;
+@use "variables/variables-colors" as bfVarsColors;
+@use "sass:color";
 
 html {
   text-size-adjust: 100%;
@@ -24,9 +25,9 @@ html {
 
 body {
   margin: 0;
-  font-size: variables-texts.$bf-body-font-size-px; // '16px' by default
-  font-size: variables-texts.$bf-body-font-size-rem; // '1.6rem' by default
-  line-height: variables-texts.$bf-body-line-height; // '1.5' by default
+  font-size: bfVarsTexts.$bf-body-font-size-px; // '16px' by default
+  font-size: bfVarsTexts.$bf-body-font-size-rem; // '1.6rem' by default
+  line-height: bfVarsTexts.$bf-body-line-height; // '1.5' by default
 
   // this is useful to inherit values for some elements (e.g. forms)
   font-weight: 400;
@@ -37,13 +38,13 @@ body {
   // a web apps looks like a native app (e.g. Android = Roboto font)
   // Read more:
   // https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-  font-family: 
+  font-family:
 
 		// Safari for OS X and iOS (San Francisco) -apple-system,
     // Chrome < 56 for OS X (San Francisco)
     BlinkMacSystemFont,
     // Windows
-    'Segoe UI',
+    "Segoe UI",
     // Android
     Roboto,
     // Linux with KDE
@@ -53,14 +54,14 @@ body {
     // Linux with GNOME Shell
     Cantarell,
     // macOS 1.10 and below
-    'Helvetica Neue',
+    "Helvetica Neue",
     Helvetica,
     // Basic web fallback
     Arial,
-    'Noto Sans', sans-serif,
+    "Noto Sans", sans-serif,
     // emoji fonts
-    'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   // this enable font ligatures
   text-rendering: optimizeLegibility;
@@ -69,5 +70,5 @@ body {
   // e.g. big <h1> or <h2> headlines
   word-wrap: break-word;
 
-  background-color: variables-colors.$bf-white;
+  background-color: bfVarsColors.$bf-white;
 }

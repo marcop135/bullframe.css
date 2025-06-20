@@ -1,8 +1,8 @@
-@use 'variables/variables-spacing';
+@use "variables/variables-spacing" as bfVarsSpacing;
 
 pre {
-  margin: 0 0 variables-spacing.$bf-spacing-xl-px 0;
-  margin: 0 0 variables-spacing.$bf-spacing-xl-rem 0;
+  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-px 0;
+  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-rem 0;
 
   display: block;
   overflow: auto;
@@ -23,14 +23,14 @@ pre,
 code,
 kbd,
 samp {
-  font-family: 
+  font-family:
 
-  /* macOS 1.10+ */ 'Menlo', /* Windows 6+ */ 'Consolas',
-    /* Android 4+ */ 'Roboto Mono', /* Ubuntu 1.10+ */ 'Ubuntu Monospace',
-    /* KDE Plasma 5+ */ 'Noto Mono', /* KDE Plasma 4+ */ 'Oxygen Mono',
-    /* Linux/OpenOffice fallback */ 'Liberation Mono', /* fallback */ monospace,
-    /* emoji fonts */ 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
+  /* macOS 1.10+ */ "Menlo", /* Windows 6+ */ "Consolas",
+    /* Android 4+ */ "Roboto Mono", /* Ubuntu 1.10+ */ "Ubuntu Monospace",
+    /* KDE Plasma 5+ */ "Noto Mono", /* KDE Plasma 4+ */ "Oxygen Mono",
+    /* Linux/OpenOffice fallback */ "Liberation Mono", /* fallback */ monospace,
+    /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 
   // a monospaced text font should looks bigger, so a smaller font-size
   // is preferred

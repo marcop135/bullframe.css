@@ -1700,6 +1700,7 @@ table th[class^=bf-col] {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
+  line-clamp: 2 !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
 }
@@ -1708,6 +1709,7 @@ table th[class^=bf-col] {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
+  line-clamp: 3 !important;
   -webkit-line-clamp: 3 !important;
   -webkit-box-orient: vertical !important;
 }
@@ -2100,25 +2102,20 @@ dt {
     transition-duration: 0s !important;
   }
 }
+/* Accessibility
+ * ========================================================================== */
 /**
  * Change the cursor on busy elements in all browsers (opinionated).
  */
-[aria-busy=true] {
+[aria-busy=true i] {
   cursor: progress;
-}
-
-/*
- * Change the cursor on control elements in all browsers (opinionated).
- */
-[aria-controls] {
-  cursor: pointer;
 }
 
 /*
  * Change the cursor on disabled, not-editable, or otherwise
  * inoperable elements in all browsers (opinionated).
  */
-[aria-disabled=true],
+[aria-disabled=true i],
 [disabled] {
   cursor: not-allowed;
 }
@@ -2127,15 +2124,284 @@ dt {
  * Change the display on visually hidden accessible elements
  * in all browsers (opinionated).
  */
-[aria-hidden=false][hidden] {
+[aria-hidden=false i][hidden] {
   display: initial;
 }
 
-[aria-hidden=false][hidden]:not(:focus) {
+[aria-hidden=false i][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  @use 'utilities/utility-global-dark';
-} */
+@media (prefers-color-scheme: dark) {
+  html {
+    scrollbar-color: rgb(89.25, 89.25, 89.25) #111;
+  }
+  ::-webkit-scrollbar {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(89.25, 89.25, 89.25);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(127.5, 127.5, 127.5);
+  }
+  html {
+    color: #f0f0f0;
+  }
+  body {
+    background-color: rgb(36.125, 36.125, 36.125);
+  }
+  a {
+    color: rgb(102, 175.8, 255);
+  }
+  a:hover, a:focus {
+    color: rgb(26, 136.0223463687, 255);
+  }
+  mark {
+    background-color: #cccc00;
+  }
+  ins {
+    background-color: rgb(178.5, 178.5, 0);
+  }
+  [type=email],
+  [type=number],
+  [type=password],
+  [type=tel],
+  [type=search],
+  [type=text],
+  [type=date],
+  [type=datetime-local],
+  [type=month],
+  [type=week],
+  [type=time],
+  [type=url],
+  [type=range],
+  input[list],
+  select,
+  select:not([size]):not([multiple]),
+  textarea {
+    background-color: #111;
+    border-color: #000;
+    color: #ccc;
+  }
+  [type=email]:active, [type=email]:focus,
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  [type=range]:active,
+  [type=range]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size]):not([multiple]):active,
+  select:not([size]):not([multiple]):focus,
+  textarea:active,
+  textarea:focus {
+    background-color: #111;
+    border-color: rgb(51, 149.4, 255);
+  }
+  [type=email]:active, [type=email]:focus,
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size]):not([multiple]):active,
+  select:not([size]):not([multiple]):focus,
+  textarea:active,
+  textarea:focus {
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
+  }
+  .bf-focused {
+    border-color: rgb(51, 149.4, 255);
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5) !important;
+  }
+  .bf-invalid,
+  .bf-invalid:focus {
+    color: rgb(255, 38.25, 38.25) !important;
+    border-color: rgb(255, 38.25, 38.25) !important;
+  }
+  select:not([size]):not([multiple]) {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
+  select:not([size]):not([multiple]),
+  *[dir=rtl] select:not([size]):not([multiple]),
+  select[dir=rtl]:not([size]):not([multiple]) {
+    background-image: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+    [type=range] {
+      background-color: transparent;
+    }
+    [type=range]:focus {
+      background-color: transparent;
+    }
+    [type=range]::-webkit-slider-runnable-track {
+      background-color: #111;
+    }
+    [type=range]::-moz-range-track {
+      background-color: #111;
+    }
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #999;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #999;
+  }
+  button,
+  [type=button],
+  [type=reset],
+  [type=submit],
+  .bf-btn,
+  button.bf-disabled,
+  [type=button].bf-disabled,
+  [type=reset].bf-disabled,
+  [type=submit].bf-disabled,
+  .bf-btn.bf-disabled {
+    background: #ccc;
+  }
+  button:hover, button:active, button:focus,
+  [type=button]:hover,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:hover,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:hover,
+  [type=submit]:active,
+  [type=submit]:focus,
+  .bf-btn:hover,
+  .bf-btn:active,
+  .bf-btn:focus,
+  button.bf-disabled:hover,
+  button.bf-disabled:active,
+  button.bf-disabled:focus,
+  [type=button].bf-disabled:hover,
+  [type=button].bf-disabled:active,
+  [type=button].bf-disabled:focus,
+  [type=reset].bf-disabled:hover,
+  [type=reset].bf-disabled:active,
+  [type=reset].bf-disabled:focus,
+  [type=submit].bf-disabled:hover,
+  [type=submit].bf-disabled:active,
+  [type=submit].bf-disabled:focus,
+  .bf-btn.bf-disabled:hover,
+  .bf-btn.bf-disabled:active,
+  .bf-btn.bf-disabled:focus {
+    background: rgb(178.5, 178.5, 178.5);
+  }
+  button:active, button:focus,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:active,
+  [type=submit]:focus,
+  .bf-btn:active,
+  .bf-btn:focus,
+  button.bf-disabled:active,
+  button.bf-disabled:focus,
+  [type=button].bf-disabled:active,
+  [type=button].bf-disabled:focus,
+  [type=reset].bf-disabled:active,
+  [type=reset].bf-disabled:focus,
+  [type=submit].bf-disabled:active,
+  [type=submit].bf-disabled:focus,
+  .bf-btn.bf-disabled:active,
+  .bf-btn.bf-disabled:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+  }
+  button:active, button:focus,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:active,
+  [type=submit]:focus,
+  .bf-btn:active,
+  .bf-btn:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+  }
+  .bf-btn--primary.bf-disabled,
+  .bf-btn.bf-btn--primary {
+    background: #007bff;
+  }
+  .bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus,
+  .bf-btn.bf-btn--primary:hover,
+  .bf-btn.bf-btn--primary:active,
+  .bf-btn.bf-btn--primary:focus {
+    background: rgb(0, 110.7, 229.5);
+  }
+  .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus,
+  .bf-btn.bf-btn--primary:active,
+  .bf-btn.bf-btn--primary:focus {
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
+  }
+  a:focus,
+  input:focus {
+    outline-color: rgb(178.5, 115.5, 0);
+  }
+  :focus-visible {
+    outline-color: rgb(178.5, 115.5, 0);
+  }
+  .bf-table th,
+  .bf-table td {
+    border-color: #666;
+  }
+  .bf-table--zebra tbody tr:nth-child(odd),
+  .bf-table-responsive--zebra tbody tr:nth-child(odd) {
+    background-color: #333;
+  }
+}

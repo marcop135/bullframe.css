@@ -1,5 +1,6 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
+@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "sass:color";
 
 // normalization, enhancement and responsiveness
 
@@ -16,8 +17,8 @@ textarea {
 
 html input,
 button,
-[type='radio'],
-[type='checkbox'],
+[type="radio"],
+[type="checkbox"],
 select,
 optgroup,
 textarea {
@@ -34,12 +35,12 @@ legend {
 // re-set width auto where needed
 html label,
 button,
-[type='image'],
-[type='submit'],
-[type='reset'],
-html [type='button'],
-[type='radio'],
-[type='checkbox'] {
+[type="image"],
+[type="submit"],
+[type="reset"],
+html [type="button"],
+[type="radio"],
+[type="checkbox"] {
   width: auto;
 }
 
@@ -50,14 +51,14 @@ label,
 select,
 textarea,
 button,
-html [type='button'],
-[type='reset'],
-[type='submit'],
+html [type="button"],
+[type="reset"],
+[type="submit"],
 output {
   display: inline-block;
 }
 
-[type='file'] {
+[type="file"] {
   display: block;
   background-color: transparent;
 }
@@ -95,8 +96,8 @@ legend {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: variables-spacing.$bf-spacing-md-px;
-  margin-bottom: variables-spacing.$bf-spacing-md-rem;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -106,8 +107,8 @@ label {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: variables-spacing.$bf-spacing-md-px;
-  margin-bottom: variables-spacing.$bf-spacing-md-rem;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
+  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
 }
 
 label input,
@@ -116,8 +117,8 @@ label textarea {
   font-size: 110%;
 }
 
-[type='number']::-webkit-outer-spin-button,
-[type='number']::-webkit-inner-spin-button {
+[type="number"]::-webkit-outer-spin-button,
+[type="number"]::-webkit-inner-spin-button {
   height: auto;
 }
 
@@ -135,8 +136,8 @@ label textarea {
   padding: 0;
 }
 
-[type='search'] {
-  outline-offset: calc(-1 * variables-spacing.$bf-spacing-sm-rem);
+[type="search"] {
+  outline-offset: calc(-1 * bfVarsSpacing.$bf-spacing-sm-rem);
 }
 
 output {
@@ -154,9 +155,9 @@ select {
 
 // Taken from Bootstrap Reboot v5.2
 // https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
-[list]:not([type='date']):not([type='datetime-local']):not([type='month']):not(
-    [type='week']
-  ):not([type='time'])::-webkit-calendar-picker-indicator {
+[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not(
+    [type="week"]
+  ):not([type="time"])::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 
@@ -171,7 +172,7 @@ optgroup {
 // remove -webkit-appearance listing every single elements that needed it
 button,
 // avoid destroying native android audio/video players
-html [type="button"], 
+html [type="button"],
 [type="reset"],
 [type="submit"],
 
@@ -205,26 +206,26 @@ button,
 input,
 select,
 textarea {
-  border-radius: variables-spacing.$bf-spacing-sm-rem;
+  border-radius: bfVarsSpacing.$bf-spacing-sm-rem;
 }
 
 // ! IE9+
 // https://caniuse.com/#feat=border-radius
-[type='radio'] {
+[type="radio"] {
   border-radius: 50%;
 }
 
-[type='checkbox'] {
-  border-radius: variables-spacing.$bf-spacing-md-rem;
+[type="checkbox"] {
+  border-radius: bfVarsSpacing.$bf-spacing-md-rem;
 }
 
-[type='radio'],
-[type='checkbox'] {
+[type="radio"],
+[type="checkbox"] {
   padding: 0;
-  background-color: variables-colors.$bf-white;
+  background-color: bfVarsColors.$bf-white;
 }
 
-[type='range'] {
+[type="range"] {
   background-color: transparent; // FF and Chrome mobile
 }
 
@@ -253,9 +254,9 @@ textarea {
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -271,18 +272,18 @@ button,
   &:active,
   &:focus {
     text-decoration: none;
-    color: variables-colors.$bf-dark;
+    color: bfVarsColors.$bf-dark;
   }
 }
 
 button,
 select,
-input[type='submit'],
-input[type='button'],
-[type='checkbox'],
-[type='range'],
-[type='radio'],
-[role='button'] {
+input[type="submit"],
+input[type="button"],
+[type="checkbox"],
+[type="range"],
+[type="radio"],
+[role="button"] {
   cursor: pointer;
 }
 
@@ -292,7 +293,7 @@ input[type='button'],
 // Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
-  color: variables-colors.$bf-gray-dark;
+  color: bfVarsColors.$bf-gray-dark;
 }
 
 // remove ':invalid' styles in FF

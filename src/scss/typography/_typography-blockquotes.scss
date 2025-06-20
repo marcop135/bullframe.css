@@ -1,9 +1,10 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "sass:color";
 
 blockquote {
-  margin: 0 0 variables-spacing.$bf-spacing-xl-px 0;
-  margin-bottom: variables-spacing.$bf-spacing-xl-rem;
+  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-px 0;
+  margin-bottom: bfVarsSpacing.$bf-spacing-xl-rem;
   padding-left: 0;
   font-style: italic;
 }
@@ -13,14 +14,14 @@ blockquote p {
 }
 
 blockquote small {
-  color: variables-colors.$bf-gray;
+  color: bfVarsColors.$bf-gray;
   display: block;
 }
 
 blockquote small:before {
-  content: '\2014 \00A0';
+  content: "\2014 \00A0";
 }
 
 q {
-  quotes: '\201C''\201D''\2018''\2019';
+  quotes: "\201C""\201D""\2018""\2019";
 }

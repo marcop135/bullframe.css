@@ -1,12 +1,13 @@
-@use 'variables/variables-spacing';
-@use 'variables/variables-colors';
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "sass:color";
 
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: variables-colors.$bf-dark;
-  padding: calc(variables-spacing.$bf-spacing-xl-px / 3)
-    (calc(variables-spacing.$bf-spacing-xl-px / 3) * 2); // 8px 16px
+  color: bfVarsColors.$bf-dark;
+  padding: calc(bfVarsSpacing.$bf-spacing-xl-px / 3)
+    (calc(bfVarsSpacing.$bf-spacing-xl-px / 3) * 2); // 8px 16px
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -15,19 +16,19 @@
   overflow: visible;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   user-select: none;
-  border-radius: variables-spacing.$bf-spacing-sm-rem;
+  border-radius: bfVarsSpacing.$bf-spacing-sm-rem;
 
   border: 0;
   background-image: none; // FF mobile
-  background-color: variables-colors.$bf-gray-light;
+  background-color: bfVarsColors.$bf-gray-light;
   transition: all 0.2s;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: variables-colors.$bf-dark;
-    background: darken(variables-colors.$bf-gray-light, 10%);
+    color: bfVarsColors.$bf-dark;
+    background: darken(bfVarsColors.$bf-gray-light, 10%);
   }
 
   &:active,
@@ -40,14 +41,14 @@
   }
 
   &.bf-btn--primary {
-    color: variables-colors.$bf-white;
-    background: variables-colors.$bf-blue;
+    color: bfVarsColors.$bf-white;
+    background: bfVarsColors.$bf-blue;
 
     &:hover,
     &:active,
     &:focus {
-      color: variables-colors.$bf-white;
-      background: darken(variables-colors.$bf-blue, 10%);
+      color: bfVarsColors.$bf-white;
+      background: darken(bfVarsColors.$bf-blue, 10%);
     }
 
     &:active,
@@ -60,12 +61,12 @@
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
 .bf-btn:disabled,
-.bf-btn[aria-disabled='true'] {
+.bf-btn[aria-disabled="true"] {
   cursor: default !important; // fallback
   cursor: not-allowed !important;
   pointer-events: none !important;
   user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: variables-colors.$bf-gray-light;
+  background-color: bfVarsColors.$bf-gray-light;
 }

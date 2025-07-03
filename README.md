@@ -255,6 +255,24 @@ Bullframe provides three builds for theming:
 
 ---
 
+## Browser compatibility
+
+### Desktop browsers
+
+- Latest two stable versions: Firefox, Chrome, Edge, Safari, Opera
+
+### Mobile browsers
+
+- Latest two stable versions: Firefox, Chrome, Edge, Mobile Safari, Opera
+
+You can check the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file.
+
+---
+
+[Bullframe CSS v4.x](https://github.com/marcop135/bullframe.css/tree/v4.2.2) supports IE11.
+
+---
+
 ### Utilities - Reference
 
 A set of utilities for Bullframe CSS customisation:
@@ -448,17 +466,9 @@ Breakpoints: 576, 768, 992 and 1200 pixels.
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
 
-## Browser compatibility
+Here’s a cleaner, grammatically polished version:
 
-### Desktop browsers
-
-- Latest stable two: Firefox, Chrome, Edge, Safari, Opera
-
-### Mobile browsers
-
-- Latest stable two: Firefox, Chrome, Edge, Opera, Mobile Safari
-
-You might take a look at the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file.
+---
 
 ## Contributing
 

@@ -739,8 +739,8 @@ p.bf-lead {
 }
 
 body.bf-responsive-typography {
-  --body-rt-font-size-flex: calc(1.6rem + 3 * ((100vw - 320px) / 680));
-  --body-rt-font-size-max: 1.9rem;
+  --body-rt-font-size-flex: calc(1.5rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 1.8rem;
 }
 
 @media (min-width: 320px) {

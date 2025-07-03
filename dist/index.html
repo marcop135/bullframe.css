@@ -11,17 +11,17 @@
     content="A quick look at a wide range of HTML elements, divided into several sections and rendered into unusual combinations, for testing purposes only." />
 
   <!-- https://realfavicongenerator.net/ -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png?v=PYqzMzgx6v" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png?v=PYqzMzgx6v" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png?v=PYqzMzgx6v" />
-  <link rel="mask-icon" href="./icons/safari-pinned-tab.svg?v=PYqzMzgx6v" color="#f95c1f" />
-  <link rel="shortcut icon" href="./icons/favicon.ico?v=PYqzMzgx6v" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets-demo/icons/apple-touch-icon.png?v=PYqzMzgx6v" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets-demo/icons/favicon-32x32.png?v=PYqzMzgx6v" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets-demo/icons/favicon-16x16.png?v=PYqzMzgx6v" />
+  <link rel="mask-icon" href="assets-demo/icons/safari-pinned-tab.svg?v=PYqzMzgx6v" color="#f95c1f" />
+  <link rel="shortcut icon" href="assets-demo/icons/favicon.ico?v=PYqzMzgx6v" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#f95c1f" />
 
   <link rel="stylesheet" href="css/bullframe-system-default.min.css?v5.0.0" />
 
-  <!-- this is just for a nicer demo -->
+  <!-- These styles are added just for a nicer demo -->
   <link rel="stylesheet" href="assets-demo/css/style.css" />
 </head>
 
@@ -95,7 +95,7 @@
             The <em>em element</em> example<br />
             The <em>i element</em> example<br />
             The img element
-            <img src="../images/placeholder-img-16x16.jpg" alt="just a placeholder" loading="lazy" />
+            <img src="assets-demo/images/placeholder-img-16x16.jpg" alt="just a placeholder" loading="lazy" />
             example<br />
             The <ins>ins element</ins> example<br />
             The <kbd>kbd element</kbd> example<br />
@@ -323,7 +323,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <h3>Linked figure with an image and a caption</h3>
           <figure>
             <a href="#">
-              <img src="../images/placeholder-img-800x40.jpg" alt="just a placeholder" loading="lazy" />
+              <img src="assets-demo/images/placeholder-img-800x400.jpg" alt="just a placeholder" loading="lazy" />
             </a>
             <figcaption>The image above is 800x400 pixels</figcaption>
           </figure>
@@ -339,7 +339,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <div class="bf-col-6">
           <div class="bf-m-b-3">
             <h3>HTML5 video with controls</h3>
-            <video poster="./images/video-poster.png" controls width="450">
+            <video poster="assets-demo/images/video-poster.png" controls width="450">
               <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
                 type="video/webm" />
               <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
@@ -351,8 +351,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <div class="bf-m-b-3">
             <h3>Audio with controls</h3>
             <audio controls>
-              <source src="https://media.html5media.info/audio.mp3" type="audio/mp3" />
-              <source src="https://media.html5media.info/audio.ogg" type="audio/ogg" />
+              <source src="https://9eb231f8-a305-47de-b45a-3042679fa3f3.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3"
+                type="audio/mp3" />
               <p>Your browser does not support the HTML5 Audio element.</p>
             </audio>
           </div>
@@ -367,7 +367,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
       </div>
       <div class="bf-row">
-        <div class="bf-col-6 bf-m-b-4">
+        <div class="bf-col-12 bf-m-b-4">
           <h3>Progress</h3>
           <div class="bf-m-b-3">
             <label for="file">File progress:</label>
@@ -380,6 +380,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             at 50/100
           </meter>
         </div>
+
+      </div>
+
+
+      <div class="bf-row">
+        <div class="bf-col-12">
+          <h2 id="interactive-elements" class="h2--section">Interactive elements</h2>
+        </div>
+
         <div class="bf-col-6">
           <h3>Details with a summary</h3>
           <div class="bf-m-b-2">
@@ -394,7 +403,37 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             Something small enough to escape casual notice.
           </details>
         </div>
+
+        <div class="bf-col-6">
+          <h3>Dialog</h3>
+
+          <button id="openBtn" class="bf-btn bf-btn--primary">Open Dialog</button>
+
+          <dialog id="myDialog">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ducimus optio quis expedita, modi
+              libero maxime voluptate temporibus quia tempore molestiae necessitatibus id in nostrum a, alias beatae!
+              Molestias, voluptatem?</p>
+            <button class="bf-btn" id="closeBtn">Close</button>
+          </dialog>
+          <small>
+            <pre>&lt;script&gt;
+  // Sets open/close button clicks to show or hide the dialog if available,
+  // else toggles the open attribute.
+
+  const dialog = document.getElementById('myDialog');
+  const openBtn = document.getElementById('openBtn');
+  const closeBtn = document.getElementById('closeBtn');
+
+  openBtn.onclick = () =&gt; dialog.showModal ? dialog.showModal() : dialog.setAttribute('open', '');
+  closeBtn.onclick = () =&gt; dialog.close ? dialog.close() : dialog.removeAttribute('open');
+&lt;/script&gt;</pre>
+          </small>
+
+        </div>
+
       </div>
+
+
       <div class="bf-row">
         <div class="bf-col-12">
           <h2 id="forms" class="h2--section">Forms</h2>
@@ -616,7 +655,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <h3>Clickable inputs</h3>
           <fieldset class="bf-m-b-3">
             <div class="input-image">
-              <input alt="Image (input)" src="../images/placeholder-img-130x14.jpg" type="image" /><br />
+              <input alt="Image (input)" src="assets-demo/images/placeholder-img-130x140.jpg" type="image" /><br />
               <code>input type="image" (130x40px)</code>
             </div>
             <div>
@@ -639,7 +678,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <fieldset disabled>
             <h3>Clickable inputs (disabled)</h3>
             <div class="input-image">
-              <input alt="Image (input)" src="../images/placeholder-img-130x14.jpg" type="image" /><br />
+              <input alt="Image (input)" src="assets-demo/images/placeholder-img-130x140.jpg" type="image" /><br />
               <code>input type="image" (130x40px)</code>
             </div>
             <div>
@@ -1210,6 +1249,19 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
       </div>
     </footer>
   </div>
+
+
+  <!-- Enable <dialog> modal interaction -->
+  <script>
+    const dialog = document.getElementById('myDialog');
+    const openBtn = document.getElementById('openBtn');
+    const closeBtn = document.getElementById('closeBtn');
+
+    if (dialog && openBtn && closeBtn) {
+      openBtn.onclick = () => dialog.showModal ? dialog.showModal() : dialog.setAttribute('open', '');
+      closeBtn.onclick = () => dialog.close ? dialog.close() : dialog.removeAttribute('open');
+    }
+  </script>
 </body>
 
 </html>

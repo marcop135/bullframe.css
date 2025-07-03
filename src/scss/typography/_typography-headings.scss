@@ -1,4 +1,4 @@
-@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-spacing" as v-space;
 
 h1,
 h2,
@@ -13,7 +13,7 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-rem;
+  margin-bottom: v-space.$bf-spacing-lg-rem;
 }
 
 h1 {

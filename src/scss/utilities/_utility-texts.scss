@@ -1,6 +1,6 @@
-@use "variables/variables-texts" as bfVarsTexts;
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-texts" as v-text;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 .bf-t-transform-uppercase {
@@ -24,8 +24,8 @@
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px bfVarsColors.$bf-dark !important;
-  text-shadow: 0 0 0.2rem bfVarsColors.$bf-dark !important;
+  text-shadow: 0 0 2px v-color.$bf-dark !important;
+  text-shadow: 0 0 0.2rem v-color.$bf-dark !important;
 }
 
 .bf-t-italic {
@@ -143,8 +143,8 @@
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-px !important;
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-rem !important;
+  margin-bottom: v-space.$bf-spacing-lg-px !important;
+  margin-bottom: v-space.$bf-spacing-lg-rem !important;
 }
 
 .bf-h1 {

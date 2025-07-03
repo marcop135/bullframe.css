@@ -1,4 +1,4 @@
-@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-spacing" as v-space;
 
 // this is something similar to Bootstrap's spacing utility
 // https://getbootstrap.com/docs/4.4/utilities/spacing/
@@ -26,51 +26,51 @@
 }
 
 .bf-m-1 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem !important;
+  margin-bottom: v-space.$bf-spacing-md-rem !important;
 }
 
 .bf-m-2 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-rem !important;
+  margin-bottom: v-space.$bf-spacing-lg-rem !important;
 }
 
 .bf-m-3 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-xl-rem !important;
+  margin-bottom: v-space.$bf-spacing-xl-rem !important;
 }
 
 .bf-m-4 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-xxl-rem !important;
+  margin-bottom: v-space.$bf-spacing-xxl-rem !important;
 }
 
 .bf-m-t-1 {
-  margin-top: bfVarsSpacing.$bf-spacing-md-rem !important;
+  margin-top: v-space.$bf-spacing-md-rem !important;
 }
 
 .bf-m-t-2 {
-  margin-top: bfVarsSpacing.$bf-spacing-lg-rem !important;
+  margin-top: v-space.$bf-spacing-lg-rem !important;
 }
 
 .bf-m-t-3 {
-  margin-top: bfVarsSpacing.$bf-spacing-xl-rem !important;
+  margin-top: v-space.$bf-spacing-xl-rem !important;
 }
 
 .bf-m-t-4 {
-  margin-top: bfVarsSpacing.$bf-spacing-xxl-rem !important;
+  margin-top: v-space.$bf-spacing-xxl-rem !important;
 }
 
 .bf-m-b-1 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem !important;
+  margin-bottom: v-space.$bf-spacing-md-rem !important;
 }
 
 .bf-m-b-2 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-rem !important;
+  margin-bottom: v-space.$bf-spacing-lg-rem !important;
 }
 
 .bf-m-b-3 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-xl-rem !important;
+  margin-bottom: v-space.$bf-spacing-xl-rem !important;
 }
 
 .bf-m-b-4 {
-  margin-bottom: bfVarsSpacing.$bf-spacing-xxl-rem !important;
+  margin-bottom: v-space.$bf-spacing-xxl-rem !important;
 }
 
 // paddings
@@ -96,49 +96,49 @@
 }
 
 .bf-p-1 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-md-rem !important;
+  padding-bottom: v-space.$bf-spacing-md-rem !important;
 }
 
 .bf-p-2 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-lg-rem !important;
+  padding-bottom: v-space.$bf-spacing-lg-rem !important;
 }
 
 .bf-p-3 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-xl-rem !important;
+  padding-bottom: v-space.$bf-spacing-xl-rem !important;
 }
 
 .bf-p-4 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-xxl-rem !important;
+  padding-bottom: v-space.$bf-spacing-xxl-rem !important;
 }
 
 .bf-p-t-1 {
-  padding-top: bfVarsSpacing.$bf-spacing-md-rem !important;
+  padding-top: v-space.$bf-spacing-md-rem !important;
 }
 
 .bf-p-t-2 {
-  padding-top: bfVarsSpacing.$bf-spacing-lg-rem !important;
+  padding-top: v-space.$bf-spacing-lg-rem !important;
 }
 
 .bf-p-t-3 {
-  padding-top: bfVarsSpacing.$bf-spacing-xl-rem !important;
+  padding-top: v-space.$bf-spacing-xl-rem !important;
 }
 
 .bf-p-t-4 {
-  padding-top: bfVarsSpacing.$bf-spacing-xxl-rem !important;
+  padding-top: v-space.$bf-spacing-xxl-rem !important;
 }
 
 .bf-p-b-1 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-md-rem !important;
+  padding-bottom: v-space.$bf-spacing-md-rem !important;
 }
 
 .bf-p-b-2 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-lg-rem !important;
+  padding-bottom: v-space.$bf-spacing-lg-rem !important;
 }
 
 .bf-p-b-3 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-xl-rem !important;
+  padding-bottom: v-space.$bf-spacing-xl-rem !important;
 }
 
 .bf-p-b-4 {
-  padding-bottom: bfVarsSpacing.$bf-spacing-xxl-rem !important;
+  padding-bottom: v-space.$bf-spacing-xxl-rem !important;
 }

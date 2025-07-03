@@ -1,5 +1,5 @@
-@use "variables/variables-colors" as bfVarsColors;
-@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as v-color;
+@use "variables/variables-spacing" as v-space;
 @use "sass:color";
 
 // normalization, enhancement and responsiveness
@@ -96,8 +96,8 @@ legend {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
+  margin-bottom: v-space.$bf-spacing-md-px;
+  margin-bottom: v-space.$bf-spacing-md-rem;
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -107,8 +107,8 @@ label {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
+  margin-bottom: v-space.$bf-spacing-md-px;
+  margin-bottom: v-space.$bf-spacing-md-rem;
 }
 
 label input,
@@ -137,7 +137,7 @@ label textarea {
 }
 
 [type="search"] {
-  outline-offset: calc(-1 * bfVarsSpacing.$bf-spacing-sm-rem);
+  outline-offset: calc(-1 * v-space.$bf-spacing-sm-rem);
 }
 
 output {
@@ -204,7 +204,7 @@ button,
 input,
 select,
 textarea {
-  border-radius: bfVarsSpacing.$bf-spacing-sm-rem;
+  border-radius: v-space.$bf-spacing-sm-rem;
 }
 
 [type="radio"] {
@@ -212,13 +212,13 @@ textarea {
 }
 
 [type="checkbox"] {
-  border-radius: bfVarsSpacing.$bf-spacing-md-rem;
+  border-radius: v-space.$bf-spacing-md-rem;
 }
 
 [type="radio"],
 [type="checkbox"] {
   padding: 0;
-  background-color: bfVarsColors.$bf-white;
+  background-color: v-color.$bf-white;
 }
 
 [type="range"] {
@@ -259,7 +259,7 @@ button,
   background-clip: padding-box;
   vertical-align: baseline;
   overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
   border: 0;
   background-image: none; // FF mobile
@@ -268,7 +268,7 @@ button,
   &:active,
   &:focus {
     text-decoration: none;
-    color: bfVarsColors.$bf-dark;
+    color: v-color.$bf-dark;
   }
 }
 
@@ -289,7 +289,7 @@ input[type="button"],
 // Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
-  color: bfVarsColors.$bf-gray-dark;
+  color: v-color.$bf-gray-dark;
 }
 
 // remove ':invalid' styles in FF

@@ -415,7 +415,6 @@ dialog {
   padding: 2rem;
   min-width: 25rem;
   max-width: calc(100vw - 3rem);
-  display: none;
 }
 @media (min-width: 768px) {
   dialog {
@@ -424,7 +423,7 @@ dialog {
 }
 
 dialog[open] {
-  display: block;
+  display: block !important;
 }
 
 dialog::backdrop {

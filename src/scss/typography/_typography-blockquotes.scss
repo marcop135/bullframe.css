@@ -1,9 +1,9 @@
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 blockquote {
-  margin-bottom: bfVarsSpacing.$bf-spacing-xl-rem;
+  margin-bottom: v-space.$bf-spacing-xl-rem;
   padding-left: 0;
   font-style: italic;
 }
@@ -13,7 +13,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: bfVarsColors.$bf-gray;
+  color: v-color.$bf-gray;
   display: block;
 }
 

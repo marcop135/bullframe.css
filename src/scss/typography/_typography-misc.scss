@@ -1,9 +1,9 @@
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 p {
-  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-rem 0;
+  margin: 0 0 v-space.$bf-spacing-xl-rem 0;
 }
 
 // Abbreviations (taken from Bootstrap 4)
@@ -20,13 +20,13 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: bfVarsColors.$bf-yellow;
-  color: bfVarsColors.$bf-black;
+  background-color: v-color.$bf-yellow;
+  color: v-color.$bf-black;
 }
 
 ins {
-  background-color: bfVarsColors.$bf-yellow-light;
-  color: bfVarsColors.$bf-black;
+  background-color: v-color.$bf-yellow-light;
+  color: v-color.$bf-black;
   text-decoration: none;
 }
 
@@ -82,7 +82,7 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: bfVarsSpacing.$bf-spacing-xl-rem 0;
+  margin: v-space.$bf-spacing-xl-rem 0;
   padding: 0;
   overflow: visible; // Show the overflow in Edge
 }

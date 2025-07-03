@@ -1,39 +1,39 @@
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: bfVarsColors.$bf-dark;
-  padding: calc(bfVarsSpacing.$bf-spacing-xl-rem / 3)
-    (calc(bfVarsSpacing.$bf-spacing-xl-rem / 3) * 2); // 8px 16px
+  color: v-color.$bf-dark;
+  padding: calc(v-space.$bf-spacing-xl-rem / 3)
+    (calc(v-space.$bf-spacing-xl-rem / 3) * 2); // 8px 16px
   line-height: normal;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
   vertical-align: baseline;
   overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
-  border-radius: bfVarsSpacing.$bf-spacing-sm-rem;
+  border-radius: v-space.$bf-spacing-sm-rem;
 
   border: 0;
   background-image: none; // FF mobile
-  background-color: bfVarsColors.$bf-gray-light;
+  background-color: v-color.$bf-gray-light;
   transition: all 0.2s;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: bfVarsColors.$bf-dark;
-    background: darken(bfVarsColors.$bf-gray-light, 10%);
+    color: v-color.$bf-dark;
+    background: color.adjust(v-color.$bf-gray-light, $lightness: -10%);
   }
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
   }
 
   &:focus {
@@ -41,19 +41,19 @@
   }
 
   &.bf-btn--primary {
-    color: bfVarsColors.$bf-white;
-    background: bfVarsColors.$bf-blue;
+    color: v-color.$bf-white;
+    background: v-color.$bf-blue;
 
     &:hover,
     &:active,
     &:focus {
-      color: bfVarsColors.$bf-white;
-      background: darken(bfVarsColors.$bf-blue, 10%);
+      color: v-color.$bf-white;
+      background: color.adjust(v-color.$bf-blue, $lightness: -10%);
     }
 
     &:active,
     &:focus {
-      box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+      box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
     }
   }
 }
@@ -68,5 +68,5 @@ fieldset[disabled] .bf-btn,
   user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: bfVarsColors.$bf-gray-light;
+  background-color: v-color.$bf-gray-light;
 }

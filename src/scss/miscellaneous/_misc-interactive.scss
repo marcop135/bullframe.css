@@ -1,12 +1,12 @@
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-colors" as bfVarsColors;
-@use "variables/variables-breakpoints" as bfVarsBreakpoints;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-colors" as v-color;
+@use "variables/variables-breakpoints" as v-bp;
 @use "sass:color";
 
 address {
   font-style: normal;
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-px;
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-rem;
+  margin-bottom: v-space.$bf-spacing-lg-px;
+  margin-bottom: v-space.$bf-spacing-lg-rem;
   line-height: inherit;
 }
 
@@ -19,23 +19,22 @@ summary {
 
 dialog {
   // match body background color
-  background-color: bfVarsColors.$bf-white;
+  background-color: v-color.$bf-white;
   border: none;
-  border-radius: bfVarsSpacing.$bf-spacing-sm-rem;
-  padding: bfVarsSpacing.$bf-spacing-xl-px;
-  padding: bfVarsSpacing.$bf-spacing-xl-rem;
+  border-radius: v-space.$bf-spacing-sm-rem;
+  padding: v-space.$bf-spacing-xl-px;
+  padding: v-space.$bf-spacing-xl-rem;
   min-width: 25rem;
-  max-width: calc(100vw - (bfVarsSpacing.$bf-spacing-grid-gutter-rem * 2));
-  @media (min-width: bfVarsBreakpoints.$bf-breakpoint-md) {
+  max-width: calc(100vw - (v-space.$bf-spacing-grid-gutter-rem * 2));
+  @media (min-width: v-bp.$bf-breakpoint-md) {
     max-width: 50rem;
   }
-
-  // hide dialog content by default
-  display: none;
 }
 
+// Overrides 'hidden' attribute
+// <dialog id="myDialog" hidden>...</dialog>
 dialog[open] {
-  display: block;
+  display: block !important;
 }
 
 dialog::backdrop {

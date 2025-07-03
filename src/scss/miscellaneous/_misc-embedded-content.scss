@@ -1,4 +1,4 @@
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 audio,
@@ -85,18 +85,18 @@ progress[value] {
   height: 2rem;
 
   // progress bar background color
-  background: bfVarsColors.$bf-gray-light;
+  background: v-color.$bf-gray-light;
 
   // progress value background color in IE10+
-  color: bfVarsColors.$bf-blue;
+  color: v-color.$bf-blue;
 }
 
 // progress value background color in webkit
 progress[value]::-webkit-progress-bar {
-  background: bfVarsColors.$bf-gray-light;
+  background: v-color.$bf-gray-light;
 }
 progress[value]::-webkit-progress-value {
-  background: bfVarsColors.$bf-blue;
+  background: v-color.$bf-blue;
 }
 
 // remove default border in old browsers

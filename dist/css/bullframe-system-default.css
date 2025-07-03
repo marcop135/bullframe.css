@@ -2149,23 +2149,28 @@ dt {
   position: absolute;
 }
 
+html {
+  scrollbar-color: rgb(89.25, 89.25, 89.25) #111;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(89.25, 89.25, 89.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(127.5, 127.5, 127.5);
+}
+
 @media (prefers-color-scheme: dark) {
-  html {
-    scrollbar-color: rgb(89.25, 89.25, 89.25) #111;
-  }
-  ::-webkit-scrollbar {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #111;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(89.25, 89.25, 89.25);
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(127.5, 127.5, 127.5);
-  }
   html {
     color: #f0f0f0;
   }

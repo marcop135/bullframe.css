@@ -1,14 +1,15 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-texts" as v-text;
-@use "variables/variables-spacing" as v-space;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 // standard property
 // 'scrollbar-color'
 // https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
 html {
-  scrollbar-color: color.adjust(v-color.$bf-gray-dark, $lightness: -5%)
-    v-color.$bf-dark-extra;
+  scrollbar-color: color.adjust(bf-v-color.$bf-gray-dark, $lightness: -5%)
+    bf-v-color.$bf-dark-extra;
 }
 
 // these features are not standard, and blink and webkit only
@@ -21,13 +22,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: v-color.$bf-dark-extra;
+  background-color: bf-v-color.$bf-dark-extra;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: color.adjust(v-color.$bf-gray-dark, $lightness: -5%);
+  background-color: color.adjust(bf-v-color.$bf-gray-dark, $lightness: -5%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: color.adjust(v-color.$bf-gray-dark, $lightness: 10%);
+  background-color: color.adjust(bf-v-color.$bf-gray-dark, $lightness: 10%);
 }

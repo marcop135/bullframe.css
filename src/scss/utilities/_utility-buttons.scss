@@ -1,13 +1,15 @@
-@use "variables/variables-spacing" as v-space;
-@use "variables/variables-colors" as v-color;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: v-color.$bf-dark;
-  padding: calc(v-space.$bf-spacing-xl-rem / 3)
-    (calc(v-space.$bf-spacing-xl-rem / 3) * 2); // 8px 16px
+  color: bf-v-color.$bf-dark;
+  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3)
+    (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2); // 8px 16px
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -16,19 +18,19 @@
   overflow: visible;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
-  border-radius: v-space.$bf-spacing-sm-rem;
+  border-radius: bf-v-space.$bf-spacing-sm-rem;
 
   border: 0;
   background-image: none; // FF mobile
-  background-color: v-color.$bf-gray-light;
+  background-color: bf-v-color.$bf-gray-light;
   transition: all 0.2s;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: v-color.$bf-dark;
-    background: color.adjust(v-color.$bf-gray-light, $lightness: -10%);
+    color: bf-v-color.$bf-dark;
+    background: color.adjust(bf-v-color.$bf-gray-light, $lightness: -10%);
   }
 
   &:active,
@@ -41,14 +43,14 @@
   }
 
   &.bf-btn--primary {
-    color: v-color.$bf-white;
-    background: v-color.$bf-blue;
+    color: bf-v-color.$bf-white;
+    background: bf-v-color.$bf-blue;
 
     &:hover,
     &:active,
     &:focus {
-      color: v-color.$bf-white;
-      background: color.adjust(v-color.$bf-blue, $lightness: -10%);
+      color: bf-v-color.$bf-white;
+      background: color.adjust(bf-v-color.$bf-blue, $lightness: -10%);
     }
 
     &:active,
@@ -68,5 +70,5 @@ fieldset[disabled] .bf-btn,
   user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: v-color.$bf-gray-light;
+  background-color: bf-v-color.$bf-gray-light;
 }

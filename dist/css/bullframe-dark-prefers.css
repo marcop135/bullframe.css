@@ -2149,23 +2149,28 @@ dt {
   position: absolute;
 }
 
+html {
+  scrollbar-color: rgb(89.25, 89.25, 89.25) #111;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(89.25, 89.25, 89.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(127.5, 127.5, 127.5);
+}
+
 @media (prefers-color-scheme: dark) {
-  html {
-    scrollbar-color: rgb(89.25, 89.25, 89.25) #111;
-  }
-  ::-webkit-scrollbar {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #111;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(89.25, 89.25, 89.25);
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(127.5, 127.5, 127.5);
-  }
   html {
     color: #f0f0f0;
   }
@@ -2274,15 +2279,6 @@ dt {
   textarea:focus {
     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
   }
-  .bf-focused {
-    border-color: rgb(51, 149.4, 255);
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5) !important;
-  }
-  .bf-invalid,
-  .bf-invalid:focus {
-    color: rgb(255, 38.25, 38.25) !important;
-    border-color: rgb(255, 38.25, 38.25) !important;
-  }
   select:not([size]):not([multiple]) {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
   }
@@ -2317,13 +2313,7 @@ dt {
   button,
   [type=button],
   [type=reset],
-  [type=submit],
-  .bf-btn,
-  button.bf-disabled,
-  [type=button].bf-disabled,
-  [type=reset].bf-disabled,
-  [type=submit].bf-disabled,
-  .bf-btn.bf-disabled {
+  [type=submit] {
     background: #ccc;
   }
   button:hover, button:active, button:focus,
@@ -2335,25 +2325,7 @@ dt {
   [type=reset]:focus,
   [type=submit]:hover,
   [type=submit]:active,
-  [type=submit]:focus,
-  .bf-btn:hover,
-  .bf-btn:active,
-  .bf-btn:focus,
-  button.bf-disabled:hover,
-  button.bf-disabled:active,
-  button.bf-disabled:focus,
-  [type=button].bf-disabled:hover,
-  [type=button].bf-disabled:active,
-  [type=button].bf-disabled:focus,
-  [type=reset].bf-disabled:hover,
-  [type=reset].bf-disabled:active,
-  [type=reset].bf-disabled:focus,
-  [type=submit].bf-disabled:hover,
-  [type=submit].bf-disabled:active,
-  [type=submit].bf-disabled:focus,
-  .bf-btn.bf-disabled:hover,
-  .bf-btn.bf-disabled:active,
-  .bf-btn.bf-disabled:focus {
+  [type=submit]:focus {
     background: rgb(178.5, 178.5, 178.5);
   }
   button:active, button:focus,
@@ -2362,19 +2334,7 @@ dt {
   [type=reset]:active,
   [type=reset]:focus,
   [type=submit]:active,
-  [type=submit]:focus,
-  .bf-btn:active,
-  .bf-btn:focus,
-  button.bf-disabled:active,
-  button.bf-disabled:focus,
-  [type=button].bf-disabled:active,
-  [type=button].bf-disabled:focus,
-  [type=reset].bf-disabled:active,
-  [type=reset].bf-disabled:focus,
-  [type=submit].bf-disabled:active,
-  [type=submit].bf-disabled:focus,
-  .bf-btn.bf-disabled:active,
-  .bf-btn.bf-disabled:focus {
+  [type=submit]:focus {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
   }
   button:active, button:focus,
@@ -2383,25 +2343,8 @@ dt {
   [type=reset]:active,
   [type=reset]:focus,
   [type=submit]:active,
-  [type=submit]:focus,
-  .bf-btn:active,
-  .bf-btn:focus {
+  [type=submit]:focus {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
-  }
-  .bf-btn--primary.bf-disabled,
-  .bf-btn.bf-btn--primary {
-    background: #007bff;
-  }
-  .bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus,
-  .bf-btn.bf-btn--primary:hover,
-  .bf-btn.bf-btn--primary:active,
-  .bf-btn.bf-btn--primary:focus {
-    background: rgb(0, 110.7, 229.5);
-  }
-  .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus,
-  .bf-btn.bf-btn--primary:active,
-  .bf-btn.bf-btn--primary:focus {
-    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
   }
   a:focus,
   input:focus {
@@ -2409,14 +2352,6 @@ dt {
   }
   :focus-visible {
     outline-color: rgb(178.5, 115.5, 0);
-  }
-  .bf-table th,
-  .bf-table td {
-    border-color: #666;
-  }
-  .bf-table--zebra tbody tr:nth-child(odd),
-  .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-    background-color: #333;
   }
   dialog {
     color: #f0f0f0;

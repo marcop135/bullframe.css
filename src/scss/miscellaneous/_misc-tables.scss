@@ -1,5 +1,7 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-spacing" as v-space;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 table {
@@ -39,9 +41,9 @@ th {
 }
 
 caption {
-  padding-top: v-space.$bf-spacing-md-rem;
-  padding-bottom: v-space.$bf-spacing-md-rem;
-  color: v-color.$bf-gray;
+  padding-top: bf-v-space.$bf-spacing-md-rem;
+  padding-bottom: bf-v-space.$bf-spacing-md-rem;
+  color: bf-v-color.$bf-gray;
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;

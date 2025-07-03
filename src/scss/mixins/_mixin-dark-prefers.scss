@@ -1,0 +1,412 @@
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
+
+@mixin bf-global-dark-prefers {
+  @media (prefers-color-scheme: dark) {
+    // these are global styles tha that ovveride all the "light" styles
+
+    // the basics: background and texts
+    html {
+      color: bf-v-color.$bf-light;
+    }
+
+    body {
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
+    }
+
+    // anchors
+    a {
+      color: color.adjust(bf-v-color.$bf-blue, $lightness: 20%);
+
+      &:hover,
+      &:focus {
+        color: color.adjust(bf-v-color.$bf-blue-light, $lightness: 20%);
+      }
+    }
+
+    // typography elements that need tiny adjustments
+    mark {
+      background-color: color.adjust(bf-v-color.$bf-yellow, $lightness: -10%);
+    }
+
+    ins {
+      background-color: color.adjust(
+        bf-v-color.$bf-yellow-light,
+        $lightness: 45%
+      );
+    }
+
+    // forms
+
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    [type="range"],
+    input[list],
+    select,
+    select:not([size]):not([multiple]),
+    textarea {
+      background-color: bf-v-color.$bf-dark-extra;
+      border-color: bf-v-color.$bf-black;
+      color: bf-v-color.$bf-gray-light;
+
+      &:active,
+      &:focus {
+        background-color: bf-v-color.$bf-dark-extra;
+        border-color: color.adjust(bf-v-color.$bf-blue, $lightness: 10%);
+      }
+    }
+
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    input[list],
+    select,
+    select:not([size]):not([multiple]),
+    textarea {
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 3px rgb(3 102 214 / 50%);
+      }
+    }
+
+    .bf-focused {
+      border-color: color.adjust(bf-v-color.$bf-blue, $lightness: 10%);
+      box-shadow: 0 0 0 3px rgb(3 102 214 / 50%) !important;
+    }
+
+    .bf-invalid,
+    .bf-invalid:focus {
+      color: color.adjust(bf-v-color.$bf-red, $lightness: 7.5%) !important;
+      border-color: color.adjust(
+        bf-v-color.$bf-red,
+        $lightness: 7.5%
+      ) !important;
+    }
+
+    select:not([size]):not([multiple]) {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+    }
+
+    @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+      // hide custom arrow
+      select:not([size]):not([multiple]),
+  // RTL
+  *[dir="rtl"] select:not([size]):not([multiple]),
+  select[dir="rtl"]:not([size]):not([multiple]) {
+        background-image: none;
+      }
+    }
+
+    // range
+
+    // override above declaration
+    [type="range"] {
+      background-color: transparent;
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    // darker background
+    // the rulesets must be separated
+    [type="range"]::-webkit-slider-runnable-track {
+      background-color: bf-v-color.$bf-dark-extra;
+    }
+
+    [type="range"]::-moz-range-track {
+      background-color: bf-v-color.$bf-dark-extra;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: bf-v-color.$bf-gray;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
+    .bf-btn,
+    button.bf-disabled,
+    [type="button"].bf-disabled,
+    [type="reset"].bf-disabled,
+    [type="submit"].bf-disabled,
+    .bf-btn.bf-disabled {
+      background: bf-v-color.$bf-gray-light;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: color.adjust(bf-v-color.$bf-gray-light, $lightness: -10%);
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
+      }
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
+    .bf-btn {
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
+      }
+    }
+
+    .bf-btn--primary.bf-disabled,
+    .bf-btn.bf-btn--primary {
+      background: bf-v-color.$bf-blue;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: color.adjust(bf-v-color.$bf-blue, $lightness: -5%);
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 3px rgb(0 86 179 / 75%);
+      }
+    }
+
+    // focus
+    a:focus,
+    input:focus {
+      outline-color: color.adjust(orange, $lightness: -15%);
+    }
+
+    :focus-visible {
+      outline-color: color.adjust(orange, $lightness: -15%);
+    }
+
+    // tables
+
+    .bf-table th,
+    .bf-table td {
+      border-color: bf-v-color.$bf-gray-dark;
+    }
+
+    .bf-table--zebra tbody tr:nth-child(odd),
+    .bf-table-responsive--zebra tbody tr:nth-child(odd) {
+      background-color: bf-v-color.$bf-gray-dark-extra;
+    }
+
+    dialog {
+      color: color.adjust(bf-v-color.$bf-light, $lightness: 0%);
+      // match body background color
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
+    }
+  }
+}
+
+@mixin bf-global-dark-classless-prefers {
+  @media (prefers-color-scheme: dark) {
+    // these are global styles tha that ovveride all the "light" styles
+
+    // the basics: background and texts
+    html {
+      color: bf-v-color.$bf-light;
+    }
+
+    body {
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
+    }
+
+    // anchors
+    a {
+      color: color.adjust(bf-v-color.$bf-blue, $lightness: 20%);
+
+      &:hover,
+      &:focus {
+        color: color.adjust(bf-v-color.$bf-blue-light, $lightness: 20%);
+      }
+    }
+
+    // typography elements that need tiny adjustments
+    mark {
+      background-color: color.adjust(bf-v-color.$bf-yellow, $lightness: -10%);
+    }
+
+    ins {
+      background-color: color.adjust(
+        bf-v-color.$bf-yellow-light,
+        $lightness: 45%
+      );
+    }
+
+    // forms
+
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    [type="range"],
+    input[list],
+    select,
+    select:not([size]):not([multiple]),
+    textarea {
+      background-color: bf-v-color.$bf-dark-extra;
+      border-color: bf-v-color.$bf-black;
+      color: bf-v-color.$bf-gray-light;
+
+      &:active,
+      &:focus {
+        background-color: bf-v-color.$bf-dark-extra;
+        border-color: color.adjust(bf-v-color.$bf-blue, $lightness: 10%);
+      }
+    }
+
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    input[list],
+    select,
+    select:not([size]):not([multiple]),
+    textarea {
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 3px rgb(3 102 214 / 50%);
+      }
+    }
+
+    select:not([size]):not([multiple]) {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+    }
+
+    @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+      // hide custom arrow
+      select:not([size]):not([multiple]),
+  // RTL
+  *[dir="rtl"] select:not([size]):not([multiple]),
+  select[dir="rtl"]:not([size]):not([multiple]) {
+        background-image: none;
+      }
+    }
+
+    // range
+
+    // override above declaration
+    [type="range"] {
+      background-color: transparent;
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    // darker background
+    // the rulesets must be separated
+    [type="range"]::-webkit-slider-runnable-track {
+      background-color: bf-v-color.$bf-dark-extra;
+    }
+
+    [type="range"]::-moz-range-track {
+      background-color: bf-v-color.$bf-dark-extra;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: bf-v-color.$bf-gray;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      background: bf-v-color.$bf-gray-light;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: color.adjust(bf-v-color.$bf-gray-light, $lightness: -10%);
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
+      }
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
+      }
+    }
+
+    // focus
+    a:focus,
+    input:focus {
+      outline-color: color.adjust(orange, $lightness: -15%);
+    }
+
+    :focus-visible {
+      outline-color: color.adjust(orange, $lightness: -15%);
+    }
+
+    dialog {
+      color: color.adjust(bf-v-color.$bf-light, $lightness: 0%);
+      // match body background color
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
+    }
+  }
+}

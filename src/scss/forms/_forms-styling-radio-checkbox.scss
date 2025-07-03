@@ -1,5 +1,7 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-spacing" as v-space;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 // heavily inspired by '2020 toggles' by Aaron Iker
@@ -16,13 +18,13 @@
   vertical-align: top;
   position: relative;
 
-  border: 1px solid / v-color.$bf-gray;
+  border: 1px solid / bf-v-color.$bf-gray;
 
   + label {
     line-height: 1.8rem;
     vertical-align: top;
-    margin-left: v-space.$bf-spacing-md-px;
-    margin-left: v-space.$bf-spacing-md-rem;
+    margin-left: bf-v-space.$bf-spacing-md-px;
+    margin-left: bf-v-space.$bf-spacing-md-rem;
   }
 
   // add support for RTL languages
@@ -32,8 +34,8 @@
   *[dir="rtl"] & + label,
   &[dir="rtl"] + label {
     margin-left: 0;
-    margin-right: v-space.$bf-spacing-md-px;
-    margin-right: v-space.$bf-spacing-md-rem;
+    margin-right: bf-v-space.$bf-spacing-md-px;
+    margin-right: bf-v-space.$bf-spacing-md-rem;
   }
 
   &:after {
@@ -43,8 +45,8 @@
   }
 
   &:checked {
-    background-color: v-color.$bf-blue;
-    border-color: v-color.$bf-black;
+    background-color: bf-v-color.$bf-blue;
+    border-color: bf-v-color.$bf-black;
   }
 }
 
@@ -57,7 +59,7 @@
     top: -0.05rem;
 
     border-radius: 50%;
-    background: v-color.$bf-white;
+    background: bf-v-color.$bf-white;
 
     transform: scale(0.35);
   }
@@ -68,7 +70,7 @@
     width: 0.6rem;
     height: 0.8rem;
 
-    border: 2px solid / v-color.$bf-white;
+    border: 2px solid / bf-v-color.$bf-white;
     border-top: 0;
     border-left: 0;
 

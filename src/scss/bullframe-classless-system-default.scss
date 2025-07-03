@@ -1,8 +1,3 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-texts" as v-text;
-@use "variables/variables-spacing" as v-space;
-@use "variables/variables-breakpoints" as v-bp;
-
-@use "bullframe-classless" as BullframeClassless;
+@use "bullframe-classless" as bullframecssClassless;
 @use "utilities/utility-global-dark-prefers-classless" as
   bfUtilGlobalDarkPrefersClassless;

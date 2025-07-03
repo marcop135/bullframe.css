@@ -1,5 +1,4 @@
-// The usage of @import here, although deprecated in favor of @use and @forward in modern Sass, is justified because it allows conditional inclusion of the dark mode utility styles only when the user's system prefers a dark color scheme. This pattern ensures that the additional styles are loaded contextually, optimizing the CSS output for different user preferences.
-
-@media (prefers-color-scheme: dark) {
-  @import "utilities/utility-global-dark";
-}
+@use "../variables/variables-colors" as bf-v-color;
+@use "../mixins/mixin-dark-prefers" as bf-mix-dark-prefers;
+@use "utility-global-dark-scrollbars" as bfUtilGlobalDarkScrollbars;
+@include bf-mix-dark-prefers.bf-global-dark-classless-prefers;

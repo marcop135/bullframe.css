@@ -1,5 +1,7 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-spacing" as v-space;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 [type="email"],
@@ -17,10 +19,10 @@
 input[list],
 select,
 textarea {
-  background-color: v-color.$bf-white;
-  border: 1px solid / v-color.$bf-gray;
-  padding: v-space.$bf-spacing-md-px (v-space.$bf-spacing-lg-px * 0.75);
-  padding: v-space.$bf-spacing-md-rem (v-space.$bf-spacing-lg-rem * 0.75);
+  background-color: bf-v-color.$bf-white;
+  border: 1px solid / bf-v-color.$bf-gray;
+  padding: bf-v-space.$bf-spacing-md-px (bf-v-space.$bf-spacing-lg-px * 0.75);
+  padding: bf-v-space.$bf-spacing-md-rem (bf-v-space.$bf-spacing-lg-rem * 0.75);
 }
 
 // Old browsers and Opera Mini don't fully support all type of inputs
@@ -46,7 +48,7 @@ textarea,
   &:active,
   &:focus {
     transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-    border-color: v-color.$bf-blue;
+    border-color: bf-v-color.$bf-blue;
     box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
   }
 }
@@ -55,20 +57,20 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  color: v-color.$bf-dark;
-  padding: calc(v-space.$bf-spacing-xl-px / 3)
-    (calc(v-space.$bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: calc(v-space.$bf-spacing-xl-rem / 3)
-    (calc(v-space.$bf-spacing-xl-rem / 3) * 2);
-  background: v-color.$bf-gray-light;
+  color: bf-v-color.$bf-dark;
+  padding: calc(bf-v-space.$bf-spacing-xl-px / 3)
+    (calc(bf-v-space.$bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3)
+    (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2);
+  background: bf-v-color.$bf-gray-light;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: v-color.$bf-dark;
-    background: color.adjust(v-color.$bf-gray-light, $lightness: -10%);
+    color: bf-v-color.$bf-dark;
+    background: color.adjust(bf-v-color.$bf-gray-light, $lightness: -10%);
   }
 
   &:active,

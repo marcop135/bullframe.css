@@ -1,5 +1,7 @@
-@use "variables/variables-texts" as v-text;
-@use "variables/variables-colors" as v-color;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 html {
@@ -22,8 +24,8 @@ html {
 
 body {
   margin: 0;
-  font-size: v-text.$bf-body-font-size-rem; // '1.6rem' by default
-  line-height: v-text.$bf-body-line-height; // '1.5' by default
+  font-size: bf-v-text.$bf-body-font-size-rem; // '1.6rem' by default
+  line-height: bf-v-text.$bf-body-line-height; // '1.5' by default
 
   // this is useful to inherit values for some elements (e.g. forms)
   font-weight: 400;
@@ -66,5 +68,5 @@ body {
   // e.g. big <h1> or <h2> headlines
   word-wrap: break-word;
 
-  background-color: v-color.$bf-white;
+  background-color: bf-v-color.$bf-white;
 }

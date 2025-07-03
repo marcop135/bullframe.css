@@ -1,9 +1,11 @@
-@use "variables/variables-spacing" as v-space;
-@use "variables/variables-colors" as v-color;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 blockquote {
-  margin-bottom: v-space.$bf-spacing-xl-rem;
+  margin-bottom: bf-v-space.$bf-spacing-xl-rem;
   padding-left: 0;
   font-style: italic;
 }
@@ -13,7 +15,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: v-color.$bf-gray;
+  color: bf-v-color.$bf-gray;
   display: block;
 }
 

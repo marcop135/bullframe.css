@@ -468,6 +468,26 @@ table th[class^=bf-col] {
   margin-bottom: 3rem !important;
 }
 
+.bf-m-t-1 {
+  margin-top: 5px !important;
+  margin-top: 0.5rem !important;
+}
+
+.bf-m-t-2 {
+  margin-top: 10px !important;
+  margin-top: 1rem !important;
+}
+
+.bf-m-t-3 {
+  margin-top: 20px !important;
+  margin-top: 2rem !important;
+}
+
+.bf-m-t-4 {
+  margin-top: 30px !important;
+  margin-top: 3rem !important;
+}
+
 .bf-m-b-1 {
   margin-bottom: 5px !important;
   margin-bottom: 0.5rem !important;

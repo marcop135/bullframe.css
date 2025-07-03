@@ -233,18 +233,6 @@ hr {
   overflow: visible;
 }
 
-address {
-  font-style: normal;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
-  line-height: inherit;
-}
-
-summary {
-  display: list-item;
-  cursor: pointer;
-}
-
 a {
   color: #007bff;
   text-decoration: none;
@@ -452,6 +440,44 @@ progress[value]::-webkit-progress-value {
 
 iframe {
   border-style: none;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  line-height: inherit;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+dialog {
+  background-color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 20px;
+  padding: 2rem;
+  min-width: 25rem;
+  max-width: calc(100vw - 3rem);
+  display: none;
+}
+@media (min-width: 768px) {
+  dialog {
+    max-width: 50rem;
+  }
+}
+
+dialog[open] {
+  display: block;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 html input,
@@ -1798,8 +1824,8 @@ p.bf-lead {
 }
 
 body.bf-responsive-typography {
-  --body-rt-font-size-flex: calc(1.6rem + 3 * ((100vw - 320px) / 680));
-  --body-rt-font-size-max: 1.9rem;
+  --body-rt-font-size-flex: calc(1.5rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 1.8rem;
 }
 
 @media (min-width: 320px) {
@@ -2423,5 +2449,9 @@ dt {
   .bf-table--zebra tbody tr:nth-child(odd),
   .bf-table-responsive--zebra tbody tr:nth-child(odd) {
     background-color: #333;
+  }
+  dialog {
+    color: #f0f0f0;
+    background-color: rgb(36.125, 36.125, 36.125);
   }
 }

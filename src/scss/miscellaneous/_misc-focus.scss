@@ -1,17 +1,3 @@
-// ! ':not' is IE9+
-// https://caniuse.com/#feat=mdn-css_selectors_not
-//
-// ! and ':focus-visible'
-// https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
-//
-// don't have some much browser support now (May 2020)
-// https://caniuse.com/#feat=css-focus-visible
-//
-// but is good in a progressive enhancement future view
-//
-// and you could polyfill it for a wide cross-browser support right now
-// https://github.com/WICG/focus-visible
-//
 // remove focus if is not keyboard
 // and if these elements are not focused globally
 :focus:not(:focus-visible) {
@@ -38,17 +24,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-[tabindex='-1']:focus:not(:focus-visible) {
+[tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
-// style the ':focus' outline on anchors and inputs
-// this is for consistency
-// e.g.
-// in webkit (Chrome, Safari) the outline is blue with a subtle box-shadow
-// in trident (IE) is just pointed black
-// in gecko (FF) is pointed black, but it's a thiner
-// ...
 a:focus,
 input:focus {
   outline: 2px solid orange;
@@ -71,23 +50,23 @@ input:focus {
 // with JS or extra <div>s
 // https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
 button,
-[type='button'],
-[type='reset'],
-[type='submit'],
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='time'],
-[type='week'],
-[type='url'],
-[type='radio'],
-[type='checkbox'],
+[type="button"],
+[type="reset"],
+[type="submit"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="url"],
+[type="radio"],
+[type="checkbox"],
 input[list],
 select,
 textarea {

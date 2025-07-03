@@ -4,7 +4,7 @@
 @use "utility-global-dark-scrollbars" as bfUtilGlobalDarkScrollbars;
 @use "sass:color";
 
-// these are global stylest tha that ovveride all the "light" styles
+// these are global styles that ovveride all the "light" styles
 
 // the basics: background and texts
 html {
@@ -90,8 +90,6 @@ select:not([size]):not([multiple]) {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
 
-// IE9 only hack
-// https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
 @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   // hide custom arrow
   select:not([size]):not([multiple]),
@@ -157,4 +155,22 @@ input:focus {
 
 :focus-visible {
   outline-color: darken(orange, 15%);
+}
+
+// tables
+
+.bf-table th,
+.bf-table td {
+  border-color: bfVarsColors.$bf-gray-dark;
+}
+
+.bf-table--zebra tbody tr:nth-child(odd),
+.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  background-color: bfVarsColors.$bf-gray-dark-extra;
+}
+
+dialog {
+  color: bfVarsColors.$bf-light;
+  // match body background color
+  background-color: lighten(bfVarsColors.$bf-dark-extra, 7.5%);
 }

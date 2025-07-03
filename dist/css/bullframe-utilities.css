@@ -173,7 +173,7 @@ table th[class^=bf-col] {
 
 /*
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-// 
+//
 * Hide only visually, but have it available for screen readers:
 * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 *
@@ -195,7 +195,7 @@ table th[class^=bf-col] {
 
 /*
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-// 
+//
 * Extends the .sr-only class to allow the element
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
@@ -449,62 +449,50 @@ table th[class^=bf-col] {
 }
 
 .bf-m-1 {
-  margin-bottom: 5px !important;
   margin-bottom: 0.5rem !important;
 }
 
 .bf-m-2 {
-  margin-bottom: 10px !important;
   margin-bottom: 1rem !important;
 }
 
 .bf-m-3 {
-  margin-bottom: 20px !important;
   margin-bottom: 2rem !important;
 }
 
 .bf-m-4 {
-  margin-bottom: 30px !important;
   margin-bottom: 3rem !important;
 }
 
 .bf-m-t-1 {
-  margin-top: 5px !important;
   margin-top: 0.5rem !important;
 }
 
 .bf-m-t-2 {
-  margin-top: 10px !important;
   margin-top: 1rem !important;
 }
 
 .bf-m-t-3 {
-  margin-top: 20px !important;
   margin-top: 2rem !important;
 }
 
 .bf-m-t-4 {
-  margin-top: 30px !important;
   margin-top: 3rem !important;
 }
 
 .bf-m-b-1 {
-  margin-bottom: 5px !important;
   margin-bottom: 0.5rem !important;
 }
 
 .bf-m-b-2 {
-  margin-bottom: 10px !important;
   margin-bottom: 1rem !important;
 }
 
 .bf-m-b-3 {
-  margin-bottom: 20px !important;
   margin-bottom: 2rem !important;
 }
 
 .bf-m-b-4 {
-  margin-bottom: 30px !important;
   margin-bottom: 3rem !important;
 }
 
@@ -529,62 +517,50 @@ table th[class^=bf-col] {
 }
 
 .bf-p-1 {
-  padding-bottom: 5px !important;
   padding-bottom: 0.5rem !important;
 }
 
 .bf-p-2 {
-  padding-bottom: 10px !important;
   padding-bottom: 1rem !important;
 }
 
 .bf-p-3 {
-  padding-bottom: 20px !important;
   padding-bottom: 2rem !important;
 }
 
 .bf-p-4 {
-  padding-bottom: 30px !important;
   padding-bottom: 3rem !important;
 }
 
 .bf-p-t-1 {
-  padding-top: 5px !important;
   padding-top: 0.5rem !important;
 }
 
 .bf-p-t-2 {
-  padding-top: 10px !important;
   padding-top: 1rem !important;
 }
 
 .bf-p-t-3 {
-  padding-top: 20px !important;
   padding-top: 2rem !important;
 }
 
 .bf-p-t-4 {
-  padding-top: 30px !important;
   padding-top: 3rem !important;
 }
 
 .bf-p-b-1 {
-  padding-bottom: 5px !important;
   padding-bottom: 0.5rem !important;
 }
 
 .bf-p-b-2 {
-  padding-bottom: 10px !important;
   padding-bottom: 1rem !important;
 }
 
 .bf-p-b-3 {
-  padding-bottom: 20px !important;
   padding-bottom: 2rem !important;
 }
 
 .bf-p-b-4 {
-  padding-bottom: 30px !important;
   padding-bottom: 3rem !important;
 }
 
@@ -757,7 +733,7 @@ body.bf-responsive-typography {
   display: inline-block;
   cursor: pointer;
   color: #222;
-  padding: 6.6666666667px 13.3333333333px;
+  padding: 0.6666666667rem 1.3333333333rem;
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -946,10 +922,8 @@ dt {
 
 .bf-table th,
 .bf-table td {
-  padding: 10px;
   padding: 1rem;
   border-bottom: 1px solid #999;
-  margin-bottom: 5px;
   margin-bottom: 0.5rem;
 }
 
@@ -961,7 +935,6 @@ dt {
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: 5px;
   margin-bottom: 0.5rem;
 }
 

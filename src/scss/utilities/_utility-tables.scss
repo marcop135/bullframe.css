@@ -5,36 +5,25 @@
 
 .bf-table th,
 .bf-table td {
-  padding: bfVarsSpacing.$bf-spacing-lg-px;
   padding: bfVarsSpacing.$bf-spacing-lg-rem;
   border-bottom: 1px solid bfVarsColors.$bf-gray;
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
   margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
 }
 
 // responsive tables
-// ! issues on Opera 10-11, Opera Mobile Presto and Opera Mini
-// Read more about Opera: http://barrow.io/overflow-scrolling
-
 .bf-table-responsive {
   overflow-x: auto;
   overflow-y: hidden;
-
-  // this is a not standard CSS property, so it's for IE only
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
   -ms-overflow-style: scrollbar;
 }
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: bfVarsSpacing.$bf-spacing-md-px;
   margin-bottom: bfVarsSpacing.$bf-spacing-md-rem;
 }
 
 // force webkit scrollbars appearance
 .bf-table-responsive.scrollbar {
-  // this is a not standard CSS property, so it's for webkit only
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
   -webkit-overflow-scrolling: auto;
 }
 

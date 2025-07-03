@@ -31,13 +31,6 @@ img {
   border-style: none;
 }
 
-// useful for CMS generated images
-// but causes layout breaking
-// img[width],
-// img[height] {
-// 	max-width: none;
-// }
-
 figure {
   margin: 0;
 }
@@ -98,9 +91,6 @@ progress[value] {
   color: bfVarsColors.$bf-blue;
 }
 
-// ! this is not a standard feature, is webkit only
-// https://developer.mozilla.org/en-US/docs/Web/CSS/%3A%3A-webkit-progress-bar
-//
 // progress value background color in webkit
 progress[value]::-webkit-progress-bar {
   background: bfVarsColors.$bf-gray-light;

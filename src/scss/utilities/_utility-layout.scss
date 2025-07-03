@@ -2,7 +2,7 @@
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .bf-clearfix:before,
 .bf-clearfix:after {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -33,7 +33,7 @@
 
 /*
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-// 
+//
 * Hide only visually, but have it available for screen readers:
 * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 *
@@ -55,7 +55,7 @@
 
 /*
 // taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-// 
+//
 * Extends the .sr-only class to allow the element
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
@@ -98,9 +98,6 @@
   display: inline-block !important;
 }
 
-// IE10+
-// https://caniuse.com/#feat=flexbox
-
 .bf-display-flex {
   display: flex !important;
 }
@@ -136,9 +133,6 @@
 .bf-float-right {
   float: right !important;
 }
-
-// ≠ IE
-// https://caniuse.com/css-sticky
 .bf-position-fixed {
   position: fixed !important;
 }
@@ -149,8 +143,6 @@
 }
 
 // https://css-tricks.com/centering-css-complete-guide
-// Is the element of unknown width and height?
-// ! 'transform' is IE10 + https://caniuse.com/#feat=transforms2d
 .bf-align-center-unknown {
   position: relative !important;
 }

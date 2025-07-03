@@ -38,11 +38,7 @@ select:not([size]):not([multiple]) {
     bfVarsSpacing.$bf-spacing-lg-rem;
 }
 
-// IE10+
-// The '::-ms-expand' CSS pseudo-element is a Microsoft extension that represents
-// the button of a <select> menu control that opens or closes the drop-down
-// menu. Typically it is a triangle that points downward.
-// https://developer.mozilla.org/en-US/docs/Web/CSS/::-ms-expand
+// Legacy Edge browser support
 select::-ms-expand {
   display: none;
 }

@@ -19,9 +19,6 @@
 
 // truncate a multiline text via line-clamp
 //
-// no IE support
-// https://caniuse.com/css-line-clamp
-//
 // demo https://codepen.io/devam-soni/pen/PoqaKWm
 
 @mixin bf-text-truncate--multiline-2 {
@@ -29,10 +26,12 @@
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
+  line-clamp: 3 !important;
   -webkit-box-orient: vertical !important;
 }
 
 @mixin bf-text-truncate--multiline-3 {
   @include bf-text-truncate--multiline-2;
   -webkit-line-clamp: 3 !important;
+  line-clamp: 3 !important;
 }

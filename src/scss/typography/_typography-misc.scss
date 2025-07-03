@@ -3,7 +3,6 @@
 @use "sass:color";
 
 p {
-  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-px 0;
   margin: 0 0 bfVarsSpacing.$bf-spacing-xl-rem 0;
 }
 
@@ -39,9 +38,9 @@ strong {
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari
-/* stylelint-disable-next-line */
 b,
 strong {
+  /* stylelint-disable-next-line */
   font-weight: bolder;
 }
 
@@ -83,8 +82,7 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: bfVarsSpacing.$bf-spacing-xl-px 0;
   margin: bfVarsSpacing.$bf-spacing-xl-rem 0;
   padding: 0;
-  overflow: visible; // Show the overflow in Edge and IE
+  overflow: visible; // Show the overflow in Edge
 }

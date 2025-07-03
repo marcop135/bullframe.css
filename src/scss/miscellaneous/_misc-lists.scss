@@ -6,7 +6,6 @@ menu,
 ol,
 ul,
 dl {
-  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-px 0;
   margin: 0 0 bfVarsSpacing.$bf-spacing-xl-rem 0;
   padding: 0;
 }
@@ -23,7 +22,6 @@ dd {
 
 ul,
 ol {
-  margin-left: bfVarsSpacing.$bf-spacing-xl-px;
   margin-left: bfVarsSpacing.$bf-spacing-xl-rem;
 }
 

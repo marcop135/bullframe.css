@@ -200,8 +200,6 @@ textarea {
   font: inherit; // Safari
 }
 
-// ! IE9+
-// https://caniuse.com/#feat=border-radius
 button,
 input,
 select,
@@ -209,8 +207,6 @@ textarea {
   border-radius: bfVarsSpacing.$bf-spacing-sm-rem;
 }
 
-// ! IE9+
-// https://caniuse.com/#feat=border-radius
 [type="radio"] {
   border-radius: 50%;
 }

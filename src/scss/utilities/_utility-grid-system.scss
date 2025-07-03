@@ -133,7 +133,7 @@
   }
 }
 
-// Table fix (not needed for flex, but kept for compatibility)
+// Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x)
 table td[class^="bf-col"],
 table th[class^="bf-col"] {
   position: static;

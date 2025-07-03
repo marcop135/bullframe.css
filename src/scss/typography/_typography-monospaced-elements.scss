@@ -1,7 +1,6 @@
 @use "variables/variables-spacing" as bfVarsSpacing;
 
 pre {
-  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-px 0;
   margin: 0 0 bfVarsSpacing.$bf-spacing-xl-rem 0;
 
   display: block;
@@ -11,9 +10,6 @@ pre {
   white-space: pre;
   hyphens: none;
 
-  // this is a not standard CSS property, so it's for IE only
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style
-  //
   // Disable auto-hiding scrollbar in legacy Edge
   // https://github.com/twbs/bootstrap/pull/30685
   -ms-overflow-style: auto;

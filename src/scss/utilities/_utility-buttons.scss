@@ -6,8 +6,8 @@
   display: inline-block;
   cursor: pointer;
   color: bfVarsColors.$bf-dark;
-  padding: calc(bfVarsSpacing.$bf-spacing-xl-px / 3)
-    (calc(bfVarsSpacing.$bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: calc(bfVarsSpacing.$bf-spacing-xl-rem / 3)
+    (calc(bfVarsSpacing.$bf-spacing-xl-rem / 3) * 2); // 8px 16px
   line-height: normal;
   text-align: center;
   margin: 0;

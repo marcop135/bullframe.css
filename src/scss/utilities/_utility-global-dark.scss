@@ -101,8 +101,6 @@ select:not([size]):not([multiple]) {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
 
-// IE9 only hack
-// https://gist.github.com/marcop135/cf5163ab23d1cb208248b955c990b2ea#ie-9-only
 @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   // hide custom arrow
   select:not([size]):not([multiple]),
@@ -115,26 +113,23 @@ select:not([size]):not([multiple]) {
 
 // range
 
-// all modern browsers but not IE
-@supports (appearance: none) {
-  // override above declaration
-  [type="range"] {
+// override above declaration
+[type="range"] {
+  background-color: transparent;
+
+  &:focus {
     background-color: transparent;
-
-    &:focus {
-      background-color: transparent;
-    }
   }
+}
 
-  // darker background
-  // the rulesets must be separated
-  [type="range"]::-webkit-slider-runnable-track {
-    background-color: bfVarsColors.$bf-dark-extra;
-  }
+// darker background
+// the rulesets must be separated
+[type="range"]::-webkit-slider-runnable-track {
+  background-color: bfVarsColors.$bf-dark-extra;
+}
 
-  [type="range"]::-moz-range-track {
-    background-color: bfVarsColors.$bf-dark-extra;
-  }
+[type="range"]::-moz-range-track {
+  background-color: bfVarsColors.$bf-dark-extra;
 }
 
 input::placeholder,

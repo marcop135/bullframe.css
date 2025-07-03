@@ -1,4 +1,7 @@
-@use "variables/variables-colors" as v-color;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 audio,
@@ -85,18 +88,18 @@ progress[value] {
   height: 2rem;
 
   // progress bar background color
-  background: v-color.$bf-gray-light;
+  background: bf-v-color.$bf-gray-light;
 
   // progress value background color in IE10+
-  color: v-color.$bf-blue;
+  color: bf-v-color.$bf-blue;
 }
 
 // progress value background color in webkit
 progress[value]::-webkit-progress-bar {
-  background: v-color.$bf-gray-light;
+  background: bf-v-color.$bf-gray-light;
 }
 progress[value]::-webkit-progress-value {
-  background: v-color.$bf-blue;
+  background: bf-v-color.$bf-blue;
 }
 
 // remove default border in old browsers

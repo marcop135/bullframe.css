@@ -1,5 +1,7 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-spacing" as v-space;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 // normalization, enhancement and responsiveness
@@ -96,8 +98,8 @@ legend {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: v-space.$bf-spacing-md-px;
-  margin-bottom: v-space.$bf-spacing-md-rem;
+  margin-bottom: bf-v-space.$bf-spacing-md-px;
+  margin-bottom: bf-v-space.$bf-spacing-md-rem;
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -107,8 +109,8 @@ label {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: v-space.$bf-spacing-md-px;
-  margin-bottom: v-space.$bf-spacing-md-rem;
+  margin-bottom: bf-v-space.$bf-spacing-md-px;
+  margin-bottom: bf-v-space.$bf-spacing-md-rem;
 }
 
 label input,
@@ -137,7 +139,7 @@ label textarea {
 }
 
 [type="search"] {
-  outline-offset: calc(-1 * v-space.$bf-spacing-sm-rem);
+  outline-offset: calc(-1 * bf-v-space.$bf-spacing-sm-rem);
 }
 
 output {
@@ -204,7 +206,7 @@ button,
 input,
 select,
 textarea {
-  border-radius: v-space.$bf-spacing-sm-rem;
+  border-radius: bf-v-space.$bf-spacing-sm-rem;
 }
 
 [type="radio"] {
@@ -212,13 +214,13 @@ textarea {
 }
 
 [type="checkbox"] {
-  border-radius: v-space.$bf-spacing-md-rem;
+  border-radius: bf-v-space.$bf-spacing-md-rem;
 }
 
 [type="radio"],
 [type="checkbox"] {
   padding: 0;
-  background-color: v-color.$bf-white;
+  background-color: bf-v-color.$bf-white;
 }
 
 [type="range"] {
@@ -268,7 +270,7 @@ button,
   &:active,
   &:focus {
     text-decoration: none;
-    color: v-color.$bf-dark;
+    color: bf-v-color.$bf-dark;
   }
 }
 
@@ -289,7 +291,7 @@ input[type="button"],
 // Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
 input::placeholder,
 textarea::placeholder {
-  color: v-color.$bf-gray-dark;
+  color: bf-v-color.$bf-gray-dark;
 }
 
 // remove ':invalid' styles in FF

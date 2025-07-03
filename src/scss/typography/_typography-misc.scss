@@ -1,9 +1,11 @@
-@use "variables/variables-spacing" as v-space;
-@use "variables/variables-colors" as v-color;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 p {
-  margin: 0 0 v-space.$bf-spacing-xl-rem 0;
+  margin: 0 0 bf-v-space.$bf-spacing-xl-rem 0;
 }
 
 // Abbreviations (taken from Bootstrap 4)
@@ -20,13 +22,13 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: v-color.$bf-yellow;
-  color: v-color.$bf-black;
+  background-color: bf-v-color.$bf-yellow;
+  color: bf-v-color.$bf-black;
 }
 
 ins {
-  background-color: v-color.$bf-yellow-light;
-  color: v-color.$bf-black;
+  background-color: bf-v-color.$bf-yellow-light;
+  color: bf-v-color.$bf-black;
   text-decoration: none;
 }
 
@@ -82,7 +84,7 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: v-space.$bf-spacing-xl-rem 0;
+  margin: bf-v-space.$bf-spacing-xl-rem 0;
   padding: 0;
   overflow: visible; // Show the overflow in Edge
 }

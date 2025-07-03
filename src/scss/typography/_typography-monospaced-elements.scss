@@ -1,7 +1,11 @@
-@use "variables/variables-spacing" as v-space;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 pre {
-  margin: 0 0 v-space.$bf-spacing-xl-rem 0;
+  margin: 0 0 bf-v-space.$bf-spacing-xl-rem 0;
 
   display: block;
   overflow: auto;

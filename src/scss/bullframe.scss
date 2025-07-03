@@ -1,7 +1,7 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-texts" as v-text;
-@use "variables/variables-spacing" as v-space;
-@use "variables/variables-breakpoints" as v-bp;
+@use "variables/variables-colors" as bf-v-color;
+@use "variables/variables-texts" as bf-v-text;
+@use "variables/variables-spacing" as bf-v-space;
+@use "variables/variables-breakpoints" as bf-v-bp;
 
 @use "miscellaneous/misc-layout" as bfMiscLayout;
 @use "typography/typography-html-body" as bfTypographyHtmlBody;

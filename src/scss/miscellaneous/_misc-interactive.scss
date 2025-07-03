@@ -1,12 +1,13 @@
-@use "variables/variables-spacing" as v-space;
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-breakpoints" as v-bp;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 address {
   font-style: normal;
-  margin-bottom: v-space.$bf-spacing-lg-px;
-  margin-bottom: v-space.$bf-spacing-lg-rem;
+  margin-bottom: bf-v-space.$bf-spacing-lg-px;
+  margin-bottom: bf-v-space.$bf-spacing-lg-rem;
   line-height: inherit;
 }
 
@@ -19,14 +20,14 @@ summary {
 
 dialog {
   // match body background color
-  background-color: v-color.$bf-white;
+  background-color: bf-v-color.$bf-white;
   border: none;
-  border-radius: v-space.$bf-spacing-sm-rem;
-  padding: v-space.$bf-spacing-xl-px;
-  padding: v-space.$bf-spacing-xl-rem;
+  border-radius: bf-v-space.$bf-spacing-sm-rem;
+  padding: bf-v-space.$bf-spacing-xl-px;
+  padding: bf-v-space.$bf-spacing-xl-rem;
   min-width: 25rem;
-  max-width: calc(100vw - (v-space.$bf-spacing-grid-gutter-rem * 2));
-  @media (min-width: v-bp.$bf-breakpoint-md) {
+  max-width: calc(100vw - (bf-v-space.$bf-spacing-grid-gutter-rem * 2));
+  @media (min-width: bf-v-bp.$bf-breakpoint-md) {
     max-width: 50rem;
   }
 }

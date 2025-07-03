@@ -1,5 +1,7 @@
-@use "variables/variables-colors" as v-color;
-@use "variables/variables-spacing" as v-space;
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
 // styling input range in modern browsers safely using the @supports CSS-at-rule
@@ -20,13 +22,13 @@
   width: 1.5rem;
   height: 1.5rem;
   margin-top: -0.25rem;
-  background-color: v-color.$bf-blue;
+  background-color: bf-v-color.$bf-blue;
   border-radius: 1.5rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 
   &:active {
-    background-color: v-color.$bf-blue;
+    background-color: bf-v-color.$bf-blue;
   }
 }
 
@@ -36,13 +38,13 @@
 
   width: 1.5rem;
   height: 1.5rem;
-  background-color: v-color.$bf-blue;
+  background-color: bf-v-color.$bf-blue;
   border-radius: 1.5rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 
   &:active {
-    background-color: v-color.$bf-blue;
+    background-color: bf-v-color.$bf-blue;
   }
 }
 
@@ -53,7 +55,7 @@
   width: 100%;
   height: 0.65rem;
   cursor: pointer;
-  background-color: v-color.$bf-gray-light-extra;
+  background-color: bf-v-color.$bf-gray-light-extra;
 }
 
 [type="range"]::-moz-range-track {
@@ -63,19 +65,19 @@
   width: 100%;
   height: 0.65rem;
   cursor: pointer;
-  background-color: v-color.$bf-gray-light-extra;
+  background-color: bf-v-color.$bf-gray-light-extra;
 }
 
 [type="range"]:focus {
   outline: none;
 
   &::-webkit-slider-thumb {
-    box-shadow: 0 0 0 0.1rem / v-color.$bf-white,
+    box-shadow: 0 0 0 0.1rem / bf-v-color.$bf-white,
       0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 
   &::-moz-slider-thumb {
-    box-shadow: 0 0 0 0.1rem / v-color.$bf-white,
+    box-shadow: 0 0 0 0.1rem / bf-v-color.$bf-white,
       0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 }
@@ -85,7 +87,7 @@
 }
 
 [type="range"]:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.1rem / v-color.$bf-white,
+  box-shadow: 0 0 0 0.1rem / bf-v-color.$bf-white,
     0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
@@ -95,10 +97,10 @@
   pointer-events: none;
 
   &::-webkit-slider-thumb {
-    background-color: v-color.$bf-gray-light;
+    background-color: bf-v-color.$bf-gray-light;
   }
 
   &::-moz-slider-thumb {
-    background-color: v-color.$bf-gray-light;
+    background-color: bf-v-color.$bf-gray-light;
   }
 }

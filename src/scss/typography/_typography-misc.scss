@@ -88,15 +88,3 @@ hr {
   padding: 0;
   overflow: visible; // Show the overflow in Edge and IE
 }
-
-address {
-  font-style: normal;
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-px;
-  margin-bottom: bfVarsSpacing.$bf-spacing-lg-rem;
-  line-height: inherit;
-}
-
-summary {
-  display: list-item;
-  cursor: pointer;
-}

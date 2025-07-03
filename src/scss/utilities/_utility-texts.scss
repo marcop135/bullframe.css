@@ -188,8 +188,8 @@ p.bf-lead {
 // https://caniuse.com/#feat=css-variables
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 body.bf-responsive-typography {
-  --body-rt-font-size-flex: calc(1.6rem + 3 * ((100vw - 320px) / 680));
-  --body-rt-font-size-max: 1.9rem;
+  --body-rt-font-size-flex: calc(1.5rem + 3 * ((100vw - 320px) / 680));
+  --body-rt-font-size-max: 1.8rem;
 }
 
 @media (min-width: 320px) {

@@ -1,8 +1,8 @@
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 a {
-  color: bfVarsColors.$bf-blue; // bootstrap blue
+  color: v-color.$bf-blue; // bootstrap blue
   text-decoration: none;
 
   // Edge Legacy: Remove grey background on active links
@@ -11,7 +11,7 @@ a {
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: bfVarsColors.$bf-blue-light;
+    color: v-color.$bf-blue-light;
   }
 }
 

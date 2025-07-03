@@ -1,5 +1,5 @@
-@use "variables/variables-colors" as bfVarsColors;
-@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as v-color;
+@use "variables/variables-spacing" as v-space;
 @use "sass:color";
 
 table {
@@ -39,9 +39,9 @@ th {
 }
 
 caption {
-  padding-top: bfVarsSpacing.$bf-spacing-md-rem;
-  padding-bottom: bfVarsSpacing.$bf-spacing-md-rem;
-  color: bfVarsColors.$bf-gray;
+  padding-top: v-space.$bf-spacing-md-rem;
+  padding-bottom: v-space.$bf-spacing-md-rem;
+  color: v-color.$bf-gray;
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;

@@ -1,5 +1,5 @@
-@use "variables/variables-texts" as bfVarsTexts;
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-texts" as v-text;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 html {
@@ -17,13 +17,13 @@ html {
 
   // remove a tap background when a link or interactive element is focused
   // if is touch
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 body {
   margin: 0;
-  font-size: bfVarsTexts.$bf-body-font-size-rem; // '1.6rem' by default
-  line-height: bfVarsTexts.$bf-body-line-height; // '1.5' by default
+  font-size: v-text.$bf-body-font-size-rem; // '1.6rem' by default
+  line-height: v-text.$bf-body-line-height; // '1.5' by default
 
   // this is useful to inherit values for some elements (e.g. forms)
   font-weight: 400;
@@ -66,5 +66,5 @@ body {
   // e.g. big <h1> or <h2> headlines
   word-wrap: break-word;
 
-  background-color: bfVarsColors.$bf-white;
+  background-color: v-color.$bf-white;
 }

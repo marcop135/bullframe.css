@@ -1,5 +1,5 @@
-@use "variables/variables-colors" as bfVarsColors;
-@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as v-color;
+@use "variables/variables-spacing" as v-space;
 @use "sass:color";
 
 // heavily inspired by '2020 toggles' by Aaron Iker
@@ -16,13 +16,13 @@
   vertical-align: top;
   position: relative;
 
-  border: 1px solid / bfVarsColors.$bf-gray;
+  border: 1px solid / v-color.$bf-gray;
 
   + label {
     line-height: 1.8rem;
     vertical-align: top;
-    margin-left: bfVarsSpacing.$bf-spacing-md-px;
-    margin-left: bfVarsSpacing.$bf-spacing-md-rem;
+    margin-left: v-space.$bf-spacing-md-px;
+    margin-left: v-space.$bf-spacing-md-rem;
   }
 
   // add support for RTL languages
@@ -32,8 +32,8 @@
   *[dir="rtl"] & + label,
   &[dir="rtl"] + label {
     margin-left: 0;
-    margin-right: bfVarsSpacing.$bf-spacing-md-px;
-    margin-right: bfVarsSpacing.$bf-spacing-md-rem;
+    margin-right: v-space.$bf-spacing-md-px;
+    margin-right: v-space.$bf-spacing-md-rem;
   }
 
   &:after {
@@ -43,8 +43,8 @@
   }
 
   &:checked {
-    background-color: bfVarsColors.$bf-blue;
-    border-color: bfVarsColors.$bf-black;
+    background-color: v-color.$bf-blue;
+    border-color: v-color.$bf-black;
   }
 }
 
@@ -57,7 +57,7 @@
     top: -0.05rem;
 
     border-radius: 50%;
-    background: bfVarsColors.$bf-white;
+    background: v-color.$bf-white;
 
     transform: scale(0.35);
   }
@@ -68,7 +68,7 @@
     width: 0.6rem;
     height: 0.8rem;
 
-    border: 2px solid / bfVarsColors.$bf-white;
+    border: 2px solid / v-color.$bf-white;
     border-top: 0;
     border-left: 0;
 

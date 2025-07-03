@@ -1,12 +1,12 @@
-@use "variables/variables-colors" as bfVarsColors;
-@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as v-color;
+@use "variables/variables-spacing" as v-space;
 @use "sass:color";
 
 menu,
 ol,
 ul,
 dl {
-  margin: 0 0 bfVarsSpacing.$bf-spacing-xl-rem 0;
+  margin: 0 0 v-space.$bf-spacing-xl-rem 0;
   padding: 0;
 }
 
@@ -22,7 +22,7 @@ dd {
 
 ul,
 ol {
-  margin-left: bfVarsSpacing.$bf-spacing-xl-rem;
+  margin-left: v-space.$bf-spacing-xl-rem;
 }
 
 nav ol,

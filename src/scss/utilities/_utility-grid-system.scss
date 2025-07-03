@@ -1,5 +1,5 @@
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-breakpoints" as bfVarsBreakpoints;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-breakpoints" as v-bp;
 
 .bf-container,
 .bf-container--fluid {
@@ -7,8 +7,8 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: bfVarsSpacing.$bf-spacing-grid-gutter-rem;
-  padding-right: bfVarsSpacing.$bf-spacing-grid-gutter-rem;
+  padding-left: v-space.$bf-spacing-grid-gutter-rem;
+  padding-right: v-space.$bf-spacing-grid-gutter-rem;
 }
 
 .bf-container {
@@ -18,15 +18,15 @@
 .bf-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * bfVarsSpacing.$bf-spacing-grid-gutter-rem);
-  margin-right: calc(-1 * bfVarsSpacing.$bf-spacing-grid-gutter-rem);
+  margin-left: calc(-1 * v-space.$bf-spacing-grid-gutter-rem);
+  margin-right: calc(-1 * v-space.$bf-spacing-grid-gutter-rem);
 }
 
 [class^="bf-col-"] {
   position: relative;
   min-height: 1px;
-  padding-left: bfVarsSpacing.$bf-spacing-grid-gutter-rem;
-  padding-right: bfVarsSpacing.$bf-spacing-grid-gutter-rem;
+  padding-left: v-space.$bf-spacing-grid-gutter-rem;
+  padding-right: v-space.$bf-spacing-grid-gutter-rem;
   flex-grow: 0;
   flex-shrink: 0;
 }

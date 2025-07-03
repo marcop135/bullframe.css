@@ -1,12 +1,12 @@
-@use "variables/variables-texts" as bfVarsTexts;
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-texts" as v-text;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-colors" as v-color;
 @use "sass:color";
 
 .bf-focused {
   transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
-  border-color: bfVarsColors.$bf-blue !important;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
+  border-color: v-color.$bf-blue !important;
+  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%) !important;
 }
 
 .bf-disabled,
@@ -24,8 +24,8 @@
   box-shadow: none !important;
   opacity: 0.5 !important;
 
-  background-color: bfVarsColors.$bf-white;
-  border-color: bfVarsColors.$bf-gray;
+  background-color: v-color.$bf-white;
+  border-color: v-color.$bf-gray;
 }
 
 label.bf-disabled {
@@ -45,15 +45,15 @@ button.bf-disabled,
   box-shadow: none;
   opacity: 0.5;
 
-  color: bfVarsColors.$bf-dark;
-  background: bfVarsColors.$bf-gray-light;
+  color: v-color.$bf-dark;
+  background: v-color.$bf-gray-light;
 
   &:hover,
   &:active,
   &:focus {
     box-shadow: none;
-    color: bfVarsColors.$bf-dark;
-    background: bfVarsColors.$bf-gray-light;
+    color: v-color.$bf-dark;
+    background: v-color.$bf-gray-light;
   }
 }
 
@@ -65,21 +65,21 @@ button.bf-disabled,
   box-shadow: none;
   opacity: 0.5;
 
-  color: bfVarsColors.$bf-white;
-  background: bfVarsColors.$bf-blue;
+  color: v-color.$bf-white;
+  background: v-color.$bf-blue;
 
   &:hover,
   &:active,
   &:focus {
     box-shadow: none;
-    color: bfVarsColors.$bf-white;
-    background: bfVarsColors.$bf-blue;
+    color: v-color.$bf-white;
+    background: v-color.$bf-blue;
   }
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: bfVarsColors.$bf-red !important;
-  border-color: bfVarsColors.$bf-red !important;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
+  color: v-color.$bf-red !important;
+  border-color: v-color.$bf-red !important;
+  box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }

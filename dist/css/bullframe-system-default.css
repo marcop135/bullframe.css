@@ -456,7 +456,6 @@ dialog {
   padding: 2rem;
   min-width: 25rem;
   max-width: calc(100vw - 3rem);
-  display: none;
 }
 @media (min-width: 768px) {
   dialog {
@@ -465,7 +464,7 @@ dialog {
 }
 
 dialog[open] {
-  display: block;
+  display: block !important;
 }
 
 dialog::backdrop {
@@ -2183,7 +2182,7 @@ dt {
     background-color: #cccc00;
   }
   ins {
-    background-color: rgb(178.5, 178.5, 0);
+    background-color: hsl(60, 100%, 125%);
   }
   [type=email],
   [type=number],

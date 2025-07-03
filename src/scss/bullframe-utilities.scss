@@ -1,7 +1,8 @@
-@use "variables/variables-colors" as bfColors;
-@use "variables/variables-texts" as bfTexts;
-@use "variables/variables-spacing" as bfSpacing;
-@use "variables/variables-breakpoints" as bfBreakpoints;
+@use "variables/variables-colors" as v-color;
+@use "variables/variables-texts" as v-text;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-breakpoints" as v-bp;
+
 @use "utilities/utility-grid-system" as bfGridSystem;
 @use "utilities/utility-layout" as bfLayout;
 @use "utilities/utility-filters" as bfFilters;

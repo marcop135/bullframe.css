@@ -1,37 +1,37 @@
-@use "variables/variables-texts" as bfVarsTexts;
-@use "variables/variables-spacing" as bfVarsSpacing;
-@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-texts" as v-text;
+@use "variables/variables-spacing" as v-space;
+@use "variables/variables-colors" as v-color;
 @use "utility-global-dark-scrollbars" as bfUtilGlobalDarkScrollbars;
 @use "sass:color";
 
-// these are global styles that ovveride all the "light" styles
+// these are global styles tha that ovveride all the "light" styles
 
 // the basics: background and texts
 html {
-  color: bfVarsColors.$bf-light;
+  color: v-color.$bf-light;
 }
 
 body {
-  background-color: lighten(bfVarsColors.$bf-dark-extra, 7.5%);
+  background-color: color.adjust(v-color.$bf-dark-extra, $lightness: 7.5%);
 }
 
 // anchors
 a {
-  color: lighten(bfVarsColors.$bf-blue, 20%);
+  color: color.adjust(v-color.$bf-blue, $lightness: 20%);
 
   &:hover,
   &:focus {
-    color: lighten(bfVarsColors.$bf-blue-light, 20%);
+    color: color.adjust(v-color.$bf-blue-light, $lightness: 20%);
   }
 }
 
 // typography elements that need tiny adjustments
 mark {
-  background-color: darken(bfVarsColors.$bf-yellow, 10%);
+  background-color: color.adjust(v-color.$bf-yellow, $lightness: -10%);
 }
 
 ins {
-  background-color: darken(bfVarsColors.$bf-yellow-light, 45%);
+  background-color: color.adjust(v-color.$bf-yellow-light, $lightness: 45%);
 }
 
 // forms
@@ -53,14 +53,14 @@ input[list],
 select,
 select:not([size]):not([multiple]),
 textarea {
-  background-color: bfVarsColors.$bf-dark-extra;
-  border-color: bfVarsColors.$bf-black;
-  color: bfVarsColors.$bf-gray-light;
+  background-color: v-color.$bf-dark-extra;
+  border-color: v-color.$bf-black;
+  color: v-color.$bf-gray-light;
 
   &:active,
   &:focus {
-    background-color: bfVarsColors.$bf-dark-extra;
-    border-color: lighten(bfVarsColors.$bf-blue, 10%);
+    background-color: v-color.$bf-dark-extra;
+    border-color: color.adjust(v-color.$bf-blue, $lightness: 10%);
   }
 }
 
@@ -82,7 +82,7 @@ select:not([size]):not([multiple]),
 textarea {
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
+    box-shadow: 0 0 0 3px rgb(3 102 214 / 50%);
   }
 }
 
@@ -102,75 +102,70 @@ select:not([size]):not([multiple]) {
 
 // range
 
-// all modern browsers but not IE
-@supports (appearance: none) {
-  // override above declaration
-  [type="range"] {
+// override above declaration
+[type="range"] {
+  background-color: transparent;
+
+  &:focus {
     background-color: transparent;
-
-    &:focus {
-      background-color: transparent;
-    }
   }
+}
 
-  // darker background
-  // the rulesets must be separated
-  [type="range"]::-webkit-slider-runnable-track {
-    background-color: bfVarsColors.$bf-dark-extra;
-  }
+// darker background
+// the rulesets must be separated
+[type="range"]::-webkit-slider-runnable-track {
+  background-color: v-color.$bf-dark-extra;
+}
 
-  [type="range"]::-moz-range-track {
-    background-color: bfVarsColors.$bf-dark-extra;
-  }
+[type="range"]::-moz-range-track {
+  background-color: v-color.$bf-dark-extra;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: bfVarsColors.$bf-gray;
+  color: v-color.$bf-gray;
 }
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  background: bfVarsColors.$bf-gray-light;
+  background: v-color.$bf-gray-light;
 
   &:hover,
   &:active,
   &:focus {
-    background: darken(bfVarsColors.$bf-gray-light, 10%);
+    background: color.adjust(v-color.$bf-gray-light, $lightness: -10%);
   }
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
+  }
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
   }
 }
 
 // focus
 a:focus,
 input:focus {
-  outline-color: darken(orange, 15%);
+  outline-color: color.adjust(orange, $lightness: -15%);
 }
 
 :focus-visible {
-  outline-color: darken(orange, 15%);
-}
-
-// tables
-
-.bf-table th,
-.bf-table td {
-  border-color: bfVarsColors.$bf-gray-dark;
-}
-
-.bf-table--zebra tbody tr:nth-child(odd),
-.bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: bfVarsColors.$bf-gray-dark-extra;
+  outline-color: color.adjust(orange, $lightness: -15%);
 }
 
 dialog {
-  color: bfVarsColors.$bf-light;
+  color: color.adjust(v-color.$bf-light, $lightness: 0%);
   // match body background color
-  background-color: lighten(bfVarsColors.$bf-dark-extra, 7.5%);
+  background-color: color.adjust(v-color.$bf-dark-extra, $lightness: 7.5%);
 }

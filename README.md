@@ -2,133 +2,151 @@
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">
-    <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM page">
+    <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM version">
   </a>
   <a href="https://github.com/marcop135/bullframe.css/commits">
-    <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css?style=flat-square" alt="GitHub last commit">
+    <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css.svg?style=flat-square" alt="Last commit">
   </a>
   <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT license">
+    <img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT License">
   </a>
 </p>
-
-<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./docs/images-readme/bf-logo-full-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./docs/images-readme/bf-logo-full-light.png">
-  <img alt="Fallback image description" src="./docs/images-readme/bg-logo-full-light.png">
+  <img alt="Bullframe CSS logo" src="./docs/images-readme/bg-logo-full-light.png">
 </picture>
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
 
-Bullframe CSS is a Sass (SCSS) framework that is compatible with a wide range of desktop and mobile browsers. It is a cross-browser, responsive collection of default HTML elements, simple components, and CSS utilities for your Sass project.
+---
 
-You could be easily use it for marketing sites, landing pages, mini sites, micro sites, blog posts, e-commerce product listings, help and documentation, and more.
+## What is Bullframe CSS?
 
-**Just add Bullframe CSS in your webpage, write semantic HTML, and you are ready to go!**
+Bullframe CSS is a lightweight, modern Sass (SCSS) framework designed for fast, responsive, and accessible front-end development.
+
+- Clean, cross-browser defaults
+- Minimal components and utility-first classes
+- JavaScript framework-agnostic (no JS dependencies)
+- Flexible theming with Sass variables — customize colors, spacing, typography easily
+- Built-in support for dark mode and right-to-left (RTL) layouts
+
+Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
+
+**Just drop it in, start building, and stay in control.**
+
+---
 
 ## Best features
 
-- Desktop and mobile browsers support
-- Responsive-ness and style normalization _out-of-the-box_
-- Cross-browser form elements by default
-- Sass architecture
-- CSS BEM
+- Desktop and mobile browser support
+- Responsive layout and style normalization _out of the box_
+- Cross-browser form elements
+- JavaScript framework-agnostic
+- Sass-based architecture with BEM methodology
 - Responsive typography
 - Dark mode and theming support
-- RTL support
+- RTL (right-to-left) support
 - Vite-friendly
-- Classless-friendly
+- Works well with classless setups
+
+---
 
 ## What's included
 
-You'll see something like this:
-
 ```text
 bullframe.css/
-└── dist/
-    ├── css/
-    │   ├── bullframe-classless.css
-    │   ├── bullframe-classless.min.css
-    │   ├── ...
-    │   ├── bullframe-dark.css
-    │   ├── bullframe-dark.min.css
-    │   ├── ...
-    │   ├── bullframe-utilities.css
-    │   ├── bullframe-utilities.min.css
-    │   ├── ...
-    │   ├── bullframe.css
-    │   ├── bullframe.min.css
-    │   ├── ...
-    │   ├── bullframe-classless.css.map
-    │   ├── bullframe.min.css.map
-    │   ├── ...
-└── src/scss/
-    └── forms/
-    └── miscellaneous/
-    └── mixins/
-    └── typography/
-    └── utilities/
-    └── variables/
-    ...
-    ├── bullframe-classless.scss
-    ├── bullframe-dark.scss
-    ├── bullframe-utilities.scss
-    ├── bullframe-system-default.scss
-    ├── bullframe.scss
-    ...
-└── vite.config.js
-└── index.html
-...
+├── dist/
+│   └── css/
+│       ├── bullframe-classless.css
+│       ├── bullframe-classless.min.css
+│       ├── ...
+│       ├── bullframe-dark.css
+│       ├── bullframe-dark.min.css
+│       ├── ...
+│       ├── bullframe-utilities.css
+│       ├── bullframe-utilities.min.css
+│       ├── ...
+│       ├── bullframe.css
+│       ├── bullframe.min.css
+│       ├── ...
+│       ├── bullframe-classless.css.map
+│       ├── bullframe.min.css.map
+│       ├── ...
+├── src/scss/
+│   ├── forms/
+│   ├── miscellaneous/
+│   ├── mixins/
+│   ├── typography/
+│   ├── utilities/
+│   ├── variables/
+│   ├── bullframe-classless.scss
+│   ├── bullframe-dark.scss
+│   ├── bullframe-utilities.scss
+│   ├── bullframe-system-default.scss
+│   ├── bullframe.scss
+│   └── ...
+├── vite.config.js
+├── index.html
+└── ...
 ```
+
+---
 
 ## Getting started
 
-### Download
-
-[Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip)
-
 ### CDN
 
-JSDelivr
+Use JSDelivr CDN to include Bullframe CSS quickly:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5" />
 ```
 
+---
+
 ### npm
 
-Once you have installed [Node.js](https://nodejs.org/en/download/), you can run this command to install Bullframe CSS into your project:
+Make sure you have [Node.js](https://nodejs.org/en/download/) installed. Then run:
 
 ```bash
-# create a package.json file
-# $ npm init
+# (If you don’t have a package.json yet)
+npm init
 
+# Install Bullframe CSS
 npm install bullframe.css
 ```
 
-[What is Node?](https://en.m.wikipedia.org/wiki/Nodejs)
+- [What is Node.js?](https://en.m.wikipedia.org/wiki/Nodejs)
+- [What is npm?](https://www.npmjs.com/get-npm)
 
-[What is npm?](https://www.npmjs.com/get-npm)
+---
+
+### Download
+
+[Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip)
+
+---
 
 ### Vite.js
 
-You have the flexibility to compile your custom CSS as needed. After installing Bullframe CSS from npm, you can utilize Vite (included) to compile all `.scss` files and tailor your Sass project to your requirements.
+[Vite](https://vite.dev) simplifies compiling your custom Sass. After installing Bullframe CSS, use Vite commands to build and customize your styles:
 
 ```bash
-# navigate to /node_modules/bullframe.css
-
-# install all dependencies
-npm install
-
-# run vite and have fun!
+# Start dev server with hot reload
 npm run dev
+
+# Build production-ready site/app
+npm run build
+
+# Preview production build locally
+npm run preview
 ```
 
-[What is Vite?](https://vite.dev)
+---
 
-### HTML
+## HTML starter example
 
 ```html
 <!DOCTYPE html>
@@ -154,31 +172,32 @@ npm run dev
 </html>
 ```
 
+---
+
 ## Codepen
 
-> [!TIP]
-> Take a look at this [CodePen collection](https://codepen.io/collection/nxpjRe) and fork a ready-made templates of your choice.
+> \[!TIP]
+> Check out this [CodePen collection](https://codepen.io/collection/nxpjRe) with ready-made templates.
 
 ### Use Bullframe CSS as a CodePen template
 
-Click on the links below, and start a new pen in CodePen using Bullframe CSS.
+Click below to start a new pen using Bullframe CSS:
 
 - [Light Theme (default)](https://codepen.io/pen?template=WNrwNNM)
 - [Dark Theme](https://codepen.io/pen?template=ExPmzBV)
 - [System Default (`prefers-color-scheme`)](https://codepen.io/pen?template=NWxjVQO)
 
+---
+
 ## Customization
 
-### No classes (class-less)
+### Classless mode
 
-> [!TIP]
+> \[!TIP]
+> What is "classless"?
+> No utility classes or extra markup needed. Write semantic HTML and get clean, normalized styles.
 
-What means "classless"?
-No classes, no utilities. Feel free to add yours and create your custom components.
-Read more on [css-tricks.com](https://css-tricks.com/no-class-css-frameworks/).
-
-Just drop the snippet below in the `<head>` of your webpage, and the job is done!
-Write semantic HTML and get nice styles and cross-browser normalization.
+Include this snippet in your `<head>`:
 
 ```html
 <link
@@ -186,7 +205,7 @@ Write semantic HTML and get nice styles and cross-browser normalization.
   href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-classless.min.css"
 />
 
-<!-- Center the page (optional)  -->
+<!-- Optional: center page content -->
 <style>
   body {
     margin-left: auto;
@@ -197,17 +216,17 @@ Write semantic HTML and get nice styles and cross-browser normalization.
 </style>
 ```
 
+---
+
 ### Theming
 
-There are three builds available:
+Bullframe provides three builds for theming:
 
-1. `bullframe.css`: the light theme
-2. `bullframe-dark.css`: the dark theme
-3. `bullframe-system-default.css`: the theme set by the user as default (which can be light or dark). Read more [on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
+1. `bullframe.css` — light theme
+2. `bullframe-dark.css` — dark theme
+3. `bullframe-system-default.css` — theme based on user system preference ([`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme))
 
-#### `bullframe.css`
-
-CDN
+#### Light theme
 
 ```html
 <link
@@ -216,9 +235,7 @@ CDN
 />
 ```
 
-#### `bullframe-dark.css`
-
-CDN
+#### Dark theme
 
 ```html
 <link
@@ -227,9 +244,7 @@ CDN
 />
 ```
 
-#### `bullframe-system-default.css`
-
-CDN
+#### System default theme
 
 ```html
 <link
@@ -237,6 +252,8 @@ CDN
   href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-system-default.min.css"
 />
 ```
+
+---
 
 ### Utilities - Reference
 

@@ -214,3 +214,9 @@ input:focus {
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
   background-color: bfVarsColors.$bf-gray-dark-extra;
 }
+
+dialog {
+  color: bfVarsColors.$bf-light;
+  // match body background color
+  background-color: lighten(bfVarsColors.$bf-dark-extra, 7.5%);
+}

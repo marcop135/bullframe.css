@@ -1,0 +1,43 @@
+@use "variables/variables-spacing" as bfVarsSpacing;
+@use "variables/variables-colors" as bfVarsColors;
+@use "variables/variables-breakpoints" as bfVarsBreakpoints;
+@use "sass:color";
+
+address {
+  font-style: normal;
+  margin-bottom: bfVarsSpacing.$bf-spacing-lg-px;
+  margin-bottom: bfVarsSpacing.$bf-spacing-lg-rem;
+  line-height: inherit;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+dialog {
+  // match body background color
+  background-color: bfVarsColors.$bf-white;
+  border: none;
+  border-radius: bfVarsSpacing.$bf-spacing-sm-rem;
+  padding: bfVarsSpacing.$bf-spacing-xl-px;
+  padding: bfVarsSpacing.$bf-spacing-xl-rem;
+  min-width: 25rem;
+  max-width: calc(100vw - (bfVarsSpacing.$bf-spacing-grid-gutter-rem * 2));
+  @media (min-width: bfVarsBreakpoints.$bf-breakpoint-md) {
+    max-width: 50rem;
+  }
+
+  // hide dialog content by default
+  display: none;
+}
+
+dialog[open] {
+  display: block;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 40%);
+}

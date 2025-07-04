@@ -1,4 +1,5 @@
 /*! bullframecss v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -2148,3 +2149,4 @@ dt {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+/*# sourceMappingURL=bullframe.css.map */

@@ -9,7 +9,9 @@
     "doc": "docs/"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -38,17 +40,16 @@
   },
   "homepage": "https://bullframecss.netlify.app",
   "devDependencies": {
-    "browser-sync": "^3.0.4",
-    "cssnano": "^7.0.6",
-    "gulp": "^5.0.0",
-    "gulp-autoprefixer": "^9.0.0",
-    "gulp-postcss": "^10.0.0",
-    "gulp-rename": "2.0.0",
-    "gulp-replace": "^1.1.4",
-    "gulp-sass": "^6.0.1",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "fs": "^0.0.1-security",
+    "glob": "^11.0.3",
     "htmlhint": "^1.2.0",
-    "sass": "^1.87.0",
+    "path": "^0.12.7",
+    "postcss": "^8.5.6",
+    "sass": "^1.89.2",
     "stylelint": "^16.18.0",
-    "stylelint-config-standard-scss": "^15.0.1"
+    "stylelint-config-standard-scss": "^15.0.1",
+    "vite": "^7.0.2"
   }
 }

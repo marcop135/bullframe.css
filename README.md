@@ -13,9 +13,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./docs/images-readme/bf-logo-full-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./docs/images-readme/bf-logo-full-light.png">
-  <img alt="Bullframe CSS logo" src="./docs/images-readme/bg-logo-full-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="./dist/docs/github-readme/bf-logo-full-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./dist/docs/github-readme/bf-logo-full-light.png">
+  <img alt="Bullframe CSS logo" src="./dist/docs/github-readme/bg-logo-full-light.png">
 </picture>
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
@@ -134,8 +134,6 @@ npm install bullframe.css
 [Vite](https://vite.dev) simplifies compiling your custom Sass. After installing Bullframe CSS, use Vite commands to build and customize your styles:
 
 ```bash
-# Start dev server with hot reload
-npm run dev
 
 # Build production-ready site/app
 npm run build

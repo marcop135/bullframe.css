@@ -31,7 +31,7 @@ function buildAllScss() {
         });
 
         const cssWithHeader =
-          `/*! bullframecss v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */\n` +
+          `/*! Bullframe CSS v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */\n` +
           result.css.toString();
 
         const postcssResult = await postcss([autoprefixer()]).process(

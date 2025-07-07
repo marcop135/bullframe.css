@@ -4,7 +4,7 @@ import cssnano from "cssnano";
 import path from "path";
 import fs from "fs";
 import { glob } from "glob";
-import sass from "sass";
+import * as sass from "sass"; // Needed for compileAsync
 import postcss from "postcss";
 
 function buildAllScss() {
@@ -23,16 +23,14 @@ function buildAllScss() {
         const outFile = path.join(outDir, `${name}.css`);
         const minFile = path.join(outDir, `${name}.min.css`);
 
-        const result = sass.renderSync({
-          file,
-          outFile,
+        const result = await sass.compileAsync(file, {
+          style: "expanded",
           sourceMap: true,
-          outputStyle: "expanded",
         });
 
         const cssWithHeader =
           `/*! Bullframe CSS v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */\n` +
-          result.css.toString();
+          result.css;
 
         const postcssResult = await postcss([autoprefixer()]).process(
           cssWithHeader,
@@ -40,7 +38,7 @@ function buildAllScss() {
             from: file,
             to: outFile,
             map: {
-              prev: result.map.toString(),
+              prev: result.sourceMap,
               inline: false,
             },
           }

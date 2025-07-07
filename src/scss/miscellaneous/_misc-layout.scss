@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+details {
+  display: block;
+}
+
+template {
+  display: none;
+}
+
+// Always hide an element with the `hidden` HTML attribute
+[hidden] {
+  display: none !important;
+}

@@ -1,0 +1,17 @@
+// this is useful for navbars
+.bf-list-unstyled,
+menu ul.bf-list-unstyled,
+menu ol.bf-list-unstyled,
+ul.bf-list-unstyled ul,
+ul.bf-list-unstyled ol,
+ol.bf-list-unstyled ol,
+ol.bf-list-unstyled ul,
+dd.bf-list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dt {
+  font-weight: 700;
+}

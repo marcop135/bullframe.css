@@ -1,0 +1,90 @@
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
+
+p {
+  margin: 0 0 bf-v-space.$bf-spacing-xl-rem 0;
+}
+
+// Abbreviations (taken from Bootstrap 4)
+//
+// 1. Remove the bottom border in Firefox 39-.
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 3. Add explicit cursor to indicate changed behavior.
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  text-decoration: underline; // 2
+  text-decoration: underline dotted; // 2
+  border-bottom: 0; // 2
+}
+
+mark {
+  background-color: bf-v-color.$bf-yellow;
+  color: bf-v-color.$bf-black;
+}
+
+ins {
+  background-color: bf-v-color.$bf-yellow-light;
+  color: bf-v-color.$bf-black;
+  text-decoration: none;
+}
+
+// Prevent the duplicate application of `bolder` by the next rule
+// in Safari 6
+b,
+strong {
+  font-weight: inherit;
+}
+
+// Add the correct font weight in Chrome, Edge, and Safari
+b,
+strong {
+  /* stylelint-disable-next-line */
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -8px;
+  top: -0.8rem;
+}
+
+sub {
+  bottom: -4px;
+  bottom: -0.4rem;
+}
+
+small {
+  font-size: 80%;
+}
+
+// Reduce line-height for <small> elements inside <p>
+p:has(small) {
+  line-height: 1.25;
+}
+
+hr {
+  box-sizing: content-box;
+  display: block;
+  height: 0;
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  margin: bf-v-space.$bf-spacing-xl-rem 0;
+  padding: 0;
+  overflow: visible; // Show the overflow in Edge
+}

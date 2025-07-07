@@ -1,0 +1,49 @@
+@use 'variables/variables-colors' as bf-v-color;
+@use 'variables/variables-texts' as bf-v-text;
+@use 'variables/variables-spacing' as bf-v-space;
+@use 'variables/variables-breakpoints' as bf-v-bp;
+
+@use 'mixins/mixin-layout' as bfMixinLayout;
+@use 'mixins/mixin-texts' as bfMixinTexts;
+@use 'mixins/mixin-grid-flex' as bfMixinGridFlex;
+
+@use 'miscellaneous/misc-layout' as bfMiscLayout;
+
+@use 'typography/typography-html-body' as bfTypographyHtmlBody;
+@use 'typography/typography-headings' as bfTypographyHeadings;
+@use 'typography/typography-blockquotes' as bfTypographyBlockquotes;
+@use 'typography/typography-monospaced-elements' as bfTypographyMonospacedElements;
+@use 'typography/typography-misc' as bfTypographyMisc;
+
+@use 'miscellaneous/misc-anchors' as bfMiscAnchors;
+@use 'miscellaneous/misc-focus' as bfMiscFocus;
+@use 'miscellaneous/misc-lists' as bfMiscLists;
+@use 'miscellaneous/misc-embedded-content' as bfMiscEmbeddedContent;
+@use 'miscellaneous/misc-interactive' as bfMiscInteractive;
+@use 'miscellaneous/misc-scrolling' as bfMiscScrolling;
+@use 'miscellaneous/misc-tables' as bfMiscTables;
+@use 'miscellaneous/misc-accessibility' as bfMiscAccessibility;
+
+@use 'forms/forms-normalization' as bfFormsNormalization;
+@use 'forms/forms-styling' as bfFormsStyling;
+@use 'forms/forms-styling-select' as bfFormsStylingSelect;
+@use 'forms/forms-styling-radio-checkbox' as bfFormsStylingRadioCheckbox;
+@use 'forms/forms-styling-range' as bfFormsStylingRange;
+
+@use 'utilities/utility-grid-system' as bfUtilityGridSystem;
+@use 'utilities/utility-layout' as bfUtilityLayout;
+@use 'utilities/utility-z-index' as bfUtilityZIndex;
+@use 'utilities/utility-spacing' as bfUtilitySpacing;
+@use 'utilities/utility-texts' as bfUtilityTexts;
+@use 'utilities/utility-buttons' as bfUtilityButtons;
+@use 'utilities/utility-form-states' as bfUtilityFormStates;
+@use 'utilities/utility-lists' as bfUtilityLists;
+@use 'utilities/utility-embeds' as bfUtilityEmbeds;
+@use 'utilities/utility-tables' as bfUtilityTables;
+@use 'utilities/utility-print' as bfUtilityPrint;
+@use 'utilities/utility-reduced-motion' as bfUtilityReducedMotion;
+
+@use 'custom/author-styles' as bfCustomAuthorStyles;
+@use 'miscellaneous/misc-shame' as bfMiscShame;
+
+@use 'utilities/utility-debugging' as bfUtilityDebugging;

@@ -1,0 +1,28 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+blockquote {
+  margin-bottom: bf-v-space.$bf-spacing-xl-rem;
+  padding-left: 0;
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+blockquote small {
+  color: bf-v-color.$bf-gray;
+  display: block;
+}
+
+blockquote small::before {
+  content: '\2014 \00A0';
+}
+
+q {
+  quotes: '\201C' '\201D' '\2018' '\2019';
+}

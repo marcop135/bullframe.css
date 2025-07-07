@@ -1,0 +1,37 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+a {
+  color: bf-v-color.$bf-blue; // bootstrap blue
+  text-decoration: none;
+
+  // Edge Legacy: Remove grey background on active links
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: bf-v-color.$bf-blue-light;
+  }
+}
+
+// this is taken from Bootstrap's reboot
+// https://getbootstrap.com/docs/4.4/content/reboot/
+
+a:not([href], [tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href], [class]),
+a:not([href], [class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href], [tabindex]):focus {
+  outline: 0;
+}

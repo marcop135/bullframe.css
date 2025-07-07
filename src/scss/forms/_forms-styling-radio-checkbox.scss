@@ -1,0 +1,82 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+// heavily inspired by '2020 toggles' by Aaron Iker
+// https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+// https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
+
+[type='checkbox'],
+[type='radio'] {
+  appearance: none;
+
+  height: 1.8rem;
+  width: 1.8rem;
+
+  vertical-align: top;
+  position: relative;
+
+  border: 1px solid / bf-v-color.$bf-gray;
+
+  + label {
+    line-height: 1.8rem;
+    vertical-align: top;
+    margin-left: bf-v-space.$bf-spacing-md-px;
+    margin-left: bf-v-space.$bf-spacing-md-rem;
+  }
+
+  // add support for RTL languages
+  // Read more
+  // 1. http://bootstrap.rtlcss.com
+  // 2. https://rtlstyling.com/
+  *[dir='rtl'] & + label,
+  &[dir='rtl'] + label {
+    margin-left: 0;
+    margin-right: bf-v-space.$bf-spacing-md-px;
+    margin-right: bf-v-space.$bf-spacing-md-rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+
+  &:checked {
+    background-color: bf-v-color.$bf-blue;
+    border-color: bf-v-color.$bf-black;
+  }
+}
+
+[type='radio'] {
+  &::after {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    left: -0.05rem;
+    top: -0.05rem;
+
+    border-radius: 50%;
+    background: bf-v-color.$bf-white;
+
+    transform: scale(0.35);
+  }
+}
+
+[type='checkbox'] {
+  &::after {
+    width: 0.6rem;
+    height: 0.8rem;
+
+    border: 2px solid / bf-v-color.$bf-white;
+    border-top: 0;
+    border-left: 0;
+
+    left: 35%;
+    top: 20%;
+
+    transform: rotate(43deg);
+  }
+}

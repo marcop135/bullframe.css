@@ -1,0 +1,31 @@
+// Toggle debugging tools setting '$debug' variable to true or false
+
+$debug: false;
+
+// visualizing layout internals
+* {
+  @if $debug {
+    outline: 1px solid hotpink !important;
+  }
+}
+
+// ...or something more powerful
+//
+// Debug CSS
+// https://gist.github.com/zaydek-old/6b2e55258734deabbd2b4a284321d6f6
+//
+// :not(g):not(path) {
+//   @if ($debug) {
+//     color: hsla(210, 100%, 100%, 0.9) !important;
+//     background: hsla(210, 100%, 50%, 0.5) !important;
+//     outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+//     box-shadow: none !important;
+//     filter: none !important;
+//   }
+// }
+
+// Read more
+//
+// a interesting guide about CSS debugging from Ben Frain
+// https://benfrain.com/debugging-css/

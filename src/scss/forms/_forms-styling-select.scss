@@ -25,7 +25,7 @@
 // so, is not safe to style every kind of <select>
 //
 // remove the arrow and the appearance, especially on Webkit
-select:not([size]):not([multiple]) {
+select:not([size], [multiple]) {
   appearance: none;
 
   // add a new svg arrow
@@ -50,8 +50,8 @@ select::-ms-expand {
 // Read more
 // 1. http://bootstrap.rtlcss.com
 // 2. https://rtlstyling.com/
-*[dir='rtl'] select:not([size]):not([multiple]),
-select[dir='rtl']:not([size]):not([multiple]) {
+*[dir='rtl'] select:not([size], [multiple]),
+select[dir='rtl']:not([size], [multiple]) {
   // move the arrow icon to the left
   background-position: left 0.85rem top 50%;
 

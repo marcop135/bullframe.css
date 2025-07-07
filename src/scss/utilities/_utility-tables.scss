@@ -13,8 +13,7 @@
 
 // responsive tables
 .bf-table-responsive {
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
   -ms-overflow-style: scrollbar;
 }
 

@@ -119,8 +119,7 @@ label textarea {
   font-size: 110%;
 }
 
-[type="number"]::-webkit-outer-spin-button,
-[type="number"]::-webkit-inner-spin-button {
+::-webkit-inner-spin-button {
   height: auto;
 }
 
@@ -198,8 +197,14 @@ textarea {
 }
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; // iOS and Safari
-  font: inherit; // Safari
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+::file-selector-button {
+  font: inherit;
+  /* stylelint-disable-next-line */
+  -webkit-appearance: button;
 }
 
 button,
@@ -223,7 +228,7 @@ textarea {
   background-color: bf-v-color.$bf-white;
 }
 
-[type="range"] {
+[type="range" i] {
   background-color: transparent; // FF and Chrome mobile
 }
 
@@ -274,14 +279,10 @@ button,
   }
 }
 
-button,
-select,
-input[type="submit"],
-input[type="button"],
-[type="checkbox"],
-[type="range"],
-[type="radio"],
-[role="button"] {
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
   cursor: pointer;
 }
 
@@ -292,6 +293,14 @@ input[type="button"],
 input::placeholder,
 textarea::placeholder {
   color: bf-v-color.$bf-gray-dark;
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
 }
 
 // remove ':invalid' styles in FF

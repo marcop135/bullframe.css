@@ -1,8 +1,17 @@
-# Changes to bullframe.css
+# Changes to Bullframe CSS
 
-## 5.0.0 - BREAKING CHANGES! (???)
+## 5.0.0 - BREAKING CHANGES (July 07, 2025)
 
-- ???
+- Drop IE support
+- Remove Sass 1.45+ deprecated features ([details](https://sass-lang.com/documentation/breaking-changes/import/))
+- Switch build tool from Gulp to [Vite](https://vite.dev)
+- Reorganize Sass architecture for better clarity
+- Add `<dialog>` normalization with basic styling
+- Refresh HTML demo page with new examples
+- Streamline `README.md` copy and layout
+- Update all npm dependencies
+- Update stylelint, htmlhint, and prettier configs
+- Ensure HTML demo page passes W3C validation
 
 ## 4.2.2 (May 28, 2025)
 

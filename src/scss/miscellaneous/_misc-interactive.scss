@@ -1,8 +1,8 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 address {
   font-style: normal;
@@ -24,7 +24,7 @@ summary {
 dialog {
   // match body background color
   background-color: bf-v-color.$bf-white;
-  color: bf-v-color.$bf-white;
+  color: bf-v-color.$bf-dark;
   border: none;
   border-radius: bf-v-space.$bf-spacing-sm-rem;
   padding: bf-v-space.$bf-spacing-xl-px;

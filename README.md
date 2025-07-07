@@ -24,7 +24,7 @@
 
 ## What is Bullframe CSS?
 
-Bullframe CSS is a lightweight, modern Sass (SCSS) framework designed for fast, responsive, and accessible front-end development.
+Bullframe CSS is a lightweight, modern Sass (SCSS) framework designed for fast, responsive, and accessible front-end development. 
 
 Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
 

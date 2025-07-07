@@ -142,13 +142,13 @@ table th[class^=bf-col] {
   position: static;
 }
 
-.bf-clearfix:before,
-.bf-clearfix:after {
+.bf-clearfix::before,
+.bf-clearfix::after {
   content: " ";
   display: table;
 }
 
-.bf-clearfix:after {
+.bf-clearfix::after {
   clear: both;
 }
 
@@ -306,7 +306,7 @@ table th[class^=bf-col] {
 }
 
 .bf-width-33 {
-  width: 33.3333333333% !important;
+  width: 33.3333% !important;
 }
 
 .bf-width-50 {
@@ -648,7 +648,7 @@ table th[class^=bf-col] {
 }
 
 .bf-font-monospace {
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: Menlo, Consolas, "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .bf-h1,
@@ -657,7 +657,6 @@ table th[class^=bf-col] {
 .bf-h4,
 .bf-h5,
 .bf-h6 {
-  font-weight: 700 !important;
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
@@ -779,8 +778,8 @@ fieldset[disabled] .bf-btn,
 .bf-disabled:hover,
 .bf-disabled:active,
 .bf-disabled:focus,
-.bf-disabled:after,
-.bf-disabled:before,
+.bf-disabled::after,
+.bf-disabled::before,
 .bf-disabled:invalid,
 .bf-disabled:checked {
   cursor: default !important;
@@ -854,8 +853,8 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: #ff0000 !important;
-  border-color: #ff0000 !important;
+  color: #f00 !important;
+  border-color: #f00 !important;
   box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
 }
 
@@ -909,8 +908,7 @@ dt {
 }
 
 .bf-table-responsive {
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
   -ms-overflow-style: scrollbar;
 }
 

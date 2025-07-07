@@ -2,6 +2,7 @@
 @use "../variables/variables-texts" as bf-v-text;
 @use "../variables/variables-spacing" as bf-v-space;
 @use "../variables/variables-breakpoints" as bf-v-bp;
+@use "../utilities/utility-global-dark-scrollbars" as bfUtilGlobalDarkScrollbars;
 @use "sass:color";
 
 @mixin bf-global-dark {

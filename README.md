@@ -13,9 +13,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./dist/docs/github-readme/bf-logo-full-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./dist/docs/github-readme/bf-logo-full-light.png">
-  <img alt="Bullframe CSS logo" src="./dist/docs/github-readme/bg-logo-full-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="dist/docs/github-readme/bf-logo-full-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="dist/docs/github-readme/bf-logo-full-light.png">
+  <img alt="Bullframe CSS logo" src="dist/docs/github-readme/bg-logo-full-light.png">
 </picture>
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
@@ -24,7 +24,7 @@
 
 ## What is Bullframe CSS?
 
-Bullframe CSS is a lightweight, modern Sass (SCSS) framework designed for fast, responsive, and accessible front-end development.
+Bullframe CSS is a lightweight, modern Sass (SCSS) framework designed for fast, responsive, and accessible front-end development. 
 
 Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
 
@@ -95,7 +95,7 @@ bullframe.css/
 Use JSDelivr CDN to include Bullframe CSS quickly:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5">
 ```
 
 ### HTML Starter Template

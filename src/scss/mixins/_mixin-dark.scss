@@ -215,7 +215,7 @@
   }
 
   dialog {
-    color: color.adjust(bf-v-color.$bf-light, $lightness: 0%);
+    color: bf-v-color.$bf-light;
     // match body background color
     background-color: color.adjust(bf-v-color.$bf-dark-extra, $lightness: 7.5%);
   }
@@ -386,7 +386,7 @@
   }
 
   dialog {
-    color: color.adjust(bf-v-color.$bf-light, $lightness: 0%);
+    color: bf-v-color.$bf-light;
     // match body background color
     background-color: color.adjust(bf-v-color.$bf-dark-extra, $lightness: 7.5%);
   }

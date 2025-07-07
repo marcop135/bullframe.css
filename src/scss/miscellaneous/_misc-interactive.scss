@@ -11,8 +11,11 @@ address {
   line-height: inherit;
 }
 
-summary {
+details > summary:first-of-type {
   display: list-item;
+}
+
+summary {
   cursor: pointer;
   font-weight: 700;
   word-break: break-all;
@@ -21,10 +24,12 @@ summary {
 dialog {
   // match body background color
   background-color: bf-v-color.$bf-white;
+  color: bf-v-color.$bf-white;
   border: none;
   border-radius: bf-v-space.$bf-spacing-sm-rem;
   padding: bf-v-space.$bf-spacing-xl-px;
   padding: bf-v-space.$bf-spacing-xl-rem;
+  height: fit-content;
   min-width: 25rem;
   max-width: calc(100vw - (bf-v-space.$bf-spacing-grid-gutter-rem * 2));
   @media (min-width: bf-v-bp.$bf-breakpoint-md) {

@@ -26,19 +26,13 @@
 
 Bullframe CSS is a lightweight, modern Sass (SCSS) framework designed for fast, responsive, and accessible front-end development.
 
-- Clean, cross-browser defaults
-- Minimal components and utility-first classes
-- JavaScript framework-agnostic (no JS dependencies)
-- Flexible theming with Sass variables — customize colors, spacing, typography easily
-- Built-in support for dark mode and right-to-left (RTL) layouts
-
 Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
 
-**Just drop it in, start building, and stay in control.**
+**Simply add it, start building, and stay in control.**
 
 ---
 
-## Best features
+## Best Features
 
 - Desktop and mobile browser support
 - Responsive layout and style normalization _out of the box_
@@ -53,7 +47,7 @@ Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product li
 
 ---
 
-## What's included
+## What's Included
 
 ```text
 bullframe.css/
@@ -94,7 +88,7 @@ bullframe.css/
 
 ---
 
-## Getting started
+## Getting Started
 
 ### CDN
 
@@ -104,47 +98,7 @@ Use JSDelivr CDN to include Bullframe CSS quickly:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5" />
 ```
 
----
-
-### npm
-
-Make sure you have [Node.js](https://nodejs.org/en/download/) installed. Then run:
-
-```bash
-# (If you don’t have a package.json yet)
-npm init
-
-# Install Bullframe CSS
-npm install bullframe.css
-```
-
-- [What is Node.js?](https://en.m.wikipedia.org/wiki/Nodejs)
-- [What is npm?](https://www.npmjs.com/get-npm)
-
----
-
-### Download
-
-[Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip)
-
----
-
-### Vite.js
-
-[Vite](https://vite.dev) simplifies compiling your custom Sass. After installing Bullframe CSS, use Vite commands to build and customize your styles:
-
-```bash
-
-# Build production-ready site/app
-npm run build
-
-# Preview production build locally
-npm run preview
-```
-
----
-
-## HTML starter example
+### HTML Starter Template
 
 ```html
 <!DOCTYPE html>
@@ -158,8 +112,47 @@ npm run preview
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe.min.css"
+      href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe.min.css"
     />
+  </head>
+  <body>
+    <div class="bf-container">
+      <!-- Add your site or application content here -->
+      <p>Hello world! This is a Bullframe CSS starter template</p>
+    </div>
+  </body>
+</html>
+```
+
+### HTML Classless Starter Template
+
+> [!TIP]
+> What does "classless" mean?
+> No utility classes or extra markup needed. Just write semantic HTML and get clean, normalized > styles.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bullframe CSS starter template</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-classless.min.css"
+    />
+    <!-- Optional: center page content by default -->
+    <style>
+      body {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5rem;
+        max-width: 80rem;
+      }
+    </style>
   </head>
   <body>
     <div class="bf-container">
@@ -172,49 +165,24 @@ npm run preview
 
 ---
 
-## Codepen
+### npm
 
-> \[!TIP]
-> Check out this [CodePen collection](https://codepen.io/collection/nxpjRe) with ready-made templates.
+Make sure you have [Node.js](https://nodejs.org/en/download/) installed. Then run:
 
-### Use Bullframe CSS as a CodePen template
+```bash
+# Install Bullframe CSS
+npm install bullframe.css
+```
 
-Click below to start a new pen using Bullframe CSS:
+---
 
-- [Light Theme (default)](https://codepen.io/pen?template=WNrwNNM)
-- [Dark Theme](https://codepen.io/pen?template=ExPmzBV)
-- [System Default (`prefers-color-scheme`)](https://codepen.io/pen?template=NWxjVQO)
+### Download
+
+[Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip)
 
 ---
 
 ## Customization
-
-### Classless mode
-
-> \[!TIP]
-> What is "classless"?
-> No utility classes or extra markup needed. Write semantic HTML and get clean, normalized styles.
-
-Include this snippet in your `<head>`:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-classless.min.css"
-/>
-
-<!-- Optional: center page content -->
-<style>
-  body {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5rem;
-    max-width: 80rem;
-  }
-</style>
-```
-
----
 
 ### Theming
 
@@ -224,7 +192,7 @@ Bullframe provides three builds for theming:
 2. `bullframe-dark.css` — dark theme
 3. `bullframe-system-default.css` — theme based on user system preference ([`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme))
 
-#### Light theme
+#### Light Theme CDN (Default)
 
 ```html
 <link
@@ -233,7 +201,7 @@ Bullframe provides three builds for theming:
 />
 ```
 
-#### Dark theme
+#### Dark Theme CDN
 
 ```html
 <link
@@ -242,13 +210,25 @@ Bullframe provides three builds for theming:
 />
 ```
 
-#### System default theme
+#### System-default Theme CDN
 
 ```html
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-system-default.min.css"
 />
+```
+
+### Customise and Rebuild All Styles
+
+After installing Bullframe CSS, you can use [Vite.js](https://vite.dev) commands to rebuild the framework as you prefer, adding your custom Sass variables and styles:
+
+```bash
+# Build production-ready site/app
+npm run build
+
+# Preview production build locally
+npm run preview
 ```
 
 ---
@@ -267,17 +247,20 @@ You can check the [.browserslistrc](https://github.com/marcop135/bullframe.css/b
 
 ---
 
-[Bullframe CSS v4.x](https://github.com/marcop135/bullframe.css/tree/v4.2.2) supports IE11.
-
----
-
-### Utilities - Reference
+### Utilities Reference
 
 A set of utilities for Bullframe CSS customisation:
 
 #### Grid system
 
-Breakpoints: 576, 768, 992 and 1200 pixels.
+```scss
+$bf-breakpoint-xs: 0;
+$bf-breakpoint-sm: 576px;
+$bf-breakpoint-md: 768px;
+$bf-breakpoint-lg: 992px;
+$bf-breakpoint-xl: 1200px;
+$bf-breakpoint-xxl: 1400px;
+```
 
 | Utility class             | Description                                                                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -463,8 +446,6 @@ Breakpoints: 576, 768, 992 and 1200 pixels.
 | Utility class        | Description                                                                                                                                                                                                                             |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
-
-Here’s a cleaner, grammatically polished version:
 
 ---
 

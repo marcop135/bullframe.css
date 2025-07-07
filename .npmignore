@@ -1,19 +1,56 @@
-node_modules
-# dist
+# Dependencies
+node_modules/
+.pnpm/
+bower_components/
+
+# Build output
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Cache & temporary files
 .eslintcache
 .stylelintcache
+.sass-cache/
+.cache/
+.vite/
+turbo/
 
-# OS generated files
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS generated
 .DS_Store
 Thumbs.db
+Icon?
 
-# Log files
-*.log
-
-.sass-cache/
-
-# Local environment files
-*.env
+# Environment files
+.env
+.env.*
 *.local
 
+# IDEs & editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
+# Misc
+*.swp
+*.tmp
+*.bak
+*.orig
+*.pid
+*.seed
+*.tgz
+
+# Optional npm versioning
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

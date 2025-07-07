@@ -1,11 +1,14 @@
-@use "../variables/variables-colors" as bf-v-color;
-@use "../variables/variables-texts" as bf-v-text;
-@use "../variables/variables-spacing" as bf-v-space;
-@use "../variables/variables-breakpoints" as bf-v-bp;
-@use "sass:color";
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
 
 .bf-focused {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s !important;
   border-color: bf-v-color.$bf-blue !important;
   box-shadow: 0 0 0 3px rgb(0 86 179 / 25%) !important;
 }
@@ -35,9 +38,9 @@ label.bf-disabled {
 }
 
 button.bf-disabled,
-[type="button"].bf-disabled,
-[type="reset"].bf-disabled,
-[type="submit"].bf-disabled,
+[type='button'].bf-disabled,
+[type='reset'].bf-disabled,
+[type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
   cursor: default;
   cursor: not-allowed;

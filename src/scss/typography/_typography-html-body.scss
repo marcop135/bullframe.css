@@ -1,8 +1,8 @@
-@use "../variables/variables-colors" as bf-v-color;
-@use "../variables/variables-texts" as bf-v-text;
-@use "../variables/variables-spacing" as bf-v-space;
-@use "../variables/variables-breakpoints" as bf-v-bp;
-@use "sass:color";
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
 
 html {
   text-size-adjust: 100%;
@@ -42,7 +42,7 @@ body {
     // Chrome < 56 for OS X (San Francisco)
     BlinkMacSystemFont,
     // Windows
-    "Segoe UI",
+    'Segoe UI',
     // Android
     Roboto,
     // Linux with KDE
@@ -52,14 +52,17 @@ body {
     // Linux with GNOME Shell
     Cantarell,
     // macOS 1.10 and below
-    "Helvetica Neue",
+    'Helvetica Neue',
     Helvetica,
     // Basic web fallback
     Arial,
-    "Noto Sans", sans-serif,
+    'Noto Sans',
+    sans-serif,
     // emoji fonts
-    "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   // this enable font ligatures
   text-rendering: optimizeLegibility;

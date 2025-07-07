@@ -1,21 +1,21 @@
-@use "../variables/variables-colors" as bf-v-color;
-@use "../variables/variables-texts" as bf-v-text;
-@use "../variables/variables-spacing" as bf-v-space;
-@use "../variables/variables-breakpoints" as bf-v-bp;
-@use "sass:color";
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
 
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="url"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='url'],
 input[list],
 select,
 textarea {
@@ -28,42 +28,46 @@ textarea {
 // Old browsers and Opera Mini don't fully support all type of inputs
 // e.g. [type="range"]
 // so, let's try to add styles carefully and selective
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="url"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='url'],
 input[list],
 select,
 textarea,
-[type="radio"],
-[type="checkbox"] {
+[type='radio'],
+[type='checkbox'] {
   &:active,
   &:focus {
-    transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+    transition:
+      border 0.2s,
+      background-color 0.2s,
+      box-shadow 0.2s;
     border-color: bf-v-color.$bf-blue;
     box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
   }
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   color: bf-v-color.$bf-dark;
-  padding: calc(bf-v-space.$bf-spacing-xl-px / 3)
-    (calc(bf-v-space.$bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3)
-    (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2);
+  padding: calc(bf-v-space.$bf-spacing-xl-px / 3) (calc(bf-v-space.$bf-spacing-xl-px / 3) * 2); // 8px 16px
+  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3) (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2);
   background: bf-v-color.$bf-gray-light;
-  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
 
   &:hover,
   &:active,

@@ -1,8 +1,8 @@
-@use "../variables/variables-colors" as bf-v-color;
-@use "../variables/variables-texts" as bf-v-text;
-@use "../variables/variables-spacing" as bf-v-space;
-@use "../variables/variables-breakpoints" as bf-v-bp;
-@use "sass:color";
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
 
 pre {
   margin: 0 0 bf-v-space.$bf-spacing-xl-rem 0;
@@ -25,12 +25,19 @@ kbd,
 samp {
   font-family:
 
-  /* macOS 1.10+ */ "Menlo", /* Windows 6+ */ "Consolas",
-    /* Android 4+ */ "Roboto Mono", /* Ubuntu 1.10+ */ "Ubuntu Monospace",
-    /* KDE Plasma 5+ */ "Noto Mono", /* KDE Plasma 4+ */ "Oxygen Mono",
-    /* Linux/OpenOffice fallback */ "Liberation Mono", /* fallback */ monospace,
-    /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
+  /* macOS 1.10+ */
+    'Menlo',
+    /* Windows 6+ */ 'Consolas',
+    /* Android 4+ */ 'Roboto Mono',
+    /* Ubuntu 1.10+ */ 'Ubuntu Monospace',
+    /* KDE Plasma 5+ */ 'Noto Mono',
+    /* KDE Plasma 4+ */ 'Oxygen Mono',
+    /* Linux/OpenOffice fallback */ 'Liberation Mono',
+    /* fallback */ monospace,
+    /* emoji fonts */ 'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   // a monospaced text font should looks bigger, so a smaller font-size
   // is preferred

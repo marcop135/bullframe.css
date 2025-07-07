@@ -1,4 +1,4 @@
-@use "../variables/variables-colors" as bf-v-color;
-@use "../mixins/mixin-dark" as bf-mix-dark;
-@use "utility-global-dark-scrollbars" as bfUtilGlobalDarkScrollbars;
+@use '../variables/variables-colors' as bf-v-color;
+@use '../mixins/mixin-dark' as bf-mix-dark;
+@use 'utility-global-dark-scrollbars' as bfUtilGlobalDarkScrollbars;
 @include bf-mix-dark.bf-global-dark;

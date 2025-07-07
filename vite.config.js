@@ -108,7 +108,7 @@ export default defineConfig({
         assetFileNames: `[name][extname]`,
       },
     },
-    assetsDir: "", // optional: avoid dist/assets
+    assetsDir: "", // Avoid dist/assets
     sourcemap: true,
   },
   plugins: [buildAllScss(), copyDocsFiles()],

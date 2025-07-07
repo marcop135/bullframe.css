@@ -100,68 +100,63 @@ Use JSDelivr CDN to include Bullframe CSS quickly:
 
 ### HTML Starter Template
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Bullframe CSS starter template</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe.min.css"
-    />
-  </head>
-  <body>
-    <div class="bf-container">
-      <!-- Add your site or application content here -->
-      <p>Hello world! This is a Bullframe CSS starter template</p>
-    </div>
-  </body>
-</html>
-```
+<details><summary>Open HTML</summary>
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>Bullframe CSS HTML Starter Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe.min.css">
+      </head>
+      <body>
+        <div class="bf-container">
+          <!-- Add your site or application content here -->
+          <p>Hello world! This is a Bullframe CSS starter template.</p>
+        </div>
+      </body>
+    </html>
+
+</details>
 
 ### HTML Classless Starter Template
 
-> [!TIP]
+> [!NOTE]
 > What does "classless" mean?
-> No utility classes or extra markup needed. Just write semantic HTML and get clean, normalized > styles.
+> No utility classes or extra markup needed. Just write semantic HTML and get clean, normalized styles.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Bullframe CSS starter template</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-classless.min.css"
-    />
-    <!-- Optional: center page content by default -->
-    <style>
-      body {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1.5rem;
-        max-width: 80rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="bf-container">
-      <!-- Add your site or application content here -->
-      <p>Hello world! This is a Bullframe CSS starter template</p>
-    </div>
-  </body>
-</html>
-```
+<details><summary>Open HTML</summary>
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>Bullframe CSS Classless Starter Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-classless.min.css">
+
+        <!-- Optional: center page content by default -->
+        <style>
+          body {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1.5rem;
+            max-width: 80rem;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="bf-container">
+          <!-- Add your site or application content here -->
+          <p>Hello world! This is a Bullframe CSS Classless starter template.</p>
+        </div>
+      </body>
+    </html>
+
+</details>
 
 ---
 
@@ -195,28 +190,19 @@ Bullframe provides three builds for theming:
 #### Light Theme CDN (Default)
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe.min.css">
 ```
 
 #### Dark Theme CDN
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-dark.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-dark.min.css">
 ```
 
 #### System-default Theme CDN
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@4/dist/css/bullframe-system-default.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-system-default.min.css">
 ```
 
 ### Customise and Rebuild All Styles
@@ -233,34 +219,22 @@ npm run preview
 
 ---
 
-## Browser compatibility
+### Utilities
 
-### Desktop browsers
-
-- Latest two stable versions: Firefox, Chrome, Edge, Safari, Opera
-
-### Mobile browsers
-
-- Latest two stable versions: Firefox, Chrome, Edge, Mobile Safari, Opera
-
-You can check the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file.
-
----
-
-### Utilities Reference
-
-A set of utilities for Bullframe CSS customisation:
+Bullframe CSS offers a comprehensive set of utility classes for fine-grained control over your layout, spacing, typography, and more. Explore each category below for detailed reference.
 
 #### Grid system
 
-```scss
-$bf-breakpoint-xs: 0;
-$bf-breakpoint-sm: 576px;
-$bf-breakpoint-md: 768px;
-$bf-breakpoint-lg: 992px;
-$bf-breakpoint-xl: 1200px;
-$bf-breakpoint-xxl: 1400px;
-```
+<details><summary>Open utilities</summary>
+
+| Variable             | Value  |
+| -------------------- | ------ |
+| `$bf-breakpoint-xs`  | 0      |
+| `$bf-breakpoint-sm`  | 576px  |
+| `$bf-breakpoint-md`  | 768px  |
+| `$bf-breakpoint-lg`  | 992px  |
+| `$bf-breakpoint-xl`  | 1200px |
+| `$bf-breakpoint-xxl` | 1400px |
 
 | Utility class             | Description                                                                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -284,7 +258,11 @@ $bf-breakpoint-xxl: 1400px;
 | `.bf-col-12`              | Sets a floated container with a custom padding and a `width` of `100%`                                                    |
 | `.no-gutters`             | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0` — to be applied to row and column containers |
 
+</details>
+
 #### Layout
+
+<details><summary>Open utilities</summary>
 
 | Utility class                      | Description                                                                                                                                                                                              |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -341,34 +319,46 @@ $bf-breakpoint-xxl: 1400px;
 | `.bf-z-index-200`                  | Set `z-index` to 200                                                                                                                                                                                     |
 | `.bf-z-index-300`                  | Set `z-index` to 300                                                                                                                                                                                     |
 
+</details>
+
 #### Spacing
 
-| Utility class | Description                                                                     |
-| ------------- | ------------------------------------------------------------------------------- |
-| `.bf-m-0`     | Sets the `margin` to `0`                                                        |
-| `.bf-m-t-0`   | Sets the `margin-top` to `0`                                                    |
-| `.bf-m-b-0`   | Sets the `margin-bottom` to `0`                                                 |
-| `.bf-m-l-0`   | Sets the `margin-left` to `0`                                                   |
-| `.bf-m-r-0`   | Sets the `margin-right` to `0`                                                  |
-| `.bf-m-b-1`   | Sets the `margin-bottom` to a custom value that matches the grid system gutter  |
-| `.bf-m-b-2`   | Sets the `margin-bottom` to a custom value                                      |
-| `.bf-m-b-3`   | Sets the `margin-bottom` to a custom value                                      |
-| `.bf-m-b-4`   | Sets the `margin-bottom` to a custom value                                      |
-| `.bf-p-0`     | Sets the `padding` to `0`                                                       |
-| `.bf-p-t-0`   | Sets the `padding-top` to `0`                                                   |
-| `.bf-p-b-0`   | Sets the `padding-bottom` to `0`                                                |
-| `.bf-p-l-0`   | Sets the `padding-left` to `0`                                                  |
-| `.bf-p-r-0`   | Sets the `padding-right` to `0`                                                 |
-| `.bf-p-t-1`   | Sets the `padding-top` to a custom value that matches the grid system gutter    |
-| `.bf-p-t-2`   | Sets the `padding-top` to a custom value                                        |
-| `.bf-p-t-3`   | Sets the `padding-top` to a custom value                                        |
-| `.bf-p-t-4`   | Sets the `padding-top` to a custom value                                        |
-| `.bf-p-t-1`   | Sets the `padding-bottom` to a custom value that matches the grid system gutter |
-| `.bf-p-b-2`   | Sets the `padding-bottom` to a custom value                                     |
-| `.bf-p-b-3`   | Sets the `padding-bottom` to a custom value                                     |
-| `.bf-p-b-4`   | Sets the `padding-bottom` to a custom value                                     |
+<details><summary>Open utilities</summary>
+
+| Utility class | Description                                                                               |
+| ------------- | ----------------------------------------------------------------------------------------- |
+| `.bf-m-0`     | Sets the `margin` to `0`                                                                  |
+| `.bf-m-t-0`   | Sets the `margin-top` to `0`                                                              |
+| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`$bf-spacing-md-rem`)             |
+| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`$bf-spacing-lg-rem`)              |
+| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`$bf-spacing-xl-rem`)        |
+| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`$bf-spacing-xxl-rem`) |
+| `.bf-m-b-0`   | Sets the `margin-bottom` to `0`                                                           |
+| `.bf-m-b-1`   | Sets the `margin-bottom` to a custom value that matches the grid system gutter            |
+| `.bf-m-b-2`   | Sets the `margin-bottom` to a custom value                                                |
+| `.bf-m-b-3`   | Sets the `margin-bottom` to a custom value                                                |
+| `.bf-m-b-4`   | Sets the `margin-bottom` to a custom value                                                |
+| `.bf-m-l-0`   | Sets the `margin-left` to `0`                                                             |
+| `.bf-m-r-0`   | Sets the `margin-right` to `0`                                                            |
+| `.bf-p-0`     | Sets the `padding` to `0`                                                                 |
+| `.bf-p-t-0`   | Sets the `padding-top` to `0`                                                             |
+| `.bf-p-b-0`   | Sets the `padding-bottom` to `0`                                                          |
+| `.bf-p-l-0`   | Sets the `padding-left` to `0`                                                            |
+| `.bf-p-r-0`   | Sets the `padding-right` to `0`                                                           |
+| `.bf-p-t-1`   | Sets the `padding-top` to a custom value that matches the grid system gutter              |
+| `.bf-p-t-2`   | Sets the `padding-top` to a custom value                                                  |
+| `.bf-p-t-3`   | Sets the `padding-top` to a custom value                                                  |
+| `.bf-p-t-4`   | Sets the `padding-top` to a custom value                                                  |
+| `.bf-p-t-1`   | Sets the `padding-bottom` to a custom value that matches the grid system gutter           |
+| `.bf-p-b-2`   | Sets the `padding-bottom` to a custom value                                               |
+| `.bf-p-b-3`   | Sets the `padding-bottom` to a custom value                                               |
+| `.bf-p-b-4`   | Sets the `padding-bottom` to a custom value                                               |
+
+</details>
 
 #### Texts
+
+<details><summary>Open utilities</summary>
 
 | Utility class                 | Description                                                                                                                     |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -403,7 +393,11 @@ $bf-breakpoint-xxl: 1400px;
 | `.bf-lead`                    | Sets `font-size` to `125%`                                                                                                      |
 | `.bf-responsive-typography`   | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties` |
 
+</details>
+
 #### Lists
+
+<details><summary>Open utilities</summary>
 
 | Utility class       | Description                                                                      |
 | ------------------- | -------------------------------------------------------------------------------- |
@@ -418,7 +412,11 @@ $bf-breakpoint-xxl: 1400px;
 | `.bf-table--zebra`            | Increases a table readability adding horizontal zebra stripes            |
 | `.bf-table-responsive--zebra` | Increases a responsive table readability adding horizontal zebra stripes |
 
+</details>
+
 #### Embeds
+
+<details><summary>Open utilities</summary>
 
 | Utility class                | Description                                                                                                                             |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -426,14 +424,22 @@ $bf-breakpoint-xxl: 1400px;
 | `.bf-embed-responsive--4-3`  | Sets a 4:3 ratio responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpouse element_ container (e.g. youtube embed) |
 | `.bf-embed-responsive--item` | A _general purpouse element_ element that behaves like a `video`                                                                        |
 
+</details>
+
 #### Buttons
+
+<details><summary>Open utilities</summary>
 
 | Utility class      | Description                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------ |
 | `.bf-btn`          | Creates a standard gray-looking button (e.g. `<a class="bf-btn" href="...">...</a>`) |
 | `.bf-btn--primary` | Creates a primary blue-looking button                                                |
 
+</details>
+
 #### Form states
+
+<details><summary>Open utilities</summary>
 
 | Utility class  | Description                                                                                          |
 | -------------- | ---------------------------------------------------------------------------------------------------- |
@@ -441,11 +447,31 @@ $bf-breakpoint-xxl: 1400px;
 | `.bf-disabled` | Sets `opacity` to `0.5`, and resets a combinations of properties to the default value if is disabled |
 | `.bf-invalid`  | Sets a red-looking focused ring and shadow around an invalid `input`, `textarea` or `select`         |
 
+</details>
+
 #### Reduced motion
+
+<details><summary>Open utilities</summary>
 
 | Utility class        | Description                                                                                                                                                                                                                             |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
+
+</details>
+
+---
+
+## Browser compatibility
+
+### Desktop browsers
+
+- Latest two stable versions: Firefox, Chrome, Edge, Safari, Opera
+
+### Mobile browsers
+
+- Latest two stable versions: Firefox, Chrome, Edge, Mobile Safari, Opera
+
+You can check the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file.
 
 ---
 

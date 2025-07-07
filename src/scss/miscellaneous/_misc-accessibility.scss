@@ -8,7 +8,7 @@
  * Change the cursor on busy elements in all browsers (opinionated).
  */
 
-:where([aria-busy="true" i]) {
+:where([aria-busy='true' i]) {
   cursor: progress;
 }
 
@@ -17,7 +17,7 @@
  * inoperable elements in all browsers (opinionated).
  */
 
-:where([aria-disabled="true" i], [disabled]) {
+:where([aria-disabled='true' i], [disabled]) {
   cursor: not-allowed;
 }
 
@@ -26,11 +26,11 @@
  * in all browsers (opinionated).
  */
 
-:where([aria-hidden="false" i][hidden]) {
+:where([aria-hidden='false' i][hidden]) {
   display: initial;
 }
 
-:where([aria-hidden="false" i][hidden]:not(:focus)) {
+:where([aria-hidden='false' i][hidden]:not(:focus)) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }

@@ -1,8 +1,8 @@
-@use "../variables/variables-colors" as bf-v-color;
-@use "../variables/variables-texts" as bf-v-text;
-@use "../variables/variables-spacing" as bf-v-space;
-@use "../variables/variables-breakpoints" as bf-v-bp;
-@use "sass:color";
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
 
 // custom <select> arrow and appearance with a base64 embedded SVG icon
 // https://css-tricks.com/probably-dont-base64-svg/#article-header-id-2
@@ -50,8 +50,8 @@ select::-ms-expand {
 // Read more
 // 1. http://bootstrap.rtlcss.com
 // 2. https://rtlstyling.com/
-*[dir="rtl"] select:not([size]):not([multiple]),
-select[dir="rtl"]:not([size]):not([multiple]) {
+*[dir='rtl'] select:not([size]):not([multiple]),
+select[dir='rtl']:not([size]):not([multiple]) {
   // move the arrow icon to the left
   background-position: left 0.85rem top 50%;
 

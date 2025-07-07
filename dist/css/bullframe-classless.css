@@ -1144,4 +1144,3 @@ select[dir=rtl]:not([size]):not([multiple]) {
 [type=range]:disabled::-moz-slider-thumb {
   background-color: #ccc;
 }
-/*# sourceMappingURL=bullframe-classless.css.map */

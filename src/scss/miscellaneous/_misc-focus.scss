@@ -24,7 +24,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex='-1']:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
@@ -50,23 +50,23 @@ input:focus {
 // with JS or extra <div>s
 // https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
 button,
-[type="button"],
-[type="reset"],
-[type="submit"],
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"],
-[type="url"],
-[type="radio"],
-[type="checkbox"],
+[type='button'],
+[type='reset'],
+[type='submit'],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='time'],
+[type='week'],
+[type='url'],
+[type='radio'],
+[type='checkbox'],
 input[list],
 select,
 textarea {

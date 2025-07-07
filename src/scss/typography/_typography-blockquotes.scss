@@ -19,7 +19,7 @@ blockquote small {
   display: block;
 }
 
-blockquote small:before {
+blockquote small::before {
   content: '\2014 \00A0';
 }
 

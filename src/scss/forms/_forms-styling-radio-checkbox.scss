@@ -38,7 +38,7 @@
     margin-right: bf-v-space.$bf-spacing-md-rem;
   }
 
-  &:after {
+  &::after {
     content: '';
     display: block;
     position: absolute;
@@ -51,7 +51,7 @@
 }
 
 [type='radio'] {
-  &:after {
+  &::after {
     width: 1.8rem;
     height: 1.8rem;
 
@@ -66,7 +66,7 @@
 }
 
 [type='checkbox'] {
-  &:after {
+  &::after {
     width: 0.6rem;
     height: 0.8rem;
 

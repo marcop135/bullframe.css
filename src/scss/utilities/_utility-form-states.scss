@@ -17,8 +17,8 @@
 .bf-disabled:hover,
 .bf-disabled:active,
 .bf-disabled:focus,
-.bf-disabled:after,
-.bf-disabled:before,
+.bf-disabled::after,
+.bf-disabled::before,
 .bf-disabled:invalid,
 .bf-disabled:checked {
   cursor: default !important; // IE8-10 fallback

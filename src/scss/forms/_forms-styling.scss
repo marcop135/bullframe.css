@@ -86,38 +86,38 @@ button,
 // disabled groups
 fieldset[disabled] button,
 fieldset[disabled] input,
-fieldset[disabled] input:after,
-fieldset[disabled] input:before,
+fieldset[disabled] input::after,
+fieldset[disabled] input::before,
 fieldset[disabled] input:checked,
 fieldset[disabled] select,
 fieldset[disabled] textarea,
 fieldset[disabled] label,
 
-// disabled singles
+/* disabled singles*/
 button[disabled],
 input[disabled],
-input[disabled]:after,
-input[disabled]:before,
+input[disabled]::after,
+input[disabled]::before,
 input[disabled]:checked,
 select[disabled],
 textarea[disabled],
 label[disabled],
 
-// pseudo class
+/* pseudo class*/
 button:disabled,
 input:disabled,
-input:disabled:after,
-input:disabled:before,
+input:disabled::after,
+input:disabled::before,
 input:disabled:checked,
 select:disabled,
 textarea:disabled,
 label:disabled,
 
-// aria
+/* aria*/
 button[aria-disabled="true"],
 input[aria-disabled="true"],
-input[aria-disabled="true"]:after,
-input[aria-disabled="true"]:before,
+input[aria-disabled="true"]::after,
+input[aria-disabled="true"]::before,
 input[aria-disabled="true"]:checked,
 select[aria-disabled="true"],
 textarea[aria-disabled="true"],

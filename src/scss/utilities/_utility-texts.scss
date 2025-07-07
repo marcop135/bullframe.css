@@ -140,15 +140,15 @@
 .bf-font-monospace {
   font-family:
     /* macOS 1.10+ */
-    'Menlo',
-    /* Windows 6+ */ 'Consolas',
-    /* Android 4+ */ 'Roboto Mono',
-    /* Ubuntu 1.10+ */ 'Ubuntu Monospace',
-    /* KDE Plasma 5+ */ 'Noto Mono',
-    /* KDE Plasma 4+ */ 'Oxygen Mono',
-    /* Linux/OpenOffice fallback */ 'Liberation Mono',
-    /* fallback */ monospace,
-    /* emoji fonts */ 'Apple Color Emoji',
+    Menlo,
+     Consolas,
+     'Roboto Mono',
+     'Ubuntu Monospace',
+     'Noto Mono',
+     'Oxygen Mono',
+     'Liberation Mono',
+     monospace,
+     'Apple Color Emoji',
     'Segoe UI Emoji',
     'Segoe UI Symbol',
     'Noto Color Emoji' !important;
@@ -159,8 +159,7 @@
 .bf-h3,
 .bf-h4,
 .bf-h5,
-.bf-h6 {
-  font-weight: 700 !important; // fallback
+.bf-h6 { // fallback
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;

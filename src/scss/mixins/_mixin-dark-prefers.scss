@@ -1,8 +1,8 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 @mixin bf-global-dark-prefers {
   @media (prefers-color-scheme: dark) {
@@ -14,7 +14,10 @@
     }
 
     body {
-      background-color: color.adjust(bf-v-color.$bf-dark-extra, $lightness: 7.5%);
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
     }
 
     // anchors
@@ -33,27 +36,30 @@
     }
 
     ins {
-      background-color: color.adjust(bf-v-color.$bf-yellow-light, $lightness: 45%);
+      background-color: color.adjust(
+        bf-v-color.$bf-yellow-light,
+        $lightness: 45%
+      );
     }
 
     // forms
 
-    [type='email'],
-    [type='number'],
-    [type='password'],
-    [type='tel'],
-    [type='search'],
-    [type='text'],
-    [type='date'],
-    [type='datetime-local'],
-    [type='month'],
-    [type='week'],
-    [type='time'],
-    [type='url'],
-    [type='range'],
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    [type="range"],
     input[list],
     select,
-    select:not([size]):not([multiple]),
+    select:not([size], [multiple]),
     textarea {
       background-color: bf-v-color.$bf-dark-extra;
       border-color: bf-v-color.$bf-black;
@@ -66,21 +72,21 @@
       }
     }
 
-    [type='email'],
-    [type='number'],
-    [type='password'],
-    [type='tel'],
-    [type='search'],
-    [type='text'],
-    [type='date'],
-    [type='datetime-local'],
-    [type='month'],
-    [type='week'],
-    [type='time'],
-    [type='url'],
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
     input[list],
     select,
-    select:not([size]):not([multiple]),
+    select:not([size], [multiple]),
     textarea {
       &:active,
       &:focus {
@@ -96,19 +102,23 @@
     .bf-invalid,
     .bf-invalid:focus {
       color: color.adjust(bf-v-color.$bf-red, $lightness: 7.5%) !important;
-      border-color: color.adjust(bf-v-color.$bf-red, $lightness: 7.5%) !important;
+      border-color: color.adjust(
+        bf-v-color.$bf-red,
+        $lightness: 7.5%
+      ) !important;
     }
 
-    select:not([size]):not([multiple]) {
+    select:not([size], [multiple]) {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
     }
 
+    /* stylelint-disable-next-line */
     @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
       // hide custom arrow
-      select:not([size]):not([multiple]),
-  // RTL
-  *[dir="rtl"] select:not([size]):not([multiple]),
-  select[dir="rtl"]:not([size]):not([multiple]) {
+      select:not([size], [multiple]),
+  /* RTL*/
+  *[dir="rtl"] select:not([size], [multiple]),
+  select[dir="rtl"]:not([size], [multiple]) {
         background-image: none;
       }
     }
@@ -116,7 +126,7 @@
     // range
 
     // override above declaration
-    [type='range'] {
+    [type="range"] {
       background-color: transparent;
 
       &:focus {
@@ -126,11 +136,11 @@
 
     // darker background
     // the rulesets must be separated
-    [type='range']::-webkit-slider-runnable-track {
+    [type="range"]::-webkit-slider-runnable-track {
       background-color: bf-v-color.$bf-dark-extra;
     }
 
-    [type='range']::-moz-range-track {
+    [type="range"]::-moz-range-track {
       background-color: bf-v-color.$bf-dark-extra;
     }
 
@@ -140,14 +150,14 @@
     }
 
     button,
-    [type='button'],
-    [type='reset'],
-    [type='submit'],
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
     .bf-btn,
     button.bf-disabled,
-    [type='button'].bf-disabled,
-    [type='reset'].bf-disabled,
-    [type='submit'].bf-disabled,
+    [type="button"].bf-disabled,
+    [type="reset"].bf-disabled,
+    [type="submit"].bf-disabled,
     .bf-btn.bf-disabled {
       background: bf-v-color.$bf-gray-light;
 
@@ -164,9 +174,9 @@
     }
 
     button,
-    [type='button'],
-    [type='reset'],
-    [type='submit'],
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
     .bf-btn {
       &:active,
       &:focus {
@@ -215,7 +225,10 @@
     dialog {
       color: color.adjust(bf-v-color.$bf-light, $lightness: 0%);
       // match body background color
-      background-color: color.adjust(bf-v-color.$bf-dark-extra, $lightness: 7.5%);
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
     }
   }
 }
@@ -230,7 +243,10 @@
     }
 
     body {
-      background-color: color.adjust(bf-v-color.$bf-dark-extra, $lightness: 7.5%);
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
     }
 
     // anchors
@@ -249,27 +265,30 @@
     }
 
     ins {
-      background-color: color.adjust(bf-v-color.$bf-yellow-light, $lightness: 45%);
+      background-color: color.adjust(
+        bf-v-color.$bf-yellow-light,
+        $lightness: 45%
+      );
     }
 
     // forms
 
-    [type='email'],
-    [type='number'],
-    [type='password'],
-    [type='tel'],
-    [type='search'],
-    [type='text'],
-    [type='date'],
-    [type='datetime-local'],
-    [type='month'],
-    [type='week'],
-    [type='time'],
-    [type='url'],
-    [type='range'],
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    [type="range"],
     input[list],
     select,
-    select:not([size]):not([multiple]),
+    select:not([size], [multiple]),
     textarea {
       background-color: bf-v-color.$bf-dark-extra;
       border-color: bf-v-color.$bf-black;
@@ -282,21 +301,21 @@
       }
     }
 
-    [type='email'],
-    [type='number'],
-    [type='password'],
-    [type='tel'],
-    [type='search'],
-    [type='text'],
-    [type='date'],
-    [type='datetime-local'],
-    [type='month'],
-    [type='week'],
-    [type='time'],
-    [type='url'],
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
     input[list],
     select,
-    select:not([size]):not([multiple]),
+    select:not([size], [multiple]),
     textarea {
       &:active,
       &:focus {
@@ -304,16 +323,17 @@
       }
     }
 
-    select:not([size]):not([multiple]) {
+    select:not([size], [multiple]) {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
     }
 
+    /* stylelint-disable-next-line */
     @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
       // hide custom arrow
-      select:not([size]):not([multiple]),
-  // RTL
-  *[dir="rtl"] select:not([size]):not([multiple]),
-  select[dir="rtl"]:not([size]):not([multiple]) {
+      select:not([size], [multiple]),
+  /* RTL*/
+  *[dir="rtl"] select:not([size], [multiple]),
+  select[dir="rtl"]:not([size], [multiple]) {
         background-image: none;
       }
     }
@@ -321,7 +341,7 @@
     // range
 
     // override above declaration
-    [type='range'] {
+    [type="range"] {
       background-color: transparent;
 
       &:focus {
@@ -331,11 +351,11 @@
 
     // darker background
     // the rulesets must be separated
-    [type='range']::-webkit-slider-runnable-track {
+    [type="range"]::-webkit-slider-runnable-track {
       background-color: bf-v-color.$bf-dark-extra;
     }
 
-    [type='range']::-moz-range-track {
+    [type="range"]::-moz-range-track {
       background-color: bf-v-color.$bf-dark-extra;
     }
 
@@ -345,9 +365,9 @@
     }
 
     button,
-    [type='button'],
-    [type='reset'],
-    [type='submit'] {
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
       background: bf-v-color.$bf-gray-light;
 
       &:hover,
@@ -363,9 +383,9 @@
     }
 
     button,
-    [type='button'],
-    [type='reset'],
-    [type='submit'] {
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
       &:active,
       &:focus {
         box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
@@ -385,7 +405,10 @@
     dialog {
       color: color.adjust(bf-v-color.$bf-light, $lightness: 0%);
       // match body background color
-      background-color: color.adjust(bf-v-color.$bf-dark-extra, $lightness: 7.5%);
+      background-color: color.adjust(
+        bf-v-color.$bf-dark-extra,
+        $lightness: 7.5%
+      );
     }
   }
 }

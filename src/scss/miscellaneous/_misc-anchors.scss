@@ -21,17 +21,17 @@ a {
 // this is taken from Bootstrap's reboot
 // https://getbootstrap.com/docs/4.4/content/reboot/
 
-a:not([href]):not([tabindex]) {
+a:not([href], [tabindex]) {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
+a:not([href], [class]),
+a:not([href], [class]):hover {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):focus {
+a:not([href], [tabindex]):focus {
   outline: 0;
 }

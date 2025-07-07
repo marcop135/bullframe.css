@@ -1,12 +1,12 @@
 // micro-clearfix
 // http://nicolasgallagher.com/micro-clearfix-hack/
-.bf-clearfix:before,
-.bf-clearfix:after {
-  content: ' ';
+.bf-clearfix::before,
+.bf-clearfix::after {
+  content: " ";
   display: table;
 }
 
-.bf-clearfix:after {
+.bf-clearfix::after {
   clear: both;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .bf-width-33 {
-  width: 33.33333333333333% !important;
+  width: 33.3333% !important;
 }
 
 .bf-width-50 {

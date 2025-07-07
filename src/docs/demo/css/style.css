@@ -1,133 +1,131 @@
-/* just for a nicer demo */
+.demo {
+  .bf-row {
+    margin-bottom: 2rem;
+  }
 
-.test .bf-row {
-  margin-bottom: 20px;
-  margin-bottom: 2rem;
-}
-
-.test [class^='bf-col'] {
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 575px) {
-  .test header {
+  [class^="bf-col"] {
     margin-bottom: 1rem;
   }
-}
 
-.test header h1 {
-  margin-top: 10px;
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
+  header {
+    margin-bottom: 1rem;
 
-.test header h1 span {
-  color: #f95c1f;
-}
+    h1 {
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-weight: 700;
 
-@media (min-width: 600px) {
-  .test header h1 {
-    font-size: 55px;
-    font-size: 5.5rem;
+      span {
+        color: #f95c1f;
+      }
+
+      @media (min-width: 600px) {
+        font-size: 5.5rem;
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 7rem;
+      }
+    }
+
+    a {
+      margin-right: 1rem;
+    }
   }
-}
 
-@media (min-width: 1000px) {
-  .test header h1 {
-    font-size: 70px;
-    font-size: 7rem;
+  @media (min-width: 600px) {
+    .btn-github {
+      font-size: 115%;
+    }
   }
-}
 
-.test .description {
-  max-width: 800px;
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.test header a {
-  margin-right: 10px;
-  margin-right: 1rem;
-}
-
-@media (min-width: 600px) {
-  .test .h2--section {
-    font-size: 40px;
-    font-size: 4rem;
+  .description {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
 
-.test .h2--section {
-  padding-top: 20px;
-  padding-bottom: 2rem;
-  text-transform: uppercase;
-}
+  .h2--section {
+    padding-bottom: 2rem;
+    text-transform: uppercase;
 
-.test legend {
-  padding-bottom: 10px;
-  padding-bottom: 1rem;
-}
+    @media (min-width: 600px) {
+      font-size: 4rem;
+    }
+  }
 
-.test button,
-.test .bf-btn,
-.test .input-image,
-.test input,
-.test select,
-.test textarea {
-  margin-bottom: 20px;
-  margin-bottom: 2rem;
-}
+  legend {
+    padding-bottom: 1rem;
+  }
 
-.test dialog .bf-btn {
-  margin-bottom: 0;
-}
+  button,
+  .bf-btn,
+  .input-image,
+  input,
+  select,
+  textarea {
+    margin-bottom: 2rem;
+  }
 
-.test [type='image'],
-.test [type='checkbox'],
-.test [type='radio'] {
-  margin-bottom: 0;
-}
+  dialog {
+    .bf-btn {
+      margin-bottom: 0;
+    }
+  }
 
-.test .grid .col-wrapper {
-  background-color: #888;
-  height: 60px;
-  height: 6rem;
-  line-height: 60px;
-  line-height: 6rem;
-  overflow-y: hidden;
-  color: #fff;
-  font-size: 80%;
-  text-align: center;
-  border-radius: 3px;
-  font-weight: 700;
-}
-
-.test .grid .bf-row:nth-child(odd) .col-wrapper {
-  background-color: #ccc;
-  color: #000;
-}
-
-@media (max-width: 767px) {
-  .test .grid .bf-row {
+  [type="image"],
+  [type="checkbox"],
+  [type="radio"] {
     margin-bottom: 0;
   }
 
-  .test .grid [class*='bf-col-'] {
-    margin-bottom: 20px;
-    margin-bottom: 2rem;
+  .grid {
+    .col-wrapper {
+      background-color: #888;
+      height: 6rem;
+      line-height: 6rem;
+      overflow-y: hidden;
+      color: #fff;
+      font-size: 80%;
+      text-align: center;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    .bf-row:nth-child(odd) {
+      .col-wrapper {
+        background-color: #ccc;
+        color: #000;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .bf-row {
+        margin-bottom: 0;
+      }
+
+      [class*="bf-col-"] {
+        margin-bottom: 2rem;
+      }
+    }
   }
-}
 
-.test .back-to-top {
-  text-align: center;
-  display: block;
-  margin: 60px 0 120px;
-  margin: 6rem 0 12rem;
-}
+  .back-to-top {
+    text-align: center;
+    display: block;
+    margin: 6rem 0 12rem;
 
-.test .back-to-top a i {
-  vertical-align: middle;
-  font-style: normal;
+    a {
+      i {
+        vertical-align: middle;
+        font-style: normal;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    header {
+      margin-bottom: 1rem;
+    }
+  }
 }

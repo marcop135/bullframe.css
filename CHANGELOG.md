@@ -1,5 +1,9 @@
 # Changes to Bullframe CSS
 
+## 5.0.1 - (July 07, 2025)
+
+Add missing LICENSE file and `.github/` folder
+
 ## 5.0.0 - BREAKING CHANGES (July 07, 2025)
 
 - Drop IE support

@@ -1,0 +1,34 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+.bf-table th,
+.bf-table td {
+  padding: bf-v-space.$bf-spacing-lg-rem;
+  border-bottom: 1px solid bf-v-color.$bf-gray;
+  margin-bottom: bf-v-space.$bf-spacing-md-rem;
+}
+
+// responsive tables
+.bf-table-responsive {
+  overflow: auto hidden;
+  -ms-overflow-style: scrollbar;
+}
+
+.bf-table-responsive table {
+  width: 100%;
+  margin-bottom: bf-v-space.$bf-spacing-md-rem;
+}
+
+// force webkit scrollbars appearance
+.bf-table-responsive.scrollbar {
+  -webkit-overflow-scrolling: auto;
+}
+
+// zebra striping
+.bf-table--zebra tbody tr:nth-child(odd),
+.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  background-color: bf-v-color.$bf-gray-light-extra;
+}

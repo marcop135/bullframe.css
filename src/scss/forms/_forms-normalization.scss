@@ -1,0 +1,316 @@
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
+
+// normalization, enhancement and responsiveness
+
+html input,
+button,
+select,
+optgroup,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+html input,
+button,
+[type="radio"],
+[type="checkbox"],
+select,
+optgroup,
+textarea {
+  margin: 0;
+}
+
+html input,
+select,
+textarea,
+legend {
+  width: 100%;
+}
+
+// re-set width auto where needed
+html label,
+button,
+[type="image"],
+[type="submit"],
+[type="reset"],
+html [type="button"],
+[type="radio"],
+[type="checkbox"] {
+  width: auto;
+}
+
+// inline-block display gives the best cross-browser combination
+// and allow several properties
+html input,
+label,
+select,
+textarea,
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"],
+output {
+  display: inline-block;
+}
+
+[type="file"] {
+  display: block;
+  background-color: transparent;
+}
+
+button,
+html input,
+select,
+textarea {
+  background-image: none; // FF mobile
+}
+
+input,
+select,
+textarea {
+  vertical-align: baseline;
+}
+
+form {
+  margin: 0;
+}
+
+// 1. Remove intrinsic min-width of fieldset
+// https://github.com/necolas/normalize.css/pull/269
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0; // 1.
+}
+
+legend {
+  display: table; // Correct the text wrapping in Edge and IE.
+  max-width: 100%;
+  white-space: normal; // enable line-wrapping in FF4/5
+  border: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: bf-v-space.$bf-spacing-md-px;
+  margin-bottom: bf-v-space.$bf-spacing-md-rem;
+  font-size: inherit;
+  line-height: 1.375;
+  color: inherit;
+}
+
+label {
+  font-weight: 400;
+  font-size: 90%;
+  line-height: 1.375;
+  margin-bottom: bf-v-space.$bf-spacing-md-px;
+  margin-bottom: bf-v-space.$bf-spacing-md-rem;
+}
+
+label input,
+label select,
+label textarea {
+  font-size: 110%;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+[type="search"] {
+  outline-offset: calc(-1 * bf-v-space.$bf-spacing-sm-rem);
+}
+
+output {
+  vertical-align: middle;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+}
+
+// Taken from Bootstrap Reboot v5.2
+// https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
+[list]:not(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"]
+  )::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit; // fallback for font families without 600 */
+  font-weight: 600;
+}
+
+// remove -webkit-appearance listing every single elements that needed it
+button,
+// avoid destroying native android audio/video players
+html [type="button"],
+[type="reset"],
+[type="submit"],
+
+[type="email"],
+[type="number"],
+[type="text"],
+[type="tel"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="url"],
+[type="image"],
+[type="password"],
+[type="search"],
+[type="search"]::-webkit-search-decoration,
+[type="search"]::-webkit-search-cancel-button,
+input[list],
+textarea {
+  appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  appearance: auto;
+}
+
+::file-selector-button {
+  font: inherit;
+  appearance: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  border-radius: bf-v-space.$bf-spacing-sm-rem;
+}
+
+[type="radio"] {
+  border-radius: 50%;
+}
+
+[type="checkbox"] {
+  border-radius: bf-v-space.$bf-spacing-md-rem;
+}
+
+[type="radio"],
+[type="checkbox"] {
+  padding: 0;
+  background-color: bf-v-color.$bf-white;
+}
+
+[type="range" i] {
+  background-color: transparent; // FF and Chrome mobile
+}
+
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+select[multiple] {
+  background-image: none; // FF mobile
+}
+
+textarea {
+  height: auto;
+  min-height: 60px;
+  min-height: 6rem;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+// Remove the inner border and padding of focus outlines in Firefox
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  user-select: none;
+  border: 0;
+  background-image: none; // FF mobile
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: bf-v-color.$bf-dark;
+  }
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+// FF placeholder bug
+// Issue: If one change the text color of input fields, FF will change
+// the default color of placeholders too!
+// Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
+input::placeholder,
+textarea::placeholder {
+  color: bf-v-color.$bf-gray-dark;
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+// remove ':invalid' styles in FF
+// https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
+//
+// for form validation in JavaScript
+// use '.bf-invalid' class in /utilities/_utility-form-states.scss' instead
+// documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
+:-moz-ui-invalid {
+  box-shadow: none;
+}

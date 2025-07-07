@@ -1,0 +1,73 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+.bf-btn {
+  display: inline-block;
+  cursor: pointer;
+  color: bf-v-color.$bf-dark;
+  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3) (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2); // 8px 16px
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  user-select: none;
+  border-radius: bf-v-space.$bf-spacing-sm-rem;
+
+  border: 0;
+  background-image: none; // FF mobile
+  background-color: bf-v-color.$bf-gray-light;
+  transition: all 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: bf-v-color.$bf-dark;
+    background: color.adjust(bf-v-color.$bf-gray-light, $lightness: -10%);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.bf-btn--primary {
+    color: bf-v-color.$bf-white;
+    background: bf-v-color.$bf-blue;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: bf-v-color.$bf-white;
+      background: color.adjust(bf-v-color.$bf-blue, $lightness: -10%);
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
+    }
+  }
+}
+
+fieldset[disabled] .bf-btn,
+.bf-btn[disabled],
+.bf-btn:disabled,
+.bf-btn[aria-disabled='true'] {
+  cursor: default !important; // fallback
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  box-shadow: none !important;
+  opacity: 0.5 !important;
+  background-color: bf-v-color.$bf-gray-light;
+}

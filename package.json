@@ -1,0 +1,56 @@
+{
+  "name": "bullframe.css",
+  "version": "5.0.0",
+  "description": "Solid, fluid, cross-browser Sass (SCSS) framework.",
+  "jsdelivr": "dist/css/bullframe.css",
+  "unpkg": "dist/css/bullframe.css",
+  "main": "dist/css/bullframe.css",
+  "directories": {
+    "doc": "docs/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcop135/bullframe.css.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "cross-browser",
+    "css",
+    "css-framework",
+    "dark",
+    "dark-theme",
+    "darkmode",
+    "normalize-css",
+    "reset-css",
+    "responsive",
+    "responsive-web-design",
+    "sass",
+    "sass-framework",
+    "scss",
+    "typography"
+  ],
+  "author": "Marco Pontili",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcop135/bullframe.css/issues"
+  },
+  "homepage": "https://bullframecss.netlify.app",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "fs": "^0.0.1-security",
+    "glob": "^11.0.3",
+    "htmlhint": "^1.6.3",
+    "path": "^0.12.7",
+    "postcss": "^8.5.6",
+    "sass": "^1.89.2",
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "vite": "^7.0.2"
+  }
+}

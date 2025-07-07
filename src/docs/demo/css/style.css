@@ -1,0 +1,131 @@
+.demo {
+  .bf-row {
+    margin-bottom: 2rem;
+  }
+
+  [class^="bf-col"] {
+    margin-bottom: 1rem;
+  }
+
+  header {
+    margin-bottom: 1rem;
+
+    h1 {
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-weight: 700;
+
+      span {
+        color: #f95c1f;
+      }
+
+      @media (min-width: 600px) {
+        font-size: 5.5rem;
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 7rem;
+      }
+    }
+
+    a {
+      margin-right: 1rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .btn-github {
+      font-size: 115%;
+    }
+  }
+
+  .description {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .h2--section {
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+
+    @media (min-width: 600px) {
+      font-size: 4rem;
+    }
+  }
+
+  legend {
+    padding-bottom: 1rem;
+  }
+
+  button,
+  .bf-btn,
+  .input-image,
+  input,
+  select,
+  textarea {
+    margin-bottom: 2rem;
+  }
+
+  dialog {
+    .bf-btn {
+      margin-bottom: 0;
+    }
+  }
+
+  [type="image"],
+  [type="checkbox"],
+  [type="radio"] {
+    margin-bottom: 0;
+  }
+
+  .grid {
+    .col-wrapper {
+      background-color: #888;
+      height: 6rem;
+      line-height: 6rem;
+      overflow-y: hidden;
+      color: #fff;
+      font-size: 80%;
+      text-align: center;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    .bf-row:nth-child(odd) {
+      .col-wrapper {
+        background-color: #ccc;
+        color: #000;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .bf-row {
+        margin-bottom: 0;
+      }
+
+      [class*="bf-col-"] {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .back-to-top {
+    text-align: center;
+    display: block;
+    margin: 6rem 0 12rem;
+
+    a {
+      i {
+        vertical-align: middle;
+        font-style: normal;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    header {
+      margin-bottom: 1rem;
+    }
+  }
+}

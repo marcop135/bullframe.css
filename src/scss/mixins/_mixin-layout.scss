@@ -1,0 +1,42 @@
+@mixin bf-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@mixin bf-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@mixin bf-sr-only-focusable {
+  &:active,
+  &:focus {
+    @include bf-sr-only;
+    clip: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    position: static !important;
+    white-space: inherit !important;
+    width: auto !important;
+  }
+}
+
+@mixin bf-clearfix {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table !important;
+  }
+
+  &::after {
+    clear: both !important;
+  }
+}

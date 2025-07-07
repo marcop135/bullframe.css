@@ -1,0 +1,53 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+table {
+  caption-side: bottom;
+  max-width: 100%;
+  border-collapse: collapse;
+  // Correct table border color inheritance in Chrome and Safari
+  // https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016
+  border-color: currentcolor;
+  // Remove text indentation from table contents in Chrome and Safari
+  // https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297
+  text-indent: 0;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+  font-weight: 700;
+}
+
+caption {
+  padding-top: bf-v-space.$bf-spacing-md-rem;
+  padding-bottom: bf-v-space.$bf-spacing-md-rem;
+  color: bf-v-color.$bf-gray;
+  text-align: left;
+  caption-side: bottom;
+  line-height: 1.375;
+  font-size: 90%;
+}

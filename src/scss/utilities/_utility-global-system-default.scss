@@ -1,0 +1,3 @@
+@use "../variables/variables-colors" as bf-v-color;
+@use "../mixins/mixin-dark-prefers" as bf-mix-dark-prefers;
+@include bf-mix-dark-prefers.bf-global-dark-prefers;

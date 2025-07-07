@@ -1,0 +1,75 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+html {
+  text-size-adjust: 100%;
+
+  // resize the base font-size and get an easy math for rem units
+  // https://snook.ca/archives/html_and_css/font-size-with-rem
+  font-size: 62.5%;
+
+  color: bf-v-color.$bf-dark;
+
+  // set a default font-family and line-height
+  font-family: sans-serif;
+  line-height: 1.15;
+
+  // remove a tap background when a link or interactive element is focused
+  // if is touch
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+body {
+  margin: 0;
+  font-size: bf-v-text.$bf-body-font-size-rem; // '1.6rem' by default
+  line-height: bf-v-text.$bf-body-line-height; // '1.5' by default
+
+  // this is useful to inherit values for some elements (e.g. forms)
+  font-weight: 400;
+  text-align: left;
+
+  // native font stack for optimum text rendering on every device and OS
+  // this stack mimics the system font UI
+  // a web apps looks like a native app (e.g. Android = Roboto font)
+  // Read more:
+  // https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+  font-family:
+
+		// Safari for OS X and iOS (San Francisco) -apple-system,
+    // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+    // Windows
+    'Segoe UI',
+    // Android
+    Roboto,
+    // Linux with KDE
+    Oxygen-Sans,
+    // Ubuntu (all variants)
+    Ubuntu,
+    // Linux with GNOME Shell
+    Cantarell,
+    // macOS 1.10 and below
+    'Helvetica Neue',
+    Helvetica,
+    // Basic web fallback
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    // emoji fonts
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  // this enable font ligatures
+  text-rendering: optimizeLegibility;
+
+  // break very long texts by default, especially on old browsers
+  // e.g. big <h1> or <h2> headlines
+  word-wrap: break-word;
+
+  background-color: bf-v-color.$bf-white;
+}

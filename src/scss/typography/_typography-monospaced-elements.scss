@@ -1,0 +1,59 @@
+@use '../variables/variables-colors' as bf-v-color;
+@use '../variables/variables-texts' as bf-v-text;
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+@use 'sass:color';
+
+pre {
+  margin: 0 0 bf-v-space.$bf-spacing-xl-rem 0;
+
+  display: block;
+  overflow: auto;
+  word-break: break-all; // webkit
+  word-wrap: break-word;
+  white-space: pre;
+  hyphens: none;
+
+  // Disable auto-hiding scrollbar in legacy Edge
+  // https://github.com/twbs/bootstrap/pull/30685
+  -ms-overflow-style: auto;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family:
+
+  /* macOS 1.10+ */
+    Menlo,
+     Consolas,
+     'Roboto Mono',
+     'Ubuntu Monospace',
+     'Noto Mono',
+     'Oxygen Mono',
+     'Liberation Mono',
+     monospace,
+     'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  // a monospaced text font should looks bigger, so a smaller font-size
+  // is preferred
+  font-size: 0.875em;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}

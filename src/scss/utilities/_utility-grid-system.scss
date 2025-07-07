@@ -1,0 +1,140 @@
+@use '../variables/variables-spacing' as bf-v-space;
+@use '../variables/variables-breakpoints' as bf-v-bp;
+
+.bf-container,
+.bf-container--fluid {
+  box-sizing: border-box;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: bf-v-space.$bf-spacing-grid-gutter-rem;
+  padding-right: bf-v-space.$bf-spacing-grid-gutter-rem;
+}
+
+.bf-container {
+  max-width: 114rem;
+}
+
+.bf-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * bf-v-space.$bf-spacing-grid-gutter-rem);
+  margin-right: calc(-1 * bf-v-space.$bf-spacing-grid-gutter-rem);
+}
+
+[class^='bf-col-'] {
+  position: relative;
+  min-height: 1px;
+  padding-left: bf-v-space.$bf-spacing-grid-gutter-rem;
+  padding-right: bf-v-space.$bf-spacing-grid-gutter-rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.bf-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  > [class^='bf-col'] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Column widths
+.bf-col-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+.bf-col-11 {
+  flex-basis: 91.6667%;
+  max-width: 91.6667%;
+}
+.bf-col-10 {
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+}
+.bf-col-9 {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+.bf-col-8 {
+  flex-basis: 66.6667%;
+  max-width: 66.6667%;
+}
+.bf-col-7 {
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+}
+.bf-col-6 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.bf-col-5 {
+  flex-basis: 41.6667%;
+  max-width: 41.6667%;
+}
+.bf-col-4 {
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+}
+.bf-col-3 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+.bf-col-2 {
+  flex-basis: 16.6667%;
+  max-width: 16.6667%;
+}
+.bf-col-1 {
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+}
+
+// Responsive breakpoints: stack columns
+@media (max-width: 575px) {
+  .bf-container--break-xs .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bf-container--break-xs [class^='bf-col'] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .bf-container--break-md .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bf-container--break-md [class^='bf-col'] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .bf-container--break-lg .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bf-container--break-lg [class^='bf-col'] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x)
+table td[class^='bf-col'],
+table th[class^='bf-col'] {
+  position: static;
+}

@@ -1,4 +1,4 @@
-/*! bullframecss v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! Bullframe CSS v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
 @charset "UTF-8";
 *,
 *::before,
@@ -243,8 +243,6 @@ a:not([href]):not([tabindex]) {
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):hover,
-a:not([href]):not([tabindex]):focus,
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
   color: inherit;
@@ -252,6 +250,47 @@ a:not([href]):not([class]):hover {
 }
 
 a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+a:focus,
+input:focus {
+  outline: 2px solid orange;
+}
+
+:focus-visible {
+  outline: 2px solid orange;
+}
+
+button:focus,
+[type=button]:focus,
+[type=reset]:focus,
+[type=submit]:focus,
+[type=email]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=tel]:focus,
+[type=search]:focus,
+[type=text]:focus,
+[type=date]:focus,
+[type=datetime-local]:focus,
+[type=month]:focus,
+[type=time]:focus,
+[type=week]:focus,
+[type=url]:focus,
+[type=radio]:focus,
+[type=checkbox]:focus,
+input[list]:focus,
+select:focus,
+textarea:focus {
   outline: 0;
 }
 
@@ -401,8 +440,11 @@ address {
   line-height: inherit;
 }
 
-summary {
+details > summary:first-of-type {
   display: list-item;
+}
+
+summary {
   cursor: pointer;
   font-weight: 700;
   word-break: break-all;
@@ -410,10 +452,13 @@ summary {
 
 dialog {
   background-color: #fff;
+  color: #fff;
   border: none;
   border-radius: 0.25rem;
   padding: 20px;
   padding: 2rem;
+  height: -moz-fit-content;
+  height: fit-content;
   min-width: 25rem;
   max-width: calc(100vw - 3rem);
 }
@@ -429,6 +474,85 @@ dialog[open] {
 
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+table {
+  caption-side: bottom;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-color: currentcolor;
+  text-indent: 0;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+  font-weight: 700;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #999;
+  text-align: left;
+  caption-side: bottom;
+  line-height: 1.375;
+  font-size: 90%;
+}
+
+/* Accessibility
+ * ========================================================================== */
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+:where([aria-busy=true i]) {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+:where([aria-disabled=true i], [disabled]) {
+  cursor: not-allowed;
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+:where([aria-hidden=false i][hidden]) {
+  display: initial;
+}
+
+:where([aria-hidden=false i][hidden]:not(:focus)) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
 }
 
 html input,
@@ -539,8 +663,7 @@ label textarea {
   font-size: 110%;
 }
 
-[type=number]::-webkit-outer-spin-button,
-[type=number]::-webkit-inner-spin-button {
+::-webkit-inner-spin-button {
   height: auto;
 }
 
@@ -610,9 +733,10 @@ textarea {
   -webkit-appearance: none;
 }
 
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
+::file-selector-button {
   font: inherit;
+  /* stylelint-disable-next-line */
+  -webkit-appearance: button;
 }
 
 button,
@@ -636,7 +760,7 @@ textarea {
   background-color: #fff;
 }
 
-[type=range] {
+[type=range i] {
   background-color: transparent;
 }
 
@@ -694,14 +818,10 @@ button:hover, button:active, button:focus,
   color: #222;
 }
 
-button,
-select,
-input[type=submit],
-input[type=button],
-[type=checkbox],
-[type=range],
-[type=radio],
-[role=button] {
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
   cursor: pointer;
 }
 
@@ -712,6 +832,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 input::placeholder,
 textarea::placeholder {
   color: #666;
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+:-moz-focusring {
+  outline: auto;
 }
 
 :-moz-ui-invalid {
@@ -1016,48 +1143,6 @@ select[dir=rtl]:not([size]):not([multiple]) {
 }
 [type=range]:disabled::-moz-slider-thumb {
   background-color: #ccc;
-}
-
-table {
-  max-width: 100%;
-  border-collapse: collapse;
-  border-color: currentcolor;
-  text-indent: 0;
-}
-
-thead,
-tbody,
-tfoot,
-tr,
-td,
-th {
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-}
-
-thead th {
-  vertical-align: bottom;
-}
-
-th,
-td {
-  vertical-align: top;
-}
-
-th {
-  text-align: inherit;
-  font-weight: 700;
-}
-
-caption {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  color: #999;
-  text-align: left;
-  caption-side: bottom;
-  line-height: 1.375;
-  font-size: 90%;
 }
 
 html {

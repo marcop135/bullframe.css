@@ -1,4 +1,4 @@
-/*! bullframecss v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! Bullframe CSS v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
 .bf-container,
 .bf-container--fluid {
   box-sizing: border-box;
@@ -323,26 +323,6 @@ table th[class^=bf-col] {
 
 .bf-width-auto {
   width: auto !important;
-}
-
-.bf-filter-invert {
-  filter: invert(100%) !important;
-}
-
-.bf-filter-dim-images {
-  filter: brightness(0.8) contrast(1.2);
-}
-
-.bf-filter-grayscale {
-  filter: grayscale(1) !important;
-}
-
-.bf-filter-blur {
-  filter: blur(0.3rem) !important;
-}
-
-.bf-filter-none {
-  filter: none !important;
 }
 
 .bf-z-index-1 {

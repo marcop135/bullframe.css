@@ -2,8 +2,8 @@
 
 ## 5.1.0 - (???)
 
-- ...
-- ...
+- Leveraged `:where` CSS pseudo-class to lower form elements specificity to `0`
+- Added one-page demo and CodePen collection to `README.md`
 
 ## 5.0.1 - (July 07, 2025)
 

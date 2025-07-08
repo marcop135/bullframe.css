@@ -252,44 +252,43 @@ a:not([href], [tabindex]):focus {
   outline: 0;
 }
 
-:focus:not(:focus-visible) {
+:where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+:where([tabindex="-1"]:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
-a:focus,
-input:focus {
+:where(a:focus, input:focus) {
   outline: 2px solid orange;
 }
 
-:focus-visible {
+:where(:focus-visible) {
   outline: 2px solid orange;
 }
 
-button:focus,
-[type=button]:focus,
-[type=reset]:focus,
-[type=submit]:focus,
-[type=email]:focus,
-[type=number]:focus,
-[type=password]:focus,
-[type=tel]:focus,
-[type=search]:focus,
-[type=text]:focus,
-[type=date]:focus,
-[type=datetime-local]:focus,
-[type=month]:focus,
-[type=time]:focus,
-[type=week]:focus,
-[type=url]:focus,
-[type=radio]:focus,
-[type=checkbox]:focus,
-input[list]:focus,
-select:focus,
-textarea:focus {
+:where(button,
+[type=button],
+[type=reset],
+[type=submit],
+[type=email],
+[type=number],
+[type=password],
+[type=tel],
+[type=search],
+[type=text],
+[type=date],
+[type=datetime-local],
+[type=month],
+[type=time],
+[type=week],
+[type=url],
+[type=radio],
+[type=checkbox],
+input[list],
+select,
+textarea):focus {
   outline: 0;
 }
 
@@ -554,46 +553,39 @@ caption {
   position: absolute;
 }
 
-html input,
-button,
-select,
-optgroup,
-textarea {
+:where(html input, button, select, optgroup, textarea) {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-html input,
+:where(html input,
 button,
 [type=radio],
 [type=checkbox],
 select,
 optgroup,
-textarea {
+textarea) {
   margin: 0;
 }
 
-html input,
-select,
-textarea,
-legend {
+:where(html input, select, textarea, legend) {
   width: 100%;
 }
 
-html label,
+:where(html label,
 button,
 [type=image],
 [type=submit],
 [type=reset],
 html [type=button],
 [type=radio],
-[type=checkbox] {
+[type=checkbox]) {
   width: auto;
 }
 
-html input,
+:where(html input,
 label,
 select,
 textarea,
@@ -601,40 +593,35 @@ button,
 html [type=button],
 [type=reset],
 [type=submit],
-output {
+output) {
   display: inline-block;
 }
 
-[type=file] {
+:where([type=file]) {
   display: block;
   background-color: transparent;
 }
 
-button,
-html input,
-select,
-textarea {
+:where(button, html input, select, textarea) {
   background-image: none;
 }
 
-input,
-select,
-textarea {
+:where(input, select, textarea) {
   vertical-align: baseline;
 }
 
-form {
+:where(form) {
   margin: 0;
 }
 
-fieldset {
+:where(fieldset) {
   border: 0;
   padding: 0;
   margin: 0;
   min-width: 0;
 }
 
-legend {
+:where(legend) {
   display: table;
   max-width: 100%;
   white-space: normal;
@@ -648,7 +635,7 @@ legend {
   color: inherit;
 }
 
-label {
+:where(label) {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
@@ -656,9 +643,7 @@ label {
   margin-bottom: 0.5rem;
 }
 
-label input,
-label select,
-label textarea {
+:where(label input, label select, label textarea) {
   font-size: 110%;
 }
 
@@ -680,24 +665,23 @@ label textarea {
   padding: 0;
 }
 
-[type=search] {
+:where([type=search]) {
   outline-offset: -0.25rem;
 }
 
-output {
+:where(output) {
   vertical-align: middle;
 }
 
-button,
-select {
+:where(button, select) {
   text-transform: none;
 }
 
-select {
+:where(select) {
   word-wrap: normal;
 }
 
-[list]:not([type=date],
+:where([list]):not([type=date],
 [type=datetime-local],
 [type=month],
 [type=week],
@@ -705,14 +689,14 @@ select {
   display: none !important;
 }
 
-optgroup {
+:where(optgroup) {
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
   font-weight: 600;
 }
 
-button,
+:where(button,
 html [type=button],
 [type=reset],
 [type=submit],
@@ -731,7 +715,7 @@ html [type=button],
 [type=search]::-webkit-search-decoration,
 [type=search]::-webkit-search-cancel-button,
 input[list],
-textarea {
+textarea) {
   -webkit-appearance: none;
           appearance: none;
 }
@@ -743,41 +727,36 @@ textarea {
           appearance: auto;
 }
 
-button,
-input,
-select,
-textarea {
+:where(button, input, select, textarea) {
   border-radius: 0.25rem;
 }
 
-[type=radio] {
+:where([type=radio]) {
   border-radius: 50%;
 }
 
-[type=checkbox] {
+:where([type=checkbox]) {
   border-radius: 0.5rem;
 }
 
-[type=radio],
-[type=checkbox] {
+:where([type=radio], [type=checkbox]) {
   padding: 0;
   background-color: #fff;
 }
 
-[type=range i] {
+:where([type=range i]) {
   background-color: transparent;
 }
 
-select[size],
-select[multiple] {
+:where(select[size], select[multiple]) {
   height: auto;
 }
 
-select[multiple] {
+:where(select[multiple]) {
   background-image: none;
 }
 
-textarea {
+:where(textarea) {
   height: auto;
   min-height: 60px;
   min-height: 6rem;
@@ -791,10 +770,7 @@ textarea {
   border-style: none;
 }
 
-button,
-[type=button],
-[type=reset],
-[type=submit] {
+:where(button, [type=button], [type=reset], [type=submit]) {
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -808,33 +784,23 @@ button,
   border: 0;
   background-image: none;
 }
-button:hover, button:active, button:focus,
-[type=button]:hover,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:active,
-[type=submit]:focus {
+:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
   text-decoration: none;
   color: #222;
 }
 
-button:not(:disabled),
+:where(button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
-[type=submit]:not(:disabled) {
+[type=submit]:not(:disabled)) {
   cursor: pointer;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+:where(input::-moz-placeholder, textarea::-moz-placeholder) {
   color: #666;
 }
 
-input::placeholder,
-textarea::placeholder {
+:where(input::placeholder, textarea::placeholder) {
   color: #666;
 }
 
@@ -849,7 +815,7 @@ Use the modern Firefox focus style for all focusable elements.
   box-shadow: none;
 }
 
-[type=email],
+:where([type=email],
 [type=number],
 [type=password],
 [type=tel],
@@ -863,86 +829,66 @@ Use the modern Firefox focus style for all focusable elements.
 [type=url],
 input[list],
 select,
-textarea {
+textarea) {
   background-color: #fff;
-  border: 1px solid/#999;
-  padding: 5px 7.5px;
+  border: 1px solid #999;
   padding: 0.5rem 0.75rem;
 }
 
-[type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-textarea:active,
-textarea:focus,
-[type=radio]:active,
-[type=radio]:focus,
-[type=checkbox]:active,
-[type=checkbox]:focus {
+:where([type=email],
+[type=number],
+[type=password],
+[type=tel],
+[type=search],
+[type=text],
+[type=date],
+[type=datetime-local],
+[type=month],
+[type=week],
+[type=time],
+[type=url],
+input[list],
+select,
+textarea,
+[type=radio],
+[type=checkbox]):active, :where([type=email],
+[type=number],
+[type=password],
+[type=tel],
+[type=search],
+[type=text],
+[type=date],
+[type=datetime-local],
+[type=month],
+[type=week],
+[type=time],
+[type=url],
+input[list],
+select,
+textarea,
+[type=radio],
+[type=checkbox]):focus {
   transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
   border-color: #007bff;
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
-button,
-[type=button],
-[type=reset],
-[type=submit] {
+:where(button, [type=button], [type=reset], [type=submit]) {
   color: #222;
-  padding: 6.6666666667px 13.3333333333px;
   padding: 0.6666666667rem 1.3333333333rem;
   background: #ccc;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 }
-button:hover, button:active, button:focus,
-[type=button]:hover,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:active,
-[type=submit]:focus {
+:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
   text-decoration: none;
   color: #222;
   background: rgb(178.5, 178.5, 178.5);
 }
-button:active, button:focus,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:active,
-[type=submit]:focus {
+:where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 
-fieldset[disabled] button,
+:where(fieldset[disabled] button,
 fieldset[disabled] input,
 fieldset[disabled] input::after,
 fieldset[disabled] input::before,
@@ -973,7 +919,7 @@ input[aria-disabled=true]::before,
 input[aria-disabled=true]:checked,
 select[aria-disabled=true],
 textarea[aria-disabled=true],
-label[aria-disabled=true] {
+label[aria-disabled=true]) {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -984,30 +930,26 @@ label[aria-disabled=true] {
   opacity: 0.5 !important;
 }
 
-select:not([size], [multiple]) {
+:where(select):not([size], select[multiple]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
-  padding-right: 20px;
   padding-right: 2rem;
 }
 
-select::-ms-expand {
+:where(select)::-ms-expand {
   display: none;
 }
 
-*[dir=rtl] select:not([size], [multiple]),
-select[dir=rtl]:not([size], [multiple]) {
+:where(*[dir=rtl]) :where(select):not([size], select[multiple]),
+:where(select[dir=rtl]):not([size], select[multiple]) {
   background-position: left 0.85rem top 50%;
-  padding-right: 7.5px;
   padding-right: 0.75rem;
-  padding-left: 20px;
   padding-left: 2rem;
 }
 
-[type=checkbox],
-[type=radio] {
+:where([type=checkbox], [type=radio]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1017,33 +959,28 @@ select[dir=rtl]:not([size], [multiple]) {
   position: relative;
   border: 1px solid/#999;
 }
-[type=checkbox] + label,
-[type=radio] + label {
+:where([type=checkbox], [type=radio]) + label {
   line-height: 1.8rem;
   vertical-align: top;
   margin-left: 5px;
   margin-left: 0.5rem;
 }
-*[dir=rtl] [type=checkbox] + label, [type=checkbox][dir=rtl] + label,
-*[dir=rtl] [type=radio] + label,
-[type=radio][dir=rtl] + label {
+*[dir=rtl] :where([type=checkbox], [type=radio]) + label, :where([type=checkbox], [type=radio])[dir=rtl] + label {
   margin-left: 0;
   margin-right: 5px;
   margin-right: 0.5rem;
 }
-[type=checkbox]::after,
-[type=radio]::after {
+:where([type=checkbox], [type=radio])::after {
   content: "";
   display: block;
   position: absolute;
 }
-[type=checkbox]:checked,
-[type=radio]:checked {
+:where([type=checkbox], [type=radio]):checked {
   background-color: #007bff;
   border-color: #000;
 }
 
-[type=radio]::after {
+:where([type=radio])::after {
   width: 1.8rem;
   height: 1.8rem;
   left: -0.05rem;
@@ -1053,7 +990,7 @@ select[dir=rtl]:not([size], [multiple]) {
   transform: scale(0.35);
 }
 
-[type=checkbox]::after {
+:where([type=checkbox])::after {
   width: 0.6rem;
   height: 0.8rem;
   border: 2px solid/#fff;
@@ -1064,7 +1001,7 @@ select[dir=rtl]:not([size], [multiple]) {
   transform: rotate(43deg);
 }
 
-[type=range] {
+:where([type=range]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1072,7 +1009,7 @@ select[dir=rtl]:not([size], [multiple]) {
   height: 1.4rem;
 }
 
-[type=range]::-webkit-slider-thumb {
+:where([type=range])::-webkit-slider-thumb {
   border: 0;
   -webkit-appearance: none;
           appearance: none;
@@ -1084,11 +1021,11 @@ select[dir=rtl]:not([size], [multiple]) {
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-[type=range]::-webkit-slider-thumb:active {
+:where([type=range])::-webkit-slider-thumb:active {
   background-color: #007bff;
 }
 
-[type=range]::-moz-range-thumb {
+:where([type=range])::-moz-range-thumb {
   border: 0;
   -moz-appearance: none;
        appearance: none;
@@ -1099,11 +1036,11 @@ select[dir=rtl]:not([size], [multiple]) {
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-[type=range]::-moz-range-thumb:active {
+:where([type=range])::-moz-range-thumb:active {
   background-color: #007bff;
 }
 
-[type=range]::-webkit-slider-runnable-track {
+:where([type=range])::-webkit-slider-runnable-track {
   color: transparent;
   border-color: transparent;
   width: 100%;
@@ -1112,7 +1049,7 @@ select[dir=rtl]:not([size], [multiple]) {
   background-color: #e9e9e9;
 }
 
-[type=range]::-moz-range-track {
+:where([type=range])::-moz-range-track {
   color: transparent;
   border-color: transparent;
   width: 100%;
@@ -1121,31 +1058,31 @@ select[dir=rtl]:not([size], [multiple]) {
   background-color: #e9e9e9;
 }
 
-[type=range]:focus {
+:where([type=range]):focus {
   outline: none;
 }
-[type=range]:focus::-webkit-slider-thumb {
+:where([type=range]):focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
-[type=range]:focus::-moz-slider-thumb {
+:where([type=range]):focus::-moz-slider-thumb {
   box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-[type=range]::-moz-focus-outer {
+:where([type=range])::-moz-focus-outer {
   border: 0;
 }
 
-[type=range]:focus::-moz-range-thumb {
+:where([type=range]):focus::-moz-range-thumb {
   box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-[type=range]:disabled {
+:where([type=range]):disabled {
   pointer-events: none;
 }
-[type=range]:disabled::-webkit-slider-thumb {
+:where([type=range]):disabled::-webkit-slider-thumb {
   background-color: #ccc;
 }
-[type=range]:disabled::-moz-slider-thumb {
+:where([type=range]):disabled::-moz-slider-thumb {
   background-color: #ccc;
 }
 
@@ -1170,205 +1107,192 @@ html {
   background-color: rgb(127.5, 127.5, 127.5);
 }
 
-html {
-  color: #f0f0f0;
+@media (prefers-color-scheme: dark) {
+  html {
+    color: #f0f0f0;
+  }
+  body {
+    background-color: rgb(36.125, 36.125, 36.125);
+  }
+  a {
+    color: rgb(102, 175.8, 255);
+  }
+  a:hover, a:focus {
+    color: rgb(26, 136.0223463687, 255);
+  }
+  mark {
+    background-color: #cccc00;
+  }
+  ins {
+    background-color: hsl(60, 100%, 125%);
+  }
+  [type=email],
+  [type=number],
+  [type=password],
+  [type=tel],
+  [type=search],
+  [type=text],
+  [type=date],
+  [type=datetime-local],
+  [type=month],
+  [type=week],
+  [type=time],
+  [type=url],
+  [type=range],
+  input[list],
+  select,
+  select:not([size], select[multiple]),
+  textarea {
+    background-color: #111;
+    border-color: #000;
+    color: #ccc;
+  }
+  [type=email]:active, [type=email]:focus,
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  [type=range]:active,
+  [type=range]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size], select[multiple]):active,
+  select:not([size], select[multiple]):focus,
+  textarea:active,
+  textarea:focus {
+    background-color: #111;
+    border-color: rgb(51, 149.4, 255);
+  }
+  [type=email]:active, [type=email]:focus,
+  [type=number]:active,
+  [type=number]:focus,
+  [type=password]:active,
+  [type=password]:focus,
+  [type=tel]:active,
+  [type=tel]:focus,
+  [type=search]:active,
+  [type=search]:focus,
+  [type=text]:active,
+  [type=text]:focus,
+  [type=date]:active,
+  [type=date]:focus,
+  [type=datetime-local]:active,
+  [type=datetime-local]:focus,
+  [type=month]:active,
+  [type=month]:focus,
+  [type=week]:active,
+  [type=week]:focus,
+  [type=time]:active,
+  [type=time]:focus,
+  [type=url]:active,
+  [type=url]:focus,
+  input[list]:active,
+  input[list]:focus,
+  select:active,
+  select:focus,
+  select:not([size], select[multiple]):active,
+  select:not([size], select[multiple]):focus,
+  textarea:active,
+  textarea:focus {
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
+  }
+  select:not([size], select[multiple]) {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+  }
+  /* stylelint-disable-next-line */
 }
-
-body {
-  background-color: rgb(36.125, 36.125, 36.125);
-}
-
-a {
-  color: rgb(102, 175.8, 255);
-}
-a:hover, a:focus {
-  color: rgb(26, 136.0223463687, 255);
-}
-
-mark {
-  background-color: #cccc00;
-}
-
-ins {
-  background-color: hsl(60, 100%, 125%);
-}
-
-[type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-[type=range],
-input[list],
-select,
-select:not([size], [multiple]),
-textarea {
-  background-color: #111;
-  border-color: #000;
-  color: #ccc;
-}
-[type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-[type=range]:active,
-[type=range]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-select:not([size], [multiple]):active,
-select:not([size], [multiple]):focus,
-textarea:active,
-textarea:focus {
-  background-color: #111;
-  border-color: rgb(51, 149.4, 255);
-}
-
-[type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-select:not([size], [multiple]):active,
-select:not([size], [multiple]):focus,
-textarea:active,
-textarea:focus {
-  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
-}
-
-select:not([size], [multiple]) {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
-}
-
-/* stylelint-disable-next-line */
-@media screen and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
-  select:not([size], [multiple]),
-  *[dir=rtl] select:not([size], [multiple]),
-  select[dir=rtl]:not([size], [multiple]) {
+@media screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
+  select:not([size], select[multiple]),
+  *[dir=rtl] select:not([size], select[multiple]),
+  select[dir=rtl]:not([size], select[multiple]) {
     background-image: none;
   }
 }
-[type=range] {
-  background-color: transparent;
-}
-[type=range]:focus {
-  background-color: transparent;
-}
-
-[type=range]::-webkit-slider-runnable-track {
-  background-color: #111;
-}
-
-[type=range]::-moz-range-track {
-  background-color: #111;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #999;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #999;
-}
-
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  background: #ccc;
-}
-button:hover, button:active, button:focus,
-[type=button]:hover,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:active,
-[type=submit]:focus {
-  background: rgb(178.5, 178.5, 178.5);
-}
-button:active, button:focus,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:active,
-[type=submit]:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
-}
-
-button:active, button:focus,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:active,
-[type=submit]:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
-}
-
-a:focus,
-input:focus {
-  outline-color: rgb(178.5, 115.5, 0);
-}
-
-:focus-visible {
-  outline-color: rgb(178.5, 115.5, 0);
-}
-
-dialog {
-  color: #f0f0f0;
-  background-color: rgb(36.125, 36.125, 36.125);
+@media (prefers-color-scheme: dark) {
+  [type=range] {
+    background-color: transparent;
+  }
+  [type=range]:focus {
+    background-color: transparent;
+  }
+  [type=range]::-webkit-slider-runnable-track {
+    background-color: #111;
+  }
+  [type=range]::-moz-range-track {
+    background-color: #111;
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #999;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #999;
+  }
+  button,
+  [type=button],
+  [type=reset],
+  [type=submit] {
+    background: #ccc;
+  }
+  button:hover, button:active, button:focus,
+  [type=button]:hover,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:hover,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:hover,
+  [type=submit]:active,
+  [type=submit]:focus {
+    background: rgb(178.5, 178.5, 178.5);
+  }
+  button:active, button:focus,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:active,
+  [type=submit]:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+  }
+  button:active, button:focus,
+  [type=button]:active,
+  [type=button]:focus,
+  [type=reset]:active,
+  [type=reset]:focus,
+  [type=submit]:active,
+  [type=submit]:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+  }
+  a:focus,
+  input:focus {
+    outline-color: rgb(178.5, 115.5, 0);
+  }
+  :focus-visible {
+    outline-color: rgb(178.5, 115.5, 0);
+  }
+  dialog {
+    color: #f0f0f0;
+    background-color: rgb(36.125, 36.125, 36.125);
+  }
 }

@@ -2,8 +2,9 @@
 
 ## 5.1.0 - (July 08, 2025)
 
-- Leveraged `:where` CSS pseudo-class to lower form elements specificity to `0`
-- Added one-page demo and CodePen collection to `README.md`
+- Applied the `:where` pseudo-class to normalize form element specificity to `0`
+- Resolved issues with Sass source map generation
+- Documented one-page demo and CodePen collection in `README.md`
 
 ## 5.0.1 - (July 07, 2025)
 

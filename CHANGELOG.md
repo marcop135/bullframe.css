@@ -1,183 +1,188 @@
 # Changes to Bullframe CSS
 
+## 5.1.0 - (???)
+
+- ...
+- ...
+
 ## 5.0.1 - (July 07, 2025)
 
-Add missing LICENSE file and `.github/` folder
+- Added missing LICENSE file and `.github/` folder
 
-## 5.0.0 - BREAKING CHANGES (July 07, 2025)
+## 5.0.0 (July 07, 2025) - BREAKING CHANGES
 
-- Drop IE support
-- Remove Sass 1.45+ deprecated features ([details](https://sass-lang.com/documentation/breaking-changes/import/))
-- Switch build tool from Gulp to [Vite](https://vite.dev)
-- Reorganize Sass architecture for better clarity
-- Add `<dialog>` normalization with basic styling
-- Refresh HTML demo page with new examples
-- Streamline `README.md` copy and layout
-- Update all npm dependencies
-- Update stylelint, htmlhint, and prettier configs
-- Ensure HTML demo page passes W3C validation
+- Dropped IE support
+- Removed Sass 1.45+ deprecated features ([details](https://sass-lang.com/documentation/breaking-changes/import/))
+- Switched build tool from Gulp to [Vite](https://vite.dev)
+- Reorganized Sass architecture for better clarity
+- Added `<dialog>` normalization with basic styling
+- Refreshed HTML demo page with new examples
+- Streamlined `README.md` copy and layout
+- Updated all npm dependencies
+- Updated stylelint, htmlhint, and prettier configs
+- Ensured HTML demo page passed W3C validation
 
 ## 4.2.2 (May 28, 2025)
 
-- Remove text indentation from table contents
-- Correct table border color inheritance
-- Update stylelint configuration and remove deprecated package
-- Clearly define browser support in `README.md`
-- Remove attempted support for GitHub Packages
-- Add maps to npm package
-- Ignore more common files in npm package
+- Removed text indentation from table contents
+- Corrected table border color inheritance
+- Updated stylelint configuration and removed deprecated package
+- Clearly defined browser support in `README.md`
+- Removed attempted support for GitHub Packages
+- Added maps to npm package
+- Ignored more common files in npm package
 
 ## 4.2.1 (April 26, 2025)
 
-- Fix and simplify the structure of the `/docs` directory [(#42)](https://github.com/marcop135/bullframe.css/issues/42)
-- Removed screenshots and screencasts from the repository to speed up npm installation
-- Start support for GitHub Packages registry
+- Fixed and simplified `/docs` directory structure [(#42)](https://github.com/marcop135/bullframe.css/issues/42)
+- Removed screenshots and screencasts from repository to speed npm installation
+- Started support for GitHub Packages registry
 
-## 4.2.0 (2025-04-14)
+## 4.2.0 (April 14, 2025)
 
-- Add support for Netlify deploy
+- Added support for Netlify deploy
 
-## 4.1.2 (2024-02-23)
+## 4.1.2 (February 23, 2024)
 
-- Update all npm dependencies
-- Fix typos in README.md
+- Updated all npm dependencies
+- Fixed typos in README.md
 
-## 4.1.1 (2023-08-31)
+## 4.1.1 (August 31, 2023)
 
-- Update all npm dependencies
-- Improve documentation
+- Updated all npm dependencies
+- Improved documentation
 
-## 4.1.0 (2023-08-30)
+## 4.1.0 (August 30, 2023)
 
-- Move from `dark-prefers` to `system-default`, but no breaking changes!
-- Update `.browserlistrc`
-- Clean up and improve `README.md`
+- Moved from `dark-prefers` to `system-default` (no breaking changes)
+- Updated `.browserlistrc`
+- Cleaned up and improved `README.md`
 
-## 4.0.1 (2022-08-12)
+## 4.0.1 (August 12, 2022)
 
-- Update `.browserlistrc`
-- Update `package.json` description and tags
+- Updated `.browserlistrc`
+- Updated `package.json` description and tags
 
-## 4.0.0 (2022-08-11) - BREAKING CHANGES
+## 4.0.0 (August 11, 2022) - BREAKING CHANGES
 
-- [breaking change] Drop support for IE8, IE9, and IE10
-- [breaking change] Upgrade all npm packages to minor and major latest versions (e.g. gulp-sass v5 now in use)
-- Clean up `README.md`
+- Dropped support for IE8, IE9, and IE10
+- Upgraded all npm packages to latest minor and major versions (e.g. gulp-sass v5)
+- Cleaned up `README.md`
 
-## 3.8.2 (2021-06-26)
+## 3.8.2 (June 26, 2021)
 
-- Upgrade cssnano, autoprefixer, and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
-- Clean up `README.md`
+- Upgraded cssnano, autoprefixer, and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
+- Cleaned up `README.md`
 
-## 3.8.1 (2021-06-22)
+## 3.8.1 (June 22, 2021)
 
-- [bug fixes] Add missing compiled CSS files
+- Fixed missing compiled CSS files
 
-## 3.8.0 (2021-06-22) - BREAKING CHANGES
+## 3.8.0 (June 22, 2021) - BREAKING CHANGES
 
-- [breaking change] Revert html/body `height` and `body` `min-height` to `auto` (default value) to avoid web app scrollbar issues
-- Add support for Skypack CDN
-- Add Synk vuln badge in `README.md`
+- Reverted html/body `height` and `body` `min-height` to `auto` to avoid scrollbar issues
+- Added support for Skypack CDN
+- Added Synk vuln badge in `README.md`
 
-## 3.7.0 (2021-04-24) - BREAKING CHANGES
+## 3.7.0 (April 24, 2021) - BREAKING CHANGES
 
-- [breaking change] Set html/body `height` and `body` `min-height` to `100%` to help with backgrounds and centering [(8239677)](https://github.com/marcop135/bullframe.css/)
-- [bug fixes] Add missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)
-- [enhancements] Remove W3C-invalid CSS properties/values from SCSS files [(2791b83)](https://github.com/marcop135/bullframe.css/commit/2791b83eab872abe92a2fd6cc3b3bc8d684fcc36)
-- [enhancements] Add Sass [@debug](https://sass-lang.com/documentation/at-rules/debug) rule to debugging utility [(969fcf3c)](https://github.com/marcop135/bullframe.css/commit/969fcf3ccb474f5bc5888841d479216b3e54de0a)
+- Set html/body `height` and `body` `min-height` to `100%` for backgrounds and centering [(8239677)](https://github.com/marcop135/bullframe.css/)
+- Added missing margin/padding spacing utilities to `utility-spacing.scss` [(e1cdf4c)](https://github.com/marcop135/bullframe.css/commit/e1cdf4ccfd70662a3d1babe2d5d0457b8ef6e569)
+- Removed W3C-invalid CSS properties/values from SCSS files [(2791b83)](https://github.com/marcop135/bullframe.css/commit/2791b83eab872abe92a2fd6cc3b3bc8d684fcc36)
+- Added Sass [@debug](https://sass-lang.com/documentation/at-rules/debug) rule to debugging utility [(969fcf3c)](https://github.com/marcop135/bullframe.css/commit/969fcf3ccb474f5bc5888841d479216b3e54de0a)
 
-## 3.6.0 (2021-03-16)
+## 3.6.0 (March 16, 2021)
 
-- Add new flexbox utilities into `_utility-layout.scss` (IE10+)
-- Add new `filter` utility module (≠ IE / Opera Mini)
-- Add new `bf-position-sticky` utility class (≠ IE)
-- Add ARIA roles appearance improvements into `_misc-accessibility.scss` (a11y)
-- Remove touch action manipulation defaults in IE10
-- Purge `white-space` declarations from text truncate multiline mixins and utility
+- Added new flexbox utilities to `_utility-layout.scss` (IE10+)
+- Added new `filter` utility module (not IE/Opera Mini)
+- Added new `bf-position-sticky` utility class (not IE)
+- Improved ARIA roles in `_misc-accessibility.scss`
+- Removed touch action manipulation defaults in IE10
+- Purged `white-space` declarations from multiline text truncate utilities
 
-## 3.5.0 (2021-02-09)
+## 3.5.0 (February 09, 2021)
 
-- Add new flexbox-powered grid system mixins (IE10+)
-- Add new flexbox-powered align utility (IE10+)
-- Add new text-truncate multiline text mixin and utility using `line-clamp` property (≠ IE)
-- Add new `z-index` utility
-- Add extra [debugging](https://github.com/marcop135/bullframe.css/blob/v3.4.6/src/scss/utilities/_utility-debugging.scss#L31) utility test to check performances, thanks @tkadlec
+- Added flexbox grid system mixins (IE10+)
+- Added flexbox align utility (IE10+)
+- Added multiline text truncate mixin and utility using `line-clamp` (not IE)
+- Added new `z-index` utility
+- Added extra debugging utility test for performance (thanks @tkadlec)
 
-## 3.4.5 (2021-02-08)
+## 3.4.5 (February 08, 2021)
 
-- Moved SCSS files and `Gulpfile.js` from double quotes to single ones
+- Moved SCSS and `Gulpfile.js` from double to single quotes
 - Added Prettify formatting support
 
-## 3.4.4 (2021-02-04)
+## 3.4.4 (February 04, 2021)
 
 - Added missing classless/classless-ie10+ dark/dark-prefers builds
 
-## 3.4.3 (2021-01-28)
+## 3.4.3 (January 28, 2021)
 
 - Added missing center alignment for `.bf-display-block-center` utility
 
-## 3.4.2 (2021-01-27)
+## 3.4.2 (January 27, 2021)
 
 - Added missing ie10+ builds for dark and dark-prefers
 
-## 3.4.1 (2021-01-24)
+## 3.4.1 (January 24, 2021)
 
 - Added missing v3.4.0 `CHANGELOG.md`
 
-## 3.4.0 (2021-01-24)
+## 3.4.0 (January 24, 2021)
 
 - Added `input range` styling in modern browsers only
-- Update video source paths accordingly to MDN [(#22)](https://github.com/marcop135/bullframe.css/issues/12)
+- Updated video source paths per MDN [(#22)](https://github.com/marcop135/bullframe.css/issues/12)
 
-## 3.3.9 (2020-11-29)
+## 3.3.9 (November 29, 2020)
 
 - Fixed broken anchors and URLs in `README.md`
 
-## 3.3.8 (2020-11-29)
+## 3.3.8 (November 29, 2020)
 
-- Added `README.md` fixes and improvements
+- Improved `README.md` fixes
 - Reinforced mixins declarations
 
-## 3.3.7 (2020-11-27)
+## 3.3.7 (November 27, 2020)
 
-- Removed ie8-9 hacks and created two new builds ie10+
-- Fixed missing `!important`s to `.bf-sr-only.focusable` declaration
+- Removed IE8-9 hacks, created IE10+ builds
+- Fixed missing `!important` in `.bf-sr-only.focusable`
 
-## 3.3.6 (2020-11-20)
+## 3.3.6 (November 20, 2020)
 
-- Added new anchors normalization [styles](https://github.com/marcop135/bullframe.css/commit/435c8e1cade4be9f0bed65f5d8a9ed5deb2278dd)
-- Improved focus outline color contrast in dark mode
+- Added new anchors normalization styles
+- Improved focus outline contrast in dark mode
 
-## 3.3.5 (2020-09-27)
+## 3.3.5 (September 27, 2020)
 
-- Revert latest grid system column [fixes](https://github.com/marcop135/bullframe.css/commit/3bc68dee997c5b8530a5e498dd55dfc24347fcc3)
+- Reverted latest grid system column fixes
 - Added more table normalization styles
 - Added more webkit form normalization styles
 
-## 3.3.4 (2020-09-03)
+## 3.3.4 (September 03, 2020)
 
-- Added an utilities reference in `README.md`
-- Fixed a grid system [bug](https://github.com/marcop135/bullframe.css/commit/d26c1dd21c808bda6472913073c72a8048a56d8f) related to `.bf-col-3` and `bf-col-4` utilities
-- Added support for GitHub Packages registry
+- Added utilities reference in `README.md`
+- Fixed grid system bug related to `.bf-col-3` and `.bf-col-4`
+- Added GitHub Packages support
 - Added UNPKG CDN in `README.md`
 
-## 3.3.3 (2020-07-22)
+## 3.3.3 (July 22, 2020)
 
 - Bumped version to fix npm registry
 
-## 3.3.2 (2020-07-22)
+## 3.3.2 (July 22, 2020)
 
-- Deprecate this version to fix an error with npm publish
+- Deprecated version to fix npm publish error
 
-## 3.3.1 (2020-07-22)
+## 3.3.1 (July 22, 2020)
 
 - Fixed "What's included" and "Gulp.js" sections in `README.md`
 - Fixed JSDelivr `package.json` settings
 - Minor code improvements
 
-## 3.3.0 (2020-07-09)
+## 3.3.0 (July 09, 2020)
 
-- Changed grid system container `max-width` to match Bootstrap Grid (now is 1140px + gutters)
+- Changed grid container max-width to 1140px + gutters
 - Changed margin/padding utilities naming
 - Added refinements to `.bf-table` and `.bf-table-responsive` utilities
   - Added zebra striping utility
@@ -187,7 +192,7 @@ Add missing LICENSE file and `.github/` folder
 - Updated screenshots and screencasts files
 - Added GitHub, Gulp, npm and Sass minor improvements
 
-## 3.2.0 (2020-06-16)
+## 3.2.0 (June 16, 2020)
 
 - Changed grid gutter width to match Bootstrap Grid
 - Added support for RTL [(#12)](https://github.com/marcop135/bullframe.css/issues/12)
@@ -199,253 +204,252 @@ Add missing LICENSE file and `.github/` folder
 - Added more examples in `index.html`
 - Added SCSS file structure improvements
 - Added responsive typography improvements
-- Added form states (e.g. `:invalid`) improvements [(#14)](https://github.com/marcop135/bullframe.css/issues/14)
-- Added `prefers-reduced-motion: reduce` improvements
-- Added `line-height` improvements
-- Added `font-weight` improvements
+- Added form states (e.g. `:invalid`) improvements [(#15)](https://github.com/marcop135/bullframe.css/issues/15)
 
-## 3.1.0 (2020-05-23)
+## 3.1.0 (May 06, 2020)
 
-- Fixed broken CDN URL paths [#6](https://github.com/marcop135/bullframe.css/issues/6)
-- Fixed `video` `width` bug [#10](https://github.com/marcop135/bullframe.css/issues/10)
-- Fixed `contributing` and `code_of_conduct` broken links and missing content
-- Added `index.html` minor enhancements [commit](https://github.com/marcop135/bullframe.css/commit/96b267fed9c9507591ed115c4a78e54d79f0c121)
-- Added minor package files and folders structure enhancements
+- Added proper `<input type=range>` styling
+- Added `<kbd>` element normalization
+- Added `<hr>` element normalization
+- Added `<summary>` element normalization
+- Added `<details>` element normalization
+- Added `abbr` element normalization
+- Added webkit dark scrollbars normalization
+- Added support for `.dark` and `.dark-prefers`
+- Updated README with utility list and examples
 
-## 3.0.0 (2020-05-18)
+## 3.0.2 (March 20, 2020)
 
-- **CSS to SCSS (Sass architecture refactoring)**
+- Fixed wrong CSS for webkit scrollbars in `.dark` theme
+- Updated README
+
+## 3.0.1 (March 06, 2020)
+
+- Fixed README typo
+- Added `.bf-dark` class
+
+## 3.0.0 (18 May 2020)
+
+- Converted CSS to SCSS (Sass architecture refactoring)
 - Added `gulp.js` file processing
 - Added CSS BEM syntax
-- Added npm
-- Added CDN
-- Added Dark mode
-- Added new test page
-- Added HTML snippets
-- Added screenshots
-- Added extended browser compatiblity list
-- Added proxy browsers support
-- Added logo
-- Added travis CI
-- Added utility classes isolation
-- Added reduced motion support
-- Added responsive typography
-- Added custom `select`
-- Added custom radios and checkboxes
-- Added much more information in `README.md`
-- Added CONTRIBUTING.md
-- Added CODE_OF_CONDUCT.md
-- ...and much more!
+- Added npm and CDN support
+- Added dark mode
+- Added new test page, HTML snippets, screenshots
+- Extended browser compatibility list
+- Added proxy browser support
+- Added logo, Travis CI, utility class isolation
+- Added reduced motion support and responsive typography
+- Added custom selects, radios, checkboxes
+- Added much more info in README, CONTRIBUTING.md, CODE_OF_CONDUCT.md
 
-## 2.9.0 (2020-04-13)
+## 2.9.0 (13 April 2020)
 
-- Added Linux OS support to native font stack `font-family` list
+- Added Linux OS support to native font stack
 
-## 2.8.2 (2020-04-09)
+## 2.8.2 (09 April 2020)
 
 - Added `label` normalization
 - Updated HTML demo content
 
-## 2.8.1 (2020-04-03)
+## 2.8.1 (03 April 2020)
 
-- Added `README.md` information
-- Updated browser compatiblity list
+- Added `README.md` info
+- Updated browser compatibility list
 
-## 2.8.0 (2020-03-22)
+## 2.8.0 (22 March 2020)
 
-- Prettified HTML demo
-- Prettified CSS
+- Prettified HTML demo and CSS
 - Removed unsupported `datetime` input
-- Added a CSS map
+- Added CSS map
 - Updated browser compatibility list
 - Added more comments
 
-## 2.7.0 (2020-03-17)
+## 2.7.0 (17 March 2020)
 
-- Disabled form elements `pointer-events`
-- Removed `progress` elements previous normalization
-- Refactored `:focus` state from scratch
+- Disabled form elements pointer-events
+- Removed previous `progress` normalization
+- Refactored `:focus` state
 
-## 2.6.3 (2020-03-13)
+## 2.6.3 (13 March 2020)
 
-- Added IE `table-responsive` scrollbar bug fix
+- Fixed IE table-responsive scrollbar bug
 - Removed buttons' `:active` styles
-- Added GitHub sponsor information
-- Added YouTube privacy-friendly `no-cookie` `iframe`
+- Added GitHub sponsor info
+- Added YouTube no-cookie iframe
 
-## 2.6.2 (2020-03-11)
+## 2.6.2 (11 March 2020)
 
 - Added support for `font-variant` ligatures
 
-## 2.6.1 (2020-03-04)
+## 2.6.1 (04 March 2020)
 
 - Added `meta` tag for web app
 
-## 2.6.0 (2020-02-29)
+## 2.6.0 (29 February 2020)
 
 - Added support for `:focus-visible` styles
 
-## 2.5.0 (2020-02-22)
+## 2.5.0 (22 February 2020)
 
 - Refactored `::placeholder` support for better cross-browser compatibility
 
-## 2.4.0 (2020-02-19)
+## 2.4.0 (19 February 2020)
 
 - Removed custom radio buttons and checkboxes
 - Added `:checked` form input normalization
 
-## 2.3.0 (2020-02-14)
+## 2.3.0 (14 February 2020)
 
 - Refactored HTML input styles
 - Improved default button appearance
 
-## 2.2.0 (2020-02-09)
+## 2.2.0 (09 February 2020)
 
 - Added full table component normalization
 - Added `:focus-visible` support
 
-## 2.1.0 (2020-02-04)
+## 2.1.0 (04 February 2020)
 
 - Added table component normalization
 - Fixed horizontal scrollbar bug in forms
 
-## 2.0.0 (2020-01-28)
+## 2.0.0 (28 January 2020)
 
 - Changed project name from `bulldog.css` to `bullframe.css`
 - Refactored for modularity, moved all SCSS components to separate files
 - Improved performance
 - Improved documentation
 
-## 1.6.3 (January 31, 2014)
+## 1.6.3 (31 January 2014)
 
 - Added `vertical-align` normalization on multiple elements
-- Added `pre` `overflow` bug fix for all browsers
-- Added `progress` normalization
+- Fixed `pre` overflow bug in all browsers
+- Added `progress` element normalization
 - Added focused input support
 
-## 1.6.2 (December 29, 2013)
+## 1.6.2 (29 December 2013)
 
 - Updated JS Bin demo URL
-- Updated HTML demo structure
-- Improved `inline-block` class
+- Improved HTML demo structure
+- Enhanced `inline-block` class
 - Added Google Maps `embed` `box-sizing` fix
 
-## 1.6.1 (December 27, 2013)
+## 1.6.1 (27 December 2013)
 
 - Updated monospaced font stack
-- Added WebKit date, month, and week inputs normalization
+- Added WebKit date, month, and week input normalization
 
-## 1.6.0 (December 5, 2013)
+## 1.6.0 (05 December 2013)
 
-- Added Bootstrap v3 success buttons
-- Added new `display` classes
-- Added updated CSS hacks reference
+- Added Bootstrap v3 success button styles
+- Introduced new `display` utility classes
+- Updated CSS hacks reference
 - Added browser compatibility list
 - Emulated `box-shadow` on IE8
 
-## 1.5.2 (October 21, 2013)
+## 1.5.2 (21 October 2013)
 
-- Recompiled `select` data URI images
+- Recompiled `select` element data URI images
 - Added new base font stack
-- Added IE8+ grid system fixes
-- Added IE10 `table-responsive` `overflow` bug fix
+- Fixed IE8+ grid system bugs
+- Fixed IE10 `table-responsive` overflow issue
 
-## 1.5.1 (October 7, 2013)
+## 1.5.1 (07 October 2013)
 
-- Added `rem` units
+- Added support for `rem` units
 - Moved `line-height` normalization from `body` to `html`
-- Added `button` IE8 fix
-- Added vertical rhythm base number _1.5_
+- Added IE8 button fixes
+- Set vertical rhythm base number to 1.5
 
-## 1.5.0 (September 13, 2013)
+## 1.5.0 (13 September 2013)
 
-- Added `label` normalization
-- Normalized `button` FF `display`
+- Normalized `label` element
+- Fixed button display in Firefox
 - Renamed helper classes
-- Added small bug fixes and enhancements to the `test.html` file
+- Minor bug fixes and test file improvements
 
-## 1.4.3 (August 1, 2013)
+## 1.4.3 (01 August 2013)
 
-- Added iOS4+ compatibility (iPhone/iPod 3GS devices)
-- Added IE10 `background-color` on active links normalization
-- Added `vertical-align` `canvas` normalization
-- Updated high resolution screen media query placeholder
-- Added project scope clarification: now the framework is just a _boilerplate_
+- Added iOS4+ compatibility (iPhone/iPod 3GS)
+- Fixed IE10 active link background color
+- Normalized `canvas` vertical alignment
+- Updated high-res screen media query placeholder
+- Clarified framework scope as a boilerplate
 
-## 1.4.2 (July 4, 2013)
+## 1.4.2 (04 July 2013)
 
-- Added native `audio` and `video` elements normalization
+- Normalized native `audio` and `video` elements
 
-## 1.4.1 (June 7, 2013)
+## 1.4.1 (07 June 2013)
 
-- Added `button` `line-height` normalization
-- Improved `button` appearance
-- Added headings fixes
-- Added 100% IE7 responsive grid system support
+- Added `button` line-height normalization
+- Improved button appearance
+- Fixed headings styles
+- Full IE7 responsive grid system support
 
-## 1.4.0 (May 30, 2013)
+## 1.4.0 (30 May 2013)
 
 - Updated vertical rhythm composition
-- Added `readonly` and `disabled` form elements styles
-- Added grid system bug fixes for IE7 and IE8
-- Added `select` bug fixes
-- Added `pre` IE7 fixes
-- Improved form elements `:focus` state appearance
+- Styled `readonly` and `disabled` form elements
+- Fixed IE7 and IE8 grid system bugs
+- Fixed `select` element bugs
+- Fixed IE7 `pre` formatting
+- Improved form element `:focus` styles
 
-## 1.3.2 (May 17, 2013)
+## 1.3.2 (17 May 2013)
 
-- Added `select` WebKit CSS hack
+- Added WebKit CSS hack for `select`
 - Added flexible video class
 
-## 1.3.1 (May 14, 2013)
+## 1.3.1 (14 May 2013)
 
 - Added IE9+ CSS hacks
-- Added `blockquote` normalization
-- Added `super-clearfix` class to clear `float` in IE7 via CSS expressions
+- Normalized `blockquote`
+- Added `super-clearfix` class to fix IE7 float issues
 
-## 1.3.0 (May 7, 2013)
+## 1.3.0 (07 May 2013)
 
 - Changed grid system `display` from `inline-block` to `block`
-- Added grid system `float` to avoid several YUI3 bugs and quirks
+- Added grid system `float` to fix YUI3 bugs
 
-## 1.2.0 (April 26, 2013)
+## 1.2.0 (26 April 2013)
 
-- Added custom classes for responsive tables
+- Added custom responsive table classes
 
-## 1.1.2 (March 21, 2013)
+## 1.1.2 (21 March 2013)
 
-- Merged grid system bug fixes from YUI3 v3.9.0
+- Merged grid system fixes from YUI3 v3.9.0
 
-## 1.1.1 (March 20, 2013)
+## 1.1.1 (20 March 2013)
 
-- Added `optgroup` display bug fix
+- Fixed `optgroup` display bug
 
-## 1.1.0 (March 19, 2013)
+## 1.1.0 (19 March 2013)
 
-- Added `address` normalization
-- Added headings normalization
+- Added normalization for `address` and headings
 - Extended grid system styles
 - Enhanced styled list classes
-- Added more CSS hacks to the CSS hacks reference
-- Added WordPress core styles
+- Added more CSS hacks reference
+- Added WordPress core styles normalization
 - Added `button` normalization
 - Updated JS Bin demo URL
 
-## 1.0.2 (March 12, 2013)
+## 1.0.2 (12 March 2013)
 
-- Fixed several accessibility form bugs related to layout display
+- Fixed accessibility bugs related to form layout display
 
-## 1.0.1 (March 12, 2013)
+## 1.0.1 (12 March 2013)
 
-- Added CSS hacks for IE7, IE8, and IE9+
-- Added `optgroup` `font-family` normalization
-- Added `html` `word-wrap` set to `break-word`
-- Added `legend` line wrapping trick for IE7+ and FF 4+
-- Removed `width: 100%` from `audio` element
-- Removed bottom margin from `audio` and `video` elements
+- Added IE7, IE8, IE9+ CSS hacks
+- Normalized `optgroup` font-family
+- Set `html` word-wrap to `break-word`
+- Fixed legend line wrapping for IE7+ and Firefox 4+
+- Removed `width: 100%` from `audio`
+- Removed bottom margin from `audio` and `video`
 
-## 1.0.0 (February 19, 2013)
+## 1.0.0 (19 February 2013)
 
-- First public release!
-- Initial commit: November 19, 2012
-- The aim was to create a _bulldozer_ framework to kickstart **cross-browser responsive**- HTML/CSS development.
+- First public release
+- Initial commit on 19 November 2012
+- Framework aimed to kickstart cross-browser responsive HTML/CSS development

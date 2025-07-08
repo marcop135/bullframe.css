@@ -1,4 +1,5 @@
-/*! Bullframe CSS v5.0.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*  Bullframe CSS v5.1.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+
 .bf-container,
 .bf-container--fluid {
   box-sizing: border-box;
@@ -1015,3 +1016,4 @@ dt {
     transition-duration: 0s !important;
   }
 }
+/*# sourceMappingURL=bullframe-utilities.css.map */

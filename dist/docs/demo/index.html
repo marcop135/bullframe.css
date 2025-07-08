@@ -7,14 +7,14 @@
   <title>Demo | Bullframe CSS</title>
   <meta name="description"
     content="Bullframe is a solid Sass-based CSS framework for responsive, cross-browser UIs. Fast, semantic, themable, and classless-friendly.">
-  <link rel="icon" type="image/png" sizes="16x16" href="/docs/demo/icons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/docs/demo/icons/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/docs/demo/icons/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/docs/demo/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
   <!-- Bullframe CSS, system-default build -->
   <link rel="stylesheet" href="../../css/bullframe-system-default.min.css?v5.0.0">
   <!-- These styles are added just for a nicer demo -->
-  <link rel="stylesheet" href="/docs/demo/css/style.css">
+  <link rel="stylesheet" crossorigin href="/index.css">
 </head>
 
 <body class="bf-responsive-typography bf-reduced-motion">
@@ -83,7 +83,7 @@
             The <em>em element</em> example<br>
             The <em>i element</em> example<br>
             The img element
-            <img src="/docs/demo/images/placeholder-img-16x16.jpg" alt="just a placeholder" loading="lazy">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAACQcI/8QAIBAAAgIDAQACAwAAAAAAAAAABAUDBgIHCAEJChITFv/EABUBAQEAAAAAAAAAAAAAAAAAAAYH/8QAHBEBAQEBAQEAAwAAAAAAAAAAAwIEAQUSBhMV/9oADAMBAAIRAxEAPwA5KPpmXe22LQy5jx6kGWVDRfJmv9NsWCCuVSklD5sli/fCzbL4dozQCK3AjR9fKcbkUK7igLCEnF9GAwIKl32SOO9T8p2Tkj3SescNPUKyUG9pPamd7Wp7HYLDXWlbdNr63br7K9sthIZRXEGvkk2MRMMrzrcASMTwOeSIfU/G/aG6edFdOCHrqLZGuQi1VbsNE/iTqs7MiWKp1qQ4W33SeGoysFOUEDv9c8iyJh6HhJgWP+WREAKfKZ2ZsftDqrZd52a8uYaVVbbMFrXWNtPlK80/TzWXpIdIULIJy1aXwWDAP1tgpkzias4ZWpxDBhOQdPK/xxfWb3phXu8OHPXf10SSi9+Kx11DSoqb5Rks3wOQlddIT5WY4793HiTz/wCj5+KPOyPrrLE3tjT2tBjmdp4nQyrQdpEUOKacIkMeadSCj3//2Q==" alt="just a placeholder" loading="lazy">
             example<br>
             The <ins>ins element</ins> example<br>
             The <kbd>kbd element</kbd> example<br>
@@ -300,7 +300,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <h3>Linked figure with an image and a caption</h3>
           <figure>
             <a href="#">
-              <img src="/docs/demo/images/placeholder-img-800x400.jpg" alt="just a placeholder" loading="lazy">
+              <img src="/placeholder-img-800x400.jpg" alt="just a placeholder" loading="lazy">
             </a>
             <figcaption>The image above is 800x400 pixels</figcaption>
           </figure>
@@ -316,7 +316,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <div class="bf-col-6">
           <div class="bf-m-b-3">
             <h3>HTML5 video with controls</h3>
-            <video poster="/docs/demo/images/video-poster.png" controls width="450">
+            <video poster="/video-poster.png" controls width="450">
               <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
               <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/mp4">
               Sorry, your browser doesn't support embedded videos.
@@ -578,7 +578,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <h3>Clickable inputs</h3>
           <fieldset class="bf-m-b-3">
             <div class="input-image">
-              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg" type="image"><br>
+              <input alt="Image (input)" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gAsT3B0aW1pemVkIGJ5IEpQRUdtaW5pIDMuMTMuMC44IDB4NmU1Y2Q1MjQA/9sAQwAGBAUFBQQGBQUFBwYGBwkPCgkICAkSDQ0LDxUSFhYUEhQUFxohHBcYHxkUFB0nHR8iIyUlJRYbKCsoJCshJCUj/9sAQwEGBwcJCAkRCgoRIxgUGCMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj/8AAEQgAKACCAwEiAAIRAQMRAf/EABwAAAICAwEBAAAAAAAAAAAAAAAEBQYBAwcIAv/EADoQAAEDAgQCBgcFCQAAAAAAAAECAxEABAUSITEGQRMiUWFxoQcUMoGRscEVQlKy8CMlQ3KSotHS4f/EABgBAAMBAQAAAAAAAAAAAAAAAAECAwAE/8QAHxEBAQADAAICAwAAAAAAAAAAAAECESEDMRITQVFh/9oADAMBAAIRAxEAPwDVbI+6owmY0qWa6NDYgHN2Uki3fYJLjDjZH40kGmGEFZAI17KlD5dPIBXAGiRue2nmwlKezkKXRlS2Adhyplocz7hTRz2nLRpbrjbbeqnCAB2zyq2cRON2Fhb4MypJLYzPRzV+jPwqpNyClQOWNdK39IpWp3POmiVZGh2msKJEnnG5rGqUQN95rCioicsCKwPh50TlmdNq5t6SvtDEr63scKxRLTlqnO9agqzKKiMqgBvHlI2zTXQlglZVArzZxxil6zxpeqU8oKt7xwoIMEdbTv2ApbNzTp8E1lv9PRWAIvbfBrJnEXvWLxLQDrkRJjb6TziadeVCFCREbmtVu6FIQudFJBg1i5KlfsgBCtz3UUb27a2EKfuk26RCnVpSgkaGa3cR2XqN6LMOBxTSRKk6CSJ+tO8NW3TY5agwqFdITH4RI+VIcUP3D2M3i0pz5HCmQewwPlQvo07UItGoKjJGgB5fqKSvBI20mSNq2rf6pS82UEHYqPb2xXw86icpkEcpmkdGO4iSoScytee9FMFlJMhIg91FKtteLXFGXEBDOJNFIOgfb62vYRl+VSbDbbqZcsrV7mVNqEnw00+NUu1xrOR02G4e6TzDARP9BEVL2uJ2BIz4UhBn+C+4n8xNVlcWXj16T5sbEiF2lwwTtlBV8s1CcNslmGb9KFnQNuRm+G/lWm3v7EZQgXrQTyDyVge7KKkGb6zWjL66spO4etgR4aK+lMlZSq8HvELJHRvE7BKoPnFKPs3baiF2zqOUlBge+p1BsyQW7m2CjuWytpR8eqB50y2X1LBbulKCfZQXW3h4xOb61g2qzaSBKgFedfRcQVBCt4narM+3iIUp923t7qdIebW0Pcety7v+IPWoKiHcGVI1zWzySkeGYpPlWZBOJSSY07u2vLPFj3rPEl9cFMFd06uCO1Zr1m83Y5JX65ansfZISnxVEedcH9MbtphOJ3rFo3a3qMYt2lLfHtNLbWqSN9SAmdaFunT4L3TqeAF9zBMPdfTldXatKcBIMKyCfHWpBtuI5qOqpqv+j0Ynd8G4O8LB1wG3CEqCkglKCUg9YjkAfCrCpN0zou0uGwNZU0ox7xpQTs7pYeCUpOJv3B0Q0yd/ED/NVm5XnW644IUtWY+81NYBieHWuE4nN22Lp1OVDZV1vZMH4q8qrxJMkkDxJ28a1CTpN1IUSMpInuA86UuUpSsBIAEchIOlNPJIJCtpnQT8KUecbUsTv37baUjoxK9EjkDH8tFZLqgSApMd1FBXqOtrkJ5BMVK2jilBJUYCj20UUY2cTNso5RMR3zTSFn2phNFFO5a3FxQAEknlpTLKgkQFE8zrRRRSpm3edb67a1JJ55opoYriDYKvW3VECBmVm8jRRRKheKuNsUwLB3cQTam96MwQllHVB+8oxOWuGXyb/GfSfgrmNlF45e9HertlyptpEFfRRp1Rl27D4miik311+OSY7n9d8srvB0hCFYW/bpSNRaXa20g9yNqnGsUsMkDEb9GkQ800sf2pBPxooo7QsZz2Dy0IVc2l2fwONFAPmv6UldYJh944ptFiyFL52zykJH5flRRW9kt16Rlzww0mUN3C0QYKVupgeMifOkLrgzEnkly1cbujpolB096SqiitqHmeU/KIPB/Fsn91/Aq/1oooofGKfdk//9k=" type="image"><br>
               <code>input type="image" (130x40px)</code>
             </div>
             <div>
@@ -600,7 +600,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <fieldset disabled>
             <h3>Clickable inputs (disabled)</h3>
             <div class="input-image">
-              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg" type="image"><br>
+              <input alt="Image (input)" src="data:image/jpeg;base64,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" type="image"><br>
               <code>input type="image" (130x40px)</code>
             </div>
             <div>

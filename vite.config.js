@@ -94,6 +94,36 @@ function buildAllScss() {
   };
 }
 
+// Copy static files from src/docs to dist/docs (e.g. demo HTML, images, etc.)
+function copyDocsFiles() {
+  return {
+    name: "copy-docs-files",
+    closeBundle() {
+      const srcDir = path.resolve(__dirname, "src/docs");
+      const destDir = path.resolve(__dirname, "dist/docs");
+
+      function copyRecursive(src, dest) {
+        if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+
+        const entries = fs.readdirSync(src, { withFileTypes: true });
+
+        for (const entry of entries) {
+          const srcPath = path.join(src, entry.name);
+          const destPath = path.join(dest, entry.name);
+
+          if (entry.isDirectory()) {
+            copyRecursive(srcPath, destPath);
+          } else {
+            fs.copyFileSync(srcPath, destPath);
+          }
+        }
+      }
+
+      copyRecursive(srcDir, destDir);
+    },
+  };
+}
+
 // Main Vite config
 export default defineConfig({
   root: "src", // Vite project root

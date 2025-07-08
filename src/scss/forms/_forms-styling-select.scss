@@ -1,8 +1,8 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 // custom <select> arrow and appearance with a base64 embedded SVG icon
 // https://css-tricks.com/probably-dont-base64-svg/#article-header-id-2
@@ -10,10 +10,6 @@
 // this is inspired from https://github.com/kognise/water.css
 // and from Bootstrap custom select
 // https://getbootstrap.com/docs/4.4/components/input-group/#custom-select
-
-// ! :not and calc() are IE9+
-// https://caniuse.com/#feat=mdn-css_selectors_not
-// https://caniuse.com/#feat=calc
 
 // ! 12px = the icon width/height, and must be in pixels because
 // calc() is just for values
@@ -25,7 +21,7 @@
 // so, is not safe to style every kind of <select>
 //
 // remove the arrow and the appearance, especially on Webkit
-select:not([size], [multiple]) {
+:where(select):not([size], select[multiple]) {
   appearance: none;
 
   // add a new svg arrow
@@ -34,12 +30,11 @@ select:not([size], [multiple]) {
     no-repeat right 0.85rem center/8px 10px;
 
   // space the arrow
-  padding-right: bf-v-space.$bf-spacing-lg-px + bf-v-space.$bf-spacing-lg-px;
   padding-right: bf-v-space.$bf-spacing-lg-rem + bf-v-space.$bf-spacing-lg-rem;
 }
 
 // Legacy Edge browser support
-select::-ms-expand {
+:where(select)::-ms-expand {
   display: none;
 }
 
@@ -50,16 +45,14 @@ select::-ms-expand {
 // Read more
 // 1. http://bootstrap.rtlcss.com
 // 2. https://rtlstyling.com/
-*[dir='rtl'] select:not([size], [multiple]),
-select[dir='rtl']:not([size], [multiple]) {
+:where(*[dir="rtl"]) :where(select):not([size], select[multiple]),
+:where(select[dir="rtl"]):not([size], select[multiple]) {
   // move the arrow icon to the left
   background-position: left 0.85rem top 50%;
 
   // go back to default forms padding
-  padding-right: (bf-v-space.$bf-spacing-lg-px * 0.75);
   padding-right: (bf-v-space.$bf-spacing-lg-rem * 0.75);
 
   // add custom left padding, matching the custom LTR one
-  padding-left: bf-v-space.$bf-spacing-lg-px + bf-v-space.$bf-spacing-lg-px;
   padding-left: bf-v-space.$bf-spacing-lg-rem + bf-v-space.$bf-spacing-lg-rem;
 }

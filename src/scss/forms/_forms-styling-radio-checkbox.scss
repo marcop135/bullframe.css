@@ -1,15 +1,14 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 // heavily inspired by '2020 toggles' by Aaron Iker
 // https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
 // https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
 
-[type='checkbox'],
-[type='radio'] {
+:where([type="checkbox"], [type="radio"]) {
   appearance: none;
 
   height: 1.8rem;
@@ -31,15 +30,15 @@
   // Read more
   // 1. http://bootstrap.rtlcss.com
   // 2. https://rtlstyling.com/
-  *[dir='rtl'] & + label,
-  &[dir='rtl'] + label {
+  *[dir="rtl"] & + label,
+  &[dir="rtl"] + label {
     margin-left: 0;
     margin-right: bf-v-space.$bf-spacing-md-px;
     margin-right: bf-v-space.$bf-spacing-md-rem;
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
   }
@@ -50,7 +49,7 @@
   }
 }
 
-[type='radio'] {
+:where([type="radio"]) {
   &::after {
     width: 1.8rem;
     height: 1.8rem;
@@ -65,7 +64,7 @@
   }
 }
 
-[type='checkbox'] {
+:where([type="checkbox"]) {
   &::after {
     width: 0.6rem;
     height: 0.8rem;

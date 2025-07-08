@@ -1,73 +1,64 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='time'],
-[type='url'],
-input[list],
-select,
-textarea {
+:where(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    input[list],
+    select,
+    textarea
+  ) {
   background-color: bf-v-color.$bf-white;
-  border: 1px solid / bf-v-color.$bf-gray;
-  padding: bf-v-space.$bf-spacing-md-px (bf-v-space.$bf-spacing-lg-px * 0.75);
+  border: 1px solid bf-v-color.$bf-gray;
   padding: bf-v-space.$bf-spacing-md-rem (bf-v-space.$bf-spacing-lg-rem * 0.75);
 }
 
-// Old browsers and Opera Mini don't fully support all type of inputs
-// e.g. [type="range"]
-// so, let's try to add styles carefully and selective
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='time'],
-[type='url'],
-input[list],
-select,
-textarea,
-[type='radio'],
-[type='checkbox'] {
+:where(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    input[list],
+    select,
+    textarea,
+    [type="radio"],
+    [type="checkbox"]
+  ) {
   &:active,
   &:focus {
-    transition:
-      border 0.2s,
-      background-color 0.2s,
-      box-shadow 0.2s;
+    transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
     border-color: bf-v-color.$bf-blue;
     box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
   }
 }
 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
   color: bf-v-color.$bf-dark;
-  padding: calc(bf-v-space.$bf-spacing-xl-px / 3) (calc(bf-v-space.$bf-spacing-xl-px / 3) * 2); // 8px 16px
-  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3) (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2);
+  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3)
+    (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2);
   background: bf-v-color.$bf-gray-light;
-  transition:
-    color 0.2s,
-    background 0.2s,
-    box-shadow 0.2s;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 
   &:hover,
   &:active,
@@ -84,44 +75,40 @@ button,
 }
 
 // disabled groups
-fieldset[disabled] button,
-fieldset[disabled] input,
-fieldset[disabled] input::after,
-fieldset[disabled] input::before,
-fieldset[disabled] input:checked,
-fieldset[disabled] select,
-fieldset[disabled] textarea,
-fieldset[disabled] label,
-
-/* disabled singles*/
-button[disabled],
-input[disabled],
-input[disabled]::after,
-input[disabled]::before,
-input[disabled]:checked,
-select[disabled],
-textarea[disabled],
-label[disabled],
-
-/* pseudo class*/
-button:disabled,
-input:disabled,
-input:disabled::after,
-input:disabled::before,
-input:disabled:checked,
-select:disabled,
-textarea:disabled,
-label:disabled,
-
-/* aria*/
-button[aria-disabled="true"],
-input[aria-disabled="true"],
-input[aria-disabled="true"]::after,
-input[aria-disabled="true"]::before,
-input[aria-disabled="true"]:checked,
-select[aria-disabled="true"],
-textarea[aria-disabled="true"],
-label[aria-disabled="true"] {
+:where(
+    fieldset[disabled] button,
+    fieldset[disabled] input,
+    fieldset[disabled] input::after,
+    fieldset[disabled] input::before,
+    fieldset[disabled] input:checked,
+    fieldset[disabled] select,
+    fieldset[disabled] textarea,
+    fieldset[disabled] label,
+    button[disabled],
+    input[disabled],
+    input[disabled]::after,
+    input[disabled]::before,
+    input[disabled]:checked,
+    select[disabled],
+    textarea[disabled],
+    label[disabled],
+    button:disabled,
+    input:disabled,
+    input:disabled::after,
+    input:disabled::before,
+    input:disabled:checked,
+    select:disabled,
+    textarea:disabled,
+    label:disabled,
+    button[aria-disabled="true"],
+    input[aria-disabled="true"],
+    input[aria-disabled="true"]::after,
+    input[aria-disabled="true"]::before,
+    input[aria-disabled="true"]:checked,
+    select[aria-disabled="true"],
+    textarea[aria-disabled="true"],
+    label[aria-disabled="true"]
+  ) {
   cursor: default !important; // fallback
   cursor: not-allowed !important;
   pointer-events: none !important;

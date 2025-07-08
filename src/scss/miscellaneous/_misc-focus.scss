@@ -1,6 +1,6 @@
 // remove focus if is not keyboard
 // and if these elements are not focused globally
-:focus:not(:focus-visible) {
+:where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
@@ -16,7 +16,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 
-//     http://www.apache.org/licenses/LICENSE-2.0
+// http://www.apache.org/licenses/LICENSE-2.0
 
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,17 +24,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-[tabindex='-1']:focus:not(:focus-visible) {
+:where([tabindex="-1"]:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
-a:focus,
-input:focus {
+:where(a:focus, input:focus) {
   outline: 2px solid orange;
 }
 
 // style it again (must be separated)
-:focus-visible {
+:where(:focus-visible) {
   outline: 2px solid orange;
 }
 
@@ -46,30 +45,32 @@ input:focus {
 // [type="color"]
 // [type="range"]
 // [type="file"]
-// because usually are replaced with a custom verion
+// because usually are replaced with a custom version
 // with JS or extra <div>s
 // https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
-button,
-[type='button'],
-[type='reset'],
-[type='submit'],
-[type='email'],
-[type='number'],
-[type='password'],
-[type='tel'],
-[type='search'],
-[type='text'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='time'],
-[type='week'],
-[type='url'],
-[type='radio'],
-[type='checkbox'],
-input[list],
-select,
-textarea {
+:where(
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"],
+    [type="url"],
+    [type="radio"],
+    [type="checkbox"],
+    input[list],
+    select,
+    textarea
+  ) {
   &:focus {
     outline: 0;
   }

@@ -15,7 +15,7 @@ const addHeader = () => {
     Once(root) {
       root.prepend({
         type: "comment",
-        text: " Bullframe CSS v5.1.0 | MIT License | https://github.com/marcop135/bullframe.css ",
+        text: "! Bullframe CSS v5.1.0 | MIT License | https://github.com/marcop135/bullframe.css ",
       });
     },
   };

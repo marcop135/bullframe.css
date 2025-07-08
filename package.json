@@ -1,12 +1,12 @@
 {
   "name": "bullframe.css",
   "version": "5.0.1",
-  "description": "Solid, fluid, cross-browser Sass (SCSS) framework.",
+  "description": "Bullframe CSS is a lightweight Sass (SCSS) framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.",
   "jsdelivr": "dist/css/bullframe.css",
   "unpkg": "dist/css/bullframe.css",
   "main": "dist/css/bullframe.css",
   "directories": {
-    "doc": "docs/"
+    "doc": "dist/docs/"
   },
   "scripts": {
     "dev": "vite",
@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/marcop135/bullframe.css/issues"
   },
-  "homepage": "https://bullframecss.netlify.app",
+  "homepage": "https://bullframecss.marcopontili.com",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.7",

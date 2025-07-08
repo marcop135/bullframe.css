@@ -88,11 +88,16 @@ bullframe.css/
 
 ---
 
+## Live Demo & Examples
+
+- 👉 [One-page demo](https://bullframecss.marcopontili.com): a full showcase of styled HTML elements, form controls, lists, tables, media, and the responsive grid system — all rendered with utility classes for testing and exploring
+🧪 [CodePen collection](https://codepen.io/collection/nxpjRe?grid_type=LIST): live examples of utilities, components, and prototypes — great for quick testing, remixing, and sharing ideas.
+
+---
+
 ## Getting Started
 
 ### CDN
-
-Use JSDelivr CDN to include Bullframe CSS quickly:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5">
@@ -165,7 +170,6 @@ Use JSDelivr CDN to include Bullframe CSS quickly:
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed. Then run:
 
 ```bash
-# Install Bullframe CSS
 npm install bullframe.css
 ```
 
@@ -207,7 +211,7 @@ Bullframe provides three builds for theming:
 
 ### Customise and Rebuild All Styles
 
-After installing Bullframe CSS, you can use [Vite.js](https://vite.dev) commands to rebuild the framework as you prefer, adding your custom Sass variables and styles:
+After installing Bullframe CSS via npm, you can use [Vite.js](https://vite.dev) to rebuild the framework as you prefer, adding your custom Sass variables and styles:
 
 ```bash
 # Build production-ready site/app
@@ -221,7 +225,7 @@ npm run preview
 
 ### Utilities
 
-Bullframe CSS offers a comprehensive set of utility classes for fine-grained control over your layout, spacing, typography, and more. Explore each category below for detailed reference.
+Bullframe CSS offers a set of utility classes for fine-grained control over your layout, spacing, typography, and more. Explore each category below for detailed reference.
 
 #### Grid system
 

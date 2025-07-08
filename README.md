@@ -24,7 +24,7 @@
 
 ## What is Bullframe CSS?
 
-Bullframe CSS is a lightweight, modern Sass (SCSS) framework designed for fast, responsive, and accessible front-end development. 
+Bullframe CSS is a lightweight Sass (SCSS) framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.
 
 Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
 
@@ -34,7 +34,6 @@ Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product li
 
 ## Best Features
 
-- Desktop and mobile browser support
 - Responsive layout and style normalization _out of the box_
 - Cross-browser form elements
 - JavaScript framework-agnostic
@@ -90,8 +89,8 @@ bullframe.css/
 
 ## Live Demo & Examples
 
-- 👉 [One-page demo](https://bullframecss.marcopontili.com): a full showcase of styled HTML elements, form controls, lists, tables, media, and the responsive grid system — all rendered with utility classes for testing and exploring
-🧪 [CodePen collection](https://codepen.io/collection/nxpjRe?grid_type=LIST): live examples of utilities, components, and prototypes — great for quick testing, remixing, and sharing ideas.
+- 👉 **[One-page demo](https://bullframecss.marcopontili.com)**: a complete showcase of styled HTML elements, form controls, lists, tables, media, and the responsive grid system — ideal for quick cross-browser testing and exploration
+- 🧪 **[CodePen collection](https://codepen.io/collection/nxpjRe?grid_type=LIST)**: live examples of utilities, components, and prototypes — great for quick testing, remixing, and sharing ideas.
 
 ---
 
@@ -111,7 +110,7 @@ bullframe.css/
     <html lang="en">
       <head>
         <meta charset="utf-8">
-        <title>Bullframe CSS HTML Starter Template</title>
+        <title>Bullframe CSS v5.x HTML Starter Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe.min.css">
@@ -119,7 +118,7 @@ bullframe.css/
       <body>
         <div class="bf-container">
           <!-- Add your site or application content here -->
-          <p>Hello world! This is a Bullframe CSS starter template.</p>
+          <p>Hello World! This is a Bullframe CSS v5.x HTML starter template.</p>
         </div>
       </body>
     </html>
@@ -138,7 +137,7 @@ bullframe.css/
     <html lang="en">
       <head>
         <meta charset="utf-8">
-        <title>Bullframe CSS Classless Starter Template</title>
+        <title>Bullframe CSS 5.x Classless Starter Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-classless.min.css">
@@ -156,7 +155,7 @@ bullframe.css/
       <body>
         <div class="bf-container">
           <!-- Add your site or application content here -->
-          <p>Hello world! This is a Bullframe CSS Classless starter template.</p>
+          <p>Hello World! This is a Bullframe CSS v5.x HTML classless starter template.</p>
         </div>
       </body>
     </html>

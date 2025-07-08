@@ -1,6 +1,6 @@
 # Changes to Bullframe CSS
 
-## 5.1.0 - (???)
+## 5.1.0 - (July 08, 2025)
 
 - Leveraged `:where` CSS pseudo-class to lower form elements specificity to `0`
 - Added one-page demo and CodePen collection to `README.md`

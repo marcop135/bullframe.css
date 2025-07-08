@@ -15,7 +15,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dist/docs/github-readme/bf-logo-full-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="dist/docs/github-readme/bf-logo-full-light.png">
-  <img alt="Bullframe CSS logo" src="dist/docs/github-readme/bg-logo-full-light.png">
+  <img alt="Bullframe CSS logo" src="https://raw.githubusercontent.com/marcop135/bullframe.css/master/dist/docs/github-readme/bf-logo-full-light.png">
 </picture>
 
 [https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)

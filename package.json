@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Bullframe CSS is a lightweight Sass (SCSS) framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.",
   "jsdelivr": "dist/css/bullframe.css",
   "unpkg": "dist/css/bullframe.css",

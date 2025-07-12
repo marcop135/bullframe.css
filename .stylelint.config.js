@@ -1,6 +1,7 @@
-{
-  "extends": ["stylelint-config-standard-scss"],
-  "rules": {
+/** @type {import('stylelint').Config} */
+export default {
+  extends: ["stylelint-config-standard-scss"],
+  rules: {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
     "unit-no-unknown": true,
@@ -21,6 +22,6 @@
     "declaration-block-single-line-max-declarations": null,
     "selector-id-pattern": null,
     "scss/at-mixin-pattern": null,
-    "scss/dollar-variable-pattern": null
-  }
-}
+    "scss/dollar-variable-pattern": null,
+  },
+};

@@ -92,8 +92,7 @@
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: bf-v-space.$bf-spacing-md-px;
-  margin-bottom: bf-v-space.$bf-spacing-md-rem;
+  margin-bottom: bf-v-space.$bf-spacing-md;
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -103,8 +102,7 @@
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: bf-v-space.$bf-spacing-md-px;
-  margin-bottom: bf-v-space.$bf-spacing-md-rem;
+  margin-bottom: bf-v-space.$bf-spacing-md;
 }
 
 :where(label input, label select, label textarea) {
@@ -130,7 +128,7 @@
 }
 
 :where([type="search"]) {
-  outline-offset: calc(-1 * bf-v-space.$bf-spacing-sm-rem);
+  outline-offset: calc(-1 * bf-v-space.$bf-spacing-sm);
 }
 
 :where(output) {
@@ -201,7 +199,7 @@
 }
 
 :where(button, input, select, textarea) {
-  border-radius: bf-v-space.$bf-spacing-sm-rem;
+  border-radius: bf-v-space.$bf-spacing-sm;
 }
 
 :where([type="radio"]) {
@@ -209,7 +207,7 @@
 }
 
 :where([type="checkbox"]) {
-  border-radius: bf-v-space.$bf-spacing-md-rem;
+  border-radius: bf-v-space.$bf-spacing-md;
 }
 
 :where([type="radio"], [type="checkbox"]) {

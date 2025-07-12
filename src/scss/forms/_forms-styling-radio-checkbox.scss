@@ -22,8 +22,7 @@
   + label {
     line-height: 1.8rem;
     vertical-align: top;
-    margin-left: bf-v-space.$bf-spacing-md-px;
-    margin-left: bf-v-space.$bf-spacing-md-rem;
+    margin-left: bf-v-space.$bf-spacing-md;
   }
 
   // add support for RTL languages
@@ -33,8 +32,7 @@
   *[dir="rtl"] & + label,
   &[dir="rtl"] + label {
     margin-left: 0;
-    margin-right: bf-v-space.$bf-spacing-md-px;
-    margin-right: bf-v-space.$bf-spacing-md-rem;
+    margin-right: bf-v-space.$bf-spacing-md;
   }
 
   &::after {

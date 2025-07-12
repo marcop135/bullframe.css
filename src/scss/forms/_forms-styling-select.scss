@@ -30,7 +30,7 @@
     no-repeat right 0.85rem center/8px 10px;
 
   // space the arrow
-  padding-right: bf-v-space.$bf-spacing-lg-rem + bf-v-space.$bf-spacing-lg-rem;
+  padding-right: bf-v-space.$bf-spacing-lg + bf-v-space.$bf-spacing-lg;
 }
 
 // Legacy Edge browser support
@@ -51,8 +51,8 @@
   background-position: left 0.85rem top 50%;
 
   // go back to default forms padding
-  padding-right: (bf-v-space.$bf-spacing-lg-rem * 0.75);
+  padding-right: (bf-v-space.$bf-spacing-lg * 0.75);
 
   // add custom left padding, matching the custom LTR one
-  padding-left: bf-v-space.$bf-spacing-lg-rem + bf-v-space.$bf-spacing-lg-rem;
+  padding-left: bf-v-space.$bf-spacing-lg + bf-v-space.$bf-spacing-lg;
 }

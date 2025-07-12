@@ -1,8 +1,8 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 .bf-t-transform-uppercase {
   text-transform: uppercase !important;
@@ -107,51 +107,28 @@
 
 .bf-font-sans-serif {
   font-family:
-    /* Safari for OS X and iOS (San Francisco) */
-    -apple-system,
+    /* Safari for OS X and iOS (San Francisco) */ -apple-system,
     /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
-    /* Windows */ 'Segoe UI',
-    /* Android */ Roboto,
-    /* Linux with KDE */ Oxygen-Sans,
-    /* Ubuntu (all variants) */ Ubuntu,
+    /* Windows */ "Segoe UI", /* Android */ Roboto,
+    /* Linux with KDE */ Oxygen-Sans, /* Ubuntu (all variants) */ Ubuntu,
     /* Linux with GNOME Shell */ Cantarell,
-    /* macOS 1.10 and below */ 'Helvetica Neue',
-    Helvetica,
-    /* Basic web fallback */ Arial,
-    sans-serif,
-    /* emoji fonts */ 'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji' !important;
+    /* macOS 1.10 and below */ "Helvetica Neue", Helvetica,
+    /* Basic web fallback */ Arial, sans-serif,
+    /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji" !important;
 }
 
 .bf-font-serif {
-  font-family:
-    Georgia,
-    Times,
-    'Times New Roman',
-    serif,
-    /* emoji fonts */ 'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji' !important;
+  font-family: Georgia, Times, "Times New Roman", serif,
+    /* emoji fonts */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji" !important;
 }
 
 .bf-font-monospace {
   font-family:
-    /* macOS 1.10+ */
-    Menlo,
-     Consolas,
-     'Roboto Mono',
-     'Ubuntu Monospace',
-     'Noto Mono',
-     'Oxygen Mono',
-     'Liberation Mono',
-     monospace,
-     'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji' !important;
+    /* macOS 1.10+ */ Menlo, Consolas, "Roboto Mono",
+    "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .bf-h1,
@@ -159,12 +136,12 @@
 .bf-h3,
 .bf-h4,
 .bf-h5,
-.bf-h6 { // fallback
+.bf-h6 {
+  // fallback
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: bf-v-space.$bf-spacing-lg-px !important;
-  margin-bottom: bf-v-space.$bf-spacing-lg-rem !important;
+  margin-bottom: bf-v-space.$bf-spacing-lg !important;
 }
 
 .bf-h1 {

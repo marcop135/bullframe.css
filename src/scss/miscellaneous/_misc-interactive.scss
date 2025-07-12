@@ -6,8 +6,7 @@
 
 address {
   font-style: normal;
-  margin-bottom: bf-v-space.$bf-spacing-lg-px;
-  margin-bottom: bf-v-space.$bf-spacing-lg-rem;
+  margin-bottom: bf-v-space.$bf-spacing-lg;
   line-height: inherit;
 }
 
@@ -26,12 +25,11 @@ dialog {
   background-color: bf-v-color.$bf-white;
   color: bf-v-color.$bf-dark;
   border: none;
-  border-radius: bf-v-space.$bf-spacing-sm-rem;
-  padding: bf-v-space.$bf-spacing-xl-px;
-  padding: bf-v-space.$bf-spacing-xl-rem;
+  border-radius: bf-v-space.$bf-spacing-sm;
+  padding: bf-v-space.$bf-spacing-xl;
   height: fit-content;
   min-width: 25rem;
-  max-width: calc(100vw - (bf-v-space.$bf-spacing-grid-gutter-rem * 2));
+  max-width: calc(100vw - (bf-v-space.$bf-spacing-grid-gutter * 2));
   @media (min-width: bf-v-bp.$bf-breakpoint-md) {
     max-width: 50rem;
   }

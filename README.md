@@ -292,8 +292,8 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | `.bf-float-right`                  | Sets the `float` to `right`                                                                                                                                                                              |
 | `.bf-position-fixed`               | Sets the `position` to `fixed`                                                                                                                                                                           |
 | `.bf-align-center-unknown`         | Sets the `position` to `relative`                                                                                                                                                                        |
-| `.bf-align-center-unknown--item`   | Centers an element with unknown height and width to a relative positioned parent, IE10+, [read more](https://css-tricks.com/centering-css-complete-guide)                                                |
-| `.bf-align-center-flex`            | Centers all elements with known height and width to a flexbox container, IE10+, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) |
+| `.bf-align-center-unknown--item`   | Centers an element with unknown height and width to a relative positioned parent                                                |
+| `.bf-align-center-flex`            | Centers all elements with known height and width to a flexbox container |
 | `.bf-width-25`                     | Sets the `width` to `25%`                                                                                                                                                                                |
 | `.bf-width-33`                     | Sets the `width` to `33.33333333333333%`                                                                                                                                                                 |
 | `.bf-width-50`                     | Sets the `width` to `50%`                                                                                                                                                                                |
@@ -381,8 +381,8 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | `.bf-t-weight-800`            | Sets `font-weight` to `800` (AKA black)                                                                                         |
 | `.bf-text-break`              | Sets `word-wrap` to a `break-word`, applied by default to the `body`                                                            |
 | `.bf-t-truncate`              | Truncates a very long text and replaces the missing text with an ellipsis                                                       |
-| `.bf-t-truncate--multiline-2` | Truncates a long doubled line text and replaces the missing text with an ellipsis (no IE)                                       |
-| `.bf-t-truncate--multiline-3` | Truncates a long tripled line text and replaces the missing text with an ellipsis (no IE)                                       |
+| `.bf-t-truncate--multiline-2` | Truncates a long doubled line text and replaces the missing text with an ellipsis                                       |
+| `.bf-t-truncate--multiline-3` | Truncates a long tripled line text and replaces the missing text with an ellipsis                                      |
 | `.bf-no-select`               | Blocks user text selection                                                                                                      |
 | `.bf-font-sans-serif`         | Sets `font-family` to a `sans-serif`, and a combination of cross-browser system UI sans-serif font families                     |
 | `.bf-font-serif`              | Sets `font-family` to a `serif`, and a combination of cross-browser system UI serif font families                               |

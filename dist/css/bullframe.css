@@ -94,20 +94,17 @@ h6 {
 }
 
 blockquote {
-  margin-bottom: 2rem;
+  margin: 0 0 2rem;
   padding-left: 0;
   font-style: italic;
 }
-
 blockquote p {
   margin-bottom: 0;
 }
-
 blockquote small {
   color: #999;
   display: block;
 }
-
 blockquote small::before {
   content: "— ";
 }

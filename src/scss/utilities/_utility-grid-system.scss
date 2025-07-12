@@ -1,5 +1,5 @@
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
 
 .bf-container,
 .bf-container--fluid {
@@ -7,8 +7,8 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: bf-v-space.$bf-spacing-grid-gutter-rem;
-  padding-right: bf-v-space.$bf-spacing-grid-gutter-rem;
+  padding-left: bf-v-space.$bf-spacing-grid-gutter;
+  padding-right: bf-v-space.$bf-spacing-grid-gutter;
 }
 
 .bf-container {
@@ -18,15 +18,15 @@
 .bf-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * bf-v-space.$bf-spacing-grid-gutter-rem);
-  margin-right: calc(-1 * bf-v-space.$bf-spacing-grid-gutter-rem);
+  margin-left: calc(-1 * bf-v-space.$bf-spacing-grid-gutter);
+  margin-right: calc(-1 * bf-v-space.$bf-spacing-grid-gutter);
 }
 
-[class^='bf-col-'] {
+[class^="bf-col-"] {
   position: relative;
   min-height: 1px;
-  padding-left: bf-v-space.$bf-spacing-grid-gutter-rem;
-  padding-right: bf-v-space.$bf-spacing-grid-gutter-rem;
+  padding-left: bf-v-space.$bf-spacing-grid-gutter;
+  padding-right: bf-v-space.$bf-spacing-grid-gutter;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -34,7 +34,7 @@
 .bf-no-gutters {
   margin-right: 0;
   margin-left: 0;
-  > [class^='bf-col'] {
+  > [class^="bf-col"] {
     padding-right: 0;
     padding-left: 0;
   }
@@ -96,7 +96,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-xs [class^='bf-col'] {
+  .bf-container--break-xs [class^="bf-col"] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -110,7 +110,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-md [class^='bf-col'] {
+  .bf-container--break-md [class^="bf-col"] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -124,7 +124,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .bf-container--break-lg [class^='bf-col'] {
+  .bf-container--break-lg [class^="bf-col"] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -134,7 +134,7 @@
 }
 
 // Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x)
-table td[class^='bf-col'],
-table th[class^='bf-col'] {
+table td[class^="bf-col"],
+table th[class^="bf-col"] {
   position: static;
 }

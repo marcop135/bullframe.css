@@ -1,14 +1,14 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 menu,
 ol,
 ul,
 dl {
-  margin: 0 0 bf-v-space.$bf-spacing-xl-rem 0;
+  margin: 0 0 bf-v-space.$bf-spacing-xl 0;
   padding: 0;
 }
 
@@ -24,7 +24,7 @@ dd {
 
 ul,
 ol {
-  margin-left: bf-v-space.$bf-spacing-xl-rem;
+  margin-left: bf-v-space.$bf-spacing-xl;
 }
 
 nav ol,
@@ -48,6 +48,6 @@ dd {
 // 2. Absolute position ensures no extra space
 // See: https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
 nav li::before {
-  content: '\200B';
+  content: "\200B";
   position: absolute;
 }

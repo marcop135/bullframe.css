@@ -23,7 +23,7 @@
   ) {
   background-color: bf-v-color.$bf-white;
   border: 1px solid bf-v-color.$bf-gray;
-  padding: bf-v-space.$bf-spacing-md-rem (bf-v-space.$bf-spacing-lg-rem * 0.75);
+  padding: bf-v-space.$bf-spacing-md (bf-v-space.$bf-spacing-lg * 0.75);
 }
 
 :where(
@@ -55,8 +55,8 @@
 
 :where(button, [type="button"], [type="reset"], [type="submit"]) {
   color: bf-v-color.$bf-dark;
-  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3)
-    (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2);
+  padding: calc(bf-v-space.$bf-spacing-xl / 3)
+    (calc(bf-v-space.$bf-spacing-xl / 3) * 2);
   background: bf-v-color.$bf-gray-light;
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 

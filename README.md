@@ -332,10 +332,10 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | ------------- | ----------------------------------------------------------------------------------------- |
 | `.bf-m-0`     | Sets the `margin` to `0`                                                                  |
 | `.bf-m-t-0`   | Sets the `margin-top` to `0`                                                              |
-| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`$bf-spacing-md-rem`)             |
-| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`$bf-spacing-lg-rem`)              |
-| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`$bf-spacing-xl-rem`)        |
-| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`$bf-spacing-xxl-rem`) |
+| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`$bf-spacing-md`)             |
+| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`$bf-spacing-lg`)              |
+| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`$bf-spacing-xl`)        |
+| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`$bf-spacing-xxl`) |
 | `.bf-m-b-0`   | Sets the `margin-bottom` to `0`                                                           |
 | `.bf-m-b-1`   | Sets the `margin-bottom` to a custom value that matches the grid system gutter            |
 | `.bf-m-b-2`   | Sets the `margin-bottom` to a custom value                                                |

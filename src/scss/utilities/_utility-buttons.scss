@@ -1,14 +1,15 @@
-@use '../variables/variables-colors' as bf-v-color;
-@use '../variables/variables-texts' as bf-v-text;
-@use '../variables/variables-spacing' as bf-v-space;
-@use '../variables/variables-breakpoints' as bf-v-bp;
-@use 'sass:color';
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
 
 .bf-btn {
   display: inline-block;
   cursor: pointer;
   color: bf-v-color.$bf-dark;
-  padding: calc(bf-v-space.$bf-spacing-xl-rem / 3) (calc(bf-v-space.$bf-spacing-xl-rem / 3) * 2); // 8px 16px
+  padding: calc(bf-v-space.$bf-spacing-xl / 3)
+    (calc(bf-v-space.$bf-spacing-xl / 3) * 2); // 8px 16px
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -17,7 +18,7 @@
   overflow: visible;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
-  border-radius: bf-v-space.$bf-spacing-sm-rem;
+  border-radius: bf-v-space.$bf-spacing-sm;
 
   border: 0;
   background-image: none; // FF mobile
@@ -62,7 +63,7 @@
 fieldset[disabled] .bf-btn,
 .bf-btn[disabled],
 .bf-btn:disabled,
-.bf-btn[aria-disabled='true'] {
+.bf-btn[aria-disabled="true"] {
   cursor: default !important; // fallback
   cursor: not-allowed !important;
   pointer-events: none !important;

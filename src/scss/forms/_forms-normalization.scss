@@ -65,7 +65,7 @@
 }
 
 :where(button, html input, select, textarea) {
-  background-image: none; // FF mobile
+  background-image: none;
 }
 
 :where(input, select, textarea) {
@@ -216,7 +216,7 @@
 }
 
 :where([type="range" i]) {
-  background-color: transparent; // FF and Chrome mobile
+  background-color: transparent;
 }
 
 :where(select[size], select[multiple]) {
@@ -224,7 +224,7 @@
 }
 
 :where(select[multiple]) {
-  background-image: none; // FF mobile
+  background-image: none;
 }
 
 :where(textarea) {

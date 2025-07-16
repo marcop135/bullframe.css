@@ -1,80 +1,58 @@
-// remove focus if is not keyboard
-// and if these elements are not focused globally
+@use "../variables/variables-colors" as bf-v-color;
+@use "../variables/variables-texts" as bf-v-text;
+@use "../variables/variables-spacing" as bf-v-space;
+@use "../variables/variables-breakpoints" as bf-v-bp;
+@use "sass:color";
+
+// Remove focus outline if it's not keyboard-triggered
 :where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
-//
-// Taken from SuitCSS https://github.com/suitcss/base
-//
-// Copyright 2020 Harry Roberts
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-// http://www.apache.org/licenses/LICENSE-2.0
-
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
+// Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1")
 :where([tabindex="-1"]:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
-:where(a:focus, input:focus) {
-  outline: 2px solid orange;
+// Restore focus style for keyboard users only
+:focus-visible {
+  outline: 0.2rem solid bf-v-color.$bf-orange;
+  outline-offset: 0.3rem;
 }
 
-// style it again (must be separated)
-:where(:focus-visible) {
-  outline: 2px solid orange;
-}
-
-// these form elements get some ':focus' styles that enhance and improve the focus
-// see '_form-elements.scss'
-// so, we can remove it safely
+// Remove default focus outline on form elements
+// (styles applied elsewhere, e.g. _form-elements.scss)
 //
-// ! but do not touch
-// [type="color"]
-// [type="range"]
-// [type="file"]
-// because usually are replaced with a custom version
-// with JS or extra <div>s
-// https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
-:where(
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"],
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="tel"],
-    [type="search"],
-    [type="text"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="time"],
-    [type="week"],
-    [type="url"],
-    [type="radio"],
-    [type="checkbox"],
-    input[list],
-    select,
-    textarea
-  ) {
+// Exceptions (don't override!):
+// - [type="color"]
+// - [type="range"]
+// - [type="file"]
+// These are often replaced by custom widgets via JS/markup
+//
+// Ref: https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="url"],
+[type="radio"],
+[type="checkbox"],
+input[list],
+select,
+textarea,
+.bf-btn {
   &:focus {
     outline: 0;
   }
 }
-
-// More resources to read on this matter
-// https://gist.github.com/chrisdemars/a74c5bd210dc739fa63e9b985c937bcb

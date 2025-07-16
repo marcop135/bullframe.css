@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 
 // TIP: make colors lighter/darker with Sass
 // https://sass-lang.com/documentation/modules/color/
@@ -10,25 +10,26 @@
 // hex to rgba online converter http://www.hex2rgba.devoth.com/
 
 // backgrounds, texts and borders
-$bf-white: #fff; // rgba(255,255,255,1)
-$bf-light: #f0f0f0; // rgba(240,240,240,1)
-$bf-gray-light-extra: #e9e9e9; // rgba(233,233,233,1)
-$bf-gray-light: #ccc; // rgba(204,204,204,1)
-$bf-gray: #999; // rgba(153,153,153,1)
-$bf-gray-dark: #666; // rgba(102,102,102,1)
-$bf-gray-dark-extra: #333; // rgba(51,51,51,1)
-$bf-dark: #222; // rgba(34,34,34,1)
-$bf-dark-extra: #111; // rgba(17,17,17,1)
-$bf-black: #000; // rgba(0,0,0,1)
+$bf-white: rgb(255 255 255); // #fff
+$bf-light: rgb(240 240 240); // #f0f0f0
+$bf-gray-light-extra: rgb(233 233 233); // #e9e9e9
+$bf-gray-light: rgb(204 204 204); // #ccc
+$bf-gray: rgb(153 153 153); // #999
+$bf-gray-dark: rgb(102 102 102); // #666
+$bf-gray-dark-extra: rgb(51 51 51); // #333
+$bf-dark: rgb(34 34 34); // #222
+$bf-dark-extra: rgb(17 17 17); // #111
+$bf-black: rgb(0 0 0); // #000
 
 // <mark> and <ins>
-$bf-yellow-light: #ff9; // rgba(255,255,153,1)
-$bf-yellow: #ff0; // rgba(255,255,0,1)
+$bf-yellow-light: rgb(255 255 153); // #ff9
+$bf-yellow: rgb(255 255 0); // #ff0
+$bf-orange: rgb(255 165 0); // #ffa500
 
 // anchors and accent
-$bf-blue: #007bff; // rgba(0,123,255,1)
-$bf-blue-light: #0056b3; // rgba(0,86,179,1)
-$bf-blue-light-extra: #bed8fe; // rgba(190, 216, 254, 1)
+$bf-blue: rgb(0 123 255); // #007bff
+$bf-blue-light: rgb(0 86 179); // #0056b3
+$bf-blue-light-extra: rgb(190 216 254); // #bed8fe
 
 // invalid forms
-$bf-red: #f00; // rgba(255,0,0,1)
+$bf-red: rgb(255 0 0); // #f00

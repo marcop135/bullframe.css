@@ -62,14 +62,14 @@
 
   &:hover,
   &:active,
-  &:focus {
+  &:focus:not(.bf-disabled):not([aria-disabled="true"]) {
     text-decoration: none;
     color: bf-v-color.$bf-dark;
     background: color.adjust(bf-v-color.$bf-gray-light, $lightness: -10%);
   }
 
   &:active,
-  &:focus {
+  &:focus:not(.bf-disabled):not([aria-disabled="true"]) {
     box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
   }
 }
@@ -114,5 +114,6 @@
   pointer-events: none !important;
   user-select: none !important;
   box-shadow: none !important;
+  outline: none !important; // disable focus ring
   opacity: 0.5 !important;
 }

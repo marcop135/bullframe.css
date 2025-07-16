@@ -154,12 +154,7 @@
     [type="button"],
     [type="reset"],
     [type="submit"],
-    .bf-btn,
-    button.bf-disabled,
-    [type="button"].bf-disabled,
-    [type="reset"].bf-disabled,
-    [type="submit"].bf-disabled,
-    .bf-btn.bf-disabled {
+    .bf-btn {
       background: bf-v-color.$bf-gray-light;
 
       &:hover,
@@ -174,6 +169,14 @@
       }
     }
 
+    button.bf-disabled,
+    [type="button"].bf-disabled,
+    [type="reset"].bf-disabled,
+    [type="submit"].bf-disabled,
+    .bf-btn.bf-disabled {
+      background: bf-v-color.$bf-gray-light;
+    }
+
     button,
     [type="button"],
     [type="reset"],
@@ -185,7 +188,10 @@
       }
     }
 
-    .bf-btn--primary.bf-disabled,
+    .bf-btn--primary.bf-disabled {
+      background: bf-v-color.$bf-blue;
+    }
+
     .bf-btn.bf-btn--primary {
       background: bf-v-color.$bf-blue;
 
@@ -199,16 +205,6 @@
       &:focus {
         box-shadow: 0 0 0 3px rgb(0 86 179 / 75%);
       }
-    }
-
-    // focus
-    a:focus,
-    input:focus {
-      outline-color: color.adjust(orange, $lightness: -15%);
-    }
-
-    :focus-visible {
-      outline-color: color.adjust(orange, $lightness: -15%);
     }
 
     // tables

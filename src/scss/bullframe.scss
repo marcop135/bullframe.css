@@ -19,6 +19,13 @@
 @use "typography/typography-monospaced-elements";
 @use "typography/typography-misc";
 
+// Forms
+@use "forms/forms-normalization";
+@use "forms/forms-styling";
+@use "forms/forms-styling-select";
+@use "forms/forms-styling-radio-checkbox";
+@use "forms/forms-styling-range";
+
 // Normalization and accessibility
 @use "miscellaneous/misc-anchors";
 @use "miscellaneous/misc-focus";
@@ -28,13 +35,6 @@
 @use "miscellaneous/misc-scrolling";
 @use "miscellaneous/misc-tables";
 @use "miscellaneous/misc-accessibility";
-
-// Forms
-@use "forms/forms-normalization";
-@use "forms/forms-styling";
-@use "forms/forms-styling-select";
-@use "forms/forms-styling-radio-checkbox";
-@use "forms/forms-styling-range";
 
 // Utilities
 @use "utilities/utility-grid-system";

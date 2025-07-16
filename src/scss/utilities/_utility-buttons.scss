@@ -38,10 +38,6 @@
     box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
   }
 
-  &:focus {
-    outline: 0;
-  }
-
   &.bf-btn--primary {
     color: bf-v-color.$bf-white;
     background: bf-v-color.$bf-blue;
@@ -60,10 +56,12 @@
   }
 }
 
-fieldset[disabled] .bf-btn,
-.bf-btn[disabled],
-.bf-btn:disabled,
-.bf-btn[aria-disabled="true"] {
+:where(
+    fieldset[disabled] .bf-btn,
+    .bf-btn[disabled],
+    .bf-btn:disabled,
+    .bf-btn[aria-disabled="true"]
+  ) {
   cursor: default !important; // fallback
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -71,4 +69,5 @@ fieldset[disabled] .bf-btn,
   box-shadow: none !important;
   opacity: 0.5 !important;
   background-color: bf-v-color.$bf-gray-light;
+  outline: none !important;
 }

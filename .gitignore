@@ -1,16 +1,10 @@
 # Node modules
 node_modules/
 
-# Build output
-dist/
-build/
-.out/
-
 # Caches
 .eslintcache
 .stylelintcache
 .sass-cache/
-.next/
 .cache/
 .vite/
 
@@ -23,4 +17,3 @@ pnpm-debug.log*
 
 # OS generated files
 .DS_Store
-Th

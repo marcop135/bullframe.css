@@ -35,7 +35,7 @@ html {
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   font-size: 62.5%;
-  color: #222;
+  color: rgb(34, 34, 34);
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -50,7 +50,7 @@ body {
   font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 h1,
@@ -102,7 +102,7 @@ blockquote p {
   margin-bottom: 0;
 }
 blockquote small {
-  color: #999;
+  color: rgb(153, 153, 153);
   display: block;
 }
 blockquote small::before {
@@ -161,13 +161,13 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: rgb(255, 255, 0);
+  color: rgb(0, 0, 0);
 }
 
 ins {
-  background-color: #ff9;
-  color: #000;
+  background-color: rgb(255, 255, 153);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -222,330 +222,6 @@ hr {
   margin: 2rem 0;
   padding: 0;
   overflow: visible;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-}
-a:hover, a:focus {
-  text-decoration: underline;
-  color: #0056b3;
-}
-
-a:not([href], [tabindex]) {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:not([href], [class]),
-a:not([href], [class]):hover {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:not([href], [tabindex]):focus {
-  outline: 0;
-}
-
-:where(:focus:not(:focus-visible)) {
-  outline: none;
-}
-
-:where([tabindex="-1"]:focus:not(:focus-visible)) {
-  outline: 0 !important;
-}
-
-:where(a:focus, input:focus) {
-  outline: 2px solid orange;
-}
-
-:where(:focus-visible) {
-  outline: 2px solid orange;
-}
-
-:where(button,
-[type=button],
-[type=reset],
-[type=submit],
-[type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=time],
-[type=week],
-[type=url],
-[type=radio],
-[type=checkbox],
-input[list],
-select,
-textarea):focus {
-  outline: 0;
-}
-
-menu,
-ol,
-ul,
-dl {
-  margin: 0 0 2rem 0;
-  padding: 0;
-}
-
-menu ul,
-menu ol,
-ul ul,
-ul ol,
-ol ol,
-ol ul,
-dd {
-  margin-bottom: 0;
-}
-
-ul,
-ol {
-  margin-left: 2rem;
-}
-
-nav ol,
-nav ul {
-  list-style: none;
-  list-style-image: none;
-  margin-left: 0;
-}
-
-dt {
-  font-weight: 700;
-}
-
-dd {
-  margin-left: 0;
-}
-
-nav li::before {
-  content: "​";
-  position: absolute;
-}
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-img,
-canvas,
-audio,
-video,
-iframe,
-object,
-embed {
-  max-width: 100%;
-}
-
-audio,
-video,
-canvas,
-img,
-svg {
-  vertical-align: middle;
-}
-
-img {
-  height: auto;
-  border-style: none;
-}
-
-figure {
-  margin: 0;
-}
-
-figure,
-figcaption {
-  display: block;
-}
-
-figcaption {
-  line-height: 1.375;
-  font-size: 90%;
-}
-
-video {
-  height: auto;
-}
-
-audio {
-  width: 100%;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-svg:not([fill]) {
-  fill: currentColor;
-}
-
-progress,
-meter {
-  display: inline-block;
-  vertical-align: baseline;
-  width: 100%;
-  max-width: 100%;
-}
-
-progress[value] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  height: 20px;
-  height: 2rem;
-  background: #ccc;
-  color: #007bff;
-}
-
-progress[value]::-webkit-progress-bar {
-  background: #ccc;
-}
-
-progress[value]::-webkit-progress-value {
-  background: #007bff;
-}
-
-iframe {
-  border-style: none;
-}
-
-address {
-  font-style: normal;
-  margin-bottom: 1rem;
-  line-height: inherit;
-}
-
-details > summary:first-of-type {
-  display: list-item;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 700;
-  word-break: break-all;
-}
-
-dialog {
-  background-color: #fff;
-  color: #222;
-  border: none;
-  border-radius: 0.25rem;
-  padding: 2rem;
-  height: -moz-fit-content;
-  height: fit-content;
-  min-width: 25rem;
-  max-width: calc(100vw - 3rem);
-}
-@media (min-width: 768px) {
-  dialog {
-    max-width: 50rem;
-  }
-}
-
-dialog[open] {
-  display: block !important;
-}
-
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
-table {
-  caption-side: bottom;
-  max-width: 100%;
-  border-collapse: collapse;
-  border-color: currentcolor;
-  text-indent: 0;
-}
-
-thead,
-tbody,
-tfoot,
-tr,
-td,
-th {
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-}
-
-thead th {
-  vertical-align: bottom;
-}
-
-th,
-td {
-  vertical-align: top;
-}
-
-th {
-  text-align: inherit;
-  text-align: -webkit-match-parent;
-  font-weight: 700;
-}
-
-caption {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  color: #999;
-  text-align: left;
-  caption-side: bottom;
-  line-height: 1.375;
-  font-size: 90%;
-}
-
-/* Accessibility
- * ========================================================================== */
-/**
- * Change the cursor on busy elements in all browsers (opinionated).
- */
-:where([aria-busy=true i]) {
-  cursor: progress;
-}
-
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements in all browsers (opinionated).
- */
-:where([aria-disabled=true i], [disabled]) {
-  cursor: not-allowed;
-}
-
-/*
- * Change the display on visually hidden accessible elements
- * in all browsers (opinionated).
- */
-:where([aria-hidden=false i][hidden]) {
-  display: initial;
-}
-
-:where([aria-hidden=false i][hidden]:not(:focus)) {
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
 }
 
 :where(html input, button, select, optgroup, textarea) {
@@ -734,7 +410,7 @@ textarea) {
 
 :where([type=radio], [type=checkbox]) {
   padding: 0;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 :where([type=range i]) {
@@ -779,7 +455,7 @@ textarea) {
 }
 :where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
   text-decoration: none;
-  color: #222;
+  color: rgb(34, 34, 34);
 }
 
 :where(button:not(:disabled),
@@ -790,11 +466,11 @@ textarea) {
 }
 
 :where(input::-moz-placeholder, textarea::-moz-placeholder) {
-  color: #666;
+  color: rgb(102, 102, 102);
 }
 
 :where(input::placeholder, textarea::placeholder) {
-  color: #666;
+  color: rgb(102, 102, 102);
 }
 
 /*
@@ -823,8 +499,8 @@ Use the modern Firefox focus style for all focusable elements.
 input[list],
 select,
 textarea) {
-  background-color: #fff;
-  border: 1px solid #999;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(153, 153, 153);
   padding: 0.5rem 0.75rem;
 }
 
@@ -862,22 +538,22 @@ textarea,
 [type=radio],
 [type=checkbox]):focus {
   transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-  border-color: #007bff;
+  border-color: rgb(0, 123, 255);
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
 }
 
 :where(button, [type=button], [type=reset], [type=submit]) {
-  color: #222;
+  color: rgb(34, 34, 34);
   padding: 0.6666666667rem 1.3333333333rem;
-  background: #ccc;
+  background: rgb(204, 204, 204);
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 }
-:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
+:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus:not(.bf-disabled):not([aria-disabled=true]) {
   text-decoration: none;
-  color: #222;
+  color: rgb(34, 34, 34);
   background: rgb(178.5, 178.5, 178.5);
 }
-:where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
+:where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus:not(.bf-disabled):not([aria-disabled=true]) {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -920,6 +596,7 @@ label[aria-disabled=true]) {
      -moz-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
+  outline: none !important;
   opacity: 0.5 !important;
 }
 
@@ -927,7 +604,7 @@ label[aria-disabled=true]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
+  background: rgb(255, 255, 255) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
   padding-right: 2rem;
 }
 
@@ -950,7 +627,7 @@ label[aria-disabled=true]) {
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid/#999;
+  border: 1px solid/rgb(153, 153, 153);
 }
 :where([type=checkbox], [type=radio]) + label {
   line-height: 1.8rem;
@@ -967,8 +644,8 @@ label[aria-disabled=true]) {
   position: absolute;
 }
 :where([type=checkbox], [type=radio]):checked {
-  background-color: #007bff;
-  border-color: #000;
+  background-color: rgb(0, 123, 255);
+  border-color: rgb(0, 0, 0);
 }
 
 :where([type=radio])::after {
@@ -977,14 +654,14 @@ label[aria-disabled=true]) {
   left: -0.05rem;
   top: -0.05rem;
   border-radius: 50%;
-  background: #fff;
+  background: rgb(255, 255, 255);
   transform: scale(0.35);
 }
 
 :where([type=checkbox])::after {
   width: 0.6rem;
   height: 0.8rem;
-  border: 2px solid/#fff;
+  border: 2px solid/rgb(255, 255, 255);
   border-top: 0;
   border-left: 0;
   left: 35%;
@@ -1007,13 +684,13 @@ label[aria-disabled=true]) {
   width: 1.5rem;
   height: 1.5rem;
   margin-top: -0.25rem;
-  background-color: #007bff;
+  background-color: rgb(0, 123, 255);
   border-radius: 1.5rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 :where([type=range])::-webkit-slider-thumb:active {
-  background-color: #007bff;
+  background-color: rgb(0, 123, 255);
 }
 
 :where([type=range])::-moz-range-thumb {
@@ -1022,13 +699,13 @@ label[aria-disabled=true]) {
        appearance: none;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #007bff;
+  background-color: rgb(0, 123, 255);
   border-radius: 1.5rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 :where([type=range])::-moz-range-thumb:active {
-  background-color: #007bff;
+  background-color: rgb(0, 123, 255);
 }
 
 :where([type=range])::-webkit-slider-runnable-track {
@@ -1037,7 +714,7 @@ label[aria-disabled=true]) {
   width: 100%;
   height: 0.65rem;
   cursor: pointer;
-  background-color: #e9e9e9;
+  background-color: rgb(233, 233, 233);
 }
 
 :where([type=range])::-moz-range-track {
@@ -1046,17 +723,17 @@ label[aria-disabled=true]) {
   width: 100%;
   height: 0.65rem;
   cursor: pointer;
-  background-color: #e9e9e9;
+  background-color: rgb(233, 233, 233);
 }
 
 :where([type=range]):focus {
   outline: none;
 }
 :where([type=range]):focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.1rem/rgb(255, 255, 255), 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 :where([type=range]):focus::-moz-slider-thumb {
-  box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.1rem/rgb(255, 255, 255), 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 :where([type=range])::-moz-focus-outer {
@@ -1064,21 +741,343 @@ label[aria-disabled=true]) {
 }
 
 :where([type=range]):focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.1rem/rgb(255, 255, 255), 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 :where([type=range]):disabled {
   pointer-events: none;
 }
 :where([type=range]):disabled::-webkit-slider-thumb {
-  background-color: #ccc;
+  background-color: rgb(204, 204, 204);
 }
 :where([type=range]):disabled::-moz-slider-thumb {
-  background-color: #ccc;
+  background-color: rgb(204, 204, 204);
+}
+
+a {
+  color: rgb(0, 123, 255);
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+  color: rgb(0, 86, 179);
+}
+
+a:not([href], [tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href], [class]),
+a:not([href], [class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href], [tabindex]):focus {
+  outline: 0;
+}
+
+:where(:focus:not(:focus-visible)) {
+  outline: none;
+}
+
+:where([tabindex="-1"]:focus:not(:focus-visible)) {
+  outline: 0 !important;
+}
+
+:focus-visible {
+  outline: 0.2rem solid rgb(255, 165, 0);
+  outline-offset: 0.3rem;
+}
+
+button:focus,
+[type=button]:focus,
+[type=reset]:focus,
+[type=submit]:focus,
+[type=email]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=tel]:focus,
+[type=search]:focus,
+[type=text]:focus,
+[type=date]:focus,
+[type=datetime-local]:focus,
+[type=month]:focus,
+[type=time]:focus,
+[type=week]:focus,
+[type=url]:focus,
+[type=radio]:focus,
+[type=checkbox]:focus,
+input[list]:focus,
+select:focus,
+textarea:focus,
+.bf-btn:focus {
+  outline: 0;
+}
+
+menu,
+ol,
+ul,
+dl {
+  margin: 0 0 2rem 0;
+  padding: 0;
+}
+
+menu ul,
+menu ol,
+ul ul,
+ul ol,
+ol ol,
+ol ul,
+dd {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-left: 2rem;
+}
+
+nav ol,
+nav ul {
+  list-style: none;
+  list-style-image: none;
+  margin-left: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
+
+nav li::before {
+  content: "​";
+  position: absolute;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+img,
+canvas,
+audio,
+video,
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+audio,
+video,
+canvas,
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+  border-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+figure,
+figcaption {
+  display: block;
+}
+
+figcaption {
+  line-height: 1.375;
+  font-size: 90%;
+}
+
+video {
+  height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+progress,
+meter {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 100%;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  height: 20px;
+  height: 2rem;
+  background: rgb(204, 204, 204);
+  color: rgb(0, 123, 255);
+}
+
+progress[value]::-webkit-progress-bar {
+  background: rgb(204, 204, 204);
+}
+
+progress[value]::-webkit-progress-value {
+  background: rgb(0, 123, 255);
+}
+
+iframe {
+  border-style: none;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+  line-height: inherit;
+}
+
+details > summary:first-of-type {
+  display: list-item;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+dialog {
+  background-color: rgb(255, 255, 255);
+  color: rgb(34, 34, 34);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 25rem;
+  max-width: calc(100vw - 3rem);
+}
+@media (min-width: 768px) {
+  dialog {
+    max-width: 50rem;
+  }
+}
+
+dialog[open] {
+  display: block !important;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+table {
+  caption-side: bottom;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-color: currentcolor;
+  text-indent: 0;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+  font-weight: 700;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: rgb(153, 153, 153);
+  text-align: left;
+  caption-side: bottom;
+  line-height: 1.375;
+  font-size: 90%;
+}
+
+/* Accessibility
+ * ========================================================================== */
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+:where([aria-busy=true i]) {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+:where([aria-disabled=true i], [disabled]) {
+  cursor: not-allowed;
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+:where([aria-hidden=false i][hidden]) {
+  display: initial;
+}
+
+:where([aria-hidden=false i][hidden]:not(:focus)) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
 }
 
 html {
-  scrollbar-color: rgb(89.25, 89.25, 89.25) #111;
+  scrollbar-color: rgb(89.25, 89.25, 89.25) rgb(17, 17, 17);
 }
 
 ::-webkit-scrollbar {
@@ -1087,7 +1086,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -1100,7 +1099,7 @@ html {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color: #f0f0f0;
+    color: rgb(240, 240, 240);
   }
   body {
     background-color: rgb(36.125, 36.125, 36.125);
@@ -1134,9 +1133,9 @@ html {
   select,
   select:not([size], select[multiple]),
   textarea {
-    background-color: #111;
-    border-color: #000;
-    color: #ccc;
+    background-color: rgb(17, 17, 17);
+    border-color: rgb(0, 0, 0);
+    color: rgb(204, 204, 204);
   }
   [type=email]:active, [type=email]:focus,
   [type=number]:active,
@@ -1171,7 +1170,7 @@ html {
   select:not([size], select[multiple]):focus,
   textarea:active,
   textarea:focus {
-    background-color: #111;
+    background-color: rgb(17, 17, 17);
     border-color: rgb(51, 149.4, 255);
   }
   [type=email]:active, [type=email]:focus,
@@ -1227,23 +1226,23 @@ html {
     background-color: transparent;
   }
   [type=range]::-webkit-slider-runnable-track {
-    background-color: #111;
+    background-color: rgb(17, 17, 17);
   }
   [type=range]::-moz-range-track {
-    background-color: #111;
+    background-color: rgb(17, 17, 17);
   }
   input::-moz-placeholder, textarea::-moz-placeholder {
-    color: #999;
+    color: rgb(153, 153, 153);
   }
   input::placeholder,
   textarea::placeholder {
-    color: #999;
+    color: rgb(153, 153, 153);
   }
   button,
   [type=button],
   [type=reset],
   [type=submit] {
-    background: #ccc;
+    background: rgb(204, 204, 204);
   }
   button:hover, button:active, button:focus,
   [type=button]:hover,
@@ -1283,7 +1282,7 @@ html {
     outline-color: rgb(178.5, 115.5, 0);
   }
   dialog {
-    color: #f0f0f0;
+    color: rgb(240, 240, 240);
     background-color: rgb(36.125, 36.125, 36.125);
   }
 }

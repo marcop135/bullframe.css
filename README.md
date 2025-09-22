@@ -265,62 +265,43 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 
 #### Layout
 
+#### Layout
+
 <details><summary>Open utilities</summary>
 
-| Utility class                      | Description                                                                                                                                                                                              |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `.bf-clearfix`                     | Clears the float, [read more](http://nicolasgallagher.com/micro-clearfix-hack/)                                                                                                                          |
-| `.bf-hide`                         | Sets the `display` to `none`                                                                                                                                                                             |
-| `.bf-hidden`                       | Sets the `display` to `none` and the `visibility` to `hidden`                                                                                                                                            |
-| `.bf-text-hide`                    | Hides a text (AKA CSS image replacement) using a font `hack` and a combination o properties                                                                                                              |
-| `.bf-sr-only`                      | Shows a text only if screen reader                                                                                                                                                                       |
-| `.bf-sr-only.focusable`            | Shows a text only if screen reader and focused                                                                                                                                                           |
-| `.bf-invisible`                    | Sets the `visibility` to `hidden`                                                                                                                                                                        |
-| `.bf-visible`                      | Sets the `visibility` to `visible`                                                                                                                                                                       |
-| `.bf-display-block`                | Sets the `display` to `block`                                                                                                                                                                            |
-| `.bf-display-block-center`         | Sets the `display` to `block`, the left/right margins to `auto` and `text-align` to center                                                                                                               |
-| `.bf-display-inline`               | Sets the `display` to `inline`                                                                                                                                                                           |
-| `.bf-display-inline-block`         | Sets the `display` to `inline-block`                                                                                                                                                                     |
-| `.bf-display-flex`                 | Sets the `display` to `flex`                                                                                                                                                                             |
-| `.bf-display-inline-flex`          | Sets the `display` to `inline-flex`                                                                                                                                                                      |
-| `.bf-display-flex--justify-start`  | Sets `justify-content` to `flex-start`                                                                                                                                                                   |
-| `.bf-display-flex--justify-end`    | Sets `justify-content` to `flex-end`                                                                                                                                                                     |
-| `.bf-display-flex--justify-center` | Sets `justify-content` to `center`                                                                                                                                                                       |
-| `.bf-display-flex--wrap`           | Sets `flex-wrap` to `wrap`                                                                                                                                                                               |
-| `.bf-display-flex--nowrap`         | Sets `flex-wrap` to `nowrap`                                                                                                                                                                             |
-| `.bf-float-left`                   | Sets the `float` to `left`                                                                                                                                                                               |
-| `.bf-float-right`                  | Sets the `float` to `right`                                                                                                                                                                              |
-| `.bf-position-fixed`               | Sets the `position` to `fixed`                                                                                                                                                                           |
-| `.bf-align-center-unknown`         | Sets the `position` to `relative`                                                                                                                                                                        |
-| `.bf-align-center-unknown--item`   | Centers an element with unknown height and width to a relative positioned parent                                                |
-| `.bf-align-center-flex`            | Centers all elements with known height and width to a flexbox container |
-| `.bf-width-25`                     | Sets the `width` to `25%`                                                                                                                                                                                |
-| `.bf-width-33`                     | Sets the `width` to `33.33333333333333%`                                                                                                                                                                 |
-| `.bf-width-50`                     | Sets the `width` to `50%`                                                                                                                                                                                |
-| `.bf-width-75`                     | Sets the `width` to `75%`                                                                                                                                                                                |
-| `.bf-width-100`                    | Sets the `width` to `100%`                                                                                                                                                                               |
-| `.bf-width-auto`                   | Sets the `width` to `auto`                                                                                                                                                                               |
-| `.bf-z-index-1`                    | Set `z-index` to 1                                                                                                                                                                                       |
-| `.bf-z-index-2`                    | Set `z-index` to 2                                                                                                                                                                                       |
-| `.bf-z-index-3`                    | Set `z-index` to 3                                                                                                                                                                                       |
-| `.bf-z-index-4`                    | Set `z-index` to 4                                                                                                                                                                                       |
-| `.bf-z-index-5`                    | Set `z-index` to 5                                                                                                                                                                                       |
-| `.bf-z-index-6`                    | Set `z-index` to 6                                                                                                                                                                                       |
-| `.bf-z-index-7`                    | Set `z-index` to 7                                                                                                                                                                                       |
-| `.bf-z-index-8`                    | Set `z-index` to 8                                                                                                                                                                                       |
-| `.bf-z-index-9`                    | Set `z-index` to 9                                                                                                                                                                                       |
-| `.bf-z-index-10`                   | Set `z-index` to 10                                                                                                                                                                                      |
-| `.bf-z-index-20`                   | Set `z-index` to 20                                                                                                                                                                                      |
-| `.bf-z-index-30`                   | Set `z-index` to 30                                                                                                                                                                                      |
-| `.bf-z-index-40`                   | Set `z-index` to 40                                                                                                                                                                                      |
-| `.bf-z-index-50`                   | Set `z-index` to 50                                                                                                                                                                                      |
-| `.bf-z-index-60`                   | Set `z-index` to 60                                                                                                                                                                                      |
-| `.bf-z-index-70`                   | Set `z-index` to 70                                                                                                                                                                                      |
-| `.bf-z-index-80`                   | Set `z-index` to 80                                                                                                                                                                                      |
-| `.bf-z-index-90`                   | Set `z-index` to 90                                                                                                                                                                                      |
-| `.bf-z-index-100`                  | Set `z-index` to 100                                                                                                                                                                                     |
-| `.bf-z-index-200`                  | Set `z-index` to 200                                                                                                                                                                                     |
-| `.bf-z-index-300`                  | Set `z-index` to 300                                                                                                                                                                                     |
+| Utility class                      | Description                                                                                                     |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `.bf-clearfix`                     | Clears the float, [read more](http://nicolasgallagher.com/micro-clearfix-hack/)                                 |
+| `.bf-hide`                         | Sets `display` to `none`                                                                                        |
+| `.bf-hidden`                       | Sets `display` to `none` and `visibility` to `hidden`                                                          |
+| `.bf-text-hide`                    | Hides text using a font `hack` (CSS image replacement)                                                         |
+| `.bf-sr-only`                      | Shows text only to screen readers                                                                               |
+| `.bf-sr-only.focusable`            | Shows text only to screen readers and when focused                                                             |
+| `.bf-invisible`                    | Sets `visibility` to `hidden`                                                                                   |
+| `.bf-visible`                      | Sets `visibility` to `visible`                                                                                  |
+| `.bf-display-block`                | Sets `display` to `block`                                                                                       |
+| `.bf-display-block-center`         | Sets `display` to `block`, horizontal margins to `auto`, and text-align to `center`                             |
+| `.bf-display-inline`               | Sets `display` to `inline`                                                                                      |
+| `.bf-display-inline-block`         | Sets `display` to `inline-block`                                                                                |
+| `.bf-display-flex`                 | Sets `display` to `flex`                                                                                        |
+| `.bf-display-inline-flex`          | Sets `display` to `inline-flex`                                                                                 |
+| `.bf-display-flex--justify-start`  | Sets `justify-content` to `flex-start`                                                                         |
+| `.bf-display-flex--justify-end`    | Sets `justify-content` to `flex-end`                                                                           |
+| `.bf-display-flex--justify-center` | Sets `justify-content` to `center`                                                                             |
+| `.bf-display-flex--wrap`           | Sets `flex-wrap` to `wrap`                                                                                      |
+| `.bf-display-flex--nowrap`         | Sets `flex-wrap` to `nowrap`                                                                                    |
+| `.bf-float-left`                   | Sets `float` to `left`                                                                                          |
+| `.bf-float-right`                  | Sets `float` to `right`                                                                                         |
+| `.bf-position-fixed`               | Sets `position` to `fixed`                                                                                      |
+| `.bf-position-relative`            | Sets `position` to `relative`                                                                                   |    
+| `.bf-align-center-flex`            | Centers an element with known height and width using flexbox                                                   |
+| `.bf-width-25`                     | Sets `width` to `25%`                                                                                           |
+| `.bf-width-33`                     | Sets `width` to `33.3333%`                                                                                      |
+| `.bf-width-50`                     | Sets `width` to `50%`                                                                                           |
+| `.bf-width-75`                     | Sets `width` to `75%`                                                                                           |
+| `.bf-width-100`                    | Sets `width` to `100%`                                                                                          |
+| `.bf-width-auto`                   | Sets `width` to `auto`                                                                                          |
+| `.bf-z-index-1` to `.bf-z-index-300` | Sets `z-index` to corresponding value (1–300)                                                                |
 
 </details>
 

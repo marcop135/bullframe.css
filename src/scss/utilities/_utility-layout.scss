@@ -142,24 +142,17 @@
   top: 0 !important;
 }
 
-// https://css-tricks.com/centering-css-complete-guide
-.bf-align-center-unknown {
+.bf-position-relative {
   position: relative !important;
 }
 
-.bf-align-center-unknown--item {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-}
-
-// align items horizontally and vertically
-// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+.bf-align-center-unknown, // old syntax
+.bf-align-center-unknown--item, // old syntax
 .bf-align-center-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh !important;
 }
 
 .bf-width-25 {

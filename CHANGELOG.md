@@ -3,7 +3,7 @@
 ## ?????? 5.1.1 - (MM DD, YYYY)
 
 - Improved HTML demo validation via [html-validate](https://html-validate.org/)
-- ...
+- ....
 
 ## 5.1.0 - (July 08, 2025)
 

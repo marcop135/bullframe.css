@@ -36,7 +36,7 @@ html {
           text-size-adjust: 100%;
   font-size: 62.5%;
   color: rgb(34, 34, 34);
-  font-family: sans-serif;
+  font-family: system-ui, sans-serif;
   line-height: 1.15;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -45,6 +45,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   font-weight: 400;
   text-align: left;
   font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -65,6 +66,7 @@ h6 {
   color: inherit;
   line-height: 1.25;
   margin-bottom: 1rem;
+  text-wrap: balance;
 }
 
 h1 {
@@ -618,7 +620,7 @@ label[aria-disabled=true]) {
   padding-left: 2rem;
 }
 
-:where([type=checkbox], [type=radio]) {
+.custom-checkbox-wrapper [type=checkbox] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -626,28 +628,60 @@ label[aria-disabled=true]) {
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid/rgb(153, 153, 153);
+  border: 1px solid rgb(153, 153, 153);
 }
-:where([type=checkbox], [type=radio]) + label {
+.custom-checkbox-wrapper [type=checkbox] + label {
   line-height: 1.8rem;
   vertical-align: top;
   margin-left: 0.5rem;
 }
-*[dir=rtl] :where([type=checkbox], [type=radio]) + label, :where([type=checkbox], [type=radio])[dir=rtl] + label {
+*[dir=rtl] .custom-checkbox-wrapper [type=checkbox] + label, .custom-checkbox-wrapper [type=checkbox][dir=rtl] + label {
   margin-left: 0;
   margin-right: 0.5rem;
 }
-:where([type=checkbox], [type=radio])::after {
+.custom-checkbox-wrapper [type=checkbox]::after {
   content: "";
   display: block;
   position: absolute;
 }
-:where([type=checkbox], [type=radio]):checked {
+.custom-checkbox-wrapper [type=checkbox]:checked {
   background-color: rgb(0, 123, 255);
   border-color: rgb(0, 0, 0);
 }
+.custom-checkbox-wrapper [type=checkbox]::after {
+  width: 0.6rem;
+  height: 0.8rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-top: 0;
+  border-left: 0;
+  left: 35%;
+  top: 20%;
+  transform: rotate(43deg);
+}
 
-:where([type=radio])::after {
+.custom-radio-wrapper [type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 1.8rem;
+  width: 1.8rem;
+  vertical-align: top;
+  position: relative;
+  border: 1px solid rgb(153, 153, 153);
+}
+.custom-radio-wrapper [type=radio] + label {
+  line-height: 1.8rem;
+  vertical-align: top;
+  margin-left: 0.5rem;
+}
+*[dir=rtl] .custom-radio-wrapper [type=radio] + label, .custom-radio-wrapper [type=radio][dir=rtl] + label {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+.custom-radio-wrapper [type=radio]::after {
+  content: "";
+  display: block;
+  position: absolute;
   width: 1.8rem;
   height: 1.8rem;
   left: -0.05rem;
@@ -656,16 +690,9 @@ label[aria-disabled=true]) {
   background: rgb(255, 255, 255);
   transform: scale(0.35);
 }
-
-:where([type=checkbox])::after {
-  width: 0.6rem;
-  height: 0.8rem;
-  border: 2px solid/rgb(255, 255, 255);
-  border-top: 0;
-  border-left: 0;
-  left: 35%;
-  top: 20%;
-  transform: rotate(43deg);
+.custom-radio-wrapper [type=radio]:checked {
+  background-color: rgb(0, 123, 255);
+  border-color: rgb(0, 0, 0);
 }
 
 :where([type=range]) {
@@ -1732,6 +1759,84 @@ table th[class^=bf-col] {
   font-family: Menlo, Consolas, "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
+/* Font stacks from Modern Font Stacks (https://modernfontstacks.com/)
+   System font stack CSS organized by typeface classification for every modern OS
+   Fastest fonts available. No downloading, no layout shifts, instant renders. */
+/* Sans-serif system */
+.bf-sans-serif--system {
+  font-family: system-ui, sans-serif;
+}
+
+/* Transitional serif */
+.bf-serif--transitional {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+}
+
+/* Old style serif */
+.bf-serif--oldstyle {
+  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+}
+
+/* Humanist sans-serif */
+.bf-sans-serif--humanist {
+  font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, sans-serif;
+}
+
+/* Geometric humanist sans-serif */
+.bf-sans-serif--geometric {
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+}
+
+/* Classical humanist sans-serif */
+.bf-sans-serif--classical {
+  font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+}
+
+/* Neo-grotesque sans-serif */
+.bf-sans-serif--neo-grotesque {
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+}
+
+/* Monospace slab serif */
+.bf-monospace--slab {
+  font-family: "Nimbus Mono PS", "Courier New", monospace;
+}
+
+/* Monospace code */
+.bf-monospace--code {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+
+/* Industrial display */
+.bf-sans-serif--industrial {
+  font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+}
+
+/* Rounded sans display */
+.bf-sans-serif--rounded {
+  font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro, sans-serif;
+}
+
+/* Slab serif display */
+.bf-serif--slab {
+  font-family: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
+}
+
+/* Antique display */
+.bf-serif--antique {
+  font-family: Superclarendon, "Bookman Old Style", "URW Bookman", "URW Bookman L", "Georgia Pro", Georgia, serif;
+}
+
+/* Didone display */
+.bf-serif--didone {
+  font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+}
+
+/* Handwritten display */
+.bf-cursive--handwritten {
+  font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
+}
+
 .bf-h1,
 .bf-h2,
 .bf-h3,
@@ -1775,20 +1880,9 @@ p.bf-lead {
 }
 
 body.bf-responsive-typography {
-  --body-rt-font-size-flex: calc(1.5rem + 3 * ((100vw - 320px) / 680));
-  --body-rt-font-size-max: 1.8rem;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
 
-@media (min-width: 320px) {
-  body.bf-responsive-typography {
-    font-size: var(--body-rt-font-size-flex);
-  }
-}
-@media (min-width: 1000px) {
-  body.bf-responsive-typography {
-    font-size: var(--body-rt-font-size-max);
-  }
-}
 .bf-btn {
   display: inline-block;
   cursor: pointer;

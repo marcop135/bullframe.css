@@ -4,20 +4,13 @@
 @use "../variables/variables-breakpoints" as bf-v-bp;
 @use "sass:color";
 
-// heavily inspired by '2020 toggles' by Aaron Iker
-// https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
-// https://codepen.io/aaroniker/pen/ZEYoxEY?editors=0100
-
-:where([type="checkbox"], [type="radio"]) {
+.custom-checkbox-wrapper [type="checkbox"] {
   appearance: none;
-
   height: 1.8rem;
   width: 1.8rem;
-
   vertical-align: top;
   position: relative;
-
-  border: 1px solid / bf-v-color.$bf-gray;
+  border: 1px solid bf-v-color.$bf-gray;
 
   + label {
     line-height: 1.8rem;
@@ -25,10 +18,6 @@
     margin-left: bf-v-space.$bf-spacing-md;
   }
 
-  // add support for RTL languages
-  // Read more
-  // 1. http://bootstrap.rtlcss.com
-  // 2. https://rtlstyling.com/
   *[dir="rtl"] & + label,
   &[dir="rtl"] + label {
     margin-left: 0;
@@ -45,35 +34,54 @@
     background-color: bf-v-color.$bf-blue;
     border-color: bf-v-color.$bf-black;
   }
-}
 
-:where([type="radio"]) {
-  &::after {
-    width: 1.8rem;
-    height: 1.8rem;
-
-    left: -0.05rem;
-    top: -0.05rem;
-
-    border-radius: 50%;
-    background: bf-v-color.$bf-white;
-
-    transform: scale(0.35);
-  }
-}
-
-:where([type="checkbox"]) {
   &::after {
     width: 0.6rem;
     height: 0.8rem;
-
-    border: 2px solid / bf-v-color.$bf-white;
+    border: 2px solid bf-v-color.$bf-white;
     border-top: 0;
     border-left: 0;
-
     left: 35%;
     top: 20%;
-
     transform: rotate(43deg);
+  }
+}
+
+.custom-radio-wrapper [type="radio"] {
+  appearance: none;
+  height: 1.8rem;
+  width: 1.8rem;
+  vertical-align: top;
+  position: relative;
+  border: 1px solid bf-v-color.$bf-gray;
+
+  + label {
+    line-height: 1.8rem;
+    vertical-align: top;
+    margin-left: bf-v-space.$bf-spacing-md;
+  }
+
+  *[dir="rtl"] & + label,
+  &[dir="rtl"] + label {
+    margin-left: 0;
+    margin-right: bf-v-space.$bf-spacing-md;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    left: -0.05rem;
+    top: -0.05rem;
+    border-radius: 50%;
+    background: bf-v-color.$bf-white;
+    transform: scale(0.35);
+  }
+
+  &:checked {
+    background-color: bf-v-color.$bf-blue;
+    border-color: bf-v-color.$bf-black;
   }
 }

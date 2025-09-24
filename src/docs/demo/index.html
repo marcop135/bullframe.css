@@ -22,10 +22,13 @@
   <div class="bf-container bf-container--break-md">
     <header class="bf-t-center bf-m-b-3">
       <h1 class="bf-t-transform-uppercase"> Bullframe <span>CSS</span></h1>
-      <p class="bf-lead">Bullframe is a lightweight SCSS framework for building fast, responsive, and accessible UIs.
+      <p class="bf-lead">Bullframe is a lightweight SCSS framework for building fast, responsive,
+        and accessible UIs.
       </p>
-      <a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css">GitHub</a>
-      <a class="bf-btn" href="https://github.com/marcop135/bullframe.css/blob/master/README.md">Docs</a>
+      <a class="bf-btn bf-btn--primary"
+        href="https://github.com/marcop135/bullframe.css">GitHub</a>
+      <a class="bf-btn"
+        href="https://github.com/marcop135/bullframe.css/blob/master/README.md">Docs</a>
       <hr>
       <p class="description">
         This is a quick look at a wide range of HTML elements, divided into several sections and
@@ -81,7 +84,8 @@
             The <em>em element</em> example<br>
             The <em>i element</em> example<br>
             The img element
-            <img src="/docs/demo/images/placeholder-img-16x16.jpg" alt="just a placeholder" loading="lazy">
+            <img src="/docs/demo/images/placeholder-img-16x16.jpg" alt="just a placeholder"
+              loading="lazy">
             example<br>
             The <ins>ins element</ins> example<br>
             The <kbd>kbd element</kbd> example<br>
@@ -298,7 +302,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <h3>Linked figure with an image and a caption</h3>
           <figure>
             <a href="#">
-              <img src="/docs/demo/images/placeholder-img-800x400.jpg" alt="just a placeholder" loading="lazy">
+              <img src="/docs/demo/images/placeholder-img-800x400.jpg" alt="just a placeholder"
+                loading="lazy">
             </a>
             <figcaption>The image above is 800x400 pixels</figcaption>
           </figure>
@@ -315,15 +320,20 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <div class="bf-m-b-3">
             <h3>HTML5 video with controls</h3>
             <video poster="/docs/demo/images/video-poster.png" controls width="450">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/mp4">
+              <source
+                src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+                type="video/webm">
+              <source
+                src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+                type="video/mp4">
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
           <div class="bf-m-b-3">
             <h3>Audio with controls</h3>
             <audio controls>
-              <source src="https://9eb231f8-a305-47de-b45a-3042679fa3f3.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3"
+              <source
+                src="https://9eb231f8-a305-47de-b45a-3042679fa3f3.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3"
                 type="audio/mp3">
               <p>Your browser does not support the HTML5 Audio element.</p>
             </audio>
@@ -332,9 +342,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <div class="bf-col-6">
           <h3>YouTube iframe 16:9 (default)</h3>
           <div class="bf-embed-responsive">
-            <iframe width="560" height="315" title="" src="https://www.youtube-nocookie.com/embed/tYSo0LsHhvo"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-              loading="lazy"></iframe>
+            <iframe width="560" height="315" title=""
+              src="https://www.youtube-nocookie.com/embed/tYSo0LsHhvo"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -407,17 +418,24 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <legend>HTML5 has several new input types for forms (legend).</legend>
               <div class="bf-m-b-4">
                 <label>Text input as sibling of label</label>
-                <input type="text" value="default value that goes on and on without stopping or punctuation">
+                <input type="text"
+                  value="default value that goes on and on without stopping or punctuation">
                 <label>Text input as descendant of label (not recommended)
-                  <input type="text" value="default value that goes on and on without stopping or punctuation"></label>
-                <input type="text" value="default value that goes on and on without stopping or punctuation" disabled>
+                  <input type="text"
+                    value="default value that goes on and on without stopping or punctuation"></label>
+                <input type="text"
+                  value="default value that goes on and on without stopping or punctuation"
+                  disabled>
                 <label aria-disabled="true">Text input as sibling of label (aria-disabled)</label>
-                <input type="text" value="default value that goes on and on without stopping or punctuation"
+                <input type="text"
+                  value="default value that goes on and on without stopping or punctuation"
                   aria-disabled="true">
                 <label class="bf-disabled">Text input as sibling of label (.bf-disabled)</label>
-                <input type="text" value="default value that goes on and on without stopping or punctuation"
+                <input type="text"
+                  value="default value that goes on and on without stopping or punctuation"
                   class="bf-disabled">
-                <label class="bf-disabled">Text input as descendant of label (disabled, not recommended)
+                <label class="bf-disabled">Text input as descendant of label (disabled, not
+                  recommended)
                   <input type="text" value="default value" disabled></label>
                 <label>Text input (focused)</label>
                 <input class="bf-focused" type="text" value="default value">
@@ -485,6 +503,41 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                 <input type="checkbox" id="wings" name="wings" disabled>
                 <label class="bf-disabled" for="wings">Wings (disabled)</label>
               </div>
+
+              <hr>
+
+              <h4>Custom Radios</h4>
+              <div class="bf-m-b-3 custom-radio-wrapper">
+                <div>
+                  <input type="radio" id="huey2" name="drone2" value="huey2" checked>
+                  <label for="huey2">Huey</label>
+                </div>
+                <div>
+                  <input type="radio" id="louie2" name="drone" value="louie2" checked>
+                  <label for="louie2">Louie (checked)</label>
+                </div>
+                <div>
+                  <input type="radio" id="jake2" name="drone2" value="jake2" disabled>
+                  <label class="bf-disabled" for="jake2">Jake (disabled)</label>
+                </div>
+              </div>
+
+              <h4>Custom Checkboxes</h4>
+              <div class="custom-checkbox-wrapper">
+                <div>
+                  <input type="checkbox" id="scales2" name="scales2">
+                  <label for="scales">Scales</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="horns2" name="horns2" checked>
+                  <label for="horns2">Horns (checked)</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="wings2" name="wings2" disabled>
+                  <label class="bf-disabled" for="wings2">Wings (disabled)</label>
+                </div>
+              </div>
+
             </fieldset>
           </form>
         </div>
@@ -557,8 +610,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <label>Textarea</label>
               <textarea rows="7">Textarea text</textarea>
               <label>Textarea placeholder</label>
-              <textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text."
-                rows="7"></textarea>
+              <textarea id="textarea" name="textarea"
+                placeholder="This is an example of HTML5 placeholder text." rows="7"></textarea>
             </fieldset>
           </form>
           <h3>Textareas (disabled)</h3>
@@ -568,8 +621,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <label>Textarea</label>
               <textarea rows="7">Textarea text</textarea>
               <label>Textarea placeholder</label>
-              <textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text."
-                rows="7"></textarea>
+              <textarea id="textarea2" name="textarea2"
+                placeholder="This is an example of HTML5 placeholder text." rows="7"></textarea>
             </fieldset>
           </form>
         </div>
@@ -580,7 +633,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <fieldset class="bf-m-b-3">
             <legend>Click the buttons below</legend>
             <div class="input-image">
-              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg" type="image"><br>
+              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg"
+                type="image"><br>
               <code>input type="image" (130x40px)</code>
             </div>
             <div>
@@ -596,14 +650,16 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <a class="bf-btn" href="#" title="button link" role="button">Button (link)</a>
             </div>
             <div>
-              <a class="bf-btn bf-btn--primary" href="#" title="button link" role="button">Primary button (link)</a>
+              <a class="bf-btn bf-btn--primary" href="#" title="button link" role="button">Primary
+                button (link)</a>
             </div>
           </fieldset>
           <fieldset disabled>
             <legend>Click the buttons below</legend>
             <h3>Clickable inputs (disabled)</h3>
             <div class="input-image">
-              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg" type="image"><br>
+              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg"
+                type="image"><br>
               <code>input type="image" (130x40px)</code>
             </div>
             <div>
@@ -619,7 +675,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <a class="bf-btn" href="#" title="button link" role="button">Button (link)</a>
             </div>
             <div>
-              <a class="bf-btn bf-btn--primary" href="#" title="button link" role="button">Primary button (link)</a>
+              <a class="bf-btn bf-btn--primary" href="#" title="button link" role="button">Primary
+                button (link)</a>
             </div>
           </fieldset>
         </div>
@@ -1130,13 +1187,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <div class="bf-col-12 bf-t-center">
           <div class="bf-m-b-4 bf-p-t-3">
             <h2>Bullframe CSS</h2>
-            <p>Bullframe CSS is a lightweight Sass (SCSS) framework for building fast, responsive, and accessible UIs.
+            <p>Bullframe CSS is a lightweight Sass (SCSS) framework for building fast, responsive,
+              and accessible UIs.
             </p>
-            <a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css">GitHub</a>
-            <a class="bf-btn" href="https://github.com/marcop135/bullframe.css/blob/master/README.md">Docs</a>
+            <a class="bf-btn bf-btn--primary"
+              href="https://github.com/marcop135/bullframe.css">GitHub</a>
+            <a class="bf-btn"
+              href="https://github.com/marcop135/bullframe.css/blob/master/README.md">Docs</a>
 
-            <p><small>Built with passion by: <a href="https://marcopontili.com" title="Marco Pontili" target="_blank"
-                  rel="noopener noreferrer">Marco Pontili</a></small></p>
+            <p><small>Built with passion by: <a href="https://marcopontili.com"
+                  title="Marco Pontili" target="_blank" rel="noopener noreferrer">Marco
+                  Pontili</a></small></p>
           </div>
           <div class="bf-t-center">
             <hr>

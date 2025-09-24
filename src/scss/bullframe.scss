@@ -23,7 +23,6 @@
 @use "forms/forms-normalization";
 @use "forms/forms-styling";
 @use "forms/forms-styling-select";
-@use "forms/forms-styling-radio-checkbox";
 @use "forms/forms-styling-range";
 
 // Normalization and accessibility
@@ -44,6 +43,7 @@
 @use "utilities/utility-texts";
 @use "utilities/utility-buttons";
 @use "utilities/utility-form-states";
+@use "utilities/utility-form-custom-radio-checkbox";
 @use "utilities/utility-lists";
 @use "utilities/utility-embeds";
 @use "utilities/utility-tables";

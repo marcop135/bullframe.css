@@ -1,6 +1,6 @@
 # Changes to Bullframe CSS
 
-## ?????? 5.1.1 - (MM DD, YYYY)
+## ?????? 5.2.0 - (MM DD, YYYY)
 
 - Improved HTML demo validation via [html-validate](https://html-validate.org/)
 - ....

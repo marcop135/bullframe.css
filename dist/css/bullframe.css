@@ -620,81 +620,6 @@ label[aria-disabled=true]) {
   padding-left: 2rem;
 }
 
-.custom-checkbox-wrapper [type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  height: 1.8rem;
-  width: 1.8rem;
-  vertical-align: top;
-  position: relative;
-  border: 1px solid rgb(153, 153, 153);
-}
-.custom-checkbox-wrapper [type=checkbox] + label {
-  line-height: 1.8rem;
-  vertical-align: top;
-  margin-left: 0.5rem;
-}
-*[dir=rtl] .custom-checkbox-wrapper [type=checkbox] + label, .custom-checkbox-wrapper [type=checkbox][dir=rtl] + label {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-.custom-checkbox-wrapper [type=checkbox]::after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-.custom-checkbox-wrapper [type=checkbox]:checked {
-  background-color: rgb(0, 123, 255);
-  border-color: rgb(0, 0, 0);
-}
-.custom-checkbox-wrapper [type=checkbox]::after {
-  width: 0.6rem;
-  height: 0.8rem;
-  border: 2px solid rgb(255, 255, 255);
-  border-top: 0;
-  border-left: 0;
-  left: 35%;
-  top: 20%;
-  transform: rotate(43deg);
-}
-
-.custom-radio-wrapper [type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  height: 1.8rem;
-  width: 1.8rem;
-  vertical-align: top;
-  position: relative;
-  border: 1px solid rgb(153, 153, 153);
-}
-.custom-radio-wrapper [type=radio] + label {
-  line-height: 1.8rem;
-  vertical-align: top;
-  margin-left: 0.5rem;
-}
-*[dir=rtl] .custom-radio-wrapper [type=radio] + label, .custom-radio-wrapper [type=radio][dir=rtl] + label {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-.custom-radio-wrapper [type=radio]::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1.8rem;
-  height: 1.8rem;
-  left: -0.05rem;
-  top: -0.05rem;
-  border-radius: 50%;
-  background: rgb(255, 255, 255);
-  transform: scale(0.35);
-}
-.custom-radio-wrapper [type=radio]:checked {
-  background-color: rgb(0, 123, 255);
-  border-color: rgb(0, 0, 0);
-}
-
 :where([type=range]) {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2028,6 +1953,81 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   color: rgb(255, 0, 0) !important;
   border-color: rgb(255, 0, 0) !important;
   box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
+}
+
+.custom-checkbox-wrapper [type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 1.8rem;
+  width: 1.8rem;
+  vertical-align: top;
+  position: relative;
+  border: 1px solid rgb(153, 153, 153);
+}
+.custom-checkbox-wrapper [type=checkbox] + label {
+  line-height: 1.8rem;
+  vertical-align: top;
+  margin-left: 0.5rem;
+}
+*[dir=rtl] .custom-checkbox-wrapper [type=checkbox] + label, .custom-checkbox-wrapper [type=checkbox][dir=rtl] + label {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+.custom-checkbox-wrapper [type=checkbox]::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.custom-checkbox-wrapper [type=checkbox]:checked {
+  background-color: rgb(0, 123, 255);
+  border-color: rgb(0, 0, 0);
+}
+.custom-checkbox-wrapper [type=checkbox]::after {
+  width: 0.6rem;
+  height: 0.8rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-top: 0;
+  border-left: 0;
+  left: 35%;
+  top: 20%;
+  transform: rotate(43deg);
+}
+
+.custom-radio-wrapper [type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 1.8rem;
+  width: 1.8rem;
+  vertical-align: top;
+  position: relative;
+  border: 1px solid rgb(153, 153, 153);
+}
+.custom-radio-wrapper [type=radio] + label {
+  line-height: 1.8rem;
+  vertical-align: top;
+  margin-left: 0.5rem;
+}
+*[dir=rtl] .custom-radio-wrapper [type=radio] + label, .custom-radio-wrapper [type=radio][dir=rtl] + label {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+.custom-radio-wrapper [type=radio]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  left: -0.05rem;
+  top: -0.05rem;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  transform: scale(0.35);
+}
+.custom-radio-wrapper [type=radio]:checked {
+  background-color: rgb(0, 123, 255);
+  border-color: rgb(0, 0, 0);
 }
 
 .bf-list-unstyled,

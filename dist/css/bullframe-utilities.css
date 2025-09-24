@@ -289,8 +289,17 @@ table th[class^=bf-col] {
   position: relative !important;
 }
 
-.bf-align-center-unknown,
-.bf-align-center-unknown--item,
+.bf-align-center-unknown {
+  position: relative !important;
+}
+
+.bf-align-center-unknown--item {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
 .bf-align-center-flex {
   display: flex !important;
   justify-content: center !important;

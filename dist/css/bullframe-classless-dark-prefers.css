@@ -120,8 +120,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
-  -webkit-hyphens: none;
-          hyphens: none;
+  hyphens: none;
   -ms-overflow-style: auto;
 }
 

@@ -24,7 +24,7 @@ template {
   display: none;
 }
 
-// Always hide an element with the `hidden` HTML attribute
-[hidden] {
+//  Make elements with the HTML hidden attribute stay hidden by default.
+[hidden]:where(:not([hidden="until-found"])) {
   display: none !important;
 }

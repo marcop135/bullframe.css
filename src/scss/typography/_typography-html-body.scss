@@ -27,8 +27,6 @@ body {
   font-size: bf-v-text.$bf-body-font-size-rem; // '1.6rem' by default
   line-height: bf-v-text.$bf-body-line-height; // '1.5' by default
 
-  -webkit-font-smoothing: antialiased;
-
   // this is useful to inherit values for some elements (e.g. forms)
   font-weight: 400;
   text-align: left;

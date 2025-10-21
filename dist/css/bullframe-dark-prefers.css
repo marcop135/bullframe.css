@@ -26,7 +26,7 @@ template {
   display: none;
 }
 
-[hidden] {
+[hidden]:where(:not([hidden=until-found])) {
   display: none !important;
 }
 
@@ -45,7 +45,6 @@ body {
   margin: 0;
   font-size: 1.6rem;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
   font-weight: 400;
   text-align: left;
   font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

@@ -18,7 +18,15 @@
   <img alt="Bullframe CSS logo" src="https://raw.githubusercontent.com/marcop135/bullframe.css/master/src/docs/github-readme/bf-logo-full-light.png">
 </picture>
 
-[https://github.com/marcop135/bullframe.css](https://github.com/marcop135/bullframe.css)
+## Links
+
+| Resource | URL |
+|----------|-----|
+| [GitHub](https://github.com/marcop135/bullframe.css) | Source, issues, PRs |
+| [npm](https://www.npmjs.com/package/bullframe.css) | Package, install |
+| [npm-stat](https://npm-stat.com/charts.html?package=bullframe.css) | Download stats |
+| [JSDelivr CDN](https://cdn.jsdelivr.net/npm/bullframe.css) | Drop-in CDN |
+| [CodePen collection](https://codepen.io/collection/nxpjRe) | Live examples |
 
 ---
 
@@ -87,7 +95,7 @@ bullframe.css/
 
 ## Live Demo & Examples
 
-- 👉 **[One-page demo](https://bullframecss.marcopontili.com)**: a complete showcase of styled HTML elements, form controls, lists, tables, media, and the responsive grid system — ideal for quick cross-browser testing and exploration
+- 👉 **[One-page demo](https://bullframecss.marcopontili.com)**: a complete showcase of styled HTML elements, form controls, lists, tables, media, and the responsive grid system — ideal for quick cross-browser testing and exploration. **Test it live via Drop-in** (CDN link below).
 - 🧪 **[CodePen collection](https://codepen.io/collection/nxpjRe?grid_type=LIST)**: live examples of utilities, components, and prototypes — great for quick testing, remixing, and sharing ideas.
 
 ---
@@ -239,14 +247,14 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 
 <details><summary>Open utilities</summary>
 
-| Variable              | Value  |
-| --------------------- | ------ |
-| `$bf-breakpoint-xs`   | 0      |
-| `$bf-breakpoint-sm`   | 576px  |
-| `$bf-breakpoint-md`   | 768px  |
-| `$bf-breakpoint-lg`   | 992px  |
-| `$bf-breakpoint-xl`   | 1200px |
-| `$bf-breakpoint-xxl`  | 1400px |
+| Variable               | Value  |
+| ---------------------- | ------ |
+| `--bf-breakpoint-xs`   | 0      |
+| `--bf-breakpoint-sm`   | 576px  |
+| `--bf-breakpoint-md`   | 768px  |
+| `--bf-breakpoint-lg`   | 992px  |
+| `--bf-breakpoint-xl`   | 1200px |
+| `--bf-breakpoint-xxl`  | 1400px |
 
 | Utility class              | Description                                                                                                               |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -271,8 +279,6 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | `.no-gutters`              | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0` — to be applied to row and column containers |
 
 </details>
-
-#### Layout
 
 #### Layout
 
@@ -322,10 +328,10 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | ------------- | ----------------------------------------------------------------------------------------- |
 | `.bf-m-0`     | Sets the `margin` to `0`                                                                  |
 | `.bf-m-t-0`   | Sets the `margin-top` to `0`                                                              |
-| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`$bf-spacing-md`)                 |
-| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`$bf-spacing-lg`)                  |
-| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`$bf-spacing-xl`)             |
-| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`$bf-spacing-xxl`)     |
+| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`--bf-spacing-md`)                 |
+| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`--bf-spacing-lg`)                  |
+| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`--bf-spacing-xl`)             |
+| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`--bf-spacing-xxl`)     |
 | `.bf-m-b-0`   | Sets the `margin-bottom` to `0`                                                             |
 | `.bf-m-b-1`   | Sets the `margin-bottom` to a custom value that matches the grid system gutter             |
 | `.bf-m-b-2`   | Sets the `margin-bottom` to a custom value                                                |

@@ -1,0 +1,114 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Import Bullframe CSS */
+@import url('https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-system-default.min.css');
+
+/* Bullframe CSS Brand Colors - WCAG AA Compliant
+ * Brand color: #f95c1f (rgb(249, 92, 31))
+ * Light mode: Use darker orange for optimal contrast on white
+ * Dark mode: Use brand color or lighter variant for optimal contrast on dark
+ */
+
+:root {
+  /* Light mode - darker orange for WCAG AA contrast on white background */
+  --ifm-color-primary: rgb(199, 74, 24); /* #c74a18 - darker orange for links/primary on white */
+  --ifm-color-primary-dark: rgb(184, 68, 21);
+  --ifm-color-primary-darker: rgb(174, 64, 20);
+  --ifm-color-primary-darkest: rgb(143, 53, 16);
+  --ifm-color-primary-light: rgb(214, 80, 27);
+  --ifm-color-primary-lighter: rgb(224, 84, 30);
+  --ifm-color-primary-lightest: rgb(249, 92, 31); /* Brand color for highlights */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Brand orange accent */
+  --bf-brand-orange: rgb(249, 92, 31); /* #f95c1f */
+}
+
+/* Dark mode - use brand color or lighter variant for optimal contrast */
+[data-theme='dark'] {
+  --ifm-color-primary: rgb(255, 122, 74); /* #ff7a4a - lighter orange for better contrast on dark */
+  --ifm-color-primary-dark: rgb(255, 108, 58);
+  --ifm-color-primary-darker: rgb(255, 100, 50);
+  --ifm-color-primary-darkest: rgb(255, 92, 42);
+  --ifm-color-primary-light: rgb(255, 136, 90);
+  --ifm-color-primary-lighter: rgb(255, 144, 98);
+  --ifm-color-primary-lightest: rgb(255, 152, 106);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Brand orange accent for dark mode */
+  --bf-brand-orange: rgb(255, 122, 74); /* Lighter variant for dark backgrounds */
+}
+
+/* Hero section with brand color gradient */
+.hero--primary {
+  background: linear-gradient(135deg, var(--bf-brand-orange) 0%, rgb(199, 74, 24) 100%);
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, var(--bf-brand-orange) 0%, rgb(199, 74, 24) 100%);
+}
+
+/* CTA buttons on hero - white for optimal contrast on orange background */
+.hero--primary .button--primary {
+  background: white;
+  color: rgb(199, 74, 24);
+  border-color: white;
+}
+
+.hero--primary .button--primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: rgb(174, 64, 20);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.hero--primary .button--secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.hero--primary .button--secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure navbar uses brand colors */
+.navbar__brand:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Logo brand color - ensure it uses orange */
+.navbar__logo img {
+  filter: none; /* Remove any filters that might affect color */
+}
+
+/* Dark mode logo - slightly lighter orange for better visibility */
+[data-theme='dark'] .navbar__logo img {
+  /* SVG fill color is set in the SVG itself, but we can ensure visibility */
+  opacity: 1;
+}
+
+/* Code blocks with brand color accents */
+.prism-code {
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* Links use brand color */
+a {
+  color: var(--ifm-color-primary);
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] a:hover {
+  color: var(--ifm-color-primary-light);
+}

@@ -1,0 +1,173 @@
+/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+
+/* Dark mode overrides - Always dark for classless (no media query) */
+
+html {
+  color: var(--bf-light);
+}
+
+body {
+  background-color: var(--bf-dark-bg);
+}
+
+a {
+  color: var(--bf-dark-link);
+}
+
+a:hover,
+a:focus {
+  color: var(--bf-dark-link-hover);
+}
+
+mark {
+  background-color: var(--bf-dark-mark-bg);
+}
+
+ins {
+  background-color: var(--bf-dark-ins-bg);
+}
+
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="time"],
+[type="url"],
+[type="range"],
+input[list],
+select,
+select:not([size], select[multiple]),
+textarea {
+  background-color: var(--bf-dark-extra);
+  border-color: var(--bf-black);
+  color: var(--bf-gray-light);
+}
+
+[type="email"]:active,
+[type="email"]:focus,
+[type="number"]:active,
+[type="number"]:focus,
+[type="password"]:active,
+[type="password"]:focus,
+[type="tel"]:active,
+[type="tel"]:focus,
+[type="search"]:active,
+[type="search"]:focus,
+[type="text"]:active,
+[type="text"]:focus,
+[type="date"]:active,
+[type="date"]:focus,
+[type="datetime-local"]:active,
+[type="datetime-local"]:focus,
+[type="month"]:active,
+[type="month"]:focus,
+[type="week"]:active,
+[type="week"]:focus,
+[type="time"]:active,
+[type="time"]:focus,
+[type="url"]:active,
+[type="url"]:focus,
+input[list]:active,
+input[list]:focus,
+select:active,
+select:focus,
+select:not([size], select[multiple]):active,
+select:not([size], select[multiple]):focus,
+textarea:active,
+textarea:focus {
+  background-color: var(--bf-dark-extra);
+  border-color: var(--bf-dark-border-focus);
+  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
+}
+
+select:not([size], select[multiple]) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+}
+
+@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  select:not([size], select[multiple]),
+  *[dir="rtl"] select:not([size], select[multiple]),
+  select[dir="rtl"]:not([size], select[multiple]) {
+    background-image: none;
+  }
+}
+
+[type="range"] {
+  background-color: transparent;
+}
+
+[type="range"]:focus {
+  background-color: transparent;
+}
+
+[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--bf-dark-extra);
+}
+
+[type="range"]::-moz-range-track {
+  background-color: var(--bf-dark-extra);
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: var(--bf-gray);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--bf-gray);
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background: var(--bf-gray-light);
+}
+
+button:hover,
+button:active,
+button:focus,
+[type="button"]:hover,
+[type="button"]:active,
+[type="button"]:focus,
+[type="reset"]:hover,
+[type="reset"]:active,
+[type="reset"]:focus,
+[type="submit"]:hover,
+[type="submit"]:active,
+[type="submit"]:focus {
+  background: var(--bf-dark-button-hover);
+}
+
+button:active,
+button:focus,
+[type="button"]:active,
+[type="button"]:focus,
+[type="reset"]:active,
+[type="reset"]:focus,
+[type="submit"]:active,
+[type="submit"]:focus {
+  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
+}
+
+a:focus,
+input:focus {
+  outline-color: rgb(214 140 0); /* orange -15% */
+}
+
+:focus-visible {
+  outline-color: rgb(214 140 0); /* orange -15% */
+}
+
+dialog {
+  color: var(--bf-light);
+  background-color: var(--bf-dark-bg);
+}
+
+/*# sourceMappingURL=utility-global-dark-classless.css.map */

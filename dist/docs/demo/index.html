@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demo | Bullframe CSS</title>
   <meta name="description"
-    content="Bullframe is a solid Sass-based CSS framework for responsive, cross-browser UIs. Fast, semantic, themable, and classless-friendly.">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- Bullframe CSS, system-default build -->
-  <link rel="stylesheet" href="../../css/bullframe-system-default.min.css?v5.2.0">
+    content="Bullframe is a lightweight CSS framework for responsive, cross-browser UIs. Fast, semantic, themeable, and classless-friendly.">
+  <link rel="icon" type="image/png" sizes="16x16" href="/docs/demo/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/docs/demo/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/docs/demo/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/docs/demo/icons/favicon.ico">
+  <!-- Bullframe CSS v6, system-default build -->
+  <link id="bullframe-css" rel="stylesheet" href="../../css/bullframe-system-default.min.css?v6.0.0">
   <!-- These styles are added just for a nicer demo -->
-  <link rel="stylesheet" crossorigin href="/index.css">
+  <link rel="stylesheet" href="/docs/demo/css/style.css">
 </head>
 
 <body class="bf-responsive-typography bf-reduced-motion">
@@ -22,22 +22,41 @@
   <div class="bf-container bf-container--break-md">
     <header class="bf-t-center bf-m-b-3">
       <h1 class="bf-t-transform-uppercase"> Bullframe <span>CSS</span></h1>
-      <p class="bf-lead">Bullframe is a lightweight SCSS framework for building fast, responsive,
+      <p class="bf-lead">Bullframe is a lightweight CSS framework for building fast, responsive,
         and accessible UIs.
+      </p>
+      <p class="bf-lead bf-m-b-2">
+        <strong>v6.0.0</strong> — Now powered by native CSS with PostCSS. No Sass required.
       </p>
       <a class="bf-btn bf-btn--primary"
         href="https://github.com/marcop135/bullframe.css">GitHub</a>
       <a class="bf-btn"
         href="https://github.com/marcop135/bullframe.css/blob/master/README.md">Docs</a>
+      <a class="bf-btn"
+        href="https://www.npmjs.com/package/bullframe.css">npm</a>
       <hr>
       <p class="description">
         This is a quick look at a wide range of HTML elements, divided into several sections and
         rendered into unusual combinations, for testing purposes only.
       </p>
       <hr>
+      <div class="bf-t-center bf-m-b-2">
+        <label for="build-selector" style="display: block; margin-bottom: 0.5rem;">
+          <b>Select CSS build:</b>
+        </label>
+        <select id="build-selector" style="padding: 0.5rem 1rem; font-size: 1rem; min-width: 300px; max-width: 100%;">
+          <option value="bullframe-system-default.min.css" selected>System Default (Light/Dark)</option>
+          <option value="bullframe.min.css">Light Theme</option>
+          <option value="bullframe-dark.min.css">Dark Theme</option>
+          <option value="bullframe-classless.min.css">Classless (Light)</option>
+          <option value="bullframe-classless-dark.min.css">Classless (Dark)</option>
+          <option value="bullframe-classless-system-default.min.css">Classless (System Default)</option>
+          <option value="bullframe-utilities.min.css">Utilities Only</option>
+        </select>
+      </div>
       <p class="bf-t-center">
         <b>CSS build in use:</b><br>
-        <mark><code>bullframe-system-default.min.css</code></mark>
+        <mark id="current-build"><code>bullframe-system-default.min.css</code></mark> (v6)
       </p>
       <p class="bf-t-center">
         <b><code>&lt;body&gt;</code> classes:</b><br>
@@ -84,7 +103,7 @@
             The <em>em element</em> example<br>
             The <em>i element</em> example<br>
             The img element
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAACQcI/8QAIBAAAgIDAQACAwAAAAAAAAAABAUDBgIHCAEJChITFv/EABUBAQEAAAAAAAAAAAAAAAAAAAYH/8QAHBEBAQEBAQEAAwAAAAAAAAAAAwIEAQUSBhMV/9oADAMBAAIRAxEAPwA5KPpmXe22LQy5jx6kGWVDRfJmv9NsWCCuVSklD5sli/fCzbL4dozQCK3AjR9fKcbkUK7igLCEnF9GAwIKl32SOO9T8p2Tkj3SescNPUKyUG9pPamd7Wp7HYLDXWlbdNr63br7K9sthIZRXEGvkk2MRMMrzrcASMTwOeSIfU/G/aG6edFdOCHrqLZGuQi1VbsNE/iTqs7MiWKp1qQ4W33SeGoysFOUEDv9c8iyJh6HhJgWP+WREAKfKZ2ZsftDqrZd52a8uYaVVbbMFrXWNtPlK80/TzWXpIdIULIJy1aXwWDAP1tgpkzias4ZWpxDBhOQdPK/xxfWb3phXu8OHPXf10SSi9+Kx11DSoqb5Rks3wOQlddIT5WY4793HiTz/wCj5+KPOyPrrLE3tjT2tBjmdp4nQyrQdpEUOKacIkMeadSCj3//2Q==" alt="just a placeholder"
+            <img src="/docs/demo/images/placeholder-img-16x16.jpg" alt="just a placeholder"
               loading="lazy">
             example<br>
             The <ins>ins element</ins> example<br>
@@ -302,7 +321,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <h3>Linked figure with an image and a caption</h3>
           <figure>
             <a href="#">
-              <img src="/placeholder-img-800x400.jpg" alt="just a placeholder"
+              <img src="/docs/demo/images/placeholder-img-800x400.jpg" alt="just a placeholder"
                 loading="lazy">
             </a>
             <figcaption>The image above is 800x400 pixels</figcaption>
@@ -319,7 +338,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <div class="bf-col-6">
           <div class="bf-m-b-3">
             <h3>HTML5 video with controls</h3>
-            <video poster="/video-poster.png" controls width="450">
+            <video poster="/docs/demo/images/video-poster.png" controls width="450">
               <source
                 src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
                 type="video/webm">
@@ -633,7 +652,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           <fieldset class="bf-m-b-3">
             <legend>Click the buttons below</legend>
             <div class="input-image">
-              <input alt="Image (input)" src="data:image/jpeg;base64,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"
+              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg"
                 type="image"><br>
               <code>input type="image" (130x40px)</code>
             </div>
@@ -658,7 +677,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             <legend>Click the buttons below</legend>
             <h3>Clickable inputs (disabled)</h3>
             <div class="input-image">
-              <input alt="Image (input)" src="data:image/jpeg;base64,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"
+              <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg"
                 type="image"><br>
               <code>input type="image" (130x40px)</code>
             </div>
@@ -719,6 +738,263 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </fieldset>
         </div>
       </div>
+      <div class="bf-row">
+        <div class="bf-col-12">
+          <h2 id="components" class="h2--section">Pre-built Components</h2>
+          <p class="bf-lead">Ready-to-use components you can copy and paste into your projects.</p>
+        </div>
+      </div>
+      
+      <!-- Button Components -->
+      <div class="bf-row">
+        <div class="bf-col-12">
+          <h3 id="button-components">Button Components</h3>
+        </div>
+      </div>
+      <div class="bf-row">
+        <div class="bf-col-6">
+          <h4>Button Variants</h4>
+          <div class="bf-m-b-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="bf-btn bf-btn--primary">Primary</button>
+            <button class="bf-btn">Default</button>
+            <button class="bf-btn bf-btn--secondary">Secondary</button>
+            <button class="bf-btn bf-btn--outline">Outline</button>
+          </div>
+          
+          <h4>Button Sizes</h4>
+          <div class="bf-m-b-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+            <button class="bf-btn bf-btn--primary bf-btn--sm">Small</button>
+            <button class="bf-btn bf-btn--primary">Default</button>
+            <button class="bf-btn bf-btn--primary bf-btn--lg">Large</button>
+          </div>
+          
+          <h4>Button Groups</h4>
+          <div class="bf-m-b-3">
+            <div class="bf-btn-group">
+              <button class="bf-btn">Left</button>
+              <button class="bf-btn">Middle</button>
+              <button class="bf-btn">Right</button>
+            </div>
+          </div>
+          
+          <h4>Full Width Button</h4>
+          <div class="bf-m-b-3">
+            <button class="bf-btn bf-btn--primary bf-btn--block">Full Width Button</button>
+          </div>
+        </div>
+        <div class="bf-col-6">
+          <h4>Code Example</h4>
+          <pre><code>&lt;!-- Button Variants --&gt;
+&lt;button class="bf-btn bf-btn--primary"&gt;Primary&lt;/button&gt;
+&lt;button class="bf-btn"&gt;Default&lt;/button&gt;
+&lt;button class="bf-btn bf-btn--secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="bf-btn bf-btn--outline"&gt;Outline&lt;/button&gt;
+
+&lt;!-- Button Sizes --&gt;
+&lt;button class="bf-btn bf-btn--primary bf-btn--sm"&gt;Small&lt;/button&gt;
+&lt;button class="bf-btn bf-btn--primary"&gt;Default&lt;/button&gt;
+&lt;button class="bf-btn bf-btn--primary bf-btn--lg"&gt;Large&lt;/button&gt;
+
+&lt;!-- Button Group --&gt;
+&lt;div class="bf-btn-group"&gt;
+  &lt;button class="bf-btn"&gt;Left&lt;/button&gt;
+  &lt;button class="bf-btn"&gt;Middle&lt;/button&gt;
+  &lt;button class="bf-btn"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Full Width --&gt;
+&lt;button class="bf-btn bf-btn--primary bf-btn--block"&gt;Full Width&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+      
+      <!-- Modal/Dialog Components -->
+      <div class="bf-row">
+        <div class="bf-col-12">
+          <h3 id="modal-components">Modal/Dialog Components</h3>
+        </div>
+      </div>
+      <div class="bf-row">
+        <div class="bf-col-6">
+          <h4>Basic Modal</h4>
+          <div class="bf-m-b-3">
+            <button id="openModal1" class="bf-btn bf-btn--primary">Open Modal</button>
+            <dialog id="modal1">
+              <h2>Modal Title</h2>
+              <p>This is a basic modal dialog. Click outside or press ESC to close.</p>
+              <form method="dialog">
+                <button class="bf-btn bf-btn--primary">Close</button>
+              </form>
+            </dialog>
+          </div>
+          
+          <h4>Confirmation Dialog</h4>
+          <div class="bf-m-b-3">
+            <button id="openModal2" class="bf-btn">Open Confirmation</button>
+            <dialog id="modal2">
+              <h2>Confirm Action</h2>
+              <p>Are you sure you want to proceed?</p>
+              <form method="dialog" class="bf-d-flex" style="gap: 0.5rem;">
+                <button class="bf-btn" value="cancel">Cancel</button>
+                <button class="bf-btn bf-btn--primary" value="confirm">Confirm</button>
+              </form>
+            </dialog>
+          </div>
+        </div>
+        <div class="bf-col-6">
+          <h4>Code Example</h4>
+          <pre><code>&lt;!-- Basic Modal --&gt;
+&lt;button id="openModal" class="bf-btn bf-btn--primary"&gt;Open Modal&lt;/button&gt;
+&lt;dialog id="modal"&gt;
+  &lt;h2&gt;Modal Title&lt;/h2&gt;
+  &lt;p&gt;Modal content goes here.&lt;/p&gt;
+  &lt;form method="dialog"&gt;
+    &lt;button class="bf-btn bf-btn--primary"&gt;Close&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;
+
+&lt;script&gt;
+  const modal = document.getElementById('modal');
+  const openBtn = document.getElementById('openModal');
+  
+  openBtn.addEventListener('click', () =&gt; {
+    modal.showModal();
+  });
+&lt;/script&gt;</code></pre>
+        </div>
+      </div>
+      
+      <!-- Form Components -->
+      <div class="bf-row">
+        <div class="bf-col-12">
+          <h3 id="form-components">Form Components</h3>
+        </div>
+      </div>
+      <div class="bf-row">
+        <div class="bf-col-6">
+          <h4>Login Form</h4>
+          <form class="bf-m-b-4" style="max-width: 400px;">
+            <div class="bf-m-b-2">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" name="email" required>
+            </div>
+            <div class="bf-m-b-2">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" required>
+            </div>
+            <div class="bf-m-b-2">
+              <label>
+                <input type="checkbox" name="remember">
+                Remember me
+              </label>
+            </div>
+            <button type="submit" class="bf-btn bf-btn--primary bf-btn--block">Sign In</button>
+          </form>
+          
+          <h4>Contact Form</h4>
+          <form class="bf-m-b-4" style="max-width: 400px;">
+            <div class="bf-m-b-2">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" required>
+            </div>
+            <div class="bf-m-b-2">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" required>
+            </div>
+            <div class="bf-m-b-2">
+              <label for="contact-subject">Subject</label>
+              <select id="contact-subject" name="subject" required>
+                <option value="">Choose a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="bf-m-b-2">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="bf-btn bf-btn--primary">Send Message</button>
+          </form>
+        </div>
+        <div class="bf-col-6">
+          <h4>Code Example - Login Form</h4>
+          <pre><code>&lt;form&gt;
+  &lt;div class="bf-m-b-2"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+  &lt;/div&gt;
+  &lt;div class="bf-m-b-2"&gt;
+    &lt;label for="password"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required&gt;
+  &lt;/div&gt;
+  &lt;div class="bf-m-b-2"&gt;
+    &lt;label&gt;
+      &lt;input type="checkbox" name="remember"&gt;
+      Remember me
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="bf-btn bf-btn--primary bf-btn--block"&gt;Sign In&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          
+          <h4>Code Example - Contact Form</h4>
+          <pre><code>&lt;form&gt;
+  &lt;div class="bf-m-b-2"&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+  &lt;/div&gt;
+  &lt;div class="bf-m-b-2"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+  &lt;/div&gt;
+  &lt;div class="bf-m-b-2"&gt;
+    &lt;label for="subject"&gt;Subject&lt;/label&gt;
+    &lt;select id="subject" name="subject" required&gt;
+      &lt;option value=""&gt;Choose a subject&lt;/option&gt;
+      &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
+      &lt;option value="support"&gt;Support&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="bf-m-b-2"&gt;
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea id="message" name="message" rows="5" required&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="bf-btn bf-btn--primary"&gt;Send Message&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </div>
+      
+      <!-- Card Component -->
+      <div class="bf-row">
+        <div class="bf-col-12">
+          <h3 id="card-components">Card Components</h3>
+        </div>
+      </div>
+      <div class="bf-row">
+        <div class="bf-col-4">
+          <div style="border: 1px solid var(--bf-gray-light); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1rem;">
+            <h4>Card Title</h4>
+            <p>This is a simple card component with border and padding.</p>
+            <button class="bf-btn bf-btn--primary">Action</button>
+          </div>
+        </div>
+        <div class="bf-col-4">
+          <div style="border: 1px solid var(--bf-gray-light); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1rem;">
+            <h4>Card with Image</h4>
+            <img src="/docs/demo/images/placeholder-img-800x400.jpg" alt="Card image" style="width: 100%; height: auto; margin-bottom: 1rem; border-radius: 0.25rem;">
+            <p>Card content with an image.</p>
+            <a href="#" class="bf-btn">Learn More</a>
+          </div>
+        </div>
+        <div class="bf-col-4">
+          <h4>Code Example</h4>
+          <pre><code>&lt;div style="border: 1px solid var(--bf-gray-light); border-radius: 0.5rem; padding: 1.5rem;"&gt;
+  &lt;h4&gt;Card Title&lt;/h4&gt;
+  &lt;p&gt;Card content goes here.&lt;/p&gt;
+  &lt;button class="bf-btn bf-btn--primary"&gt;Action&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+      
       <div class="bf-row">
         <div class="bf-col-12">
           <h2 id="tables" class="h2--section">Tables</h2>
@@ -1218,6 +1494,79 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         dialog.showModal ? dialog.showModal() : dialog.setAttribute('open', '');
       closeBtn.onclick = () => (dialog.close ? dialog.close() : dialog.removeAttribute('open'));
     }
+    
+    // Component modals
+    const modal1 = document.getElementById('modal1');
+    const openModal1 = document.getElementById('openModal1');
+    if (modal1 && openModal1) {
+      openModal1.addEventListener('click', () => {
+        modal1.showModal();
+      });
+    }
+    
+    const modal2 = document.getElementById('modal2');
+    const openModal2 = document.getElementById('openModal2');
+    if (modal2 && openModal2) {
+      openModal2.addEventListener('click', () => {
+        modal2.showModal();
+      });
+      modal2.addEventListener('close', (e) => {
+        if (modal2.returnValue === 'confirm') {
+          console.log('User confirmed');
+        }
+      });
+    }
+  </script>
+  <script>
+    // Build selector functionality
+    (function() {
+      const buildSelector = document.getElementById('build-selector');
+      const cssLink = document.getElementById('bullframe-css');
+      const currentBuildDisplay = document.getElementById('current-build');
+      
+      // Map of build values to display names
+      const buildNames = {
+        'bullframe-system-default.min.css': 'bullframe-system-default.min.css',
+        'bullframe.min.css': 'bullframe.min.css',
+        'bullframe-dark.min.css': 'bullframe-dark.min.css',
+        'bullframe-classless.min.css': 'bullframe-classless.min.css',
+        'bullframe-classless-dark.min.css': 'bullframe-classless-dark.min.css',
+        'bullframe-classless-system-default.min.css': 'bullframe-classless-system-default.min.css',
+        'bullframe-utilities.min.css': 'bullframe-utilities.min.css'
+      };
+      
+      // Load build from localStorage if available
+      const savedBuild = localStorage.getItem('bullframe-demo-build');
+      if (savedBuild && buildNames[savedBuild]) {
+        buildSelector.value = savedBuild;
+        switchBuild(savedBuild);
+      }
+      
+      // Handle build selection change
+      buildSelector.addEventListener('change', function() {
+        const selectedBuild = this.value;
+        switchBuild(selectedBuild);
+        localStorage.setItem('bullframe-demo-build', selectedBuild);
+      });
+      
+      function switchBuild(buildName) {
+        const basePath = '../../css/';
+        const newHref = basePath + buildName + '?v6.0.0';
+        
+        // Update the stylesheet link
+        cssLink.href = newHref;
+        
+        // Update the display
+        if (currentBuildDisplay) {
+          currentBuildDisplay.innerHTML = '<code>' + buildNames[buildName] + '</code>';
+        }
+        
+        // Update selector if needed
+        if (buildSelector.value !== buildName) {
+          buildSelector.value = buildName;
+        }
+      }
+    })();
   </script>
 </body>
 

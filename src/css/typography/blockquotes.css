@@ -1,0 +1,24 @@
+/* Typography - Blockquotes */
+
+blockquote {
+  margin: 0 0 var(--bf-spacing-xl);
+  padding-left: 0;
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+blockquote small {
+  color: var(--bf-gray);
+  display: block;
+}
+
+blockquote small::before {
+  content: "\2014 \00A0";
+}
+
+q {
+  quotes: "\201C""\201D""\2018""\2019";
+}

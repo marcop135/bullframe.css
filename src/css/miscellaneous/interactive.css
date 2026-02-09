@@ -1,0 +1,45 @@
+/* Miscellaneous - Interactive elements */
+
+address {
+  font-style: normal;
+  margin-bottom: var(--bf-spacing-lg);
+  line-height: inherit;
+}
+
+details > summary:first-of-type {
+  display: list-item;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+dialog {
+  /* match body background color */
+  background-color: var(--bf-white);
+  color: var(--bf-dark);
+  border: none;
+  border-radius: var(--bf-spacing-sm);
+  padding: var(--bf-spacing-xl);
+  height: fit-content;
+  min-width: 25rem;
+  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
+}
+
+@media (min-width: 768px) {
+  dialog {
+    max-width: 50rem;
+  }
+}
+
+/* Overrides 'hidden' attribute
+ * <dialog id="myDialog" hidden>...</dialog> */
+dialog[open] {
+  display: block !important;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 40%);
+}

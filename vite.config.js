@@ -2,10 +2,10 @@
 import { defineConfig } from "vite";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
+import postcssImport from "postcss-import";
 import path from "path";
 import fs from "fs";
 import { glob } from "glob";
-import * as sass from "sass";
 import postcss from "postcss";
 
 // Custom PostCSS plugin: adds license header as a comment at the top of each CSS file
@@ -15,21 +15,21 @@ const addHeader = () => {
     Once(root) {
       root.prepend({
         type: "comment",
-        text: "! Bullframe CSS v5.1.1 | MIT License | https://github.com/marcop135/bullframe.css ",
+        text: "! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css ",
       });
     },
   };
 };
 addHeader.postcss = true;
 
-// Custom Vite plugin: compiles all SCSS files (except partials) to CSS and minified CSS
-function buildAllScss() {
+// Custom Vite plugin: compiles all CSS files (except partials) to CSS and minified CSS
+function buildAllCss() {
   return {
-    name: "build-all-scss",
+    name: "build-all-css",
     async closeBundle() {
-      // Find all SCSS files in src/scss (excluding partials that start with _)
-      const files = await glob("src/scss/**/*.scss");
-      const scssFiles = files.filter(
+      // Find main entry point CSS files in src/css (exclude partials in subdirs)
+      const files = await glob("src/css/*.css");
+      const cssFiles = files.filter(
         (file) => !path.basename(file).startsWith("_")
       );
 
@@ -37,28 +37,24 @@ function buildAllScss() {
       const outDir = path.resolve("dist/css");
       fs.mkdirSync(outDir, { recursive: true });
 
-      // Compile and process each SCSS file
-      for (const file of scssFiles) {
-        const name = path.basename(file, ".scss");
+      // Compile and process each CSS file
+      for (const file of cssFiles) {
+        const name = path.basename(file, ".css");
         const outFile = path.join(outDir, `${name}.css`);
         const minFile = path.join(outDir, `${name}.min.css`);
 
-        // Step 1: Compile SCSS to CSS with source maps
-        const result = await sass.compileAsync(file, {
-          style: "expanded",
-          sourceMap: true,
-          sourceMapIncludeSources: true,
-        });
+        // Read CSS file
+        const cssContent = fs.readFileSync(file, "utf-8");
 
-        // Step 2: Run PostCSS with header + autoprefixer
+        // Step 1: Run PostCSS with import + header + autoprefixer
         const postcssResult = await postcss([
+          postcssImport(),
           addHeader(),
           autoprefixer(),
-        ]).process(result.css, {
+        ]).process(cssContent, {
           from: path.resolve(file),
           to: outFile,
           map: {
-            prev: result.sourceMap ? JSON.stringify(result.sourceMap) : false,
             inline: false,
             annotation: true,
           },
@@ -70,7 +66,7 @@ function buildAllScss() {
           fs.writeFileSync(`${outFile}.map`, postcssResult.map.toString());
         }
 
-        // Step 3: Minify with cssnano + autoprefixer (again) + source maps
+        // Step 2: Minify with cssnano + autoprefixer (again) + source maps
         const minified = await postcss([autoprefixer(), cssnano()]).process(
           postcssResult.css,
           {
@@ -131,7 +127,10 @@ export default defineConfig({
     outDir: "../dist", // Output directory
     emptyOutDir: true, // Clean before build
     rollupOptions: {
-      input: path.resolve(__dirname, "src/docs/demo/index.html"), // Entry point for HTML
+      input: {
+        main: path.resolve(__dirname, "src/index.html"), // Landing page
+        demo: path.resolve(__dirname, "src/docs/demo/index.html"), // Demo page
+      },
       output: {
         entryFileNames: `[name].js`,
         chunkFileNames: `[name].js`,
@@ -141,8 +140,11 @@ export default defineConfig({
     assetsDir: "", // No subdir for assets
     sourcemap: true, // Enable source maps
   },
-  plugins: [buildAllScss()], // Use the custom SCSS build plugin
+  plugins: [
+    buildAllCss(), // Use the custom CSS build plugin
+    copyDocsFiles(), // Copy docs files including demo
+  ],
   server: {
-    open: "/docs/demo/index.html", // Dev server opens demo page
+    open: "/index.html", // Dev server opens landing page
   },
 });

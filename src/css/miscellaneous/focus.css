@@ -1,0 +1,53 @@
+/* Miscellaneous - Focus */
+
+/* Remove focus outline if it's not keyboard-triggered */
+:where(:focus:not(:focus-visible)) {
+  outline: none;
+}
+
+/* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
+:where([tabindex="-1"]:focus:not(:focus-visible)) {
+  outline: 0 !important;
+}
+
+/* Restore focus style for keyboard users only */
+:focus-visible {
+  outline: 0.2rem solid var(--bf-orange);
+  outline-offset: 0.3rem;
+}
+
+/* Remove default focus outline on form elements
+ * (styles applied elsewhere, e.g. _form-elements.scss)
+ *
+ * Exceptions (don't override!):
+ * - [type="color"]
+ * - [type="range"]
+ * - [type="file"]
+ * These are often replaced by custom widgets via JS/markup
+ *
+ * Ref: https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
+ */
+button:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus,
+[type="email"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="tel"]:focus,
+[type="search"]:focus,
+[type="text"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
+[type="url"]:focus,
+[type="radio"]:focus,
+[type="checkbox"]:focus,
+input[list]:focus,
+select:focus,
+textarea:focus,
+.bf-btn:focus {
+  outline: 0;
+}

@@ -1,6 +1,29 @@
 # Changes to Bullframe CSS
 
-## ?????? 5.2.0 - (MM DD, YYYY)
+## Unreleased
+
+### Accessibility (Breaking Change)
+
+- **BREAKING**: Darkened `--bf-blue` and `--bf-blue-light` for WCAG AA color contrast compliance (4.5:1)
+  - Primary buttons: white text on blue background now meets contrast requirements
+  - Links: blue text on white background now meets contrast requirements
+  - Visual change: blues are slightly darker. Override with CSS variables if you need the previous appearance
+
+## 6.0.0 (February 09, 2025) - BREAKING CHANGES
+
+- **MAJOR**: Migrated from Sass/SCSS to native CSS with PostCSS
+- **BREAKING**: All Sass variables replaced with CSS custom properties (`--bf-*`)
+- **BREAKING**: All Sass mixins removed - replaced with utility classes or direct CSS
+- **BREAKING**: Build process now uses PostCSS instead of Sass
+- Updated all npm dependencies to latest versions
+- Updated stylelint config from SCSS to standard CSS config
+- Removed Sass-specific dependencies (`sass`, `stylelint-config-standard-scss`)
+- Added `postcss-import` for CSS imports
+- Fixed markdown table alignment issues in README
+- Updated demo page to reference v6.0.0
+- All CSS files now use native CSS with PostCSS processing
+
+## 5.2.0 - (MM DD, YYYY)
 
 - Improved HTML demo validation via [html-validate](https://html-validate.org/)
 - ....

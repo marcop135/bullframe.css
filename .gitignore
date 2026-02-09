@@ -17,3 +17,12 @@ pnpm-debug.log*
 
 # OS generated files
 .DS_Store
+
+# Docusaurus
+website/.docusaurus/
+website/build/
+website/node_modules/
+website/.cache-loader/
+website/.env.local
+website/.env.production.local
+website/.env.development.local

@@ -1,0 +1,23 @@
+/* Utilities - Reduced motion
+ * prefers-reduced-motion media feature query
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+ *
+ * Taken from https://github.com/jensimmons/cssremedy
+ * See: https://github.com/mozdevs/cssremedy/issues/11 */
+
+@media (prefers-reduced-motion: reduce) {
+  .bf-reduced-motion,
+  .bf-reduced-motion::before,
+  .bf-reduced-motion::after,
+  .bf-reduced-motion *,
+  .bf-reduced-motion *::before,
+  .bf-reduced-motion *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

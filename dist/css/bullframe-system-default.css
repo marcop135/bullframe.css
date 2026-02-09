@@ -1,5 +1,81 @@
-/* ! Bullframe CSS v5.1.1 | MIT License | https://github.com/marcop135/bullframe.css  */
-@charset "UTF-8";
+/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+
+/* Bullframe CSS v6.0.0 - System Default (auto dark/light via prefers-color-scheme) */
+
+/* Bullframe CSS v6.0.0 - Main Entry Point */
+
+/* Variables */
+
+/* Bullframe CSS v6.0.0 - CSS Custom Properties (Variables) */
+
+:root {
+  /* Colors - Backgrounds, texts and borders */
+  --bf-white: rgb(255 255 255);
+  --bf-light: rgb(240 240 240);
+  --bf-gray-light-extra: rgb(233 233 233);
+  --bf-gray-light: rgb(204 204 204);
+  --bf-gray: rgb(153 153 153);
+  --bf-gray-dark: rgb(102 102 102);
+  --bf-gray-dark-extra: rgb(51 51 51);
+  --bf-dark: rgb(34 34 34);
+  --bf-dark-extra: rgb(17 17 17);
+  --bf-black: rgb(0 0 0);
+
+  /* Colors - Mark and ins */
+  --bf-yellow-light: rgb(255 255 153);
+  --bf-yellow: rgb(255 255 0);
+  --bf-orange: rgb(255 165 0);
+
+  /* Colors - Anchors and accent */
+  /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
+  --bf-blue: rgb(0 86 179); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+  --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
+  --bf-blue-light-extra: rgb(190 216 254);
+
+  /* Colors - Invalid forms */
+  --bf-red: rgb(255 0 0);
+
+  /* Colors - Dark mode adjustments */
+  /* These are used in dark mode to ensure proper contrast and visibility */
+  --bf-dark-bg: rgb(28 28 28); /* dark-extra + 7.5% lightness for body background */
+  --bf-dark-link: rgb(77 165 255); /* blue + 20% lightness for better visibility on dark */
+  --bf-dark-link-hover: rgb(77 165 255); /* blue-light + 20% lightness */
+  --bf-dark-border-focus: rgb(26 140 255); /* blue + 10% lightness for form focus borders */
+  --bf-dark-shadow-focus: rgb(3 102 214 / 50%); /* blue shadow for focus states */
+  --bf-dark-mark-bg: rgb(230 230 0); /* yellow - 10% lightness */
+  --bf-dark-ins-bg: rgb(255 255 200); /* yellow-light + 45% lightness */
+  --bf-dark-button-hover: rgb(184 184 184); /* gray-light -10% lightness */
+  --bf-dark-button-shadow: rgb(255 255 255 / 45%); /* white shadow for button focus */
+  --bf-dark-invalid: rgb(255 38 38); /* red adjusted for dark mode visibility */
+
+  /* Spacing */
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
+
+  /* Typography */
+  --bf-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
+  --bf-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
+
+  /* Breakpoints */
+  --bf-breakpoint-xs: 0;
+  --bf-breakpoint-sm: 576px;
+  --bf-breakpoint-md: 768px;
+  --bf-breakpoint-lg: 992px;
+  --bf-breakpoint-xl: 1200px;
+  --bf-breakpoint-xxl: 1400px;
+}
+
+/* Layout */
+
+/* Layout - Box sizing and HTML5 elements */
+
 *,
 *::before,
 *::after {
@@ -26,32 +102,399 @@ template {
   display: none;
 }
 
-[hidden]:where(:not([hidden=until-found])) {
+/* Make elements with the HTML hidden attribute stay hidden by default. */
+
+[hidden]:where(:not([hidden="until-found"])) {
   display: none !important;
 }
+
+/* UA+ (User Agent Plus) Enhancements
+ * 
+ * Source: https://fokus.dev/tools/uaplus/
+ * 
+ * UA+ is a different type of reset stylesheet. Instead of mostly resetting and normalizing
+ * properties, it focuses on improving existing user agent styles and adding new styles only
+ * where browsers fall short.
+ * 
+ * These enhancements improve existing user agent styles and add new styles only where
+ * browsers fall short, without being too opinionated. Most importantly, UA+ tries not to
+ * reset too much and takes accessibility more into consideration than many other resets.
+ * 
+ * Integrated into Bullframe CSS with modifications to complement existing styles.
+ */
+
+@layer {
+  /* Improve focus styles
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Add spacing between content and its focus outline.
+   * Note: This enhances the existing focus styles in focus.css
+   */
+  :focus-visible {
+    outline-offset: 3px;
+  }
+
+  /* Disable text size adjustment
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * To improve readability on non-mobile optimized websites, browsers like mobile Safari
+   * increase the default font size when you switch a website from portrait to landscape.
+   * We don't want that for our optimized sites.
+   * 
+   * Read more: https://kilianvalhof.com/articles/your-css-reset-needs-text-size-adjust-probably
+   * 
+   * Note: This overrides the existing text-size-adjust: 100% in html-body.css
+   */
+  html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+         text-size-adjust: none;
+  }
+
+  /* Increase line height
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Long paragraphs are easier to read if the line height is higher.
+   * Note: This overrides the existing line-height: 1.15 in html-body.css
+   * The body element still uses --bf-body-line-height (1.5) which is appropriate.
+   */
+  html {
+    line-height: 1.5;
+  }
+
+  /* Add scrollbar gutter
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Prevent the page from "jumping" when switching from a long to a short page.
+   * 
+   * Read more: https://www.bram.us/2023/11/24/day-25-scrollbar-gutters-in-body-and-html/
+   */
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  /* Remove UA styles for h1s nested in sectioning content
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Nesting h1s in section, articles, etc., shouldn't influence the styling of the heading
+   * since nesting doesn't influence semantics either. Chrome and Firefox have removed these
+   * styles from their User Agent Styles, but they're still present in Safari.
+   * 
+   * Read more: https://github.com/w3c/csswg-drafts/issues/5568
+   */
+  h1 {
+    font-size: 2em;
+    margin-block: 0.67em;
+  }
+
+  /* Improve abbreviations with titles
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * The abbr element with the title isn't useful regarding accessibility because support
+   * is inconsistent and it's only accessible to some users. Still, it's commonly used.
+   * This rule shows a dotted underline on abbreviations in all browsers (there's a bug
+   * in Safari) and changes the cursor.
+   * 
+   * Read more: https://adrianroselli.com/2020/11/using-abbr-element-with-title-attribute.html
+   */
+  abbr[title] {
+    cursor: help;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+
+  /* Optimize mark element in Forced Colors Mode
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * The colors of the mark element don't change in Forced Colors Mode, which can be
+   * problematic. Use system colors instead.
+   */
+  @media (forced-colors: active) {
+    mark {
+      color: HighlightText;
+      background-color: Highlight;
+    }
+  }
+
+  /* Avoid overflow caused by embedded content
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Ensure that embedded content (audio, video, images, etc.) doesn't overflow its container.
+   * Note: This complements existing max-width rules in embedded-content.css
+   */
+  audio,
+  iframe,
+  img,
+  svg,
+  video {
+    max-block-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  /* Prevent fieldsets from causing overflow
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Reset the default `min-inline-size: min-content` to prevent children from stretching fieldsets.
+   * 
+   * Read more: https://github.com/twbs/bootstrap/issues/12359
+   * 
+   * Note: This complements existing fieldset rules in forms/normalization.css
+   */
+  fieldset {
+    min-inline-size: 0;
+  }
+
+  /* Turn labels into block elements
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Labels for inputs, with the exception of radio buttons and checkboxes, selects, and
+   * textarea should be block elements.
+   */
+  label:has(+ input:not([type="radio"], [type="checkbox"]), select, textarea) {
+    display: block;
+  }
+
+  /* Increase the block-size of textareas
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * The default height of textareas is small. We increase it a bit.
+   * Note: This complements existing textarea rules in forms/normalization.css
+   */
+  textarea:not([rows]) {
+    min-block-size: 6em;
+  }
+
+  /* Inherit font styling in form elements
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * buttons, inputs, selects, and textarea should have the same font family and size
+   * as the rest of the page.
+   * Note: This complements existing form normalization rules
+   */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* Normalize search input styles
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Remove the rounded corners of search inputs on macOS and iOS and normalize the
+   * background color.
+   */
+  [type="search"] {
+    -webkit-appearance: textfield;
+  }
+
+  /* iOS only */
+  @supports (-webkit-touch-callout: none) {
+    [type="search"] {
+      border: 1px solid -apple-system-secondary-label;
+      background-color: canvas;
+    }
+  }
+
+  /* Maintain direction in some input types
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Some input types should remain left-aligned in right-to-left languages, but only if
+   * the value isn't empty because the placeholder should be right-aligned.
+   * 
+   * Read more: https://rtlstyling.com/
+   */
+  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:-moz-placeholder) {
+    direction: ltr;
+  }
+  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:placeholder-shown) {
+    direction: ltr;
+  }
+
+  /* Improve table styling
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * With the default styling, tables are hard to scan. These rules add padding and
+   * collapsed borders.
+   * Note: This complements existing table rules in tables.css
+   * We add explicit borders and padding that may not be present by default.
+   */
+  table {
+    border: 1px solid currentColor;
+  }
+
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 0.25em 0.5em;
+  }
+
+  /* Fading dialogs
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Add fade in and fade out transitions for dialogs and popovers and backdrops and
+   * reduce the opacity of the backdrop.
+   */
+  dialog::backdrop {
+    background: oklch(0% 0 0 / 0.3);
+  }
+
+  dialog,
+  [popover],
+  dialog::backdrop {
+    opacity: 0;
+    transition:
+      opacity 300ms ease-out,
+      display 300ms allow-discrete,
+      overlay 300ms allow-discrete;
+  }
+
+  dialog[open],
+  :popover-open,
+  dialog[open]::backdrop {
+    opacity: 1;
+  }
+
+  @starting-style {
+    dialog[open],
+    :popover-open,
+    dialog[open]::backdrop {
+      opacity: 0;
+    }
+  }
+
+  /* Increase specificity of [hidden]
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Make it harder to accidentally unhide elements with the `[hidden]` attribute while
+   * still maintaining the until-found functionality.
+   * Note: This complements existing [hidden] rules in layout.css
+   */
+  [hidden]:not([hidden="until-found"]) {
+    display: none !important;
+  }
+
+  /* Turn images into block elements
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Note: This complements existing img rules in embedded-content.css
+   * which sets max-width but doesn't explicitly set display: block
+   */
+  img {
+    display: block;
+  }
+
+  /* Change the cursor of the summary element
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * By default, only the `::marker` inside the summary uses the default cursor.
+   */
+  summary {
+    cursor: default;
+  }
+
+  /* Remove the default border from iframes
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Note: This complements existing iframe rules in embedded-content.css
+   */
+  iframe {
+    border: none;
+  }
+
+  /* Change implicit position of popovers
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * By default popovers look like modals without a backdrop. This makes use of the
+   * implicit anchor in popovers to position it closely to the trigger.
+   */
+  @supports (position-area: block-end span-inline-end) {
+    [popover] {
+      margin: 0;
+      position-area: block-end span-inline-end;
+    }
+  }
+}
+
+/* Typography */
+
+/* Typography - HTML and Body */
 
 html {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
+
+  /* resize the base font-size and get an easy math for rem units
+   * https://snook.ca/archives/html_and_css/font-size-with-rem
+   */
   font-size: 62.5%;
-  color: rgb(34, 34, 34);
+
+  color: var(--bf-dark);
+
+  /* set a default font-family and line-height */
   font-family: system-ui, sans-serif;
   line-height: 1.15;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* remove a tap background when a link or interactive element is focused
+   * if is touch
+   */
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 body {
   margin: 0;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: var(--bf-body-font-size-rem); /* '1.6rem' by default */
+  line-height: var(--bf-body-line-height); /* '1.5' by default */
+
+  /* this is useful to inherit values for some elements (e.g. forms) */
   font-weight: 400;
   text-align: left;
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* native font stack for optimum text rendering on every device and OS
+   * this stack mimics the system font UI
+   * a web apps looks like a native app (e.g. Android = Roboto font)
+   * Read more:
+   * https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+   */
+  font-family:
+    /* Safari for OS X and iOS (San Francisco) */
+    -apple-system,
+    /* Chrome < 56 for OS X (San Francisco) */
+    BlinkMacSystemFont,
+    /* Windows */
+    "Segoe UI",
+    /* Android */
+    Roboto,
+    /* Linux with KDE */
+    Oxygen-Sans,
+    /* Ubuntu (all variants) */
+    Ubuntu,
+    /* Linux with GNOME Shell */
+    Cantarell,
+    /* macOS 1.10 and below */
+    "Helvetica Neue",
+    Helvetica,
+    /* Basic web fallback */
+    Arial,
+    "Noto Sans", sans-serif,
+    /* emoji fonts */
+    "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* this enable font ligatures */
   text-rendering: optimizeLegibility;
+
+  /* break very long texts by default, especially on old browsers
+   * e.g. big <h1> or <h2> headlines
+   */
   word-wrap: break-word;
-  background-color: rgb(255, 255, 255);
+
+  background-color: var(--bf-white);
 }
+
+/* Typography - Headings */
 
 h1,
 h2,
@@ -59,12 +502,12 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin-top: 0; /* fallback */
   font-weight: 600;
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: var(--bf-spacing-lg);
   text-wrap: balance;
 }
 
@@ -94,91 +537,77 @@ h6 {
   font-size: 1.6rem;
 }
 
+/* Typography - Blockquotes */
+
 blockquote {
-  margin: 0 0 2rem;
+  margin: 0 0 var(--bf-spacing-xl);
   padding-left: 0;
   font-style: italic;
 }
+
 blockquote p {
   margin-bottom: 0;
 }
+
 blockquote small {
-  color: rgb(153, 153, 153);
+  color: var(--bf-gray);
   display: block;
 }
+
 blockquote small::before {
-  content: "— ";
+  content: "\2014 \00A0";
 }
 
 q {
-  quotes: "“" "”" "‘" "’";
+  quotes: "\201C""\201D""\2018""\2019";
 }
 
-pre {
-  margin: 0 0 2rem 0;
-  display: block;
-  overflow: auto;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
-  hyphens: none;
-  -ms-overflow-style: auto;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-family: Menlo, Consolas, "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.875em;
-}
-
-code {
-  word-wrap: break-word;
-}
-
-a > code {
-  color: inherit;
-}
-
-pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
-}
+/* Typography - Miscellaneous */
 
 p {
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
 }
+
+/* Abbreviations (taken from Bootstrap 4)
+ *
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ * 3. Add explicit cursor to indicate changed behavior.
+ */
 
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  text-decoration: underline;
+  text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  border-bottom: 0;
+          text-decoration: underline dotted; /* 2 */
+  border-bottom: 0; /* 2 */
 }
 
 mark {
-  background-color: rgb(255, 255, 0);
-  color: rgb(0, 0, 0);
+  background-color: var(--bf-yellow);
+  color: var(--bf-black);
 }
 
 ins {
-  background-color: rgb(255, 255, 153);
-  color: rgb(0, 0, 0);
+  background-color: var(--bf-yellow-light);
+  color: var(--bf-black);
   text-decoration: none;
 }
+
+/* Prevent the duplicate application of `bolder` by the next rule
+ * in Safari 6
+ */
 
 b,
 strong {
   font-weight: inherit;
 }
 
+/* Add the correct font weight in Chrome, Edge, and Safari */
+
 b,
 strong {
-  /* stylelint-disable-next-line */
   font-weight: bolder;
 }
 
@@ -208,6 +637,8 @@ small {
   font-size: 80%;
 }
 
+/* Reduce line-height for <small> elements inside <p> */
+
 p:has(small) {
   line-height: 1.25;
 }
@@ -219,10 +650,61 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: 2rem 0;
+  margin: var(--bf-spacing-xl) 0;
   padding: 0;
-  overflow: visible;
+  overflow: visible; /* Show the overflow in Edge */
 }
+
+/* Typography - Monospaced elements */
+
+pre {
+  margin: 0 0 var(--bf-spacing-xl) 0;
+
+  display: block;
+  overflow: auto;
+  word-break: break-all; /* webkit */
+  word-wrap: break-word;
+  white-space: pre;
+  hyphens: none;
+
+  /* Disable auto-hiding scrollbar in legacy Edge
+   * https://github.com/twbs/bootstrap/pull/30685 */
+  -ms-overflow-style: auto;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family:
+    /* macOS 1.10+ */ Menlo, Consolas, "Roboto Mono",
+    "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* a monospaced text font should looks bigger, so a smaller font-size
+   * is preferred */
+  font-size: 0.875em;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
+
+/* Forms */
+
+/* Forms - Normalization */
+
+/* normalization, enhancement and responsiveness */
 
 :where(html input, button, select, optgroup, textarea) {
   color: inherit;
@@ -231,13 +713,15 @@ hr {
   line-height: inherit;
 }
 
-:where(html input,
-button,
-[type=radio],
-[type=checkbox],
-select,
-optgroup,
-textarea) {
+:where(
+    html input,
+    button,
+    [type="radio"],
+    [type="checkbox"],
+    select,
+    optgroup,
+    textarea
+  ) {
   margin: 0;
 }
 
@@ -245,30 +729,40 @@ textarea) {
   width: 100%;
 }
 
-:where(html label,
-button,
-[type=image],
-[type=submit],
-[type=reset],
-html [type=button],
-[type=radio],
-[type=checkbox]) {
+/* re-set width auto where needed */
+
+:where(
+    html label,
+    button,
+    [type="image"],
+    [type="submit"],
+    [type="reset"],
+    html [type="button"],
+    [type="radio"],
+    [type="checkbox"]
+  ) {
   width: auto;
 }
 
-:where(html input,
-label,
-select,
-textarea,
-button,
-html [type=button],
-[type=reset],
-[type=submit],
-output) {
+/* inline-block display gives the best cross-browser combination
+ * and allow several properties
+ */
+
+:where(
+    html input,
+    label,
+    select,
+    textarea,
+    button,
+    html [type="button"],
+    [type="reset"],
+    [type="submit"],
+    output
+  ) {
   display: inline-block;
 }
 
-:where([type=file]) {
+:where([type="file"]) {
   display: block;
   background-color: transparent;
 }
@@ -285,21 +779,25 @@ output) {
   margin: 0;
 }
 
+/* 1. Remove intrinsic min-width of fieldset
+ * https://github.com/necolas/normalize.css/pull/269
+ */
+
 :where(fieldset) {
   border: 0;
   padding: 0;
   margin: 0;
-  min-width: 0;
+  min-width: 0; /* 1. */
 }
 
 :where(legend) {
-  display: table;
+  display: table; /* Correct the text wrapping in Edge and IE. */
   max-width: 100%;
-  white-space: normal;
+  white-space: normal; /* enable line-wrapping in FF4/5 */
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--bf-spacing-md);
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -309,7 +807,7 @@ output) {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--bf-spacing-md);
 }
 
 :where(label input, label select, label textarea) {
@@ -334,8 +832,8 @@ output) {
   padding: 0;
 }
 
-:where([type=search]) {
-  outline-offset: -0.25rem;
+:where([type="search"]) {
+  outline-offset: calc(-1 * var(--bf-spacing-sm));
 }
 
 :where(output) {
@@ -350,41 +848,51 @@ output) {
   word-wrap: normal;
 }
 
-:where([list]):not([type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time])::-webkit-calendar-picker-indicator {
+/* Taken from Bootstrap Reboot v5.2
+ * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
+ */
+
+:where([list]):not(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"]
+  )::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 
 :where(optgroup) {
   font-family: inherit;
   font-size: inherit;
-  font-style: inherit;
+  font-style: inherit; /* fallback for font families without 600 */
   font-weight: 600;
 }
 
-:where(button,
-html [type=button],
-[type=reset],
-[type=submit],
-[type=email],
-[type=number],
-[type=text],
-[type=tel],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=url],
-[type=image],
-[type=password],
-[type=search],
-[type=search]::-webkit-search-decoration,
-[type=search]::-webkit-search-cancel-button,
-input[list],
-textarea) {
+/* remove -webkit-appearance listing every single elements that needed it */
+
+:where(
+    button,
+    html [type="button"],
+    [type="reset"],
+    [type="submit"],
+    [type="email"],
+    [type="number"],
+    [type="text"],
+    [type="tel"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="url"],
+    [type="image"],
+    [type="password"],
+    [type="search"],
+    [type="search"]::-webkit-search-decoration,
+    [type="search"]::-webkit-search-cancel-button,
+    input[list],
+    textarea
+  ) {
   -webkit-appearance: none;
           appearance: none;
 }
@@ -397,23 +905,23 @@ textarea) {
 }
 
 :where(button, input, select, textarea) {
-  border-radius: 0.25rem;
+  border-radius: var(--bf-spacing-sm);
 }
 
-:where([type=radio]) {
+:where([type="radio"]) {
   border-radius: 50%;
 }
 
-:where([type=checkbox]) {
-  border-radius: 0.5rem;
+:where([type="checkbox"]) {
+  border-radius: var(--bf-spacing-md);
 }
 
-:where([type=radio], [type=checkbox]) {
+:where([type="radio"], [type="checkbox"]) {
   padding: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bf-white);
 }
 
-:where([type=range i]) {
+:where([type="range" i]) {
   background-color: transparent;
 }
 
@@ -434,192 +942,280 @@ textarea) {
   resize: vertical;
 }
 
+/* Remove the inner border and padding of focus outlines in Firefox */
+
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
-:where(button, [type=button], [type=reset], [type=submit]) {
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
   line-height: normal;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
   vertical-align: baseline;
   overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   border: 0;
-  background-image: none;
-}
-:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
-  text-decoration: none;
-  color: rgb(34, 34, 34);
+  background-image: none; /* FF mobile */
 }
 
-:where(button:not(:disabled),
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled)) {
+:where(button, [type="button"], [type="reset"], [type="submit"]):hover,
+:where(button, [type="button"], [type="reset"], [type="submit"]):active,
+:where(button, [type="button"], [type="reset"], [type="submit"]):focus {
+  text-decoration: none;
+  color: var(--bf-dark);
+}
+
+:where(
+    button:not(:disabled),
+    [type="button"]:not(:disabled),
+    [type="reset"]:not(:disabled),
+    [type="submit"]:not(:disabled)
+  ) {
   cursor: pointer;
 }
 
+/* FF placeholder bug
+ * Issue: If one change the text color of input fields, FF will change
+ * the default color of placeholders too!
+ * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
+ */
+
 :where(input::-moz-placeholder, textarea::-moz-placeholder) {
-  color: rgb(102, 102, 102);
+  color: var(--bf-gray-dark);
 }
 
 :where(input::placeholder, textarea::placeholder) {
-  color: rgb(102, 102, 102);
+  color: var(--bf-gray-dark);
 }
 
 /*
 Use the modern Firefox focus style for all focusable elements.
 */
+
 :-moz-focusring {
   outline: auto;
 }
+
+/* remove ':invalid' styles in FF
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
+ *
+ * for form validation in JavaScript
+ * use '.bf-invalid' class in /utilities/_utility-form-states.scss' instead
+ * documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
+ */
 
 :-moz-ui-invalid {
   box-shadow: none;
 }
 
-:where([type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-input[list],
-select,
-textarea) {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(153, 153, 153);
-  padding: 0.5rem 0.75rem;
+/* Forms - Styling */
+
+:where(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    input[list],
+    select,
+    textarea
+  ) {
+  background-color: var(--bf-white);
+  border: 1px solid var(--bf-gray);
+  padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
 }
 
-:where([type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-input[list],
-select,
-textarea,
-[type=radio],
-[type=checkbox]):active, :where([type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-input[list],
-select,
-textarea,
-[type=radio],
-[type=checkbox]):focus {
+:where(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    input[list],
+    select,
+    textarea,
+    [type="radio"],
+    [type="checkbox"]
+  ):active,
+:where(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="tel"],
+    [type="search"],
+    [type="text"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="url"],
+    input[list],
+    select,
+    textarea,
+    [type="radio"],
+    [type="checkbox"]
+  ):focus {
   transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-  border-color: rgb(0, 123, 255);
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+  border-color: var(--bf-blue);
+  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
 }
 
-:where(button, [type=button], [type=reset], [type=submit]) {
-  color: rgb(34, 34, 34);
-  padding: 0.6666666667rem 1.3333333333rem;
-  background: rgb(204, 204, 204);
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
+  color: var(--bf-dark);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  background: var(--bf-gray-light);
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 }
-:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus:not(.bf-disabled):not([aria-disabled=true]) {
+
+:where(button, [type="button"], [type="reset"], [type="submit"]):hover,
+:where(button, [type="button"], [type="reset"], [type="submit"]):active,
+:where(button, [type="button"], [type="reset"], [type="submit"]):focus:not(.bf-disabled):not([aria-disabled="true"]) {
   text-decoration: none;
-  color: rgb(34, 34, 34);
-  background: rgb(178.5, 178.5, 178.5);
-}
-:where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus:not(.bf-disabled):not([aria-disabled=true]) {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  color: var(--bf-dark);
+  background: rgb(184 184 184); /* color.adjust($bf-gray-light, $lightness: -10%) */
 }
 
-:where(fieldset[disabled] button,
-fieldset[disabled] input,
-fieldset[disabled] input::after,
-fieldset[disabled] input::before,
-fieldset[disabled] input:checked,
-fieldset[disabled] select,
-fieldset[disabled] textarea,
-fieldset[disabled] label,
-button[disabled],
-input[disabled],
-input[disabled]::after,
-input[disabled]::before,
-input[disabled]:checked,
-select[disabled],
-textarea[disabled],
-label[disabled],
-button:disabled,
-input:disabled,
-input:disabled::after,
-input:disabled::before,
-input:disabled:checked,
-select:disabled,
-textarea:disabled,
-label:disabled,
-button[aria-disabled=true],
-input[aria-disabled=true],
-input[aria-disabled=true]::after,
-input[aria-disabled=true]::before,
-input[aria-disabled=true]:checked,
-select[aria-disabled=true],
-textarea[aria-disabled=true],
-label[aria-disabled=true]) {
-  cursor: default !important;
+:where(button, [type="button"], [type="reset"], [type="submit"]):active,
+:where(button, [type="button"], [type="reset"], [type="submit"]):focus:not(.bf-disabled):not([aria-disabled="true"]) {
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+}
+
+/* disabled groups */
+
+:where(
+    fieldset[disabled] button,
+    fieldset[disabled] input,
+    fieldset[disabled] input::after,
+    fieldset[disabled] input::before,
+    fieldset[disabled] input:checked,
+    fieldset[disabled] select,
+    fieldset[disabled] textarea,
+    fieldset[disabled] label,
+    button[disabled],
+    input[disabled],
+    input[disabled]::after,
+    input[disabled]::before,
+    input[disabled]:checked,
+    select[disabled],
+    textarea[disabled],
+    label[disabled],
+    button:disabled,
+    input:disabled,
+    input:disabled::after,
+    input:disabled::before,
+    input:disabled:checked,
+    select:disabled,
+    textarea:disabled,
+    label:disabled,
+    button[aria-disabled="true"],
+    input[aria-disabled="true"],
+    input[aria-disabled="true"]::after,
+    input[aria-disabled="true"]::before,
+    input[aria-disabled="true"]:checked,
+    select[aria-disabled="true"],
+    textarea[aria-disabled="true"],
+    label[aria-disabled="true"]
+  ) {
+  cursor: default !important; /* fallback */
   cursor: not-allowed !important;
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  outline: none !important;
+  outline: none !important; /* disable focus ring */
   opacity: 0.5 !important;
 }
+
+/* Forms - Select styling */
+
+/* custom <select> arrow and appearance with a base64 embedded SVG icon
+ * https://css-tricks.com/probably-dont-base64-svg/#article-header-id-2
+ *
+ * this is inspired from https://github.com/kognise/water.css
+ * and from Bootstrap custom select
+ * https://getbootstrap.com/docs/4.4/components/input-group/#custom-select
+ *
+ * ! 12px = the icon width/height, and must be in pixels because
+ * calc() is just for values
+ * https://css-tricks.com/a-complete-guide-to-calc-in-css/#0-calc-is-for-values
+ *
+ * a select with a [multiple] attribute doesn't show an arrow by default
+ * a select with a [size] attribute gets and arrow on iOS (Webkit) for instance
+ * but on Chrome and FF desktop
+ * so, is not safe to style every kind of <select>
+ *
+ * remove the arrow and the appearance, especially on Webkit */
 
 :where(select):not([size], select[multiple]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: rgb(255, 255, 255) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
-  padding-right: 2rem;
+
+  /* add a new svg arrow */
+  background: var(--bf-white)
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.85rem center/8px 10px;
+
+  /* space the arrow */
+  padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
+
+/* Legacy Edge browser support */
 
 :where(select)::-ms-expand {
   display: none;
 }
 
-:where(*[dir=rtl]) :where(select):not([size], select[multiple]),
-:where(select[dir=rtl]):not([size], select[multiple]) {
+/* add support for RTL languages
+ * 'appearance: none' removes the default styling but introduces a bug
+ * that occurs when a right to the left language (e.g. Arabic) is set
+ *
+ * Read more
+ * 1. http://bootstrap.rtlcss.com
+ * 2. https://rtlstyling.com/ */
+
+:where(*[dir="rtl"]) :where(select):not([size], select[multiple]),
+:where(select[dir="rtl"]):not([size], select[multiple]) {
+  /* move the arrow icon to the left */
   background-position: left 0.85rem top 50%;
-  padding-right: 0.75rem;
-  padding-left: 2rem;
+
+  /* go back to default forms padding */
+  padding-right: calc(var(--bf-spacing-lg) * 0.75);
+
+  /* add custom left padding, matching the custom LTR one */
+  padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 
-:where([type=range]) {
+/* Forms - Range input styling */
+
+/* styling input range in modern browsers safely using the @supports CSS-at-rule
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
+ *
+ * standalone CodePen demo https://codepen.io/marcop135/pen/JjGrNMx */
+
+:where([type="range"]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -627,92 +1223,118 @@ label[aria-disabled=true]) {
   height: 1.4rem;
 }
 
-:where([type=range])::-webkit-slider-thumb {
+:where([type="range"])::-webkit-slider-thumb {
   border: 0;
   -webkit-appearance: none;
           appearance: none;
+
   width: 1.5rem;
   height: 1.5rem;
   margin-top: -0.25rem;
-  background-color: rgb(0, 123, 255);
+  background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-:where([type=range])::-webkit-slider-thumb:active {
-  background-color: rgb(0, 123, 255);
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
-:where([type=range])::-moz-range-thumb {
+:where([type="range"])::-webkit-slider-thumb:active {
+  background-color: var(--bf-blue);
+}
+
+:where([type="range"])::-moz-range-thumb {
   border: 0;
   -moz-appearance: none;
        appearance: none;
+
   width: 1.5rem;
   height: 1.5rem;
-  background-color: rgb(0, 123, 255);
+  background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-:where([type=range])::-moz-range-thumb:active {
-  background-color: rgb(0, 123, 255);
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
-:where([type=range])::-webkit-slider-runnable-track {
+:where([type="range"])::-moz-range-thumb:active {
+  background-color: var(--bf-blue);
+}
+
+:where([type="range"])::-webkit-slider-runnable-track {
   color: transparent;
   border-color: transparent;
+
   width: 100%;
   height: 0.65rem;
   cursor: pointer;
-  background-color: rgb(233, 233, 233);
+  background-color: var(--bf-gray-light-extra);
 }
 
-:where([type=range])::-moz-range-track {
+:where([type="range"])::-moz-range-track {
   color: transparent;
   border-color: transparent;
+
   width: 100%;
   height: 0.65rem;
   cursor: pointer;
-  background-color: rgb(233, 233, 233);
+  background-color: var(--bf-gray-light-extra);
 }
 
-:where([type=range]):focus {
+:where([type="range"]):focus {
   outline: none;
 }
-:where([type=range]):focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.1rem/rgb(255, 255, 255), 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-:where([type=range]):focus::-moz-slider-thumb {
-  box-shadow: 0 0 0 0.1rem/rgb(255, 255, 255), 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+
+:where([type="range"]):focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
-:where([type=range])::-moz-focus-outer {
+:where([type="range"]):focus::-moz-range-thumb {
+  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+:where([type="range"])::-moz-focus-outer {
   border: 0;
 }
 
-:where([type=range]):focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.1rem/rgb(255, 255, 255), 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
+/* disabled */
 
-:where([type=range]):disabled {
+:where([type="range"]):disabled {
   pointer-events: none;
 }
-:where([type=range]):disabled::-webkit-slider-thumb {
-  background-color: rgb(204, 204, 204);
-}
-:where([type=range]):disabled::-moz-slider-thumb {
-  background-color: rgb(204, 204, 204);
+
+:where([type="range"]):disabled::-webkit-slider-thumb {
+  background-color: var(--bf-gray-light);
 }
 
+:where([type="range"]):disabled::-moz-range-thumb {
+  background-color: var(--bf-gray-light);
+}
+
+/* Miscellaneous */
+
+/* Miscellaneous - Anchors */
+
+/* Link color meets WCAG AA 4.5:1 contrast on white background */
+
 a {
-  color: rgb(0, 123, 255);
+  color: var(--bf-blue);
   text-decoration: none;
+
+  /* Edge Legacy: Remove grey background on active links */
   background-color: transparent;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
   text-decoration: underline;
-  color: rgb(0, 86, 179);
+  color: var(--bf-blue-light);
 }
+
+/* this is taken from Bootstrap's reboot
+ * https://getbootstrap.com/docs/4.4/content/reboot/
+ */
 
 a:not([href], [tabindex]) {
   color: inherit;
@@ -729,37 +1351,57 @@ a:not([href], [tabindex]):focus {
   outline: 0;
 }
 
+/* Miscellaneous - Focus */
+
+/* Remove focus outline if it's not keyboard-triggered */
+
 :where(:focus:not(:focus-visible)) {
   outline: none;
 }
+
+/* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
 
 :where([tabindex="-1"]:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
+/* Restore focus style for keyboard users only */
+
 :focus-visible {
-  outline: 0.2rem solid rgb(255, 165, 0);
+  outline: 0.2rem solid var(--bf-orange);
   outline-offset: 0.3rem;
 }
 
+/* Remove default focus outline on form elements
+ * (styles applied elsewhere, e.g. _form-elements.scss)
+ *
+ * Exceptions (don't override!):
+ * - [type="color"]
+ * - [type="range"]
+ * - [type="file"]
+ * These are often replaced by custom widgets via JS/markup
+ *
+ * Ref: https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
+ */
+
 button:focus,
-[type=button]:focus,
-[type=reset]:focus,
-[type=submit]:focus,
-[type=email]:focus,
-[type=number]:focus,
-[type=password]:focus,
-[type=tel]:focus,
-[type=search]:focus,
-[type=text]:focus,
-[type=date]:focus,
-[type=datetime-local]:focus,
-[type=month]:focus,
-[type=time]:focus,
-[type=week]:focus,
-[type=url]:focus,
-[type=radio]:focus,
-[type=checkbox]:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus,
+[type="email"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="tel"]:focus,
+[type="search"]:focus,
+[type="text"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
+[type="url"]:focus,
+[type="radio"]:focus,
+[type="checkbox"]:focus,
 input[list]:focus,
 select:focus,
 textarea:focus,
@@ -767,11 +1409,13 @@ textarea:focus,
   outline: 0;
 }
 
+/* Miscellaneous - Lists */
+
 menu,
 ol,
 ul,
 dl {
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
   padding: 0;
 }
 
@@ -787,7 +1431,7 @@ dd {
 
 ul,
 ol {
-  margin-left: 2rem;
+  margin-left: var(--bf-spacing-xl);
 }
 
 nav ol,
@@ -805,10 +1449,19 @@ dd {
   margin-left: 0;
 }
 
+/* taken from https://github.com/jensimmons/cssremedy
+ *
+ * 1. Add zero-width-space to prevent VoiceOver disable
+ * 2. Absolute position ensures no extra space
+ * See: https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
+ */
+
 nav li::before {
-  content: "​";
+  content: "\200B";
   position: absolute;
 }
+
+/* Miscellaneous - Embedded content */
 
 audio,
 canvas,
@@ -883,32 +1536,52 @@ meter {
   max-width: 100%;
 }
 
+/* <progress> normalization
+ *
+ * https://css-tricks.com/html5-progress-element/ */
+
 progress[value] {
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none;
-  border: none;
+          appearance: none; /* reset the default appearance */
+  border: none; /* Get rid of default border in Firefox */
+
   height: 20px;
   height: 2rem;
-  background: rgb(204, 204, 204);
-  color: rgb(0, 123, 255);
+
+  /* progress bar background color */
+  background: var(--bf-gray-light);
+
+  /* progress value background color in IE10+ */
+  color: var(--bf-blue);
 }
 
+/* progress value background color in webkit */
+
 progress[value]::-webkit-progress-bar {
-  background: rgb(204, 204, 204);
+  background: var(--bf-gray-light);
 }
 
 progress[value]::-webkit-progress-value {
-  background: rgb(0, 123, 255);
+  background: var(--bf-blue);
 }
+
+/* remove default border in old browsers
+ * and for embeds (e.g. youtube) that don't remove the border with the attribute
+ * frameborder="0"
+ *
+ * e.g.
+ * <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/..."> */
 
 iframe {
   border-style: none;
 }
 
+/* Miscellaneous - Interactive elements */
+
 address {
   font-style: normal;
-  margin-bottom: 1rem;
+  margin-bottom: var(--bf-spacing-lg);
   line-height: inherit;
 }
 
@@ -923,40 +1596,52 @@ summary {
 }
 
 dialog {
-  background-color: rgb(255, 255, 255);
-  color: rgb(34, 34, 34);
+  /* match body background color */
+  background-color: var(--bf-white);
+  color: var(--bf-dark);
   border: none;
-  border-radius: 0.25rem;
-  padding: 2rem;
+  border-radius: var(--bf-spacing-sm);
+  padding: var(--bf-spacing-xl);
   height: -moz-fit-content;
   height: fit-content;
   min-width: 25rem;
-  max-width: calc(100vw - 3rem);
+  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
+
 @media (min-width: 768px) {
   dialog {
     max-width: 50rem;
   }
 }
 
+/* Overrides 'hidden' attribute
+ * <dialog id="myDialog" hidden>...</dialog> */
+
 dialog[open] {
   display: block !important;
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0 / 40%);
 }
+
+/* Miscellaneous - Scrolling */
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
+
+/* Miscellaneous - Tables */
+
 table {
   caption-side: bottom;
   max-width: 100%;
   border-collapse: collapse;
+  /* Correct table border color inheritance in Chrome and Safari */
   border-color: currentcolor;
+  /* Remove text indentation from table contents in Chrome and Safari */
   text-indent: 0;
 }
 
@@ -987,21 +1672,23 @@ th {
 }
 
 caption {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  color: rgb(153, 153, 153);
+  padding-top: var(--bf-spacing-md);
+  padding-bottom: var(--bf-spacing-md);
+  color: var(--bf-gray);
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;
   font-size: 90%;
 }
 
-/* Accessibility
- * ========================================================================== */
+/* Accessibility - Taken from sanitize.css
+ * https://github.com/csstools/sanitize.css/blob/v13.0.0/sanitize.css */
+
 /**
  * Change the cursor on busy elements in all browsers (opinionated).
  */
-:where([aria-busy=true i]) {
+
+:where([aria-busy='true' i]) {
   cursor: progress;
 }
 
@@ -1009,7 +1696,8 @@ caption {
  * Change the cursor on disabled, not-editable, or otherwise
  * inoperable elements in all browsers (opinionated).
  */
-:where([aria-disabled=true i], [disabled]) {
+
+:where([aria-disabled='true' i], [disabled]) {
   cursor: not-allowed;
 }
 
@@ -1017,157 +1705,23 @@ caption {
  * Change the display on visually hidden accessible elements
  * in all browsers (opinionated).
  */
-:where([aria-hidden=false i][hidden]) {
+
+:where([aria-hidden='false' i][hidden]) {
   display: initial;
 }
 
-:where([aria-hidden=false i][hidden]:not(:focus)) {
+:where([aria-hidden='false' i][hidden]:not(:focus)) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
 
-.bf-container,
-.bf-container--fluid {
-  box-sizing: border-box;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
+/* Utilities */
 
-.bf-container {
-  max-width: 114rem;
-}
+/* Utilities - Layout */
 
-.bf-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
-[class^=bf-col-] {
-  position: relative;
-  min-height: 1px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.bf-no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-}
-.bf-no-gutters > [class^=bf-col] {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.bf-col-12 {
-  flex-basis: 100%;
-  max-width: 100%;
-}
-
-.bf-col-11 {
-  flex-basis: 91.6667%;
-  max-width: 91.6667%;
-}
-
-.bf-col-10 {
-  flex-basis: 83.3333%;
-  max-width: 83.3333%;
-}
-
-.bf-col-9 {
-  flex-basis: 75%;
-  max-width: 75%;
-}
-
-.bf-col-8 {
-  flex-basis: 66.6667%;
-  max-width: 66.6667%;
-}
-
-.bf-col-7 {
-  flex-basis: 58.3333%;
-  max-width: 58.3333%;
-}
-
-.bf-col-6 {
-  flex-basis: 50%;
-  max-width: 50%;
-}
-
-.bf-col-5 {
-  flex-basis: 41.6667%;
-  max-width: 41.6667%;
-}
-
-.bf-col-4 {
-  flex-basis: 33.3333%;
-  max-width: 33.3333%;
-}
-
-.bf-col-3 {
-  flex-basis: 25%;
-  max-width: 25%;
-}
-
-.bf-col-2 {
-  flex-basis: 16.6667%;
-  max-width: 16.6667%;
-}
-
-.bf-col-1 {
-  flex-basis: 8.3333%;
-  max-width: 8.3333%;
-}
-
-@media (max-width: 575px) {
-  .bf-container--break-xs .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-xs [class^=bf-col] {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 767px) {
-  .bf-container--break-md .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-md [class^=bf-col] {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 991px) {
-  .bf-container--break-lg .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-lg [class^=bf-col] {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-table td[class^=bf-col],
-table th[class^=bf-col] {
-  position: static;
-}
+/* micro-clearfix
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
 
 .bf-clearfix::before,
 .bf-clearfix::after {
@@ -1183,13 +1737,14 @@ table th[class^=bf-col] {
   display: none !important;
 }
 
+/* assistive text for screen reader only (e.g. form labels) */
+
 .bf-hidden {
   display: none !important;
   visibility: hidden !important;
 }
 
 .bf-text-hide {
-  /* stylelint-disable-next-line */
   font: 0/0 a !important;
   color: transparent !important;
   text-shadow: none !important;
@@ -1200,15 +1755,16 @@ table th[class^=bf-col] {
 }
 
 /*
-// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-//
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
+ * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+ *
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -1222,12 +1778,13 @@ table th[class^=bf-col] {
 }
 
 /*
-// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-//
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
+ * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+ *
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -1315,6 +1872,8 @@ table th[class^=bf-col] {
   position: relative !important;
 }
 
+/* https://css-tricks.com/centering-css-complete-guide */
+
 .bf-align-center-unknown {
   position: relative !important;
 }
@@ -1357,225 +1916,7 @@ table th[class^=bf-col] {
   width: auto !important;
 }
 
-.bf-z-index-1 {
-  z-index: 1;
-}
-
-.bf-z-index-2 {
-  z-index: 2;
-}
-
-.bf-z-index-3 {
-  z-index: 3;
-}
-
-.bf-z-index-4 {
-  z-index: 4;
-}
-
-.bf-z-index-5 {
-  z-index: 5;
-}
-
-.bf-z-index-6 {
-  z-index: 6;
-}
-
-.bf-z-index-7 {
-  z-index: 7;
-}
-
-.bf-z-index-8 {
-  z-index: 8;
-}
-
-.bf-z-index-9 {
-  z-index: 9;
-}
-
-.bf-z-index-10 {
-  z-index: 10;
-}
-
-.bf-z-index-20 {
-  z-index: 20;
-}
-
-.bf-z-index-30 {
-  z-index: 30;
-}
-
-.bf-z-index-40 {
-  z-index: 40;
-}
-
-.bf-z-index-50 {
-  z-index: 50;
-}
-
-.bf-z-index-60 {
-  z-index: 60;
-}
-
-.bf-z-index-70 {
-  z-index: 70;
-}
-
-.bf-z-index-80 {
-  z-index: 80;
-}
-
-.bf-z-index-90 {
-  z-index: 90;
-}
-
-.bf-z-index-100 {
-  z-index: 100;
-}
-
-.bf-z-index-200 {
-  z-index: 200;
-}
-
-.bf-z-index-300 {
-  z-index: 200;
-}
-
-.bf-m-0 {
-  margin: 0 !important;
-}
-
-.bf-m-t-0 {
-  margin-top: 0 !important;
-}
-
-.bf-m-b-0 {
-  margin-bottom: 0 !important;
-}
-
-.bf-m-l-0 {
-  margin-left: 0 !important;
-}
-
-.bf-m-r-0 {
-  margin-right: 0 !important;
-}
-
-.bf-m-1 {
-  margin-bottom: 0.5rem !important;
-}
-
-.bf-m-2 {
-  margin-bottom: 1rem !important;
-}
-
-.bf-m-3 {
-  margin-bottom: 2rem !important;
-}
-
-.bf-m-4 {
-  margin-bottom: 3rem !important;
-}
-
-.bf-m-t-1 {
-  margin-top: 0.5rem !important;
-}
-
-.bf-m-t-2 {
-  margin-top: 1rem !important;
-}
-
-.bf-m-t-3 {
-  margin-top: 2rem !important;
-}
-
-.bf-m-t-4 {
-  margin-top: 3rem !important;
-}
-
-.bf-m-b-1 {
-  margin-bottom: 0.5rem !important;
-}
-
-.bf-m-b-2 {
-  margin-bottom: 1rem !important;
-}
-
-.bf-m-b-3 {
-  margin-bottom: 2rem !important;
-}
-
-.bf-m-b-4 {
-  margin-bottom: 3rem !important;
-}
-
-.bf-p-0 {
-  padding: 0 !important;
-}
-
-.bf-p-t-0 {
-  padding-top: 0 !important;
-}
-
-.bf-p-b-0 {
-  padding-bottom: 0 !important;
-}
-
-.bf-p-l-0 {
-  padding-left: 0 !important;
-}
-
-.bf-p-r-0 {
-  padding-right: 0 !important;
-}
-
-.bf-p-1 {
-  padding-bottom: 0.5rem !important;
-}
-
-.bf-p-2 {
-  padding-bottom: 1rem !important;
-}
-
-.bf-p-3 {
-  padding-bottom: 2rem !important;
-}
-
-.bf-p-4 {
-  padding-bottom: 3rem !important;
-}
-
-.bf-p-t-1 {
-  padding-top: 0.5rem !important;
-}
-
-.bf-p-t-2 {
-  padding-top: 1rem !important;
-}
-
-.bf-p-t-3 {
-  padding-top: 2rem !important;
-}
-
-.bf-p-t-4 {
-  padding-top: 3rem !important;
-}
-
-.bf-p-b-1 {
-  padding-bottom: 0.5rem !important;
-}
-
-.bf-p-b-2 {
-  padding-bottom: 1rem !important;
-}
-
-.bf-p-b-3 {
-  padding-bottom: 2rem !important;
-}
-
-.bf-p-b-4 {
-  padding-bottom: 3rem !important;
-}
+/* Utilities - Texts */
 
 .bf-t-transform-uppercase {
   text-transform: uppercase !important;
@@ -1598,17 +1939,21 @@ table th[class^=bf-col] {
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px rgb(34, 34, 34) !important;
-  text-shadow: 0 0 0.2rem rgb(34, 34, 34) !important;
+  text-shadow: 0 0 2px var(--bf-dark) !important;
+  text-shadow: 0 0 0.2rem var(--bf-dark) !important;
 }
 
 .bf-t-italic {
   font-style: italic !important;
 }
 
+/* useful to 'reset' <i> inherited style */
+
 .bf-t-style-normal {
   font-style: normal !important;
 }
+
+/* useful to 'reset' <b> inherited style */
 
 .bf-t-weight-300 {
   font-weight: 300 !important;
@@ -1672,91 +2017,75 @@ table th[class^=bf-col] {
 }
 
 .bf-font-sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: var(--bf-font-sans-serif) !important;
 }
 
 .bf-font-serif {
-  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: var(--bf-font-serif) !important;
 }
 
 .bf-font-monospace {
-  font-family: Menlo, Consolas, "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: var(--bf-font-monospace) !important;
 }
 
-/* Font stacks from Modern Font Stacks (https://modernfontstacks.com/)
-   System font stack CSS organized by typeface classification for every modern OS
-   Fastest fonts available. No downloading, no layout shifts, instant renders. */
-/* Sans-serif system */
+/* Font stacks from Modern Font Stacks (https://modernfontstacks.com/) */
+
 .bf-sans-serif--system {
   font-family: system-ui, sans-serif;
 }
 
-/* Transitional serif */
 .bf-serif--transitional {
   font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
 }
 
-/* Old style serif */
 .bf-serif--oldstyle {
   font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 }
 
-/* Humanist sans-serif */
 .bf-sans-serif--humanist {
   font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, sans-serif;
 }
 
-/* Geometric humanist sans-serif */
 .bf-sans-serif--geometric {
   font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
 }
 
-/* Classical humanist sans-serif */
 .bf-sans-serif--classical {
   font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 }
 
-/* Neo-grotesque sans-serif */
 .bf-sans-serif--neo-grotesque {
   font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
 }
 
-/* Monospace slab serif */
 .bf-monospace--slab {
   font-family: "Nimbus Mono PS", "Courier New", monospace;
 }
 
-/* Monospace code */
 .bf-monospace--code {
   font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 }
 
-/* Industrial display */
 .bf-sans-serif--industrial {
   font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
 }
 
-/* Rounded sans display */
 .bf-sans-serif--rounded {
   font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro, sans-serif;
 }
 
-/* Slab serif display */
 .bf-serif--slab {
   font-family: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
 }
 
-/* Antique display */
 .bf-serif--antique {
   font-family: Superclarendon, "Bookman Old Style", "URW Bookman", "URW Bookman L", "Georgia Pro", Georgia, serif;
 }
 
-/* Didone display */
 .bf-serif--didone {
   font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
 }
 
-/* Handwritten display */
 .bf-cursive--handwritten {
   font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
 }
@@ -1770,7 +2099,7 @@ table th[class^=bf-col] {
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-h1 {
@@ -1807,51 +2136,410 @@ body.bf-responsive-typography {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
 
+/* Utilities - Grid system */
+
+.bf-container,
+.bf-container--fluid {
+  box-sizing: border-box;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
+}
+
+.bf-container {
+  max-width: 114rem;
+}
+
+.bf-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--bf-spacing-grid-gutter));
+  margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
+}
+
+[class^="bf-col-"] {
+  position: relative;
+  min-height: 1px;
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.bf-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.bf-no-gutters > [class^="bf-col"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Column widths */
+
+.bf-col-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.bf-col-11 {
+  flex-basis: 91.6667%;
+  max-width: 91.6667%;
+}
+
+.bf-col-10 {
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+}
+
+.bf-col-9 {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.bf-col-8 {
+  flex-basis: 66.6667%;
+  max-width: 66.6667%;
+}
+
+.bf-col-7 {
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+}
+
+.bf-col-6 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.bf-col-5 {
+  flex-basis: 41.6667%;
+  max-width: 41.6667%;
+}
+
+.bf-col-4 {
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+}
+
+.bf-col-3 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.bf-col-2 {
+  flex-basis: 16.6667%;
+  max-width: 16.6667%;
+}
+
+.bf-col-1 {
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+}
+
+/* Responsive breakpoints: stack columns */
+
+@media (max-width: 575px) {
+  .bf-container--break-xs .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bf-container--break-xs [class^="bf-col"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .bf-container--break-md .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bf-container--break-md [class^="bf-col"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .bf-container--break-lg .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bf-container--break-lg [class^="bf-col"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
+
+table td[class^="bf-col"],
+table th[class^="bf-col"] {
+  position: static;
+}
+
+/* Utilities - Z-index */
+
+.bf-z-index-1 { z-index: 1; }
+
+.bf-z-index-2 { z-index: 2; }
+
+.bf-z-index-3 { z-index: 3; }
+
+.bf-z-index-4 { z-index: 4; }
+
+.bf-z-index-5 { z-index: 5; }
+
+.bf-z-index-6 { z-index: 6; }
+
+.bf-z-index-7 { z-index: 7; }
+
+.bf-z-index-8 { z-index: 8; }
+
+.bf-z-index-9 { z-index: 9; }
+
+.bf-z-index-10 { z-index: 10; }
+
+.bf-z-index-20 { z-index: 20; }
+
+.bf-z-index-30 { z-index: 30; }
+
+.bf-z-index-40 { z-index: 40; }
+
+.bf-z-index-50 { z-index: 50; }
+
+.bf-z-index-60 { z-index: 60; }
+
+.bf-z-index-70 { z-index: 70; }
+
+.bf-z-index-80 { z-index: 80; }
+
+.bf-z-index-90 { z-index: 90; }
+
+.bf-z-index-100 { z-index: 100; }
+
+.bf-z-index-200 { z-index: 200; }
+
+.bf-z-index-300 { z-index: 300; }
+
+/* Utilities - Spacing (similar to Bootstrap)
+ * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
+
+.bf-m-0 {
+  margin: 0 !important;
+}
+
+.bf-m-t-0 {
+  margin-top: 0 !important;
+}
+
+.bf-m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.bf-m-l-0 {
+  margin-left: 0 !important;
+}
+
+.bf-m-r-0 {
+  margin-right: 0 !important;
+}
+
+.bf-m-1 {
+  margin-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-m-2 {
+  margin-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-m-3 {
+  margin-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-m-4 {
+  margin-bottom: var(--bf-spacing-xxl) !important;
+}
+
+.bf-m-t-1 {
+  margin-top: var(--bf-spacing-md) !important;
+}
+
+.bf-m-t-2 {
+  margin-top: var(--bf-spacing-lg) !important;
+}
+
+.bf-m-t-3 {
+  margin-top: var(--bf-spacing-xl) !important;
+}
+
+.bf-m-t-4 {
+  margin-top: var(--bf-spacing-xxl) !important;
+}
+
+.bf-m-b-1 {
+  margin-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-m-b-2 {
+  margin-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-m-b-3 {
+  margin-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-m-b-4 {
+  margin-bottom: var(--bf-spacing-xxl) !important;
+}
+
+.bf-p-0 {
+  padding: 0 !important;
+}
+
+.bf-p-t-0 {
+  padding-top: 0 !important;
+}
+
+.bf-p-b-0 {
+  padding-bottom: 0 !important;
+}
+
+.bf-p-l-0 {
+  padding-left: 0 !important;
+}
+
+.bf-p-r-0 {
+  padding-right: 0 !important;
+}
+
+.bf-p-1 {
+  padding-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-p-2 {
+  padding-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-p-3 {
+  padding-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-p-4 {
+  padding-bottom: var(--bf-spacing-xxl) !important;
+}
+
+.bf-p-t-1 {
+  padding-top: var(--bf-spacing-md) !important;
+}
+
+.bf-p-t-2 {
+  padding-top: var(--bf-spacing-lg) !important;
+}
+
+.bf-p-t-3 {
+  padding-top: var(--bf-spacing-xl) !important;
+}
+
+.bf-p-t-4 {
+  padding-top: var(--bf-spacing-xxl) !important;
+}
+
+.bf-p-b-1 {
+  padding-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-p-b-2 {
+  padding-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-p-b-3 {
+  padding-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-p-b-4 {
+  padding-bottom: var(--bf-spacing-xxl) !important;
+}
+
+/* Utilities - Buttons */
+
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: rgb(34, 34, 34);
-  padding: 0.6666666667rem 1.3333333333rem;
+  color: var(--bf-dark);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
   vertical-align: baseline;
   overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: 0.25rem;
+  border-radius: var(--bf-spacing-sm);
+
   border: 0;
   background-image: none;
-  background-color: rgb(204, 204, 204);
+  background-color: var(--bf-gray-light);
   transition: all 0.2s;
 }
-.bf-btn:hover, .bf-btn:active, .bf-btn:focus {
+
+.bf-btn:hover,
+.bf-btn:active,
+.bf-btn:focus {
   text-decoration: none;
-  color: rgb(34, 34, 34);
-  background: rgb(178.5, 178.5, 178.5);
-}
-.bf-btn:active, .bf-btn:focus {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-}
-.bf-btn.bf-btn--primary {
-  color: rgb(255, 255, 255);
-  background: rgb(0, 123, 255);
-}
-.bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-  color: rgb(255, 255, 255);
-  background: rgb(0, 98.4, 204);
-}
-.bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+  color: var(--bf-dark);
+  background: rgb(184 184 184); /* color.adjust(gray-light, -10%) */
 }
 
-:where(fieldset[disabled] .bf-btn,
-.bf-btn[disabled],
-.bf-btn:disabled,
-.bf-btn[aria-disabled=true]) {
+.bf-btn:active,
+.bf-btn:focus {
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+}
+
+/* Primary button: white on --bf-blue meets WCAG AA 4.5:1 contrast */
+
+.bf-btn.bf-btn--primary {
+  color: var(--bf-white);
+  background: var(--bf-blue);
+}
+
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  color: var(--bf-white);
+  background: var(--bf-blue-light);
+}
+
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  box-shadow: 0 0 0 3px rgb(0 65 135 / 35%);
+}
+
+:where(
+    fieldset[disabled] .bf-btn,
+    .bf-btn[disabled],
+    .bf-btn:disabled,
+    .bf-btn[aria-disabled="true"]
+  ) {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -1860,14 +2548,19 @@ body.bf-responsive-typography {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: rgb(204, 204, 204);
+  background-color: var(--bf-gray-light);
   outline: none !important;
 }
 
+/* Utilities - Form states */
+
 .bf-focused {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
-  border-color: rgb(0, 123, 255) !important;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s !important;
+  border-color: var(--bf-blue) !important;
+  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%) !important;
 }
 
 .bf-disabled,
@@ -1886,8 +2579,8 @@ body.bf-responsive-typography {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(153, 153, 153);
+  background-color: var(--bf-white);
+  border-color: var(--bf-gray);
 }
 
 label.bf-disabled {
@@ -1896,9 +2589,9 @@ label.bf-disabled {
 }
 
 button.bf-disabled,
-[type=button].bf-disabled,
-[type=reset].bf-disabled,
-[type=submit].bf-disabled,
+[type='button'].bf-disabled,
+[type='reset'].bf-disabled,
+[type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
   cursor: default;
   cursor: not-allowed;
@@ -1908,25 +2601,28 @@ button.bf-disabled,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: rgb(34, 34, 34);
-  background: rgb(204, 204, 204);
+  color: var(--bf-dark);
+  background: var(--bf-gray-light);
 }
-button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
-[type=button].bf-disabled:hover,
-[type=button].bf-disabled:active,
-[type=button].bf-disabled:focus,
-[type=reset].bf-disabled:hover,
-[type=reset].bf-disabled:active,
-[type=reset].bf-disabled:focus,
-[type=submit].bf-disabled:hover,
-[type=submit].bf-disabled:active,
-[type=submit].bf-disabled:focus,
+
+button.bf-disabled:hover,
+button.bf-disabled:active,
+button.bf-disabled:focus,
+[type='button'].bf-disabled:hover,
+[type='button'].bf-disabled:active,
+[type='button'].bf-disabled:focus,
+[type='reset'].bf-disabled:hover,
+[type='reset'].bf-disabled:active,
+[type='reset'].bf-disabled:focus,
+[type='submit'].bf-disabled:hover,
+[type='submit'].bf-disabled:active,
+[type='submit'].bf-disabled:focus,
 .bf-btn.bf-disabled:hover,
 .bf-btn.bf-disabled:active,
 .bf-btn.bf-disabled:focus {
   box-shadow: none;
-  color: rgb(34, 34, 34);
-  background: rgb(204, 204, 204);
+  color: var(--bf-dark);
+  background: var(--bf-gray-light);
 }
 
 .bf-btn--primary.bf-disabled {
@@ -1938,23 +2634,28 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: rgb(255, 255, 255);
-  background: rgb(0, 123, 255);
+  color: var(--bf-white);
+  background: var(--bf-blue);
 }
-.bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus {
+
+.bf-btn--primary.bf-disabled:hover,
+.bf-btn--primary.bf-disabled:active,
+.bf-btn--primary.bf-disabled:focus {
   box-shadow: none;
-  color: rgb(255, 255, 255);
-  background: rgb(0, 123, 255);
+  color: var(--bf-white);
+  background: var(--bf-blue);
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: rgb(255, 0, 0) !important;
-  border-color: rgb(255, 0, 0) !important;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
+  color: var(--bf-red) !important;
+  border-color: var(--bf-red) !important;
+  box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }
 
-.custom-checkbox-wrapper [type=checkbox] {
+/* Utilities - Custom radio and checkbox */
+
+.custom-checkbox-wrapper [type="checkbox"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1962,30 +2663,28 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid rgb(153, 153, 153);
+  border: 1px solid var(--bf-gray);
 }
-.custom-checkbox-wrapper [type=checkbox] + label {
+
+.custom-checkbox-wrapper [type="checkbox"] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: 0.5rem;
+  margin-left: var(--bf-spacing-md);
 }
-*[dir=rtl] .custom-checkbox-wrapper [type=checkbox] + label, .custom-checkbox-wrapper [type=checkbox][dir=rtl] + label {
+
+*[dir="rtl"] .custom-checkbox-wrapper [type="checkbox"] + label,
+.custom-checkbox-wrapper [type="checkbox"][dir="rtl"] + label {
   margin-left: 0;
-  margin-right: 0.5rem;
+  margin-right: var(--bf-spacing-md);
 }
-.custom-checkbox-wrapper [type=checkbox]::after {
+
+.custom-checkbox-wrapper [type="checkbox"]::after {
   content: "";
   display: block;
   position: absolute;
-}
-.custom-checkbox-wrapper [type=checkbox]:checked {
-  background-color: rgb(0, 123, 255);
-  border-color: rgb(0, 0, 0);
-}
-.custom-checkbox-wrapper [type=checkbox]::after {
   width: 0.6rem;
   height: 0.8rem;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid var(--bf-white);
   border-top: 0;
   border-left: 0;
   left: 35%;
@@ -1993,7 +2692,12 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   transform: rotate(43deg);
 }
 
-.custom-radio-wrapper [type=radio] {
+.custom-checkbox-wrapper [type="checkbox"]:checked {
+  background-color: var(--bf-blue);
+  border-color: var(--bf-black);
+}
+
+.custom-radio-wrapper [type="radio"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2001,18 +2705,22 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid rgb(153, 153, 153);
+  border: 1px solid var(--bf-gray);
 }
-.custom-radio-wrapper [type=radio] + label {
+
+.custom-radio-wrapper [type="radio"] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: 0.5rem;
+  margin-left: var(--bf-spacing-md);
 }
-*[dir=rtl] .custom-radio-wrapper [type=radio] + label, .custom-radio-wrapper [type=radio][dir=rtl] + label {
+
+*[dir="rtl"] .custom-radio-wrapper [type="radio"] + label,
+.custom-radio-wrapper [type="radio"][dir="rtl"] + label {
   margin-left: 0;
-  margin-right: 0.5rem;
+  margin-right: var(--bf-spacing-md);
 }
-.custom-radio-wrapper [type=radio]::after {
+
+.custom-radio-wrapper [type="radio"]::after {
   content: "";
   display: block;
   position: absolute;
@@ -2021,13 +2729,16 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   left: -0.05rem;
   top: -0.05rem;
   border-radius: 50%;
-  background: rgb(255, 255, 255);
+  background: var(--bf-white);
   transform: scale(0.35);
 }
-.custom-radio-wrapper [type=radio]:checked {
-  background-color: rgb(0, 123, 255);
-  border-color: rgb(0, 0, 0);
+
+.custom-radio-wrapper [type="radio"]:checked {
+  background-color: var(--bf-blue);
+  border-color: var(--bf-black);
 }
+
+/* Utilities - Lists */
 
 .bf-list-unstyled,
 menu ul.bf-list-unstyled,
@@ -2046,6 +2757,65 @@ dt {
   font-weight: 700;
 }
 
+/* Utilities - Filters */
+
+.bf-filter-invert {
+  filter: invert(100%) !important;
+}
+
+.bf-filter-dim-images {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.bf-filter-grayscale {
+  filter: grayscale(1) !important;
+}
+
+.bf-filter-blur {
+  filter: blur(0.3rem) !important;
+}
+
+.bf-filter-none {
+  filter: none !important;
+}
+
+/* Utilities - Tables */
+
+.bf-table th,
+.bf-table td {
+  padding: var(--bf-spacing-lg);
+  border-bottom: 1px solid var(--bf-gray);
+  margin-bottom: var(--bf-spacing-md);
+}
+
+/* responsive tables */
+
+.bf-table-responsive {
+  overflow: auto hidden;
+  -ms-overflow-style: scrollbar;
+}
+
+.bf-table-responsive table {
+  width: 100%;
+  margin-bottom: var(--bf-spacing-md);
+}
+
+/* force webkit scrollbars appearance */
+
+.bf-table-responsive.scrollbar {
+  -webkit-overflow-scrolling: auto;
+}
+
+/* zebra striping */
+
+.bf-table--zebra tbody tr:nth-child(odd),
+.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  background-color: var(--bf-gray-light-extra);
+}
+
+/* Utilities - Embeds (from Bootstrap)
+ * https://getbootstrap.com/docs/4.4/utilities/embed/ */
+
 .bf-embed-responsive {
   position: relative;
   display: block;
@@ -2053,15 +2823,22 @@ dt {
   padding: 0;
   overflow: hidden;
 }
+
 .bf-embed-responsive::before {
   display: block;
   content: "";
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* 16:9 by default */
 }
-.bf-embed-responsive .bf-embed-responsive--4-3::before {
+
+.bf-embed-responsive.bf-embed-responsive--4-3::before {
   padding-top: 75%;
 }
-.bf-embed-responsive .bf-embed-responsive--item, .bf-embed-responsive iframe, .bf-embed-responsive embed, .bf-embed-responsive object, .bf-embed-responsive video {
+
+.bf-embed-responsive .bf-embed-responsive--item,
+.bf-embed-responsive iframe,
+.bf-embed-responsive embed,
+.bf-embed-responsive object,
+.bf-embed-responsive video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2071,105 +2848,13 @@ dt {
   border: 0;
 }
 
-.bf-table th,
-.bf-table td {
-  padding: 1rem;
-  border-bottom: 1px solid rgb(153, 153, 153);
-  margin-bottom: 0.5rem;
-}
+/* Utilities - Reduced motion
+ * prefers-reduced-motion media feature query
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+ *
+ * Taken from https://github.com/jensimmons/cssremedy
+ * See: https://github.com/mozdevs/cssremedy/issues/11 */
 
-.bf-table-responsive {
-  overflow: auto hidden;
-  -ms-overflow-style: scrollbar;
-}
-
-.bf-table-responsive table {
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-
-.bf-table-responsive.scrollbar {
-  -webkit-overflow-scrolling: auto;
-}
-
-.bf-table--zebra tbody tr:nth-child(odd),
-.bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: rgb(233, 233, 233);
-}
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-@media print {
-  body,
-  .bf-container {
-    min-width: 992px !important;
-  }
-  .bf-table-responsive {
-    overflow: auto;
-  }
-  .bf-table-responsive table {
-    width: auto;
-  }
-  .bf-table-responsive table,
-  .bf-table {
-    border-collapse: collapse !important;
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
   .bf-reduced-motion::before,
@@ -2186,71 +2871,160 @@ dt {
     transition-duration: 0s !important;
   }
 }
+
+/* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
+ * Inlined to avoid the additional HTTP request:
+ * https://www.phpied.com/delay-loading-your-print-css/ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* Bullframe-specific print rules */
+  body,
+  .bf-container {
+    min-width: 992px !important;
+  }
+
+  .bf-table-responsive {
+    overflow: auto;
+  }
+
+  .bf-table-responsive table {
+    width: auto;
+  }
+
+  .bf-table-responsive table,
+  .bf-table {
+    border-collapse: collapse !important;
+  }
+}
+
+/* Dark mode overrides - prefers-color-scheme: dark */
+
 @media (prefers-color-scheme: dark) {
   html {
-    color: rgb(240, 240, 240);
+    color: rgb(240 240 240); /* bf-light */
   }
+
   body {
-    background-color: rgb(36.125, 36.125, 36.125);
+    background-color: var(--bf-dark-bg);
   }
+
   a {
-    color: rgb(102, 175.8, 255);
+    color: var(--bf-dark-link);
   }
-  a:hover, a:focus {
-    color: rgb(26, 136.0223463687, 255);
+
+  a:hover,
+  a:focus {
+    color: var(--bf-dark-link-hover);
   }
+
   mark {
-    background-color: #cccc00;
+    background-color: var(--bf-dark-mark-bg);
   }
+
   ins {
-    background-color: hsl(60, 100%, 125%);
+    background-color: var(--bf-dark-ins-bg);
   }
-  [type=email],
-  [type=number],
-  [type=password],
-  [type=tel],
-  [type=search],
-  [type=text],
-  [type=date],
-  [type=datetime-local],
-  [type=month],
-  [type=week],
-  [type=time],
-  [type=url],
-  [type=range],
+
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="week"],
+  [type="time"],
+  [type="url"],
+  [type="range"],
   input[list],
   select,
   select:not([size], select[multiple]),
   textarea {
-    background-color: rgb(17, 17, 17);
-    border-color: rgb(0, 0, 0);
-    color: rgb(204, 204, 204);
+    background-color: var(--bf-dark-extra);
+    border-color: var(--bf-black);
+    color: var(--bf-gray-light);
   }
-  [type=email]:active, [type=email]:focus,
-  [type=number]:active,
-  [type=number]:focus,
-  [type=password]:active,
-  [type=password]:focus,
-  [type=tel]:active,
-  [type=tel]:focus,
-  [type=search]:active,
-  [type=search]:focus,
-  [type=text]:active,
-  [type=text]:focus,
-  [type=date]:active,
-  [type=date]:focus,
-  [type=datetime-local]:active,
-  [type=datetime-local]:focus,
-  [type=month]:active,
-  [type=month]:focus,
-  [type=week]:active,
-  [type=week]:focus,
-  [type=time]:active,
-  [type=time]:focus,
-  [type=url]:active,
-  [type=url]:focus,
-  [type=range]:active,
-  [type=range]:focus,
+
+  [type="email"]:active,
+  [type="email"]:focus,
+  [type="number"]:active,
+  [type="number"]:focus,
+  [type="password"]:active,
+  [type="password"]:focus,
+  [type="tel"]:active,
+  [type="tel"]:focus,
+  [type="search"]:active,
+  [type="search"]:focus,
+  [type="text"]:active,
+  [type="text"]:focus,
+  [type="date"]:active,
+  [type="date"]:focus,
+  [type="datetime-local"]:active,
+  [type="datetime-local"]:focus,
+  [type="month"]:active,
+  [type="month"]:focus,
+  [type="week"]:active,
+  [type="week"]:focus,
+  [type="time"]:active,
+  [type="time"]:focus,
+  [type="url"]:active,
+  [type="url"]:focus,
   input[list]:active,
   input[list]:focus,
   select:active,
@@ -2259,157 +3033,158 @@ dt {
   select:not([size], select[multiple]):focus,
   textarea:active,
   textarea:focus {
-    background-color: rgb(17, 17, 17);
-    border-color: rgb(51, 149.4, 255);
+    background-color: var(--bf-dark-extra);
+    border-color: var(--bf-dark-border-focus);
+    box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
   }
-  [type=email]:active, [type=email]:focus,
-  [type=number]:active,
-  [type=number]:focus,
-  [type=password]:active,
-  [type=password]:focus,
-  [type=tel]:active,
-  [type=tel]:focus,
-  [type=search]:active,
-  [type=search]:focus,
-  [type=text]:active,
-  [type=text]:focus,
-  [type=date]:active,
-  [type=date]:focus,
-  [type=datetime-local]:active,
-  [type=datetime-local]:focus,
-  [type=month]:active,
-  [type=month]:focus,
-  [type=week]:active,
-  [type=week]:focus,
-  [type=time]:active,
-  [type=time]:focus,
-  [type=url]:active,
-  [type=url]:focus,
-  input[list]:active,
-  input[list]:focus,
-  select:active,
-  select:focus,
-  select:not([size], select[multiple]):active,
-  select:not([size], select[multiple]):focus,
-  textarea:active,
-  textarea:focus {
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
-  }
+
   .bf-focused {
-    border-color: rgb(51, 149.4, 255);
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5) !important;
+    border-color: var(--bf-dark-border-focus) !important;
+    box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
   }
+
   .bf-invalid,
   .bf-invalid:focus {
-    color: rgb(255, 38.25, 38.25) !important;
-    border-color: rgb(255, 38.25, 38.25) !important;
+    color: var(--bf-dark-invalid) !important;
+    border-color: var(--bf-dark-invalid) !important;
   }
+
   select:not([size], select[multiple]) {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
   }
-  /* stylelint-disable-next-line */
-}
-@media screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
-  select:not([size], select[multiple]),
-  *[dir=rtl] select:not([size], select[multiple]),
-  select[dir=rtl]:not([size], select[multiple]) {
-    background-image: none;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  [type=range] {
+
+  [type="range"] {
     background-color: transparent;
   }
-  [type=range]:focus {
+
+  [type="range"]:focus {
     background-color: transparent;
   }
-  [type=range]::-webkit-slider-runnable-track {
-    background-color: rgb(17, 17, 17);
+
+  [type="range"]::-webkit-slider-runnable-track {
+    background-color: var(--bf-dark-extra);
   }
-  [type=range]::-moz-range-track {
-    background-color: rgb(17, 17, 17);
+
+  [type="range"]::-moz-range-track {
+    background-color: var(--bf-dark-extra);
   }
+
   input::-moz-placeholder, textarea::-moz-placeholder {
-    color: rgb(153, 153, 153);
+    color: var(--bf-gray);
   }
+
   input::placeholder,
   textarea::placeholder {
-    color: rgb(153, 153, 153);
+    color: var(--bf-gray);
   }
+
   button,
-  [type=button],
-  [type=reset],
-  [type=submit],
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
   .bf-btn {
-    background: rgb(204, 204, 204);
+    background: var(--bf-gray-light);
   }
-  button:hover, button:active, button:focus,
-  [type=button]:hover,
-  [type=button]:active,
-  [type=button]:focus,
-  [type=reset]:hover,
-  [type=reset]:active,
-  [type=reset]:focus,
-  [type=submit]:hover,
-  [type=submit]:active,
-  [type=submit]:focus,
+
+  button:hover,
+  button:active,
+  button:focus,
+  [type="button"]:hover,
+  [type="button"]:active,
+  [type="button"]:focus,
+  [type="reset"]:hover,
+  [type="reset"]:active,
+  [type="reset"]:focus,
+  [type="submit"]:hover,
+  [type="submit"]:active,
+  [type="submit"]:focus,
   .bf-btn:hover,
   .bf-btn:active,
   .bf-btn:focus {
-    background: rgb(178.5, 178.5, 178.5);
+    background: var(--bf-dark-button-hover);
   }
-  button:active, button:focus,
-  [type=button]:active,
-  [type=button]:focus,
-  [type=reset]:active,
-  [type=reset]:focus,
-  [type=submit]:active,
-  [type=submit]:focus,
+
+  button:active,
+  button:focus,
+  [type="button"]:active,
+  [type="button"]:focus,
+  [type="reset"]:active,
+  [type="reset"]:focus,
+  [type="submit"]:active,
+  [type="submit"]:focus,
   .bf-btn:active,
   .bf-btn:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
   }
-  button.bf-disabled,
-  [type=button].bf-disabled,
-  [type=reset].bf-disabled,
-  [type=submit].bf-disabled,
-  .bf-btn.bf-disabled {
-    background: rgb(204, 204, 204);
-  }
-  button:active, button:focus,
-  [type=button]:active,
-  [type=button]:focus,
-  [type=reset]:active,
-  [type=reset]:focus,
-  [type=submit]:active,
-  [type=submit]:focus,
-  .bf-btn:active,
-  .bf-btn:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
-  }
-  .bf-btn--primary.bf-disabled {
-    background: rgb(0, 123, 255);
-  }
+
   .bf-btn.bf-btn--primary {
-    background: rgb(0, 123, 255);
+    background: var(--bf-blue);
   }
-  .bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-    background: rgb(0, 110.7, 229.5);
+
+  .bf-btn.bf-btn--primary:hover,
+  .bf-btn.bf-btn--primary:active,
+  .bf-btn.bf-btn--primary:focus {
+    background: var(--bf-blue-light);
   }
-  .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.75);
+
+  .bf-btn.bf-btn--primary:active,
+  .bf-btn.bf-btn--primary:focus {
+    box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
   }
+
   .bf-table th,
   .bf-table td {
-    border-color: rgb(102, 102, 102);
+    border-color: var(--bf-gray-dark);
   }
+
   .bf-table--zebra tbody tr:nth-child(odd),
   .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-    background-color: rgb(51, 51, 51);
+    background-color: var(--bf-gray-dark-extra);
   }
+
   dialog {
-    color: rgb(240, 240, 240);
-    background-color: rgb(36.125, 36.125, 36.125);
+    color: var(--bf-light);
+    background-color: var(--bf-dark-bg);
+  }
+
+  caption {
+    color: var(--bf-gray-light);
+  }
+
+  progress[value] {
+    background: var(--bf-gray-dark-extra);
+    color: var(--bf-blue);
+  }
+
+  progress[value]::-webkit-progress-bar {
+    background: var(--bf-gray-dark-extra);
+  }
+
+  progress[value]::-webkit-progress-value {
+    background: var(--bf-blue);
+  }
+
+  /* Dark mode scrollbars */
+  html {
+    scrollbar-color: rgb(97 97 97) var(--bf-dark-extra);
+  }
+
+  ::-webkit-scrollbar {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--bf-dark-extra);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(97 97 97);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(115 115 115);
   }
 }
+
 /*# sourceMappingURL=bullframe-system-default.css.map */

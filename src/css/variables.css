@@ -1,0 +1,65 @@
+/* Bullframe CSS v6.0.0 - CSS Custom Properties (Variables) */
+
+:root {
+  /* Colors - Backgrounds, texts and borders */
+  --bf-white: rgb(255 255 255);
+  --bf-light: rgb(240 240 240);
+  --bf-gray-light-extra: rgb(233 233 233);
+  --bf-gray-light: rgb(204 204 204);
+  --bf-gray: rgb(153 153 153);
+  --bf-gray-dark: rgb(102 102 102);
+  --bf-gray-dark-extra: rgb(51 51 51);
+  --bf-dark: rgb(34 34 34);
+  --bf-dark-extra: rgb(17 17 17);
+  --bf-black: rgb(0 0 0);
+
+  /* Colors - Mark and ins */
+  --bf-yellow-light: rgb(255 255 153);
+  --bf-yellow: rgb(255 255 0);
+  --bf-orange: rgb(255 165 0);
+
+  /* Colors - Anchors and accent */
+  /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
+  --bf-blue: rgb(0 86 179); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+  --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
+  --bf-blue-light-extra: rgb(190 216 254);
+
+  /* Colors - Invalid forms */
+  --bf-red: rgb(255 0 0);
+
+  /* Colors - Dark mode adjustments */
+  /* These are used in dark mode to ensure proper contrast and visibility */
+  --bf-dark-bg: rgb(28 28 28); /* dark-extra + 7.5% lightness for body background */
+  --bf-dark-link: rgb(77 165 255); /* blue + 20% lightness for better visibility on dark */
+  --bf-dark-link-hover: rgb(77 165 255); /* blue-light + 20% lightness */
+  --bf-dark-border-focus: rgb(26 140 255); /* blue + 10% lightness for form focus borders */
+  --bf-dark-shadow-focus: rgb(3 102 214 / 50%); /* blue shadow for focus states */
+  --bf-dark-mark-bg: rgb(230 230 0); /* yellow - 10% lightness */
+  --bf-dark-ins-bg: rgb(255 255 200); /* yellow-light + 45% lightness */
+  --bf-dark-button-hover: rgb(184 184 184); /* gray-light -10% lightness */
+  --bf-dark-button-shadow: rgb(255 255 255 / 45%); /* white shadow for button focus */
+  --bf-dark-invalid: rgb(255 38 38); /* red adjusted for dark mode visibility */
+
+  /* Spacing */
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
+
+  /* Typography */
+  --bf-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
+  --bf-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
+
+  /* Breakpoints */
+  --bf-breakpoint-xs: 0;
+  --bf-breakpoint-sm: 576px;
+  --bf-breakpoint-md: 768px;
+  --bf-breakpoint-lg: 992px;
+  --bf-breakpoint-xl: 1200px;
+  --bf-breakpoint-xxl: 1400px;
+}

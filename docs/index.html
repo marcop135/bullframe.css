@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullframe CSS v6.0.0 - Documentation</title>
+  <meta name="description" content="Complete documentation for Bullframe CSS v6.0.0 - A lightweight CSS framework">
+  <link rel="stylesheet" href="../dist/css/bullframe-system-default.min.css">
+  <style>
+    :root {
+      --docs-sidebar-width: 280px;
+      --docs-content-max-width: 900px;
+    }
+    
+    body {
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    .docs-sidebar {
+      width: var(--docs-sidebar-width);
+      background: var(--bf-gray-light-extra);
+      padding: var(--bf-spacing-xl);
+      border-right: 1px solid var(--bf-gray-light);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    
+    .docs-sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: var(--bf-spacing-lg);
+    }
+    
+    .docs-sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .docs-sidebar nav li {
+      margin-bottom: var(--bf-spacing-sm);
+    }
+    
+    .docs-sidebar nav a {
+      display: block;
+      padding: var(--bf-spacing-sm);
+      border-radius: var(--bf-spacing-sm);
+      text-decoration: none;
+    }
+    
+    .docs-sidebar nav a:hover {
+      background: var(--bf-gray-light);
+    }
+    
+    .docs-content {
+      flex: 1;
+      padding: var(--bf-spacing-xl);
+      max-width: var(--docs-content-max-width);
+      margin: 0 auto;
+    }
+    
+    .docs-content section {
+      margin-bottom: var(--bf-spacing-xxl);
+    }
+    
+    .docs-content h2 {
+      border-bottom: 2px solid var(--bf-gray-light);
+      padding-bottom: var(--bf-spacing-md);
+      margin-bottom: var(--bf-spacing-lg);
+    }
+    
+    .docs-content h3 {
+      margin-top: var(--bf-spacing-xl);
+      margin-bottom: var(--bf-spacing-md);
+    }
+    
+    .code-block {
+      background: var(--bf-gray-light-extra);
+      padding: var(--bf-spacing-lg);
+      border-radius: var(--bf-spacing-sm);
+      overflow-x: auto;
+      margin: var(--bf-spacing-lg) 0;
+    }
+    
+    .code-block code {
+      font-family: var(--bf-font-monospace);
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      
+      .docs-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="docs-sidebar">
+    <h2>Bullframe CSS</h2>
+    <nav>
+      <ul>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#variables">CSS Variables</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#layout">Layout & Grid</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#utilities">Utilities</a></li>
+        <li><a href="#theming">Theming</a></li>
+        <li><a href="#browser-support">Browser Support</a></li>
+      </ul>
+    </nav>
+  </aside>
+  
+  <main class="docs-content">
+    <header>
+      <h1>Bullframe CSS v6.0.0</h1>
+      <p class="bf-lead">Complete documentation for Bullframe CSS framework</p>
+    </header>
+    
+    <section id="getting-started">
+      <h2>Getting Started</h2>
+      <p>Bullframe CSS v6.0.0 is a lightweight CSS framework built with native CSS and PostCSS. No Sass required!</p>
+      
+      <h3>CDN Installation</h3>
+      <div class="code-block">
+        <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css"&gt;</code>
+      </div>
+      
+      <h3>npm Installation</h3>
+      <div class="code-block">
+        <code>npm install bullframe.css</code>
+      </div>
+    </section>
+    
+    <section id="variables">
+      <h2>CSS Variables</h2>
+      <p>All variables use the <code>--bf-*</code> prefix and are defined in <code>:root</code>.</p>
+      
+      <h3>Color Variables</h3>
+      <div class="code-block">
+        <code>
+:root {
+  --bf-white: rgb(255 255 255);
+  --bf-dark: rgb(34 34 34);
+  --bf-blue: rgb(0 123 255);
+  /* ... and more */
+}
+        </code>
+      </div>
+      
+      <h3>Spacing Variables</h3>
+      <div class="code-block">
+        <code>
+:root {
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  /* ... */
+}
+        </code>
+      </div>
+    </section>
+    
+    <section id="typography">
+      <h2>Typography</h2>
+      <p>Bullframe provides semantic typography styles for all HTML elements.</p>
+    </section>
+    
+    <section id="layout">
+      <h2>Layout & Grid System</h2>
+      <p>12-column flexbox grid system with responsive breakpoints.</p>
+    </section>
+    
+    <section id="forms">
+      <h2>Forms</h2>
+      <p>Consistent, accessible form styling across all browsers.</p>
+    </section>
+    
+    <section id="buttons">
+      <h2>Buttons</h2>
+      <p>Button components with multiple variants and states.</p>
+    </section>
+    
+    <section id="utilities">
+      <h2>Utilities</h2>
+      <p>Utility classes for spacing, layout, typography, and more.</p>
+    </section>
+    
+    <section id="theming">
+      <h2>Theming</h2>
+      <p>Multiple theme variants: light, dark, and system-default.</p>
+    </section>
+    
+    <section id="browser-support">
+      <h2>Browser Support</h2>
+      <p>Supports all modern browsers. Check <code>.browserslistrc</code> for details.</p>
+    </section>
+  </main>
+</body>
+</html>

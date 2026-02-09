@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullframe CSS - The Lightweight CSS Framework</title>
+  <meta name="description" content="Bullframe CSS is a lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly.">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./css/bullframe-system-default.min.css">
+  <style>
+    :root {
+      --hero-gradient: linear-gradient(135deg, var(--bf-blue) 0%, rgb(0 86 179) 100%);
+      --section-padding: 6rem 0;
+      --feature-icon-size: 3rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: var(--hero-gradient);
+      color: white;
+      padding: 8rem 0 6rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 var(--bf-spacing-xl);
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 700;
+      margin-bottom: var(--bf-spacing-lg);
+      line-height: 1.1;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero .tagline {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      margin-bottom: var(--bf-spacing-xl);
+      opacity: 0.95;
+      font-weight: 300;
+    }
+
+    .hero .version-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      margin-bottom: var(--bf-spacing-xl);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: var(--bf-spacing-lg);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--bf-spacing-xxl);
+    }
+
+    .hero-cta .bf-btn {
+      min-width: 160px;
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+    }
+
+    .hero-cta .bf-btn--primary {
+      background: white;
+      color: var(--bf-blue);
+      border: 2px solid white;
+    }
+
+    .hero-cta .bf-btn--primary:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-cta .bf-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-cta .bf-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Quick Start Section */
+    .quick-start {
+      padding: var(--section-padding);
+      background: var(--bf-gray-light-extra);
+    }
+
+    .quick-start-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .code-example {
+      background: var(--bf-dark);
+      color: var(--bf-light);
+      padding: var(--bf-spacing-xl);
+      border-radius: var(--bf-spacing-sm);
+      margin: var(--bf-spacing-xl) 0;
+      text-align: left;
+      overflow-x: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-example code {
+      font-family: var(--bf-font-monospace);
+      font-size: 0.95rem;
+      color: var(--bf-light);
+    }
+
+    .code-example .comment {
+      color: var(--bf-gray);
+    }
+
+    /* Features Section */
+    .features {
+      padding: var(--section-padding);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--bf-spacing-xl);
+      margin-top: var(--bf-spacing-xxl);
+    }
+
+    .feature-card {
+      padding: var(--bf-spacing-xl);
+      border-radius: var(--bf-spacing-sm);
+      border: 1px solid var(--bf-gray-light);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      width: var(--feature-icon-size);
+      height: var(--feature-icon-size);
+      background: var(--hero-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--bf-spacing-lg);
+      font-size: 1.5rem;
+    }
+
+    .feature-card h3 {
+      margin-bottom: var(--bf-spacing-md);
+      color: var(--bf-blue);
+    }
+
+    /* Stats Section */
+    .stats {
+      padding: var(--section-padding);
+      background: var(--bf-gray-light-extra);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--bf-spacing-xl);
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: var(--bf-spacing-lg);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--bf-blue);
+      display: block;
+      margin-bottom: var(--bf-spacing-sm);
+    }
+
+    .stat-label {
+      color: var(--bf-gray-dark);
+      font-size: 0.95rem;
+    }
+
+    /* Why Section */
+    .why {
+      padding: var(--section-padding);
+    }
+
+    .why-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .why-list {
+      list-style: none;
+      padding: 0;
+      margin: var(--bf-spacing-xl) 0;
+    }
+
+    .why-list li {
+      padding: var(--bf-spacing-md) 0;
+      padding-left: 2rem;
+      position: relative;
+    }
+
+    .why-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--bf-blue);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--bf-dark);
+      color: var(--bf-light);
+      padding: var(--bf-spacing-xxl) 0;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--bf-spacing-xl);
+      flex-wrap: wrap;
+      margin-bottom: var(--bf-spacing-lg);
+    }
+
+    .footer-links a {
+      color: var(--bf-light);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--bf-blue-light-extra);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 4rem 0 3rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-cta .bf-btn {
+        width: 100%;
+      }
+
+      :root {
+        --section-padding: 4rem 0;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Section titles */
+    section h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: var(--bf-spacing-lg);
+    }
+
+    section .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--bf-gray-dark);
+      max-width: 700px;
+      margin: 0 auto var(--bf-spacing-xxl);
+    }
+  </style>
+</head>
+<body class="bf-responsive-typography">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="version-badge">v6.0.0</span>
+      <h1>Bullframe CSS</h1>
+      <p class="tagline">The Lightweight CSS Framework</p>
+      <p class="bf-lead" style="opacity: 0.9; max-width: 600px; margin: 0 auto;">
+        Build fast, responsive, and accessible UIs with native CSS. No Sass required.
+      </p>
+      <div class="hero-cta">
+        <a href="#getting-started" class="bf-btn bf-btn--primary">Get Started</a>
+        <a href="https://github.com/marcop135/bullframe.css" class="bf-btn">GitHub</a>
+        <a href="./docs/demo/index.html" class="bf-btn">View Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Section -->
+  <section class="quick-start" id="getting-started">
+    <div class="quick-start-content">
+      <h2>Get Started in Seconds</h2>
+      <p class="subtitle">Add Bullframe CSS to your project with a single line</p>
+      
+      <div class="code-example">
+        <code>
+          <span class="comment">&lt;!-- CDN --&gt;</span><br>
+          &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css"&gt;
+        </code>
+      </div>
+
+      <div style="margin-top: var(--bf-spacing-xl);">
+        <p>Or install via npm:</p>
+        <div class="code-example">
+          <code>$ npm install bullframe.css</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="bf-container">
+      <h2>Why Bullframe CSS?</h2>
+      <p class="subtitle">Everything you need to build modern web interfaces</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>Native CSS with PostCSS. No Sass compilation overhead. Small bundle size (~8KB gzipped).</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>CSS Custom Properties</h3>
+          <p>All variables use CSS custom properties. Easy to customize and theme without rebuilding.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Fully Responsive</h3>
+          <p>Mobile-first design with flexible grid system. Works perfectly on all screen sizes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">♿</div>
+          <h3>Accessible by Default</h3>
+          <p>Built with accessibility in mind. WCAG compliant colors and focus management.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌙</div>
+          <h3>Dark Mode Ready</h3>
+          <p>Multiple theme variants: light, dark, and system-default. Automatic dark mode support.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🚫</div>
+          <h3>Classless-Friendly</h3>
+          <p>Works with semantic HTML. No utility classes required, but available when you need them.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>Cross-Browser</h3>
+          <p>Consistent styling across all modern browsers. PostCSS autoprefixer included.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔧</div>
+          <h3>Framework Agnostic</h3>
+          <p>Works with any JavaScript framework or vanilla HTML. No dependencies required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="bf-container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">~8KB</span>
+          <span class="stat-label">Gzipped Size</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Dependencies</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Native CSS</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">9+</span>
+          <span class="stat-label">Build Variants</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Section -->
+  <section class="why">
+    <div class="why-content">
+      <h2>Perfect For</h2>
+      <p class="subtitle">Ideal for a wide range of projects</p>
+      
+      <ul class="why-list">
+        <li><strong>Landing Pages</strong> — Fast, beautiful pages that convert</li>
+        <li><strong>Marketing Sites</strong> — Professional sites with minimal setup</li>
+        <li><strong>Blogs & Docs</strong> — Clean typography and readable layouts</li>
+        <li><strong>Product Listings</strong> — Responsive grids and cards</li>
+        <li><strong>Micro-sites</strong> — Quick prototypes and MVPs</li>
+        <li><strong>Admin Dashboards</strong> — Consistent form and table styling</li>
+      </ul>
+
+      <div style="text-align: center; margin-top: var(--bf-spacing-xxl);">
+        <a href="./docs/demo/index.html" class="bf-btn bf-btn--primary bf-btn--lg">Explore Demo</a>
+        <a href="https://github.com/marcop135/bullframe.css/blob/master/README.md" class="bf-btn bf-btn--lg" style="margin-left: var(--bf-spacing-md);">Read Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="bf-container">
+      <div class="footer-links">
+        <a href="https://github.com/marcop135/bullframe.css">GitHub</a>
+        <a href="https://www.npmjs.com/package/bullframe.css">npm</a>
+        <a href="https://github.com/marcop135/bullframe.css/blob/master/README.md">Documentation</a>
+        <a href="dist/docs/demo/index.html">Demo</a>
+        <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE">License</a>
+      </div>
+      <p style="opacity: 0.8; margin-top: var(--bf-spacing-lg);">
+        Made with ❤️ by <a href="https://marcopontili.com" style="color: var(--bf-blue-light-extra);">Marco Pontili</a>
+      </p>
+      <p style="opacity: 0.6; margin-top: var(--bf-spacing-sm); font-size: 0.9rem;">
+        Bullframe CSS v6.0.0 — MIT License
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

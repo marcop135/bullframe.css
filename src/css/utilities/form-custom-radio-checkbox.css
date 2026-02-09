@@ -1,0 +1,80 @@
+/* Utilities - Custom radio and checkbox */
+
+.custom-checkbox-wrapper [type="checkbox"] {
+  appearance: none;
+  height: 1.8rem;
+  width: 1.8rem;
+  vertical-align: top;
+  position: relative;
+  border: 1px solid var(--bf-gray);
+}
+
+.custom-checkbox-wrapper [type="checkbox"] + label {
+  line-height: 1.8rem;
+  vertical-align: top;
+  margin-left: var(--bf-spacing-md);
+}
+
+*[dir="rtl"] .custom-checkbox-wrapper [type="checkbox"] + label,
+.custom-checkbox-wrapper [type="checkbox"][dir="rtl"] + label {
+  margin-left: 0;
+  margin-right: var(--bf-spacing-md);
+}
+
+.custom-checkbox-wrapper [type="checkbox"]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.6rem;
+  height: 0.8rem;
+  border: 2px solid var(--bf-white);
+  border-top: 0;
+  border-left: 0;
+  left: 35%;
+  top: 20%;
+  transform: rotate(43deg);
+}
+
+.custom-checkbox-wrapper [type="checkbox"]:checked {
+  background-color: var(--bf-blue);
+  border-color: var(--bf-black);
+}
+
+.custom-radio-wrapper [type="radio"] {
+  appearance: none;
+  height: 1.8rem;
+  width: 1.8rem;
+  vertical-align: top;
+  position: relative;
+  border: 1px solid var(--bf-gray);
+}
+
+.custom-radio-wrapper [type="radio"] + label {
+  line-height: 1.8rem;
+  vertical-align: top;
+  margin-left: var(--bf-spacing-md);
+}
+
+*[dir="rtl"] .custom-radio-wrapper [type="radio"] + label,
+.custom-radio-wrapper [type="radio"][dir="rtl"] + label {
+  margin-left: 0;
+  margin-right: var(--bf-spacing-md);
+}
+
+.custom-radio-wrapper [type="radio"]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  left: -0.05rem;
+  top: -0.05rem;
+  border-radius: 50%;
+  background: var(--bf-white);
+  transform: scale(0.35);
+}
+
+.custom-radio-wrapper [type="radio"]:checked {
+  background-color: var(--bf-blue);
+  border-color: var(--bf-black);
+}

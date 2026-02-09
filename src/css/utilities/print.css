@@ -1,0 +1,78 @@
+/* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
+ * Inlined to avoid the additional HTTP request:
+ * https://www.phpied.com/delay-loading-your-print-css/ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* Bullframe-specific print rules */
+  body,
+  .bf-container {
+    min-width: 992px !important;
+  }
+
+  .bf-table-responsive {
+    overflow: auto;
+  }
+
+  .bf-table-responsive table {
+    width: auto;
+  }
+
+  .bf-table-responsive table,
+  .bf-table {
+    border-collapse: collapse !important;
+  }
+}

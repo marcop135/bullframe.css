@@ -1,6 +1,6 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-standard-scss"],
+  extends: ["stylelint-config-standard"],
   rules: {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
@@ -11,8 +11,6 @@ export default {
     "no-descending-specificity": null,
     "value-keyword-case": null,
     "selector-class-pattern": null,
-    "scss/comment-no-empty": null,
-    "scss/double-slash-comment-empty-line-before": null,
     "rule-empty-line-before": null,
     "comment-empty-line-before": null,
     "at-rule-empty-line-before": null,
@@ -21,7 +19,5 @@ export default {
     "no-duplicate-selectors": null,
     "declaration-block-single-line-max-declarations": null,
     "selector-id-pattern": null,
-    "scss/at-mixin-pattern": null,
-    "scss/dollar-variable-pattern": null,
   },
 };

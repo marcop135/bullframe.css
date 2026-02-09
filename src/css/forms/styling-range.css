@@ -1,0 +1,94 @@
+/* Forms - Range input styling */
+
+/* styling input range in modern browsers safely using the @supports CSS-at-rule
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
+ *
+ * standalone CodePen demo https://codepen.io/marcop135/pen/JjGrNMx */
+
+:where([type="range"]) {
+  appearance: none;
+  width: 100%;
+  height: 1.4rem;
+}
+
+:where([type="range"])::-webkit-slider-thumb {
+  border: 0;
+  appearance: none;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -0.25rem;
+  background-color: var(--bf-blue);
+  border-radius: 1.5rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+:where([type="range"])::-webkit-slider-thumb:active {
+  background-color: var(--bf-blue);
+}
+
+:where([type="range"])::-moz-range-thumb {
+  border: 0;
+  appearance: none;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--bf-blue);
+  border-radius: 1.5rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+:where([type="range"])::-moz-range-thumb:active {
+  background-color: var(--bf-blue);
+}
+
+:where([type="range"])::-webkit-slider-runnable-track {
+  color: transparent;
+  border-color: transparent;
+
+  width: 100%;
+  height: 0.65rem;
+  cursor: pointer;
+  background-color: var(--bf-gray-light-extra);
+}
+
+:where([type="range"])::-moz-range-track {
+  color: transparent;
+  border-color: transparent;
+
+  width: 100%;
+  height: 0.65rem;
+  cursor: pointer;
+  background-color: var(--bf-gray-light-extra);
+}
+
+:where([type="range"]):focus {
+  outline: none;
+}
+
+:where([type="range"]):focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+:where([type="range"]):focus::-moz-range-thumb {
+  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+:where([type="range"])::-moz-focus-outer {
+  border: 0;
+}
+
+/* disabled */
+:where([type="range"]):disabled {
+  pointer-events: none;
+}
+
+:where([type="range"]):disabled::-webkit-slider-thumb {
+  background-color: var(--bf-gray-light);
+}
+
+:where([type="range"]):disabled::-moz-range-thumb {
+  background-color: var(--bf-gray-light);
+}

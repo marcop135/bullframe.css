@@ -1,147 +1,82 @@
-/* ! Bullframe CSS v5.1.1 | MIT License | https://github.com/marcop135/bullframe.css  */
+/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
-.bf-container,
-.bf-container--fluid {
-  box-sizing: border-box;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
+/* Bullframe CSS v6.0.0 - Utilities Only */
 
-.bf-container {
-  max-width: 114rem;
-}
+/* Variables */
 
-.bf-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
+/* Bullframe CSS v6.0.0 - CSS Custom Properties (Variables) */
 
-[class^=bf-col-] {
-  position: relative;
-  min-height: 1px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
+:root {
+  /* Colors - Backgrounds, texts and borders */
+  --bf-white: rgb(255 255 255);
+  --bf-light: rgb(240 240 240);
+  --bf-gray-light-extra: rgb(233 233 233);
+  --bf-gray-light: rgb(204 204 204);
+  --bf-gray: rgb(153 153 153);
+  --bf-gray-dark: rgb(102 102 102);
+  --bf-gray-dark-extra: rgb(51 51 51);
+  --bf-dark: rgb(34 34 34);
+  --bf-dark-extra: rgb(17 17 17);
+  --bf-black: rgb(0 0 0);
 
-.bf-no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-}
-.bf-no-gutters > [class^=bf-col] {
-  padding-right: 0;
-  padding-left: 0;
-}
+  /* Colors - Mark and ins */
+  --bf-yellow-light: rgb(255 255 153);
+  --bf-yellow: rgb(255 255 0);
+  --bf-orange: rgb(255 165 0);
 
-.bf-col-12 {
-  flex-basis: 100%;
-  max-width: 100%;
-}
+  /* Colors - Anchors and accent */
+  /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
+  --bf-blue: rgb(0 86 179); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+  --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
+  --bf-blue-light-extra: rgb(190 216 254);
 
-.bf-col-11 {
-  flex-basis: 91.6667%;
-  max-width: 91.6667%;
-}
+  /* Colors - Invalid forms */
+  --bf-red: rgb(255 0 0);
 
-.bf-col-10 {
-  flex-basis: 83.3333%;
-  max-width: 83.3333%;
-}
+  /* Colors - Dark mode adjustments */
+  /* These are used in dark mode to ensure proper contrast and visibility */
+  --bf-dark-bg: rgb(28 28 28); /* dark-extra + 7.5% lightness for body background */
+  --bf-dark-link: rgb(77 165 255); /* blue + 20% lightness for better visibility on dark */
+  --bf-dark-link-hover: rgb(77 165 255); /* blue-light + 20% lightness */
+  --bf-dark-border-focus: rgb(26 140 255); /* blue + 10% lightness for form focus borders */
+  --bf-dark-shadow-focus: rgb(3 102 214 / 50%); /* blue shadow for focus states */
+  --bf-dark-mark-bg: rgb(230 230 0); /* yellow - 10% lightness */
+  --bf-dark-ins-bg: rgb(255 255 200); /* yellow-light + 45% lightness */
+  --bf-dark-button-hover: rgb(184 184 184); /* gray-light -10% lightness */
+  --bf-dark-button-shadow: rgb(255 255 255 / 45%); /* white shadow for button focus */
+  --bf-dark-invalid: rgb(255 38 38); /* red adjusted for dark mode visibility */
 
-.bf-col-9 {
-  flex-basis: 75%;
-  max-width: 75%;
-}
+  /* Spacing */
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
 
-.bf-col-8 {
-  flex-basis: 66.6667%;
-  max-width: 66.6667%;
-}
+  /* Typography */
+  --bf-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
+  --bf-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
 
-.bf-col-7 {
-  flex-basis: 58.3333%;
-  max-width: 58.3333%;
-}
-
-.bf-col-6 {
-  flex-basis: 50%;
-  max-width: 50%;
+  /* Breakpoints */
+  --bf-breakpoint-xs: 0;
+  --bf-breakpoint-sm: 576px;
+  --bf-breakpoint-md: 768px;
+  --bf-breakpoint-lg: 992px;
+  --bf-breakpoint-xl: 1200px;
+  --bf-breakpoint-xxl: 1400px;
 }
 
-.bf-col-5 {
-  flex-basis: 41.6667%;
-  max-width: 41.6667%;
-}
+/* Utilities */
 
-.bf-col-4 {
-  flex-basis: 33.3333%;
-  max-width: 33.3333%;
-}
+/* Utilities - Layout */
 
-.bf-col-3 {
-  flex-basis: 25%;
-  max-width: 25%;
-}
-
-.bf-col-2 {
-  flex-basis: 16.6667%;
-  max-width: 16.6667%;
-}
-
-.bf-col-1 {
-  flex-basis: 8.3333%;
-  max-width: 8.3333%;
-}
-
-@media (max-width: 575px) {
-  .bf-container--break-xs .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-xs [class^=bf-col] {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 767px) {
-  .bf-container--break-md .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-md [class^=bf-col] {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 991px) {
-  .bf-container--break-lg .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-lg [class^=bf-col] {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-table td[class^=bf-col],
-table th[class^=bf-col] {
-  position: static;
-}
+/* micro-clearfix
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
 
 .bf-clearfix::before,
 .bf-clearfix::after {
@@ -157,13 +92,14 @@ table th[class^=bf-col] {
   display: none !important;
 }
 
+/* assistive text for screen reader only (e.g. form labels) */
+
 .bf-hidden {
   display: none !important;
   visibility: hidden !important;
 }
 
 .bf-text-hide {
-  /* stylelint-disable-next-line */
   font: 0/0 a !important;
   color: transparent !important;
   text-shadow: none !important;
@@ -174,15 +110,16 @@ table th[class^=bf-col] {
 }
 
 /*
-// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-//
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
+ * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+ *
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -196,12 +133,13 @@ table th[class^=bf-col] {
 }
 
 /*
-// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-//
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
+ * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
+ *
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -289,6 +227,8 @@ table th[class^=bf-col] {
   position: relative !important;
 }
 
+/* https://css-tricks.com/centering-css-complete-guide */
+
 .bf-align-center-unknown {
   position: relative !important;
 }
@@ -331,225 +271,7 @@ table th[class^=bf-col] {
   width: auto !important;
 }
 
-.bf-z-index-1 {
-  z-index: 1;
-}
-
-.bf-z-index-2 {
-  z-index: 2;
-}
-
-.bf-z-index-3 {
-  z-index: 3;
-}
-
-.bf-z-index-4 {
-  z-index: 4;
-}
-
-.bf-z-index-5 {
-  z-index: 5;
-}
-
-.bf-z-index-6 {
-  z-index: 6;
-}
-
-.bf-z-index-7 {
-  z-index: 7;
-}
-
-.bf-z-index-8 {
-  z-index: 8;
-}
-
-.bf-z-index-9 {
-  z-index: 9;
-}
-
-.bf-z-index-10 {
-  z-index: 10;
-}
-
-.bf-z-index-20 {
-  z-index: 20;
-}
-
-.bf-z-index-30 {
-  z-index: 30;
-}
-
-.bf-z-index-40 {
-  z-index: 40;
-}
-
-.bf-z-index-50 {
-  z-index: 50;
-}
-
-.bf-z-index-60 {
-  z-index: 60;
-}
-
-.bf-z-index-70 {
-  z-index: 70;
-}
-
-.bf-z-index-80 {
-  z-index: 80;
-}
-
-.bf-z-index-90 {
-  z-index: 90;
-}
-
-.bf-z-index-100 {
-  z-index: 100;
-}
-
-.bf-z-index-200 {
-  z-index: 200;
-}
-
-.bf-z-index-300 {
-  z-index: 200;
-}
-
-.bf-m-0 {
-  margin: 0 !important;
-}
-
-.bf-m-t-0 {
-  margin-top: 0 !important;
-}
-
-.bf-m-b-0 {
-  margin-bottom: 0 !important;
-}
-
-.bf-m-l-0 {
-  margin-left: 0 !important;
-}
-
-.bf-m-r-0 {
-  margin-right: 0 !important;
-}
-
-.bf-m-1 {
-  margin-bottom: 0.5rem !important;
-}
-
-.bf-m-2 {
-  margin-bottom: 1rem !important;
-}
-
-.bf-m-3 {
-  margin-bottom: 2rem !important;
-}
-
-.bf-m-4 {
-  margin-bottom: 3rem !important;
-}
-
-.bf-m-t-1 {
-  margin-top: 0.5rem !important;
-}
-
-.bf-m-t-2 {
-  margin-top: 1rem !important;
-}
-
-.bf-m-t-3 {
-  margin-top: 2rem !important;
-}
-
-.bf-m-t-4 {
-  margin-top: 3rem !important;
-}
-
-.bf-m-b-1 {
-  margin-bottom: 0.5rem !important;
-}
-
-.bf-m-b-2 {
-  margin-bottom: 1rem !important;
-}
-
-.bf-m-b-3 {
-  margin-bottom: 2rem !important;
-}
-
-.bf-m-b-4 {
-  margin-bottom: 3rem !important;
-}
-
-.bf-p-0 {
-  padding: 0 !important;
-}
-
-.bf-p-t-0 {
-  padding-top: 0 !important;
-}
-
-.bf-p-b-0 {
-  padding-bottom: 0 !important;
-}
-
-.bf-p-l-0 {
-  padding-left: 0 !important;
-}
-
-.bf-p-r-0 {
-  padding-right: 0 !important;
-}
-
-.bf-p-1 {
-  padding-bottom: 0.5rem !important;
-}
-
-.bf-p-2 {
-  padding-bottom: 1rem !important;
-}
-
-.bf-p-3 {
-  padding-bottom: 2rem !important;
-}
-
-.bf-p-4 {
-  padding-bottom: 3rem !important;
-}
-
-.bf-p-t-1 {
-  padding-top: 0.5rem !important;
-}
-
-.bf-p-t-2 {
-  padding-top: 1rem !important;
-}
-
-.bf-p-t-3 {
-  padding-top: 2rem !important;
-}
-
-.bf-p-t-4 {
-  padding-top: 3rem !important;
-}
-
-.bf-p-b-1 {
-  padding-bottom: 0.5rem !important;
-}
-
-.bf-p-b-2 {
-  padding-bottom: 1rem !important;
-}
-
-.bf-p-b-3 {
-  padding-bottom: 2rem !important;
-}
-
-.bf-p-b-4 {
-  padding-bottom: 3rem !important;
-}
+/* Utilities - Texts */
 
 .bf-t-transform-uppercase {
   text-transform: uppercase !important;
@@ -572,17 +294,21 @@ table th[class^=bf-col] {
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px rgb(34, 34, 34) !important;
-  text-shadow: 0 0 0.2rem rgb(34, 34, 34) !important;
+  text-shadow: 0 0 2px var(--bf-dark) !important;
+  text-shadow: 0 0 0.2rem var(--bf-dark) !important;
 }
 
 .bf-t-italic {
   font-style: italic !important;
 }
 
+/* useful to 'reset' <i> inherited style */
+
 .bf-t-style-normal {
   font-style: normal !important;
 }
+
+/* useful to 'reset' <b> inherited style */
 
 .bf-t-weight-300 {
   font-weight: 300 !important;
@@ -646,91 +372,75 @@ table th[class^=bf-col] {
 }
 
 .bf-font-sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: var(--bf-font-sans-serif) !important;
 }
 
 .bf-font-serif {
-  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: var(--bf-font-serif) !important;
 }
 
 .bf-font-monospace {
-  font-family: Menlo, Consolas, "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: var(--bf-font-monospace) !important;
 }
 
-/* Font stacks from Modern Font Stacks (https://modernfontstacks.com/)
-   System font stack CSS organized by typeface classification for every modern OS
-   Fastest fonts available. No downloading, no layout shifts, instant renders. */
-/* Sans-serif system */
+/* Font stacks from Modern Font Stacks (https://modernfontstacks.com/) */
+
 .bf-sans-serif--system {
   font-family: system-ui, sans-serif;
 }
 
-/* Transitional serif */
 .bf-serif--transitional {
   font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
 }
 
-/* Old style serif */
 .bf-serif--oldstyle {
   font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 }
 
-/* Humanist sans-serif */
 .bf-sans-serif--humanist {
   font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, sans-serif;
 }
 
-/* Geometric humanist sans-serif */
 .bf-sans-serif--geometric {
   font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
 }
 
-/* Classical humanist sans-serif */
 .bf-sans-serif--classical {
   font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 }
 
-/* Neo-grotesque sans-serif */
 .bf-sans-serif--neo-grotesque {
   font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
 }
 
-/* Monospace slab serif */
 .bf-monospace--slab {
   font-family: "Nimbus Mono PS", "Courier New", monospace;
 }
 
-/* Monospace code */
 .bf-monospace--code {
   font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 }
 
-/* Industrial display */
 .bf-sans-serif--industrial {
   font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
 }
 
-/* Rounded sans display */
 .bf-sans-serif--rounded {
   font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro, sans-serif;
 }
 
-/* Slab serif display */
 .bf-serif--slab {
   font-family: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
 }
 
-/* Antique display */
 .bf-serif--antique {
   font-family: Superclarendon, "Bookman Old Style", "URW Bookman", "URW Bookman L", "Georgia Pro", Georgia, serif;
 }
 
-/* Didone display */
 .bf-serif--didone {
   font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
 }
 
-/* Handwritten display */
 .bf-cursive--handwritten {
   font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
 }
@@ -744,7 +454,7 @@ table th[class^=bf-col] {
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-h1 {
@@ -781,51 +491,410 @@ body.bf-responsive-typography {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
 
+/* Utilities - Grid system */
+
+.bf-container,
+.bf-container--fluid {
+  box-sizing: border-box;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
+}
+
+.bf-container {
+  max-width: 114rem;
+}
+
+.bf-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--bf-spacing-grid-gutter));
+  margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
+}
+
+[class^="bf-col-"] {
+  position: relative;
+  min-height: 1px;
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.bf-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.bf-no-gutters > [class^="bf-col"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Column widths */
+
+.bf-col-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.bf-col-11 {
+  flex-basis: 91.6667%;
+  max-width: 91.6667%;
+}
+
+.bf-col-10 {
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+}
+
+.bf-col-9 {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.bf-col-8 {
+  flex-basis: 66.6667%;
+  max-width: 66.6667%;
+}
+
+.bf-col-7 {
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+}
+
+.bf-col-6 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.bf-col-5 {
+  flex-basis: 41.6667%;
+  max-width: 41.6667%;
+}
+
+.bf-col-4 {
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+}
+
+.bf-col-3 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.bf-col-2 {
+  flex-basis: 16.6667%;
+  max-width: 16.6667%;
+}
+
+.bf-col-1 {
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+}
+
+/* Responsive breakpoints: stack columns */
+
+@media (max-width: 575px) {
+  .bf-container--break-xs .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bf-container--break-xs [class^="bf-col"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .bf-container--break-md .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bf-container--break-md [class^="bf-col"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .bf-container--break-lg .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bf-container--break-lg [class^="bf-col"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
+
+table td[class^="bf-col"],
+table th[class^="bf-col"] {
+  position: static;
+}
+
+/* Utilities - Z-index */
+
+.bf-z-index-1 { z-index: 1; }
+
+.bf-z-index-2 { z-index: 2; }
+
+.bf-z-index-3 { z-index: 3; }
+
+.bf-z-index-4 { z-index: 4; }
+
+.bf-z-index-5 { z-index: 5; }
+
+.bf-z-index-6 { z-index: 6; }
+
+.bf-z-index-7 { z-index: 7; }
+
+.bf-z-index-8 { z-index: 8; }
+
+.bf-z-index-9 { z-index: 9; }
+
+.bf-z-index-10 { z-index: 10; }
+
+.bf-z-index-20 { z-index: 20; }
+
+.bf-z-index-30 { z-index: 30; }
+
+.bf-z-index-40 { z-index: 40; }
+
+.bf-z-index-50 { z-index: 50; }
+
+.bf-z-index-60 { z-index: 60; }
+
+.bf-z-index-70 { z-index: 70; }
+
+.bf-z-index-80 { z-index: 80; }
+
+.bf-z-index-90 { z-index: 90; }
+
+.bf-z-index-100 { z-index: 100; }
+
+.bf-z-index-200 { z-index: 200; }
+
+.bf-z-index-300 { z-index: 300; }
+
+/* Utilities - Spacing (similar to Bootstrap)
+ * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
+
+.bf-m-0 {
+  margin: 0 !important;
+}
+
+.bf-m-t-0 {
+  margin-top: 0 !important;
+}
+
+.bf-m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.bf-m-l-0 {
+  margin-left: 0 !important;
+}
+
+.bf-m-r-0 {
+  margin-right: 0 !important;
+}
+
+.bf-m-1 {
+  margin-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-m-2 {
+  margin-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-m-3 {
+  margin-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-m-4 {
+  margin-bottom: var(--bf-spacing-xxl) !important;
+}
+
+.bf-m-t-1 {
+  margin-top: var(--bf-spacing-md) !important;
+}
+
+.bf-m-t-2 {
+  margin-top: var(--bf-spacing-lg) !important;
+}
+
+.bf-m-t-3 {
+  margin-top: var(--bf-spacing-xl) !important;
+}
+
+.bf-m-t-4 {
+  margin-top: var(--bf-spacing-xxl) !important;
+}
+
+.bf-m-b-1 {
+  margin-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-m-b-2 {
+  margin-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-m-b-3 {
+  margin-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-m-b-4 {
+  margin-bottom: var(--bf-spacing-xxl) !important;
+}
+
+.bf-p-0 {
+  padding: 0 !important;
+}
+
+.bf-p-t-0 {
+  padding-top: 0 !important;
+}
+
+.bf-p-b-0 {
+  padding-bottom: 0 !important;
+}
+
+.bf-p-l-0 {
+  padding-left: 0 !important;
+}
+
+.bf-p-r-0 {
+  padding-right: 0 !important;
+}
+
+.bf-p-1 {
+  padding-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-p-2 {
+  padding-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-p-3 {
+  padding-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-p-4 {
+  padding-bottom: var(--bf-spacing-xxl) !important;
+}
+
+.bf-p-t-1 {
+  padding-top: var(--bf-spacing-md) !important;
+}
+
+.bf-p-t-2 {
+  padding-top: var(--bf-spacing-lg) !important;
+}
+
+.bf-p-t-3 {
+  padding-top: var(--bf-spacing-xl) !important;
+}
+
+.bf-p-t-4 {
+  padding-top: var(--bf-spacing-xxl) !important;
+}
+
+.bf-p-b-1 {
+  padding-bottom: var(--bf-spacing-md) !important;
+}
+
+.bf-p-b-2 {
+  padding-bottom: var(--bf-spacing-lg) !important;
+}
+
+.bf-p-b-3 {
+  padding-bottom: var(--bf-spacing-xl) !important;
+}
+
+.bf-p-b-4 {
+  padding-bottom: var(--bf-spacing-xxl) !important;
+}
+
+/* Utilities - Buttons */
+
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: rgb(34, 34, 34);
-  padding: 0.6666666667rem 1.3333333333rem;
+  color: var(--bf-dark);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
   background-clip: padding-box;
   vertical-align: baseline;
   overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: 0.25rem;
+  border-radius: var(--bf-spacing-sm);
+
   border: 0;
   background-image: none;
-  background-color: rgb(204, 204, 204);
+  background-color: var(--bf-gray-light);
   transition: all 0.2s;
 }
-.bf-btn:hover, .bf-btn:active, .bf-btn:focus {
+
+.bf-btn:hover,
+.bf-btn:active,
+.bf-btn:focus {
   text-decoration: none;
-  color: rgb(34, 34, 34);
-  background: rgb(178.5, 178.5, 178.5);
-}
-.bf-btn:active, .bf-btn:focus {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-}
-.bf-btn.bf-btn--primary {
-  color: rgb(255, 255, 255);
-  background: rgb(0, 123, 255);
-}
-.bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-  color: rgb(255, 255, 255);
-  background: rgb(0, 98.4, 204);
-}
-.bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+  color: var(--bf-dark);
+  background: rgb(184 184 184); /* color.adjust(gray-light, -10%) */
 }
 
-:where(fieldset[disabled] .bf-btn,
-.bf-btn[disabled],
-.bf-btn:disabled,
-.bf-btn[aria-disabled=true]) {
+.bf-btn:active,
+.bf-btn:focus {
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+}
+
+/* Primary button: white on --bf-blue meets WCAG AA 4.5:1 contrast */
+
+.bf-btn.bf-btn--primary {
+  color: var(--bf-white);
+  background: var(--bf-blue);
+}
+
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  color: var(--bf-white);
+  background: var(--bf-blue-light);
+}
+
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  box-shadow: 0 0 0 3px rgb(0 65 135 / 35%);
+}
+
+:where(
+    fieldset[disabled] .bf-btn,
+    .bf-btn[disabled],
+    .bf-btn:disabled,
+    .bf-btn[aria-disabled="true"]
+  ) {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -834,14 +903,19 @@ body.bf-responsive-typography {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: rgb(204, 204, 204);
+  background-color: var(--bf-gray-light);
   outline: none !important;
 }
 
+/* Utilities - Form states */
+
 .bf-focused {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
-  border-color: rgb(0, 123, 255) !important;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s !important;
+  border-color: var(--bf-blue) !important;
+  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%) !important;
 }
 
 .bf-disabled,
@@ -860,8 +934,8 @@ body.bf-responsive-typography {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(153, 153, 153);
+  background-color: var(--bf-white);
+  border-color: var(--bf-gray);
 }
 
 label.bf-disabled {
@@ -870,9 +944,9 @@ label.bf-disabled {
 }
 
 button.bf-disabled,
-[type=button].bf-disabled,
-[type=reset].bf-disabled,
-[type=submit].bf-disabled,
+[type='button'].bf-disabled,
+[type='reset'].bf-disabled,
+[type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
   cursor: default;
   cursor: not-allowed;
@@ -882,25 +956,28 @@ button.bf-disabled,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: rgb(34, 34, 34);
-  background: rgb(204, 204, 204);
+  color: var(--bf-dark);
+  background: var(--bf-gray-light);
 }
-button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
-[type=button].bf-disabled:hover,
-[type=button].bf-disabled:active,
-[type=button].bf-disabled:focus,
-[type=reset].bf-disabled:hover,
-[type=reset].bf-disabled:active,
-[type=reset].bf-disabled:focus,
-[type=submit].bf-disabled:hover,
-[type=submit].bf-disabled:active,
-[type=submit].bf-disabled:focus,
+
+button.bf-disabled:hover,
+button.bf-disabled:active,
+button.bf-disabled:focus,
+[type='button'].bf-disabled:hover,
+[type='button'].bf-disabled:active,
+[type='button'].bf-disabled:focus,
+[type='reset'].bf-disabled:hover,
+[type='reset'].bf-disabled:active,
+[type='reset'].bf-disabled:focus,
+[type='submit'].bf-disabled:hover,
+[type='submit'].bf-disabled:active,
+[type='submit'].bf-disabled:focus,
 .bf-btn.bf-disabled:hover,
 .bf-btn.bf-disabled:active,
 .bf-btn.bf-disabled:focus {
   box-shadow: none;
-  color: rgb(34, 34, 34);
-  background: rgb(204, 204, 204);
+  color: var(--bf-dark);
+  background: var(--bf-gray-light);
 }
 
 .bf-btn--primary.bf-disabled {
@@ -912,23 +989,28 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: rgb(255, 255, 255);
-  background: rgb(0, 123, 255);
+  color: var(--bf-white);
+  background: var(--bf-blue);
 }
-.bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus {
+
+.bf-btn--primary.bf-disabled:hover,
+.bf-btn--primary.bf-disabled:active,
+.bf-btn--primary.bf-disabled:focus {
   box-shadow: none;
-  color: rgb(255, 255, 255);
-  background: rgb(0, 123, 255);
+  color: var(--bf-white);
+  background: var(--bf-blue);
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: rgb(255, 0, 0) !important;
-  border-color: rgb(255, 0, 0) !important;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
+  color: var(--bf-red) !important;
+  border-color: var(--bf-red) !important;
+  box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }
 
-.custom-checkbox-wrapper [type=checkbox] {
+/* Utilities - Custom radio and checkbox */
+
+.custom-checkbox-wrapper [type="checkbox"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -936,30 +1018,28 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid rgb(153, 153, 153);
+  border: 1px solid var(--bf-gray);
 }
-.custom-checkbox-wrapper [type=checkbox] + label {
+
+.custom-checkbox-wrapper [type="checkbox"] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: 0.5rem;
+  margin-left: var(--bf-spacing-md);
 }
-*[dir=rtl] .custom-checkbox-wrapper [type=checkbox] + label, .custom-checkbox-wrapper [type=checkbox][dir=rtl] + label {
+
+*[dir="rtl"] .custom-checkbox-wrapper [type="checkbox"] + label,
+.custom-checkbox-wrapper [type="checkbox"][dir="rtl"] + label {
   margin-left: 0;
-  margin-right: 0.5rem;
+  margin-right: var(--bf-spacing-md);
 }
-.custom-checkbox-wrapper [type=checkbox]::after {
+
+.custom-checkbox-wrapper [type="checkbox"]::after {
   content: "";
   display: block;
   position: absolute;
-}
-.custom-checkbox-wrapper [type=checkbox]:checked {
-  background-color: rgb(0, 123, 255);
-  border-color: rgb(0, 0, 0);
-}
-.custom-checkbox-wrapper [type=checkbox]::after {
   width: 0.6rem;
   height: 0.8rem;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid var(--bf-white);
   border-top: 0;
   border-left: 0;
   left: 35%;
@@ -967,7 +1047,12 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   transform: rotate(43deg);
 }
 
-.custom-radio-wrapper [type=radio] {
+.custom-checkbox-wrapper [type="checkbox"]:checked {
+  background-color: var(--bf-blue);
+  border-color: var(--bf-black);
+}
+
+.custom-radio-wrapper [type="radio"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -975,18 +1060,22 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid rgb(153, 153, 153);
+  border: 1px solid var(--bf-gray);
 }
-.custom-radio-wrapper [type=radio] + label {
+
+.custom-radio-wrapper [type="radio"] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: 0.5rem;
+  margin-left: var(--bf-spacing-md);
 }
-*[dir=rtl] .custom-radio-wrapper [type=radio] + label, .custom-radio-wrapper [type=radio][dir=rtl] + label {
+
+*[dir="rtl"] .custom-radio-wrapper [type="radio"] + label,
+.custom-radio-wrapper [type="radio"][dir="rtl"] + label {
   margin-left: 0;
-  margin-right: 0.5rem;
+  margin-right: var(--bf-spacing-md);
 }
-.custom-radio-wrapper [type=radio]::after {
+
+.custom-radio-wrapper [type="radio"]::after {
   content: "";
   display: block;
   position: absolute;
@@ -995,13 +1084,16 @@ button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
   left: -0.05rem;
   top: -0.05rem;
   border-radius: 50%;
-  background: rgb(255, 255, 255);
+  background: var(--bf-white);
   transform: scale(0.35);
 }
-.custom-radio-wrapper [type=radio]:checked {
-  background-color: rgb(0, 123, 255);
-  border-color: rgb(0, 0, 0);
+
+.custom-radio-wrapper [type="radio"]:checked {
+  background-color: var(--bf-blue);
+  border-color: var(--bf-black);
 }
+
+/* Utilities - Lists */
 
 .bf-list-unstyled,
 menu ul.bf-list-unstyled,
@@ -1020,6 +1112,43 @@ dt {
   font-weight: 700;
 }
 
+/* Utilities - Tables */
+
+.bf-table th,
+.bf-table td {
+  padding: var(--bf-spacing-lg);
+  border-bottom: 1px solid var(--bf-gray);
+  margin-bottom: var(--bf-spacing-md);
+}
+
+/* responsive tables */
+
+.bf-table-responsive {
+  overflow: auto hidden;
+  -ms-overflow-style: scrollbar;
+}
+
+.bf-table-responsive table {
+  width: 100%;
+  margin-bottom: var(--bf-spacing-md);
+}
+
+/* force webkit scrollbars appearance */
+
+.bf-table-responsive.scrollbar {
+  -webkit-overflow-scrolling: auto;
+}
+
+/* zebra striping */
+
+.bf-table--zebra tbody tr:nth-child(odd),
+.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  background-color: var(--bf-gray-light-extra);
+}
+
+/* Utilities - Embeds (from Bootstrap)
+ * https://getbootstrap.com/docs/4.4/utilities/embed/ */
+
 .bf-embed-responsive {
   position: relative;
   display: block;
@@ -1027,15 +1156,22 @@ dt {
   padding: 0;
   overflow: hidden;
 }
+
 .bf-embed-responsive::before {
   display: block;
   content: "";
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* 16:9 by default */
 }
-.bf-embed-responsive .bf-embed-responsive--4-3::before {
+
+.bf-embed-responsive.bf-embed-responsive--4-3::before {
   padding-top: 75%;
 }
-.bf-embed-responsive .bf-embed-responsive--item, .bf-embed-responsive iframe, .bf-embed-responsive embed, .bf-embed-responsive object, .bf-embed-responsive video {
+
+.bf-embed-responsive .bf-embed-responsive--item,
+.bf-embed-responsive iframe,
+.bf-embed-responsive embed,
+.bf-embed-responsive object,
+.bf-embed-responsive video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1045,105 +1181,13 @@ dt {
   border: 0;
 }
 
-.bf-table th,
-.bf-table td {
-  padding: 1rem;
-  border-bottom: 1px solid rgb(153, 153, 153);
-  margin-bottom: 0.5rem;
-}
+/* Utilities - Reduced motion
+ * prefers-reduced-motion media feature query
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+ *
+ * Taken from https://github.com/jensimmons/cssremedy
+ * See: https://github.com/mozdevs/cssremedy/issues/11 */
 
-.bf-table-responsive {
-  overflow: auto hidden;
-  -ms-overflow-style: scrollbar;
-}
-
-.bf-table-responsive table {
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-
-.bf-table-responsive.scrollbar {
-  -webkit-overflow-scrolling: auto;
-}
-
-.bf-table--zebra tbody tr:nth-child(odd),
-.bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: rgb(233, 233, 233);
-}
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-@media print {
-  body,
-  .bf-container {
-    min-width: 992px !important;
-  }
-  .bf-table-responsive {
-    overflow: auto;
-  }
-  .bf-table-responsive table {
-    width: auto;
-  }
-  .bf-table-responsive table,
-  .bf-table {
-    border-collapse: collapse !important;
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
   .bf-reduced-motion::before,
@@ -1160,4 +1204,106 @@ dt {
     transition-duration: 0s !important;
   }
 }
+
+/* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
+ * Inlined to avoid the additional HTTP request:
+ * https://www.phpied.com/delay-loading-your-print-css/ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* Bullframe-specific print rules */
+  body,
+  .bf-container {
+    min-width: 992px !important;
+  }
+
+  .bf-table-responsive {
+    overflow: auto;
+  }
+
+  .bf-table-responsive table {
+    width: auto;
+  }
+
+  .bf-table-responsive table,
+  .bf-table {
+    border-collapse: collapse !important;
+  }
+}
+
+/* Utilities - Filters */
+
+.bf-filter-invert {
+  filter: invert(100%) !important;
+}
+
+.bf-filter-dim-images {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.bf-filter-grayscale {
+  filter: grayscale(1) !important;
+}
+
+.bf-filter-blur {
+  filter: blur(0.3rem) !important;
+}
+
+.bf-filter-none {
+  filter: none !important;
+}
+
 /*# sourceMappingURL=bullframe-utilities.css.map */

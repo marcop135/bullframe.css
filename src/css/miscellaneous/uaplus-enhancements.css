@@ -1,0 +1,304 @@
+/* UA+ (User Agent Plus) Enhancements
+ * 
+ * Source: https://fokus.dev/tools/uaplus/
+ * 
+ * UA+ is a different type of reset stylesheet. Instead of mostly resetting and normalizing
+ * properties, it focuses on improving existing user agent styles and adding new styles only
+ * where browsers fall short.
+ * 
+ * These enhancements improve existing user agent styles and add new styles only where
+ * browsers fall short, without being too opinionated. Most importantly, UA+ tries not to
+ * reset too much and takes accessibility more into consideration than many other resets.
+ * 
+ * Integrated into Bullframe CSS with modifications to complement existing styles.
+ */
+
+@layer {
+  /* Improve focus styles
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Add spacing between content and its focus outline.
+   * Note: This enhances the existing focus styles in focus.css
+   */
+  :focus-visible {
+    outline-offset: 3px;
+  }
+
+  /* Disable text size adjustment
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * To improve readability on non-mobile optimized websites, browsers like mobile Safari
+   * increase the default font size when you switch a website from portrait to landscape.
+   * We don't want that for our optimized sites.
+   * 
+   * Read more: https://kilianvalhof.com/articles/your-css-reset-needs-text-size-adjust-probably
+   * 
+   * Note: This overrides the existing text-size-adjust: 100% in html-body.css
+   */
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* Increase line height
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Long paragraphs are easier to read if the line height is higher.
+   * Note: This overrides the existing line-height: 1.15 in html-body.css
+   * The body element still uses --bf-body-line-height (1.5) which is appropriate.
+   */
+  html {
+    line-height: 1.5;
+  }
+
+  /* Add scrollbar gutter
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Prevent the page from "jumping" when switching from a long to a short page.
+   * 
+   * Read more: https://www.bram.us/2023/11/24/day-25-scrollbar-gutters-in-body-and-html/
+   */
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  /* Remove UA styles for h1s nested in sectioning content
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Nesting h1s in section, articles, etc., shouldn't influence the styling of the heading
+   * since nesting doesn't influence semantics either. Chrome and Firefox have removed these
+   * styles from their User Agent Styles, but they're still present in Safari.
+   * 
+   * Read more: https://github.com/w3c/csswg-drafts/issues/5568
+   */
+  h1 {
+    font-size: 2em;
+    margin-block: 0.67em;
+  }
+
+  /* Improve abbreviations with titles
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * The abbr element with the title isn't useful regarding accessibility because support
+   * is inconsistent and it's only accessible to some users. Still, it's commonly used.
+   * This rule shows a dotted underline on abbreviations in all browsers (there's a bug
+   * in Safari) and changes the cursor.
+   * 
+   * Read more: https://adrianroselli.com/2020/11/using-abbr-element-with-title-attribute.html
+   */
+  abbr[title] {
+    cursor: help;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+
+  /* Optimize mark element in Forced Colors Mode
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * The colors of the mark element don't change in Forced Colors Mode, which can be
+   * problematic. Use system colors instead.
+   */
+  @media (forced-colors: active) {
+    mark {
+      color: HighlightText;
+      background-color: Highlight;
+    }
+  }
+
+  /* Avoid overflow caused by embedded content
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Ensure that embedded content (audio, video, images, etc.) doesn't overflow its container.
+   * Note: This complements existing max-width rules in embedded-content.css
+   */
+  audio,
+  iframe,
+  img,
+  svg,
+  video {
+    max-block-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  /* Prevent fieldsets from causing overflow
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Reset the default `min-inline-size: min-content` to prevent children from stretching fieldsets.
+   * 
+   * Read more: https://github.com/twbs/bootstrap/issues/12359
+   * 
+   * Note: This complements existing fieldset rules in forms/normalization.css
+   */
+  fieldset {
+    min-inline-size: 0;
+  }
+
+  /* Turn labels into block elements
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Labels for inputs, with the exception of radio buttons and checkboxes, selects, and
+   * textarea should be block elements.
+   */
+  label:has(+ input:not([type="radio"], [type="checkbox"]), select, textarea) {
+    display: block;
+  }
+
+  /* Increase the block-size of textareas
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * The default height of textareas is small. We increase it a bit.
+   * Note: This complements existing textarea rules in forms/normalization.css
+   */
+  textarea:not([rows]) {
+    min-block-size: 6em;
+  }
+
+  /* Inherit font styling in form elements
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * buttons, inputs, selects, and textarea should have the same font family and size
+   * as the rest of the page.
+   * Note: This complements existing form normalization rules
+   */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* Normalize search input styles
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Remove the rounded corners of search inputs on macOS and iOS and normalize the
+   * background color.
+   */
+  [type="search"] {
+    -webkit-appearance: textfield;
+  }
+
+  /* iOS only */
+  @supports (-webkit-touch-callout: none) {
+    [type="search"] {
+      border: 1px solid -apple-system-secondary-label;
+      background-color: canvas;
+    }
+  }
+
+  /* Maintain direction in some input types
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Some input types should remain left-aligned in right-to-left languages, but only if
+   * the value isn't empty because the placeholder should be right-aligned.
+   * 
+   * Read more: https://rtlstyling.com/
+   */
+  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:placeholder-shown) {
+    direction: ltr;
+  }
+
+  /* Improve table styling
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * With the default styling, tables are hard to scan. These rules add padding and
+   * collapsed borders.
+   * Note: This complements existing table rules in tables.css
+   * We add explicit borders and padding that may not be present by default.
+   */
+  table {
+    border: 1px solid currentColor;
+  }
+
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 0.25em 0.5em;
+  }
+
+  /* Fading dialogs
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Add fade in and fade out transitions for dialogs and popovers and backdrops and
+   * reduce the opacity of the backdrop.
+   */
+  dialog::backdrop {
+    background: oklch(0% 0 0 / 0.3);
+  }
+
+  dialog,
+  [popover],
+  dialog::backdrop {
+    opacity: 0;
+    transition:
+      opacity 300ms ease-out,
+      display 300ms allow-discrete,
+      overlay 300ms allow-discrete;
+  }
+
+  dialog[open],
+  :popover-open,
+  dialog[open]::backdrop {
+    opacity: 1;
+  }
+
+  @starting-style {
+    dialog[open],
+    :popover-open,
+    dialog[open]::backdrop {
+      opacity: 0;
+    }
+  }
+
+  /* Increase specificity of [hidden]
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Make it harder to accidentally unhide elements with the `[hidden]` attribute while
+   * still maintaining the until-found functionality.
+   * Note: This complements existing [hidden] rules in layout.css
+   */
+  [hidden]:not([hidden="until-found"]) {
+    display: none !important;
+  }
+
+  /* Turn images into block elements
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Note: This complements existing img rules in embedded-content.css
+   * which sets max-width but doesn't explicitly set display: block
+   */
+  img {
+    display: block;
+  }
+
+  /* Change the cursor of the summary element
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * By default, only the `::marker` inside the summary uses the default cursor.
+   */
+  summary {
+    cursor: default;
+  }
+
+  /* Remove the default border from iframes
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * Note: This complements existing iframe rules in embedded-content.css
+   */
+  iframe {
+    border: none;
+  }
+
+  /* Change implicit position of popovers
+   * Source: UA+ - https://fokus.dev/tools/uaplus/
+   * 
+   * By default popovers look like modals without a backdrop. This makes use of the
+   * implicit anchor in popovers to position it closely to the trigger.
+   */
+  @supports (position-area: block-end span-inline-end) {
+    [popover] {
+      margin: 0;
+      position-area: block-end span-inline-end;
+    }
+  }
+}

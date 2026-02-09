@@ -1,4 +1,4 @@
-# Bullframe CSS v5.x
+# Bullframe CSS v6.0.0
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">
@@ -24,11 +24,13 @@
 
 ## What is Bullframe CSS?
 
-Bullframe CSS is a lightweight Sass (SCSS) framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.
+Bullframe CSS is a lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.
 
 Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
 
 **Simply add it, start building, and stay in control.**
+
+> **v6.0.0 Breaking Changes**: Bullframe CSS v6 has been migrated from Sass/SCSS to native CSS with PostCSS. All variables are now CSS custom properties, and mixins have been replaced with utility classes or direct CSS.
 
 ---
 
@@ -37,7 +39,8 @@ Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product li
 - Responsive layout and style normalization _out of the box_
 - Cross-browser form elements
 - JavaScript framework-agnostic
-- Sass-based architecture with BEM methodology
+- Native CSS with PostCSS (no Sass required)
+- CSS custom properties for theming
 - Responsive typography
 - Dark mode and theming support
 - RTL (right-to-left) support
@@ -67,18 +70,13 @@ bullframe.css/
 │       ├── bullframe-classless.css.map
 │       ├── bullframe.min.css.map
 │       ├── ...
-├── src/scss/
+├── src/css/
 │   ├── forms/
 │   ├── miscellaneous/
-│   ├── mixins/
 │   ├── typography/
 │   ├── utilities/
-│   ├── variables/
-│   ├── bullframe-classless.scss
-│   ├── bullframe-dark.scss
-│   ├── bullframe-utilities.scss
-│   ├── bullframe-system-default.scss
-│   ├── bullframe.scss
+│   ├── variables.css
+│   ├── bullframe.css
 │   └── ...
 ├── vite.config.js
 ├── index.html
@@ -99,7 +97,7 @@ bullframe.css/
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6">
 ```
 
 ### HTML Starter Template
@@ -110,15 +108,15 @@ bullframe.css/
     <html lang="en">
       <head>
         <meta charset="utf-8">
-        <title>Bullframe CSS v5.x HTML Starter Template</title>
+        <title>Bullframe CSS v6.0.0 HTML Starter Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css">
       </head>
       <body>
         <div class="bf-container">
           <!-- Add your site or application content here -->
-          <p>Hello World! This is a Bullframe CSS v5.x HTML starter template.</p>
+          <p>Hello World! This is a Bullframe CSS v6.0.0 HTML starter template.</p>
         </div>
       </body>
     </html>
@@ -137,10 +135,10 @@ bullframe.css/
     <html lang="en">
       <head>
         <meta charset="utf-8">
-        <title>Bullframe CSS 5.x Classless Starter Template</title>
+        <title>Bullframe CSS v6.0.0 Classless Starter Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-classless.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-classless.min.css">
 
         <!-- Optional: center page content by default -->
         <style>
@@ -155,7 +153,7 @@ bullframe.css/
       <body>
         <div class="bf-container">
           <!-- Add your site or application content here -->
-          <p>Hello World! This is a Bullframe CSS v5.x HTML classless starter template.</p>
+          <p>Hello World! This is a Bullframe CSS v6.0.0 HTML classless starter template.</p>
         </div>
       </body>
     </html>
@@ -193,24 +191,35 @@ Bullframe provides three builds for theming:
 #### Light Theme CDN (Default)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css">
 ```
 
 #### Dark Theme CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-dark.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-dark.min.css">
 ```
 
 #### System-default Theme CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5/dist/css/bullframe-system-default.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-system-default.min.css">
+```
+
+### Accessibility (Color Contrast)
+
+Bullframe uses WCAG AA–compliant colors for links and primary buttons. To restore brighter colors or use your own palette, override the variables:
+
+```css
+:root {
+  --bf-blue: rgb(0 123 255);      /* Links, primary buttons */
+  --bf-blue-light: rgb(0 86 179); /* Hover states */
+}
 ```
 
 ### Customise and Rebuild All Styles
 
-After installing Bullframe CSS via npm, you can use [Vite.js](https://vite.dev) to rebuild the framework as you prefer, adding your custom Sass variables and styles:
+After installing Bullframe CSS via npm, you can use [Vite.js](https://vite.dev) to rebuild the framework as you prefer, adding your custom CSS variables and styles:
 
 ```bash
 # Build production-ready site/app
@@ -230,36 +239,36 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 
 <details><summary>Open utilities</summary>
 
-| Variable             | Value  |
-| -------------------- | ------ |
-| `$bf-breakpoint-xs`  | 0      |
-| `$bf-breakpoint-sm`  | 576px  |
-| `$bf-breakpoint-md`  | 768px  |
-| `$bf-breakpoint-lg`  | 992px  |
-| `$bf-breakpoint-xl`  | 1200px |
-| `$bf-breakpoint-xxl` | 1400px |
+| Variable              | Value  |
+| --------------------- | ------ |
+| `$bf-breakpoint-xs`   | 0      |
+| `$bf-breakpoint-sm`   | 576px  |
+| `$bf-breakpoint-md`   | 768px  |
+| `$bf-breakpoint-lg`   | 992px  |
+| `$bf-breakpoint-xl`   | 1200px |
+| `$bf-breakpoint-xxl`  | 1400px |
 
-| Utility class             | Description                                                                                                               |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `.bf-container`           | Sets a centered block container with a `max-width` of 1140px, and a custom padding                                        |
-| `.bf-container--fluid`    | Sets a fluid centered block container with a custom padding                                                               |
-| `.bf-container--break-xs` | Collapses all the columns when the viewport is 575px and below                                                            |
-| `.bf-container--break-md` | Collapses all the columns when the viewport is 767px and below                                                            |
-| `.bf-container--break-lg` | Collapses all the columns when the viewport is 991px and below                                                            |
-| `.bf-row`                 | Sets a block container with a custom negative margin                                                                      |
-| `.bf-col-1`               | Sets a floated container with a custom padding and a `width` of `8.3333%`                                                 |
-| `.bf-col-2`               | Sets a floated container with a custom padding and a `width` of `16.666666666666664%`                                     |
-| `.bf-col-3`               | Sets a floated container with a custom padding and a `width` of `25%`                                                     |
-| `.bf-col-4`               | Sets a floated container with a custom padding and a `width` of `33.33333333333333%`                                      |
-| `.bf-col-5`               | Sets a floated container with a custom padding and a `width` of `41.66666666666667%`                                      |
-| `.bf-col-6`               | Sets a floated container with a custom padding and a `width` of `50%`                                                     |
-| `.bf-col-7`               | Sets a floated container with a custom padding and a `width` of `58.333333333333336%`                                     |
-| `.bf-col-8`               | Sets a floated container with a custom padding and a `width` of `66.66666666666666%`                                      |
-| `.bf-col-9`               | Sets a floated container with a custom padding and a `width` of `75%`                                                     |
-| `.bf-col-10`              | Sets a floated container with a custom padding and a `width` of `83.33333333333334%`                                      |
-| `.bf-col-11`              | Sets a floated container with a custom padding and a `width` of `91.66666666666666%`                                      |
-| `.bf-col-12`              | Sets a floated container with a custom padding and a `width` of `100%`                                                    |
-| `.no-gutters`             | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0` — to be applied to row and column containers |
+| Utility class              | Description                                                                                                               |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `.bf-container`            | Sets a centered block container with a `max-width` of 1140px, and a custom padding                                        |
+| `.bf-container--fluid`     | Sets a fluid centered block container with a custom padding                                                               |
+| `.bf-container--break-xs`  | Collapses all the columns when the viewport is 575px and below                                                            |
+| `.bf-container--break-md`  | Collapses all the columns when the viewport is 767px and below                                                            |
+| `.bf-container--break-lg`  | Collapses all the columns when the viewport is 991px and below                                                            |
+| `.bf-row`                  | Sets a block container with a custom negative margin                                                                      |
+| `.bf-col-1`                | Sets a floated container with a custom padding and a `width` of `8.3333%`                                                 |
+| `.bf-col-2`                | Sets a floated container with a custom padding and a `width` of `16.666666666666664%`                                     |
+| `.bf-col-3`                | Sets a floated container with a custom padding and a `width` of `25%`                                                     |
+| `.bf-col-4`                | Sets a floated container with a custom padding and a `width` of `33.33333333333333%`                                      |
+| `.bf-col-5`                | Sets a floated container with a custom padding and a `width` of `41.66666666666667%`                                      |
+| `.bf-col-6`                | Sets a floated container with a custom padding and a `width` of `50%`                                                     |
+| `.bf-col-7`                | Sets a floated container with a custom padding and a `width` of `58.333333333333336%`                                     |
+| `.bf-col-8`                | Sets a floated container with a custom padding and a `width` of `66.66666666666666%`                                      |
+| `.bf-col-9`                | Sets a floated container with a custom padding and a `width` of `75%`                                                     |
+| `.bf-col-10`               | Sets a floated container with a custom padding and a `width` of `83.33333333333334%`                                      |
+| `.bf-col-11`               | Sets a floated container with a custom padding and a `width` of `91.66666666666666%`                                      |
+| `.bf-col-12`               | Sets a floated container with a custom padding and a `width` of `100%`                                                    |
+| `.no-gutters`              | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0` — to be applied to row and column containers |
 
 </details>
 
@@ -293,7 +302,7 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | `.bf-float-left`                   | Sets `float` to `left`                                                                                          |
 | `.bf-float-right`                  | Sets `float` to `right`                                                                                         |
 | `.bf-position-fixed`               | Sets `position` to `fixed`                                                                                      |
-| `.bf-position-relative`            | Sets `position` to `relative`                                                                                   |    
+| `.bf-position-relative`            | Sets `position` to `relative`                                                                                   |
 | `.bf-align-center-flex`            | Centers an element with known height and width using flexbox                                                   |
 | `.bf-width-25`                     | Sets `width` to `25%`                                                                                           |
 | `.bf-width-33`                     | Sets `width` to `33.3333%`                                                                                      |
@@ -313,12 +322,12 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | ------------- | ----------------------------------------------------------------------------------------- |
 | `.bf-m-0`     | Sets the `margin` to `0`                                                                  |
 | `.bf-m-t-0`   | Sets the `margin-top` to `0`                                                              |
-| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`$bf-spacing-md`)             |
-| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`$bf-spacing-lg`)              |
-| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`$bf-spacing-xl`)        |
-| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`$bf-spacing-xxl`) |
-| `.bf-m-b-0`   | Sets the `margin-bottom` to `0`                                                           |
-| `.bf-m-b-1`   | Sets the `margin-bottom` to a custom value that matches the grid system gutter            |
+| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`$bf-spacing-md`)                 |
+| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`$bf-spacing-lg`)                  |
+| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`$bf-spacing-xl`)             |
+| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`$bf-spacing-xxl`)     |
+| `.bf-m-b-0`   | Sets the `margin-bottom` to `0`                                                             |
+| `.bf-m-b-1`   | Sets the `margin-bottom` to a custom value that matches the grid system gutter             |
 | `.bf-m-b-2`   | Sets the `margin-bottom` to a custom value                                                |
 | `.bf-m-b-3`   | Sets the `margin-bottom` to a custom value                                                |
 | `.bf-m-b-4`   | Sets the `margin-bottom` to a custom value                                                |
@@ -333,7 +342,7 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | `.bf-p-t-2`   | Sets the `padding-top` to a custom value                                                  |
 | `.bf-p-t-3`   | Sets the `padding-top` to a custom value                                                  |
 | `.bf-p-t-4`   | Sets the `padding-top` to a custom value                                                  |
-| `.bf-p-t-1`   | Sets the `padding-bottom` to a custom value that matches the grid system gutter           |
+| `.bf-p-b-1`   | Sets the `padding-bottom` to a custom value that matches the grid system gutter          |
 | `.bf-p-b-2`   | Sets the `padding-bottom` to a custom value                                               |
 | `.bf-p-b-3`   | Sets the `padding-bottom` to a custom value                                               |
 | `.bf-p-b-4`   | Sets the `padding-bottom` to a custom value                                               |
@@ -362,8 +371,8 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | `.bf-t-weight-800`            | Sets `font-weight` to `800` (AKA black)                                                                                         |
 | `.bf-text-break`              | Sets `word-wrap` to a `break-word`, applied by default to the `body`                                                            |
 | `.bf-t-truncate`              | Truncates a very long text and replaces the missing text with an ellipsis                                                       |
-| `.bf-t-truncate--multiline-2` | Truncates a long doubled line text and replaces the missing text with an ellipsis                                       |
-| `.bf-t-truncate--multiline-3` | Truncates a long tripled line text and replaces the missing text with an ellipsis                                      |
+| `.bf-t-truncate--multiline-2` | Truncates a long doubled line text and replaces the missing text with an ellipsis                                               |
+| `.bf-t-truncate--multiline-3` | Truncates a long tripled line text and replaces the missing text with an ellipsis                                               |
 | `.bf-no-select`               | Blocks user text selection                                                                                                      |
 | `.bf-font-sans-serif`         | Sets `font-family` to a `sans-serif`, and a combination of cross-browser system UI sans-serif font families                     |
 | `.bf-font-serif`              | Sets `font-family` to a `serif`, and a combination of cross-browser system UI serif font families                               |
@@ -387,7 +396,11 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 | ------------------- | -------------------------------------------------------------------------------- |
 | `.bf-list-unstyled` | Removes margins, paddings and `li` list styles from `ul`, `ol` and `dd` elements |
 
+</details>
+
 #### Tables
+
+<details><summary>Open utilities</summary>
 
 | Utility class                 | Description                                                              |
 | ----------------------------- | ------------------------------------------------------------------------ |
@@ -404,9 +417,9 @@ Bullframe CSS offers a set of utility classes for fine-grained control over your
 
 | Utility class                | Description                                                                                                                             |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `.bf-embed-responsive`       | Adds responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpouse element_ (e.g. youtube embed)                       |
-| `.bf-embed-responsive--4-3`  | Sets a 4:3 ratio responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpouse element_ container (e.g. youtube embed) |
-| `.bf-embed-responsive--item` | A _general purpouse element_ element that behaves like a `video`                                                                        |
+| `.bf-embed-responsive`       | Adds responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpose element_ (e.g. youtube embed)                        |
+| `.bf-embed-responsive--4-3`  | Sets a 4:3 ratio responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpose element_ container (e.g. youtube embed) |
+| `.bf-embed-responsive--item` | A _general purpose element_ that behaves like a `video`                                                                                  |
 
 </details>
 

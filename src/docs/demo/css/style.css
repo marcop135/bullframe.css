@@ -1,131 +1,176 @@
-.demo {
-  .bf-row {
-    margin-bottom: 2rem;
+/* Demo page custom styles */
+
+.demo .bf-row {
+  margin-bottom: 2rem;
+}
+
+.demo [class^="bf-col"] {
+  margin-bottom: 1rem;
+}
+
+.demo header {
+  margin-bottom: 1rem;
+}
+
+.demo header h1 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.demo header h1 span {
+  color: #f95c1f;
+}
+
+@media (min-width: 600px) {
+  .demo header h1 {
+    font-size: 5.5rem;
   }
+}
 
-  [class^="bf-col"] {
-    margin-bottom: 1rem;
+@media (min-width: 1000px) {
+  .demo header h1 {
+    font-size: 7rem;
   }
+}
 
-  header {
-    margin-bottom: 1rem;
+.demo header a {
+  margin-right: 1rem;
+}
 
-    h1 {
-      margin-top: 1rem;
-      margin-bottom: 0;
-      font-weight: 700;
-
-      span {
-        color: #f95c1f;
-      }
-
-      @media (min-width: 600px) {
-        font-size: 5.5rem;
-      }
-
-      @media (min-width: 1000px) {
-        font-size: 7rem;
-      }
-    }
-
-    a {
-      margin-right: 1rem;
-    }
+@media (min-width: 600px) {
+  .demo .btn-github {
+    font-size: 115%;
   }
+}
 
-  @media (min-width: 600px) {
-    .btn-github {
-      font-size: 115%;
-    }
+.demo .description {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demo .h2--section {
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+  .demo .h2--section {
+    font-size: 4rem;
   }
+}
 
-  .description {
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.demo legend {
+  padding-bottom: 1rem;
+}
 
-  .h2--section {
-    padding-bottom: 2rem;
-    text-transform: uppercase;
+.demo button,
+.demo .bf-btn,
+.demo .input-image,
+.demo input,
+.demo select,
+.demo textarea {
+  margin-bottom: 2rem;
+}
 
-    @media (min-width: 600px) {
-      font-size: 4rem;
-    }
-  }
+.demo dialog .bf-btn {
+  margin-bottom: 0;
+}
 
-  legend {
-    padding-bottom: 1rem;
-  }
+/* Component modals styling */
+.demo dialog {
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--bf-gray-light);
+}
 
-  button,
-  .bf-btn,
-  .input-image,
-  input,
-  select,
-  textarea {
-    margin-bottom: 2rem;
-  }
+.demo dialog h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 
-  dialog {
-    .bf-btn {
-      margin-bottom: 0;
-    }
-  }
+.demo dialog p {
+  margin-bottom: 1.5rem;
+}
 
-  [type="image"],
-  [type="checkbox"],
-  [type="radio"] {
+.demo dialog form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+/* Code examples in components */
+.demo #components pre {
+  background: var(--bf-gray-light-extra);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.demo #components pre code {
+  font-family: var(--bf-font-monospace);
+  color: var(--bf-dark);
+}
+
+/* Component cards */
+.demo #components [style*="border: 1px solid"] {
+  transition: box-shadow 0.2s;
+}
+
+.demo #components [style*="border: 1px solid"]:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.demo [type="image"],
+.demo [type="checkbox"],
+.demo [type="radio"] {
+  margin-bottom: 0;
+}
+
+.demo .grid .col-wrapper {
+  background-color: #888;
+  height: 6rem;
+  line-height: 6rem;
+  overflow-y: hidden;
+  color: #fff;
+  font-size: 80%;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.demo .grid .bf-row:nth-child(odd) .col-wrapper {
+  background-color: #ccc;
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .demo .grid .bf-row {
     margin-bottom: 0;
   }
 
-  .grid {
-    .col-wrapper {
-      background-color: #888;
-      height: 6rem;
-      line-height: 6rem;
-      overflow-y: hidden;
-      color: #fff;
-      font-size: 80%;
-      text-align: center;
-      border-radius: 3px;
-      font-weight: 700;
-    }
-
-    .bf-row:nth-child(odd) {
-      .col-wrapper {
-        background-color: #ccc;
-        color: #000;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .bf-row {
-        margin-bottom: 0;
-      }
-
-      [class*="bf-col-"] {
-        margin-bottom: 2rem;
-      }
-    }
+  .demo .grid [class*="bf-col-"] {
+    margin-bottom: 2rem;
   }
+}
 
-  .back-to-top {
-    text-align: center;
-    display: block;
-    margin: 6rem 0 12rem;
+.demo .back-to-top {
+  text-align: center;
+  display: block;
+  margin: 6rem 0 12rem;
+}
 
-    a {
-      i {
-        vertical-align: middle;
-        font-style: normal;
-      }
-    }
-  }
+.demo .back-to-top a i {
+  vertical-align: middle;
+  font-style: normal;
+}
 
-  @media (max-width: 575px) {
-    header {
-      margin-bottom: 1rem;
-    }
+@media (max-width: 575px) {
+  .demo header {
+    margin-bottom: 1rem;
   }
 }

@@ -39,8 +39,8 @@ Bullframe CSS uses CSS custom properties (variables) for easy customization. All
 
 ```css
 :root {
-  --bf-blue: rgb(0 123 255);
-  --bf-blue-light: rgb(0 86 179);
+  --bf-blue: rgb(0 86 179); /* Darkened for WCAG AA contrast */
+  --bf-blue-light: rgb(0 65 135);
   --bf-blue-light-extra: rgb(190 216 254);
 }
 ```

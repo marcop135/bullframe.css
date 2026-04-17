@@ -77,45 +77,44 @@ Bullframe CSS provides consistent, accessible form styling across all browsers.
 <input type="email" required aria-invalid="true" placeholder="Invalid email">
 ```
 
-## Form Layout
-
-### Form Groups
-
-Wrap form elements in a container for consistent spacing:
-
-```html
-<form>
-  <div class="bf-form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name">
-  </div>
-  
-  <div class="bf-form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email">
-  </div>
-  
-  <button type="submit">Submit</button>
-</form>
-```
-
 ## Form Utilities
 
-### Form States Utilities
+### Focus State
+
+Apply the `.bf-focused` class to simulate a focused appearance:
 
 ```html
-<input class="bf-form-valid" type="text">
-<input class="bf-form-invalid" type="text">
+<input class="bf-focused" type="text" value="Focused input">
+```
+
+### Disabled State
+
+Apply the `.bf-disabled` class to disable form elements via CSS:
+
+```html
+<input class="bf-disabled" type="text" value="Disabled input">
+```
+
+### Invalid State
+
+Apply the `.bf-invalid` class to mark form elements as invalid:
+
+```html
+<input class="bf-invalid" type="text" value="Invalid input">
 ```
 
 ### Custom Radio and Checkbox
 
-Use utility classes for custom-styled radio buttons and checkboxes:
+Use wrapper classes for custom-styled radio buttons and checkboxes:
 
 ```html
-<input type="checkbox" class="bf-custom-checkbox" id="custom1">
-<label for="custom1">Custom checkbox</label>
+<div class="custom-checkbox-wrapper">
+  <input type="checkbox" id="custom1">
+  <label for="custom1">Custom checkbox</label>
+</div>
 
-<input type="radio" class="bf-custom-radio" id="custom2" name="custom">
-<label for="custom2">Custom radio</label>
+<div class="custom-radio-wrapper">
+  <input type="radio" id="custom2" name="custom">
+  <label for="custom2">Custom radio</label>
+</div>
 ```

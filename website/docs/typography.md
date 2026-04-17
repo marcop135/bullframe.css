@@ -49,8 +49,7 @@ Use utility classes for text alignment:
 
 ```html
 <p class="bf-t-transform-uppercase">UPPERCASE TEXT</p>
-<p class="bf-t-transform-lowercase">lowercase text</p>
-<p class="bf-t-transform-capitalize">capitalized text</p>
+<p class="bf-t-transform-none">Reset text transform</p>
 ```
 
 ## Blockquotes

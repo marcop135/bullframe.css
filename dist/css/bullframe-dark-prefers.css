@@ -1006,7 +1006,7 @@ Use the modern Firefox focus style for all focusable elements.
  * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
  *
  * for form validation in JavaScript
- * use '.bf-invalid' class in /utilities/_utility-form-states.scss' instead
+ * use '.bf-invalid' class in /utilities/form-states.css instead
  * documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
  */
 
@@ -1373,7 +1373,7 @@ a:not([href], [tabindex]):focus {
 }
 
 /* Remove default focus outline on form elements
- * (styles applied elsewhere, e.g. _form-elements.scss)
+ * (styles applied elsewhere, e.g. forms/styling.css)
  *
  * Exceptions (don't override!):
  * - [type="color"]

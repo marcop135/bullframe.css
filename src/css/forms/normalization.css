@@ -291,7 +291,7 @@ Use the modern Firefox focus style for all focusable elements.
  * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
  *
  * for form validation in JavaScript
- * use '.bf-invalid' class in /utilities/_utility-form-states.scss' instead
+ * use '.bf-invalid' class in /utilities/form-states.css instead
  * documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
  */
 :-moz-ui-invalid {

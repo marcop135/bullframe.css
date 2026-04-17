@@ -34,10 +34,8 @@ Containers can collapse at specific breakpoints:
 
 ```html
 <div class="bf-container--break-xs">Collapses at 575px and below</div>
-<div class="bf-container--break-sm">Collapses at 767px and below</div>
 <div class="bf-container--break-md">Collapses at 991px and below</div>
 <div class="bf-container--break-lg">Collapses at 1199px and below</div>
-<div class="bf-container--break-xl">Collapses at 1399px and below</div>
 ```
 
 ## Grid System
@@ -63,59 +61,75 @@ Bullframe CSS uses a 12-column flexbox grid system.
 </div>
 ```
 
-### Responsive Columns
+### Column Classes
 
-Columns can be sized differently at different breakpoints:
+Available column classes: `bf-col-1` through `bf-col-12`.
+
+### No Gutters
+
+Remove grid gutters with `.bf-no-gutters`:
 
 ```html
-<div class="bf-row">
-  <div class="bf-col-12 bf-col-md-6 bf-col-lg-4">
-    Full width on mobile, half on tablet, third on desktop
-  </div>
+<div class="bf-row bf-no-gutters">
+  <div class="bf-col-6">No gutter</div>
+  <div class="bf-col-6">No gutter</div>
 </div>
 ```
 
-### Column Classes
-
-Available column classes:
-- `bf-col-1` through `bf-col-12` for all breakpoints
-- `bf-col-xs-*` for extra small screens (0px+)
-- `bf-col-sm-*` for small screens (576px+)
-- `bf-col-md-*` for medium screens (768px+)
-- `bf-col-lg-*` for large screens (992px+)
-- `bf-col-xl-*` for extra large screens (1200px+)
-- `bf-col-xxl-*` for 2x extra large screens (1400px+)
-
-## Flexbox Utilities
-
-### Display Flex
+## Display Utilities
 
 ```html
-<div class="bf-d-flex">Flex container</div>
+<div class="bf-display-block">Block</div>
+<div class="bf-display-inline">Inline</div>
+<div class="bf-display-inline-block">Inline block</div>
+<div class="bf-display-flex">Flex</div>
+<div class="bf-display-inline-flex">Inline flex</div>
+<div class="bf-display-block-center">Block centered</div>
 ```
 
-### Flex Direction
+## Flex Utilities
 
 ```html
-<div class="bf-flex-row">Row direction</div>
-<div class="bf-flex-column">Column direction</div>
+<div class="bf-display-flex--wrap">Flex wrap</div>
+<div class="bf-display-flex--nowrap">Flex nowrap</div>
+<div class="bf-display-flex--justify-start">Justify start</div>
+<div class="bf-display-flex--justify-center">Justify center</div>
+<div class="bf-display-flex--justify-end">Justify end</div>
 ```
 
-### Justify Content
+## Float Utilities
 
 ```html
-<div class="bf-justify-start">Start</div>
-<div class="bf-justify-center">Center</div>
-<div class="bf-justify-end">End</div>
-<div class="bf-justify-between">Space between</div>
-<div class="bf-justify-around">Space around</div>
+<div class="bf-float-left">Float left</div>
+<div class="bf-float-right">Float right</div>
+<div class="bf-clearfix">Clear floats</div>
 ```
 
-### Align Items
+## Position Utilities
 
 ```html
-<div class="bf-align-start">Start</div>
-<div class="bf-align-center">Center</div>
-<div class="bf-align-end">End</div>
-<div class="bf-align-stretch">Stretch</div>
+<div class="bf-position-relative">Relative</div>
+<div class="bf-position-fixed">Fixed</div>
+<div class="bf-position-sticky">Sticky</div>
+```
+
+## Width Utilities
+
+```html
+<div class="bf-width-25">25% width</div>
+<div class="bf-width-33">33% width</div>
+<div class="bf-width-50">50% width</div>
+<div class="bf-width-75">75% width</div>
+<div class="bf-width-100">100% width</div>
+<div class="bf-width-auto">Auto width</div>
+```
+
+## Visibility Utilities
+
+```html
+<div class="bf-visible">Visible</div>
+<div class="bf-invisible">Invisible (takes up space)</div>
+<div class="bf-hidden">Hidden (no space)</div>
+<div class="bf-hide">Hide</div>
+<div class="bf-sr-only">Screen reader only</div>
 ```

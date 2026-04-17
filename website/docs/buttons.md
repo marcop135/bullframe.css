@@ -4,20 +4,20 @@ sidebar_position: 7
 
 # Buttons
 
-Bullframe CSS provides button styles and utilities for creating consistent, accessible buttons.
+Bullframe CSS provides button styles for creating consistent, accessible buttons.
 
 ## Basic Buttons
-
-### Primary Button
-
-```html
-<button class="bf-btn bf-btn--primary">Primary Button</button>
-```
 
 ### Default Button
 
 ```html
 <button class="bf-btn">Default Button</button>
+```
+
+### Primary Button
+
+```html
+<button class="bf-btn bf-btn--primary">Primary Button</button>
 ```
 
 ### Button as Link
@@ -26,62 +26,20 @@ Bullframe CSS provides button styles and utilities for creating consistent, acce
 <a href="#" class="bf-btn">Link Button</a>
 ```
 
-## Button Sizes
-
-```html
-<button class="bf-btn bf-btn--sm">Small Button</button>
-<button class="bf-btn">Default Button</button>
-<button class="bf-btn bf-btn--lg">Large Button</button>
-```
-
 ## Button States
 
 ### Disabled
 
+Use the `disabled` attribute or the `.bf-disabled` class:
+
 ```html
 <button class="bf-btn" disabled>Disabled Button</button>
+<button class="bf-btn bf-disabled">Disabled Button</button>
+<button class="bf-btn bf-btn--primary bf-disabled">Disabled Primary</button>
 ```
 
-### Active
+## Accessibility
 
-```html
-<button class="bf-btn bf-btn--active">Active Button</button>
-```
-
-## Button Variants
-
-### Primary
-
-```html
-<button class="bf-btn bf-btn--primary">Primary</button>
-```
-
-### Secondary
-
-```html
-<button class="bf-btn bf-btn--secondary">Secondary</button>
-```
-
-### Outline
-
-```html
-<button class="bf-btn bf-btn--outline">Outline</button>
-```
-
-## Button Groups
-
-Group buttons together:
-
-```html
-<div class="bf-btn-group">
-  <button class="bf-btn">Left</button>
-  <button class="bf-btn">Middle</button>
-  <button class="bf-btn">Right</button>
-</div>
-```
-
-## Full Width Buttons
-
-```html
-<button class="bf-btn bf-btn--block">Full Width Button</button>
-```
+- Primary buttons meet WCAG AA 4.5:1 contrast (white text on blue background)
+- Disabled buttons use `cursor: not-allowed` and `pointer-events: none`
+- Focus states include a visible box-shadow ring

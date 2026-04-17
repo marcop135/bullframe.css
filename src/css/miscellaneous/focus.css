@@ -17,7 +17,7 @@
 }
 
 /* Remove default focus outline on form elements
- * (styles applied elsewhere, e.g. _form-elements.scss)
+ * (styles applied elsewhere, e.g. forms/styling.css)
  *
  * Exceptions (don't override!):
  * - [type="color"]

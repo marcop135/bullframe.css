@@ -4,7 +4,6 @@ node_modules/
 # Caches
 .eslintcache
 .stylelintcache
-.sass-cache/
 .cache/
 .vite/
 

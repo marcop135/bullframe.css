@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [v6, master]
+  pull_request:
+    branches: [v6, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint CSS
+        run: npx stylelint "src/css/**/*.css"
+
+      - name: Build
+        run: npm run build
+
+      - name: Validate HTML
+        run: npx html-validate "src/**/*.html"
+
+      - name: Verify dist output
+        run: |
+          test -f dist/css/bullframe.css || (echo "Missing bullframe.css" && exit 1)
+          test -f dist/css/bullframe.min.css || (echo "Missing bullframe.min.css" && exit 1)
+          test -f dist/css/bullframe-dark.css || (echo "Missing bullframe-dark.css" && exit 1)
+          test -f dist/css/bullframe-classless.css || (echo "Missing bullframe-classless.css" && exit 1)
+          echo "All expected dist files present"

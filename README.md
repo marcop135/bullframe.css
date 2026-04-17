@@ -1,8 +1,11 @@
-# Bullframe CSS v6.0.0
+# Bullframe CSS
 
 <p>
   <a href="https://www.npmjs.com/package/bullframe.css">
-    <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="NPM version">
+    <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="npm version">
+  </a>
+  <a href="https://github.com/marcop135/bullframe.css/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=v6&style=flat-square&label=CI" alt="CI status">
   </a>
   <a href="https://github.com/marcop135/bullframe.css/commits">
     <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css.svg?style=flat-square" alt="Last commit">
@@ -18,473 +21,183 @@
   <img alt="Bullframe CSS logo" src="https://raw.githubusercontent.com/marcop135/bullframe.css/master/src/docs/github-readme/bf-logo-full-light.png">
 </picture>
 
-## Links
+**A lightweight CSS framework for building fast, responsive, and accessible UIs** — semantic, themeable, and classless-friendly, with solid cross-browser support.
 
-| Resource | URL |
-|----------|-----|
-| [GitHub](https://github.com/marcop135/bullframe.css) | Source, issues, PRs |
-| [npm](https://www.npmjs.com/package/bullframe.css) | Package, install |
-| [npm-stat](https://npm-stat.com/charts.html?package=bullframe.css) | Download stats |
-| [JSDelivr CDN](https://cdn.jsdelivr.net/npm/bullframe.css) | Drop-in CDN |
-| [CodePen collection](https://codepen.io/collection/nxpjRe) | Live examples |
+Perfect for landing pages, marketing sites, blogs, docs, and prototypes. Simply add it and start building.
 
 ---
 
-## What is Bullframe CSS?
+## Quick Start
 
-Bullframe CSS is a lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.
-
-Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
-
-**Simply add it, start building, and stay in control.**
-
-> **v6.0.0 Breaking Changes**: Bullframe CSS v6 has been migrated from Sass/SCSS to native CSS with PostCSS. All variables are now CSS custom properties, and mixins have been replaced with utility classes or direct CSS.
-
----
-
-## Best Features
-
-- Responsive layout and style normalization _out of the box_
-- Cross-browser form elements
-- JavaScript framework-agnostic
-- Native CSS with PostCSS (no Sass required)
-- CSS custom properties for theming
-- Responsive typography
-- Dark mode and theming support
-- RTL (right-to-left) support
-- Vite-friendly
-- Works well with classless setups
-
----
-
-## What's Included
-
-```text
-bullframe.css/
-├── dist/
-│   └── css/
-│       ├── bullframe-classless.css
-│       ├── bullframe-classless.min.css
-│       ├── ...
-│       ├── bullframe-dark.css
-│       ├── bullframe-dark.min.css
-│       ├── ...
-│       ├── bullframe-utilities.css
-│       ├── bullframe-utilities.min.css
-│       ├── ...
-│       ├── bullframe.css
-│       ├── bullframe.min.css
-│       ├── ...
-│       ├── bullframe-classless.css.map
-│       ├── bullframe.min.css.map
-│       ├── ...
-├── src/css/
-│   ├── forms/
-│   ├── miscellaneous/
-│   ├── typography/
-│   ├── utilities/
-│   ├── variables.css
-│   ├── bullframe.css
-│   └── ...
-├── vite.config.js
-├── index.html
-└── ...
-```
-
----
-
-## Live Demo & Examples
-
-- 👉 **[One-page demo](https://bullframecss.marcopontili.com)**: a complete showcase of styled HTML elements, form controls, lists, tables, media, and the responsive grid system — ideal for quick cross-browser testing and exploration. **Test it live via Drop-in** (CDN link below).
-- 🧪 **[CodePen collection](https://codepen.io/collection/nxpjRe?grid_type=LIST)**: live examples of utilities, components, and prototypes — great for quick testing, remixing, and sharing ideas.
-
----
-
-## Getting Started
-
-### CDN
+### CDN (recommended)
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6">
 ```
 
-### HTML Starter Template
-
-<details><summary>Open HTML</summary>
-
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <title>Bullframe CSS v6.0.0 HTML Starter Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css">
-      </head>
-      <body>
-        <div class="bf-container">
-          <!-- Add your site or application content here -->
-          <p>Hello World! This is a Bullframe CSS v6.0.0 HTML starter template.</p>
-        </div>
-      </body>
-    </html>
-
-</details>
-
-### HTML Classless Starter Template
-
-> [!NOTE]
-> What does "classless" mean?
-> No utility classes or extra markup needed. Just write semantic HTML and get clean, normalized styles.
-
-<details><summary>Open HTML</summary>
-
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <title>Bullframe CSS v6.0.0 Classless Starter Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-classless.min.css">
-
-        <!-- Optional: center page content by default -->
-        <style>
-          body {
-            margin-left: auto;
-            margin-right: auto;
-            padding: 1.5rem;
-            max-width: 80rem;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="bf-container">
-          <!-- Add your site or application content here -->
-          <p>Hello World! This is a Bullframe CSS v6.0.0 HTML classless starter template.</p>
-        </div>
-      </body>
-    </html>
-
-</details>
-
----
-
 ### npm
-
-Make sure you have [Node.js](https://nodejs.org/en/download/) installed. Then run:
 
 ```bash
 npm install bullframe.css
 ```
 
----
+```css
+/* In your CSS */
+@import 'bullframe.css';
+```
 
 ### Download
 
-[Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip)
+[Download the latest release](https://github.com/marcop135/bullframe.css/releases)
+
+---
+
+## Features
+
+- **Native CSS** — no Sass, no preprocessor lock-in. Built with PostCSS.
+- **CSS Custom Properties** — easy theming via `--bf-*` variables, no rebuild needed.
+- **Responsive** — mobile-first layout with a flexible 12-column grid system.
+- **Dark Mode** — three variants: always-dark, system-preference, and classless.
+- **Accessible** — WCAG AA color contrast, `:focus-visible`, `prefers-reduced-motion`, ARIA styling.
+- **Classless-Friendly** — write semantic HTML, get clean styles. No classes required.
+- **Lightweight** — ~8 KB gzipped. Zero JavaScript. Zero dependencies.
+- **Cross-Browser** — latest 2 stable versions of all major browsers.
+- **RTL Support** — right-to-left layouts work out of the box.
+- **Framework-Agnostic** — works with React, Vue, Svelte, plain HTML, or anything else.
+
+---
+
+## Build Variants
+
+| Variant | Description |
+|---------|-------------|
+| `bullframe.css` | Light theme (default) |
+| `bullframe-dark.css` | Always-dark theme |
+| `bullframe-system-default.css` | Follows system `prefers-color-scheme` |
+| `bullframe-classless.css` | Classless light theme |
+| `bullframe-classless-dark.css` | Classless always-dark |
+| `bullframe-classless-system-default.css` | Classless system preference |
+| `bullframe-utilities.css` | Utility classes only |
+
+All variants available as `.css` and `.min.css` with source maps.
+
+---
+
+## Starter Templates
+
+<details><summary>Standard template</summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bullframe CSS Starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css">
+  </head>
+  <body>
+    <div class="bf-container">
+      <h1>Hello, Bullframe!</h1>
+      <p>Start building your project.</p>
+    </div>
+  </body>
+</html>
+```
+
+</details>
+
+<details><summary>Classless template</summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bullframe CSS Classless Starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-classless.min.css">
+    <style>
+      body {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5rem;
+        max-width: 80rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, Bullframe!</h1>
+    <p>No classes needed. Just semantic HTML.</p>
+  </body>
+</html>
+```
+
+</details>
+
+---
+
+## Documentation
+
+Full documentation, utility reference, and theming guides:
+
+**[bullframecss.marcopontili.com](https://bullframecss.marcopontili.com)**
+
+Covers: [Getting Started](https://bullframecss.marcopontili.com/docs/getting-started) | [CSS Variables](https://bullframecss.marcopontili.com/docs/variables) | [Typography](https://bullframecss.marcopontili.com/docs/typography) | [Layout & Grid](https://bullframecss.marcopontili.com/docs/layout) | [Forms](https://bullframecss.marcopontili.com/docs/forms) | [Buttons](https://bullframecss.marcopontili.com/docs/buttons) | [Dark Mode](https://bullframecss.marcopontili.com/docs/theming/dark-mode) | [Customization](https://bullframecss.marcopontili.com/docs/theming/customization) | [Migration Guide](https://bullframecss.marcopontili.com/docs/migration)
 
 ---
 
 ## Customization
 
-### Theming
-
-Bullframe provides three builds for theming:
-
-1. `bullframe.css` — light theme
-2. `bullframe-dark.css` — dark theme
-3. `bullframe-system-default.css` — theme based on user system preference ([`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme))
-
-#### Light Theme CDN (Default)
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css">
-```
-
-#### Dark Theme CDN
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-dark.min.css">
-```
-
-#### System-default Theme CDN
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-system-default.min.css">
-```
-
-### Accessibility (Color Contrast)
-
-Bullframe uses WCAG AA–compliant colors for links and primary buttons. To restore brighter colors or use your own palette, override the variables:
+Override any CSS variable — no rebuild required:
 
 ```css
 :root {
-  --bf-blue: rgb(0 123 255);      /* Links, primary buttons */
-  --bf-blue-light: rgb(0 86 179); /* Hover states */
+  --bf-blue: rgb(0 123 255);
+  --bf-font-family-sans-serif: 'Inter', system-ui, sans-serif;
+  --bf-body-font-size: 1.8rem;
 }
 ```
 
-### Customise and Rebuild All Styles
-
-After installing Bullframe CSS via npm, you can use [Vite.js](https://vite.dev) to rebuild the framework as you prefer, adding your custom CSS variables and styles:
+Or rebuild from source:
 
 ```bash
-# Build production-ready site/app
+git clone https://github.com/marcop135/bullframe.css.git
+cd bullframe.css
+npm install
+# Edit src/css/variables.css
 npm run build
-
-# Preview production build locally
-npm run preview
 ```
 
 ---
 
-### Utilities
+## Links
 
-Bullframe CSS offers a set of utility classes for fine-grained control over your layout, spacing, typography, and more. Explore each category below for detailed reference.
-
-#### Grid system
-
-<details><summary>Open utilities</summary>
-
-| Variable               | Value  |
-| ---------------------- | ------ |
-| `--bf-breakpoint-xs`   | 0      |
-| `--bf-breakpoint-sm`   | 576px  |
-| `--bf-breakpoint-md`   | 768px  |
-| `--bf-breakpoint-lg`   | 992px  |
-| `--bf-breakpoint-xl`   | 1200px |
-| `--bf-breakpoint-xxl`  | 1400px |
-
-| Utility class              | Description                                                                                                               |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `.bf-container`            | Sets a centered block container with a `max-width` of 1140px, and a custom padding                                        |
-| `.bf-container--fluid`     | Sets a fluid centered block container with a custom padding                                                               |
-| `.bf-container--break-xs`  | Collapses all the columns when the viewport is 575px and below                                                            |
-| `.bf-container--break-md`  | Collapses all the columns when the viewport is 767px and below                                                            |
-| `.bf-container--break-lg`  | Collapses all the columns when the viewport is 991px and below                                                            |
-| `.bf-row`                  | Sets a block container with a custom negative margin                                                                      |
-| `.bf-col-1`                | Sets a floated container with a custom padding and a `width` of `8.3333%`                                                 |
-| `.bf-col-2`                | Sets a floated container with a custom padding and a `width` of `16.666666666666664%`                                     |
-| `.bf-col-3`                | Sets a floated container with a custom padding and a `width` of `25%`                                                     |
-| `.bf-col-4`                | Sets a floated container with a custom padding and a `width` of `33.33333333333333%`                                      |
-| `.bf-col-5`                | Sets a floated container with a custom padding and a `width` of `41.66666666666667%`                                      |
-| `.bf-col-6`                | Sets a floated container with a custom padding and a `width` of `50%`                                                     |
-| `.bf-col-7`                | Sets a floated container with a custom padding and a `width` of `58.333333333333336%`                                     |
-| `.bf-col-8`                | Sets a floated container with a custom padding and a `width` of `66.66666666666666%`                                      |
-| `.bf-col-9`                | Sets a floated container with a custom padding and a `width` of `75%`                                                     |
-| `.bf-col-10`               | Sets a floated container with a custom padding and a `width` of `83.33333333333334%`                                      |
-| `.bf-col-11`               | Sets a floated container with a custom padding and a `width` of `91.66666666666666%`                                      |
-| `.bf-col-12`               | Sets a floated container with a custom padding and a `width` of `100%`                                                    |
-| `.no-gutters`              | Set `margin-left`, `margin-right`, `padding-left` and `padding-right` to `0` — to be applied to row and column containers |
-
-</details>
-
-#### Layout
-
-<details><summary>Open utilities</summary>
-
-| Utility class                      | Description                                                                                                     |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `.bf-clearfix`                     | Clears the float, [read more](http://nicolasgallagher.com/micro-clearfix-hack/)                                 |
-| `.bf-hide`                         | Sets `display` to `none`                                                                                        |
-| `.bf-hidden`                       | Sets `display` to `none` and `visibility` to `hidden`                                                          |
-| `.bf-text-hide`                    | Hides text using a font `hack` (CSS image replacement)                                                         |
-| `.bf-sr-only`                      | Shows text only to screen readers                                                                               |
-| `.bf-sr-only.focusable`            | Shows text only to screen readers and when focused                                                             |
-| `.bf-invisible`                    | Sets `visibility` to `hidden`                                                                                   |
-| `.bf-visible`                      | Sets `visibility` to `visible`                                                                                  |
-| `.bf-display-block`                | Sets `display` to `block`                                                                                       |
-| `.bf-display-block-center`         | Sets `display` to `block`, horizontal margins to `auto`, and text-align to `center`                             |
-| `.bf-display-inline`               | Sets `display` to `inline`                                                                                      |
-| `.bf-display-inline-block`         | Sets `display` to `inline-block`                                                                                |
-| `.bf-display-flex`                 | Sets `display` to `flex`                                                                                        |
-| `.bf-display-inline-flex`          | Sets `display` to `inline-flex`                                                                                 |
-| `.bf-display-flex--justify-start`  | Sets `justify-content` to `flex-start`                                                                         |
-| `.bf-display-flex--justify-end`    | Sets `justify-content` to `flex-end`                                                                           |
-| `.bf-display-flex--justify-center` | Sets `justify-content` to `center`                                                                             |
-| `.bf-display-flex--wrap`           | Sets `flex-wrap` to `wrap`                                                                                      |
-| `.bf-display-flex--nowrap`         | Sets `flex-wrap` to `nowrap`                                                                                    |
-| `.bf-float-left`                   | Sets `float` to `left`                                                                                          |
-| `.bf-float-right`                  | Sets `float` to `right`                                                                                         |
-| `.bf-position-fixed`               | Sets `position` to `fixed`                                                                                      |
-| `.bf-position-relative`            | Sets `position` to `relative`                                                                                   |
-| `.bf-align-center-flex`            | Centers an element with known height and width using flexbox                                                   |
-| `.bf-width-25`                     | Sets `width` to `25%`                                                                                           |
-| `.bf-width-33`                     | Sets `width` to `33.3333%`                                                                                      |
-| `.bf-width-50`                     | Sets `width` to `50%`                                                                                           |
-| `.bf-width-75`                     | Sets `width` to `75%`                                                                                           |
-| `.bf-width-100`                    | Sets `width` to `100%`                                                                                          |
-| `.bf-width-auto`                   | Sets `width` to `auto`                                                                                          |
-| `.bf-z-index-1` to `.bf-z-index-300` | Sets `z-index` to corresponding value (1–300)                                                                |
-
-</details>
-
-#### Spacing
-
-<details><summary>Open utilities</summary>
-
-| Utility class | Description                                                                               |
-| ------------- | ----------------------------------------------------------------------------------------- |
-| `.bf-m-0`     | Sets the `margin` to `0`                                                                  |
-| `.bf-m-t-0`   | Sets the `margin-top` to `0`                                                              |
-| `.bf-m-t-1`   | Sets the `margin-top` to a custom medium spacing value (`--bf-spacing-md`)                 |
-| `.bf-m-t-2`   | Sets the `margin-top` to a custom large spacing value (`--bf-spacing-lg`)                  |
-| `.bf-m-t-3`   | Sets the `margin-top` to a custom extra large spacing value (`--bf-spacing-xl`)             |
-| `.bf-m-t-4`   | Sets the `margin-top` to a custom extra extra large spacing value (`--bf-spacing-xxl`)     |
-| `.bf-m-b-0`   | Sets the `margin-bottom` to `0`                                                             |
-| `.bf-m-b-1`   | Sets the `margin-bottom` to a custom value that matches the grid system gutter             |
-| `.bf-m-b-2`   | Sets the `margin-bottom` to a custom value                                                |
-| `.bf-m-b-3`   | Sets the `margin-bottom` to a custom value                                                |
-| `.bf-m-b-4`   | Sets the `margin-bottom` to a custom value                                                |
-| `.bf-m-l-0`   | Sets the `margin-left` to `0`                                                             |
-| `.bf-m-r-0`   | Sets the `margin-right` to `0`                                                            |
-| `.bf-p-0`     | Sets the `padding` to `0`                                                                 |
-| `.bf-p-t-0`   | Sets the `padding-top` to `0`                                                             |
-| `.bf-p-b-0`   | Sets the `padding-bottom` to `0`                                                          |
-| `.bf-p-l-0`   | Sets the `padding-left` to `0`                                                            |
-| `.bf-p-r-0`   | Sets the `padding-right` to `0`                                                           |
-| `.bf-p-t-1`   | Sets the `padding-top` to a custom value that matches the grid system gutter              |
-| `.bf-p-t-2`   | Sets the `padding-top` to a custom value                                                  |
-| `.bf-p-t-3`   | Sets the `padding-top` to a custom value                                                  |
-| `.bf-p-t-4`   | Sets the `padding-top` to a custom value                                                  |
-| `.bf-p-b-1`   | Sets the `padding-bottom` to a custom value that matches the grid system gutter          |
-| `.bf-p-b-2`   | Sets the `padding-bottom` to a custom value                                               |
-| `.bf-p-b-3`   | Sets the `padding-bottom` to a custom value                                               |
-| `.bf-p-b-4`   | Sets the `padding-bottom` to a custom value                                               |
-
-</details>
-
-#### Texts
-
-<details><summary>Open utilities</summary>
-
-| Utility class                 | Description                                                                                                                     |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `.bf-t-transform-uppercase`   | Sets `transform` to a `uppercase` (AKA capitalizes a text)                                                                      |
-| `.bf-t-transform-none`        | Sets `transform` to a `none`                                                                                                    |
-| `.bf-t-left`                  | Sets `text-align` to a `left`                                                                                                   |
-| `.bf-t-center`                | Sets `text-align` to a `center`                                                                                                 |
-| `.bf-t-right`                 | Sets `text-align` to a `right`                                                                                                  |
-| `.bf-t-shadow`                | Sets a basic text shadow                                                                                                        |
-| `.bf-t-italic`                | Sets `font-style` to a `italic`                                                                                                 |
-| `.bf-t-style-normal`          | Sets `font-style` to a `normal`                                                                                                 |
-| `.bf-t-weight-300`            | Sets `font-weight` to `300` (AKA light)                                                                                         |
-| `.bf-t-weight-400`            | Sets `font-weight` to `400` (AKA normal)                                                                                        |
-| `.bf-t-weight-500`            | Sets `font-weight` to `500` (AKA medium)                                                                                        |
-| `.bf-t-weight-600`            | Sets `font-weight` to `600` (AKA semi-bold)                                                                                     |
-| `.bf-t-weight-700`            | Sets `font-weight` to `700` (AKA bold)                                                                                          |
-| `.bf-t-weight-800`            | Sets `font-weight` to `800` (AKA black)                                                                                         |
-| `.bf-text-break`              | Sets `word-wrap` to a `break-word`, applied by default to the `body`                                                            |
-| `.bf-t-truncate`              | Truncates a very long text and replaces the missing text with an ellipsis                                                       |
-| `.bf-t-truncate--multiline-2` | Truncates a long doubled line text and replaces the missing text with an ellipsis                                               |
-| `.bf-t-truncate--multiline-3` | Truncates a long tripled line text and replaces the missing text with an ellipsis                                               |
-| `.bf-no-select`               | Blocks user text selection                                                                                                      |
-| `.bf-font-sans-serif`         | Sets `font-family` to a `sans-serif`, and a combination of cross-browser system UI sans-serif font families                     |
-| `.bf-font-serif`              | Sets `font-family` to a `serif`, and a combination of cross-browser system UI serif font families                               |
-| `.bf-font-monospace`          | Sets `font-family` to a `monospace`, a combination of widely supported monospaced font families                                 |
-| `.bf-h1`                      | Matches the font styling of a `h1`                                                                                              |
-| `.bf-h2`                      | Matches the font styling of a `h2`                                                                                              |
-| `.bf-h3`                      | Matches the font styling of a `h3`                                                                                              |
-| `.bf-h4`                      | Matches the font styling of a `h4`                                                                                              |
-| `.bf-h5`                      | Matches the font styling of a `h5`                                                                                              |
-| `.bf-h6`                      | Matches the font styling of a `h6`                                                                                              |
-| `.bf-lead`                    | Sets `font-size` to `125%`                                                                                                      |
-| `.bf-responsive-typography`   | Scales `font-size` from a minimum of `1.6rem` (AKA 16px) to a maximum of `1.9rem` using `calc` and some `CSS custom properties` |
-
-</details>
-
-#### Lists
-
-<details><summary>Open utilities</summary>
-
-| Utility class       | Description                                                                      |
-| ------------------- | -------------------------------------------------------------------------------- |
-| `.bf-list-unstyled` | Removes margins, paddings and `li` list styles from `ul`, `ol` and `dd` elements |
-
-</details>
-
-#### Tables
-
-<details><summary>Open utilities</summary>
-
-| Utility class                 | Description                                                              |
-| ----------------------------- | ------------------------------------------------------------------------ |
-| `.bf-table`                   | Sets a border and custom paddings and margins to a table                 |
-| `.bf-table-responsive`        | Adds responsiveness to a table container                                 |
-| `.bf-table--zebra`            | Increases a table readability adding horizontal zebra stripes            |
-| `.bf-table-responsive--zebra` | Increases a responsive table readability adding horizontal zebra stripes |
-
-</details>
-
-#### Embeds
-
-<details><summary>Open utilities</summary>
-
-| Utility class                | Description                                                                                                                             |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `.bf-embed-responsive`       | Adds responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpose element_ (e.g. youtube embed)                        |
-| `.bf-embed-responsive--4-3`  | Sets a 4:3 ratio responsiveness to an `iframe`, `embed`, `object`, `video` or _general purpose element_ container (e.g. youtube embed) |
-| `.bf-embed-responsive--item` | A _general purpose element_ that behaves like a `video`                                                                                  |
-
-</details>
-
-#### Buttons
-
-<details><summary>Open utilities</summary>
-
-| Utility class      | Description                                                                          |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| `.bf-btn`          | Creates a standard gray-looking button (e.g. `<a class="bf-btn" href="...">...</a>`) |
-| `.bf-btn--primary` | Creates a primary blue-looking button                                                |
-
-</details>
-
-#### Form states
-
-<details><summary>Open utilities</summary>
-
-| Utility class  | Description                                                                                          |
-| -------------- | ---------------------------------------------------------------------------------------------------- |
-| `.bf-focused`  | Sets a blue-looking focused ring and shadow around an `input`, `textarea` or `select`                |
-| `.bf-disabled` | Sets `opacity` to `0.5`, and resets a combinations of properties to the default value if is disabled |
-| `.bf-invalid`  | Sets a red-looking focused ring and shadow around an invalid `input`, `textarea` or `select`         |
-
-</details>
-
-#### Reduced motion
-
-<details><summary>Open utilities</summary>
-
-| Utility class        | Description                                                                                                                                                                                                                             |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `.bf-reduced-motion` | Adds a combinations of properties and values to an element (e.g. the `body`) removing all motion-based animations if preferred by the user, [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) |
-
-</details>
+| Resource | |
+|----------|---|
+| [Documentation](https://bullframecss.marcopontili.com) | Guides, API, examples |
+| [npm](https://www.npmjs.com/package/bullframe.css) | Package registry |
+| [JSDelivr CDN](https://cdn.jsdelivr.net/npm/bullframe.css) | CDN delivery |
+| [CodePen Collection](https://codepen.io/collection/nxpjRe) | Live examples |
+| [npm-stat](https://npm-stat.com/charts.html?package=bullframe.css) | Download stats |
 
 ---
 
-## Browser compatibility
+## Browser Support
 
-### Desktop browsers
+Latest 2 stable versions: Chrome, Firefox, Safari, Edge, Opera (desktop & mobile).
 
-- Latest two stable versions: Firefox, Chrome, Edge, Safari, Opera
-
-### Mobile browsers
-
-- Latest two stable versions: Firefox, Chrome, Edge, Mobile Safari, Opera
-
-You can check the [.browserslistrc](https://github.com/marcop135/bullframe.css/blob/master/.browserslistrc) file.
+See [.browserslistrc](.browserslistrc) for details.
 
 ---
 
 ## Contributing
 
-Please read the [contribution guidelines](https://github.com/marcop135/bullframe.css/blob/master/.github/CONTRIBUTING.md).
+Please read the [contribution guidelines](.github/CONTRIBUTING.md).
 
 ## Changelog
 
-[Changelog](https://github.com/marcop135/bullframe.css/blob/master/CHANGELOG.md)
+See [CHANGELOG.md](CHANGELOG.md) for all releases.
 
 ## Author
 
@@ -492,4 +205,4 @@ Please read the [contribution guidelines](https://github.com/marcop135/bullframe
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+[MIT](LICENSE)

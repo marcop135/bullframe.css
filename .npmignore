@@ -1,6 +1,25 @@
+# Source and development files excluded from npm package
+# (The "files" field in package.json is the primary allowlist)
+
 /.git
 /.github
+/.claude
+/website
 /src/docs
+/docs
+
+# Config files
+.editorconfig
+.browserslistrc
 .gitignore
 .gitattributes
+.prettierignore
+.htmlhintrc
+.htmlvalidate.cjs
+stylelint.config.js
+prettier.config.js
+postcss.config.js
+vite.config.js
+
+# Lock files
 package-lock.json

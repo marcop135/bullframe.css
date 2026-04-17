@@ -13,7 +13,6 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
   tutorialSidebar: [
     'intro',
     'getting-started',
@@ -36,6 +35,11 @@ const sidebars = {
         'utilities/grid',
         'utilities/spacing',
         'utilities/text',
+        'utilities/tables',
+        'utilities/lists',
+        'utilities/embeds',
+        'utilities/filters',
+        'utilities/print',
       ],
     },
     {
@@ -47,7 +51,9 @@ const sidebars = {
         'theming/customization',
       ],
     },
+    'accessibility',
     'browser-support',
+    'migration',
   ],
 };
 

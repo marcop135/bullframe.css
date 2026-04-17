@@ -3,16 +3,36 @@
   "version": "6.0.0",
   "type": "module",
   "description": "Bullframe CSS is a lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.",
+  "main": "dist/css/bullframe.css",
+  "style": "dist/css/bullframe.css",
   "jsdelivr": "dist/css/bullframe.css",
   "unpkg": "dist/css/bullframe.css",
-  "main": "dist/css/bullframe.css",
-  "directories": {
-    "doc": "dist/docs/"
+  "exports": {
+    ".": "./dist/css/bullframe.css",
+    "./dark": "./dist/css/bullframe-dark.css",
+    "./system": "./dist/css/bullframe-system-default.css",
+    "./classless": "./dist/css/bullframe-classless.css",
+    "./classless/dark": "./dist/css/bullframe-classless-dark.css",
+    "./classless/system": "./dist/css/bullframe-classless-system-default.css",
+    "./utilities": "./dist/css/bullframe-utilities.css",
+    "./dist/*": "./dist/*"
   },
+  "files": [
+    "dist/css/",
+    "src/css/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "lint": "stylelint \"src/css/**/*.css\"",
+    "lint:fix": "stylelint \"src/css/**/*.css\" --fix",
+    "lint:html": "html-validate \"src/**/*.html\"",
+    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\"",
+    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\"",
     "docs:dev": "cd website && npm start",
     "docs:build": "cd website && npm run build",
     "docs:serve": "cd website && npm run serve"
@@ -22,19 +42,24 @@
     "url": "git+https://github.com/marcop135/bullframe.css.git"
   },
   "keywords": [
-    "boilerplate",
-    "cross-browser",
     "css",
     "css-framework",
-    "dark",
-    "dark-theme",
-    "darkmode",
-    "normalize-css",
-    "reset-css",
     "responsive",
     "responsive-web-design",
+    "accessibility",
+    "a11y",
+    "dark-mode",
+    "dark-theme",
+    "classless",
+    "classless-css",
     "postcss",
-    "typography"
+    "normalize-css",
+    "reset-css",
+    "typography",
+    "cross-browser",
+    "lightweight",
+    "css-custom-properties",
+    "theming"
   ],
   "author": "Marco Pontili",
   "license": "MIT",
@@ -50,8 +75,12 @@
     "htmlhint": "^1.8.1",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
+    "prettier": "^3.5.3",
     "stylelint": "^17.1.1",
     "stylelint-config-standard": "^40.0.0",
     "vite": "^7.3.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

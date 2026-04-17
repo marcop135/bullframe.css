@@ -1,32 +1,59 @@
 # Changes to Bullframe CSS
 
-## Unreleased
+## 6.0.0 (April 17, 2026) - BREAKING CHANGES
 
-### Accessibility (Breaking Change)
+### Architecture
+
+- **MAJOR**: Migrated from Sass/SCSS to native CSS with PostCSS
+- **BREAKING**: All Sass variables replaced with CSS custom properties (`--bf-*`)
+- **BREAKING**: All Sass mixins removed — replaced with utility classes or direct CSS
+- **BREAKING**: Build process now uses PostCSS (`postcss-import`, `autoprefixer`, `cssnano`) instead of Sass
+- Removed Sass-specific dependencies (`sass`, `stylelint-config-standard-scss`)
+- Removed legacy Sass source files (`src/scss/`) — git history preserves them
+- All CSS source now lives in `src/css/` with native CSS syntax
+
+### Dark Mode
+
+- Added three dark mode variants: always-dark, system-preference (`prefers-color-scheme`), and classless
+- Added dark mode CSS variables (`--bf-dark-bg`, `--bf-dark-link`, `--bf-dark-border-focus`, etc.)
+- Added dark scrollbar styling for WebKit/Blink browsers
+
+### Accessibility
 
 - **BREAKING**: Darkened `--bf-blue` and `--bf-blue-light` for WCAG AA color contrast compliance (4.5:1)
   - Primary buttons: white text on blue background now meets contrast requirements
   - Links: blue text on white background now meets contrast requirements
-  - Visual change: blues are slightly darker. Override with CSS variables if you need the previous appearance
+  - Visual change: blues are slightly darker — override with CSS variables if needed
+- Enhanced `:focus-visible` handling for keyboard-only focus indicators
+- Added `prefers-reduced-motion` support via `.bf-reduced-motion` utility
+- Added ARIA attribute styling (`aria-busy`, `aria-disabled`, `aria-hidden`)
+- Integrated [UA+ enhancements](https://fokus.dev/tools/uaplus/) for better browser defaults
 
-## 6.0.0 (February 09, 2025) - BREAKING CHANGES
+### Documentation
 
-- **MAJOR**: Migrated from Sass/SCSS to native CSS with PostCSS
-- **BREAKING**: All Sass variables replaced with CSS custom properties (`--bf-*`)
-- **BREAKING**: All Sass mixins removed - replaced with utility classes or direct CSS
-- **BREAKING**: Build process now uses PostCSS instead of Sass
+- Added Docusaurus v3 documentation site (`website/`)
+- Documentation covers: getting started, CSS variables, typography, layout, forms, buttons, utilities, theming, dark mode, browser support
+- Dark theme enabled by default with system preference respect
+
+### Build & Tooling
+
+- Vite build with custom plugins (`buildAllCss`, `copyDocsFiles`)
+- Source maps generated for all CSS builds
+- Updated stylelint config from SCSS to standard CSS
 - Updated all npm dependencies to latest versions
-- Updated stylelint config from SCSS to standard CSS config
-- Removed Sass-specific dependencies (`sass`, `stylelint-config-standard-scss`)
-- Added `postcss-import` for CSS imports
+
+### New Features
+
+- Added landing page with Vite build
+- Added interactive demo page with build variant selector
+- Added social banner HTML generator (1200x630)
+- RTL (right-to-left) support maintained across all variants
+
+### Fixes
+
 - Fixed markdown table alignment issues in README
-- Updated demo page to reference v6.0.0
-- All CSS files now use native CSS with PostCSS processing
-
-## 5.2.0 - (MM DD, YYYY)
-
 - Improved HTML demo validation via [html-validate](https://html-validate.org/)
-- ....
+- Updated demo page to reference v6.0.0
 
 ## 5.1.0 - (July 08, 2025)
 

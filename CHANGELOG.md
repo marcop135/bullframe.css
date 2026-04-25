@@ -1,5 +1,36 @@
 # Changes to Bullframe CSS
 
+## Unreleased — 6.1.0 candidate
+
+### New build variant
+
+- Added `bullframe-modern.css` — extends `bullframe-system-default.css` with modern CSS:
+  - `color-scheme: light dark` for native browser UI hints
+  - `color-mix(in oklab, ...)` to compute hover tints from base colors (visually equivalent to v6.0.0)
+  - `oklch()` palette tokens (`--bf-blue-oklch`, `--bf-red-oklch`, `--bf-yellow-oklch`, `--bf-orange-oklch`) — opt-in, additive
+  - `:has()`-based form validation hint via `.bf-form-modern` wrapper class
+  - Container-query support via `data-bf-container-query` attribute and `.bf-cq-*` classes
+- New package export: `import 'bullframe.css/modern'`
+- Existing seven build variants are unchanged byte-for-byte; modern features are strictly additive.
+
+### New utilities
+
+- `.bf-antialiased` and `.bf-subpixel-antialiased` — opt-in font-smoothing utilities (per Apple's guidance, Bullframe does NOT apply font-smoothing globally because it makes body text harder to read at small sizes).
+
+### Documentation
+
+- New `website/docs/components/` section with copy-paste patterns: button groups, login/contact/search forms, native `<dialog>` modals, card layouts, header/breadcrumb/pagination/skip-link navigation.
+- New `website/docs/api-reference.md` — complete listing of all `--bf-*` custom properties and `.bf-*` classes.
+- Generator script `scripts/build-api-reference.mjs` keeps the API reference in sync with `src/css/`. Run via `npm run docs:api-reference`.
+- README clarifies v5 (stable) vs v6 (current) positioning so existing v5 npm consumers know what they're getting.
+
+### Build & deployment
+
+- Added `netlify.toml` for one-click deployment of the Docusaurus site to `bullframecss.marcopontili.com`.
+- New `npm run docs:sync-demo` step copies the built demo into Docusaurus' static folder so it ships at `/demo/`.
+- CI now also verifies that `dist/css/bullframe-modern.css` is produced.
+- README CI badge points to `master` branch instead of the now-merged `v6` branch.
+
 ## 6.0.0 (April 17, 2026) - BREAKING CHANGES
 
 ### Architecture

@@ -1,0 +1,23 @@
+# Netlify deployment config for the Docusaurus docs site.
+# Live at https://bullframecss.marcopontili.com
+#
+# To activate:
+#   1. In Netlify dashboard: "Add new site" -> "Import from GitHub" -> select bullframe.css.
+#   2. Netlify auto-detects this file. Confirm the build settings below.
+#   3. Add custom domain: bullframecss.marcopontili.com.
+#   4. Subsequent pushes to master trigger production deploys automatically.
+#
+# For ad-hoc CLI deploys: `netlify deploy --prod` from the repo root after `npm run docs:build`.
+
+[build]
+  # Run from repo root so we can run the vite build (which compiles the seven CSS variants
+  # and the demo) before the Docusaurus build, then sync the demo into Docusaurus' static
+  # folder so it ships at /demo/.
+  command = "npm ci && npm run build && npm run docs:sync-demo && cd website && npm ci && npm run build"
+  publish = "website/build/"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[context.deploy-preview]
+  command = "npm ci && npm run build && npm run docs:sync-demo && cd website && npm ci && npm run build"

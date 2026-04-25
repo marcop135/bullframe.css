@@ -26,3 +26,10 @@ website/.cache-loader/
 website/.env.local
 website/.env.production.local
 website/.env.development.local
+
+# Synced demo & compiled CSS (rebuilt by `npm run docs:sync-demo`)
+website/static/demo/
+website/static/css/
+
+# Netlify CLI local state
+.netlify/

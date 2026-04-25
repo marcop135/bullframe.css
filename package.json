@@ -34,7 +34,9 @@
     "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\"",
     "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\"",
     "docs:dev": "cd website && npm start",
-    "docs:build": "cd website && npm run build",
+    "docs:sync-demo": "node scripts/sync-demo-to-website.mjs",
+    "docs:api-reference": "node scripts/build-api-reference.mjs",
+    "docs:build": "npm run build && npm run docs:sync-demo && cd website && npm run build",
     "docs:serve": "cd website && npm run serve"
   },
   "repository": {

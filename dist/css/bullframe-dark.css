@@ -3053,7 +3053,27 @@ dt {
   }
 }
 
-/* Dark mode overrides - Always dark (no media query) */
+/* Dark mode overrides — Always dark (no media query).
+ *
+ * Pulls in the shared dark rules used by both this and
+ * utility-global-dark-prefers.css, then adds the always-dark-only extras:
+ * an IE select-arrow hack and the .bf-disabled button rules.
+ *
+ * Dark-mode scrollbars are layered in via utilities/global-dark-scrollbars.css
+ * by the variant entry points (bullframe-dark.css, bullframe-classless-dark.css).
+ */
+
+/* Shared dark-mode rules — imported by:
+ *  - utility-global-dark.css         (unconditional, for the always-dark variant)
+ *  - utility-global-dark-prefers.css (wrapped in @media (prefers-color-scheme: dark)
+ *                                     via media-conditional @import)
+ *
+ * Contains every dark-mode rule that applies in BOTH variants. Variant-specific
+ * extras (the IE select-arrow hack and the .bf-disabled button rules) live in
+ * utility-global-dark.css. Dark-mode scrollbars live in utilities/global-dark-scrollbars.css.
+ *
+ * Underscore prefix keeps this file out of the buildAllCss glob in vite.config.js.
+ */
 
 html {
   color: var(--bf-light);
@@ -3154,16 +3174,6 @@ select:not([size], select[multiple]) {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
 
-/* stylelint-disable-next-line unit-no-unknown -- legacy browser hack */
-
-@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
-  select:not([size], select[multiple]),
-  *[dir="rtl"] select:not([size], select[multiple]),
-  select[dir="rtl"]:not([size], select[multiple]) {
-    background-image: none;
-  }
-}
-
 [type="range"] {
   background-color: transparent;
 }
@@ -3228,14 +3238,6 @@ button:focus,
   box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
 }
 
-button.bf-disabled,
-[type="button"].bf-disabled,
-[type="reset"].bf-disabled,
-[type="submit"].bf-disabled,
-.bf-btn.bf-disabled {
-  background: var(--bf-gray-light);
-}
-
 .bf-btn.bf-btn--primary {
   background: var(--bf-blue);
 }
@@ -3249,10 +3251,6 @@ button.bf-disabled,
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
   box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
-}
-
-.bf-btn--primary.bf-disabled {
-  background: var(--bf-blue);
 }
 
 .bf-table th,
@@ -3284,6 +3282,28 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
+  background: var(--bf-blue);
+}
+
+/* stylelint-disable-next-line unit-no-unknown -- legacy browser hack */
+
+@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  select:not([size], select[multiple]),
+  *[dir="rtl"] select:not([size], select[multiple]),
+  select[dir="rtl"]:not([size], select[multiple]) {
+    background-image: none;
+  }
+}
+
+button.bf-disabled,
+[type="button"].bf-disabled,
+[type="reset"].bf-disabled,
+[type="submit"].bf-disabled,
+.bf-btn.bf-disabled {
+  background: var(--bf-gray-light);
+}
+
+.bf-btn--primary.bf-disabled {
   background: var(--bf-blue);
 }
 

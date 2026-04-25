@@ -1,19 +1,3 @@
-/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css 
- */
-
-/* Dark mode overrides — System preference (prefers-color-scheme: dark).
- *
- * Both imports below use postcss-import's media-conditional @import support:
- * the imported content is wrapped in @media (prefers-color-scheme: dark) at
- * build time. This is the native-CSS replacement for the old Sass mixin
- * pattern that previously duplicated all of these rules.
- *
- * Source of truth for the dark rules: src/css/_utility-global-dark-shared.css
- * Source of truth for the scrollbars: src/css/utilities/global-dark-scrollbars.css
- */
-
-@media (prefers-color-scheme: dark) {
-
 /* Shared dark-mode rules — imported by:
  *  - utility-global-dark.css         (unconditional, for the always-dark variant)
  *  - utility-global-dark-prefers.css (wrapped in @media (prefers-color-scheme: dark)
@@ -141,10 +125,6 @@ select:not([size], select[multiple]) {
   background-color: var(--bf-dark-extra);
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: var(--bf-gray);
-}
-
 input::placeholder,
 textarea::placeholder {
   color: var(--bf-gray);
@@ -235,41 +215,3 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
   background: var(--bf-blue);
 }
-}
-
-@media (prefers-color-scheme: dark) {
-
-/* Utilities - Dark mode scrollbars */
-
-/* standard property
- * 'scrollbar-color'
- * https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
- */
-html {
-  scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
-}
-
-/* these features are not standard, and blink and webkit only
- * '::-webkit-scrollbar'
- * https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
- */
-
-::-webkit-scrollbar {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--bf-dark-extra);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(97 97 97); /* gray-dark -5% lightness */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(115 115 115); /* gray-dark +10% lightness */
-}
-}
-
-/*# sourceMappingURL=utility-global-dark-prefers.css.map */

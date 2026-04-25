@@ -44,6 +44,18 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Components',
+      items: [
+        'components/index',
+        'components/button-patterns',
+        'components/forms',
+        'components/modals',
+        'components/cards',
+        'components/navigation',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Theming',
       items: [
         'theming',
@@ -54,6 +66,7 @@ const sidebars = {
     'accessibility',
     'browser-support',
     'migration',
+    'api-reference',
   ],
 };
 

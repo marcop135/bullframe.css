@@ -35,7 +35,7 @@ Perfect for landing pages, marketing sites, blogs, docs, and prototypes. Simply 
 ### CDN (recommended)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
 ```
 
 ### npm
@@ -97,7 +97,7 @@ All variants available as `.css` and `.min.css` with source maps.
     <meta charset="utf-8">
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css">
   </head>
   <body>
     <div class="bf-container">
@@ -119,7 +119,7 @@ All variants available as `.css` and `.min.css` with source maps.
     <meta charset="utf-8">
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-classless.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css">
     <style>
       body {
         margin-left: auto;

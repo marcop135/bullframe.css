@@ -1,46 +1,38 @@
+import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const stats = [
   {
-    title: 'Lightning Fast',
-    Svg: require('@site/static/img/feature-lightning.svg').default,
-    description: (
-      <>
-        Native CSS with PostCSS. No Sass compilation overhead. Small bundle size (~8KB gzipped).
-      </>
-    ),
+    value: '~8 KB',
+    label: 'Gzipped',
+    detail: 'Default build (bullframe.min.css). Includes reset, typography, forms, grid, utilities.',
   },
   {
-    title: 'CSS Custom Properties',
-    Svg: require('@site/static/img/feature-custom.svg').default,
-    description: (
-      <>
-        All variables use CSS custom properties. Easy to customize and theme without rebuilding.
-      </>
-    ),
+    value: '0 / 0',
+    label: 'JS / dependencies',
+    detail: 'Zero JavaScript. Zero runtime deps. Just one stylesheet.',
   },
   {
-    title: 'Fully Responsive',
-    Svg: require('@site/static/img/feature-responsive.svg').default,
-    description: (
-      <>
-        Mobile-first design with flexible grid system. Works perfectly on all screen sizes.
-      </>
-    ),
+    value: 'AA',
+    label: 'WCAG contrast',
+    detail: 'Default tokens meet 4.5:1 on white and on dark. No accessibility audit homework.',
+  },
+  {
+    value: '7',
+    label: 'Build variants',
+    detail: 'Light, dark, system-default, classless variants of each, utilities-only.',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Stat({value, label, detail}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--3', styles.statCol)}>
+      <div className={styles.statCard}>
+        <div className={styles.statValue}>{value}</div>
+        <div className={styles.statLabel}>{label}</div>
+        <p className={styles.statDetail}>{detail}</p>
       </div>
     </div>
   );
@@ -48,12 +40,11 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.statsSection}>
       <div className="container">
+        <Heading as="h2" className={styles.statsTitle}>By the numbers</Heading>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+          {stats.map((s) => <Stat key={s.label} {...s} />)}
         </div>
       </div>
     </section>

@@ -1,10 +1,7 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* Landing page — module-scoped. Hero uses the brand orange already in custom.css. */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -18,51 +15,194 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 1rem 2.5rem;
   }
+}
+
+.heroTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.heroTitleRow :global(.hero__title) {
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.versionBadge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.heroBanner :global(.hero__subtitle) {
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.installSnippet {
+  display: inline-block;
+  margin: 1.75rem auto 2rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.95);
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  max-width: min(100%, 56rem);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.heroBanner .hero__title {
-  color: white;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.heroBanner .hero__subtitle {
-  color: rgba(255, 255, 255, 0.95);
-}
-
-/* Ensure buttons have proper contrast on orange hero background */
-.heroBanner .button--primary {
+.heroBanner :global(.button--primary) {
   background: white !important;
   color: rgb(199, 74, 24) !important;
   border-color: white !important;
   font-weight: 600;
 }
 
-.heroBanner .button--primary:hover {
-  background: rgba(255, 255, 255, 0.9) !important;
+.heroBanner :global(.button--primary):hover {
+  background: rgba(255, 255, 255, 0.92) !important;
   color: rgb(174, 64, 20) !important;
-  border-color: rgba(255, 255, 255, 0.9) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.heroBanner .button--secondary {
-  background: rgba(255, 255, 255, 0.2) !important;
+.heroBanner :global(.button--secondary) {
+  background: rgba(255, 255, 255, 0.18) !important;
   color: white !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
   backdrop-filter: blur(10px);
 }
 
-.heroBanner .button--secondary:hover {
+.heroBanner :global(.button--secondary):hover {
   background: rgba(255, 255, 255, 0.3) !important;
   color: white !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* === Sections below the hero === */
+
+.section {
+  padding: 4rem 0;
+}
+
+.sectionAlt {
+  background: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .sectionAlt {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionLede {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto 2.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Variants grid */
+
+.variantsRow {
+  row-gap: 1.5rem;
+}
+
+.variantCard {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.variantCard:hover {
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+}
+
+.variantName {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.variantFile {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.6rem;
+  word-break: break-all;
+}
+
+.variantWho {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Code blocks in modern + get-started sections */
+
+.codeHeading {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.codeBlock {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  padding: 1rem;
+  margin: 0 0 1.5rem;
+  border-radius: 6px;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 3px solid var(--ifm-color-primary);
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .codeBlock {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.startNote {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.finalCta {
+  text-align: center;
+  margin-top: 1rem;
 }

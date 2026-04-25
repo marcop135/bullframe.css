@@ -1,5 +1,9 @@
 /* Font smoothing utilities (opt-in).
  *
+ * Class names and property values match Tailwind's font-smoothing utilities:
+ * https://tailwindcss.com/docs/font-smoothing
+ * — devs migrating from a Tailwind project get the same API.
+ *
  * Bullframe does NOT apply font-smoothing globally because Apple's own guidance
  * recommends subpixel-antialiased rendering for body text on macOS — using
  * antialiased everywhere makes text thinner and harder to read at small sizes.

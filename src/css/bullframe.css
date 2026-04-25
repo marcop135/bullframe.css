@@ -29,6 +29,7 @@
 @import './miscellaneous/scrolling.css';
 @import './miscellaneous/tables.css';
 @import './miscellaneous/accessibility.css';
+@import './miscellaneous/accessibility-preferences.css';
 
 /* Utilities */
 @import './utilities/layout.css';

@@ -1713,6 +1713,84 @@ caption {
   position: absolute;
 }
 
+/* Accessibility — user preference media queries.
+ *
+ * These rules ONLY apply when the user has opted in via OS or browser
+ * settings (prefers-contrast: more, forced-colors: active). They do not
+ * change the default rendering for anyone else, so they are strictly
+ * additive and safe to ship in a minor release.
+ */
+
+/* prefers-contrast: more
+ *
+ * Triggered when the user requests higher contrast (macOS "Increase
+ * contrast", Windows Contrast Themes, GNOME high-contrast). We:
+ *  - underline links unconditionally (no longer relying on color alone
+ *    to convey "this is a link" — WCAG 1.4.1 Use of Color)
+ *  - thicken the focus ring so it's harder to miss
+ *  - strengthen form-field borders
+ */
+
+@media (prefers-contrast: more) {
+  a {
+    text-decoration: underline;
+  }
+
+  :focus-visible {
+    outline-width: 0.3rem;
+    outline-offset: 0.4rem;
+  }
+
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="url"],
+  [type="week"],
+  input[list],
+  select,
+  textarea {
+    border-width: 2px;
+  }
+}
+
+/* forced-colors: active (Windows High Contrast Mode and similar)
+ *
+ * In Forced Colors Mode the OS overrides authored colors with a fixed
+ * system palette. Most things keep working automatically, but the
+ * focus ring (outline: 0.2rem solid var(--bf-orange)) gets stripped
+ * because Forced Colors ignores authored colors. Restoring it via the
+ * Highlight system color keeps the focus indicator visible.
+ *
+ * UA+ already covers <mark>; this complements that for focus and links.
+ */
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: Highlight;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  /* Keep button borders rendered in forced-colors so disabled/active
+   * states remain distinguishable. */
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
+  .bf-btn {
+    border: 1px solid ButtonText;
+  }
+}
+
 /* Utilities */
 
 /* Utilities - Layout */
@@ -2871,6 +2949,10 @@ dt {
 }
 
 /* Font smoothing utilities (opt-in).
+ *
+ * Class names and property values match Tailwind's font-smoothing utilities:
+ * https://tailwindcss.com/docs/font-smoothing
+ * — devs migrating from a Tailwind project get the same API.
  *
  * Bullframe does NOT apply font-smoothing globally because Apple's own guidance
  * recommends subpixel-antialiased rendering for body text on macOS — using

@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="npm version">
   </a>
   <a href="https://github.com/marcop135/bullframe.css/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=v6&style=flat-square&label=CI" alt="CI status">
+    <img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=master&style=flat-square&label=CI" alt="CI status">
   </a>
   <a href="https://github.com/marcop135/bullframe.css/commits">
     <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css.svg?style=flat-square" alt="Last commit">
@@ -24,6 +24,9 @@
 **A lightweight CSS framework for building fast, responsive, and accessible UIs** — semantic, themeable, and classless-friendly, with solid cross-browser support.
 
 Perfect for landing pages, marketing sites, blogs, docs, and prototypes. Simply add it and start building.
+
+> **v6 is the current line** — native CSS, modern features (`light-dark()`, `color-mix()`, `oklch()`, `:has()`), accessible defaults.
+> **v5 is stable** and supported for security fixes — see the [v5.1.0 release](https://github.com/marcop135/bullframe.css/releases/tag/v5.1.0) and the [migration guide](https://bullframecss.marcopontili.com/docs/migration). Existing v5 users: nothing breaks until you opt in to v6.
 
 ---
 

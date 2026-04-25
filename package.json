@@ -11,6 +11,7 @@
     ".": "./dist/css/bullframe.css",
     "./dark": "./dist/css/bullframe-dark.css",
     "./system": "./dist/css/bullframe-system-default.css",
+    "./modern": "./dist/css/bullframe-modern.css",
     "./classless": "./dist/css/bullframe-classless.css",
     "./classless/dark": "./dist/css/bullframe-classless-dark.css",
     "./classless/system": "./dist/css/bullframe-classless-system-default.css",

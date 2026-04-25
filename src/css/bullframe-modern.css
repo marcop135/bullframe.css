@@ -1,0 +1,60 @@
+/* Bullframe CSS - Modern variant
+ *
+ * Layered on top of the system-default variant (which auto-switches via
+ * prefers-color-scheme). This variant adds modern CSS features available in
+ * 2024+ browsers: color-scheme, color-mix(), oklch(), :has(), container queries.
+ *
+ * Browser support: Chrome 111+, Safari 16.4+, Firefox 113+ (covers latest 2 majors).
+ *
+ * Use this when you want the bleeding edge. Use bullframe-system-default.css for
+ * the maximum-compatibility classic build.
+ */
+
+@import './bullframe-system-default.css';
+
+:root {
+  /* Native browser hint: scrollbars, form controls, etc. respect light/dark */
+  color-scheme: light dark;
+
+  /* Compute the hover tint from the base blue rather than hardcoding it.
+   * Visually equivalent to v6.0.0's rgb(0 65 135), now provenance-traceable. */
+  --bf-blue-light: color-mix(in oklab, var(--bf-blue), black 18%);
+
+  /* Opt-in perceptually-uniform palette. Use these when you want predictable
+   * lightness math (e.g. building hover/active variants programmatically).
+   * Not consumed by default classes — reference them yourself. */
+  --bf-blue-oklch: oklch(40% 0.16 250);
+  --bf-red-oklch: oklch(55% 0.22 27);
+  --bf-yellow-oklch: oklch(95% 0.18 100);
+  --bf-orange-oklch: oklch(75% 0.18 60);
+}
+
+/* Opt-in form-validation feedback using :has().
+ * Wrap your form in <form class="bf-form-modern"> to dim the submit when invalid. */
+.bf-form-modern:has(:invalid) .bf-btn--primary,
+.bf-form-modern:has(:invalid) [type="submit"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Opt-in container-query support for the grid.
+ * Add data-bf-container-query to a .bf-container ancestor to switch breakpoints
+ * based on container width instead of viewport width. */
+[data-bf-container-query] {
+  container-type: inline-size;
+}
+
+@container (min-width: 576px) {
+  [data-bf-container-query] .bf-cq-sm { display: block; }
+  [data-bf-container-query] .bf-cq-sm-hidden { display: none; }
+}
+
+@container (min-width: 768px) {
+  [data-bf-container-query] .bf-cq-md { display: block; }
+  [data-bf-container-query] .bf-cq-md-hidden { display: none; }
+}
+
+@container (min-width: 992px) {
+  [data-bf-container-query] .bf-cq-lg { display: block; }
+  [data-bf-container-query] .bf-cq-lg-hidden { display: none; }
+}

@@ -41,4 +41,5 @@ jobs:
           test -f dist/css/bullframe.min.css || (echo "Missing bullframe.min.css" && exit 1)
           test -f dist/css/bullframe-dark.css || (echo "Missing bullframe-dark.css" && exit 1)
           test -f dist/css/bullframe-classless.css || (echo "Missing bullframe-classless.css" && exit 1)
+          test -f dist/css/bullframe-modern.css || (echo "Missing bullframe-modern.css" && exit 1)
           echo "All expected dist files present"

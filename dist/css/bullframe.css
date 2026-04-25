@@ -2870,6 +2870,26 @@ dt {
   }
 }
 
+/* Font smoothing utilities (opt-in).
+ *
+ * Bullframe does NOT apply font-smoothing globally because Apple's own guidance
+ * recommends subpixel-antialiased rendering for body text on macOS — using
+ * antialiased everywhere makes text thinner and harder to read at small sizes.
+ *
+ * Use these utilities when you specifically need control (e.g. light text on
+ * dark backgrounds, where subpixel rendering can produce color fringing).
+ */
+
+.bf-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bf-subpixel-antialiased {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
 /* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
  * Inlined to avoid the additional HTTP request:
  * https://www.phpied.com/delay-loading-your-print-css/ */

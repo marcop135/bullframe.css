@@ -44,4 +44,5 @@
 @import './utilities/tables.css';
 @import './utilities/embeds.css';
 @import './utilities/reduced-motion.css';
+@import './utilities/font-smoothing.css';
 @import './utilities/print.css';

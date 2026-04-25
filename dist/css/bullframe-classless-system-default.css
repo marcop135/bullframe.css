@@ -1715,240 +1715,275 @@ caption {
   position: absolute;
 }
 
-/* Dark mode overrides - prefers-color-scheme: dark */
+/* Dark mode overrides — System preference (prefers-color-scheme: dark).
+ *
+ * Both imports below use postcss-import's media-conditional @import support:
+ * the imported content is wrapped in @media (prefers-color-scheme: dark) at
+ * build time. This is the native-CSS replacement for the old Sass mixin
+ * pattern that previously duplicated all of these rules.
+ *
+ * Source of truth for the dark rules: src/css/_utility-global-dark-shared.css
+ * Source of truth for the scrollbars: src/css/utilities/global-dark-scrollbars.css
+ */
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color: rgb(240 240 240); /* bf-light */
-  }
 
-  body {
-    background-color: var(--bf-dark-bg);
-  }
+/* Shared dark-mode rules — imported by:
+ *  - utility-global-dark.css         (unconditional, for the always-dark variant)
+ *  - utility-global-dark-prefers.css (wrapped in @media (prefers-color-scheme: dark)
+ *                                     via media-conditional @import)
+ *
+ * Contains every dark-mode rule that applies in BOTH variants. Variant-specific
+ * extras (the IE select-arrow hack and the .bf-disabled button rules) live in
+ * utility-global-dark.css. Dark-mode scrollbars live in utilities/global-dark-scrollbars.css.
+ *
+ * Underscore prefix keeps this file out of the buildAllCss glob in vite.config.js.
+ */
 
-  a {
-    color: var(--bf-dark-link);
-  }
+html {
+  color: var(--bf-light);
+}
 
-  a:hover,
-  a:focus {
-    color: var(--bf-dark-link-hover);
-  }
+body {
+  background-color: var(--bf-dark-bg);
+}
 
-  mark {
-    background-color: var(--bf-dark-mark-bg);
-  }
+a {
+  color: var(--bf-dark-link);
+}
 
-  ins {
-    background-color: var(--bf-dark-ins-bg);
-  }
+a:hover,
+a:focus {
+  color: var(--bf-dark-link-hover);
+}
 
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="week"],
-  [type="time"],
-  [type="url"],
-  [type="range"],
-  input[list],
-  select,
-  select:not([size], select[multiple]),
-  textarea {
-    background-color: var(--bf-dark-extra);
-    border-color: var(--bf-black);
-    color: var(--bf-gray-light);
-  }
+mark {
+  background-color: var(--bf-dark-mark-bg);
+}
 
-  [type="email"]:active,
-  [type="email"]:focus,
-  [type="number"]:active,
-  [type="number"]:focus,
-  [type="password"]:active,
-  [type="password"]:focus,
-  [type="tel"]:active,
-  [type="tel"]:focus,
-  [type="search"]:active,
-  [type="search"]:focus,
-  [type="text"]:active,
-  [type="text"]:focus,
-  [type="date"]:active,
-  [type="date"]:focus,
-  [type="datetime-local"]:active,
-  [type="datetime-local"]:focus,
-  [type="month"]:active,
-  [type="month"]:focus,
-  [type="week"]:active,
-  [type="week"]:focus,
-  [type="time"]:active,
-  [type="time"]:focus,
-  [type="url"]:active,
-  [type="url"]:focus,
-  input[list]:active,
-  input[list]:focus,
-  select:active,
-  select:focus,
-  select:not([size], select[multiple]):active,
-  select:not([size], select[multiple]):focus,
-  textarea:active,
-  textarea:focus {
-    background-color: var(--bf-dark-extra);
-    border-color: var(--bf-dark-border-focus);
-    box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
-  }
+ins {
+  background-color: var(--bf-dark-ins-bg);
+}
 
-  .bf-focused {
-    border-color: var(--bf-dark-border-focus) !important;
-    box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
-  }
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="search"],
+[type="text"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="time"],
+[type="url"],
+[type="range"],
+input[list],
+select,
+select:not([size], select[multiple]),
+textarea {
+  background-color: var(--bf-dark-extra);
+  border-color: var(--bf-black);
+  color: var(--bf-gray-light);
+}
 
-  .bf-invalid,
-  .bf-invalid:focus {
-    color: var(--bf-dark-invalid) !important;
-    border-color: var(--bf-dark-invalid) !important;
-  }
+[type="email"]:active,
+[type="email"]:focus,
+[type="number"]:active,
+[type="number"]:focus,
+[type="password"]:active,
+[type="password"]:focus,
+[type="tel"]:active,
+[type="tel"]:focus,
+[type="search"]:active,
+[type="search"]:focus,
+[type="text"]:active,
+[type="text"]:focus,
+[type="date"]:active,
+[type="date"]:focus,
+[type="datetime-local"]:active,
+[type="datetime-local"]:focus,
+[type="month"]:active,
+[type="month"]:focus,
+[type="week"]:active,
+[type="week"]:focus,
+[type="time"]:active,
+[type="time"]:focus,
+[type="url"]:active,
+[type="url"]:focus,
+input[list]:active,
+input[list]:focus,
+select:active,
+select:focus,
+select:not([size], select[multiple]):active,
+select:not([size], select[multiple]):focus,
+textarea:active,
+textarea:focus {
+  background-color: var(--bf-dark-extra);
+  border-color: var(--bf-dark-border-focus);
+  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
+}
 
-  select:not([size], select[multiple]) {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
-  }
+.bf-focused {
+  border-color: var(--bf-dark-border-focus) !important;
+  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
+}
 
-  [type="range"] {
-    background-color: transparent;
-  }
+.bf-invalid,
+.bf-invalid:focus {
+  color: var(--bf-dark-invalid) !important;
+  border-color: var(--bf-dark-invalid) !important;
+}
 
-  [type="range"]:focus {
-    background-color: transparent;
-  }
+select:not([size], select[multiple]) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+}
 
-  [type="range"]::-webkit-slider-runnable-track {
-    background-color: var(--bf-dark-extra);
-  }
+[type="range"] {
+  background-color: transparent;
+}
 
-  [type="range"]::-moz-range-track {
-    background-color: var(--bf-dark-extra);
-  }
+[type="range"]:focus {
+  background-color: transparent;
+}
 
-  input::-moz-placeholder, textarea::-moz-placeholder {
-    color: var(--bf-gray);
-  }
+[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--bf-dark-extra);
+}
 
-  input::placeholder,
-  textarea::placeholder {
-    color: var(--bf-gray);
-  }
+[type="range"]::-moz-range-track {
+  background-color: var(--bf-dark-extra);
+}
 
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"],
-  .bf-btn {
-    background: var(--bf-gray-light);
-  }
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: var(--bf-gray);
+}
 
-  button:hover,
-  button:active,
-  button:focus,
-  [type="button"]:hover,
-  [type="button"]:active,
-  [type="button"]:focus,
-  [type="reset"]:hover,
-  [type="reset"]:active,
-  [type="reset"]:focus,
-  [type="submit"]:hover,
-  [type="submit"]:active,
-  [type="submit"]:focus,
-  .bf-btn:hover,
-  .bf-btn:active,
-  .bf-btn:focus {
-    background: var(--bf-dark-button-hover);
-  }
+input::placeholder,
+textarea::placeholder {
+  color: var(--bf-gray);
+}
 
-  button:active,
-  button:focus,
-  [type="button"]:active,
-  [type="button"]:focus,
-  [type="reset"]:active,
-  [type="reset"]:focus,
-  [type="submit"]:active,
-  [type="submit"]:focus,
-  .bf-btn:active,
-  .bf-btn:focus {
-    box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
-  }
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+.bf-btn {
+  background: var(--bf-gray-light);
+}
 
-  .bf-btn.bf-btn--primary {
-    background: var(--bf-blue);
-  }
+button:hover,
+button:active,
+button:focus,
+[type="button"]:hover,
+[type="button"]:active,
+[type="button"]:focus,
+[type="reset"]:hover,
+[type="reset"]:active,
+[type="reset"]:focus,
+[type="submit"]:hover,
+[type="submit"]:active,
+[type="submit"]:focus,
+.bf-btn:hover,
+.bf-btn:active,
+.bf-btn:focus {
+  background: var(--bf-dark-button-hover);
+}
 
-  .bf-btn.bf-btn--primary:hover,
-  .bf-btn.bf-btn--primary:active,
-  .bf-btn.bf-btn--primary:focus {
-    background: var(--bf-blue-light);
-  }
+button:active,
+button:focus,
+[type="button"]:active,
+[type="button"]:focus,
+[type="reset"]:active,
+[type="reset"]:focus,
+[type="submit"]:active,
+[type="submit"]:focus,
+.bf-btn:active,
+.bf-btn:focus {
+  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
+}
 
-  .bf-btn.bf-btn--primary:active,
-  .bf-btn.bf-btn--primary:focus {
-    box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
-  }
+.bf-btn.bf-btn--primary {
+  background: var(--bf-blue);
+}
 
-  .bf-table th,
-  .bf-table td {
-    border-color: var(--bf-gray-dark);
-  }
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  background: var(--bf-blue-light);
+}
 
-  .bf-table--zebra tbody tr:nth-child(odd),
-  .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-    background-color: var(--bf-gray-dark-extra);
-  }
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
+}
 
-  dialog {
-    color: var(--bf-light);
-    background-color: var(--bf-dark-bg);
-  }
+.bf-table th,
+.bf-table td {
+  border-color: var(--bf-gray-dark);
+}
 
-  caption {
-    color: var(--bf-gray-light);
-  }
+.bf-table--zebra tbody tr:nth-child(odd),
+.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  background-color: var(--bf-gray-dark-extra);
+}
 
-  progress[value] {
-    background: var(--bf-gray-dark-extra);
-    color: var(--bf-blue);
-  }
+dialog {
+  color: var(--bf-light);
+  background-color: var(--bf-dark-bg);
+}
 
-  progress[value]::-webkit-progress-bar {
-    background: var(--bf-gray-dark-extra);
-  }
+caption {
+  color: var(--bf-gray-light);
+}
 
-  progress[value]::-webkit-progress-value {
-    background: var(--bf-blue);
-  }
+progress[value] {
+  background: var(--bf-gray-dark-extra);
+  color: var(--bf-blue);
+}
 
-  /* Dark mode scrollbars */
-  html {
-    scrollbar-color: rgb(97 97 97) var(--bf-dark-extra);
-  }
+progress[value]::-webkit-progress-bar {
+  background: var(--bf-gray-dark-extra);
+}
 
-  ::-webkit-scrollbar {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+progress[value]::-webkit-progress-value {
+  background: var(--bf-blue);
+}
+}
 
-  ::-webkit-scrollbar-track {
-    background-color: var(--bf-dark-extra);
-  }
+@media (prefers-color-scheme: dark) {
 
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(97 97 97);
-  }
+/* Utilities - Dark mode scrollbars */
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(115 115 115);
-  }
+/* standard property
+ * 'scrollbar-color'
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
+ */
+html {
+  scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
+}
+
+/* these features are not standard, and blink and webkit only
+ * '::-webkit-scrollbar'
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+ */
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bf-dark-extra);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(97 97 97); /* gray-dark -5% lightness */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(115 115 115); /* gray-dark +10% lightness */
+}
 }
 
 /*# sourceMappingURL=bullframe-classless-system-default.css.map */

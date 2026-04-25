@@ -15,7 +15,7 @@
 
 ### New utilities
 
-- `.bf-antialiased` and `.bf-subpixel-antialiased` — opt-in font-smoothing utilities (per Apple's guidance, Bullframe does NOT apply font-smoothing globally because it makes body text harder to read at small sizes).
+- `.bf-antialiased` and `.bf-subpixel-antialiased` — opt-in font-smoothing utilities. Class names and property values mirror [Tailwind's font-smoothing utilities](https://tailwindcss.com/docs/font-smoothing) so devs migrating from Tailwind get the same API. Per Apple's guidance, Bullframe does NOT apply antialiasing globally — `subpixel-antialiased` rendering is better for body text on macOS at small sizes.
 
 ### Documentation
 
@@ -30,6 +30,13 @@
 - New `npm run docs:sync-demo` step copies the built demo into Docusaurus' static folder so it ships at `/demo/`.
 - CI now also verifies that `dist/css/bullframe-modern.css` is produced.
 - README CI badge points to `master` branch instead of the now-merged `v6` branch.
+- Bumped `@docusaurus/core`, `@docusaurus/preset-classic`, and `@docusaurus/module-type-aliases` to `^3.10.0` to fix an `mdxCrossCompilerCache` build crash caused by version drift between the auto-resolved core and the older preset.
+
+### Landing page
+
+- Redesigned `bullframecss.marcopontili.com` homepage with a v6-prominent hero, the actual install `<link>` tag rendered above the CTAs, a "by the numbers" stats row (~8 KB / 0 JS / AA / 7 builds), a "seven builds, one CDN" picker, a "what v6 brings" section showing four side-by-side modern-CSS code samples, and a three-way install section (CDN, npm, download). No marketing fluff; every claim has a number or a code block.
+- Install snippets pin to `@latest` (not `@6`) until v6 is published to npm — until then `@latest` resolves to v5.1.0 and rolls forward automatically when v6.1.0 publishes.
+- Same change applied to the three `@6` references in `README.md`.
 
 ## 6.0.0 (April 17, 2026) - BREAKING CHANGES
 

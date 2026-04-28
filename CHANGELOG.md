@@ -29,7 +29,7 @@
 - Added `netlify.toml` for one-click deployment of the Docusaurus site to `bullframecss.marcopontili.com`.
 - New `npm run docs:sync-demo` step copies the built demo into Docusaurus' static folder so it ships at `/demo/`.
 - CI now also verifies that `dist/css/bullframe-modern.css` is produced.
-- README CI badge points to `master` branch instead of the now-merged `v6` branch.
+- README CI badge filter switched from `branch=v6` to `branch=master` so the badge tracks the stable line. (v6 has not been merged into master.)
 - Bumped `@docusaurus/core`, `@docusaurus/preset-classic`, and `@docusaurus/module-type-aliases` to `^3.10.0` to fix an `mdxCrossCompilerCache` build crash caused by version drift between the auto-resolved core and the older preset.
 
 ### Landing page

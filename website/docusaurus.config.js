@@ -43,7 +43,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/marcop135/bullframe.css/tree/main/website/',
+          editUrl: 'https://github.com/marcop135/bullframe.css/tree/v6/website/',
         },
         blog: false,
         theme: {

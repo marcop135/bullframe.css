@@ -77,83 +77,25 @@ npm install bullframe.css
 
 ---
 
-## Build Variants
+## Three modes, seven files
 
-| Variant | Description |
-|---------|-------------|
-| `bullframe.css` | Light theme (default) |
-| `bullframe-dark.css` | Always-dark theme |
-| `bullframe-system-default.css` | Follows system `prefers-color-scheme` |
-| `bullframe-classless.css` | Classless light theme |
-| `bullframe-classless-dark.css` | Classless always-dark |
-| `bullframe-classless-system-default.css` | Classless system preference |
-| `bullframe-utilities.css` | Utility classes only |
+| Mode | Variant file | When |
+|------|---|------|
+| **Classless** | `bullframe-classless.css` | Drop on plain HTML — blogs, docs, AI-generated markup. No classes. |
+| | `bullframe-classless-dark.css` | Same, always dark. |
+| | `bullframe-classless-system-default.css` | Same, follows `prefers-color-scheme`. |
+| **Class-based** | `bullframe.css` | Apps and product sites — use `.bf-container`, `.bf-btn`, `.bf-row`. |
+| | `bullframe-dark.css` | Same, always dark. |
+| | `bullframe-system-default.css` | Same, follows `prefers-color-scheme`. |
+| **Utility-first** | `bullframe-utilities.css` | You already have a reset; you just want `.bf-m-t-3` / `.bf-t-center`. |
 
-All variants available as `.css` and `.min.css` with source maps.
-
----
-
-## Starter Templates
-
-<details><summary>Standard template</summary>
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Bullframe CSS Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css">
-  </head>
-  <body>
-    <div class="bf-container">
-      <h1>Hello, Bullframe!</h1>
-      <p>Start building your project.</p>
-    </div>
-  </body>
-</html>
-```
-
-</details>
-
-<details><summary>Classless template</summary>
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Bullframe CSS Classless Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css">
-    <style>
-      body {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1.5rem;
-        max-width: 80rem;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Hello, Bullframe!</h1>
-    <p>No classes needed. Just semantic HTML.</p>
-  </body>
-</html>
-```
-
-</details>
+All variants ship as `.css` and `.min.css` with source maps. Same `--bf-*` tokens underneath every row — change the import, your theme carries over.
 
 ---
 
 ## Documentation
 
-Full documentation, utility reference, and theming guides:
-
-**[bullframecss.marcopontili.com](https://bullframecss.marcopontili.com)**
-
-Covers: [Getting Started](https://bullframecss.marcopontili.com/docs/getting-started) | [CSS Variables](https://bullframecss.marcopontili.com/docs/variables) | [Typography](https://bullframecss.marcopontili.com/docs/typography) | [Layout & Grid](https://bullframecss.marcopontili.com/docs/layout) | [Forms](https://bullframecss.marcopontili.com/docs/forms) | [Buttons](https://bullframecss.marcopontili.com/docs/buttons) | [Dark Mode](https://bullframecss.marcopontili.com/docs/theming/dark-mode) | [Customization](https://bullframecss.marcopontili.com/docs/theming/customization) | [Migration Guide](https://bullframecss.marcopontili.com/docs/migration)
+[**bullframecss.marcopontili.com**](https://bullframecss.marcopontili.com) — guides, full API reference, components, migration guide, theming.
 
 ---
 
@@ -178,18 +120,6 @@ npm install
 # Edit src/css/variables.css
 npm run build
 ```
-
----
-
-## Links
-
-| Resource | |
-|----------|---|
-| [Documentation](https://bullframecss.marcopontili.com) | Guides, API, examples |
-| [npm](https://www.npmjs.com/package/bullframe.css) | Package registry |
-| [JSDelivr CDN](https://cdn.jsdelivr.net/npm/bullframe.css) | CDN delivery |
-| [CodePen Collection](https://codepen.io/collection/nxpjRe) | Live examples |
-| [npm-stat](https://npm-stat.com/charts.html?package=bullframe.css) | Download stats |
 
 ---
 

@@ -18,8 +18,12 @@ function HomepageHeader() {
           <span className={styles.versionBadge} aria-label="Version 6">v6</span>
         </div>
         <p className="hero__subtitle">
-          A native-CSS framework for fast, accessible, semantic HTML &mdash;
-          without buying into a class system you don&rsquo;t believe in.
+          One design system. Three ways to write it. Zero JavaScript.
+        </p>
+        <p className={styles.heroLede}>
+          Classless for your blog, class-based for your product, utility-first for your dashboard
+          &mdash; all from one package, sharing one set of <code>--bf-*</code> tokens. Switch the
+          import; your theme carries over.
         </p>
         <pre className={styles.installSnippet} aria-label="One-line install">
 {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">`}
@@ -164,10 +168,7 @@ function GetStartedSection() {
 {`<link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">`}
             </pre>
-            <p className={styles.startNote}>
-              Fastest. v6 is published to npm shortly &mdash; until then,
-              <code>@latest</code> resolves to the v5 line.
-            </p>
+            <p className={styles.startNote}>Fastest. Pin to <code>@6</code> once the v6 release is on npm.</p>
           </div>
           <div className="col col--4">
             <h3 className={styles.codeHeading}>npm</h3>
@@ -204,8 +205,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} v6 — lightweight, native-CSS framework`}
-      description="Bullframe CSS v6: ~8 KB gzipped, zero JavaScript, WCAG AA defaults, seven build variants. Native CSS. PostCSS pipeline. Drop in via CDN or npm.">
+      title={`${siteConfig.title} — one design system, three ways to write it`}
+      description="Bullframe CSS: classless, class-based, and utility-first under one --bf-* token system. ~8 KB gzipped. Zero JavaScript. WCAG AA defaults. Native CSS via PostCSS.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

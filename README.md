@@ -68,18 +68,12 @@ npm install bullframe.css
 
 ---
 
-## Features
+## What you get
 
-- **Native CSS** — no Sass, no preprocessor lock-in. Built with PostCSS.
-- **CSS Custom Properties** — easy theming via `--bf-*` variables, no rebuild needed.
-- **Responsive** — mobile-first layout with a flexible 12-column grid system.
-- **Dark Mode** — three variants: always-dark, system-preference, and classless.
-- **Accessible** — WCAG AA color contrast, `:focus-visible`, `prefers-reduced-motion`, ARIA styling.
-- **Classless-Friendly** — write semantic HTML, get clean styles. No classes required.
-- **Lightweight** — ~8 KB gzipped. Zero JavaScript. Zero dependencies.
-- **Cross-Browser** — latest 2 stable versions of all major browsers.
-- **RTL Support** — right-to-left layouts work out of the box.
-- **Framework-Agnostic** — works with React, Vue, Svelte, plain HTML, or anything else.
+- **Three modes, one token set.** Classless (`bullframe-classless.css`), class-based (`bullframe.css`), utility-first (`bullframe-utilities.css`). Switch the import — your theme carries over.
+- **Theme with one line.** `:root { --bf-blue: rgb(0 100 255); }` — no rebuild, no config file.
+- **~8 KB gzipped, 0 JavaScript, 0 dependencies.** The default build is the only file in your `<head>`.
+- **WCAG AA + [UA+](https://fokus.dev/tools/uaplus/) baselines.** Accessible defaults out of the box, plus opt-in `prefers-contrast`, `forced-colors`, and `prefers-reduced-motion` rules.
 
 ---
 

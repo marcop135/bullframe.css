@@ -1,6 +1,6 @@
 # Changes to Bullframe CSS
 
-## Unreleased — 6.1.0 candidate
+## Unreleased
 
 ### New build variant
 

@@ -21,12 +21,25 @@
   <img alt="Bullframe CSS logo" src="https://raw.githubusercontent.com/marcop135/bullframe.css/master/src/docs/github-readme/bf-logo-full-light.png">
 </picture>
 
-**A lightweight CSS framework for building fast, responsive, and accessible UIs** — semantic, themeable, and classless-friendly, with solid cross-browser support.
+**One design system. Three ways to write it. Zero JavaScript.**
 
-Perfect for landing pages, marketing sites, blogs, docs, and prototypes. Simply add it and start building.
+Bullframe is a native-CSS framework that ships in three authoring modes — classless, class-based, and utility-first — built from a single set of `--bf-*` design tokens. Start a blog with the classless build, ship a product with the class-based build, drop the utilities into an existing app. Switch the import; your theme carries over. ~8 KB gzipped, no JavaScript, no build step required, WCAG AA on the default tokens.
 
-> **v6 is the current line** — native CSS, modern features (`light-dark()`, `color-mix()`, `oklch()`, `:has()`), accessible defaults.
-> **v5 is stable** and supported for security fixes — see the [v5.1.0 release](https://github.com/marcop135/bullframe.css/releases/tag/v5.1.0) and the [migration guide](https://bullframecss.marcopontili.com/docs/migration). Existing v5 users: nothing breaks until you opt in to v6.
+> **v6 is the current line. v5 is stable** and supported for security fixes — see the [v5.1.0 release](https://github.com/marcop135/bullframe.css/releases/tag/v5.1.0) and the [migration guide](https://bullframecss.marcopontili.com/docs/migration).
+
+### What this is
+
+- A stylesheet you link once. Themed via CSS custom properties — no rebuild.
+- Three authoring modes sharing one token set: classless (semantic HTML), class-based (`.bf-container`, `.bf-btn`), utility-first (`.bf-m-t-3`, `.bf-t-center`).
+- Built around modern HTML — `<dialog>`, `<details>`, container queries, `:focus-visible` — with UA+ baselines.
+- WCAG AA on default tokens; honors `prefers-reduced-motion`, `prefers-contrast`, `forced-colors`.
+
+### What this isn't
+
+- Not a component framework. No JS, no modals-by-data-attribute, no carousels.
+- Not Tailwind. The utilities exist as a build option, not the primary API.
+- Not a design system you extend with a config file. You override CSS variables.
+- Not for IE11 or anything older than the latest 2 stable browser versions.
 
 ---
 

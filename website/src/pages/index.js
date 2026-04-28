@@ -45,48 +45,59 @@ function HomepageHeader() {
 }
 
 function VariantsSection() {
-  const variants = [
-    {
-      name: 'Default',
-      file: 'bullframe.css',
-      who: 'Apps with their own components. Use .bf-* utilities where useful.',
-    },
+  const modes = [
     {
       name: 'Classless',
       file: 'bullframe-classless.css',
-      who: 'Plain HTML, no classes. Drop in on a blog post or a Markdown render.',
+      sample: `<link rel="stylesheet"
+  href="…/bullframe-classless.min.css">
+
+<h1>Hello</h1>
+<p>Just semantic HTML.</p>
+<form>…</form>`,
+      who: 'Blogs, docs, AI-generated markup, prototypes. No classes to add.',
     },
     {
-      name: 'Dark / System',
-      file: 'bullframe-dark.css · bullframe-system-default.css',
-      who: 'Always-dark, or auto-switch via prefers-color-scheme.',
+      name: 'Class-based',
+      file: 'bullframe.css',
+      sample: `<link rel="stylesheet"
+  href="…/bullframe.min.css">
+
+<div class="bf-container">
+  <h1 class="bf-t-center">Hello</h1>
+  <button class="bf-btn bf-btn--primary">Go</button>
+</div>`,
+      who: 'Apps and product sites — grid, buttons, forms, tables.',
     },
     {
-      name: 'Utilities only',
+      name: 'Utility-first',
       file: 'bullframe-utilities.css',
-      who: 'You already have a reset. Just want the .bf-* helpers (grid, spacing, text).',
-    },
-    {
-      name: 'Modern (v6.1+)',
-      file: 'bullframe-modern.css',
-      who: 'light-dark(), color-mix(), :has(), container queries. Browsers from 2024+.',
+      sample: `<link rel="stylesheet"
+  href="…/bullframe-utilities.min.css">
+
+<div class="bf-m-t-3 bf-t-center">
+  <h1 class="bf-t-weight-700">Hello</h1>
+</div>`,
+      who: 'You already have a reset; you just want .bf-* helpers.',
     },
   ];
   return (
     <section className={styles.section}>
       <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>Seven builds, one CDN</Heading>
+        <Heading as="h2" className={styles.sectionTitle}>Three ways to write it</Heading>
         <p className={styles.sectionLede}>
-          Pick the variant that matches how you write HTML. They share the same{' '}
-          <code>--bf-*</code> tokens, so themes carry across.
+          Same <code>--bf-*</code> tokens. Same accessible defaults. Same package.
+          Pick the mode that matches how you write HTML &mdash; switch the import,
+          your theme carries over.
         </p>
         <div className={clsx('row', styles.variantsRow)}>
-          {variants.map((v) => (
-            <div key={v.name} className="col col--4">
+          {modes.map((m) => (
+            <div key={m.name} className="col col--4">
               <article className={styles.variantCard}>
-                <h3 className={styles.variantName}>{v.name}</h3>
-                <code className={styles.variantFile}>{v.file}</code>
-                <p className={styles.variantWho}>{v.who}</p>
+                <h3 className={styles.variantName}>{m.name}</h3>
+                <code className={styles.variantFile}>{m.file}</code>
+                <pre className={styles.codeBlock}>{m.sample}</pre>
+                <p className={styles.variantWho}>{m.who}</p>
               </article>
             </div>
           ))}

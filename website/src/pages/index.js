@@ -111,11 +111,12 @@ function ModernSection() {
   return (
     <section className={clsx(styles.section, styles.sectionAlt)}>
       <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>What v6 brings</Heading>
+        <Heading as="h2" className={styles.sectionTitle}>Also: a modern-CSS variant</Heading>
         <p className={styles.sectionLede}>
-          v6 is the first line built on native CSS. v5 stays supported for security fixes.
-          v6.1 adds a <code>bullframe-modern.css</code> variant that demonstrates four 2024+
-          features without breaking a single existing token.
+          <code>bullframe-modern.css</code> layers <code>light-dark()</code>,
+          <code> color-mix()</code>, <code>oklch()</code>, <code>:has()</code>, and container
+          queries on top of the system-default build &mdash; opt in when the project targets 2024+
+          browsers. The other six variants stay byte-for-byte the same.
         </p>
         <div className="row">
           <div className="col col--6">
@@ -132,32 +133,11 @@ body {
             </pre>
           </div>
           <div className="col col--6">
-            <h3 className={styles.codeHeading}>Compute hover from base</h3>
-            <pre className={styles.codeBlock}>
-{`/* No more hardcoded "blue-light" */
-:root {
-  --bf-blue-light: color-mix(
-    in oklab, var(--bf-blue), black 18%
-  );
-}`}
-            </pre>
-          </div>
-          <div className="col col--6">
             <h3 className={styles.codeHeading}>Dim submit on invalid &mdash; no JS</h3>
             <pre className={styles.codeBlock}>
 {`.bf-form-modern:has(:invalid) [type="submit"] {
   opacity: 0.6;
   cursor: not-allowed;
-}`}
-            </pre>
-          </div>
-          <div className="col col--6">
-            <h3 className={styles.codeHeading}>Perceptually-uniform palette</h3>
-            <pre className={styles.codeBlock}>
-{`:root {
-  --bf-blue-oklch:   oklch(40% 0.16 250);
-  --bf-red-oklch:    oklch(55% 0.22  27);
-  --bf-yellow-oklch: oklch(95% 0.18 100);
 }`}
             </pre>
           </div>
@@ -222,8 +202,8 @@ export default function Home() {
       <main>
         <HomepageFeatures />
         <VariantsSection />
-        <ModernSection />
         <GetStartedSection />
+        <ModernSection />
       </main>
     </Layout>
   );

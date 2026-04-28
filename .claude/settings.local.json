@@ -1,0 +1,20 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)",
+      "Bash(wc -l /c/Users/marco/code/github/public/bullframe.css/src/css/*.css)",
+      "Bash(grep:*)",
+      "Bash(find src:*)",
+      "Bash(git log:*)",
+      "Bash(find:*)",
+      "Skill(update-config)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch:*)",
+      "Bash(npm run:*)",
+      "Bash(mv:*)"
+    ]
+  }
+}

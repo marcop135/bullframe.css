@@ -1558,7 +1558,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         
         // Update the display
         if (currentBuildDisplay) {
-          currentBuildDisplay.innerHTML = '<code>' + buildNames[buildName] + '</code>';
+          currentBuildDisplay.textContent = '';
+          const codeElement = document.createElement('code');
+          codeElement.textContent = buildNames[buildName];
+          currentBuildDisplay.appendChild(codeElement);
         }
         
         // Update selector if needed

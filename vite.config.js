@@ -8,6 +8,11 @@ import fs from "fs";
 import { glob } from "glob";
 import postcss from "postcss";
 
+// Read the version from package.json so the dist/ header stays in lockstep with
+// whatever `npm version` produces — no more hardcoded "v6.0.0" drifting out of sync.
+const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, "package.json"), "utf-8"));
+const pkgVersion = pkg.version;
+
 // Custom PostCSS plugin: adds license header as a comment at the top of each CSS file
 const addHeader = () => {
   return {
@@ -15,7 +20,7 @@ const addHeader = () => {
     Once(root) {
       root.prepend({
         type: "comment",
-        text: "! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css ",
+        text: `! Bullframe CSS v${pkgVersion} | MIT License | https://github.com/marcop135/bullframe.css `,
       });
     },
   };

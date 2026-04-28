@@ -20,9 +20,9 @@ const stats = [
     detail: 'Default tokens meet 4.5:1 on white and on dark. No accessibility audit homework.',
   },
   {
-    value: '7',
-    label: 'Build variants',
-    detail: 'Light, dark, system-default, classless variants of each, utilities-only.',
+    value: '3',
+    label: 'Authoring modes',
+    detail: 'Classless, class-based, utility-first — same package, same --bf-* tokens, switch the import.',
   },
 ];
 

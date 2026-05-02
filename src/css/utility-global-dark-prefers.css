@@ -9,5 +9,5 @@
  * Source of truth for the scrollbars: src/css/utilities/global-dark-scrollbars.css
  */
 
-@import url('./_utility-global-dark-shared.css') (prefers-color-scheme: dark);
-@import url('./utilities/global-dark-scrollbars.css') (prefers-color-scheme: dark);
+@import './_utility-global-dark-shared.css' (prefers-color-scheme: dark);
+@import './utilities/global-dark-scrollbars.css' (prefers-color-scheme: dark);

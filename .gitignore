@@ -36,3 +36,8 @@ website/static/css/
 
 # Claude Code per-session scratch worktrees (keep .claude/settings.local.json tracked)
 .claude/worktrees/
+
+# Playwright artifacts (keep tests/e2e/__screenshots__ baselines tracked)
+playwright-report/
+test-results/
+.playwright/

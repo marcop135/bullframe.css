@@ -33,3 +33,6 @@ website/static/css/
 
 # Netlify CLI local state
 .netlify/
+
+# Claude Code per-session scratch worktrees (keep .claude/settings.local.json tracked)
+.claude/worktrees/

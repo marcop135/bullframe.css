@@ -34,6 +34,8 @@
     "lint:html": "html-validate \"src/**/*.html\"",
     "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\"",
     "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\"",
+    "test:e2e": "playwright test",
+    "test:e2e:update": "playwright test --update-snapshots",
     "docs:dev": "cd website && npm start",
     "docs:sync-demo": "node scripts/sync-demo-to-website.mjs",
     "docs:api-reference": "node scripts/build-api-reference.mjs",
@@ -71,6 +73,7 @@
   },
   "homepage": "https://bullframecss.marcopontili.com",
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "autoprefixer": "^10.4.24",
     "cssnano": "^7.1.2",
     "glob": "^13.0.1",

@@ -41,3 +41,4 @@ website/static/css/
 playwright-report/
 test-results/
 .playwright/
+tests/e2e/.design-check/

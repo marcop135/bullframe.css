@@ -28,7 +28,10 @@
 
   /* Colors - Anchors and accent */
   /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
-  --bf-blue: rgb(0 86 179); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+  --bf-blue: rgb(
+    0 86 179
+  ); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+
   --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
   --bf-blue-light-extra: rgb(190 216 254);
 
@@ -57,9 +60,13 @@
   --bf-spacing-grid-gutter: 1.5rem;
 
   /* Typography */
-  --bf-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-sans-serif:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-font-monospace:
+    SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --bf-body-font-size-rem: 1.6rem;
   --bf-body-line-height: 1.5;
 
@@ -104,7 +111,7 @@ template {
 
 /* Make elements with the HTML hidden attribute stay hidden by default. */
 
-[hidden]:where(:not([hidden="until-found"])) {
+[hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
 
@@ -250,7 +257,7 @@ template {
    * Labels for inputs, with the exception of radio buttons and checkboxes, selects, and
    * textarea should be block elements.
    */
-  label:has(+ input:not([type="radio"], [type="checkbox"]), select, textarea) {
+  label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
     display: block;
   }
 
@@ -285,13 +292,13 @@ template {
    * Remove the rounded corners of search inputs on macOS and iOS and normalize the
    * background color.
    */
-  [type="search"] {
+  [type='search'] {
     -webkit-appearance: textfield;
   }
 
   /* iOS only */
   @supports (-webkit-touch-callout: none) {
-    [type="search"] {
+    [type='search'] {
       border: 1px solid -apple-system-secondary-label;
       background-color: canvas;
     }
@@ -305,10 +312,14 @@ template {
    * 
    * Read more: https://rtlstyling.com/
    */
-  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:-moz-placeholder) {
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :-moz-placeholder
+    ) {
     direction: ltr;
   }
-  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:placeholder-shown) {
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :placeholder-shown
+    ) {
     direction: ltr;
   }
 
@@ -371,7 +382,7 @@ template {
    * still maintaining the until-found functionality.
    * Note: This complements existing [hidden] rules in layout.css
    */
-  [hidden]:not([hidden="until-found"]) {
+  [hidden]:not([hidden='until-found']) {
     display: none !important;
   }
 
@@ -461,27 +472,21 @@ body {
   font-family:
     /* Safari for OS X and iOS (San Francisco) */
     -apple-system,
-    /* Chrome < 56 for OS X (San Francisco) */
-    BlinkMacSystemFont,
-    /* Windows */
-    "Segoe UI",
-    /* Android */
-    Roboto,
-    /* Linux with KDE */
-    Oxygen-Sans,
-    /* Ubuntu (all variants) */
-    Ubuntu,
-    /* Linux with GNOME Shell */
-    Cantarell,
-    /* macOS 1.10 and below */
-    "Helvetica Neue",
+    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
+    /* Windows */ 'Segoe UI',
+    /* Android */ Roboto,
+    /* Linux with KDE */ Oxygen-Sans,
+    /* Ubuntu (all variants) */ Ubuntu,
+    /* Linux with GNOME Shell */ Cantarell,
+    /* macOS 1.10 and below */ 'Helvetica Neue',
     Helvetica,
-    /* Basic web fallback */
-    Arial,
-    "Noto Sans", sans-serif,
-    /* emoji fonts */
-    "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* Basic web fallback */ Arial,
+    'Noto Sans',
+    sans-serif,
+    /* emoji fonts */ 'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   /* this enable font ligatures */
   text-rendering: optimizeLegibility;
@@ -555,11 +560,11 @@ blockquote small {
 }
 
 blockquote small::before {
-  content: "\2014 \00A0";
+  content: '\2014 \00A0';
 }
 
 q {
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: '\201C' '\201D' '\2018' '\2019';
 }
 
 /* Typography - Miscellaneous */
@@ -677,9 +682,10 @@ code,
 kbd,
 samp {
   font-family:
-    /* macOS 1.10+ */ Menlo, Consolas, "Roboto Mono",
-    "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* macOS 1.10+ */
+    Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono',
+    'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   /* a monospaced text font should looks bigger, so a smaller font-size
    * is preferred */
@@ -713,15 +719,7 @@ pre code {
   line-height: inherit;
 }
 
-:where(
-    html input,
-    button,
-    [type="radio"],
-    [type="checkbox"],
-    select,
-    optgroup,
-    textarea
-  ) {
+:where(html input, button, [type='radio'], [type='checkbox'], select, optgroup, textarea) {
   margin: 0;
 }
 
@@ -732,15 +730,15 @@ pre code {
 /* re-set width auto where needed */
 
 :where(
-    html label,
-    button,
-    [type="image"],
-    [type="submit"],
-    [type="reset"],
-    html [type="button"],
-    [type="radio"],
-    [type="checkbox"]
-  ) {
+  html label,
+  button,
+  [type='image'],
+  [type='submit'],
+  [type='reset'],
+  html [type='button'],
+  [type='radio'],
+  [type='checkbox']
+) {
   width: auto;
 }
 
@@ -749,20 +747,20 @@ pre code {
  */
 
 :where(
-    html input,
-    label,
-    select,
-    textarea,
-    button,
-    html [type="button"],
-    [type="reset"],
-    [type="submit"],
-    output
-  ) {
+  html input,
+  label,
+  select,
+  textarea,
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  output
+) {
   display: inline-block;
 }
 
-:where([type="file"]) {
+:where([type='file']) {
   display: block;
   background-color: transparent;
 }
@@ -832,7 +830,7 @@ pre code {
   padding: 0;
 }
 
-:where([type="search"]) {
+:where([type='search']) {
   outline-offset: calc(-1 * var(--bf-spacing-sm));
 }
 
@@ -853,11 +851,11 @@ pre code {
  */
 
 :where([list]):not(
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"]
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='time']
   )::-webkit-calendar-picker-indicator {
   display: none !important;
 }
@@ -872,27 +870,27 @@ pre code {
 /* remove -webkit-appearance listing every single elements that needed it */
 
 :where(
-    button,
-    html [type="button"],
-    [type="reset"],
-    [type="submit"],
-    [type="email"],
-    [type="number"],
-    [type="text"],
-    [type="tel"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="url"],
-    [type="image"],
-    [type="password"],
-    [type="search"],
-    [type="search"]::-webkit-search-decoration,
-    [type="search"]::-webkit-search-cancel-button,
-    input[list],
-    textarea
-  ) {
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  [type='email'],
+  [type='number'],
+  [type='text'],
+  [type='tel'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='url'],
+  [type='image'],
+  [type='password'],
+  [type='search'],
+  [type='search']::-webkit-search-decoration,
+  [type='search']::-webkit-search-cancel-button,
+  input[list],
+  textarea
+) {
   -webkit-appearance: none;
           appearance: none;
 }
@@ -908,20 +906,20 @@ pre code {
   border-radius: var(--bf-spacing-sm);
 }
 
-:where([type="radio"]) {
+:where([type='radio']) {
   border-radius: 50%;
 }
 
-:where([type="checkbox"]) {
+:where([type='checkbox']) {
   border-radius: var(--bf-spacing-md);
 }
 
-:where([type="radio"], [type="checkbox"]) {
+:where([type='radio'], [type='checkbox']) {
   padding: 0;
   background-color: var(--bf-white);
 }
 
-:where([type="range" i]) {
+:where([type='range' i]) {
   background-color: transparent;
 }
 
@@ -949,7 +947,7 @@ pre code {
   border-style: none;
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']) {
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -964,19 +962,19 @@ pre code {
   background-image: none; /* FF mobile */
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]):hover,
-:where(button, [type="button"], [type="reset"], [type="submit"]):active,
-:where(button, [type="button"], [type="reset"], [type="submit"]):focus {
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus {
   text-decoration: none;
   color: var(--bf-dark);
 }
 
 :where(
-    button:not(:disabled),
-    [type="button"]:not(:disabled),
-    [type="reset"]:not(:disabled),
-    [type="submit"]:not(:disabled)
-  ) {
+  button:not(:disabled),
+  [type='button']:not(:disabled),
+  [type='reset']:not(:disabled),
+  [type='submit']:not(:disabled)
+) {
   cursor: pointer;
 }
 
@@ -1017,126 +1015,136 @@ Use the modern Firefox focus style for all focusable elements.
 /* Forms - Styling */
 
 :where(
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="tel"],
-    [type="search"],
-    [type="text"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"],
-    [type="url"],
-    input[list],
-    select,
-    textarea
-  ) {
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea
+) {
   background-color: var(--bf-white);
   border: 1px solid var(--bf-gray);
   padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
 }
 
 :where(
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="tel"],
-    [type="search"],
-    [type="text"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"],
-    [type="url"],
-    input[list],
-    select,
-    textarea,
-    [type="radio"],
-    [type="checkbox"]
-  ):active,
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):active,
 :where(
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="tel"],
-    [type="search"],
-    [type="text"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"],
-    [type="url"],
-    input[list],
-    select,
-    textarea,
-    [type="radio"],
-    [type="checkbox"]
-  ):focus {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):focus {
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
   border-color: var(--bf-blue);
   box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']) {
   color: var(--bf-dark);
   padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   background: var(--bf-gray-light);
-  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]):hover,
-:where(button, [type="button"], [type="reset"], [type="submit"]):active,
-:where(button, [type="button"], [type="reset"], [type="submit"]):focus:not(.bf-disabled):not([aria-disabled="true"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
   text-decoration: none;
   color: var(--bf-dark);
   background: rgb(184 184 184); /* color.adjust($bf-gray-light, $lightness: -10%) */
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]):active,
-:where(button, [type="button"], [type="reset"], [type="submit"]):focus:not(.bf-disabled):not([aria-disabled="true"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
   box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
 }
 
 /* disabled groups */
 
 :where(
-    fieldset[disabled] button,
-    fieldset[disabled] input,
-    fieldset[disabled] input::after,
-    fieldset[disabled] input::before,
-    fieldset[disabled] input:checked,
-    fieldset[disabled] select,
-    fieldset[disabled] textarea,
-    fieldset[disabled] label,
-    button[disabled],
-    input[disabled],
-    input[disabled]::after,
-    input[disabled]::before,
-    input[disabled]:checked,
-    select[disabled],
-    textarea[disabled],
-    label[disabled],
-    button:disabled,
-    input:disabled,
-    input:disabled::after,
-    input:disabled::before,
-    input:disabled:checked,
-    select:disabled,
-    textarea:disabled,
-    label:disabled,
-    button[aria-disabled="true"],
-    input[aria-disabled="true"],
-    input[aria-disabled="true"]::after,
-    input[aria-disabled="true"]::before,
-    input[aria-disabled="true"]:checked,
-    select[aria-disabled="true"],
-    textarea[aria-disabled="true"],
-    label[aria-disabled="true"]
-  ) {
+  fieldset[disabled] button,
+  fieldset[disabled] input,
+  fieldset[disabled] input::after,
+  fieldset[disabled] input::before,
+  fieldset[disabled] input:checked,
+  fieldset[disabled] select,
+  fieldset[disabled] textarea,
+  fieldset[disabled] label,
+  button[disabled],
+  input[disabled],
+  input[disabled]::after,
+  input[disabled]::before,
+  input[disabled]:checked,
+  select[disabled],
+  textarea[disabled],
+  label[disabled],
+  button:disabled,
+  input:disabled,
+  input:disabled::after,
+  input:disabled::before,
+  input:disabled:checked,
+  select:disabled,
+  textarea:disabled,
+  label:disabled,
+  button[aria-disabled='true'],
+  input[aria-disabled='true'],
+  input[aria-disabled='true']::after,
+  input[aria-disabled='true']::before,
+  input[aria-disabled='true']:checked,
+  select[aria-disabled='true'],
+  textarea[aria-disabled='true'],
+  label[aria-disabled='true']
+) {
   cursor: default !important; /* fallback */
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -1196,8 +1204,8 @@ Use the modern Firefox focus style for all focusable elements.
  * 1. http://bootstrap.rtlcss.com
  * 2. https://rtlstyling.com/ */
 
-:where(*[dir="rtl"]) :where(select):not([size], select[multiple]),
-:where(select[dir="rtl"]):not([size], select[multiple]) {
+:where(*[dir='rtl']) :where(select):not([size], select[multiple]),
+:where(select[dir='rtl']):not([size], select[multiple]) {
   /* move the arrow icon to the left */
   background-position: left 0.85rem top 50%;
 
@@ -1215,7 +1223,7 @@ Use the modern Firefox focus style for all focusable elements.
  *
  * standalone CodePen demo https://codepen.io/marcop135/pen/JjGrNMx */
 
-:where([type="range"]) {
+:where([type='range']) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1223,7 +1231,7 @@ Use the modern Firefox focus style for all focusable elements.
   height: 1.4rem;
 }
 
-:where([type="range"])::-webkit-slider-thumb {
+:where([type='range'])::-webkit-slider-thumb {
   border: 0;
   -webkit-appearance: none;
           appearance: none;
@@ -1233,17 +1241,21 @@ Use the modern Firefox focus style for all focusable elements.
   margin-top: -0.25rem;
   background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  -webkit-transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 }
 
-:where([type="range"])::-webkit-slider-thumb:active {
+:where([type='range'])::-webkit-slider-thumb:active {
   background-color: var(--bf-blue);
 }
 
-:where([type="range"])::-moz-range-thumb {
+:where([type='range'])::-moz-range-thumb {
   border: 0;
   -moz-appearance: none;
        appearance: none;
@@ -1252,17 +1264,21 @@ Use the modern Firefox focus style for all focusable elements.
   height: 1.5rem;
   background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  -moz-transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 }
 
-:where([type="range"])::-moz-range-thumb:active {
+:where([type='range'])::-moz-range-thumb:active {
   background-color: var(--bf-blue);
 }
 
-:where([type="range"])::-webkit-slider-runnable-track {
+:where([type='range'])::-webkit-slider-runnable-track {
   color: transparent;
   border-color: transparent;
 
@@ -1272,7 +1288,7 @@ Use the modern Firefox focus style for all focusable elements.
   background-color: var(--bf-gray-light-extra);
 }
 
-:where([type="range"])::-moz-range-track {
+:where([type='range'])::-moz-range-track {
   color: transparent;
   border-color: transparent;
 
@@ -1282,33 +1298,37 @@ Use the modern Firefox focus style for all focusable elements.
   background-color: var(--bf-gray-light-extra);
 }
 
-:where([type="range"]):focus {
+:where([type='range']):focus {
   outline: none;
 }
 
-:where([type="range"]):focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+:where([type='range']):focus::-webkit-slider-thumb {
+  box-shadow:
+    0 0 0 0.1rem var(--bf-white),
+    0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
-:where([type="range"]):focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+:where([type='range']):focus::-moz-range-thumb {
+  box-shadow:
+    0 0 0 0.1rem var(--bf-white),
+    0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
-:where([type="range"])::-moz-focus-outer {
+:where([type='range'])::-moz-focus-outer {
   border: 0;
 }
 
 /* disabled */
 
-:where([type="range"]):disabled {
+:where([type='range']):disabled {
   pointer-events: none;
 }
 
-:where([type="range"]):disabled::-webkit-slider-thumb {
+:where([type='range']):disabled::-webkit-slider-thumb {
   background-color: var(--bf-gray-light);
 }
 
-:where([type="range"]):disabled::-moz-range-thumb {
+:where([type='range']):disabled::-moz-range-thumb {
   background-color: var(--bf-gray-light);
 }
 
@@ -1361,7 +1381,7 @@ a:not([href], [tabindex]):focus {
 
 /* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
 
-:where([tabindex="-1"]:focus:not(:focus-visible)) {
+:where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
@@ -1385,23 +1405,23 @@ a:not([href], [tabindex]):focus {
  */
 
 button:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus,
-[type="email"]:focus,
-[type="number"]:focus,
-[type="password"]:focus,
-[type="tel"]:focus,
-[type="search"]:focus,
-[type="text"]:focus,
-[type="date"]:focus,
-[type="datetime-local"]:focus,
-[type="month"]:focus,
-[type="time"]:focus,
-[type="week"]:focus,
-[type="url"]:focus,
-[type="radio"]:focus,
-[type="checkbox"]:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='tel']:focus,
+[type='search']:focus,
+[type='text']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[type='url']:focus,
+[type='radio']:focus,
+[type='checkbox']:focus,
 input[list]:focus,
 select:focus,
 textarea:focus,
@@ -1457,7 +1477,7 @@ dd {
  */
 
 nav li::before {
-  content: "\200B";
+  content: '\200B';
   position: absolute;
 }
 
@@ -1715,6 +1735,84 @@ caption {
   position: absolute;
 }
 
+/* Accessibility — user preference media queries.
+ *
+ * These rules ONLY apply when the user has opted in via OS or browser
+ * settings (prefers-contrast: more, forced-colors: active). They do not
+ * change the default rendering for anyone else, so they are strictly
+ * additive and safe to ship in a minor release.
+ */
+
+/* prefers-contrast: more
+ *
+ * Triggered when the user requests higher contrast (macOS "Increase
+ * contrast", Windows Contrast Themes, GNOME high-contrast). We:
+ *  - underline links unconditionally (no longer relying on color alone
+ *    to convey "this is a link" — WCAG 1.4.1 Use of Color)
+ *  - thicken the focus ring so it's harder to miss
+ *  - strengthen form-field borders
+ */
+
+@media (prefers-contrast: more) {
+  a {
+    text-decoration: underline;
+  }
+
+  :focus-visible {
+    outline-width: 0.3rem;
+    outline-offset: 0.4rem;
+  }
+
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
+  input[list],
+  select,
+  textarea {
+    border-width: 2px;
+  }
+}
+
+/* forced-colors: active (Windows High Contrast Mode and similar)
+ *
+ * In Forced Colors Mode the OS overrides authored colors with a fixed
+ * system palette. Most things keep working automatically, but the
+ * focus ring (outline: 0.2rem solid var(--bf-orange)) gets stripped
+ * because Forced Colors ignores authored colors. Restoring it via the
+ * Highlight system color keeps the focus indicator visible.
+ *
+ * UA+ already covers <mark>; this complements that for focus and links.
+ */
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: Highlight;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  /* Keep button borders rendered in forced-colors so disabled/active
+   * states remain distinguishable. */
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
+  .bf-btn {
+    border: 1px solid ButtonText;
+  }
+}
+
 /* Dark mode overrides - Always dark for classless (no media query) */
 
 html {
@@ -1742,19 +1840,19 @@ ins {
   background-color: var(--bf-dark-ins-bg);
 }
 
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="url"],
-[type="range"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='url'],
+[type='range'],
 input[list],
 select,
 select:not([size], select[multiple]),
@@ -1764,30 +1862,30 @@ textarea {
   color: var(--bf-gray-light);
 }
 
-[type="email"]:active,
-[type="email"]:focus,
-[type="number"]:active,
-[type="number"]:focus,
-[type="password"]:active,
-[type="password"]:focus,
-[type="tel"]:active,
-[type="tel"]:focus,
-[type="search"]:active,
-[type="search"]:focus,
-[type="text"]:active,
-[type="text"]:focus,
-[type="date"]:active,
-[type="date"]:focus,
-[type="datetime-local"]:active,
-[type="datetime-local"]:focus,
-[type="month"]:active,
-[type="month"]:focus,
-[type="week"]:active,
-[type="week"]:focus,
-[type="time"]:active,
-[type="time"]:focus,
-[type="url"]:active,
-[type="url"]:focus,
+[type='email']:active,
+[type='email']:focus,
+[type='number']:active,
+[type='number']:focus,
+[type='password']:active,
+[type='password']:focus,
+[type='tel']:active,
+[type='tel']:focus,
+[type='search']:active,
+[type='search']:focus,
+[type='text']:active,
+[type='text']:focus,
+[type='date']:active,
+[type='date']:focus,
+[type='datetime-local']:active,
+[type='datetime-local']:focus,
+[type='month']:active,
+[type='month']:focus,
+[type='week']:active,
+[type='week']:focus,
+[type='time']:active,
+[type='time']:focus,
+[type='url']:active,
+[type='url']:focus,
 input[list]:active,
 input[list]:focus,
 select:active,
@@ -1809,25 +1907,25 @@ select:not([size], select[multiple]) {
 
 @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select:not([size], select[multiple]),
-  *[dir="rtl"] select:not([size], select[multiple]),
-  select[dir="rtl"]:not([size], select[multiple]) {
+  *[dir='rtl'] select:not([size], select[multiple]),
+  select[dir='rtl']:not([size], select[multiple]) {
     background-image: none;
   }
 }
 
-[type="range"] {
+[type='range'] {
   background-color: transparent;
 }
 
-[type="range"]:focus {
+[type='range']:focus {
   background-color: transparent;
 }
 
-[type="range"]::-webkit-slider-runnable-track {
+[type='range']::-webkit-slider-runnable-track {
   background-color: var(--bf-dark-extra);
 }
 
-[type="range"]::-moz-range-track {
+[type='range']::-moz-range-track {
   background-color: var(--bf-dark-extra);
 }
 
@@ -1841,35 +1939,35 @@ textarea::placeholder {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   background: var(--bf-gray-light);
 }
 
 button:hover,
 button:active,
 button:focus,
-[type="button"]:hover,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:hover,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:hover,
-[type="submit"]:active,
-[type="submit"]:focus {
+[type='button']:hover,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:hover,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:hover,
+[type='submit']:active,
+[type='submit']:focus {
   background: var(--bf-dark-button-hover);
 }
 
 button:active,
 button:focus,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:active,
-[type="submit"]:focus {
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:active,
+[type='submit']:focus {
   box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
 }
 
@@ -1919,5 +2017,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(115 115 115); /* gray-dark +10% lightness */
 }
-
-/*# sourceMappingURL=bullframe-classless-dark.css.map */

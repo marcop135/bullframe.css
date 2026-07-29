@@ -78,7 +78,6 @@
     "cssnano": "^7.1.2",
     "glob": "^13.0.1",
     "html-validate": "^10.7.0",
-    "htmlhint": "^1.8.1",
     "postcss": "^8.5.12",
     "postcss-import": "^16.1.1",
     "prettier": "^3.5.3",

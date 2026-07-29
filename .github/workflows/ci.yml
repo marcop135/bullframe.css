@@ -60,14 +60,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install website dependencies
-        run: npm ci
-        working-directory: website
-
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Build (vite + sync-demo + docusaurus)
+      - name: Build (vite + sync-demo + vitepress)
         run: npm run docs:build
 
       - name: Run visual tests

@@ -2,17 +2,17 @@ import { chromium } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
 import path from 'node:path';
 
-const BASE = 'http://localhost:4173';
+const BASE = 'http://localhost:3000';
 const OUT = path.resolve('tests/e2e/.design-check');
 mkdirSync(OUT, { recursive: true });
 
 const pages = [
   { name: 'landing', path: '/' },
-  { name: 'demo', path: '/demo/' },
-  { name: 'docs-intro', path: '/docs/intro/' },
-  { name: 'docs-variables', path: '/docs/variables/' },
-  { name: 'docs-buttons', path: '/docs/buttons/' },
-  { name: 'docs-utilities', path: '/docs/utilities/' },
+  { name: 'demo', path: '/demo' },
+  { name: 'docs-intro', path: '/intro' },
+  { name: 'docs-variables', path: '/variables' },
+  { name: 'docs-buttons', path: '/buttons' },
+  { name: 'docs-utilities', path: '/utilities' },
 ];
 
 const viewports = [

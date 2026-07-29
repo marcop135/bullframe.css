@@ -31,8 +31,7 @@ export default defineConfig({
     ...(process.platform !== 'win32' ? [{ name: 'webkit', use: { browserName: 'webkit' } }] : []),
   ],
   webServer: {
-    command: `npx docusaurus serve --port ${PORT} --no-open`,
-    cwd: 'website',
+    command: `npx vitepress preview docs --port ${PORT}`,
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

@@ -77,7 +77,7 @@ npm install bullframe.css
 
 ---
 
-## Three modes, seven files
+## Three modes, eight files
 
 | Mode | Variant file | When |
 |------|---|------|
@@ -88,6 +88,7 @@ npm install bullframe.css
 | | `bullframe-dark.css` | Same, always dark. |
 | | `bullframe-system-default.css` | Same, follows `prefers-color-scheme`. |
 | **Utility-first** | `bullframe-utilities.css` | You already have a reset; you just want `.bf-m-t-3` / `.bf-t-center`. |
+| **Modern** | `bullframe-modern.css` | Latest 2 browsers; adds `color-scheme`, `color-mix()`, `oklch()`, `:has()`, container queries. |
 
 All variants ship as `.css` and `.min.css` with source maps. Same `--bf-*` tokens underneath every row — change the import, your theme carries over.
 

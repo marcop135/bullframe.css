@@ -4,7 +4,8 @@ const PORT = 3000;
 
 export default defineConfig({
   testDir: 'tests/e2e',
-  snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{arg}-{projectName}{ext}',
+  snapshotPathTemplate:
+    '{testDir}/__screenshots__/{testFilePath}/{arg}-{projectName}-{platform}{ext}',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
@@ -16,16 +17,18 @@ export default defineConfig({
     trace: 'retain-on-failure',
   },
   expect: {
+    timeout: 20_000,
     toHaveScreenshot: {
       maxDiffPixelRatio: 0.01,
       animations: 'disabled',
       caret: 'hide',
     },
   },
+  timeout: 90_000,
   projects: [
     { name: 'chromium', use: { browserName: 'chromium' } },
     { name: 'firefox', use: { browserName: 'firefox' } },
-    { name: 'webkit', use: { browserName: 'webkit' } },
+    ...(process.platform !== 'win32' ? [{ name: 'webkit', use: { browserName: 'webkit' } }] : []),
   ],
   webServer: {
     command: `npx docusaurus serve --port ${PORT} --no-open`,

@@ -25,18 +25,18 @@
     outline-offset: 0.4rem;
   }
 
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="url"],
-  [type="week"],
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
   input[list],
   select,
   textarea {
@@ -66,9 +66,9 @@
   /* Keep button borders rendered in forced-colors so disabled/active
    * states remain distinguishable. */
   button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"],
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
   .bf-btn {
     border: 1px solid ButtonText;
   }

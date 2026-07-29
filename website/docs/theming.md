@@ -11,13 +11,13 @@ Bullframe CSS provides multiple theme variants and easy customization options.
 ### Light Theme (Default)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
 ```
 
 ### Dark Theme
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-dark.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-dark.min.css" />
 ```
 
 ### System Default Theme
@@ -25,7 +25,7 @@ Bullframe CSS provides multiple theme variants and easy customization options.
 Automatically switches between light and dark based on user's system preference:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6/dist/css/bullframe-system-default.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-system-default.min.css" />
 ```
 
 ## Classless Variants

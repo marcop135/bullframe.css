@@ -6,7 +6,7 @@
 }
 
 /* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
-:where([tabindex="-1"]:focus:not(:focus-visible)) {
+:where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
@@ -28,23 +28,23 @@
  * Ref: https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
  */
 button:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus,
-[type="email"]:focus,
-[type="number"]:focus,
-[type="password"]:focus,
-[type="tel"]:focus,
-[type="search"]:focus,
-[type="text"]:focus,
-[type="date"]:focus,
-[type="datetime-local"]:focus,
-[type="month"]:focus,
-[type="time"]:focus,
-[type="week"]:focus,
-[type="url"]:focus,
-[type="radio"]:focus,
-[type="checkbox"]:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='tel']:focus,
+[type='search']:focus,
+[type='text']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[type='url']:focus,
+[type='radio']:focus,
+[type='checkbox']:focus,
 input[list]:focus,
 select:focus,
 textarea:focus,

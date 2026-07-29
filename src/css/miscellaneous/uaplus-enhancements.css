@@ -139,7 +139,7 @@
    * Labels for inputs, with the exception of radio buttons and checkboxes, selects, and
    * textarea should be block elements.
    */
-  label:has(+ input:not([type="radio"], [type="checkbox"]), select, textarea) {
+  label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
     display: block;
   }
 
@@ -174,13 +174,13 @@
    * Remove the rounded corners of search inputs on macOS and iOS and normalize the
    * background color.
    */
-  [type="search"] {
+  [type='search'] {
     -webkit-appearance: textfield;
   }
 
   /* iOS only */
   @supports (-webkit-touch-callout: none) {
-    [type="search"] {
+    [type='search'] {
       border: 1px solid -apple-system-secondary-label;
       background-color: canvas;
     }
@@ -194,7 +194,9 @@
    * 
    * Read more: https://rtlstyling.com/
    */
-  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:placeholder-shown) {
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :placeholder-shown
+    ) {
     direction: ltr;
   }
 
@@ -257,7 +259,7 @@
    * still maintaining the until-found functionality.
    * Note: This complements existing [hidden] rules in layout.css
    */
-  [hidden]:not([hidden="until-found"]) {
+  [hidden]:not([hidden='until-found']) {
     display: none !important;
   }
 

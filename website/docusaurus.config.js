@@ -62,8 +62,8 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true, // Respect user's system preference (dark/light) - overrides defaultMode
       },
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // Social card image used in OpenGraph / Twitter metadata
+      image: 'img/bullframe-css-social-image.png',
       navbar: {
         title: 'Bullframe CSS',
         logo: {

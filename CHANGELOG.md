@@ -11,7 +11,7 @@
   - `:has()`-based form validation hint via `.bf-form-modern` wrapper class
   - Container-query support via `data-bf-container-query` attribute and `.bf-cq-*` classes
 - New package export: `import 'bullframe.css/modern'`
-- Existing seven build variants are unchanged byte-for-byte; modern features are strictly additive.
+- Existing seven core build variants are unchanged byte-for-byte; modern features are strictly additive.
 
 ### New utilities
 
@@ -34,9 +34,21 @@
 
 ### Landing page
 
-- Redesigned `bullframecss.marcopontili.com` homepage with a v6-prominent hero, the actual install `<link>` tag rendered above the CTAs, a "by the numbers" stats row (~8 KB / 0 JS / AA / 7 builds), a "seven builds, one CDN" picker, a "what v6 brings" section showing four side-by-side modern-CSS code samples, and a three-way install section (CDN, npm, download). No marketing fluff; every claim has a number or a code block.
+- Redesigned `bullframecss.marcopontili.com` homepage with a v6-prominent hero, the actual install `<link>` tag rendered above the CTAs, a "by the numbers" stats row (~8 KB / 0 JS / AA / 8 builds), an "eight builds, one CDN" picker, a "what v6 brings" section showing four side-by-side modern-CSS code samples, and a three-way install section (CDN, npm, download). No marketing fluff; every claim has a number or a code block.
 - Install snippets pin to `@latest` (not `@6`) until v6 is published to npm — until then `@latest` resolves to v5.1.0 and rolls forward automatically when v6.1.0 publishes.
 - Same change applied to the three `@6` references in `README.md`.
+
+### Fixed
+
+- Removed redundant `bullframe-dark-prefers.css` and `bullframe-classless-dark-prefers.css` variants that were identical to the system-default builds.
+- Added missing `utilities/font-smoothing.css` import to `bullframe-utilities.css` so `.bf-antialiased` and `.bf-subpixel-antialiased` are present in the utilities-only build.
+- Added missing `miscellaneous/accessibility-preferences.css` import to `bullframe-classless.css` so `prefers-contrast` and `forced-colors` support is present in classless builds.
+- Fixed `npm run dev` so the demo and landing pages can serve compiled CSS without a prior production build.
+- Fixed README and website documentation inconsistencies: variant counts now include `bullframe-modern.css`, install snippets use `@latest`, and the modern variant is included in the demo build selector.
+- Fixed the Docusaurus social-card metadata to use the actual Bullframe social image.
+- Updated the API-reference generator to handle multi-line declarations and to assign classes to their canonical source directories.
+- Updated CI to run on Node 20 and 22 (the project requires Node >=20).
+- Made Playwright visual-regression snapshots platform-specific so tests pass on both Linux CI and Windows development machines.
 
 ## 6.0.0 (April 17, 2026) - BREAKING CHANGES
 

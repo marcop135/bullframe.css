@@ -28,7 +28,10 @@
 
   /* Colors - Anchors and accent */
   /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
-  --bf-blue: rgb(0 86 179); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+  --bf-blue: rgb(
+    0 86 179
+  ); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+
   --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
   --bf-blue-light-extra: rgb(190 216 254);
 
@@ -57,9 +60,13 @@
   --bf-spacing-grid-gutter: 1.5rem;
 
   /* Typography */
-  --bf-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-sans-serif:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-font-monospace:
+    SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --bf-body-font-size-rem: 1.6rem;
   --bf-body-line-height: 1.5;
 
@@ -104,7 +111,7 @@ template {
 
 /* Make elements with the HTML hidden attribute stay hidden by default. */
 
-[hidden]:where(:not([hidden="until-found"])) {
+[hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
 
@@ -250,7 +257,7 @@ template {
    * Labels for inputs, with the exception of radio buttons and checkboxes, selects, and
    * textarea should be block elements.
    */
-  label:has(+ input:not([type="radio"], [type="checkbox"]), select, textarea) {
+  label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
     display: block;
   }
 
@@ -285,13 +292,13 @@ template {
    * Remove the rounded corners of search inputs on macOS and iOS and normalize the
    * background color.
    */
-  [type="search"] {
+  [type='search'] {
     -webkit-appearance: textfield;
   }
 
   /* iOS only */
   @supports (-webkit-touch-callout: none) {
-    [type="search"] {
+    [type='search'] {
       border: 1px solid -apple-system-secondary-label;
       background-color: canvas;
     }
@@ -305,10 +312,14 @@ template {
    * 
    * Read more: https://rtlstyling.com/
    */
-  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:-moz-placeholder) {
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :-moz-placeholder
+    ) {
     direction: ltr;
   }
-  input:where([type="tel"], [type="url"], [type="email"], [type="number"]):not(:placeholder-shown) {
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :placeholder-shown
+    ) {
     direction: ltr;
   }
 
@@ -371,7 +382,7 @@ template {
    * still maintaining the until-found functionality.
    * Note: This complements existing [hidden] rules in layout.css
    */
-  [hidden]:not([hidden="until-found"]) {
+  [hidden]:not([hidden='until-found']) {
     display: none !important;
   }
 
@@ -461,27 +472,21 @@ body {
   font-family:
     /* Safari for OS X and iOS (San Francisco) */
     -apple-system,
-    /* Chrome < 56 for OS X (San Francisco) */
-    BlinkMacSystemFont,
-    /* Windows */
-    "Segoe UI",
-    /* Android */
-    Roboto,
-    /* Linux with KDE */
-    Oxygen-Sans,
-    /* Ubuntu (all variants) */
-    Ubuntu,
-    /* Linux with GNOME Shell */
-    Cantarell,
-    /* macOS 1.10 and below */
-    "Helvetica Neue",
+    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
+    /* Windows */ 'Segoe UI',
+    /* Android */ Roboto,
+    /* Linux with KDE */ Oxygen-Sans,
+    /* Ubuntu (all variants) */ Ubuntu,
+    /* Linux with GNOME Shell */ Cantarell,
+    /* macOS 1.10 and below */ 'Helvetica Neue',
     Helvetica,
-    /* Basic web fallback */
-    Arial,
-    "Noto Sans", sans-serif,
-    /* emoji fonts */
-    "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* Basic web fallback */ Arial,
+    'Noto Sans',
+    sans-serif,
+    /* emoji fonts */ 'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   /* this enable font ligatures */
   text-rendering: optimizeLegibility;
@@ -555,11 +560,11 @@ blockquote small {
 }
 
 blockquote small::before {
-  content: "\2014 \00A0";
+  content: '\2014 \00A0';
 }
 
 q {
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: '\201C' '\201D' '\2018' '\2019';
 }
 
 /* Typography - Miscellaneous */
@@ -677,9 +682,10 @@ code,
 kbd,
 samp {
   font-family:
-    /* macOS 1.10+ */ Menlo, Consolas, "Roboto Mono",
-    "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* macOS 1.10+ */
+    Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono',
+    'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   /* a monospaced text font should looks bigger, so a smaller font-size
    * is preferred */
@@ -713,15 +719,7 @@ pre code {
   line-height: inherit;
 }
 
-:where(
-    html input,
-    button,
-    [type="radio"],
-    [type="checkbox"],
-    select,
-    optgroup,
-    textarea
-  ) {
+:where(html input, button, [type='radio'], [type='checkbox'], select, optgroup, textarea) {
   margin: 0;
 }
 
@@ -732,15 +730,15 @@ pre code {
 /* re-set width auto where needed */
 
 :where(
-    html label,
-    button,
-    [type="image"],
-    [type="submit"],
-    [type="reset"],
-    html [type="button"],
-    [type="radio"],
-    [type="checkbox"]
-  ) {
+  html label,
+  button,
+  [type='image'],
+  [type='submit'],
+  [type='reset'],
+  html [type='button'],
+  [type='radio'],
+  [type='checkbox']
+) {
   width: auto;
 }
 
@@ -749,20 +747,20 @@ pre code {
  */
 
 :where(
-    html input,
-    label,
-    select,
-    textarea,
-    button,
-    html [type="button"],
-    [type="reset"],
-    [type="submit"],
-    output
-  ) {
+  html input,
+  label,
+  select,
+  textarea,
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  output
+) {
   display: inline-block;
 }
 
-:where([type="file"]) {
+:where([type='file']) {
   display: block;
   background-color: transparent;
 }
@@ -832,7 +830,7 @@ pre code {
   padding: 0;
 }
 
-:where([type="search"]) {
+:where([type='search']) {
   outline-offset: calc(-1 * var(--bf-spacing-sm));
 }
 
@@ -853,11 +851,11 @@ pre code {
  */
 
 :where([list]):not(
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"]
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='time']
   )::-webkit-calendar-picker-indicator {
   display: none !important;
 }
@@ -872,27 +870,27 @@ pre code {
 /* remove -webkit-appearance listing every single elements that needed it */
 
 :where(
-    button,
-    html [type="button"],
-    [type="reset"],
-    [type="submit"],
-    [type="email"],
-    [type="number"],
-    [type="text"],
-    [type="tel"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="url"],
-    [type="image"],
-    [type="password"],
-    [type="search"],
-    [type="search"]::-webkit-search-decoration,
-    [type="search"]::-webkit-search-cancel-button,
-    input[list],
-    textarea
-  ) {
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  [type='email'],
+  [type='number'],
+  [type='text'],
+  [type='tel'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='url'],
+  [type='image'],
+  [type='password'],
+  [type='search'],
+  [type='search']::-webkit-search-decoration,
+  [type='search']::-webkit-search-cancel-button,
+  input[list],
+  textarea
+) {
   -webkit-appearance: none;
           appearance: none;
 }
@@ -908,20 +906,20 @@ pre code {
   border-radius: var(--bf-spacing-sm);
 }
 
-:where([type="radio"]) {
+:where([type='radio']) {
   border-radius: 50%;
 }
 
-:where([type="checkbox"]) {
+:where([type='checkbox']) {
   border-radius: var(--bf-spacing-md);
 }
 
-:where([type="radio"], [type="checkbox"]) {
+:where([type='radio'], [type='checkbox']) {
   padding: 0;
   background-color: var(--bf-white);
 }
 
-:where([type="range" i]) {
+:where([type='range' i]) {
   background-color: transparent;
 }
 
@@ -949,7 +947,7 @@ pre code {
   border-style: none;
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']) {
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -964,19 +962,19 @@ pre code {
   background-image: none; /* FF mobile */
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]):hover,
-:where(button, [type="button"], [type="reset"], [type="submit"]):active,
-:where(button, [type="button"], [type="reset"], [type="submit"]):focus {
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus {
   text-decoration: none;
   color: var(--bf-dark);
 }
 
 :where(
-    button:not(:disabled),
-    [type="button"]:not(:disabled),
-    [type="reset"]:not(:disabled),
-    [type="submit"]:not(:disabled)
-  ) {
+  button:not(:disabled),
+  [type='button']:not(:disabled),
+  [type='reset']:not(:disabled),
+  [type='submit']:not(:disabled)
+) {
   cursor: pointer;
 }
 
@@ -1017,126 +1015,136 @@ Use the modern Firefox focus style for all focusable elements.
 /* Forms - Styling */
 
 :where(
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="tel"],
-    [type="search"],
-    [type="text"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"],
-    [type="url"],
-    input[list],
-    select,
-    textarea
-  ) {
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea
+) {
   background-color: var(--bf-white);
   border: 1px solid var(--bf-gray);
   padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
 }
 
 :where(
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="tel"],
-    [type="search"],
-    [type="text"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"],
-    [type="url"],
-    input[list],
-    select,
-    textarea,
-    [type="radio"],
-    [type="checkbox"]
-  ):active,
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):active,
 :where(
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="tel"],
-    [type="search"],
-    [type="text"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"],
-    [type="url"],
-    input[list],
-    select,
-    textarea,
-    [type="radio"],
-    [type="checkbox"]
-  ):focus {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):focus {
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
   border-color: var(--bf-blue);
   box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']) {
   color: var(--bf-dark);
   padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   background: var(--bf-gray-light);
-  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]):hover,
-:where(button, [type="button"], [type="reset"], [type="submit"]):active,
-:where(button, [type="button"], [type="reset"], [type="submit"]):focus:not(.bf-disabled):not([aria-disabled="true"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
   text-decoration: none;
   color: var(--bf-dark);
   background: rgb(184 184 184); /* color.adjust($bf-gray-light, $lightness: -10%) */
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]):active,
-:where(button, [type="button"], [type="reset"], [type="submit"]):focus:not(.bf-disabled):not([aria-disabled="true"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
   box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
 }
 
 /* disabled groups */
 
 :where(
-    fieldset[disabled] button,
-    fieldset[disabled] input,
-    fieldset[disabled] input::after,
-    fieldset[disabled] input::before,
-    fieldset[disabled] input:checked,
-    fieldset[disabled] select,
-    fieldset[disabled] textarea,
-    fieldset[disabled] label,
-    button[disabled],
-    input[disabled],
-    input[disabled]::after,
-    input[disabled]::before,
-    input[disabled]:checked,
-    select[disabled],
-    textarea[disabled],
-    label[disabled],
-    button:disabled,
-    input:disabled,
-    input:disabled::after,
-    input:disabled::before,
-    input:disabled:checked,
-    select:disabled,
-    textarea:disabled,
-    label:disabled,
-    button[aria-disabled="true"],
-    input[aria-disabled="true"],
-    input[aria-disabled="true"]::after,
-    input[aria-disabled="true"]::before,
-    input[aria-disabled="true"]:checked,
-    select[aria-disabled="true"],
-    textarea[aria-disabled="true"],
-    label[aria-disabled="true"]
-  ) {
+  fieldset[disabled] button,
+  fieldset[disabled] input,
+  fieldset[disabled] input::after,
+  fieldset[disabled] input::before,
+  fieldset[disabled] input:checked,
+  fieldset[disabled] select,
+  fieldset[disabled] textarea,
+  fieldset[disabled] label,
+  button[disabled],
+  input[disabled],
+  input[disabled]::after,
+  input[disabled]::before,
+  input[disabled]:checked,
+  select[disabled],
+  textarea[disabled],
+  label[disabled],
+  button:disabled,
+  input:disabled,
+  input:disabled::after,
+  input:disabled::before,
+  input:disabled:checked,
+  select:disabled,
+  textarea:disabled,
+  label:disabled,
+  button[aria-disabled='true'],
+  input[aria-disabled='true'],
+  input[aria-disabled='true']::after,
+  input[aria-disabled='true']::before,
+  input[aria-disabled='true']:checked,
+  select[aria-disabled='true'],
+  textarea[aria-disabled='true'],
+  label[aria-disabled='true']
+) {
   cursor: default !important; /* fallback */
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -1196,8 +1204,8 @@ Use the modern Firefox focus style for all focusable elements.
  * 1. http://bootstrap.rtlcss.com
  * 2. https://rtlstyling.com/ */
 
-:where(*[dir="rtl"]) :where(select):not([size], select[multiple]),
-:where(select[dir="rtl"]):not([size], select[multiple]) {
+:where(*[dir='rtl']) :where(select):not([size], select[multiple]),
+:where(select[dir='rtl']):not([size], select[multiple]) {
   /* move the arrow icon to the left */
   background-position: left 0.85rem top 50%;
 
@@ -1215,7 +1223,7 @@ Use the modern Firefox focus style for all focusable elements.
  *
  * standalone CodePen demo https://codepen.io/marcop135/pen/JjGrNMx */
 
-:where([type="range"]) {
+:where([type='range']) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1223,7 +1231,7 @@ Use the modern Firefox focus style for all focusable elements.
   height: 1.4rem;
 }
 
-:where([type="range"])::-webkit-slider-thumb {
+:where([type='range'])::-webkit-slider-thumb {
   border: 0;
   -webkit-appearance: none;
           appearance: none;
@@ -1233,17 +1241,21 @@ Use the modern Firefox focus style for all focusable elements.
   margin-top: -0.25rem;
   background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  -webkit-transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 }
 
-:where([type="range"])::-webkit-slider-thumb:active {
+:where([type='range'])::-webkit-slider-thumb:active {
   background-color: var(--bf-blue);
 }
 
-:where([type="range"])::-moz-range-thumb {
+:where([type='range'])::-moz-range-thumb {
   border: 0;
   -moz-appearance: none;
        appearance: none;
@@ -1252,17 +1264,21 @@ Use the modern Firefox focus style for all focusable elements.
   height: 1.5rem;
   background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  -moz-transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 }
 
-:where([type="range"])::-moz-range-thumb:active {
+:where([type='range'])::-moz-range-thumb:active {
   background-color: var(--bf-blue);
 }
 
-:where([type="range"])::-webkit-slider-runnable-track {
+:where([type='range'])::-webkit-slider-runnable-track {
   color: transparent;
   border-color: transparent;
 
@@ -1272,7 +1288,7 @@ Use the modern Firefox focus style for all focusable elements.
   background-color: var(--bf-gray-light-extra);
 }
 
-:where([type="range"])::-moz-range-track {
+:where([type='range'])::-moz-range-track {
   color: transparent;
   border-color: transparent;
 
@@ -1282,33 +1298,37 @@ Use the modern Firefox focus style for all focusable elements.
   background-color: var(--bf-gray-light-extra);
 }
 
-:where([type="range"]):focus {
+:where([type='range']):focus {
   outline: none;
 }
 
-:where([type="range"]):focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+:where([type='range']):focus::-webkit-slider-thumb {
+  box-shadow:
+    0 0 0 0.1rem var(--bf-white),
+    0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
-:where([type="range"]):focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+:where([type='range']):focus::-moz-range-thumb {
+  box-shadow:
+    0 0 0 0.1rem var(--bf-white),
+    0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
-:where([type="range"])::-moz-focus-outer {
+:where([type='range'])::-moz-focus-outer {
   border: 0;
 }
 
 /* disabled */
 
-:where([type="range"]):disabled {
+:where([type='range']):disabled {
   pointer-events: none;
 }
 
-:where([type="range"]):disabled::-webkit-slider-thumb {
+:where([type='range']):disabled::-webkit-slider-thumb {
   background-color: var(--bf-gray-light);
 }
 
-:where([type="range"]):disabled::-moz-range-thumb {
+:where([type='range']):disabled::-moz-range-thumb {
   background-color: var(--bf-gray-light);
 }
 
@@ -1361,7 +1381,7 @@ a:not([href], [tabindex]):focus {
 
 /* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
 
-:where([tabindex="-1"]:focus:not(:focus-visible)) {
+:where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
@@ -1385,23 +1405,23 @@ a:not([href], [tabindex]):focus {
  */
 
 button:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus,
-[type="email"]:focus,
-[type="number"]:focus,
-[type="password"]:focus,
-[type="tel"]:focus,
-[type="search"]:focus,
-[type="text"]:focus,
-[type="date"]:focus,
-[type="datetime-local"]:focus,
-[type="month"]:focus,
-[type="time"]:focus,
-[type="week"]:focus,
-[type="url"]:focus,
-[type="radio"]:focus,
-[type="checkbox"]:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='tel']:focus,
+[type='search']:focus,
+[type='text']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[type='url']:focus,
+[type='radio']:focus,
+[type='checkbox']:focus,
 input[list]:focus,
 select:focus,
 textarea:focus,
@@ -1457,7 +1477,7 @@ dd {
  */
 
 nav li::before {
-  content: "\200B";
+  content: '\200B';
   position: absolute;
 }
 
@@ -1743,18 +1763,18 @@ caption {
     outline-offset: 0.4rem;
   }
 
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="url"],
-  [type="week"],
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
   input[list],
   select,
   textarea {
@@ -1785,9 +1805,9 @@ caption {
   /* Keep button borders rendered in forced-colors so disabled/active
    * states remain distinguishable. */
   button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"],
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
   .bf-btn {
     border: 1px solid ButtonText;
   }
@@ -1803,7 +1823,7 @@ caption {
 
 .bf-clearfix::before,
 .bf-clearfix::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -2113,59 +2133,68 @@ caption {
 }
 
 .bf-serif--transitional {
-  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 }
 
 .bf-serif--oldstyle {
-  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
 }
 
 .bf-sans-serif--humanist {
-  font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, sans-serif;
+  font-family:
+    Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
 }
 
 .bf-sans-serif--geometric {
-  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 }
 
 .bf-sans-serif--classical {
-  font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
 }
 
 .bf-sans-serif--neo-grotesque {
-  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 }
 
 .bf-monospace--slab {
-  font-family: "Nimbus Mono PS", "Courier New", monospace;
+  font-family: 'Nimbus Mono PS', 'Courier New', monospace;
 }
 
 .bf-monospace--code {
-  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  font-family:
+    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
+    monospace;
 }
 
 .bf-sans-serif--industrial {
-  font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  font-family:
+    Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow',
+    sans-serif-condensed, sans-serif;
 }
 
 .bf-sans-serif--rounded {
-  font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro, sans-serif;
+  font-family:
+    ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT',
+    'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 }
 
 .bf-serif--slab {
-  font-family: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
+  font-family: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
 }
 
 .bf-serif--antique {
-  font-family: Superclarendon, "Bookman Old Style", "URW Bookman", "URW Bookman L", "Georgia Pro", Georgia, serif;
+  font-family:
+    Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia,
+    serif;
 }
 
 .bf-serif--didone {
-  font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+  font-family: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
 }
 
 .bf-cursive--handwritten {
-  font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
+  font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
 }
 
 .bf-h1,
@@ -2237,7 +2266,7 @@ body.bf-responsive-typography {
   margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
 }
 
-[class^="bf-col-"] {
+[class^='bf-col-'] {
   position: relative;
   min-height: 1px;
   padding-left: var(--bf-spacing-grid-gutter);
@@ -2251,7 +2280,7 @@ body.bf-responsive-typography {
   margin-left: 0;
 }
 
-.bf-no-gutters > [class^="bf-col"] {
+.bf-no-gutters > [class^='bf-col'] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -2326,7 +2355,7 @@ body.bf-responsive-typography {
     margin-right: 0;
   }
 
-  .bf-container--break-xs [class^="bf-col"] {
+  .bf-container--break-xs [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -2341,7 +2370,7 @@ body.bf-responsive-typography {
     margin-right: 0;
   }
 
-  .bf-container--break-md [class^="bf-col"] {
+  .bf-container--break-md [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -2356,7 +2385,7 @@ body.bf-responsive-typography {
     margin-right: 0;
   }
 
-  .bf-container--break-lg [class^="bf-col"] {
+  .bf-container--break-lg [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -2367,54 +2396,96 @@ body.bf-responsive-typography {
 
 /* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
 
-table td[class^="bf-col"],
-table th[class^="bf-col"] {
+table td[class^='bf-col'],
+table th[class^='bf-col'] {
   position: static;
 }
 
 /* Utilities - Z-index */
 
-.bf-z-index-1 { z-index: 1; }
+.bf-z-index-1 {
+  z-index: 1;
+}
 
-.bf-z-index-2 { z-index: 2; }
+.bf-z-index-2 {
+  z-index: 2;
+}
 
-.bf-z-index-3 { z-index: 3; }
+.bf-z-index-3 {
+  z-index: 3;
+}
 
-.bf-z-index-4 { z-index: 4; }
+.bf-z-index-4 {
+  z-index: 4;
+}
 
-.bf-z-index-5 { z-index: 5; }
+.bf-z-index-5 {
+  z-index: 5;
+}
 
-.bf-z-index-6 { z-index: 6; }
+.bf-z-index-6 {
+  z-index: 6;
+}
 
-.bf-z-index-7 { z-index: 7; }
+.bf-z-index-7 {
+  z-index: 7;
+}
 
-.bf-z-index-8 { z-index: 8; }
+.bf-z-index-8 {
+  z-index: 8;
+}
 
-.bf-z-index-9 { z-index: 9; }
+.bf-z-index-9 {
+  z-index: 9;
+}
 
-.bf-z-index-10 { z-index: 10; }
+.bf-z-index-10 {
+  z-index: 10;
+}
 
-.bf-z-index-20 { z-index: 20; }
+.bf-z-index-20 {
+  z-index: 20;
+}
 
-.bf-z-index-30 { z-index: 30; }
+.bf-z-index-30 {
+  z-index: 30;
+}
 
-.bf-z-index-40 { z-index: 40; }
+.bf-z-index-40 {
+  z-index: 40;
+}
 
-.bf-z-index-50 { z-index: 50; }
+.bf-z-index-50 {
+  z-index: 50;
+}
 
-.bf-z-index-60 { z-index: 60; }
+.bf-z-index-60 {
+  z-index: 60;
+}
 
-.bf-z-index-70 { z-index: 70; }
+.bf-z-index-70 {
+  z-index: 70;
+}
 
-.bf-z-index-80 { z-index: 80; }
+.bf-z-index-80 {
+  z-index: 80;
+}
 
-.bf-z-index-90 { z-index: 90; }
+.bf-z-index-90 {
+  z-index: 90;
+}
 
-.bf-z-index-100 { z-index: 100; }
+.bf-z-index-100 {
+  z-index: 100;
+}
 
-.bf-z-index-200 { z-index: 200; }
+.bf-z-index-200 {
+  z-index: 200;
+}
 
-.bf-z-index-300 { z-index: 300; }
+.bf-z-index-300 {
+  z-index: 300;
+}
 
 /* Utilities - Spacing (similar to Bootstrap)
  * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
@@ -2613,11 +2684,11 @@ table th[class^="bf-col"] {
 }
 
 :where(
-    fieldset[disabled] .bf-btn,
-    .bf-btn[disabled],
-    .bf-btn:disabled,
-    .bf-btn[aria-disabled="true"]
-  ) {
+  fieldset[disabled] .bf-btn,
+  .bf-btn[disabled],
+  .bf-btn:disabled,
+  .bf-btn[aria-disabled='true']
+) {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -2733,7 +2804,7 @@ button.bf-disabled:focus,
 
 /* Utilities - Custom radio and checkbox */
 
-.custom-checkbox-wrapper [type="checkbox"] {
+.custom-checkbox-wrapper [type='checkbox'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2744,20 +2815,20 @@ button.bf-disabled:focus,
   border: 1px solid var(--bf-gray);
 }
 
-.custom-checkbox-wrapper [type="checkbox"] + label {
+.custom-checkbox-wrapper [type='checkbox'] + label {
   line-height: 1.8rem;
   vertical-align: top;
   margin-left: var(--bf-spacing-md);
 }
 
-*[dir="rtl"] .custom-checkbox-wrapper [type="checkbox"] + label,
-.custom-checkbox-wrapper [type="checkbox"][dir="rtl"] + label {
+*[dir='rtl'] .custom-checkbox-wrapper [type='checkbox'] + label,
+.custom-checkbox-wrapper [type='checkbox'][dir='rtl'] + label {
   margin-left: 0;
   margin-right: var(--bf-spacing-md);
 }
 
-.custom-checkbox-wrapper [type="checkbox"]::after {
-  content: "";
+.custom-checkbox-wrapper [type='checkbox']::after {
+  content: '';
   display: block;
   position: absolute;
   width: 0.6rem;
@@ -2770,12 +2841,12 @@ button.bf-disabled:focus,
   transform: rotate(43deg);
 }
 
-.custom-checkbox-wrapper [type="checkbox"]:checked {
+.custom-checkbox-wrapper [type='checkbox']:checked {
   background-color: var(--bf-blue);
   border-color: var(--bf-black);
 }
 
-.custom-radio-wrapper [type="radio"] {
+.custom-radio-wrapper [type='radio'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2786,20 +2857,20 @@ button.bf-disabled:focus,
   border: 1px solid var(--bf-gray);
 }
 
-.custom-radio-wrapper [type="radio"] + label {
+.custom-radio-wrapper [type='radio'] + label {
   line-height: 1.8rem;
   vertical-align: top;
   margin-left: var(--bf-spacing-md);
 }
 
-*[dir="rtl"] .custom-radio-wrapper [type="radio"] + label,
-.custom-radio-wrapper [type="radio"][dir="rtl"] + label {
+*[dir='rtl'] .custom-radio-wrapper [type='radio'] + label,
+.custom-radio-wrapper [type='radio'][dir='rtl'] + label {
   margin-left: 0;
   margin-right: var(--bf-spacing-md);
 }
 
-.custom-radio-wrapper [type="radio"]::after {
-  content: "";
+.custom-radio-wrapper [type='radio']::after {
+  content: '';
   display: block;
   position: absolute;
   width: 1.8rem;
@@ -2811,7 +2882,7 @@ button.bf-disabled:focus,
   transform: scale(0.35);
 }
 
-.custom-radio-wrapper [type="radio"]:checked {
+.custom-radio-wrapper [type='radio']:checked {
   background-color: var(--bf-blue);
   border-color: var(--bf-black);
 }
@@ -2904,7 +2975,7 @@ dt {
 
 .bf-embed-responsive::before {
   display: block;
-  content: "";
+  content: '';
   padding-top: 56.25%; /* 16:9 by default */
 }
 
@@ -2994,16 +3065,16 @@ dt {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
 
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
   }
 
   pre {
@@ -3103,19 +3174,19 @@ ins {
   background-color: var(--bf-dark-ins-bg);
 }
 
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="url"],
-[type="range"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='url'],
+[type='range'],
 input[list],
 select,
 select:not([size], select[multiple]),
@@ -3125,30 +3196,30 @@ textarea {
   color: var(--bf-gray-light);
 }
 
-[type="email"]:active,
-[type="email"]:focus,
-[type="number"]:active,
-[type="number"]:focus,
-[type="password"]:active,
-[type="password"]:focus,
-[type="tel"]:active,
-[type="tel"]:focus,
-[type="search"]:active,
-[type="search"]:focus,
-[type="text"]:active,
-[type="text"]:focus,
-[type="date"]:active,
-[type="date"]:focus,
-[type="datetime-local"]:active,
-[type="datetime-local"]:focus,
-[type="month"]:active,
-[type="month"]:focus,
-[type="week"]:active,
-[type="week"]:focus,
-[type="time"]:active,
-[type="time"]:focus,
-[type="url"]:active,
-[type="url"]:focus,
+[type='email']:active,
+[type='email']:focus,
+[type='number']:active,
+[type='number']:focus,
+[type='password']:active,
+[type='password']:focus,
+[type='tel']:active,
+[type='tel']:focus,
+[type='search']:active,
+[type='search']:focus,
+[type='text']:active,
+[type='text']:focus,
+[type='date']:active,
+[type='date']:focus,
+[type='datetime-local']:active,
+[type='datetime-local']:focus,
+[type='month']:active,
+[type='month']:focus,
+[type='week']:active,
+[type='week']:focus,
+[type='time']:active,
+[type='time']:focus,
+[type='url']:active,
+[type='url']:focus,
 input[list]:active,
 input[list]:focus,
 select:active,
@@ -3177,19 +3248,19 @@ select:not([size], select[multiple]) {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
 
-[type="range"] {
+[type='range'] {
   background-color: transparent;
 }
 
-[type="range"]:focus {
+[type='range']:focus {
   background-color: transparent;
 }
 
-[type="range"]::-webkit-slider-runnable-track {
+[type='range']::-webkit-slider-runnable-track {
   background-color: var(--bf-dark-extra);
 }
 
-[type="range"]::-moz-range-track {
+[type='range']::-moz-range-track {
   background-color: var(--bf-dark-extra);
 }
 
@@ -3203,9 +3274,9 @@ textarea::placeholder {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"],
+[type='button'],
+[type='reset'],
+[type='submit'],
 .bf-btn {
   background: var(--bf-gray-light);
 }
@@ -3213,15 +3284,15 @@ button,
 button:hover,
 button:active,
 button:focus,
-[type="button"]:hover,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:hover,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:hover,
-[type="submit"]:active,
-[type="submit"]:focus,
+[type='button']:hover,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:hover,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:hover,
+[type='submit']:active,
+[type='submit']:focus,
 .bf-btn:hover,
 .bf-btn:active,
 .bf-btn:focus {
@@ -3230,12 +3301,12 @@ button:focus,
 
 button:active,
 button:focus,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:active,
-[type="submit"]:focus,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:active,
+[type='submit']:focus,
 .bf-btn:active,
 .bf-btn:focus {
   box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
@@ -3323,5 +3394,3 @@ html {
   background-color: rgb(115 115 115); /* gray-dark +10% lightness */
 }
 }
-
-/*# sourceMappingURL=bullframe-system-default.css.map */

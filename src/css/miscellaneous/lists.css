@@ -45,6 +45,6 @@ dd {
  * See: https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
  */
 nav li::before {
-  content: "\200B";
+  content: '\200B';
   position: absolute;
 }

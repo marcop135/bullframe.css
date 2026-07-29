@@ -9,33 +9,40 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+      <div className='container'>
         <div className={styles.heroTitleRow}>
-          <Heading as="h1" className="hero__title">{siteConfig.title}</Heading>
-          <span className={styles.versionBadge} aria-label="Version 6">v6</span>
+          <Heading as='h1' className='hero__title'>
+            {siteConfig.title}
+          </Heading>
+          <span className={styles.versionBadge} aria-label='Version 6'>
+            v6
+          </span>
         </div>
-        <p className="hero__subtitle">
+        <p className='hero__subtitle'>
           One design system. Three ways to write it. Zero JavaScript.
         </p>
         <p className={styles.heroLede}>
-          Classless for your blog, class-based for your product, utility-first for your dashboard
-          &mdash; all from one package, sharing one set of <code>--bf-*</code> tokens. Switch the
-          import; your theme carries over.
+          Classless for your blog, class-based for your product, utility-first for your dashboard,
+          all from one package, sharing one set of <code>--bf-*</code> tokens. Switch the import;
+          your theme carries over.
         </p>
-        <pre className={styles.installSnippet} aria-label="One-line install">
-{`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">`}
+        <pre className={styles.installSnippet} aria-label='One-line install'>
+          {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">`}
         </pre>
         <div className={styles.buttons}>
-          <Link className="button button--primary button--lg" to="/docs/getting-started">
+          <Link className='button button--primary button--lg' to='/docs/getting-started'>
             Get Started
           </Link>
-          <a className="button button--secondary button--lg" href="/demo/">
+          <a className='button button--secondary button--lg' href='/demo/'>
             Live Demo
           </a>
-          <Link className="button button--secondary button--lg" href="https://github.com/marcop135/bullframe.css">
+          <Link
+            className='button button--secondary button--lg'
+            href='https://github.com/marcop135/bullframe.css'
+          >
             GitHub
           </Link>
         </div>
@@ -83,16 +90,17 @@ function VariantsSection() {
   ];
   return (
     <section className={styles.section}>
-      <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>Three ways to write it</Heading>
+      <div className='container'>
+        <Heading as='h2' className={styles.sectionTitle}>
+          Three ways to write it
+        </Heading>
         <p className={styles.sectionLede}>
-          Same <code>--bf-*</code> tokens. Same accessible defaults. Same package.
-          Pick the mode that matches how you write HTML &mdash; switch the import,
-          your theme carries over.
+          Same <code>--bf-*</code> tokens. Same accessible defaults. Same package. Pick the mode
+          that matches how you write HTML, then switch the import; your theme carries over.
         </p>
         <div className={clsx('row', styles.variantsRow)}>
           {modes.map((m) => (
-            <div key={m.name} className="col col--4">
+            <div key={m.name} className='col col--4'>
               <article className={styles.variantCard}>
                 <h3 className={styles.variantName}>{m.name}</h3>
                 <code className={styles.variantFile}>{m.file}</code>
@@ -110,19 +118,21 @@ function VariantsSection() {
 function ModernSection() {
   return (
     <section className={clsx(styles.section, styles.sectionAlt)}>
-      <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>Also: a modern-CSS variant</Heading>
+      <div className='container'>
+        <Heading as='h2' className={styles.sectionTitle}>
+          Also: a modern-CSS variant
+        </Heading>
         <p className={styles.sectionLede}>
-          <code>bullframe-modern.css</code> layers <code>light-dark()</code>,
-          <code> color-mix()</code>, <code>oklch()</code>, <code>:has()</code>, and container
-          queries on top of the system-default build &mdash; opt in when the project targets 2024+
-          browsers. The other six variants stay byte-for-byte the same.
+          <code>bullframe-modern.css</code> layers <code>color-scheme</code>,
+          <code>color-mix()</code>, <code>oklch()</code>, <code>:has()</code>, and container
+          queries on top of the system-default build. Opt in when the project targets 2024+
+          browsers. The other seven variants stay byte-for-byte the same.
         </p>
-        <div className="row">
-          <div className="col col--6">
+        <div className='row'>
+          <div className='col col--6'>
             <h3 className={styles.codeHeading}>One declaration, both modes</h3>
             <pre className={styles.codeBlock}>
-{`:root {
+              {`:root {
   color-scheme: light dark;
 }
 
@@ -132,10 +142,10 @@ body {
 }`}
             </pre>
           </div>
-          <div className="col col--6">
-            <h3 className={styles.codeHeading}>Dim submit on invalid &mdash; no JS</h3>
+          <div className='col col--6'>
+            <h3 className={styles.codeHeading}>Dim submit on invalid, no JS</h3>
             <pre className={styles.codeBlock}>
-{`.bf-form-modern:has(:invalid) [type="submit"] {
+              {`.bf-form-modern:has(:invalid) [type="submit"] {
   opacity: 0.6;
   cursor: not-allowed;
 }`}
@@ -150,21 +160,25 @@ body {
 function GetStartedSection() {
   return (
     <section className={styles.section}>
-      <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>Three ways to start</Heading>
-        <div className="row">
-          <div className="col col--4">
+      <div className='container'>
+        <Heading as='h2' className={styles.sectionTitle}>
+          Three ways to start
+        </Heading>
+        <div className='row'>
+          <div className='col col--4'>
             <h3 className={styles.codeHeading}>CDN</h3>
             <pre className={styles.codeBlock}>
-{`<link rel="stylesheet"
+              {`<link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">`}
             </pre>
-            <p className={styles.startNote}>Fastest. Pin to <code>@6</code> once the v6 release is on npm.</p>
+            <p className={styles.startNote}>
+              Fastest. Pin to <code>@6</code> once the v6 release is on npm.
+            </p>
           </div>
-          <div className="col col--4">
+          <div className='col col--4'>
             <h3 className={styles.codeHeading}>npm</h3>
             <pre className={styles.codeBlock}>
-{`npm install bullframe.css
+              {`npm install bullframe.css
 
 @import 'bullframe.css';
 @import 'bullframe.css/dark';
@@ -172,10 +186,10 @@ function GetStartedSection() {
             </pre>
             <p className={styles.startNote}>Subpath exports for every variant.</p>
           </div>
-          <div className="col col--4">
+          <div className='col col--4'>
             <h3 className={styles.codeHeading}>Download</h3>
             <pre className={styles.codeBlock}>
-{`# Grab the latest release tarball
+              {`# Grab the latest release tarball
 curl -L https://github.com/marcop135/\\
 bullframe.css/releases/latest`}
             </pre>
@@ -183,7 +197,7 @@ bullframe.css/releases/latest`}
           </div>
         </div>
         <div className={styles.finalCta}>
-          <Link className="button button--primary button--lg" to="/docs/getting-started">
+          <Link className='button button--primary button--lg' to='/docs/getting-started'>
             Read the v6 docs &rarr;
           </Link>
         </div>
@@ -193,11 +207,12 @@ bullframe.css/releases/latest`}
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} — one design system, three ways to write it`}
-      description="Bullframe CSS: classless, class-based, and utility-first under one --bf-* token system. ~8 KB gzipped. Zero JavaScript. WCAG AA defaults. Native CSS via PostCSS.">
+      title={`${siteConfig.title}: one design system, three ways to write it`}
+      description='Bullframe CSS: classless, class-based, and utility-first under one --bf-* token system. ~8 KB gzipped. Zero JavaScript. WCAG AA defaults. Native CSS via PostCSS.'
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />

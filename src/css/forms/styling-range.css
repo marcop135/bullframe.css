@@ -5,13 +5,13 @@
  *
  * standalone CodePen demo https://codepen.io/marcop135/pen/JjGrNMx */
 
-:where([type="range"]) {
+:where([type='range']) {
   appearance: none;
   width: 100%;
   height: 1.4rem;
 }
 
-:where([type="range"])::-webkit-slider-thumb {
+:where([type='range'])::-webkit-slider-thumb {
   border: 0;
   appearance: none;
 
@@ -20,15 +20,17 @@
   margin-top: -0.25rem;
   background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 }
 
-:where([type="range"])::-webkit-slider-thumb:active {
+:where([type='range'])::-webkit-slider-thumb:active {
   background-color: var(--bf-blue);
 }
 
-:where([type="range"])::-moz-range-thumb {
+:where([type='range'])::-moz-range-thumb {
   border: 0;
   appearance: none;
 
@@ -36,15 +38,17 @@
   height: 1.5rem;
   background-color: var(--bf-blue);
   border-radius: 1.5rem;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 }
 
-:where([type="range"])::-moz-range-thumb:active {
+:where([type='range'])::-moz-range-thumb:active {
   background-color: var(--bf-blue);
 }
 
-:where([type="range"])::-webkit-slider-runnable-track {
+:where([type='range'])::-webkit-slider-runnable-track {
   color: transparent;
   border-color: transparent;
 
@@ -54,7 +58,7 @@
   background-color: var(--bf-gray-light-extra);
 }
 
-:where([type="range"])::-moz-range-track {
+:where([type='range'])::-moz-range-track {
   color: transparent;
   border-color: transparent;
 
@@ -64,31 +68,35 @@
   background-color: var(--bf-gray-light-extra);
 }
 
-:where([type="range"]):focus {
+:where([type='range']):focus {
   outline: none;
 }
 
-:where([type="range"]):focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+:where([type='range']):focus::-webkit-slider-thumb {
+  box-shadow:
+    0 0 0 0.1rem var(--bf-white),
+    0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
-:where([type="range"]):focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.1rem var(--bf-white), 0 0 0 0.2rem rgb(0 123 255 / 25%);
+:where([type='range']):focus::-moz-range-thumb {
+  box-shadow:
+    0 0 0 0.1rem var(--bf-white),
+    0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
-:where([type="range"])::-moz-focus-outer {
+:where([type='range'])::-moz-focus-outer {
   border: 0;
 }
 
 /* disabled */
-:where([type="range"]):disabled {
+:where([type='range']):disabled {
   pointer-events: none;
 }
 
-:where([type="range"]):disabled::-webkit-slider-thumb {
+:where([type='range']):disabled::-webkit-slider-thumb {
   background-color: var(--bf-gray-light);
 }
 
-:where([type="range"]):disabled::-moz-range-thumb {
+:where([type='range']):disabled::-moz-range-thumb {
   background-color: var(--bf-gray-light);
 }

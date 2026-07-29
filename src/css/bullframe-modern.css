@@ -32,7 +32,7 @@
 /* Opt-in form-validation feedback using :has().
  * Wrap your form in <form class="bf-form-modern"> to dim the submit when invalid. */
 .bf-form-modern:has(:invalid) .bf-btn--primary,
-.bf-form-modern:has(:invalid) [type="submit"] {
+.bf-form-modern:has(:invalid) [type='submit'] {
   opacity: 0.6;
   cursor: not-allowed;
 }
@@ -45,16 +45,28 @@
 }
 
 @container (min-width: 576px) {
-  [data-bf-container-query] .bf-cq-sm { display: block; }
-  [data-bf-container-query] .bf-cq-sm-hidden { display: none; }
+  [data-bf-container-query] .bf-cq-sm {
+    display: block;
+  }
+  [data-bf-container-query] .bf-cq-sm-hidden {
+    display: none;
+  }
 }
 
 @container (min-width: 768px) {
-  [data-bf-container-query] .bf-cq-md { display: block; }
-  [data-bf-container-query] .bf-cq-md-hidden { display: none; }
+  [data-bf-container-query] .bf-cq-md {
+    display: block;
+  }
+  [data-bf-container-query] .bf-cq-md-hidden {
+    display: none;
+  }
 }
 
 @container (min-width: 992px) {
-  [data-bf-container-query] .bf-cq-lg { display: block; }
-  [data-bf-container-query] .bf-cq-lg-hidden { display: none; }
+  [data-bf-container-query] .bf-cq-lg {
+    display: block;
+  }
+  [data-bf-container-query] .bf-cq-lg-hidden {
+    display: none;
+  }
 }

@@ -4,7 +4,7 @@
   margin-bottom: 2rem;
 }
 
-.demo [class^="bf-col"] {
+.demo [class^='bf-col'] {
   margin-bottom: 1rem;
 }
 
@@ -117,17 +117,17 @@
 }
 
 /* Component cards */
-.demo #components [style*="border: 1px solid"] {
+.demo #components [style*='border: 1px solid'] {
   transition: box-shadow 0.2s;
 }
 
-.demo #components [style*="border: 1px solid"]:hover {
+.demo #components [style*='border: 1px solid']:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.demo [type="image"],
-.demo [type="checkbox"],
-.demo [type="radio"] {
+.demo [type='image'],
+.demo [type='checkbox'],
+.demo [type='radio'] {
   margin-bottom: 0;
 }
 
@@ -153,7 +153,7 @@
     margin-bottom: 0;
   }
 
-  .demo .grid [class*="bf-col-"] {
+  .demo .grid [class*='bf-col-'] {
     margin-bottom: 2rem;
   }
 }

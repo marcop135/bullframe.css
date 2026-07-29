@@ -11,7 +11,7 @@
 
 .bf-embed-responsive::before {
   display: block;
-  content: "";
+  content: '';
   padding-top: 56.25%; /* 16:9 by default */
 }
 

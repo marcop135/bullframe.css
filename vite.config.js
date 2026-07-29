@@ -1,25 +1,25 @@
 // Vite config tools and dependencies
-import { defineConfig } from "vite";
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
-import postcssImport from "postcss-import";
-import path from "path";
-import fs from "fs";
-import { glob } from "glob";
-import postcss from "postcss";
+import { defineConfig } from 'vite';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import postcssImport from 'postcss-import';
+import path from 'path';
+import fs from 'fs';
+import { glob } from 'glob';
+import postcss from 'postcss';
 
 // Read the version from package.json so the dist/ header stays in lockstep with
 // whatever `npm version` produces — no more hardcoded "v6.0.0" drifting out of sync.
-const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, "package.json"), "utf-8"));
+const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'package.json'), 'utf-8'));
 const pkgVersion = pkg.version;
 
 // Custom PostCSS plugin: adds license header as a comment at the top of each CSS file
 const addHeader = () => {
   return {
-    postcssPlugin: "add-header",
+    postcssPlugin: 'add-header',
     Once(root) {
       root.prepend({
-        type: "comment",
+        type: 'comment',
         text: `! Bullframe CSS v${pkgVersion} | MIT License | https://github.com/marcop135/bullframe.css `,
       });
     },
@@ -27,69 +27,82 @@ const addHeader = () => {
 };
 addHeader.postcss = true;
 
+// Compile a single CSS entry file through the same PostCSS pipeline used in
+// production. Returns the processed CSS string and source map (when requested).
+async function compileCss(file, { minified = false } = {}) {
+  const from = path.resolve(__dirname, file);
+  const cssContent = fs.readFileSync(from, 'utf-8');
+
+  const postcssResult = await postcss([postcssImport(), addHeader(), autoprefixer()]).process(
+    cssContent,
+    {
+      from,
+      to: from,
+      map: { inline: false, annotation: false },
+    }
+  );
+
+  if (minified) {
+    const minifiedResult = await postcss([autoprefixer(), cssnano()]).process(postcssResult.css, {
+      from,
+      to: from,
+      map: { inline: false, annotation: false },
+    });
+    return { css: minifiedResult.css, map: minifiedResult.map };
+  }
+
+  return { css: postcssResult.css, map: postcssResult.map };
+}
+
+// Find the entry-point CSS files that should be exposed as build artifacts.
+async function listEntryCss() {
+  const files = await glob('src/css/*.css', { cwd: __dirname });
+  return files.filter((file) => !path.basename(file).startsWith('_'));
+}
+
 // Custom Vite plugin: compiles all CSS files (except partials) to CSS and minified CSS
 function buildAllCss() {
   return {
-    name: "build-all-css",
-    async closeBundle() {
-      // Find main entry point CSS files in src/css (exclude partials in subdirs)
-      const files = await glob("src/css/*.css");
-      const cssFiles = files.filter(
-        (file) => !path.basename(file).startsWith("_")
-      );
+    name: 'build-all-css',
+    async configureServer(server) {
+      // Serve compiled CSS during dev so the demo/landing links to
+      // ./css/bullframe-*.min.css resolve without a prior production build.
+      server.middlewares.use(async (req, res, next) => {
+        const match = req.url?.match(/^\/css\/(.+?)\.min\.css(?:\?.*)?$/);
+        if (!match) return next();
 
-      // Output directory for generated CSS
-      const outDir = path.resolve("dist/css");
+        const name = match[1];
+        const srcFile = path.join(__dirname, 'src/css', `${name}.css`);
+        if (!fs.existsSync(srcFile)) return next();
+
+        try {
+          const { css } = await compileCss(srcFile, { minified: true });
+          res.setHeader('Content-Type', 'text/css');
+          res.setHeader('Cache-Control', 'no-cache');
+          res.end(css);
+        } catch (err) {
+          res.statusCode = 500;
+          res.end(`/* CSS build error: ${err.message} */`);
+        }
+      });
+    },
+    async closeBundle() {
+      const cssFiles = await listEntryCss();
+      const outDir = path.resolve(__dirname, 'dist/css');
       fs.mkdirSync(outDir, { recursive: true });
 
-      // Compile and process each CSS file
       for (const file of cssFiles) {
-        const name = path.basename(file, ".css");
+        const name = path.basename(file, '.css');
         const outFile = path.join(outDir, `${name}.css`);
         const minFile = path.join(outDir, `${name}.min.css`);
 
-        // Read CSS file
-        const cssContent = fs.readFileSync(file, "utf-8");
+        const { css, map } = await compileCss(file, { minified: false });
+        fs.writeFileSync(outFile, css);
+        if (map) fs.writeFileSync(`${outFile}.map`, map.toString());
 
-        // Step 1: Run PostCSS with import + header + autoprefixer
-        const postcssResult = await postcss([
-          postcssImport(),
-          addHeader(),
-          autoprefixer(),
-        ]).process(cssContent, {
-          from: path.resolve(file),
-          to: outFile,
-          map: {
-            inline: false,
-            annotation: true,
-          },
-        });
-
-        // Write normal CSS and source map
-        fs.writeFileSync(outFile, postcssResult.css);
-        if (postcssResult.map) {
-          fs.writeFileSync(`${outFile}.map`, postcssResult.map.toString());
-        }
-
-        // Step 2: Minify with cssnano + autoprefixer (again) + source maps
-        const minified = await postcss([autoprefixer(), cssnano()]).process(
-          postcssResult.css,
-          {
-            from: outFile,
-            to: minFile,
-            map: {
-              prev: postcssResult.map ? postcssResult.map.toString() : false,
-              inline: false,
-              annotation: true,
-            },
-          }
-        );
-
-        // Write minified CSS and source map
-        fs.writeFileSync(minFile, minified.css);
-        if (minified.map) {
-          fs.writeFileSync(`${minFile}.map`, minified.map.toString());
-        }
+        const { css: minCss, map: minMap } = await compileCss(file, { minified: true });
+        fs.writeFileSync(minFile, minCss);
+        if (minMap) fs.writeFileSync(`${minFile}.map`, minMap.toString());
       }
     },
   };
@@ -98,10 +111,10 @@ function buildAllCss() {
 // Copy static files from src/docs to dist/docs (e.g. demo HTML, images, etc.)
 function copyDocsFiles() {
   return {
-    name: "copy-docs-files",
+    name: 'copy-docs-files',
     closeBundle() {
-      const srcDir = path.resolve(__dirname, "src/docs");
-      const destDir = path.resolve(__dirname, "dist/docs");
+      const srcDir = path.resolve(__dirname, 'src/docs');
+      const destDir = path.resolve(__dirname, 'dist/docs');
 
       function copyRecursive(src, dest) {
         if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
@@ -127,14 +140,14 @@ function copyDocsFiles() {
 
 // Main Vite config
 export default defineConfig({
-  root: "src", // Vite project root
+  root: 'src', // Vite project root
   build: {
-    outDir: "../dist", // Output directory
+    outDir: '../dist', // Output directory
     emptyOutDir: true, // Clean before build
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, "src/index.html"), // Landing page
-        demo: path.resolve(__dirname, "src/docs/demo/index.html"), // Demo page
+        main: path.resolve(__dirname, 'src/index.html'), // Landing page
+        demo: path.resolve(__dirname, 'src/docs/demo/index.html'), // Demo page
       },
       output: {
         entryFileNames: `[name].js`,
@@ -142,7 +155,7 @@ export default defineConfig({
         assetFileNames: `[name][extname]`, // Keep asset file names flat
       },
     },
-    assetsDir: "", // No subdir for assets
+    assetsDir: '', // No subdir for assets
     sourcemap: true, // Enable source maps
   },
   plugins: [
@@ -150,6 +163,6 @@ export default defineConfig({
     copyDocsFiles(), // Copy docs files including demo
   ],
   server: {
-    open: "/index.html", // Dev server opens landing page
+    open: '/index.html', // Dev server opens landing page
   },
 });

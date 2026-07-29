@@ -16,7 +16,7 @@
 </header>
 ```
 
-`margin-left: auto` pushes the signup button to the right edge — a flexbox idiom that beats `justify-content: space-between` when you have an asymmetric layout.
+`margin-left: auto` pushes the signup button to the right edge; a flexbox idiom that beats `justify-content: space-between` when you have an asymmetric layout.
 
 ## Breadcrumb
 
@@ -64,7 +64,7 @@ The first focusable element on the page. Hidden by default; visible when keyboar
 
 ## Sidebar nav
 
-Collapsible on mobile via the native `<details>` element — no JavaScript.
+Collapsible on mobile via the native `<details>` element; no JavaScript.
 
 ```html
 <aside>

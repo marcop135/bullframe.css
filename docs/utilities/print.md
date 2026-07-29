@@ -4,7 +4,7 @@ title: Print
 
 # Print Styles
 
-Bullframe includes built-in print styles based on [HTML5 Boilerplate](https://github.com/h5bp/main.css). These are applied automatically via `@media print` — no extra classes needed.
+Bullframe includes built-in print styles based on [HTML5 Boilerplate](https://github.com/h5bp/main.css). These are applied automatically via `@media print`; no extra classes needed.
 
 ## What the Print Styles Do
 

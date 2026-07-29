@@ -30,7 +30,7 @@ const sidebar = chapters.map((c) => ({
 export default defineConfig({
   title: 'Bullframe CSS',
   description:
-    'A lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly.',
+    'A lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly.',
   lang: 'en-US',
   cleanUrls: true,
   base: '/',

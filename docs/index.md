@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Bullframe CSS
   text: Lightweight, themeable, classless-friendly
-  tagline: A lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.
+  tagline: A lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly, with solid cross-browser support.
   image:
     src: /bullframe-hero.png
     alt: Bullframe CSS

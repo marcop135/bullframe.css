@@ -1,6 +1,6 @@
 # Modal Patterns
 
-Bullframe styles the native `<dialog>` element. No JS framework, no overlay div, no focus-trapping library — the browser handles all of it.
+Bullframe styles the native `<dialog>` element. No JS framework, no overlay div, no focus-trapping library. The browser handles all of it.
 
 ## Basic dialog
 
@@ -19,7 +19,7 @@ Bullframe styles the native `<dialog>` element. No JS framework, no overlay div,
 
 Why this works:
 
-- `showModal()` opens the dialog, traps focus, dims the background, and adds `Esc` to close — built into the browser.
+- `showModal()` opens the dialog, traps focus, dims the background, and adds `Esc` to close; built into the browser.
 - `<form method="dialog">` closes the dialog on submit and exposes the clicked button's `value` via `dialog.returnValue`.
 - The `Esc` key always closes a modal dialog. No custom keydown handler needed.
 
@@ -61,7 +61,7 @@ By default the browser focuses the first focusable element. Override with `autof
 </dialog>
 ```
 
-This is the "safe default focus" pattern — Cancel gets focus, so a stray Enter doesn't delete anything.
+This is the "safe default focus" pattern; Cancel gets focus, so a stray Enter doesn't delete anything.
 
 ## Browser support
 

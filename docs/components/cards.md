@@ -1,6 +1,6 @@
 # Card Patterns
 
-Bullframe doesn't ship a `.bf-card` class. Cards are usually one box with padding, a border or shadow, and consistent spacing — easy enough to compose from existing utilities.
+Bullframe doesn't ship a `.bf-card` class. Cards are usually one box with padding, a border or shadow, and consistent spacing. Easy enough to compose from existing utilities.
 
 ## Content card
 
@@ -12,7 +12,7 @@ Bullframe doesn't ship a `.bf-card` class. Cards are usually one box with paddin
 </article>
 ```
 
-Why no `.bf-card` class? Because every team's card looks different — different border radius, padding, shadow, spacing. Forcing a single class makes overrides ugly. Compose from utilities and a few inline custom properties.
+Why no `.bf-card` class? Because every team's card looks different. Different border radius, padding, shadow, spacing. Forcing a single class makes overrides ugly. Compose from utilities and a few inline custom properties.
 
 ## Media card
 
@@ -29,7 +29,7 @@ Image on top, content below.
 </article>
 ```
 
-Note `alt=""` on decorative images — keeps the link list clean for screen readers. If the image is meaningful (a chart, a screenshot), give it a real alt.
+Note `alt=""` on decorative images; keeps the link list clean for screen readers. If the image is meaningful (a chart, a screenshot), give it a real alt.
 
 ## Card grid (responsive)
 

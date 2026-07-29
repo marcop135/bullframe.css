@@ -1,6 +1,6 @@
 # Introduction
 
-**Bullframe CSS** is a lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.
+**Bullframe CSS** is a lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly, with solid cross-browser support.
 
 Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
 

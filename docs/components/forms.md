@@ -62,7 +62,7 @@ Why these autocomplete tokens matter: password managers and `<input>` fill behav
 </form>
 ```
 
-`role="search"` is a landmark — screen readers list it in their navigation menu.
+`role="search"` is a landmark; screen readers list it in their navigation menu.
 
 ## Newsletter signup
 
@@ -76,7 +76,7 @@ Why these autocomplete tokens matter: password managers and `<input>` fill behav
 
 ## Form with validation hint (modern variant)
 
-Requires `bullframe-modern.css`. The submit button dims when any field is invalid — no JavaScript.
+Requires `bullframe-modern.css`. The submit button dims when any field is invalid; no JavaScript.
 
 ```html
 <form class="bf-form-modern" style="max-width: 28rem;">

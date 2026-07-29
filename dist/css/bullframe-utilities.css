@@ -26,7 +26,10 @@
 
   /* Colors - Anchors and accent */
   /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
-  --bf-blue: rgb(0 86 179); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+  --bf-blue: rgb(
+    0 86 179
+  ); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
+
   --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
   --bf-blue-light-extra: rgb(190 216 254);
 
@@ -55,9 +58,13 @@
   --bf-spacing-grid-gutter: 1.5rem;
 
   /* Typography */
-  --bf-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-sans-serif:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-font-monospace:
+    SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --bf-body-font-size-rem: 1.6rem;
   --bf-body-line-height: 1.5;
 
@@ -80,7 +87,7 @@
 
 .bf-clearfix::before,
 .bf-clearfix::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -390,59 +397,68 @@
 }
 
 .bf-serif--transitional {
-  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 }
 
 .bf-serif--oldstyle {
-  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
 }
 
 .bf-sans-serif--humanist {
-  font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, sans-serif;
+  font-family:
+    Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
 }
 
 .bf-sans-serif--geometric {
-  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 }
 
 .bf-sans-serif--classical {
-  font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
 }
 
 .bf-sans-serif--neo-grotesque {
-  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 }
 
 .bf-monospace--slab {
-  font-family: "Nimbus Mono PS", "Courier New", monospace;
+  font-family: 'Nimbus Mono PS', 'Courier New', monospace;
 }
 
 .bf-monospace--code {
-  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  font-family:
+    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
+    monospace;
 }
 
 .bf-sans-serif--industrial {
-  font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  font-family:
+    Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow',
+    sans-serif-condensed, sans-serif;
 }
 
 .bf-sans-serif--rounded {
-  font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro, sans-serif;
+  font-family:
+    ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT',
+    'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 }
 
 .bf-serif--slab {
-  font-family: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
+  font-family: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
 }
 
 .bf-serif--antique {
-  font-family: Superclarendon, "Bookman Old Style", "URW Bookman", "URW Bookman L", "Georgia Pro", Georgia, serif;
+  font-family:
+    Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia,
+    serif;
 }
 
 .bf-serif--didone {
-  font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+  font-family: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
 }
 
 .bf-cursive--handwritten {
-  font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
+  font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
 }
 
 .bf-h1,
@@ -514,7 +530,7 @@ body.bf-responsive-typography {
   margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
 }
 
-[class^="bf-col-"] {
+[class^='bf-col-'] {
   position: relative;
   min-height: 1px;
   padding-left: var(--bf-spacing-grid-gutter);
@@ -528,7 +544,7 @@ body.bf-responsive-typography {
   margin-left: 0;
 }
 
-.bf-no-gutters > [class^="bf-col"] {
+.bf-no-gutters > [class^='bf-col'] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -603,7 +619,7 @@ body.bf-responsive-typography {
     margin-right: 0;
   }
 
-  .bf-container--break-xs [class^="bf-col"] {
+  .bf-container--break-xs [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -618,7 +634,7 @@ body.bf-responsive-typography {
     margin-right: 0;
   }
 
-  .bf-container--break-md [class^="bf-col"] {
+  .bf-container--break-md [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -633,7 +649,7 @@ body.bf-responsive-typography {
     margin-right: 0;
   }
 
-  .bf-container--break-lg [class^="bf-col"] {
+  .bf-container--break-lg [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -644,54 +660,96 @@ body.bf-responsive-typography {
 
 /* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
 
-table td[class^="bf-col"],
-table th[class^="bf-col"] {
+table td[class^='bf-col'],
+table th[class^='bf-col'] {
   position: static;
 }
 
 /* Utilities - Z-index */
 
-.bf-z-index-1 { z-index: 1; }
+.bf-z-index-1 {
+  z-index: 1;
+}
 
-.bf-z-index-2 { z-index: 2; }
+.bf-z-index-2 {
+  z-index: 2;
+}
 
-.bf-z-index-3 { z-index: 3; }
+.bf-z-index-3 {
+  z-index: 3;
+}
 
-.bf-z-index-4 { z-index: 4; }
+.bf-z-index-4 {
+  z-index: 4;
+}
 
-.bf-z-index-5 { z-index: 5; }
+.bf-z-index-5 {
+  z-index: 5;
+}
 
-.bf-z-index-6 { z-index: 6; }
+.bf-z-index-6 {
+  z-index: 6;
+}
 
-.bf-z-index-7 { z-index: 7; }
+.bf-z-index-7 {
+  z-index: 7;
+}
 
-.bf-z-index-8 { z-index: 8; }
+.bf-z-index-8 {
+  z-index: 8;
+}
 
-.bf-z-index-9 { z-index: 9; }
+.bf-z-index-9 {
+  z-index: 9;
+}
 
-.bf-z-index-10 { z-index: 10; }
+.bf-z-index-10 {
+  z-index: 10;
+}
 
-.bf-z-index-20 { z-index: 20; }
+.bf-z-index-20 {
+  z-index: 20;
+}
 
-.bf-z-index-30 { z-index: 30; }
+.bf-z-index-30 {
+  z-index: 30;
+}
 
-.bf-z-index-40 { z-index: 40; }
+.bf-z-index-40 {
+  z-index: 40;
+}
 
-.bf-z-index-50 { z-index: 50; }
+.bf-z-index-50 {
+  z-index: 50;
+}
 
-.bf-z-index-60 { z-index: 60; }
+.bf-z-index-60 {
+  z-index: 60;
+}
 
-.bf-z-index-70 { z-index: 70; }
+.bf-z-index-70 {
+  z-index: 70;
+}
 
-.bf-z-index-80 { z-index: 80; }
+.bf-z-index-80 {
+  z-index: 80;
+}
 
-.bf-z-index-90 { z-index: 90; }
+.bf-z-index-90 {
+  z-index: 90;
+}
 
-.bf-z-index-100 { z-index: 100; }
+.bf-z-index-100 {
+  z-index: 100;
+}
 
-.bf-z-index-200 { z-index: 200; }
+.bf-z-index-200 {
+  z-index: 200;
+}
 
-.bf-z-index-300 { z-index: 300; }
+.bf-z-index-300 {
+  z-index: 300;
+}
 
 /* Utilities - Spacing (similar to Bootstrap)
  * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
@@ -890,11 +948,11 @@ table th[class^="bf-col"] {
 }
 
 :where(
-    fieldset[disabled] .bf-btn,
-    .bf-btn[disabled],
-    .bf-btn:disabled,
-    .bf-btn[aria-disabled="true"]
-  ) {
+  fieldset[disabled] .bf-btn,
+  .bf-btn[disabled],
+  .bf-btn:disabled,
+  .bf-btn[aria-disabled='true']
+) {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
@@ -1010,7 +1068,7 @@ button.bf-disabled:focus,
 
 /* Utilities - Custom radio and checkbox */
 
-.custom-checkbox-wrapper [type="checkbox"] {
+.custom-checkbox-wrapper [type='checkbox'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1021,20 +1079,20 @@ button.bf-disabled:focus,
   border: 1px solid var(--bf-gray);
 }
 
-.custom-checkbox-wrapper [type="checkbox"] + label {
+.custom-checkbox-wrapper [type='checkbox'] + label {
   line-height: 1.8rem;
   vertical-align: top;
   margin-left: var(--bf-spacing-md);
 }
 
-*[dir="rtl"] .custom-checkbox-wrapper [type="checkbox"] + label,
-.custom-checkbox-wrapper [type="checkbox"][dir="rtl"] + label {
+*[dir='rtl'] .custom-checkbox-wrapper [type='checkbox'] + label,
+.custom-checkbox-wrapper [type='checkbox'][dir='rtl'] + label {
   margin-left: 0;
   margin-right: var(--bf-spacing-md);
 }
 
-.custom-checkbox-wrapper [type="checkbox"]::after {
-  content: "";
+.custom-checkbox-wrapper [type='checkbox']::after {
+  content: '';
   display: block;
   position: absolute;
   width: 0.6rem;
@@ -1047,12 +1105,12 @@ button.bf-disabled:focus,
   transform: rotate(43deg);
 }
 
-.custom-checkbox-wrapper [type="checkbox"]:checked {
+.custom-checkbox-wrapper [type='checkbox']:checked {
   background-color: var(--bf-blue);
   border-color: var(--bf-black);
 }
 
-.custom-radio-wrapper [type="radio"] {
+.custom-radio-wrapper [type='radio'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1063,20 +1121,20 @@ button.bf-disabled:focus,
   border: 1px solid var(--bf-gray);
 }
 
-.custom-radio-wrapper [type="radio"] + label {
+.custom-radio-wrapper [type='radio'] + label {
   line-height: 1.8rem;
   vertical-align: top;
   margin-left: var(--bf-spacing-md);
 }
 
-*[dir="rtl"] .custom-radio-wrapper [type="radio"] + label,
-.custom-radio-wrapper [type="radio"][dir="rtl"] + label {
+*[dir='rtl'] .custom-radio-wrapper [type='radio'] + label,
+.custom-radio-wrapper [type='radio'][dir='rtl'] + label {
   margin-left: 0;
   margin-right: var(--bf-spacing-md);
 }
 
-.custom-radio-wrapper [type="radio"]::after {
-  content: "";
+.custom-radio-wrapper [type='radio']::after {
+  content: '';
   display: block;
   position: absolute;
   width: 1.8rem;
@@ -1088,7 +1146,7 @@ button.bf-disabled:focus,
   transform: scale(0.35);
 }
 
-.custom-radio-wrapper [type="radio"]:checked {
+.custom-radio-wrapper [type='radio']:checked {
   background-color: var(--bf-blue);
   border-color: var(--bf-black);
 }
@@ -1159,7 +1217,7 @@ dt {
 
 .bf-embed-responsive::before {
   display: block;
-  content: "";
+  content: '';
   padding-top: 56.25%; /* 16:9 by default */
 }
 
@@ -1205,6 +1263,30 @@ dt {
   }
 }
 
+/* Font smoothing utilities (opt-in).
+ *
+ * Class names and property values match Tailwind's font-smoothing utilities:
+ * https://tailwindcss.com/docs/font-smoothing
+ * — devs migrating from a Tailwind project get the same API.
+ *
+ * Bullframe does NOT apply font-smoothing globally because Apple's own guidance
+ * recommends subpixel-antialiased rendering for body text on macOS — using
+ * antialiased everywhere makes text thinner and harder to read at small sizes.
+ *
+ * Use these utilities when you specifically need control (e.g. light text on
+ * dark backgrounds, where subpixel rendering can produce color fringing).
+ */
+
+.bf-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bf-subpixel-antialiased {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
 /* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
  * Inlined to avoid the additional HTTP request:
  * https://www.phpied.com/delay-loading-your-print-css/ */
@@ -1225,16 +1307,16 @@ dt {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
 
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
   }
 
   pre {
@@ -1305,5 +1387,3 @@ dt {
 .bf-filter-none {
   filter: none !important;
 }
-
-/*# sourceMappingURL=bullframe-utilities.css.map */

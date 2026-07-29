@@ -18,18 +18,13 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Docusaurus
-website/.docusaurus/
-website/build/
-website/node_modules/
-website/.cache-loader/
-website/.env.local
-website/.env.production.local
-website/.env.development.local
+# VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
 
 # Synced demo & compiled CSS (rebuilt by `npm run docs:sync-demo`)
-website/static/demo/
-website/static/css/
+docs/public/css/
+docs/public/demo/
 
 # Netlify CLI local state
 .netlify/

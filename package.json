@@ -2,7 +2,7 @@
   "name": "bullframe.css",
   "version": "6.0.0",
   "type": "module",
-  "description": "Bullframe CSS is a lightweight CSS framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.",
+  "description": "Bullframe CSS is a lightweight CSS framework for building fast, responsive, and accessible UIs; semantic, themeable, and classless-friendly, with solid cross-browser support.",
   "main": "dist/css/bullframe.css",
   "style": "dist/css/bullframe.css",
   "jsdelivr": "dist/css/bullframe.css",
@@ -32,15 +32,15 @@
     "lint": "stylelint \"src/css/**/*.css\"",
     "lint:fix": "stylelint \"src/css/**/*.css\" --fix",
     "lint:html": "html-validate \"src/**/*.html\"",
-    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\"",
-    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\"",
+    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
+    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
     "test:e2e": "playwright test",
     "test:e2e:update": "playwright test --update-snapshots",
-    "docs:dev": "cd website && npm start",
-    "docs:sync-demo": "node scripts/sync-demo-to-website.mjs",
+    "docs:dev": "vitepress dev docs",
+    "docs:sync-demo": "node scripts/sync-demo-to-vitepress.mjs",
     "docs:api-reference": "node scripts/build-api-reference.mjs",
-    "docs:build": "npm run build && npm run docs:sync-demo && cd website && npm run build",
-    "docs:serve": "cd website && npm run serve"
+    "docs:build": "npm run build && npm run docs:sync-demo && vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "repository": {
     "type": "git",
@@ -84,7 +84,8 @@
     "prettier": "^3.5.3",
     "stylelint": "^17.1.1",
     "stylelint-config-standard": "^40.0.0",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vitepress": "^1.6.4"
   },
   "engines": {
     "node": ">=20"

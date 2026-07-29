@@ -1,4 +1,4 @@
-# Netlify deployment config for the Docusaurus docs site.
+# Netlify deployment config for the VitePress docs site.
 # Live at https://bullframecss.marcopontili.com
 #
 # To activate:
@@ -10,14 +10,14 @@
 # For ad-hoc CLI deploys: `netlify deploy --prod` from the repo root after `npm run docs:build`.
 
 [build]
-  # Run from repo root so we can run the vite build (which compiles the seven CSS variants
-  # and the demo) before the Docusaurus build, then sync the demo into Docusaurus' static
+  # Run from repo root so we can run the vite build (which compiles the CSS variants
+  # and the demo) before the VitePress build, then sync the demo into the VitePress public
   # folder so it ships at /demo/.
-  command = "npm ci && npm run build && npm run docs:sync-demo && cd website && npm ci && npm run build"
-  publish = "website/build/"
+  command = "npm ci && npm run docs:build"
+  publish = "docs/.vitepress/dist/"
 
 [build.environment]
   NODE_VERSION = "22"
 
 [context.deploy-preview]
-  command = "npm ci && npm run build && npm run docs:sync-demo && cd website && npm ci && npm run build"
+  command = "npm ci && npm run docs:build"

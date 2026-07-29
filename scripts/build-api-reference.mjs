@@ -1,4 +1,4 @@
-/* Generates website/docs/api-reference.md by scanning src/css.
+/* Generates docs/api-reference.md by scanning src/css.
  *
  * - Pulls every --bf-* custom property from src/css/variables.css.
  * - Pulls every .bf-* class from src/css/* (excluding entry points and shared
@@ -16,7 +16,7 @@ import postcss from 'postcss';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..');
 const cssRoot = path.join(repoRoot, 'src', 'css');
-const outFile = path.join(repoRoot, 'website', 'docs', 'api-reference.md');
+const outFile = path.join(repoRoot, 'docs', 'api-reference.md');
 const repoUrl = 'https://github.com/marcop135/bullframe.css';
 const branch = 'v6';
 
@@ -216,10 +216,6 @@ const dedupedClassCount = fileScores.size;
 const varGroups = groupVars(extractVariables(variablesCss));
 
 const lines = [];
-lines.push('---');
-lines.push('sidebar_position: 99');
-lines.push('---');
-lines.push('');
 lines.push('# API Reference');
 lines.push('');
 lines.push(

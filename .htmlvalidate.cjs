@@ -18,5 +18,8 @@ module.exports = defineConfig({
     "no-implicit-button-type": "off",
     // Allow raw characters in demo content
     "no-raw-characters": "off",
+    // Prettier emits lowercase doctype and self-closing void tags
+    "doctype-style": "off",
+    "void-style": "off",
   },
 });

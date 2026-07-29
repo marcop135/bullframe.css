@@ -3,7 +3,6 @@
 /* Bullframe CSS v6.0.0 - Utilities Only */
 
 /* Variables */
-
 /* Bullframe CSS v6.0.0 - CSS Custom Properties (Variables) */
 
 :root {
@@ -78,13 +77,11 @@
 }
 
 /* Utilities */
-
 /* Utilities - Layout */
 
 /* micro-clearfix
  * http://nicolasgallagher.com/micro-clearfix-hack/
  */
-
 .bf-clearfix::before,
 .bf-clearfix::after {
   content: ' ';
@@ -100,7 +97,6 @@
 }
 
 /* assistive text for screen reader only (e.g. form labels) */
-
 .bf-hidden {
   display: none !important;
   visibility: hidden !important;
@@ -126,7 +122,6 @@
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -146,7 +141,6 @@
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -235,7 +229,6 @@
 }
 
 /* https://css-tricks.com/centering-css-complete-guide */
-
 .bf-align-center-unknown {
   position: relative !important;
 }
@@ -277,7 +270,6 @@
 .bf-width-auto {
   width: auto !important;
 }
-
 /* Utilities - Texts */
 
 .bf-t-transform-uppercase {
@@ -310,13 +302,11 @@
 }
 
 /* useful to 'reset' <i> inherited style */
-
 .bf-t-style-normal {
   font-style: normal !important;
 }
 
 /* useful to 'reset' <b> inherited style */
-
 .bf-t-weight-300 {
   font-weight: 300 !important;
 }
@@ -391,7 +381,6 @@
 }
 
 /* Font stacks from Modern Font Stacks (https://modernfontstacks.com/) */
-
 .bf-sans-serif--system {
   font-family: system-ui, sans-serif;
 }
@@ -506,7 +495,6 @@ p.bf-lead {
 body.bf-responsive-typography {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
-
 /* Utilities - Grid system */
 
 .bf-container,
@@ -550,7 +538,6 @@ body.bf-responsive-typography {
 }
 
 /* Column widths */
-
 .bf-col-12 {
   flex-basis: 100%;
   max-width: 100%;
@@ -612,7 +599,6 @@ body.bf-responsive-typography {
 }
 
 /* Responsive breakpoints: stack columns */
-
 @media (max-width: 575px) {
   .bf-container--break-xs .bf-row {
     margin-left: 0;
@@ -659,98 +645,75 @@ body.bf-responsive-typography {
 }
 
 /* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
-
 table td[class^='bf-col'],
 table th[class^='bf-col'] {
   position: static;
 }
-
 /* Utilities - Z-index */
 
 .bf-z-index-1 {
   z-index: 1;
 }
-
 .bf-z-index-2 {
   z-index: 2;
 }
-
 .bf-z-index-3 {
   z-index: 3;
 }
-
 .bf-z-index-4 {
   z-index: 4;
 }
-
 .bf-z-index-5 {
   z-index: 5;
 }
-
 .bf-z-index-6 {
   z-index: 6;
 }
-
 .bf-z-index-7 {
   z-index: 7;
 }
-
 .bf-z-index-8 {
   z-index: 8;
 }
-
 .bf-z-index-9 {
   z-index: 9;
 }
-
 .bf-z-index-10 {
   z-index: 10;
 }
-
 .bf-z-index-20 {
   z-index: 20;
 }
-
 .bf-z-index-30 {
   z-index: 30;
 }
-
 .bf-z-index-40 {
   z-index: 40;
 }
-
 .bf-z-index-50 {
   z-index: 50;
 }
-
 .bf-z-index-60 {
   z-index: 60;
 }
-
 .bf-z-index-70 {
   z-index: 70;
 }
-
 .bf-z-index-80 {
   z-index: 80;
 }
-
 .bf-z-index-90 {
   z-index: 90;
 }
-
 .bf-z-index-100 {
   z-index: 100;
 }
-
 .bf-z-index-200 {
   z-index: 200;
 }
-
 .bf-z-index-300 {
   z-index: 300;
 }
-
 /* Utilities - Spacing (similar to Bootstrap)
  * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
 
@@ -889,7 +852,6 @@ table th[class^='bf-col'] {
 .bf-p-b-4 {
   padding-bottom: var(--bf-spacing-xxl) !important;
 }
-
 /* Utilities - Buttons */
 
 .bf-btn {
@@ -929,7 +891,6 @@ table th[class^='bf-col'] {
 }
 
 /* Primary button: white on --bf-blue meets WCAG AA 4.5:1 contrast */
-
 .bf-btn.bf-btn--primary {
   color: var(--bf-white);
   background: var(--bf-blue);
@@ -964,7 +925,6 @@ table th[class^='bf-col'] {
   background-color: var(--bf-gray-light);
   outline: none !important;
 }
-
 /* Utilities - Form states */
 
 .bf-focused {
@@ -1065,7 +1025,6 @@ button.bf-disabled:focus,
   border-color: var(--bf-red) !important;
   box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }
-
 /* Utilities - Custom radio and checkbox */
 
 .custom-checkbox-wrapper [type='checkbox'] {
@@ -1150,7 +1109,6 @@ button.bf-disabled:focus,
   background-color: var(--bf-blue);
   border-color: var(--bf-black);
 }
-
 /* Utilities - Lists */
 
 .bf-list-unstyled,
@@ -1169,7 +1127,6 @@ dd.bf-list-unstyled {
 dt {
   font-weight: 700;
 }
-
 /* Utilities - Tables */
 
 .bf-table th,
@@ -1180,7 +1137,6 @@ dt {
 }
 
 /* responsive tables */
-
 .bf-table-responsive {
   overflow: auto hidden;
   -ms-overflow-style: scrollbar;
@@ -1192,18 +1148,15 @@ dt {
 }
 
 /* force webkit scrollbars appearance */
-
 .bf-table-responsive.scrollbar {
   -webkit-overflow-scrolling: auto;
 }
 
 /* zebra striping */
-
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
   background-color: var(--bf-gray-light-extra);
 }
-
 /* Utilities - Embeds (from Bootstrap)
  * https://getbootstrap.com/docs/4.4/utilities/embed/ */
 
@@ -1238,7 +1191,6 @@ dt {
   height: 100%;
   border: 0;
 }
-
 /* Utilities - Reduced motion
  * prefers-reduced-motion media feature query
  * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
@@ -1262,7 +1214,6 @@ dt {
     transition-duration: 0s !important;
   }
 }
-
 /* Font smoothing utilities (opt-in).
  *
  * Class names and property values match Tailwind's font-smoothing utilities:
@@ -1286,7 +1237,6 @@ dt {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
-
 /* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
  * Inlined to avoid the additional HTTP request:
  * https://www.phpied.com/delay-loading-your-print-css/ */
@@ -1365,7 +1315,6 @@ dt {
     border-collapse: collapse !important;
   }
 }
-
 /* Utilities - Filters */
 
 .bf-filter-invert {

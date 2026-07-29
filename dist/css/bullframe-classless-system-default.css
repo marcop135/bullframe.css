@@ -5,7 +5,6 @@
 /* Bullframe CSS v6.0.0 - Classless (No Utilities) */
 
 /* Variables */
-
 /* Bullframe CSS v6.0.0 - CSS Custom Properties (Variables) */
 
 :root {
@@ -80,7 +79,6 @@
 }
 
 /* Layout */
-
 /* Layout - Box sizing and HTML5 elements */
 
 *,
@@ -110,11 +108,9 @@ template {
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default. */
-
 [hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
-
 /* UA+ (User Agent Plus) Enhancements
  * 
  * Source: https://fokus.dev/tools/uaplus/
@@ -429,7 +425,6 @@ template {
 }
 
 /* Typography */
-
 /* Typography - HTML and Body */
 
 html {
@@ -498,7 +493,6 @@ body {
 
   background-color: var(--bf-white);
 }
-
 /* Typography - Headings */
 
 h1,
@@ -541,7 +535,6 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem;
 }
-
 /* Typography - Blockquotes */
 
 blockquote {
@@ -566,7 +559,6 @@ blockquote small::before {
 q {
   quotes: '\201C' '\201D' '\2018' '\2019';
 }
-
 /* Typography - Miscellaneous */
 
 p {
@@ -579,7 +571,6 @@ p {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  * 3. Add explicit cursor to indicate changed behavior.
  */
-
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
@@ -603,14 +594,12 @@ ins {
 /* Prevent the duplicate application of `bolder` by the next rule
  * in Safari 6
  */
-
 b,
 strong {
   font-weight: inherit;
 }
 
 /* Add the correct font weight in Chrome, Edge, and Safari */
-
 b,
 strong {
   font-weight: bolder;
@@ -643,7 +632,6 @@ small {
 }
 
 /* Reduce line-height for <small> elements inside <p> */
-
 p:has(small) {
   line-height: 1.25;
 }
@@ -659,7 +647,6 @@ hr {
   padding: 0;
   overflow: visible; /* Show the overflow in Edge */
 }
-
 /* Typography - Monospaced elements */
 
 pre {
@@ -707,7 +694,6 @@ pre code {
 }
 
 /* Forms */
-
 /* Forms - Normalization */
 
 /* normalization, enhancement and responsiveness */
@@ -728,7 +714,6 @@ pre code {
 }
 
 /* re-set width auto where needed */
-
 :where(
   html label,
   button,
@@ -745,7 +730,6 @@ pre code {
 /* inline-block display gives the best cross-browser combination
  * and allow several properties
  */
-
 :where(
   html input,
   label,
@@ -780,7 +764,6 @@ pre code {
 /* 1. Remove intrinsic min-width of fieldset
  * https://github.com/necolas/normalize.css/pull/269
  */
-
 :where(fieldset) {
   border: 0;
   padding: 0;
@@ -849,7 +832,6 @@ pre code {
 /* Taken from Bootstrap Reboot v5.2
  * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
  */
-
 :where([list]):not(
     [type='date'],
     [type='datetime-local'],
@@ -868,7 +850,6 @@ pre code {
 }
 
 /* remove -webkit-appearance listing every single elements that needed it */
-
 :where(
   button,
   html [type='button'],
@@ -941,7 +922,6 @@ pre code {
 }
 
 /* Remove the inner border and padding of focus outlines in Firefox */
-
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -983,11 +963,9 @@ pre code {
  * the default color of placeholders too!
  * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
  */
-
 :where(input::-moz-placeholder, textarea::-moz-placeholder) {
   color: var(--bf-gray-dark);
 }
-
 :where(input::placeholder, textarea::placeholder) {
   color: var(--bf-gray-dark);
 }
@@ -1007,11 +985,9 @@ Use the modern Firefox focus style for all focusable elements.
  * use '.bf-invalid' class in /utilities/form-states.css instead
  * documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
  */
-
 :-moz-ui-invalid {
   box-shadow: none;
 }
-
 /* Forms - Styling */
 
 :where(
@@ -1110,7 +1086,6 @@ Use the modern Firefox focus style for all focusable elements.
 }
 
 /* disabled groups */
-
 :where(
   fieldset[disabled] button,
   fieldset[disabled] input,
@@ -1155,7 +1130,6 @@ Use the modern Firefox focus style for all focusable elements.
   outline: none !important; /* disable focus ring */
   opacity: 0.5 !important;
 }
-
 /* Forms - Select styling */
 
 /* custom <select> arrow and appearance with a base64 embedded SVG icon
@@ -1175,7 +1149,6 @@ Use the modern Firefox focus style for all focusable elements.
  * so, is not safe to style every kind of <select>
  *
  * remove the arrow and the appearance, especially on Webkit */
-
 :where(select):not([size], select[multiple]) {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1191,7 +1164,6 @@ Use the modern Firefox focus style for all focusable elements.
 }
 
 /* Legacy Edge browser support */
-
 :where(select)::-ms-expand {
   display: none;
 }
@@ -1203,7 +1175,6 @@ Use the modern Firefox focus style for all focusable elements.
  * Read more
  * 1. http://bootstrap.rtlcss.com
  * 2. https://rtlstyling.com/ */
-
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
   /* move the arrow icon to the left */
@@ -1215,7 +1186,6 @@ Use the modern Firefox focus style for all focusable elements.
   /* add custom left padding, matching the custom LTR one */
   padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
-
 /* Forms - Range input styling */
 
 /* styling input range in modern browsers safely using the @supports CSS-at-rule
@@ -1319,7 +1289,6 @@ Use the modern Firefox focus style for all focusable elements.
 }
 
 /* disabled */
-
 :where([type='range']):disabled {
   pointer-events: none;
 }
@@ -1333,11 +1302,9 @@ Use the modern Firefox focus style for all focusable elements.
 }
 
 /* Miscellaneous */
-
 /* Miscellaneous - Anchors */
 
 /* Link color meets WCAG AA 4.5:1 contrast on white background */
-
 a {
   color: var(--bf-blue);
   text-decoration: none;
@@ -1370,23 +1337,19 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
-
 /* Miscellaneous - Focus */
 
 /* Remove focus outline if it's not keyboard-triggered */
-
 :where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
 /* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
-
 :where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
 /* Restore focus style for keyboard users only */
-
 :focus-visible {
   outline: 0.2rem solid var(--bf-orange);
   outline-offset: 0.3rem;
@@ -1403,7 +1366,6 @@ a:not([href], [tabindex]):focus {
  *
  * Ref: https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
  */
-
 button:focus,
 [type='button']:focus,
 [type='reset']:focus,
@@ -1428,7 +1390,6 @@ textarea:focus,
 .bf-btn:focus {
   outline: 0;
 }
-
 /* Miscellaneous - Lists */
 
 menu,
@@ -1475,12 +1436,10 @@ dd {
  * 2. Absolute position ensures no extra space
  * See: https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
  */
-
 nav li::before {
   content: '\200B';
   position: absolute;
 }
-
 /* Miscellaneous - Embedded content */
 
 audio,
@@ -1559,7 +1518,6 @@ meter {
 /* <progress> normalization
  *
  * https://css-tricks.com/html5-progress-element/ */
-
 progress[value] {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1577,7 +1535,6 @@ progress[value] {
 }
 
 /* progress value background color in webkit */
-
 progress[value]::-webkit-progress-bar {
   background: var(--bf-gray-light);
 }
@@ -1592,11 +1549,9 @@ progress[value]::-webkit-progress-value {
  *
  * e.g.
  * <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/..."> */
-
 iframe {
   border-style: none;
 }
-
 /* Miscellaneous - Interactive elements */
 
 address {
@@ -1636,7 +1591,6 @@ dialog {
 
 /* Overrides 'hidden' attribute
  * <dialog id="myDialog" hidden>...</dialog> */
-
 dialog[open] {
   display: block !important;
 }
@@ -1644,7 +1598,6 @@ dialog[open] {
 dialog::backdrop {
   background: rgb(0 0 0 / 40%);
 }
-
 /* Miscellaneous - Scrolling */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1652,7 +1605,6 @@ dialog::backdrop {
     scroll-behavior: smooth;
   }
 }
-
 /* Miscellaneous - Tables */
 
 table {
@@ -1700,7 +1652,6 @@ caption {
   line-height: 1.375;
   font-size: 90%;
 }
-
 /* Accessibility - Taken from sanitize.css
  * https://github.com/csstools/sanitize.css/blob/v13.0.0/sanitize.css */
 
@@ -1734,7 +1685,6 @@ caption {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
-
 /* Accessibility — user preference media queries.
  *
  * These rules ONLY apply when the user has opted in via OS or browser
@@ -1752,7 +1702,6 @@ caption {
  *  - thicken the focus ring so it's harder to miss
  *  - strengthen form-field borders
  */
-
 @media (prefers-contrast: more) {
   a {
     text-decoration: underline;
@@ -1792,7 +1741,6 @@ caption {
  *
  * UA+ already covers <mark>; this complements that for focus and links.
  */
-
 @media (forced-colors: active) {
   :focus-visible {
     outline-color: Highlight;
@@ -1812,7 +1760,6 @@ caption {
     border: 1px solid ButtonText;
   }
 }
-
 /* Dark mode overrides — System preference (prefers-color-scheme: dark).
  *
  * Both imports below use postcss-import's media-conditional @import support:
@@ -1823,7 +1770,6 @@ caption {
  * Source of truth for the dark rules: src/css/_utility-global-dark-shared.css
  * Source of truth for the scrollbars: src/css/utilities/global-dark-scrollbars.css
  */
-
 @media (prefers-color-scheme: dark) {
 
 /* Shared dark-mode rules — imported by:
@@ -2048,7 +1994,6 @@ progress[value]::-webkit-progress-value {
   background: var(--bf-blue);
 }
 }
-
 @media (prefers-color-scheme: dark) {
 
 /* Utilities - Dark mode scrollbars */

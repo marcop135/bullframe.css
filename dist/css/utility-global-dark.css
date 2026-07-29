@@ -234,7 +234,6 @@ progress[value]::-webkit-progress-value {
 }
 
 /* stylelint-disable-next-line unit-no-unknown -- legacy browser hack */
-
 @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select:not([size], select[multiple]),
   *[dir='rtl'] select:not([size], select[multiple]),

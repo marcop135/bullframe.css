@@ -77,12 +77,12 @@ Sass mixins no longer exist. Replace them with:
 If you were importing Sass files directly:
 
 ```scss
-/* v5 — no longer works */
+/* v5: no longer works */
 @import 'bullframe.css/src/scss/bullframe';
 ```
 
 ```css
-/* v6 — use CSS imports or just link the built file */
+/* v6: use CSS imports or just link the built file */
 @import 'bullframe.css/dist/css/bullframe.css';
 ```
 
@@ -120,7 +120,7 @@ v6 adds built-in support for:
 - `prefers-reduced-motion` via `.bf-reduced-motion`
 - ARIA attribute styling (`aria-busy`, `aria-disabled`, `aria-hidden`)
 
-These are included automatically — no migration needed.
+These are included automatically; no migration needed.
 
 ## Need Help?
 

@@ -51,7 +51,7 @@ Use `<svg>` inline. Bullframe doesn't ship icons; bring your own (Heroicons, Luc
 <a class="bf-btn bf-btn--primary" href="/signup">Sign up</a>
 ```
 
-The button styles apply to `<a>` elements via attribute selectors — no extra class needed beyond `.bf-btn`.
+The button styles apply to `<a>` elements via attribute selectors; no extra class needed beyond `.bf-btn`.
 
 ## Submit + reset pair
 

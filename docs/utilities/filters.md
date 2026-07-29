@@ -18,7 +18,7 @@ Fully inverts the colors of an element:
 
 ### Dim Images
 
-Reduces brightness and increases contrast slightly — useful for dark mode image adjustments:
+Reduces brightness and increases contrast slightly; useful for dark mode image adjustments:
 
 ```html
 <img class="bf-filter-dim-images" src="photo.jpg" alt="Dimmed image" />

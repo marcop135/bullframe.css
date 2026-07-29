@@ -19,18 +19,22 @@
 
 ### Documentation
 
-- New `website/docs/components/` section with copy-paste patterns: button groups, login/contact/search forms, native `<dialog>` modals, card layouts, header/breadcrumb/pagination/skip-link navigation.
-- New `website/docs/api-reference.md` — complete listing of all `--bf-*` custom properties and `.bf-*` classes.
+- Migrated the documentation site from Docusaurus v3 to VitePress.
+  - New `docs/` VitePress site at the repo root with the same content structure.
+  - Brand color set to orange `#f95c1f` via `docs/.vitepress/theme/custom.css`.
+  - Interactive demo page embedded at `/demo` via the live demo HTML served from `docs/public/demo/`.
+- New `docs/components/` section with copy-paste patterns: button groups, login/contact/search forms, native `<dialog>` modals, card layouts, header/breadcrumb/pagination/skip-link navigation.
+- New `docs/api-reference.md` — complete listing of all `--bf-*` custom properties and `.bf-*` classes.
 - Generator script `scripts/build-api-reference.mjs` keeps the API reference in sync with `src/css/`. Run via `npm run docs:api-reference`.
 - README clarifies v5 (stable) vs v6 (current) positioning so existing v5 npm consumers know what they're getting.
 
 ### Build & deployment
 
-- Added `netlify.toml` for one-click deployment of the Docusaurus site to `bullframecss.marcopontili.com`.
-- New `npm run docs:sync-demo` step copies the built demo into Docusaurus' static folder so it ships at `/demo/`.
+- Updated `netlify.toml` to deploy the VitePress build from `docs/.vitepress/dist/` to `bullframecss.marcopontili.com`.
+- New `npm run docs:sync-demo` step copies the built CSS and demo assets into the VitePress public folder so the demo ships at `/demo/`.
 - CI now also verifies that `dist/css/bullframe-modern.css` is produced.
 - README CI badge filter switched from `branch=v6` to `branch=master` so the badge tracks the stable line. (v6 has not been merged into master.)
-- Bumped `@docusaurus/core`, `@docusaurus/preset-classic`, and `@docusaurus/module-type-aliases` to `^3.10.0` to fix an `mdxCrossCompilerCache` build crash caused by version drift between the auto-resolved core and the older preset.
+- Removed Docusaurus v3 dependencies and the `website/` directory; added VitePress as a dev dependency.
 
 ### Landing page
 
@@ -44,8 +48,8 @@
 - Added missing `utilities/font-smoothing.css` import to `bullframe-utilities.css` so `.bf-antialiased` and `.bf-subpixel-antialiased` are present in the utilities-only build.
 - Added missing `miscellaneous/accessibility-preferences.css` import to `bullframe-classless.css` so `prefers-contrast` and `forced-colors` support is present in classless builds.
 - Fixed `npm run dev` so the demo and landing pages can serve compiled CSS without a prior production build.
-- Fixed README and website documentation inconsistencies: variant counts now include `bullframe-modern.css`, install snippets use `@latest`, and the modern variant is included in the demo build selector.
-- Fixed the Docusaurus social-card metadata to use the actual Bullframe social image.
+- Fixed README and VitePress documentation inconsistencies: variant counts now include `bullframe-modern.css`, install snippets use `@latest`, and the modern variant is included in the demo build selector.
+- Fixed the VitePress social-card metadata to use the actual Bullframe social image.
 - Updated the API-reference generator to handle multi-line declarations and to assign classes to their canonical source directories.
 - Updated CI to run on Node 20 and 22 (the project requires Node >=20).
 - Made Playwright visual-regression snapshots platform-specific so tests pass on both Linux CI and Windows development machines.

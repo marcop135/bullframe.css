@@ -41,8 +41,8 @@
  * Read more
  * 1. http://bootstrap.rtlcss.com
  * 2. https://rtlstyling.com/ */
-:where(*[dir="rtl"]) :where(select):not([size], select[multiple]),
-:where(select[dir="rtl"]):not([size], select[multiple]) {
+:where(*[dir='rtl']) :where(select):not([size], select[multiple]),
+:where(select[dir='rtl']):not([size], select[multiple]) {
   /* move the arrow icon to the left */
   background-position: left 0.85rem top 50%;
 

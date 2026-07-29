@@ -19,13 +19,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Core Concepts',
-      items: [
-        'variables',
-        'typography',
-        'layout',
-        'forms',
-        'buttons',
-      ],
+      items: ['variables', 'typography', 'layout', 'forms', 'buttons'],
     },
     {
       type: 'category',
@@ -57,11 +51,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Theming',
-      items: [
-        'theming',
-        'theming/dark-mode',
-        'theming/customization',
-      ],
+      items: ['theming', 'theming/dark-mode', 'theming/customization'],
     },
     'accessibility',
     'browser-support',

@@ -9,15 +9,7 @@
   line-height: inherit;
 }
 
-:where(
-    html input,
-    button,
-    [type="radio"],
-    [type="checkbox"],
-    select,
-    optgroup,
-    textarea
-  ) {
+:where(html input, button, [type='radio'], [type='checkbox'], select, optgroup, textarea) {
   margin: 0;
 }
 
@@ -27,15 +19,15 @@
 
 /* re-set width auto where needed */
 :where(
-    html label,
-    button,
-    [type="image"],
-    [type="submit"],
-    [type="reset"],
-    html [type="button"],
-    [type="radio"],
-    [type="checkbox"]
-  ) {
+  html label,
+  button,
+  [type='image'],
+  [type='submit'],
+  [type='reset'],
+  html [type='button'],
+  [type='radio'],
+  [type='checkbox']
+) {
   width: auto;
 }
 
@@ -43,20 +35,20 @@
  * and allow several properties
  */
 :where(
-    html input,
-    label,
-    select,
-    textarea,
-    button,
-    html [type="button"],
-    [type="reset"],
-    [type="submit"],
-    output
-  ) {
+  html input,
+  label,
+  select,
+  textarea,
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  output
+) {
   display: inline-block;
 }
 
-:where([type="file"]) {
+:where([type='file']) {
   display: block;
   background-color: transparent;
 }
@@ -125,7 +117,7 @@
   padding: 0;
 }
 
-:where([type="search"]) {
+:where([type='search']) {
   outline-offset: calc(-1 * var(--bf-spacing-sm));
 }
 
@@ -145,11 +137,11 @@
  * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
  */
 :where([list]):not(
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="time"]
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='time']
   )::-webkit-calendar-picker-indicator {
   display: none !important;
 }
@@ -163,27 +155,27 @@
 
 /* remove -webkit-appearance listing every single elements that needed it */
 :where(
-    button,
-    html [type="button"],
-    [type="reset"],
-    [type="submit"],
-    [type="email"],
-    [type="number"],
-    [type="text"],
-    [type="tel"],
-    [type="date"],
-    [type="datetime-local"],
-    [type="month"],
-    [type="week"],
-    [type="url"],
-    [type="image"],
-    [type="password"],
-    [type="search"],
-    [type="search"]::-webkit-search-decoration,
-    [type="search"]::-webkit-search-cancel-button,
-    input[list],
-    textarea
-  ) {
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  [type='email'],
+  [type='number'],
+  [type='text'],
+  [type='tel'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='url'],
+  [type='image'],
+  [type='password'],
+  [type='search'],
+  [type='search']::-webkit-search-decoration,
+  [type='search']::-webkit-search-cancel-button,
+  input[list],
+  textarea
+) {
   appearance: none;
 }
 
@@ -201,20 +193,20 @@
   border-radius: var(--bf-spacing-sm);
 }
 
-:where([type="radio"]) {
+:where([type='radio']) {
   border-radius: 50%;
 }
 
-:where([type="checkbox"]) {
+:where([type='checkbox']) {
   border-radius: var(--bf-spacing-md);
 }
 
-:where([type="radio"], [type="checkbox"]) {
+:where([type='radio'], [type='checkbox']) {
   padding: 0;
   background-color: var(--bf-white);
 }
 
-:where([type="range" i]) {
+:where([type='range' i]) {
   background-color: transparent;
 }
 
@@ -241,7 +233,7 @@
   border-style: none;
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']) {
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -254,19 +246,19 @@
   background-image: none; /* FF mobile */
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]):hover,
-:where(button, [type="button"], [type="reset"], [type="submit"]):active,
-:where(button, [type="button"], [type="reset"], [type="submit"]):focus {
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus {
   text-decoration: none;
   color: var(--bf-dark);
 }
 
 :where(
-    button:not(:disabled),
-    [type="button"]:not(:disabled),
-    [type="reset"]:not(:disabled),
-    [type="submit"]:not(:disabled)
-  ) {
+  button:not(:disabled),
+  [type='button']:not(:disabled),
+  [type='reset']:not(:disabled),
+  [type='submit']:not(:disabled)
+) {
   cursor: pointer;
 }
 

@@ -21,7 +21,7 @@
   margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
 }
 
-[class^="bf-col-"] {
+[class^='bf-col-'] {
   position: relative;
   min-height: 1px;
   padding-left: var(--bf-spacing-grid-gutter);
@@ -35,7 +35,7 @@
   margin-left: 0;
 }
 
-.bf-no-gutters > [class^="bf-col"] {
+.bf-no-gutters > [class^='bf-col'] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -108,7 +108,7 @@
     margin-right: 0;
   }
 
-  .bf-container--break-xs [class^="bf-col"] {
+  .bf-container--break-xs [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -123,7 +123,7 @@
     margin-right: 0;
   }
 
-  .bf-container--break-md [class^="bf-col"] {
+  .bf-container--break-md [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -138,7 +138,7 @@
     margin-right: 0;
   }
 
-  .bf-container--break-lg [class^="bf-col"] {
+  .bf-container--break-lg [class^='bf-col'] {
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -148,7 +148,7 @@
 }
 
 /* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
-table td[class^="bf-col"],
-table th[class^="bf-col"] {
+table td[class^='bf-col'],
+table th[class^='bf-col'] {
   position: static;
 }

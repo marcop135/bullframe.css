@@ -25,19 +25,19 @@ ins {
   background-color: var(--bf-dark-ins-bg);
 }
 
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="url"],
-[type="range"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='url'],
+[type='range'],
 input[list],
 select,
 select:not([size], select[multiple]),
@@ -47,30 +47,30 @@ textarea {
   color: var(--bf-gray-light);
 }
 
-[type="email"]:active,
-[type="email"]:focus,
-[type="number"]:active,
-[type="number"]:focus,
-[type="password"]:active,
-[type="password"]:focus,
-[type="tel"]:active,
-[type="tel"]:focus,
-[type="search"]:active,
-[type="search"]:focus,
-[type="text"]:active,
-[type="text"]:focus,
-[type="date"]:active,
-[type="date"]:focus,
-[type="datetime-local"]:active,
-[type="datetime-local"]:focus,
-[type="month"]:active,
-[type="month"]:focus,
-[type="week"]:active,
-[type="week"]:focus,
-[type="time"]:active,
-[type="time"]:focus,
-[type="url"]:active,
-[type="url"]:focus,
+[type='email']:active,
+[type='email']:focus,
+[type='number']:active,
+[type='number']:focus,
+[type='password']:active,
+[type='password']:focus,
+[type='tel']:active,
+[type='tel']:focus,
+[type='search']:active,
+[type='search']:focus,
+[type='text']:active,
+[type='text']:focus,
+[type='date']:active,
+[type='date']:focus,
+[type='datetime-local']:active,
+[type='datetime-local']:focus,
+[type='month']:active,
+[type='month']:focus,
+[type='week']:active,
+[type='week']:focus,
+[type='time']:active,
+[type='time']:focus,
+[type='url']:active,
+[type='url']:focus,
 input[list]:active,
 input[list]:focus,
 select:active,
@@ -91,25 +91,25 @@ select:not([size], select[multiple]) {
 /* stylelint-disable-next-line unit-no-unknown -- legacy browser hack */
 @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select:not([size], select[multiple]),
-  *[dir="rtl"] select:not([size], select[multiple]),
-  select[dir="rtl"]:not([size], select[multiple]) {
+  *[dir='rtl'] select:not([size], select[multiple]),
+  select[dir='rtl']:not([size], select[multiple]) {
     background-image: none;
   }
 }
 
-[type="range"] {
+[type='range'] {
   background-color: transparent;
 }
 
-[type="range"]:focus {
+[type='range']:focus {
   background-color: transparent;
 }
 
-[type="range"]::-webkit-slider-runnable-track {
+[type='range']::-webkit-slider-runnable-track {
   background-color: var(--bf-dark-extra);
 }
 
-[type="range"]::-moz-range-track {
+[type='range']::-moz-range-track {
   background-color: var(--bf-dark-extra);
 }
 
@@ -119,35 +119,35 @@ textarea::placeholder {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   background: var(--bf-gray-light);
 }
 
 button:hover,
 button:active,
 button:focus,
-[type="button"]:hover,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:hover,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:hover,
-[type="submit"]:active,
-[type="submit"]:focus {
+[type='button']:hover,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:hover,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:hover,
+[type='submit']:active,
+[type='submit']:focus {
   background: var(--bf-dark-button-hover);
 }
 
 button:active,
 button:focus,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:active,
-[type="submit"]:focus {
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:active,
+[type='submit']:focus {
   box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
 }
 

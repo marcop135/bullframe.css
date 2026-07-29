@@ -48,19 +48,19 @@ ins {
   background-color: var(--bf-dark-ins-bg);
 }
 
-[type="email"],
-[type="number"],
-[type="password"],
-[type="tel"],
-[type="search"],
-[type="text"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="url"],
-[type="range"],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='url'],
+[type='range'],
 input[list],
 select,
 select:not([size], select[multiple]),
@@ -70,30 +70,30 @@ textarea {
   color: var(--bf-gray-light);
 }
 
-[type="email"]:active,
-[type="email"]:focus,
-[type="number"]:active,
-[type="number"]:focus,
-[type="password"]:active,
-[type="password"]:focus,
-[type="tel"]:active,
-[type="tel"]:focus,
-[type="search"]:active,
-[type="search"]:focus,
-[type="text"]:active,
-[type="text"]:focus,
-[type="date"]:active,
-[type="date"]:focus,
-[type="datetime-local"]:active,
-[type="datetime-local"]:focus,
-[type="month"]:active,
-[type="month"]:focus,
-[type="week"]:active,
-[type="week"]:focus,
-[type="time"]:active,
-[type="time"]:focus,
-[type="url"]:active,
-[type="url"]:focus,
+[type='email']:active,
+[type='email']:focus,
+[type='number']:active,
+[type='number']:focus,
+[type='password']:active,
+[type='password']:focus,
+[type='tel']:active,
+[type='tel']:focus,
+[type='search']:active,
+[type='search']:focus,
+[type='text']:active,
+[type='text']:focus,
+[type='date']:active,
+[type='date']:focus,
+[type='datetime-local']:active,
+[type='datetime-local']:focus,
+[type='month']:active,
+[type='month']:focus,
+[type='week']:active,
+[type='week']:focus,
+[type='time']:active,
+[type='time']:focus,
+[type='url']:active,
+[type='url']:focus,
 input[list]:active,
 input[list]:focus,
 select:active,
@@ -122,19 +122,19 @@ select:not([size], select[multiple]) {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
 
-[type="range"] {
+[type='range'] {
   background-color: transparent;
 }
 
-[type="range"]:focus {
+[type='range']:focus {
   background-color: transparent;
 }
 
-[type="range"]::-webkit-slider-runnable-track {
+[type='range']::-webkit-slider-runnable-track {
   background-color: var(--bf-dark-extra);
 }
 
-[type="range"]::-moz-range-track {
+[type='range']::-moz-range-track {
   background-color: var(--bf-dark-extra);
 }
 
@@ -148,9 +148,9 @@ textarea::placeholder {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"],
+[type='button'],
+[type='reset'],
+[type='submit'],
 .bf-btn {
   background: var(--bf-gray-light);
 }
@@ -158,15 +158,15 @@ button,
 button:hover,
 button:active,
 button:focus,
-[type="button"]:hover,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:hover,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:hover,
-[type="submit"]:active,
-[type="submit"]:focus,
+[type='button']:hover,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:hover,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:hover,
+[type='submit']:active,
+[type='submit']:focus,
 .bf-btn:hover,
 .bf-btn:active,
 .bf-btn:focus {
@@ -175,12 +175,12 @@ button:focus,
 
 button:active,
 button:focus,
-[type="button"]:active,
-[type="button"]:focus,
-[type="reset"]:active,
-[type="reset"]:focus,
-[type="submit"]:active,
-[type="submit"]:focus,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:active,
+[type='submit']:focus,
 .bf-btn:active,
 .bf-btn:focus {
   box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
@@ -237,16 +237,16 @@ progress[value]::-webkit-progress-value {
 
 @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select:not([size], select[multiple]),
-  *[dir="rtl"] select:not([size], select[multiple]),
-  select[dir="rtl"]:not([size], select[multiple]) {
+  *[dir='rtl'] select:not([size], select[multiple]),
+  select[dir='rtl']:not([size], select[multiple]) {
     background-image: none;
   }
 }
 
 button.bf-disabled,
-[type="button"].bf-disabled,
-[type="reset"].bf-disabled,
-[type="submit"].bf-disabled,
+[type='button'].bf-disabled,
+[type='reset'].bf-disabled,
+[type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
   background: var(--bf-gray-light);
 }
@@ -254,5 +254,3 @@ button.bf-disabled,
 .bf-btn--primary.bf-disabled {
   background: var(--bf-blue);
 }
-
-/*# sourceMappingURL=utility-global-dark.css.map */

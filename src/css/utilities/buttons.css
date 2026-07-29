@@ -53,11 +53,11 @@
 }
 
 :where(
-    fieldset[disabled] .bf-btn,
-    .bf-btn[disabled],
-    .bf-btn:disabled,
-    .bf-btn[aria-disabled="true"]
-  ) {
+  fieldset[disabled] .bf-btn,
+  .bf-btn[disabled],
+  .bf-btn:disabled,
+  .bf-btn[aria-disabled='true']
+) {
   cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;

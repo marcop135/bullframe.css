@@ -14,7 +14,6 @@
 .gitignore
 .gitattributes
 .prettierignore
-.htmlhintrc
 .htmlvalidate.cjs
 stylelint.config.js
 prettier.config.js

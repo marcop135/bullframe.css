@@ -1,4 +1,16 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="40" height="40" rx="8" fill="#f95c1f"/>
-  <text x="20" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">BF</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Bullframe CSS logo">
+  <rect x="6" y="10" width="52" height="44" rx="6" stroke="#f95c1f" stroke-width="4"/>
+  <circle cx="16" cy="21" r="2.5" fill="#f95c1f"/>
+  <circle cx="24" cy="21" r="2.5" fill="#f95c1f"/>
+  <circle cx="32" cy="21" r="2.5" fill="#f95c1f"/>
+  <path
+    d="M22 38c0-6 5-10 10-10s10 4 10 10v4c0 2-1 4-3 4H25c-2 0-3-2-3-4v-4Z"
+    fill="#f95c1f"
+  />
+  <path
+    d="M18 30c2-6 6-8 8-8s4 2 4 4-2 4-4 4-6-2-8 0Zm28 0c-2-6-6-8-8-8s-4 2-4 4 2 4 4 4 6-2 8 0Z"
+    fill="#f95c1f"
+  />
+  <circle cx="26" cy="38" r="2" fill="#fff"/>
+  <circle cx="38" cy="38" r="2" fill="#fff"/>
 </svg>

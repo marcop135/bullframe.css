@@ -18,12 +18,12 @@ Optional enhancements in the default pipeline (UA+ layer) use `@supports` / `pre
 
 `bullframe-modern.css` is **opt-in**. Prefer it when you can assume recent evergreen browsers (roughly Chrome 111+, Safari 16.4+, Firefox 113+). It adds:
 
-| Feature | Role |
-|---------|------|
-| `color-scheme` | Native control / scrollbar theming |
-| `color-mix()` / `oklch()` tokens | Opt-in palette helpers |
-| `:has()` | `.bf-form-modern` invalid-submit hint |
-| Container queries | `.bf-cq-*` grid helpers |
+| Feature                          | Role                                  |
+| -------------------------------- | ------------------------------------- |
+| `color-scheme`                   | Native control / scrollbar theming    |
+| `color-mix()` / `oklch()` tokens | Opt-in palette helpers                |
+| `:has()`                         | `.bf-form-modern` invalid-submit hint |
+| Container queries                | `.bf-cq-*` grid helpers               |
 
 It does **not** ship `light-dark()` in CSS today; theme with `--bf-*` overrides or system-default builds instead.
 

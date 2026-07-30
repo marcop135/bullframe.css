@@ -75,9 +75,7 @@
 /* Utilities */
 /* Utilities - Layout */
 
-/* micro-clearfix
- * http://nicolasgallagher.com/micro-clearfix-hack/
- */
+/* clearfix */
 .bf-clearfix::before,
 .bf-clearfix::after {
   content: ' ';
@@ -108,16 +106,7 @@
   padding: 0 !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+/* Visually hidden, available to screen readers (h5bp / Snook pattern). */
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -130,13 +119,7 @@
   width: 1px !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/* .bf-sr-only that becomes visible when focused. */
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -224,7 +207,7 @@
   position: relative !important;
 }
 
-/* https://css-tricks.com/centering-css-complete-guide */
+/* Absolute centering helper. */
 .bf-align-center-unknown {
   position: relative !important;
 }
@@ -710,8 +693,7 @@ table th[class^='bf-col'] {
 .bf-z-index-300 {
   z-index: 300;
 }
-/* Utilities - Spacing (similar to Bootstrap)
- * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
+/* Utilities - Spacing scale. */
 
 .bf-m-0 {
   margin: 0 !important;
@@ -1153,8 +1135,7 @@ dt {
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
   background-color: var(--bf-gray-light-extra);
 }
-/* Utilities - Embeds (from Bootstrap)
- * https://getbootstrap.com/docs/4.4/utilities/embed/ */
+/* Utilities - Responsive embeds (Bootstrap-style aspect ratio box). */
 
 .bf-embed-responsive {
   position: relative;
@@ -1187,12 +1168,7 @@ dt {
   height: 100%;
   border: 0;
 }
-/* Utilities - Reduced motion
- * prefers-reduced-motion media feature query
- * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
- *
- * Taken from https://github.com/jensimmons/cssremedy
- * See: https://github.com/mozdevs/cssremedy/issues/11 */
+/* Utilities - Reduced motion (cssremedy-style opt-in). */
 
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
@@ -1222,9 +1198,7 @@ dt {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
-/* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
- * Inlined to avoid the additional HTTP request:
- * https://www.phpied.com/delay-loading-your-print-css/ */
+/* Print styles (adapted from h5bp main.css). */
 
 @media print {
   *,

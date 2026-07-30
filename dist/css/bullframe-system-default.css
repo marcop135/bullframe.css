@@ -107,107 +107,46 @@ template {
 [hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
-/* UA+ (User Agent Plus) Enhancements
- * 
- * Source: https://fokus.dev/tools/uaplus/
- * 
- * UA+ is a different type of reset stylesheet. Instead of mostly resetting and normalizing
- * properties, it focuses on improving existing user agent styles and adding new styles only
- * where browsers fall short.
- * 
- * These enhancements improve existing user agent styles and add new styles only where
- * browsers fall short, without being too opinionated. Most importantly, UA+ tries not to
- * reset too much and takes accessibility more into consideration than many other resets.
- * 
- * Integrated into Bullframe CSS with modifications to complement existing styles.
- */
+/* UA+ enhancements (adapted from https://fokus.dev/tools/uaplus/).
+ * Improves UA defaults without a heavy reset; complements Bullframe base styles. */
 
 @layer {
-  /* Improve focus styles
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Add spacing between content and its focus outline.
-   * Note: This enhances the existing focus styles in focus.css
-   */
+  /* Spacing between content and focus outline (enhances focus.css). */
   :focus-visible {
     outline-offset: 3px;
   }
 
-  /* Disable text size adjustment
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * To improve readability on non-mobile optimized websites, browsers like mobile Safari
-   * increase the default font size when you switch a website from portrait to landscape.
-   * We don't want that for our optimized sites.
-   * 
-   * Read more: https://kilianvalhof.com/articles/your-css-reset-needs-text-size-adjust-probably
-   * 
-   * Note: This overrides the existing text-size-adjust: 100% in html-body.css
-   */
+  /* Disable mobile landscape text inflation on optimized layouts. */
   html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
          text-size-adjust: none;
   }
 
-  /* Increase line height
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Long paragraphs are easier to read if the line height is higher.
-   * Note: This overrides the existing line-height: 1.15 in html-body.css
-   * The body element still uses --bf-body-line-height (1.5) which is appropriate.
-   */
+  /* Comfortable default root line-height (body still uses --bf-body-line-height). */
   html {
     line-height: 1.5;
   }
 
-  /* Add scrollbar gutter
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Prevent the page from "jumping" when switching from a long to a short page.
-   * 
-   * Read more: https://www.bram.us/2023/11/24/day-25-scrollbar-gutters-in-body-and-html/
-   */
+  /* Stable scrollbar gutter avoids layout jump on short pages. */
   html {
     scrollbar-gutter: stable;
   }
 
-  /* Remove UA styles for h1s nested in sectioning content
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Nesting h1s in section, articles, etc., shouldn't influence the styling of the heading
-   * since nesting doesn't influence semantics either. Chrome and Firefox have removed these
-   * styles from their User Agent Styles, but they're still present in Safari.
-   * 
-   * Read more: https://github.com/w3c/csswg-drafts/issues/5568
-   */
+  /* Nested h1 size/margin: match modern UA (Safari still nests sectioning styles). */
   h1 {
     font-size: 2em;
     margin-block: 0.67em;
   }
 
-  /* Improve abbreviations with titles
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * The abbr element with the title isn't useful regarding accessibility because support
-   * is inconsistent and it's only accessible to some users. Still, it's commonly used.
-   * This rule shows a dotted underline on abbreviations in all browsers (there's a bug
-   * in Safari) and changes the cursor.
-   * 
-   * Read more: https://adrianroselli.com/2020/11/using-abbr-element-with-title-attribute.html
-   */
+  /* abbr[title]: dotted underline + help cursor across engines. */
   abbr[title] {
     cursor: help;
     text-decoration-line: underline;
     text-decoration-style: dotted;
   }
 
-  /* Optimize mark element in Forced Colors Mode
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * The colors of the mark element don't change in Forced Colors Mode, which can be
-   * problematic. Use system colors instead.
-   */
+  /* mark: system Highlight colors under forced-colors. */
   @media (forced-colors: active) {
     mark {
       color: HighlightText;
@@ -215,12 +154,7 @@ template {
     }
   }
 
-  /* Avoid overflow caused by embedded content
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Ensure that embedded content (audio, video, images, etc.) doesn't overflow its container.
-   * Note: This complements existing max-width rules in embedded-content.css
-   */
+  /* Embedded media: stay within container block/inline size. */
   audio,
   iframe,
   img,
@@ -230,46 +164,24 @@ template {
     max-inline-size: 100%;
   }
 
-  /* Prevent fieldsets from causing overflow
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Reset the default `min-inline-size: min-content` to prevent children from stretching fieldsets.
-   * 
-   * Read more: https://github.com/twbs/bootstrap/issues/12359
-   * 
-   * Note: This complements existing fieldset rules in forms/normalization.css
-   */
+  /* fieldset: avoid min-content overflow from children. */
   fieldset {
     min-inline-size: 0;
   }
 
-  /* Turn labels into block elements
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Labels for inputs, with the exception of radio buttons and checkboxes, selects, and
-   * textarea should be block elements.
-   */
-  label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
-    display: block;
+  /* Labels for text-like controls are block; :has() gated for older engines. */
+  @supports selector(:has(*)) {
+    label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
+      display: block;
+    }
   }
 
-  /* Increase the block-size of textareas
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * The default height of textareas is small. We increase it a bit.
-   * Note: This complements existing textarea rules in forms/normalization.css
-   */
+  /* Taller default textarea when rows is omitted. */
   textarea:not([rows]) {
     min-block-size: 6em;
   }
 
-  /* Inherit font styling in form elements
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * buttons, inputs, selects, and textarea should have the same font family and size
-   * as the rest of the page.
-   * Note: This complements existing form normalization rules
-   */
+  /* Form controls inherit page font family/size. */
   button,
   input,
   select,
@@ -278,17 +190,12 @@ template {
     font-size: inherit;
   }
 
-  /* Normalize search input styles
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Remove the rounded corners of search inputs on macOS and iOS and normalize the
-   * background color.
-   */
+  /* Search: drop WebKit rounded search chrome. */
   [type='search'] {
     -webkit-appearance: textfield;
   }
 
-  /* iOS only */
+  /* iOS only: system border/background for search. */
   @supports (-webkit-touch-callout: none) {
     [type='search'] {
       border: 1px solid -apple-system-secondary-label;
@@ -296,14 +203,7 @@ template {
     }
   }
 
-  /* Maintain direction in some input types
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Some input types should remain left-aligned in right-to-left languages, but only if
-   * the value isn't empty because the placeholder should be right-aligned.
-   * 
-   * Read more: https://rtlstyling.com/
-   */
+  /* Keep tel/url/email/number LTR when a value is present (RTL placeholders stay). */
   input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
       :-moz-placeholder
     ) {
@@ -315,14 +215,7 @@ template {
     direction: ltr;
   }
 
-  /* Improve table styling
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * With the default styling, tables are hard to scan. These rules add padding and
-   * collapsed borders.
-   * Note: This complements existing table rules in tables.css
-   * We add explicit borders and padding that may not be present by default.
-   */
+  /* Tables: collapsed borders + cell padding for scanability. */
   table {
     border: 1px solid currentColor;
   }
@@ -333,85 +226,60 @@ template {
     padding: 0.25em 0.5em;
   }
 
-  /* Fading dialogs
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Add fade in and fade out transitions for dialogs and popovers and backdrops and
-   * reduce the opacity of the backdrop.
-   */
-  dialog::backdrop {
-    background: oklch(0% 0 0 / 0.3);
-  }
+  /* Soft dialog / popover enter transitions (skip when reduced-motion is on). */
+  @media (prefers-reduced-motion: no-preference) {
+    dialog::backdrop {
+      background: rgb(0 0 0 / 0.3);
+    }
 
-  dialog,
-  [popover],
-  dialog::backdrop {
-    opacity: 0;
-    transition:
-      opacity 300ms ease-out,
-      display 300ms allow-discrete,
-      overlay 300ms allow-discrete;
-  }
+    dialog,
+    [popover],
+    dialog::backdrop {
+      opacity: 0;
+      transition:
+        opacity 300ms ease-out,
+        display 300ms allow-discrete,
+        overlay 300ms allow-discrete;
+    }
 
-  dialog[open],
-  :popover-open,
-  dialog[open]::backdrop {
-    opacity: 1;
-  }
-
-  @starting-style {
     dialog[open],
     :popover-open,
     dialog[open]::backdrop {
-      opacity: 0;
+      opacity: 1;
+    }
+
+    @supports (overlay: auto) {
+      @starting-style {
+        dialog[open],
+        :popover-open,
+        dialog[open]::backdrop {
+          opacity: 0;
+        }
+      }
     }
   }
 
-  /* Increase specificity of [hidden]
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Make it harder to accidentally unhide elements with the `[hidden]` attribute while
-   * still maintaining the until-found functionality.
-   * Note: This complements existing [hidden] rules in layout.css
-   */
+  /* Keep [hidden] hard-hidden except until-found. */
   [hidden]:not([hidden='until-found']) {
     display: none !important;
   }
 
-  /* Turn images into block elements
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Note: This complements existing img rules in embedded-content.css
-   * which sets max-width but doesn't explicitly set display: block
-   */
+  /* Images as blocks (max-width still from embedded-content.css). */
   img {
     display: block;
   }
 
-  /* Change the cursor of the summary element
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * By default, only the `::marker` inside the summary uses the default cursor.
-   */
+  /* summary: pointer on the whole control, not only ::marker. */
   summary {
     cursor: default;
   }
 
-  /* Remove the default border from iframes
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Note: This complements existing iframe rules in embedded-content.css
-   */
+  /* iframes: no default border. */
   iframe {
     border: none;
   }
 
-  /* Change implicit position of popovers
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * By default popovers look like modals without a backdrop. This makes use of the
-   * implicit anchor in popovers to position it closely to the trigger.
-   */
+  /* Popovers: anchor near trigger when position-area is supported. */
   @supports (position-area: block-end span-inline-end) {
     [popover] {
       margin: 0;
@@ -428,9 +296,7 @@ html {
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
 
-  /* resize the base font-size and get an easy math for rem units
-   * https://snook.ca/archives/html_and_css/font-size-with-rem
-   */
+  /* 62.5% root so 1rem ≈ 10px for easy rem math. */
   font-size: 62.5%;
 
   color: var(--bf-dark);
@@ -454,12 +320,7 @@ body {
   font-weight: 400;
   text-align: left;
 
-  /* native font stack for optimum text rendering on every device and OS
-   * this stack mimics the system font UI
-   * a web apps looks like a native app (e.g. Android = Roboto font)
-   * Read more:
-   * https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-   */
+  /* System UI font stack (OS-native look). */
   font-family:
     /* Safari for OS X and iOS (San Francisco) */
     -apple-system,
@@ -757,9 +618,7 @@ pre code {
   margin: 0;
 }
 
-/* 1. Remove intrinsic min-width of fieldset
- * https://github.com/necolas/normalize.css/pull/269
- */
+/* Remove intrinsic min-width of fieldset. */
 :where(fieldset) {
   border: 0;
   padding: 0;
@@ -1128,23 +987,8 @@ Use the modern Firefox focus style for all focusable elements.
 }
 /* Forms - Select styling */
 
-/* custom <select> arrow and appearance with a base64 embedded SVG icon
- * https://css-tricks.com/probably-dont-base64-svg/#article-header-id-2
- *
- * this is inspired from https://github.com/kognise/water.css
- * and from Bootstrap custom select
- * https://getbootstrap.com/docs/4.4/components/input-group/#custom-select
- *
- * ! 12px = the icon width/height, and must be in pixels because
- * calc() is just for values
- * https://css-tricks.com/a-complete-guide-to-calc-in-css/#0-calc-is-for-values
- *
- * a select with a [multiple] attribute doesn't show an arrow by default
- * a select with a [size] attribute gets and arrow on iOS (Webkit) for instance
- * but on Chrome and FF desktop
- * so, is not safe to style every kind of <select>
- *
- * remove the arrow and the appearance, especially on Webkit */
+/* Custom arrow via appearance:none + SVG for single-value selects.
+ * Skip [size] / [multiple] (native UI differs by engine). Inspired by water.css. */
 :where(select):not([size], select[multiple]) {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1159,18 +1003,7 @@ Use the modern Firefox focus style for all focusable elements.
   padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 
-/* Legacy Edge browser support */
-:where(select)::-ms-expand {
-  display: none;
-}
-
-/* add support for RTL languages
- * 'appearance: none' removes the default styling but introduces a bug
- * that occurs when a right to the left language (e.g. Arabic) is set
- *
- * Read more
- * 1. http://bootstrap.rtlcss.com
- * 2. https://rtlstyling.com/ */
+/* RTL: mirror custom arrow when appearance:none removed the native control. */
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
   /* move the arrow icon to the left */
@@ -1184,117 +1017,116 @@ Use the modern Firefox focus style for all focusable elements.
 }
 /* Forms - Range input styling */
 
-/* styling input range in modern browsers safely using the @supports CSS-at-rule
- * https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
- *
- * standalone CodePen demo https://codepen.io/marcop135/pen/JjGrNMx */
+/* Custom thumb/track only when appearance can be reset. Native range otherwise.
+ * Demo: https://codepen.io/marcop135/pen/JjGrNMx */
 
-:where([type='range']) {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100%;
-  height: 1.4rem;
-}
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+  :where([type='range']) {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 100%;
+    height: 1.4rem;
+  }
 
-:where([type='range'])::-webkit-slider-thumb {
-  border: 0;
-  -webkit-appearance: none;
-          appearance: none;
+  :where([type='range'])::-webkit-slider-thumb {
+    border: 0;
+    -webkit-appearance: none;
+            appearance: none;
 
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: -0.25rem;
-  background-color: var(--bf-blue);
-  border-radius: 1.5rem;
-  -webkit-transition:
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  transition:
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-}
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.25rem;
+    background-color: var(--bf-blue);
+    border-radius: 1.5rem;
+    -webkit-transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
 
-:where([type='range'])::-webkit-slider-thumb:active {
-  background-color: var(--bf-blue);
-}
+  :where([type='range'])::-webkit-slider-thumb:active {
+    background-color: var(--bf-blue);
+  }
 
-:where([type='range'])::-moz-range-thumb {
-  border: 0;
-  -moz-appearance: none;
-       appearance: none;
+  :where([type='range'])::-moz-range-thumb {
+    border: 0;
+    -moz-appearance: none;
+         appearance: none;
 
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: var(--bf-blue);
-  border-radius: 1.5rem;
-  -moz-transition:
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  transition:
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-}
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--bf-blue);
+    border-radius: 1.5rem;
+    -moz-transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
 
-:where([type='range'])::-moz-range-thumb:active {
-  background-color: var(--bf-blue);
-}
+  :where([type='range'])::-moz-range-thumb:active {
+    background-color: var(--bf-blue);
+  }
 
-:where([type='range'])::-webkit-slider-runnable-track {
-  color: transparent;
-  border-color: transparent;
+  :where([type='range'])::-webkit-slider-runnable-track {
+    color: transparent;
+    border-color: transparent;
 
-  width: 100%;
-  height: 0.65rem;
-  cursor: pointer;
-  background-color: var(--bf-gray-light-extra);
-}
+    width: 100%;
+    height: 0.65rem;
+    cursor: pointer;
+    background-color: var(--bf-gray-light-extra);
+  }
 
-:where([type='range'])::-moz-range-track {
-  color: transparent;
-  border-color: transparent;
+  :where([type='range'])::-moz-range-track {
+    color: transparent;
+    border-color: transparent;
 
-  width: 100%;
-  height: 0.65rem;
-  cursor: pointer;
-  background-color: var(--bf-gray-light-extra);
-}
+    width: 100%;
+    height: 0.65rem;
+    cursor: pointer;
+    background-color: var(--bf-gray-light-extra);
+  }
 
-:where([type='range']):focus {
-  outline: none;
-}
+  :where([type='range']):focus {
+    outline: none;
+  }
 
-:where([type='range']):focus::-webkit-slider-thumb {
-  box-shadow:
-    0 0 0 0.1rem var(--bf-white),
-    0 0 0 0.2rem rgb(0 123 255 / 25%);
-}
+  :where([type='range']):focus::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
 
-:where([type='range']):focus::-moz-range-thumb {
-  box-shadow:
-    0 0 0 0.1rem var(--bf-white),
-    0 0 0 0.2rem rgb(0 123 255 / 25%);
-}
+  :where([type='range']):focus::-moz-range-thumb {
+    box-shadow:
+      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
 
-:where([type='range'])::-moz-focus-outer {
-  border: 0;
-}
+  :where([type='range'])::-moz-focus-outer {
+    border: 0;
+  }
 
-/* disabled */
-:where([type='range']):disabled {
-  pointer-events: none;
-}
+  :where([type='range']):disabled {
+    pointer-events: none;
+  }
 
-:where([type='range']):disabled::-webkit-slider-thumb {
-  background-color: var(--bf-gray-light);
-}
+  :where([type='range']):disabled::-webkit-slider-thumb {
+    background-color: var(--bf-gray-light);
+  }
 
-:where([type='range']):disabled::-moz-range-thumb {
-  background-color: var(--bf-gray-light);
+  :where([type='range']):disabled::-moz-range-thumb {
+    background-color: var(--bf-gray-light);
+  }
 }
 
 /* Miscellaneous */
@@ -1305,7 +1137,7 @@ a {
   color: var(--bf-blue);
   text-decoration: none;
 
-  /* Edge Legacy: Remove grey background on active links */
+  /* Transparent active background (legacy Edge). */
   background-color: transparent;
 }
 
@@ -1315,10 +1147,7 @@ a:focus {
   color: var(--bf-blue-light);
 }
 
-/* this is taken from Bootstrap's reboot
- * https://getbootstrap.com/docs/4.4/content/reboot/
- */
-
+/* Non-href anchors inherit text color (Bootstrap reboot pattern). */
 a:not([href], [tabindex]) {
   color: inherit;
   text-decoration: none;
@@ -1352,17 +1181,8 @@ a:not([href], [tabindex]):focus {
   outline-offset: 0.3rem;
 }
 
-/* Remove default focus outline on form elements
- * (styles applied elsewhere, e.g. forms/styling.css)
- *
- * Exceptions (don't override!):
- * - [type="color"]
- * - [type="range"]
- * - [type="file"]
- * These are often replaced by custom widgets via JS/markup
- *
- * Ref: https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
- */
+/* Clear UA focus outline on text-like controls (chrome in forms/styling.css).
+ * Leave color/range/file alone; they often use custom widgets. */
 button:focus,
 [type='button']:focus,
 [type='reset']:focus,
@@ -1427,12 +1247,7 @@ dd {
   margin-left: 0;
 }
 
-/* taken from https://github.com/jensimmons/cssremedy
- *
- * 1. Add zero-width-space to prevent VoiceOver disable
- * 2. Absolute position ensures no extra space
- * See: https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
- */
+/* VoiceOver: zero-width space so list-style:none lists stay announced. */
 nav li::before {
   content: '\200B';
   position: absolute;
@@ -1576,7 +1391,7 @@ dialog {
   padding: var(--bf-spacing-xl);
   height: -moz-fit-content;
   height: fit-content;
-  min-width: 25rem;
+  min-width: min(25rem, 100%);
   max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
 
@@ -1649,8 +1464,7 @@ caption {
   line-height: 1.375;
   font-size: 90%;
 }
-/* Accessibility - Taken from sanitize.css
- * https://github.com/csstools/sanitize.css/blob/v13.0.0/sanitize.css */
+/* Accessibility helpers (adapted from sanitize.css). */
 
 /**
  * Change the cursor on busy elements in all browsers (opinionated).
@@ -1738,9 +1552,7 @@ caption {
 /* Utilities */
 /* Utilities - Layout */
 
-/* micro-clearfix
- * http://nicolasgallagher.com/micro-clearfix-hack/
- */
+/* clearfix */
 .bf-clearfix::before,
 .bf-clearfix::after {
   content: ' ';
@@ -1771,16 +1583,7 @@ caption {
   padding: 0 !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+/* Visually hidden, available to screen readers (h5bp / Snook pattern). */
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -1793,13 +1596,7 @@ caption {
   width: 1px !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/* .bf-sr-only that becomes visible when focused. */
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -1887,7 +1684,7 @@ caption {
   position: relative !important;
 }
 
-/* https://css-tricks.com/centering-css-complete-guide */
+/* Absolute centering helper. */
 .bf-align-center-unknown {
   position: relative !important;
 }
@@ -2373,8 +2170,7 @@ table th[class^='bf-col'] {
 .bf-z-index-300 {
   z-index: 300;
 }
-/* Utilities - Spacing (similar to Bootstrap)
- * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
+/* Utilities - Spacing scale. */
 
 .bf-m-0 {
   margin: 0 !important;
@@ -2837,8 +2633,7 @@ dt {
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
   background-color: var(--bf-gray-light-extra);
 }
-/* Utilities - Embeds (from Bootstrap)
- * https://getbootstrap.com/docs/4.4/utilities/embed/ */
+/* Utilities - Responsive embeds (Bootstrap-style aspect ratio box). */
 
 .bf-embed-responsive {
   position: relative;
@@ -2871,12 +2666,7 @@ dt {
   height: 100%;
   border: 0;
 }
-/* Utilities - Reduced motion
- * prefers-reduced-motion media feature query
- * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
- *
- * Taken from https://github.com/jensimmons/cssremedy
- * See: https://github.com/mozdevs/cssremedy/issues/11 */
+/* Utilities - Reduced motion (cssremedy-style opt-in). */
 
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
@@ -2906,9 +2696,7 @@ dt {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
-/* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
- * Inlined to avoid the additional HTTP request:
- * https://www.phpied.com/delay-loading-your-print-css/ */
+/* Print styles (adapted from h5bp main.css). */
 
 @media print {
   *,
@@ -3206,18 +2994,11 @@ progress[value]::-webkit-progress-value {
 
 /* Utilities - Dark mode scrollbars */
 
-/* standard property
- * 'scrollbar-color'
- * https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
- */
 html {
   scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
 }
 
-/* these features are not standard, and blink and webkit only
- * '::-webkit-scrollbar'
- * https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
- */
+/* WebKit scrollbar chrome */
 
 ::-webkit-scrollbar {
   width: 1.5rem;

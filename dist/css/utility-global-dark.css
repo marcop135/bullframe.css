@@ -1,6 +1,6 @@
 /* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
-/* Always-dark overrides (no media query). Shared rules + IE select hack + disabled buttons.
+/* Always-dark overrides (no media query). Shared rules + disabled buttons.
  * Scrollbars come from utilities/global-dark-scrollbars.css via dark entry builds. */
 
 /* Shared dark-mode rules for always-dark and prefers-color-scheme builds.
@@ -215,15 +215,6 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
   background: var(--bf-blue);
-}
-
-/* stylelint-disable-next-line unit-no-unknown -- legacy browser hack */
-@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
-  select:not([size], select[multiple]),
-  *[dir='rtl'] select:not([size], select[multiple]),
-  select[dir='rtl']:not([size], select[multiple]) {
-    background-image: none;
-  }
 }
 
 button.bf-disabled,

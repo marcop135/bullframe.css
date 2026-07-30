@@ -1,10 +1,14 @@
 import { defineConfig } from 'vitepress';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
+import llmstxt from 'vitepress-plugin-llms';
 import { chapters, excludeDirs } from './chapters.mjs';
 
 const docsRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const siteUrl = 'https://bullframecss.marcopontili.com';
+const siteDescription =
+  'Semantic by default. Classless when you want it. System dark built in. Zero JavaScript. Eight builds. ~8 KB gzipped. Zero runtime dependencies.';
 
 // Derive a nav label from a doc's first H1 (falls back to a prettified filename).
 function titleFor(rel) {
@@ -27,10 +31,6 @@ const sidebar = chapters.map((c) => ({
   collapsed: c.text !== 'Overview',
   items: c.files.map((f) => ({ text: titleFor(f), link: linkFor(f) })),
 }));
-
-const siteUrl = 'https://bullframecss.marcopontili.com';
-const siteDescription =
-  'Semantic by default. Classless when you want it. System dark built in. Zero JavaScript. Eight builds.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -60,6 +60,24 @@ const jsonLd = {
   ],
 };
 
+/** Map clean URL path → source .md under docs/ for docs:dev Accept negotiation. */
+function markdownPathFor(pathname) {
+  const clean = (pathname.replace(/\/$/, '') || '/') ;
+  if (clean === '/') return resolve(docsRoot, 'index.md');
+  const rel = clean.replace(/^\//, '');
+  const direct = resolve(docsRoot, `${rel}.md`);
+  if (existsSync(direct)) return direct;
+  const asIndex = resolve(docsRoot, rel, 'index.md');
+  if (existsSync(asIndex)) return asIndex;
+  return null;
+}
+
+function acceptsMarkdown(accept) {
+  if (!accept || !/text\/markdown/i.test(accept)) return false;
+  if (/text\/markdown\s*;\s*q\s*=\s*0(?:\.0+)?(?:\s|,|$)/i.test(accept)) return false;
+  return true;
+}
+
 /** Serve static demo HTML for /demo/ in docs:dev (VitePress SPA would 404 otherwise). */
 function serveDemoHtml() {
   return {
@@ -71,6 +89,46 @@ function serveDemoHtml() {
           req.url = '/demo/index.html';
         }
         next();
+      });
+    },
+  };
+}
+
+/** Dev-only Accept: text/markdown → source .md (mirrors production .htaccess). */
+function negotiateMarkdownDev() {
+  return {
+    name: 'bf-negotiate-markdown',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const raw = req.url?.split('?')[0] ?? '';
+        if (raw.startsWith('/demo') || raw.startsWith('/@') || raw.startsWith('/node_modules')) {
+          return next();
+        }
+        if (/\.(?:css|js|mjs|map|png|jpe?g|webp|gif|svg|ico|woff2?|json|txt)$/i.test(raw)) {
+          return next();
+        }
+
+        const accept = req.headers.accept ?? '';
+        const explicitMd = raw.endsWith('.md');
+        if (!explicitMd && !acceptsMarkdown(accept)) return next();
+
+        const lookupPath = explicitMd ? raw.replace(/\.md$/i, '') || '/' : raw;
+        const mdFile = markdownPathFor(lookupPath === '/index' ? '/' : lookupPath);
+        if (!mdFile) return next();
+
+        const rel = mdFile.slice(docsRoot.length).replace(/\\/g, '/').replace(/^\//, '');
+        const htmlPath = rel === 'index.md' ? '/' : `/${rel.replace(/\.md$/i, '')}`;
+        const mdUrl = rel === 'index.md' ? '/index.md' : `/${rel}`;
+
+        res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+        res.setHeader('Vary', 'Accept');
+        res.setHeader(
+          'Link',
+          explicitMd
+            ? `<${htmlPath}>; rel="alternate"; type="text/html"`
+            : `<${mdUrl}>; rel="alternate"; type="text/markdown"`,
+        );
+        res.end(readFileSync(mdFile, 'utf8'));
       });
     },
   };
@@ -90,9 +148,37 @@ export default defineConfig({
     html: true,
   },
   srcExclude: [...excludeDirs.map((d) => `${d}/**`), '**/node_modules/**'],
+  transformHead({ pageData }) {
+    const rel = (pageData.relativePath || 'index.md').replace(/\\/g, '/');
+    let href;
+    if (rel === 'index.md') {
+      href = '/index.md';
+    } else if (rel.endsWith('/index.md')) {
+      // VitePress + llm plugin emit components/index.md as /components.md
+      href = `/${rel.slice(0, -'/index.md'.length)}.md`;
+    } else {
+      href = `/${rel}`;
+    }
+    return [
+      ['link', { rel: 'alternate', type: 'text/markdown', title: 'Markdown', href }],
+    ];
+  },
   // Dev nav felt 1–3s cold: avoid watching build output, warm common pages.
   vite: {
-    plugins: [serveDemoHtml()],
+    plugins: [
+      serveDemoHtml(),
+      negotiateMarkdownDev(),
+      llmstxt({
+        domain: siteUrl,
+        generateLLMsTxt: false,
+        generateLLMsFullTxt: true,
+        generateLLMFriendlyDocsForEachPage: true,
+        injectLLMHint: true,
+        stripHTML: true,
+        excludeIndexPage: false,
+        ignoreFiles: ['intro.md', 'install.md'],
+      }),
+    ],
     server: {
       watch: {
         ignored: [
@@ -156,7 +242,6 @@ export default defineConfig({
     ['meta', { name: 'twitter:title', content: 'Bullframe CSS' }],
     ['meta', { name: 'twitter:description', content: siteDescription }],
     ['meta', { name: 'twitter:image', content: `${siteUrl}/bullframe-css-social-image.png` }],
-    ['link', { rel: 'llms.txt', href: '/llms.txt' }],
     ['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)],
   ],
 });

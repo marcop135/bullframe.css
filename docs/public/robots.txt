@@ -5,6 +5,7 @@
 User-agent: *
 Allow: /
 Disallow: /demo/
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: GPTBot
 Allow: /

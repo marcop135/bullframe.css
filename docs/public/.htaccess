@@ -1,5 +1,8 @@
 # Apache config for VitePress docs on Netsons shared hosting.
 # Copied into docs/.vitepress/dist/ via docs/public/.
+#
+# Serves clean URLs, Accept: text/markdown negotiation (pragmatic),
+# and Link rel=alternate between HTML and sibling .md files.
 
 Options -Indexes
 DirectoryIndex index.html
@@ -16,7 +19,7 @@ DirectoryIndex index.html
   RewriteRule ^install/?$ /getting-started [R=301,L]
   RewriteRule ^install\.html$ /getting-started [R=301,L]
 
-  # Legacy demo paths
+  # Legacy demo paths (old production root pointed here)
   RewriteRule ^dist/docs/demo/?$ /demo/ [R=301,L]
   RewriteRule ^dist/docs/demo/(.*)$ /demo/$1 [R=301,L]
 
@@ -25,9 +28,72 @@ DirectoryIndex index.html
 
   # Mark demo responses for X-Robots-Tag (see mod_headers below)
   RewriteRule ^demo/ - [E=BF_DEMO:1]
+
+  # Static assets: do not negotiate
+  RewriteRule \.(?:css|js|mjs|map|png|jpe?g|webp|gif|svg|avif|ico|woff2?|ttf|otf|eot|xml|json|pdf|mp4|webm|zip)$ - [L,NC]
+
+  # Explicit .md URL: advertise HTML alternate, then serve as file
+  RewriteRule ^index\.md$ - [E=BF_MD_ROOT:1]
+  RewriteRule ^(.+)\.md$ - [E=BF_MD_PAGE:$1]
+
+  # Accept: text/markdown → sibling .md (pragmatic; not full q-value RFC)
+  # Guard against text/markdown;q=0
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteCond %{HTTP:Accept} !text/markdown\s*;\s*q\s*=\s*0(?:\.0+)?(?:\s|,|$) [NC]
+  RewriteCond %{REQUEST_URI} !\.(?:md|txt|html)$ [NC]
+  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{DOCUMENT_ROOT}/$1.md -f
+  RewriteRule ^(.+?)/?$ /$1.md [L,E=BF_MD_PAGE:$1]
+
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteCond %{HTTP:Accept} !text/markdown\s*;\s*q\s*=\s*0(?:\.0+)?(?:\s|,|$) [NC]
+  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{DOCUMENT_ROOT}/index.md -f
+  RewriteRule ^$ /index.md [L,E=BF_MD_ROOT:1]
+
+  # Clean URLs → .html (page.html, then page/index.html)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L,E=BF_HTML_PAGE:$1]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ /$1/index.html [L,E=BF_HTML_PAGE:$1]
 </IfModule>
 
-# Interactive demo: keep out of search indexes and AI training crawls.
-<IfModule mod_headers.c>
-  Header set X-Robots-Tag "noindex, nofollow, noarchive, noai, noimageai" env=BF_DEMO
+<IfModule mod_mime.c>
+  AddType text/markdown;charset=utf-8 .md
 </IfModule>
+
+<IfModule mod_headers.c>
+  # Interactive demo: keep out of search indexes and AI training crawls.
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, noai, noimageai" env=BF_DEMO
+
+  Header merge Vary Accept
+
+  # HTML → Markdown alternate (/components → /components.md)
+  Header set Link "</%{BF_HTML_PAGE}e.md>; rel=\"alternate\"; type=\"text/markdown\"" env=BF_HTML_PAGE
+
+  # Markdown → HTML alternate
+  Header set Link "</>; rel=\"alternate\"; type=\"text/html\"" env=BF_MD_ROOT
+  Header set Link "</%{BF_MD_PAGE}e>; rel=\"alternate\"; type=\"text/html\"" env=BF_MD_PAGE
+</IfModule>
+
+# Ensure .md is served as Markdown even if AddType is ignored
+<FilesMatch "\.md$">
+  <IfModule mod_headers.c>
+    Header set Content-Type "text/markdown; charset=utf-8"
+    Header merge Vary Accept
+  </IfModule>
+</FilesMatch>
+
+# llms.txt / llms-full.txt are Markdown maps; keep them crawlable as text
+<FilesMatch "^llms(-full)?\.txt$">
+  <IfModule mod_headers.c>
+    Header set Content-Type "text/plain; charset=utf-8"
+  </IfModule>
+</FilesMatch>

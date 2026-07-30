@@ -1,6 +1,6 @@
 # Dark Mode
 
-Bullframe CSS includes built-in dark mode support with multiple implementation options.
+Bullframe CSS includes built-in dark mode with no JavaScript. System-default builds follow [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme); always-dark builds lock the theme.
 
 ## System Default Dark Mode
 

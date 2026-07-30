@@ -1,6 +1,6 @@
 # Getting started
 
-Eight builds, shared `--bf-*` tokens, zero JavaScript. Pick an authoring mode, then add one stylesheet.
+Bullframe CSS is a lightweight CSS framework: eight builds, shared `--bf-*` tokens, zero JavaScript, zero runtime dependencies, and about 8 KB gzipped for the default build. Pick an authoring mode, then add one stylesheet.
 
 ## Choose a mode
 

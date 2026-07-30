@@ -96,7 +96,7 @@ const stats = [
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Modes</p>
-        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic. Classless. Dark that follows the OS.</h2>
+        <h2 id="bfh-pillars-heading" class="bfh-heading">One framework. Three authoring modes. Zero JavaScript.</h2>
       </div>
       <ul class="bfh-pillars">
         <li v-for="p in pillars" :key="p.label" class="bfh-pillar">

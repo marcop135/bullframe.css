@@ -48,7 +48,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/README' },
       { text: 'Getting Started', link: '/getting-started' },
-      { text: 'Demo', link: '/demo' },
+      { text: 'Demo', link: '/demo/' },
     ],
     sidebar,
     socialLinks: [{ icon: 'github', link: 'https://github.com/marcop135/bullframe.css' }],

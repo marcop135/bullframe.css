@@ -25,7 +25,7 @@
 
 Bullframe is a native-CSS framework that ships in three authoring modes — classless, class-based, and utility-first — built from a single set of `--bf-*` design tokens. Start a blog with the classless build, ship a product with the class-based build, drop the utilities into an existing app. Switch the import; your theme carries over. ~8 KB gzipped, no JavaScript, no build step required, WCAG AA on the default tokens.
 
-> **v6 is the current line. v5 is stable** and supported for security fixes — see the [v5.1.0 release](https://github.com/marcop135/bullframe.css/releases/tag/v5.1.0) and the [migration guide](https://bullframecss.marcopontili.com/docs/migration).
+> **v6 is the current line. v5 is stable** and supported for security fixes — see the [v5.1.0 release](https://github.com/marcop135/bullframe.css/releases/tag/v5.1.0) and the [migration guide](https://bullframecss.marcopontili.com/migration).
 
 ### What this is
 

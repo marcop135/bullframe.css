@@ -48,8 +48,4 @@ export const chapters = [
     text: 'Reference',
     files: ['accessibility.md', 'browser-support.md', 'api-reference.md'],
   },
-  {
-    text: 'Demo',
-    files: ['demo.md'],
-  },
 ];

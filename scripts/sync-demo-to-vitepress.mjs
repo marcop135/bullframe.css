@@ -9,6 +9,10 @@ for (const file of cssFiles) {
   await cp(file, `docs/public/css/${basename(file)}`);
 }
 
+// Copy the interactive demo HTML so it ships at /demo/ on the docs site.
+await mkdir('docs/public/demo', { recursive: true });
+await cp('src/docs/demo/index.html', 'docs/public/demo/index.html');
+
 // Copy demo assets (icons, images, extra styles).
 await cp('src/docs/demo/css', 'docs/public/docs/demo/css', { recursive: true, force: true });
 await cp('src/docs/demo/icons', 'docs/public/docs/demo/icons', { recursive: true, force: true });

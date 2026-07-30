@@ -4,10 +4,10 @@
 
 ### New build variant
 
-- Added `bullframe-modern.css` — extends `bullframe-system-default.css` with modern CSS:
+- Added `bullframe-modern.css` - extends `bullframe-system-default.css` with modern CSS:
   - `color-scheme: light dark` for native browser UI hints
   - `color-mix(in oklab, ...)` to compute hover tints from base colors (visually equivalent to v6.0.0)
-  - `oklch()` palette tokens (`--bf-blue-oklch`, `--bf-red-oklch`, `--bf-yellow-oklch`, `--bf-orange-oklch`) — opt-in, additive
+  - `oklch()` palette tokens (`--bf-blue-oklch`, `--bf-red-oklch`, `--bf-yellow-oklch`, `--bf-orange-oklch`) - opt-in, additive
   - `:has()`-based form validation hint via `.bf-form-modern` wrapper class
   - Container-query support via `data-bf-container-query` attribute and `.bf-cq-*` classes
 - New package export: `import 'bullframe.css/modern'`
@@ -15,45 +15,40 @@
 
 ### New utilities
 
-- `.bf-antialiased` and `.bf-subpixel-antialiased` — opt-in font-smoothing utilities. Class names and property values mirror [Tailwind's font-smoothing utilities](https://tailwindcss.com/docs/font-smoothing) so devs migrating from Tailwind get the same API. Per Apple's guidance, Bullframe does NOT apply antialiasing globally — `subpixel-antialiased` rendering is better for body text on macOS at small sizes.
+- `.bf-antialiased` and `.bf-subpixel-antialiased` - opt-in font-smoothing utilities. Class names and property values mirror [Tailwind's font-smoothing utilities](https://tailwindcss.com/docs/font-smoothing). Bullframe does not apply antialiasing globally; subpixel rendering is better for body text on macOS at small sizes.
 
 ### Documentation
 
-- Migrated the documentation site from Docusaurus v3 to VitePress.
-  - New `docs/` VitePress site at the repo root with the same content structure.
-  - Brand color set to orange `#f95c1f` via `docs/.vitepress/theme/custom.css`.
-  - Interactive demo page embedded at `/demo` via the live demo HTML served from `docs/public/demo/`.
-- New `docs/components/` section with copy-paste patterns: button groups, login/contact/search forms, native `<dialog>` modals, card layouts, header/breadcrumb/pagination/skip-link navigation.
-- New `docs/api-reference.md` — complete listing of all `--bf-*` custom properties and `.bf-*` classes.
-- Generator script `scripts/build-api-reference.mjs` keeps the API reference in sync with `src/css/`. Run via `npm run docs:api-reference`.
-- README clarifies v5 (stable) vs v6 (current) positioning so existing v5 npm consumers know what they're getting.
+- Migrated the documentation site from Docusaurus v3 to VitePress (`docs/`, brand orange `#f95c1f`).
+- Interactive specimen at `/demo/` (synced via `npm run docs:sync-demo`); redesigned demo shell with build switching, quieter panels, and Nu Html Checker cleanups.
+- New `docs/components/` patterns, `docs/api-reference.md`, and `scripts/build-api-reference.mjs`.
+- VitePress home uses a geometric bull-in-browser hero; root README uses matching wide light/dark banners.
+- Shortened root README to install, eight-build table, docs links, and license.
+- Docs QA: dead-link checks enforced, nav points to Introduction, Getting Started lists all eight builds, intro/utilities copy tightened.
+- Crawl policy: `robots.txt` and demo `noindex` / Netlify `X-Robots-Tag` hide `/demo/`; docs stay open with sitemap, Open Graph, JSON-LD, and `llms.txt`.
 
 ### Build & deployment
 
-- Updated `netlify.toml` to deploy the VitePress build from `docs/.vitepress/dist/` to `bullframecss.marcopontili.com`.
-- New `npm run docs:sync-demo` step copies the built CSS and demo assets into the VitePress public folder so the demo ships at `/demo/`.
-- CI now also verifies that `dist/css/bullframe-modern.css` is produced.
-- README CI badge filter switched from `branch=v6` to `branch=master` so the badge tracks the stable line. (v6 has not been merged into master.)
-- Removed Docusaurus v3 dependencies and the `website/` directory; added VitePress as a dev dependency.
-- Tightened npm publish surface: `files` stays CSS-only (`dist/css`, `src/css`); `.npmignore` denies docs, demo, scripts, tests, and non-CSS `dist/` assets; `exports` limited to `dist/css/*` (dropped broad `dist/*`).
+- `netlify.toml` deploys VitePress from `docs/.vitepress/dist/` to `bullframecss.marcopontili.com`.
+- `npm run docs:sync-demo` copies CSS and demo assets into the VitePress public folder.
+- CI verifies `dist/css/bullframe-modern.css`; runs on Node 20 and 22.
+- README CI badge tracks `main` (stable line). v6 remains the docs deploy branch until merge.
+- Removed Docusaurus / `website/`; VitePress is the docs toolchain.
 
-### Landing page
+### Source
 
-- Redesigned `bullframecss.marcopontili.com` homepage with a v6-prominent hero, the actual install `<link>` tag rendered above the CTAs, a "by the numbers" stats row (~8 KB / 0 JS / AA / 8 builds), an "eight builds, one CDN" picker, a "what v6 brings" section showing four side-by-side modern-CSS code samples, and a three-way install section (CDN, npm, download). No marketing fluff; every claim has a number or a code block.
-- Install snippets pin to `@latest` (not `@6`) until v6 is published to npm — until then `@latest` resolves to v5.1.0 and rolls forward automatically when v6.1.0 publishes.
-- Same change applied to the three `@6` references in `README.md`.
+- Tightened CSS module comments on entry builds, tokens, grid, dark-mode layers, focus, and preference queries. Comment-only; no public API or visual changes.
 
 ### Fixed
 
-- Removed redundant `bullframe-dark-prefers.css` and `bullframe-classless-dark-prefers.css` variants that were identical to the system-default builds.
-- Added missing `utilities/font-smoothing.css` import to `bullframe-utilities.css` so `.bf-antialiased` and `.bf-subpixel-antialiased` are present in the utilities-only build.
-- Added missing `miscellaneous/accessibility-preferences.css` import to `bullframe-classless.css` so `prefers-contrast` and `forced-colors` support is present in classless builds.
-- Fixed `npm run dev` so the demo and landing pages can serve compiled CSS without a prior production build.
-- Fixed README and VitePress documentation inconsistencies: variant counts now include `bullframe-modern.css`, install snippets use `@latest`, and the modern variant is included in the demo build selector.
-- Fixed the VitePress social-card metadata to use the actual Bullframe social image.
-- Updated the API-reference generator to handle multi-line declarations and to assign classes to their canonical source directories.
-- Updated CI to run on Node 20 and 22 (the project requires Node >=20).
-- Made Playwright visual-regression snapshots platform-specific so tests pass on both Linux CI and Windows development machines.
+- Removed redundant `bullframe-dark-prefers.css` and `bullframe-classless-dark-prefers.css` (identical to system-default builds).
+- Added missing `utilities/font-smoothing.css` import to `bullframe-utilities.css`.
+- Added missing `miscellaneous/accessibility-preferences.css` import to `bullframe-classless.css`.
+- Fixed `npm run dev` so demo pages can serve compiled CSS without a prior production build.
+- Fixed variant counts, `@latest` install snippets, and demo build selector for `bullframe-modern.css`.
+- Fixed VitePress social-card metadata; improved API-reference generator multi-line handling.
+- Fixed demo dark theme switching (body `background-image` vs shorthand; `data-demo-theme` for panels).
+- Made Playwright visual-regression snapshots platform-specific (Linux CI and Windows).
 
 ## 6.0.0 (April 17, 2026) - BREAKING CHANGES
 

@@ -5,12 +5,9 @@
     <img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="npm version">
   </a>
   <a href="https://github.com/marcop135/bullframe.css/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=master&style=flat-square&label=CI" alt="CI status">
+    <img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=main&style=flat-square&label=CI" alt="CI status">
   </a>
-  <a href="https://github.com/marcop135/bullframe.css/commits">
-    <img src="https://img.shields.io/github/last-commit/marcop135/bullframe.css.svg?style=flat-square" alt="Last commit">
-  </a>
-  <a href="https://github.com/marcop135/bullframe.css/blob/master/LICENSE">
+  <a href="https://github.com/marcop135/bullframe.css/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT License">
   </a>
 </p>
@@ -21,129 +18,39 @@
   <img alt="Bullframe CSS" src="https://raw.githubusercontent.com/marcop135/bullframe.css/v6/src/docs/github-readme/bf-readme-hero-light.png">
 </picture>
 
-**One design system. Three ways to write it. Zero JavaScript.**
+**Lightweight CSS for fast, accessible UIs.** Semantic, themeable, classless-friendly. Three authoring modes, eight build files, zero JavaScript. ~8 KB gzipped.
 
-Bullframe is a native-CSS framework that ships in three authoring modes — classless, class-based, and utility-first — built from a single set of `--bf-*` design tokens. Start a blog with the classless build, ship a product with the class-based build, drop the utilities into an existing app. Switch the import; your theme carries over. ~8 KB gzipped, no JavaScript, no build step required, WCAG AA on the default tokens.
+> **v6 is current. v5 is stable** (security fixes). See the [migration guide](https://bullframecss.marcopontili.com/migration).
 
-> **v6 is the current line. v5 is stable** and supported for security fixes — see the [v5.1.0 release](https://github.com/marcop135/bullframe.css/releases/tag/v5.1.0) and the [migration guide](https://bullframecss.marcopontili.com/migration).
-
-### What this is
-
-- A stylesheet you link once. Themed via CSS custom properties — no rebuild.
-- Three authoring modes sharing one token set: classless (semantic HTML), class-based (`.bf-container`, `.bf-btn`), utility-first (`.bf-m-t-3`, `.bf-t-center`).
-- Built around modern HTML — `<dialog>`, `<details>`, container queries, `:focus-visible` — with UA+ baselines.
-- WCAG AA on default tokens; honors `prefers-reduced-motion`, `prefers-contrast`, `forced-colors`.
-
-### What this isn't
-
-- Not a component framework. No JS, no modals-by-data-attribute, no carousels.
-- Not Tailwind. The utilities exist as a build option, not the primary API.
-- Not a design system you extend with a config file. You override CSS variables.
-- Not for IE11 or anything older than the latest 2 stable browser versions.
-
----
-
-## Quick Start
-
-### CDN (recommended)
+## Install
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
 ```
-
-### npm
 
 ```bash
 npm install bullframe.css
 ```
 
 ```css
-/* In your CSS */
 @import 'bullframe.css';
 ```
 
-### Download
+## Builds
 
-[Download the latest release](https://github.com/marcop135/bullframe.css/releases)
+| Mode | File | Notes |
+|------|------|-------|
+| Class-based | `bullframe.css` / `-dark` / `-system-default` | `.bf-container`, `.bf-btn`, `.bf-row`, … |
+| Classless | `bullframe-classless.css` (+ dark / system) | Semantic HTML, no utility classes |
+| Utilities | `bullframe-utilities.css` | Utilities only |
+| Modern | `bullframe-modern.css` | System-default + oklch, color-mix, `:has`, container queries |
 
----
+All variants share `--bf-*` tokens. Override variables to theme; no rebuild required.
 
-## What you get
+## Docs
 
-- **Three modes, one token set.** Classless (`bullframe-classless.css`), class-based (`bullframe.css`), utility-first (`bullframe-utilities.css`). Switch the import — your theme carries over.
-- **Theme with one line.** `:root { --bf-blue: rgb(0 100 255); }` — no rebuild, no config file.
-- **~8 KB gzipped, 0 JavaScript, 0 dependencies.** The default build is the only file in your `<head>`.
-- **WCAG AA + [UA+](https://fokus.dev/tools/uaplus/) baselines.** Accessible defaults out of the box, plus opt-in `prefers-contrast`, `forced-colors`, and `prefers-reduced-motion` rules.
-
----
-
-## Three modes, eight files
-
-| Mode | Variant file | When |
-|------|---|------|
-| **Classless** | `bullframe-classless.css` | Drop on plain HTML — blogs, docs, AI-generated markup. No classes. |
-| | `bullframe-classless-dark.css` | Same, always dark. |
-| | `bullframe-classless-system-default.css` | Same, follows `prefers-color-scheme`. |
-| **Class-based** | `bullframe.css` | Apps and product sites — use `.bf-container`, `.bf-btn`, `.bf-row`. |
-| | `bullframe-dark.css` | Same, always dark. |
-| | `bullframe-system-default.css` | Same, follows `prefers-color-scheme`. |
-| **Utility-first** | `bullframe-utilities.css` | You already have a reset; you just want `.bf-m-t-3` / `.bf-t-center`. |
-| **Modern** | `bullframe-modern.css` | Latest 2 browsers; adds `color-scheme`, `color-mix()`, `oklch()`, `:has()`, container queries. |
-
-All variants ship as `.css` and `.min.css` with source maps. Same `--bf-*` tokens underneath every row — change the import, your theme carries over.
-
----
-
-## Documentation
-
-[**bullframecss.marcopontili.com**](https://bullframecss.marcopontili.com) — guides, full API reference, components, migration guide, theming.
-
----
-
-## Customization
-
-Override any CSS variable — no rebuild required:
-
-```css
-:root {
-  --bf-blue: rgb(0 123 255);
-  --bf-font-family-sans-serif: 'Inter', system-ui, sans-serif;
-  --bf-body-font-size: 1.8rem;
-}
-```
-
-Or rebuild from source:
-
-```bash
-git clone https://github.com/marcop135/bullframe.css.git
-cd bullframe.css
-npm install
-# Edit src/css/variables.css
-npm run build
-```
-
----
-
-## Browser Support
-
-Latest 2 stable versions: Chrome, Firefox, Safari, Edge, Opera (desktop & mobile).
-
-See [.browserslistrc](.browserslistrc) for details.
-
----
-
-## Contributing
-
-Please read the [contribution guidelines](.github/CONTRIBUTING.md).
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for all releases.
-
-## Author
-
-[Marco Pontili](https://marcopontili.com)
+[bullframecss.marcopontili.com](https://bullframecss.marcopontili.com) · [API reference](https://bullframecss.marcopontili.com/api-reference) · [Demo](https://bullframecss.marcopontili.com/demo/) · [Changelog](CHANGELOG.md)
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) · [Marco Pontili](https://marcopontili.com)

@@ -1,16 +1,5 @@
-/* Font smoothing utilities (opt-in).
- *
- * Class names and property values match Tailwind's font-smoothing utilities:
- * https://tailwindcss.com/docs/font-smoothing
- * — devs migrating from a Tailwind project get the same API.
- *
- * Bullframe does NOT apply font-smoothing globally because Apple's own guidance
- * recommends subpixel-antialiased rendering for body text on macOS — using
- * antialiased everywhere makes text thinner and harder to read at small sizes.
- *
- * Use these utilities when you specifically need control (e.g. light text on
- * dark backgrounds, where subpixel rendering can produce color fringing).
- */
+/* Opt-in font-smoothing (.bf-antialiased / .bf-subpixel-antialiased).
+ * Names match Tailwind. Not applied globally: Apple recommends subpixel for body text on macOS. */
 
 .bf-antialiased {
   -webkit-font-smoothing: antialiased;

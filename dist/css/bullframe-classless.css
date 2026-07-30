@@ -1,12 +1,13 @@
 /* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
-/* Bullframe CSS v6.0.0 - Classless (No Utilities) */
+/* Classless build: semantic element styles only (no .bf-* utilities). */
 
 /* Variables */
-/* Bullframe CSS v6.0.0 - CSS Custom Properties (Variables) */
+/* Design tokens (--bf-*). Shared by every build variant.
+ * Override on :root (or a scope) to theme without rebuilding. */
 
 :root {
-  /* Colors - Backgrounds, texts and borders */
+  /* Neutrals */
   --bf-white: rgb(255 255 255);
   --bf-light: rgb(240 240 240);
   --bf-gray-light-extra: rgb(233 233 233);
@@ -18,37 +19,32 @@
   --bf-dark-extra: rgb(17 17 17);
   --bf-black: rgb(0 0 0);
 
-  /* Colors - Mark and ins */
+  /* Highlight / mark */
   --bf-yellow-light: rgb(255 255 153);
   --bf-yellow: rgb(255 255 0);
   --bf-orange: rgb(255 165 0);
 
-  /* Colors - Anchors and accent */
-  /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
-  --bf-blue: rgb(
-    0 86 179
-  ); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
-
-  --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
+  /* Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1) */
+  --bf-blue: rgb(0 86 179);
+  --bf-blue-light: rgb(0 65 135);
   --bf-blue-light-extra: rgb(190 216 254);
 
-  /* Colors - Invalid forms */
+  /* Invalid / error */
   --bf-red: rgb(255 0 0);
 
-  /* Colors - Dark mode adjustments */
-  /* These are used in dark mode to ensure proper contrast and visibility */
-  --bf-dark-bg: rgb(28 28 28); /* dark-extra + 7.5% lightness for body background */
-  --bf-dark-link: rgb(77 165 255); /* blue + 20% lightness for better visibility on dark */
-  --bf-dark-link-hover: rgb(77 165 255); /* blue-light + 20% lightness */
-  --bf-dark-border-focus: rgb(26 140 255); /* blue + 10% lightness for form focus borders */
-  --bf-dark-shadow-focus: rgb(3 102 214 / 50%); /* blue shadow for focus states */
-  --bf-dark-mark-bg: rgb(230 230 0); /* yellow - 10% lightness */
-  --bf-dark-ins-bg: rgb(255 255 200); /* yellow-light + 45% lightness */
-  --bf-dark-button-hover: rgb(184 184 184); /* gray-light -10% lightness */
-  --bf-dark-button-shadow: rgb(255 255 255 / 45%); /* white shadow for button focus */
-  --bf-dark-invalid: rgb(255 38 38); /* red adjusted for dark mode visibility */
+  /* Dark-mode surfaces (used by utility-global-dark*.css) */
+  --bf-dark-bg: rgb(28 28 28);
+  --bf-dark-link: rgb(77 165 255);
+  --bf-dark-link-hover: rgb(77 165 255);
+  --bf-dark-border-focus: rgb(26 140 255);
+  --bf-dark-shadow-focus: rgb(3 102 214 / 50%);
+  --bf-dark-mark-bg: rgb(230 230 0);
+  --bf-dark-ins-bg: rgb(255 255 200);
+  --bf-dark-button-hover: rgb(184 184 184);
+  --bf-dark-button-shadow: rgb(255 255 255 / 45%);
+  --bf-dark-invalid: rgb(255 38 38);
 
-  /* Spacing */
+  /* Spacing scale + grid gutter */
   --bf-spacing-sm: 0.25rem;
   --bf-spacing-md: 0.5rem;
   --bf-spacing-lg: 1rem;
@@ -56,7 +52,7 @@
   --bf-spacing-xxl: 3rem;
   --bf-spacing-grid-gutter: 1.5rem;
 
-  /* Typography */
+  /* Type */
   --bf-font-sans-serif:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -67,7 +63,7 @@
   --bf-body-font-size-rem: 1.6rem;
   --bf-body-line-height: 1.5;
 
-  /* Breakpoints */
+  /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;
   --bf-breakpoint-sm: 576px;
   --bf-breakpoint-md: 768px;
@@ -1335,7 +1331,8 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
-/* Miscellaneous - Focus */
+/* Keyboard-first focus: hide outline unless :focus-visible; orange ring for keyboard users.
+ * Form controls clear UA outline here; field chrome lives in forms/styling.css. */
 
 /* Remove focus outline if it's not keyboard-triggered */
 :where(:focus:not(:focus-visible)) {
@@ -1683,23 +1680,9 @@ caption {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
-/* Accessibility — user preference media queries.
- *
- * These rules ONLY apply when the user has opted in via OS or browser
- * settings (prefers-contrast: more, forced-colors: active). They do not
- * change the default rendering for anyone else, so they are strictly
- * additive and safe to ship in a minor release.
- */
+/* Preference media queries only (prefers-contrast, forced-colors). Additive; no default visual change. */
 
-/* prefers-contrast: more
- *
- * Triggered when the user requests higher contrast (macOS "Increase
- * contrast", Windows Contrast Themes, GNOME high-contrast). We:
- *  - underline links unconditionally (no longer relying on color alone
- *    to convey "this is a link" — WCAG 1.4.1 Use of Color)
- *  - thicken the focus ring so it's harder to miss
- *  - strengthen form-field borders
- */
+/* prefers-contrast: more: underline links, thicker focus, stronger field borders (WCAG 1.4.1). */
 @media (prefers-contrast: more) {
   a {
     text-decoration: underline;
@@ -1729,16 +1712,7 @@ caption {
   }
 }
 
-/* forced-colors: active (Windows High Contrast Mode and similar)
- *
- * In Forced Colors Mode the OS overrides authored colors with a fixed
- * system palette. Most things keep working automatically, but the
- * focus ring (outline: 0.2rem solid var(--bf-orange)) gets stripped
- * because Forced Colors ignores authored colors. Restoring it via the
- * Highlight system color keeps the focus indicator visible.
- *
- * UA+ already covers <mark>; this complements that for focus and links.
- */
+/* forced-colors: restore focus via Highlight; underline links; keep button borders. */
 @media (forced-colors: active) {
   :focus-visible {
     outline-color: Highlight;

@@ -1,12 +1,5 @@
-/* Dark mode overrides — Always dark (no media query).
- *
- * Pulls in the shared dark rules used by both this and
- * utility-global-dark-prefers.css, then adds the always-dark-only extras:
- * an IE select-arrow hack and the .bf-disabled button rules.
- *
- * Dark-mode scrollbars are layered in via utilities/global-dark-scrollbars.css
- * by the variant entry points (bullframe-dark.css, bullframe-classless-dark.css).
- */
+/* Always-dark overrides (no media query). Shared rules + IE select hack + disabled buttons.
+ * Scrollbars come from utilities/global-dark-scrollbars.css via dark entry builds. */
 
 @import './_utility-global-dark-shared.css';
 

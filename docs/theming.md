@@ -36,7 +36,7 @@ The same light / dark / system themes without utility classes:
 
 ## Modern CSS variant
 
-`bullframe-modern.css` layers `light-dark()`, `color-mix()`, `oklch()`, `:has()`, and container queries on top of the system-default build. Opt in when the project targets 2024+ browsers. The other seven variants stay the same.
+`bullframe-modern.css` layers `color-scheme`, `color-mix()`, `oklch()` tokens, `:has()`, and container queries on top of the system-default build. Opt in when the project targets recent evergreen browsers. The other seven variants stay the same. It does **not** ship `light-dark()`; use `--bf-*` overrides or a system-default build for dual themes.
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-modern.min.css" />
@@ -46,16 +46,11 @@ The same light / dark / system themes without utility classes:
 @import 'bullframe.css/modern';
 ```
 
-One declaration, both modes:
+Native control / scrollbar theming:
 
 ```css
 :root {
   color-scheme: light dark;
-}
-
-body {
-  background: light-dark(white, #1c1c1c);
-  color: light-dark(#222, #f0f0f0);
 }
 ```
 

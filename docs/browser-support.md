@@ -1,46 +1,43 @@
 # Browser Support
 
-Bullframe CSS supports all modern browsers. The exact browser support is defined in `.browserslistrc`.
+Bullframe CSS targets browsers covered by the Browserslist query in [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/v6/.browserslistrc): **`defaults`**. Autoprefixer uses that same query when building CSS. Prefixes are added where needed; there are no polyfills for modern CSS APIs.
 
-## Supported Browsers
+## Core builds
 
-Bullframe CSS is tested and works in:
+The seven default / classless / utilities / dark / system-default builds are intended for that `defaults` audience. They rely on:
 
-- **Chrome** (last 2 versions)
-- **Firefox** (last 2 versions)
-- **Safari** (last 2 versions)
-- **Edge** (last 2 versions)
-- **Opera** (last 2 versions)
-
-## Mobile Browsers
-
-- **iOS Safari** (last 2 versions)
-- **Chrome Mobile** (last 2 versions)
-
-## CSS features used
-
-Core builds use:
-
-- CSS custom properties
+- CSS custom properties (`--bf-*`)
 - Flexbox and CSS Grid
-- `prefers-color-scheme`
+- `prefers-color-scheme` (system-default builds)
 - Modern `rgb()` color syntax
+- Progressive enhancements gated with `@supports` where needed (for example range styling and some form/dialog polish)
 
-### Modern build
+Optional enhancements in the default pipeline (UA+ layer) use `@supports` / `prefers-reduced-motion` so older engines keep usable native UI.
 
-`bullframe-modern.css` is opt-in. It expects recent browsers (roughly 2024+) for:
+## Modern build
 
-- `light-dark()`
-- `color-mix()` / `oklch()`
-- `:has()` (form validation hint)
-- Container queries (`.bf-cq-*`)
+`bullframe-modern.css` is **opt-in**. Prefer it when you can assume recent evergreen browsers (roughly Chrome 111+, Safari 16.4+, Firefox 113+). It adds:
 
-If you need the core seven builds' older baseline, keep using those files. Details: [Theming → Modern CSS variant](/theming#modern-css-variant).
+| Feature | Role |
+|---------|------|
+| `color-scheme` | Native control / scrollbar theming |
+| `color-mix()` / `oklch()` tokens | Opt-in palette helpers |
+| `:has()` | `.bf-form-modern` invalid-submit hint |
+| Container queries | `.bf-cq-*` grid helpers |
 
-## PostCSS processing
+It does **not** ship `light-dark()` in CSS today; theme with `--bf-*` overrides or system-default builds instead.
 
-Bullframe CSS uses PostCSS with Autoprefixer to ensure compatibility with older browsers. Vendor prefixes are automatically added where needed.
+If you need the wider core baseline, keep using the other seven files. Details: [Theming → Modern CSS variant](/theming#modern-css-variant).
 
-## Checking Browser Support
+## Mobile
 
-You can check the `.browserslistrc` file in the repository for the exact browser support configuration.
+Tested against current Chromium and WebKit mobile. Forms (`select`, `range`) and `<dialog>` are the most engine-specific surfaces; spot-check iOS Safari when shipping custom form chrome.
+
+## Accessibility preferences
+
+- `prefers-reduced-motion`: dialog enter transitions are skipped when reduced motion is requested
+- `forced-colors` / high contrast: marked text and related rules adapt under Windows forced colors where implemented
+
+## Checking support
+
+Inspect [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/v6/.browserslistrc) and [browsersl.ist](https://browsersl.ist/) for the live coverage of `defaults`.

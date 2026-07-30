@@ -1,22 +1,7 @@
 /* Forms - Select styling */
 
-/* custom <select> arrow and appearance with a base64 embedded SVG icon
- * https://css-tricks.com/probably-dont-base64-svg/#article-header-id-2
- *
- * this is inspired from https://github.com/kognise/water.css
- * and from Bootstrap custom select
- * https://getbootstrap.com/docs/4.4/components/input-group/#custom-select
- *
- * ! 12px = the icon width/height, and must be in pixels because
- * calc() is just for values
- * https://css-tricks.com/a-complete-guide-to-calc-in-css/#0-calc-is-for-values
- *
- * a select with a [multiple] attribute doesn't show an arrow by default
- * a select with a [size] attribute gets and arrow on iOS (Webkit) for instance
- * but on Chrome and FF desktop
- * so, is not safe to style every kind of <select>
- *
- * remove the arrow and the appearance, especially on Webkit */
+/* Custom arrow via appearance:none + SVG for single-value selects.
+ * Skip [size] / [multiple] (native UI differs by engine). Inspired by water.css. */
 :where(select):not([size], select[multiple]) {
   appearance: none;
 
@@ -27,11 +12,6 @@
 
   /* space the arrow */
   padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
-}
-
-/* Legacy Edge browser support */
-:where(select)::-ms-expand {
-  display: none;
 }
 
 /* add support for RTL languages

@@ -24,7 +24,7 @@ dialog {
   border-radius: var(--bf-spacing-sm);
   padding: var(--bf-spacing-xl);
   height: fit-content;
-  min-width: 25rem;
+  min-width: min(25rem, 100%);
   max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
 

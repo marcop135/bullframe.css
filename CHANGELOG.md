@@ -1,16 +1,40 @@
 # Changelog
 
-## Unreleased
+All notable changes to this project are documented in this file.
 
-`6.0.0` candidate (not tagged on npm yet) - BREAKING CHANGES
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-- Replaced Sass with native CSS and PostCSS; `$bf-*` / mixins → `--bf-*` and utilities
-- Darkened link/button blues for WCAG AA 4.5:1 (visual change; override with variables)
-- Shipped class-based, classless, dark, and system-default builds from one token set
-- Added `bullframe-modern.css` for `color-scheme`, `color-mix`, `oklch`, `:has()`, and container queries
-- Added opt-in font-smoothing, reduced-motion, and stronger focus/ARIA defaults
-- Replaced the Docusaurus site with VitePress docs and a `/demo/` specimen
-- Removed Sass sources, redundant `*-dark-prefers` builds, and Netlify docs hosting
+## [Unreleased]
+
+### Changed
+
+- Replaced Sass with native CSS and PostCSS; `$bf-*` / mixins become `--bf-*` custom properties and utilities. See [Migration](docs/migration.md).
+- Darkened link and button blues for WCAG AA 4.5:1 contrast (override with `--bf-*` if needed).
+- Unified class-based, classless, dark, and system-default builds on one token set.
+- Replaced the Docusaurus site with VitePress docs and a `/demo/` specimen; docs deploy via FTPS.
+- CI runs on `main` and `v6` (dropped `master`).
+- Documented browser support against Browserslist `defaults` and Autoprefixer honesty.
+
+### Added
+
+- `bullframe-modern.css` for `color-scheme`, `color-mix()`, `oklch()` tokens, `:has()`, and container queries (does not ship `light-dark()`).
+- Opt-in font-smoothing, reduced-motion, and stronger focus / ARIA defaults.
+- Progressive `@supports` gates for range styling, `:has()` label layout, and dialog enter transitions.
+
+### Removed
+
+- Sass sources and the Sass build path.
+- Redundant `*-dark-prefers` builds.
+- Netlify docs hosting residue and ghost npmignore paths.
+- Legacy IE / Edge hacks (`0\0` media queries, `::-ms-expand`).
+
+### Fixed
+
+- Dialog `min-width` uses `min(25rem, 100%)` so narrow viewports are not overflowed.
+- Dialog / popover fades respect `prefers-reduced-motion`.
+- Default dialog backdrop uses `rgb()` so `oklch` does not leak into core builds.
+- Advanced dialog transition APIs gated behind `@supports` where needed.
 
 ## 5.1.0 - (July 08, 2025)
 
@@ -32,7 +56,7 @@
 - Refreshed HTML demo page with new examples
 - Streamlined `README.md` copy and layout
 - Updated all npm dependencies
-- Updated stylelint, htmlhint, and prettier configs
+- Updated stylelint, html-validate, and prettier configs
 - Ensured HTML demo page passed W3C validation
 
 ## 4.2.2 (May 28, 2025)

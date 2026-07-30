@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-label="Bullframe CSS">
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <g fill="none" stroke="#f95c1f" stroke-opacity="0.22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 140c0-28 14-42 32-42h22"/>
+    <path d="M72 186v90"/>
+    <path d="M72 290c0 28 14 42 32 42h22"/>
+    <path d="M1208 350c0 28-14 42-32 42h-22"/>
+    <path d="M1208 304v-90"/>
+    <path d="M1208 200c0-28-14-42-32-42h-22"/>
+    <rect x="980" y="120" width="96" height="70" rx="8" stroke-dasharray="12 10"/>
+    <path d="M996 142h64M996 160h44M996 178h54"/>
+    <rect x="204" y="430" width="96" height="70" rx="8" stroke-dasharray="12 10"/>
+    <path d="M220 452h64M220 470h44M220 488h54"/>
+    <path d="M700 180h200M740 160v200"/>
+    <circle cx="740" cy="180" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="800" cy="180" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="860" cy="180" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="740" cy="240" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="800" cy="240" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="860" cy="240" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="740" cy="300" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="800" cy="300" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+    <circle cx="860" cy="300" r="4" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
+  </g>
+
+  <!-- Centered browser + bull for wide banner -->
+  <g transform="translate(430 80)">
+    <rect x="0" y="0" width="420" height="480" rx="28" fill="#ffffff" stroke="#2a3340" stroke-width="14"/>
+    <line x1="0" y1="64" x2="420" y2="64" stroke="#2a3340" stroke-width="11"/>
+    <circle cx="42" cy="32" r="11" fill="#f95c1f"/>
+    <circle cx="78" cy="32" r="11" fill="#f95c1f"/>
+    <circle cx="114" cy="32" r="11" fill="#f95c1f"/>
+
+    <g transform="translate(210 278) scale(0.78)">
+      <path d="M-168-156c-8-72 28-128 72-152 18-10 34 4 28 24-12 40-8 78 8 108z" fill="#f95c1f"/>
+      <path d="M168-156c8-72-28-128-72-152-18-10-34 4-28 24 12 40 8 78-8 108z" fill="#f95c1f"/>
+      <ellipse cx="-132" cy="-48" rx="36" ry="48" transform="rotate(-28 -132 -48)" fill="#f95c1f"/>
+      <ellipse cx="132" cy="-48" rx="36" ry="48" transform="rotate(28 132 -48)" fill="#f95c1f"/>
+      <path d="M-108-20c0-88 48-140 108-140s108 52 108 140v72c0 52-36 92-108 92S-108 104-108 52z" fill="#f95c1f"/>
+      <path d="M-58 8c12-18 36-18 48 0" fill="none" stroke="#2a3340" stroke-width="14" stroke-linecap="round"/>
+      <path d="M10 8c12-18 36-18 48 0" fill="none" stroke="#2a3340" stroke-width="14" stroke-linecap="round"/>
+      <rect x="-70" y="48" width="140" height="88" rx="28" fill="#ffffff"/>
+      <ellipse cx="-28" cy="92" rx="12" ry="16" fill="#2a3340"/>
+      <ellipse cx="28" cy="92" rx="12" ry="16" fill="#2a3340"/>
+    </g>
+  </g>
+</svg>

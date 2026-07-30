@@ -22,17 +22,19 @@
 - Migrated the documentation site from Docusaurus v3 to VitePress (`docs/`, brand orange `#f95c1f`).
 - Interactive specimen at `/demo/` (synced via `npm run docs:sync-demo`); redesigned demo shell with build switching, quieter panels, and Nu Html Checker cleanups.
 - New `docs/components/` patterns, `docs/api-reference.md`, and `scripts/build-api-reference.mjs`.
-- VitePress home uses a geometric bull-in-browser hero; root README uses matching wide light/dark banners.
+- Docs index at `/README` (Docs); get-started guide at `/getting-started` (`/intro` and `/install` redirect).
+- Home: engineer-first pitch, quieter transparent bull mark hero, CDN copy control, mode file row, and stats. Theming owns the modern-CSS variant.
 - Shortened root README to install, eight-build table, docs links, and license.
-- Docs QA: dead-link checks enforced, nav points to Introduction, Getting Started lists all eight builds, intro/utilities copy tightened.
-- Crawl policy: `robots.txt` and demo `noindex` / Netlify `X-Robots-Tag` hide `/demo/`; docs stay open with sitemap, Open Graph, JSON-LD, and `llms.txt`.
+- Docs QA: dead-link checks enforced; SPA hard-nav for `/demo/` so the specimen does not 404; idle/hover page warmup for faster client navigation; full-width mobile nav screen.
+- Docs brand oranges darkened for WCAG AA 4.5:1 (text on light, white on brand buttons); bright orange kept for decorative SVG marks.
+- Crawl policy: `robots.txt` and demo `noindex` / Apache `X-Robots-Tag` hide `/demo/`; docs stay open with sitemap, Open Graph, JSON-LD, and `llms.txt`.
 
 ### Build & deployment
 
-- `netlify.toml` deploys VitePress from `docs/.vitepress/dist/` to `bullframecss.marcopontili.com`.
-- `npm run docs:sync-demo` copies CSS and demo assets into the VitePress public folder.
+- GitHub Actions FTPS deploy (`.github/workflows/deploy-docs.yaml`) uploads `docs/.vitepress/dist/` to Netsons; Apache rules in `docs/public/.htaccess`. Netlify site removed.
+- `npm run docs:sync-demo` copies CSS and demo assets into the VitePress public folder; `docs:dev` runs sync first.
 - CI verifies `dist/css/bullframe-modern.css`; runs on Node 20 and 22.
-- README CI badge tracks `main` (stable line). v6 remains the docs deploy branch until merge.
+- README CI badge tracks `main` (stable line). Docs deploy triggers on `v6` and `main`.
 - Removed Docusaurus / `website/`; VitePress is the docs toolchain.
 - Tightened npm publish surface: `files` stays CSS-only (`dist/css`, `src/css`); `.npmignore` denies docs, demo, scripts, tests, and non-CSS `dist/` assets; `exports` limited to `dist/css/*`.
 

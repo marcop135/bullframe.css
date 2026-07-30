@@ -17,17 +17,27 @@ Bullframe CSS is tested and works in:
 - **iOS Safari** (last 2 versions)
 - **Chrome Mobile** (last 2 versions)
 
-## CSS Features Used
+## CSS features used
 
-Bullframe CSS uses modern CSS features:
+Core builds use:
 
-- CSS Custom Properties (CSS Variables)
-- Flexbox
-- CSS Grid (where applicable)
-- `prefers-color-scheme` media query
-- Modern color syntax (`rgb()` with space-separated values)
+- CSS custom properties
+- Flexbox and CSS Grid
+- `prefers-color-scheme`
+- Modern `rgb()` color syntax
 
-## PostCSS Processing
+### Modern build
+
+`bullframe-modern.css` is opt-in. It expects recent browsers (roughly 2024+) for:
+
+- `light-dark()`
+- `color-mix()` / `oklch()`
+- `:has()` (form validation hint)
+- Container queries (`.bf-cq-*`)
+
+If you need the core seven builds' older baseline, keep using those files. Details: [Theming → Modern CSS variant](/theming#modern-css-variant).
+
+## PostCSS processing
 
 Bullframe CSS uses PostCSS with Autoprefixer to ensure compatibility with older browsers. Vendor prefixes are automatically added where needed.
 

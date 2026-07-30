@@ -1,64 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Bullframe CSS">
-  <rect width="1024" height="1024" fill="#ffffff"/>
-
-  <!-- Soft technical motifs -->
-  <g fill="none" stroke="#f95c1f" stroke-opacity="0.28" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M96 220c0-36 18-54 42-54h28"/>
-    <path d="M96 280v120"/>
-    <path d="M96 420c0 36 18 54 42 54h28"/>
-    <path d="M928 604c0 36-18 54-42 54h-28"/>
-    <path d="M928 544v-120"/>
-    <path d="M928 404c0-36-18-54-42-54h-28"/>
-    <rect x="118" y="520" width="120" height="88" rx="10" stroke-dasharray="14 12"/>
-    <path d="M138 548h80M138 572h56M138 596h68"/>
-    <rect x="786" y="208" width="120" height="88" rx="10" stroke-dasharray="14 12"/>
-    <path d="M806 236h80M806 260h56M806 284h68"/>
-    <g stroke-width="4">
-      <path d="M760 780h120M780 760v120"/>
-      <circle cx="780" cy="780" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="820" cy="780" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="860" cy="780" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="780" cy="820" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="820" cy="820" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="860" cy="820" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="780" cy="860" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="820" cy="860" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="860" cy="860" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-    </g>
-    <g stroke-width="4">
-      <path d="M144 168h100M164 148v100"/>
-      <circle cx="164" cy="168" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="204" cy="168" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="244" cy="168" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="164" cy="208" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="204" cy="208" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-      <circle cx="244" cy="208" r="5" fill="#f95c1f" fill-opacity="0.35" stroke="none"/>
-    </g>
-  </g>
-
-  <!-- Browser chrome -->
-  <rect x="212" y="196" width="600" height="632" rx="36" fill="#ffffff" stroke="#2a3340" stroke-width="18"/>
-  <line x1="212" y1="276" x2="812" y2="276" stroke="#2a3340" stroke-width="14"/>
-  <circle cx="268" cy="236" r="14" fill="#f95c1f"/>
-  <circle cx="316" cy="236" r="14" fill="#f95c1f"/>
-  <circle cx="364" cy="236" r="14" fill="#f95c1f"/>
-
-  <!-- Geometric bull head (Noun-inspired: frontal horns + solid muzzle) -->
-  <g transform="translate(512 560)">
-    <!-- Horns -->
-    <path d="M-168-156c-8-72 28-128 72-152 18-10 34 4 28 24-12 40-8 78 8 108z" fill="#f95c1f"/>
-    <path d="M168-156c8-72-28-128-72-152-18-10-34 4-28 24 12 40 8 78-8 108z" fill="#f95c1f"/>
-    <!-- Ears -->
-    <ellipse cx="-132" cy="-48" rx="36" ry="48" transform="rotate(-28 -132 -48)" fill="#f95c1f"/>
-    <ellipse cx="132" cy="-48" rx="36" ry="48" transform="rotate(28 132 -48)" fill="#f95c1f"/>
+  <g fill="#f95c1f">
+    <!-- Left horn -->
+    <path d="M290 430c-40-180 40-320 170-360 28-8 44 20 34 44-36 90-40 170-20 250-50 10-110 30-184 66z"/>
+    <!-- Right horn -->
+    <path d="M734 430c40-180-40-320-170-360-28-8-44 20-34 44 36 90 40 170 20 250 50 10 110 30 184 66z"/>
+    <!-- Left ear -->
+    <ellipse cx="300" cy="520" rx="48" ry="64" transform="rotate(-40 300 520)"/>
+    <!-- Right ear -->
+    <ellipse cx="724" cy="520" rx="48" ry="64" transform="rotate(40 724 520)"/>
     <!-- Head -->
-    <path d="M-108-20c0-88 48-140 108-140s108 52 108 140v72c0 52-36 92-108 92S-108 104-108 52z" fill="#f95c1f"/>
-    <!-- Eyes -->
-    <path d="M-58 8c12-18 36-18 48 0" fill="none" stroke="#2a3340" stroke-width="14" stroke-linecap="round"/>
-    <path d="M10 8c12-18 36-18 48 0" fill="none" stroke="#2a3340" stroke-width="14" stroke-linecap="round"/>
-    <!-- Muzzle -->
-    <rect x="-70" y="48" width="140" height="88" rx="28" fill="#ffffff"/>
-    <ellipse cx="-28" cy="92" rx="12" ry="16" fill="#2a3340"/>
-    <ellipse cx="28" cy="92" rx="12" ry="16" fill="#2a3340"/>
+    <path d="M360 430c0-150 70-250 152-250s152 100 152 250v110c0 100-68 170-152 170S360 640 360 540z"/>
   </g>
+  <!-- Eyes -->
+  <circle cx="448" cy="520" r="24" fill="#2a3340"/>
+  <circle cx="576" cy="520" r="24" fill="#2a3340"/>
+  <!-- Muzzle -->
+  <ellipse cx="512" cy="640" rx="88" ry="70" fill="#2a3340"/>
+  <circle cx="480" cy="648" r="14" fill="#f95c1f"/>
+  <circle cx="544" cy="648" r="14" fill="#f95c1f"/>
 </svg>

@@ -1,5 +1,5 @@
 # Bullframe CSS
-> Lightweight CSS framework for fast, responsive, accessible UIs. Semantic, themeable, and classless-friendly. Zero JavaScript. MIT license.
+> One UI framework. Three ways to write it. Semantic by default. Classless when you want it. System dark built in. Zero JavaScript. Eight builds. ~8 KB gzipped. MIT license.
 
 Site: https://bullframecss.marcopontili.com
 Repo: https://github.com/marcop135/bullframe.css
@@ -22,8 +22,8 @@ All variants share --bf-* design tokens.
 ## Docs map
 
 - Home: https://bullframecss.marcopontili.com/
-- Introduction: https://bullframecss.marcopontili.com/intro
-- Getting started: https://bullframecss.marcopontili.com/getting-started
+- Docs index: https://bullframecss.marcopontili.com/README
+- Get started: https://bullframecss.marcopontili.com/getting-started
 - Migration (v5 to v6): https://bullframecss.marcopontili.com/migration
 - CSS variables: https://bullframecss.marcopontili.com/variables
 - Typography: https://bullframecss.marcopontili.com/typography

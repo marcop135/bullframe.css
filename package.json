@@ -37,7 +37,7 @@
     "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
     "test:e2e": "playwright test",
     "test:e2e:update": "playwright test --update-snapshots",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "npm run docs:sync-demo && vitepress dev docs",
     "docs:sync-demo": "node scripts/sync-demo-to-vitepress.mjs",
     "docs:api-reference": "node scripts/build-api-reference.mjs",
     "docs:build": "npm run build && npm run docs:sync-demo && vitepress build docs",

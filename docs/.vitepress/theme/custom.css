@@ -1,21 +1,72 @@
 /*
  * Bullframe CSS brand skin for VitePress.
- * Brand color: orange #f95c1f.
+ * Brand oranges chosen for WCAG AA 4.5:1 (text on light, white on solid buttons).
+ * Decorative bright orange remains in SVG/hero assets only.
  */
 
 :root {
-  --vp-c-brand-1: #f95c1f;
-  --vp-c-brand-2: #ff7a45;
-  --vp-c-brand-3: #f95c1f;
-  --vp-c-brand-soft: rgba(249, 92, 31, 0.14);
+  /* Links / accents on light surfaces */
+  --vp-c-brand-1: #c2410c;
+  /* Hover / stronger */
+  --vp-c-brand-2: #a83409;
+  /* Solid fills (buttons) */
+  --vp-c-brand-3: #c2410c;
+  --vp-c-brand-soft: rgba(194, 65, 12, 0.14);
+
+  /* Explicit button tokens: white on brand must stay AA (do not lighten on hover). */
+  --vp-button-brand-bg: #c2410c;
+  --vp-button-brand-hover-bg: #a83409;
+  --vp-button-brand-active-bg: #9a2f08;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-active-text: #ffffff;
 
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #f95c1f, #ff9f78);
+  --vp-home-hero-name-background: linear-gradient(120deg, #c2410c, #d14812);
 }
 
 .dark {
+  /* Links on dark surfaces */
   --vp-c-brand-1: #ff9f78;
-  --vp-c-brand-2: #ffbb9f;
-  --vp-c-brand-3: #f95c1f;
-  --vp-c-brand-soft: rgba(249, 92, 31, 0.18);
+  --vp-c-brand-2: #ffb090;
+  /* Keep solid fills dark enough for white button text */
+  --vp-c-brand-3: #c2410c;
+  --vp-c-brand-soft: rgba(255, 159, 120, 0.18);
+
+  --vp-button-brand-bg: #c2410c;
+  --vp-button-brand-hover-bg: #a83409;
+  --vp-button-brand-active-bg: #9a2f08;
+
+  --vp-home-hero-name-background: linear-gradient(120deg, #ff9f78, #ffc4a8);
+}
+
+/* Slightly tighter home column so hero + after-hero align. */
+.VPHome .VPHero .container {
+  max-width: 960px;
+}
+
+/* Full-width mobile nav screen (default theme caps .container at 288px). */
+@media (max-width: 767px) {
+  .VPNavScreen {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .VPNavScreen .container {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1.25rem 1.5rem 4rem !important;
+  }
+
+  .VPNavScreen .menu,
+  .VPNavScreen .appearance,
+  .VPNavScreen .social-links,
+  .VPNavScreen .translations {
+    width: 100%;
+  }
+
+  .VPNavScreenSocialLinks {
+    justify-content: flex-start;
+  }
 }

@@ -1,11 +1,10 @@
-# Bullframe CSS documentation
+# Docs
 
 Reference for the Bullframe CSS framework: how to install, customize, and use each build, utility, and component.
 
 | Doc | Contents |
 |-----|----------|
-| [Introduction](intro.md) | What Bullframe CSS is, key features, and why use it |
-| [Getting Started](getting-started.md) | Installation, starter templates, and build variants |
+| [Get started](getting-started.md) | Authoring modes, CDN/npm, starters, and builds |
 | [Migration](migration.md) | Migrating from v5 to v6 |
 | [CSS Variables](variables.md) | Design tokens and custom properties |
 | [Typography](typography.md) | Headings, body text, lists, and typography utilities |

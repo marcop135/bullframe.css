@@ -1,78 +1,128 @@
-# Getting Started
+# Get started
 
-Get up and running with Bullframe CSS in minutes.
+Eight builds, shared `--bf-*` tokens, zero JavaScript. Pick an authoring mode, then add one stylesheet.
 
-## Installation
+## Choose a mode
 
-### CDN (Recommended for Quick Start)
+Same tokens and accessible defaults in every mode. Pick how you write HTML.
 
-Add Bullframe CSS to your HTML file using a CDN link:
+### Classless
+
+`bullframe-classless.css` (+ dark / system-default). Semantic HTML only; no classes to add.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
+<link rel="stylesheet" href="…/bullframe-classless.min.css" />
+
+<h1>Hello</h1>
+<p>Just semantic HTML.</p>
+<form>…</form>
 ```
 
-### npm
+### Class-based
 
-Install Bullframe CSS via npm:
+`bullframe.css` (+ dark / system-default). Grid, buttons, forms, tables via `.bf-*` classes.
+
+```html
+<link rel="stylesheet" href="…/bullframe.min.css" />
+
+<div class="bf-container">
+  <h1 class="bf-t-center">Hello</h1>
+  <button class="bf-btn bf-btn--primary">Go</button>
+</div>
+```
+
+### Utility-first
+
+`bullframe-utilities.css`. You already have a reset; you just want `.bf-*` helpers.
+
+```html
+<link rel="stylesheet" href="…/bullframe-utilities.min.css" />
+
+<div class="bf-m-t-3 bf-t-center">
+  <h1 class="bf-t-weight-700">Hello</h1>
+</div>
+```
+
+## CDN
+
+Fastest path. Pin to `@6` once the v6 release is on npm if you need a fixed major.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest" />
+```
+
+For a specific build, use the full path and swap the filename (`bullframe-classless.min.css`, `bullframe-modern.min.css`, …):
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css"
+/>
+```
+
+## npm
+
+Subpath exports for every variant:
 
 ```bash
 npm install bullframe.css
 ```
 
-Then import it in your project:
-
 ```css
-@import 'bullframe.css/dist/css/bullframe.min.css';
+@import 'bullframe.css';
+@import 'bullframe.css/dark';
+@import 'bullframe.css/classless';
+@import 'bullframe.css/modern';
+@import 'bullframe.css/utilities';
 ```
-
-Or in JavaScript:
 
 ```javascript
-import 'bullframe.css/dist/css/bullframe.min.css';
+import 'bullframe.css';
+import 'bullframe.css/classless';
 ```
 
-### Download
+## Download
 
-[Download the latest release](https://github.com/marcop135/bullframe.css/archive/refs/heads/v6.zip) and include the CSS file in your project.
+Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.css/archive/refs/heads/v6.zip). Source maps ship beside the minified CSS in `dist/css/`.
 
-## HTML Starter Template
+## Starter HTML
 
-Here's a basic HTML template to get you started:
+### Class-based
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Bullframe CSS Starter Template</title>
+    <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css"
+    />
   </head>
   <body>
     <div class="bf-container">
       <h1>Hello, Bullframe CSS!</h1>
-      <p>This is a starter template using Bullframe CSS.</p>
+      <p>Class-based starter.</p>
     </div>
   </body>
 </html>
 ```
 
-## Classless Starter Template
-
-Bullframe CSS also works great without utility classes. Just use semantic HTML:
+### Classless
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Bullframe CSS Classless Template</title>
+    <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css"
+    />
     <style>
       body {
         margin-left: auto;
@@ -85,15 +135,15 @@ Bullframe CSS also works great without utility classes. Just use semantic HTML:
   <body>
     <main>
       <h1>Hello, Bullframe CSS!</h1>
-      <p>This template uses semantic HTML without utility classes.</p>
+      <p>Semantic HTML only; no utility classes.</p>
     </main>
   </body>
 </html>
 ```
 
-## Theme Variants
+## Builds
 
-Eight builds share the same `--bf-*` tokens:
+Eight files share the same `--bf-*` tokens. Default build is about **8 KB gzipped**. No JavaScript runtime.
 
 | File | Mode |
 |------|------|
@@ -106,10 +156,10 @@ Eight builds share the same `--bf-*` tokens:
 | `bullframe-utilities.css` | Utilities only |
 | `bullframe-modern.css` | System-default plus modern CSS |
 
-See [Theming](/theming) and the [Migration guide](/migration) for details.
+Modern CSS (`light-dark()`, `oklch()`, `:has()`, container queries): [Theming](/theming#modern-css-variant). Upgrading from v5: [Migration](/migration).
 
-## Next Steps
+## Next
 
-- Learn about [CSS Variables](/variables)
-- Explore [Utilities](/utilities)
-- Check out the [Demo](/demo/)
+- [CSS Variables](/variables)
+- [Utilities](/utilities)
+- [Demo](/demo/)

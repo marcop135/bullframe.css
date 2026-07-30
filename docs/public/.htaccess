@@ -1,0 +1,33 @@
+# Apache config for VitePress docs on Netsons shared hosting.
+# Copied into docs/.vitepress/dist/ via docs/public/.
+
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force /demo trailing slash
+  RewriteRule ^demo$ /demo/ [R=301,L]
+
+  # Intro / Install merged into Get started
+  RewriteRule ^intro/?$ /getting-started [R=301,L]
+  RewriteRule ^intro\.html$ /getting-started [R=301,L]
+  RewriteRule ^install/?$ /getting-started [R=301,L]
+  RewriteRule ^install\.html$ /getting-started [R=301,L]
+
+  # Legacy demo paths
+  RewriteRule ^dist/docs/demo/?$ /demo/ [R=301,L]
+  RewriteRule ^dist/docs/demo/(.*)$ /demo/$1 [R=301,L]
+
+  # Old Docusaurus-style /docs/* paths
+  RewriteRule ^docs/(.*)$ /$1 [R=301,L]
+
+  # Mark demo responses for X-Robots-Tag (see mod_headers below)
+  RewriteRule ^demo/ - [E=BF_DEMO:1]
+</IfModule>
+
+# Interactive demo: keep out of search indexes and AI training crawls.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, noai, noimageai" env=BF_DEMO
+</IfModule>

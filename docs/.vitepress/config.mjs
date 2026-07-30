@@ -100,7 +100,10 @@ function negotiateMarkdownDev() {
     name: 'bf-negotiate-markdown',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
-        const raw = req.url?.split('?')[0] ?? '';
+        const url = req.url ?? '';
+        const raw = url.split('?')[0] ?? '';
+        // Let Vite transform page modules (e.g. /index.md?import); do not raw-serve those.
+        if (/[?&]import(?:&|=|$)/.test(url)) return next();
         if (raw.startsWith('/demo') || raw.startsWith('/@') || raw.startsWith('/node_modules')) {
           return next();
         }

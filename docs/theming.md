@@ -7,19 +7,13 @@ Bullframe CSS provides multiple theme variants and easy customization options. A
 ### Light theme (default)
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
 ```
 
 ### Dark theme
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-dark.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-dark.min.css" />
 ```
 
 ### System default theme
@@ -27,10 +21,7 @@ Bullframe CSS provides multiple theme variants and easy customization options. A
 Switches between light and dark from `prefers-color-scheme`:
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-system-default.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-system-default.min.css" />
 ```
 
 More on dark mode: [Dark Mode](/theming/dark-mode).
@@ -48,10 +39,7 @@ The same light / dark / system themes without utility classes:
 `bullframe-modern.css` layers `light-dark()`, `color-mix()`, `oklch()`, `:has()`, and container queries on top of the system-default build. Opt in when the project targets 2024+ browsers. The other seven variants stay the same.
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-modern.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-modern.min.css" />
 ```
 
 ```css

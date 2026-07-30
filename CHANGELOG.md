@@ -34,6 +34,7 @@
 - CI verifies `dist/css/bullframe-modern.css`; runs on Node 20 and 22.
 - README CI badge tracks `main` (stable line). v6 remains the docs deploy branch until merge.
 - Removed Docusaurus / `website/`; VitePress is the docs toolchain.
+- Tightened npm publish surface: `files` stays CSS-only (`dist/css`, `src/css`); `.npmignore` denies docs, demo, scripts, tests, and non-CSS `dist/` assets; `exports` limited to `dist/css/*`.
 
 ### Source
 

@@ -27,14 +27,48 @@ const sidebar = chapters.map((c) => ({
   items: c.files.map((f) => ({ text: titleFor(f), link: linkFor(f) })),
 }));
 
+const siteUrl = 'https://bullframecss.marcopontili.com';
+const siteDescription =
+  'A lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: 'Bullframe CSS',
+      url: siteUrl,
+      description: siteDescription,
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Bullframe CSS',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'Any',
+      url: siteUrl,
+      description: siteDescription,
+      license: 'https://opensource.org/licenses/MIT',
+      codeRepository: 'https://github.com/marcop135/bullframe.css',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+    },
+  ],
+};
+
 export default defineConfig({
   title: 'Bullframe CSS',
-  description:
-    'A lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly.',
+  description: siteDescription,
   lang: 'en-US',
   cleanUrls: true,
   base: '/',
   ignoreDeadLinks: false,
+  sitemap: {
+    hostname: siteUrl,
+  },
   markdown: {
     html: true,
   },
@@ -67,5 +101,17 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/docs/demo/icons/apple-touch-icon.png' }],
     ['link', { rel: 'shortcut icon', href: '/docs/demo/icons/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#f95c1f' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],
+    ['meta', { property: 'og:title', content: 'Bullframe CSS' }],
+    ['meta', { property: 'og:description', content: siteDescription }],
+    ['meta', { property: 'og:url', content: siteUrl }],
+    ['meta', { property: 'og:image', content: `${siteUrl}/bullframe-css-social-image.png` }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'Bullframe CSS' }],
+    ['meta', { name: 'twitter:description', content: siteDescription }],
+    ['meta', { name: 'twitter:image', content: `${siteUrl}/bullframe-css-social-image.png` }],
+    ['link', { rel: 'llms.txt', href: '/llms.txt' }],
+    ['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)],
   ],
 });

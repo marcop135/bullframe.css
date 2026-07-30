@@ -7,7 +7,7 @@ hero:
   tagline: A lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly, with solid cross-browser support.
   image:
     src: /bullframe-hero.png
-    alt: Bullframe CSS
+    alt: Bullframe CSS bull mark in a browser window
   actions:
     - theme: brand
       text: Get started

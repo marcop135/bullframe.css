@@ -8,7 +8,7 @@ mkdirSync(OUT, { recursive: true });
 
 const pages = [
   { name: 'landing', path: '/' },
-  { name: 'demo', path: '/demo' },
+  { name: 'demo', path: '/demo/' },
   { name: 'docs-intro', path: '/intro' },
   { name: 'docs-variables', path: '/variables' },
   { name: 'docs-buttons', path: '/buttons' },

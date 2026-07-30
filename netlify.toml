@@ -5,7 +5,7 @@
 #   1. In Netlify dashboard: "Add new site" -> "Import from GitHub" -> select bullframe.css.
 #   2. Netlify auto-detects this file. Confirm the build settings below.
 #   3. Add custom domain: bullframecss.marcopontili.com.
-#   4. Subsequent pushes to master trigger production deploys automatically.
+#   4. Subsequent pushes to v6 trigger production deploys automatically.
 #
 # For ad-hoc CLI deploys: `netlify deploy --prod` from the repo root after `npm run docs:build`.
 
@@ -21,3 +21,27 @@
 
 [context.deploy-preview]
   command = "npm ci && npm run docs:build"
+
+# Interactive demo lives at /demo/ (static HTML from docs/public/demo/).
+[[redirects]]
+  from = "/demo"
+  to = "/demo/"
+  status = 301
+  force = true
+
+# Legacy live URL previously redirected / -> /dist/docs/demo/
+[[redirects]]
+  from = "/dist/docs/demo"
+  to = "/demo/"
+  status = 301
+
+[[redirects]]
+  from = "/dist/docs/demo/*"
+  to = "/demo/:splat"
+  status = 301
+
+# Old Docusaurus-style /docs/* paths (e.g. README migration link).
+[[redirects]]
+  from = "/docs/*"
+  to = "/:splat"
+  status = 301

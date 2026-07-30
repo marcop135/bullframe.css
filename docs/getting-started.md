@@ -105,4 +105,4 @@ See the [Theming](/theming) section for more details.
 
 - Learn about [CSS Variables](/variables)
 - Explore [Utilities](/utilities)
-- Check out the [Demo](https://bullframecss.marcopontili.com)
+- Check out the [Demo](/demo/)

@@ -118,16 +118,10 @@ function negotiateMarkdownDev() {
 
         const rel = mdFile.slice(docsRoot.length).replace(/\\/g, '/').replace(/^\//, '');
         const htmlPath = rel === 'index.md' ? '/' : `/${rel.replace(/\.md$/i, '')}`;
-        const mdUrl = rel === 'index.md' ? '/index.md' : `/${rel}`;
 
         res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
         res.setHeader('Vary', 'Accept');
-        res.setHeader(
-          'Link',
-          explicitMd
-            ? `<${htmlPath}>; rel="alternate"; type="text/html"`
-            : `<${mdUrl}>; rel="alternate"; type="text/markdown"`,
-        );
+        res.setHeader('Link', `<${htmlPath}>; rel="alternate"; type="text/html"`);
         res.end(readFileSync(mdFile, 'utf8'));
       });
     },

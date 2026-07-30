@@ -7,7 +7,8 @@ const pages = [
 
 for (const { name, path } of pages) {
   test(`${name} renders consistently`, async ({ page }) => {
-    await page.goto(path, { waitUntil: 'networkidle' });
+    // Demo is a large static specimen; networkidle often never settles under CI load.
+    await page.goto(path, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     await expect(page).toHaveScreenshot(`${name}.png`, { fullPage: true });
   });

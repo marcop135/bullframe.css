@@ -16,7 +16,8 @@
     "./classless/dark": "./dist/css/bullframe-classless-dark.css",
     "./classless/system": "./dist/css/bullframe-classless-system-default.css",
     "./utilities": "./dist/css/bullframe-utilities.css",
-    "./dist/*": "./dist/*"
+    "./dist/css/*": "./dist/css/*",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist/css/",

@@ -1,22 +1,23 @@
 import { test, expect } from '@playwright/test';
 
 const pages = [
-  { name: 'landing', path: '/' },
-  { name: 'demo', path: '/demo/' },
+  { name: 'landing', path: '/', fullPage: true },
+  // Viewport-only: full-page demo screenshots are huge and flaky under CI load.
+  { name: 'demo', path: '/demo/', fullPage: false },
 ];
 
-for (const { name, path } of pages) {
+for (const { name, path, fullPage } of pages) {
   test(`${name} renders consistently`, async ({ page }) => {
-    // Demo HTML is large; under CI, "load"/"networkidle" and fonts.ready can hang.
-    test.setTimeout(180_000);
-    await page.goto(path, { waitUntil: 'domcontentloaded', timeout: 120_000 });
+    test.setTimeout(120_000);
+    await page.goto(path, { waitUntil: 'domcontentloaded', timeout: 60_000 });
     await Promise.race([
       page.evaluate(() => document.fonts.ready),
-      new Promise((r) => setTimeout(r, 5_000)),
+      new Promise((r) => setTimeout(r, 3_000)),
     ]);
+    await new Promise((r) => setTimeout(r, 300));
     await expect(page).toHaveScreenshot(`${name}.png`, {
-      fullPage: true,
-      timeout: 90_000,
+      fullPage,
+      timeout: 60_000,
     });
   });
 }

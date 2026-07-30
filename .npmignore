@@ -1,24 +1,53 @@
-# Source and development files excluded from npm package
-# (The "files" field in package.json is the primary allowlist)
+# Deny-list for the npm tarball.
+# Primary allowlist is package.json "files" (dist/css, src/css, LICENSE, README, CHANGELOG).
+# Keep this list current so tooling/docs never ship if "files" is widened by mistake.
 
-/.git
-/.github
-/.claude
-/website
-/src/docs
-/docs
+# VCS / editors / agents
+.git
+.github
+.claude
+.cursor
+.playwright-mcp
+AGENTS.md
 
-# Config files
+# Docs site, demo, GitHub-only assets, tests, build scripts
+docs
+website
+src/docs
+scripts
+tests
+playwright-report
+test-results
+.netlify
+
+# dist contents other than CSS builds (demo HTML, favicons, media)
+dist/docs
+dist/demo.css
+dist/favicon.ico
+dist/favicon-16x16.png
+dist/favicon-32x32.png
+dist/apple-touch-icon.png
+dist/placeholder-img-800x400.jpg
+dist/video-poster.png
+
+# Tooling configs
 .editorconfig
 .browserslistrc
 .gitignore
 .gitattributes
+.npmignore
 .prettierignore
 .htmlvalidate.cjs
 stylelint.config.js
 prettier.config.js
 postcss.config.js
 vite.config.js
-
-# Lock files
+playwright.config.js
+netlify.toml
 package-lock.json
+
+# Local scratch / screenshots
+*.log
+demo-*.png
+modern-demo-full.png
+docs-hero-verify.png

@@ -3,9 +3,7 @@
 html {
   text-size-adjust: 100%;
 
-  /* resize the base font-size and get an easy math for rem units
-   * https://snook.ca/archives/html_and_css/font-size-with-rem
-   */
+  /* 62.5% root so 1rem ≈ 10px for easy rem math. */
   font-size: 62.5%;
 
   color: var(--bf-dark);
@@ -29,12 +27,7 @@ body {
   font-weight: 400;
   text-align: left;
 
-  /* native font stack for optimum text rendering on every device and OS
-   * this stack mimics the system font UI
-   * a web apps looks like a native app (e.g. Android = Roboto font)
-   * Read more:
-   * https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-   */
+  /* System UI font stack (OS-native look). */
   font-family:
     /* Safari for OS X and iOS (San Francisco) */
     -apple-system,

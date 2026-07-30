@@ -1,6 +1,4 @@
-/* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
- * Inlined to avoid the additional HTTP request:
- * https://www.phpied.com/delay-loading-your-print-css/ */
+/* Print styles (adapted from h5bp main.css). */
 
 @media print {
   *,

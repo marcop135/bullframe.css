@@ -14,13 +14,7 @@
   padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 
-/* add support for RTL languages
- * 'appearance: none' removes the default styling but introduces a bug
- * that occurs when a right to the left language (e.g. Arabic) is set
- *
- * Read more
- * 1. http://bootstrap.rtlcss.com
- * 2. https://rtlstyling.com/ */
+/* RTL: mirror custom arrow when appearance:none removed the native control. */
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
   /* move the arrow icon to the left */

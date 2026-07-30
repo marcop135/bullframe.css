@@ -9,6 +9,7 @@
 .cursor
 .playwright-mcp
 AGENTS.md
+CLAUDE.md
 
 # Docs site, demo, GitHub-only assets, tests, build scripts
 docs

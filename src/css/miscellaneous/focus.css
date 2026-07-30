@@ -17,17 +17,8 @@
   outline-offset: 0.3rem;
 }
 
-/* Remove default focus outline on form elements
- * (styles applied elsewhere, e.g. forms/styling.css)
- *
- * Exceptions (don't override!):
- * - [type="color"]
- * - [type="range"]
- * - [type="file"]
- * These are often replaced by custom widgets via JS/markup
- *
- * Ref: https://getbootstrap.com/docs/4.4/components/input-group/#custom-file-input
- */
+/* Clear UA focus outline on text-like controls (chrome in forms/styling.css).
+ * Leave color/range/file alone; they often use custom widgets. */
 button:focus,
 [type='button']:focus,
 [type='reset']:focus,

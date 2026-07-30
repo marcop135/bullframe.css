@@ -38,12 +38,7 @@ dd {
   margin-left: 0;
 }
 
-/* taken from https://github.com/jensimmons/cssremedy
- *
- * 1. Add zero-width-space to prevent VoiceOver disable
- * 2. Absolute position ensures no extra space
- * See: https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
- */
+/* VoiceOver: zero-width space so list-style:none lists stay announced. */
 nav li::before {
   content: '\200B';
   position: absolute;

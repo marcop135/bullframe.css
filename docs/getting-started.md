@@ -34,7 +34,7 @@ import 'bullframe.css/dist/css/bullframe.min.css';
 
 ### Download
 
-[Download the latest release](https://github.com/marcop135/bullframe.css/archive/master.zip) and include the CSS file in your project.
+[Download the latest release](https://github.com/marcop135/bullframe.css/archive/refs/heads/v6.zip) and include the CSS file in your project.
 
 ## HTML Starter Template
 
@@ -93,13 +93,20 @@ Bullframe CSS also works great without utility classes. Just use semantic HTML:
 
 ## Theme Variants
 
-Bullframe CSS comes in multiple variants:
+Eight builds share the same `--bf-*` tokens:
 
-- **`bullframe.css`** - Light theme (default)
-- **`bullframe-dark.css`** - Dark theme
-- **`bullframe-system-default.css`** - Theme based on user system preference
+| File | Mode |
+|------|------|
+| `bullframe.css` | Class-based, light |
+| `bullframe-dark.css` | Class-based, always dark |
+| `bullframe-system-default.css` | Class-based, `prefers-color-scheme` |
+| `bullframe-classless.css` | Semantic HTML, light |
+| `bullframe-classless-dark.css` | Classless, always dark |
+| `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme` |
+| `bullframe-utilities.css` | Utilities only |
+| `bullframe-modern.css` | System-default plus modern CSS |
 
-See the [Theming](/theming) section for more details.
+See [Theming](/theming) and the [Migration guide](/migration) for details.
 
 ## Next Steps
 

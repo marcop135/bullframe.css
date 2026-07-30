@@ -1,42 +1,36 @@
 # Introduction
 
-**Bullframe CSS** is a lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly, with solid cross-browser support.
+**Bullframe CSS** is a lightweight CSS framework for fast, responsive, accessible UIs. It is semantic, themeable, and classless-friendly, with solid cross-browser support.
 
-Perfect for landing pages, marketing sites, micro-sites, blogs, docs, product listings, and more.
-
-**Simply add it, start building, and stay in control.**
+Use it for landing pages, marketing sites, blogs, docs, product listings, and similar content sites.
 
 ## What is Bullframe CSS?
 
-Bullframe CSS provides a solid foundation for building modern web interfaces without the bloat. It's built with native CSS and PostCSS, so there's no Sass compilation overhead.
+Bullframe ships as plain CSS built with PostCSS. Link one file; override `--bf-*` tokens to theme. No Sass step, no JavaScript runtime.
 
 ## Key Features
 
-- **Lightning Fast** - Native CSS with PostCSS. No Sass required.
-- **CSS Custom Properties** - Easy theming with CSS variables
-- **Fully Responsive** - Mobile-first design with flexible grid system
-- **Accessible by Default** - Built with accessibility in mind
-- **Dark Mode Ready** - Multiple theme variants included
-- **Classless-Friendly** - Works with semantic HTML
-- **Cross-Browser** - Consistent styling across all modern browsers
-- **Framework Agnostic** - Works with any JavaScript framework or vanilla HTML
+- **Native CSS** - PostCSS build; consumers need no Sass
+- **CSS custom properties** - Theme via `--bf-*` variables
+- **Responsive layout** - Mobile-first grid and containers
+- **Accessible defaults** - Focus styles, reduced-motion, contrast preferences
+- **Dark mode builds** - Always-dark and system-preference variants
+- **Classless option** - Styles semantic HTML without utility classes
+- **Modern browsers** - Latest two stable versions (see Browser Support)
+- **Framework-agnostic** - Works with any stack or plain HTML
 
 ## Why Bullframe CSS?
 
-- **Small Bundle Size** - ~8KB gzipped
-- **Zero Dependencies** - No JavaScript required
-- **100% Native CSS** - Modern CSS features with PostCSS processing
-- **Multiple Build Variants** - Light, dark, classless, utilities-only, and more
+- **~8 KB gzipped** on the default build
+- **Zero JS dependencies**
+- **Eight build files** - class-based, classless, utilities-only, and modern
 
-## Perfect For
+## Good fits
 
-- Landing pages
-- Marketing sites
-- Blogs & documentation
-- Product listings
-- Micro-sites
-- Admin dashboards
+- Landing pages and marketing sites
+- Blogs and documentation
+- Product listings and micro-sites
 
 ---
 
-**Ready to get started?** Check out the [Getting Started](/getting-started) guide.
+**Next:** [Getting Started](/getting-started).

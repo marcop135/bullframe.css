@@ -1,4 +1,4 @@
-/* Bullframe CSS v6.0.0 - Utilities Only */
+/* Utilities-only build: tokens + .bf-* helpers (no base element styles). */
 
 /* Variables */
 @import './variables.css';

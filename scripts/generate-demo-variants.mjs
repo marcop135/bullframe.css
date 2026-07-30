@@ -98,10 +98,7 @@ function cleanSpecimens(inner) {
     /(<p class="[^"]*\bgrid-cell\b[^"]*">)<strong>([^<]*)<\/strong>(<\/p>)/g,
     '$1$2$3'
   );
-  s = s.replace(
-    /<p class="[^"]*\bgrid-cell\b[^"]*">(\d+)\s*col<\/p>/g,
-    (_m, n) => gridCell(n)
-  );
+  s = s.replace(/<p class="[^"]*\bgrid-cell\b[^"]*">(\d+)\s*col<\/p>/g, (_m, n) => gridCell(n));
   s = s.replace(
     /<p class="[^"]*\bgrid-cell\b[^"]*"><code>\.bf-col-(\d+)<\/code><\/p>/g,
     (_m, n) => gridCell(n)
@@ -110,13 +107,17 @@ function cleanSpecimens(inner) {
   s = s.replace(
     /<div class="(bf-col-(?:1[0-2]|[1-9])(?: bf-no-gutters)?)(?: bf-align-center-unknown)?(?: bf-p-t-3)?(?: bf-p-b-3)?(?: bf-p-3)?">\s*(?:<p class="bf-align-center-unknown--item[^"]*">)?(?:<code>)?\.?bf-col-(\d+)(?:<\/code>)?(?:<\/p>)?\s*<\/div>/g,
     (_m, colClass, n) => {
-      const base = colClass.replace(/\s*bf-align-center-unknown|\s*bf-p-t-3|\s*bf-p-b-3|\s*bf-p-3/g, '');
+      const base = colClass.replace(
+        /\s*bf-align-center-unknown|\s*bf-p-t-3|\s*bf-p-b-3|\s*bf-p-3/g,
+        ''
+      );
       return `<div class="${base}">\n              ${gridCell(n)}\n            </div>`;
     }
   );
   s = s.replace(
     /<div class="(bf-col-(?:1[0-2]|[1-9])(?: bf-no-gutters)?)">\s*<input class="bf-width-100 bf-t-center" type="text" value="\.bf-col-(\d+)"[^>]*>\s*<\/div>/g,
-    (_m, colClass, n) => `<div class="${colClass}">\n              ${gridCell(n)}\n            </div>`
+    (_m, colClass, n) =>
+      `<div class="${colClass}">\n              ${gridCell(n)}\n            </div>`
   );
   // Restore grid specimen spans when a prior pass flattened columns to bf-col-12
   s = s.replace(
@@ -145,13 +146,19 @@ function cleanSpecimens(inner) {
     '<h2 id="components" class="bf-sr-only">Components</h2>'
   );
   s = s.replace(/<h3 id="button-components">Button Components<\/h3>/g, '');
-  s = s.replace(/<h3 id="modal-components">Modal\/Dialog Components<\/h3>/g, '<h3 id="modal-components">Modal/Dialog</h3>');
+  s = s.replace(
+    /<h3 id="modal-components">Modal\/Dialog Components<\/h3>/g,
+    '<h3 id="modal-components">Modal/Dialog</h3>'
+  );
   s = s.replace(
     /\s*<div class="bf-col-12">\s*<h4>Code Example<\/h4>\s*<pre><code>&lt;!-- Basic Modal --&gt;[\s\S]*?&lt;\/script&gt;<\/code><\/pre>\s*<\/div>/,
     ''
   );
   s = s.replace(/<nav>\s*<ul>/g, '<nav aria-label="Example navigation">\n              <ul>');
-  s = s.replace(/\s*<!-- Button Components -->\s*<div class="bf-row">\s*<div class="bf-col-12">\s*<\/div>\s*<\/div>/, '');
+  s = s.replace(
+    /\s*<!-- Button Components -->\s*<div class="bf-row">\s*<div class="bf-col-12">\s*<\/div>\s*<\/div>/,
+    ''
+  );
   s = s.replace(/\s*<!-- Form Components -->/g, '');
   s = s.replace(/\s*<!-- Modal\/Dialog Components -->/g, '');
   s = s.replace(/<h3 class="bf-m-b-1">/g, '<h3>');
@@ -174,8 +181,14 @@ function cleanSpecimens(inner) {
   });
   s = s.replace(/<fieldset disabled>/g, '<fieldset class="bf-m-b-4" disabled>');
   s = s.replace(/<fieldset>/g, '<fieldset class="bf-m-b-4">');
-  s = s.replace(/<div class="grid bf-m-b-4">/g, '<div class="bf-m-t-3 bf-m-b-4" id="grid-specimen">');
-  s = s.replace(/<div class="bf-m-b-4" id="grid-specimen">/g, '<div class="bf-m-t-3 bf-m-b-4" id="grid-specimen">');
+  s = s.replace(
+    /<div class="grid bf-m-b-4">/g,
+    '<div class="bf-m-t-3 bf-m-b-4" id="grid-specimen">'
+  );
+  s = s.replace(
+    /<div class="bf-m-b-4" id="grid-specimen">/g,
+    '<div class="bf-m-t-3 bf-m-b-4" id="grid-specimen">'
+  );
   // Space grid specimen rows so column spans read clearly
   s = s.replace(
     /(<div class="bf-m-t-3 bf-m-b-4" id="grid-specimen">)([\s\S]*?)(<\/div>\s*)$/,
@@ -350,22 +363,10 @@ function cleanSpecimens(inner) {
               <slot></slot>
             </template>`
   );
-  s = s.replace(
-    /<h4( class="[^"]*")?>Button Variants<\/h4>/,
-    '<h3$1>Button Variants</h3>'
-  );
-  s = s.replace(
-    /<h4( class="[^"]*")?>Button Sizes<\/h4>/,
-    '<h3$1>Button Sizes</h3>'
-  );
-  s = s.replace(
-    /<h4( class="[^"]*")?>Button Groups<\/h4>/,
-    '<h3$1>Button Groups</h3>'
-  );
-  s = s.replace(
-    /<h4( class="[^"]*")?>Full Width Button<\/h4>/,
-    '<h3$1>Full Width Button</h3>'
-  );
+  s = s.replace(/<h4( class="[^"]*")?>Button Variants<\/h4>/, '<h3$1>Button Variants</h3>');
+  s = s.replace(/<h4( class="[^"]*")?>Button Sizes<\/h4>/, '<h3$1>Button Sizes</h3>');
+  s = s.replace(/<h4( class="[^"]*")?>Button Groups<\/h4>/, '<h3$1>Button Groups</h3>');
+  s = s.replace(/<h4( class="[^"]*")?>Full Width Button<\/h4>/, '<h3$1>Full Width Button</h3>');
 
   // Bottom margin on every Bullframe button (after other button rewrites)
   s = s.replace(/class="(bf-btn(?:\s[^"]*)?)"/g, (_m, cls) => {
@@ -390,10 +391,12 @@ function spaceControlDivs(body) {
 }
 
 function addButtonMargin(body) {
-  return body.replace(/<button(?![^>]*\bbf-m-b-2\b)([^>]*)>/g, '<button$1 class="bf-m-b-2">').replace(
-    /<button([^>]*) class="([^"]*)"([^>]*) class="bf-m-b-2">/g,
-    '<button$1 class="$2 bf-m-b-2"$3>'
-  );
+  return body
+    .replace(/<button(?![^>]*\bbf-m-b-2\b)([^>]*)>/g, '<button$1 class="bf-m-b-2">')
+    .replace(
+      /<button([^>]*) class="([^"]*)"([^>]*) class="bf-m-b-2">/g,
+      '<button$1 class="$2 bf-m-b-2"$3>'
+    );
 }
 
 mainInner = cleanSpecimens(mainInner);
@@ -557,7 +560,9 @@ const gridCellStyle = `    <style>
     </style>`;
 
 function headCommon(title, { brand = false, gridBorders = false } = {}) {
-  const extras = [brand ? brandStyle : '', gridBorders ? gridCellStyle : ''].filter(Boolean).join('\n');
+  const extras = [brand ? brandStyle : '', gridBorders ? gridCellStyle : '']
+    .filter(Boolean)
+    .join('\n');
   return `<!doctype html>
 <html id="top" lang="en">
   <head>
@@ -943,7 +948,10 @@ for (const [name, body] of Object.entries(files)) {
     }
     if (!out.includes('<aside')) issues.push('B missing on-this-page column');
     if (!out.includes('bf-col-9')) issues.push('B missing main content column');
-    const mainSlice = out.slice(out.indexOf('id="main-content"'), out.indexOf('id="grid-specimen"'));
+    const mainSlice = out.slice(
+      out.indexOf('id="main-content"'),
+      out.indexOf('id="grid-specimen"')
+    );
     if (/class="[^"]*\bbf-col-(?:[1-9]|1[0-1])\b/.test(mainSlice)) {
       issues.push('B main content still has multi-col layout');
     }

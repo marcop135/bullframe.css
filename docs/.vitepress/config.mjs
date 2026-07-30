@@ -62,7 +62,7 @@ const jsonLd = {
 
 /** Map clean URL path → source .md under docs/ for docs:dev Accept negotiation. */
 function markdownPathFor(pathname) {
-  const clean = (pathname.replace(/\/$/, '') || '/') ;
+  const clean = pathname.replace(/\/$/, '') || '/';
   if (clean === '/') return resolve(docsRoot, 'index.md');
   const rel = clean.replace(/^\//, '');
   const direct = resolve(docsRoot, `${rel}.md`);
@@ -153,9 +153,7 @@ export default defineConfig({
     } else {
       href = `/${rel}`;
     }
-    return [
-      ['link', { rel: 'alternate', type: 'text/markdown', title: 'Markdown', href }],
-    ];
+    return [['link', { rel: 'alternate', type: 'text/markdown', title: 'Markdown', href }]];
   },
   // Dev nav felt 1–3s cold: avoid watching build output, warm common pages.
   vite: {
@@ -221,9 +219,32 @@ export default defineConfig({
     },
   },
   head: [
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/docs/demo/icons/favicon-16x16.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/docs/demo/icons/favicon-32x32.png' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/docs/demo/icons/apple-touch-icon.png' }],
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/docs/demo/icons/favicon-16x16.png',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/docs/demo/icons/favicon-32x32.png',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/docs/demo/icons/apple-touch-icon.png',
+      },
+    ],
     ['link', { rel: 'shortcut icon', href: '/docs/demo/icons/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#c2410c' }],
     ['meta', { property: 'og:type', content: 'website' }],

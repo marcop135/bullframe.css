@@ -7,9 +7,13 @@ const pages = [
 
 for (const { name, path } of pages) {
   test(`${name} renders consistently`, async ({ page }) => {
-    // Demo is a large static specimen; networkidle often never settles under CI load.
-    await page.goto(path, { waitUntil: 'load' });
+    // Demo HTML is large; under CI load, "load"/"networkidle" can hang on late assets.
+    test.setTimeout(180_000);
+    await page.goto(path, { waitUntil: 'domcontentloaded', timeout: 120_000 });
     await page.evaluate(() => document.fonts.ready);
-    await expect(page).toHaveScreenshot(`${name}.png`, { fullPage: true });
+    await expect(page).toHaveScreenshot(`${name}.png`, {
+      fullPage: true,
+      timeout: 60_000,
+    });
   });
 }

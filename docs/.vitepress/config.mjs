@@ -34,7 +34,7 @@ export default defineConfig({
   lang: 'en-US',
   cleanUrls: true,
   base: '/',
-  ignoreDeadLinks: true,
+  ignoreDeadLinks: false,
   markdown: {
     html: true,
   },
@@ -46,7 +46,7 @@ export default defineConfig({
     outline: { level: [2, 3] },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/README' },
+      { text: 'Introduction', link: '/intro' },
       { text: 'Getting Started', link: '/getting-started' },
       { text: 'Demo', link: '/demo/' },
     ],

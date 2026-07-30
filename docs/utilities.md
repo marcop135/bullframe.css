@@ -1,12 +1,17 @@
 # Utilities Overview
 
-Bullframe CSS offers a comprehensive set of utility classes for fine-grained control over your layout, spacing, typography, and more.
+Utility classes for layout, spacing, typography, tables, embeds, filters, and print.
 
 ## Categories
 
 - [Grid System](/utilities/grid) - 12-column responsive grid
-- [Spacing](/utilities/spacing) - Margin and padding utilities
-- [Text](/utilities/text) - Typography utilities
+- [Spacing](/utilities/spacing) - Margin and padding
+- [Text](/utilities/text) - Typography helpers
+- [Tables](/utilities/tables) - Table and responsive table helpers
+- [Lists](/utilities/lists) - Unstyled and utility list classes
+- [Embeds](/utilities/embeds) - Responsive media embeds
+- [Filters](/utilities/filters) - Visual filter utilities
+- [Print](/utilities/print) - Print stylesheet helpers
 
 ## Quick Reference
 

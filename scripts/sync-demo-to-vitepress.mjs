@@ -21,4 +21,8 @@ await cp('src/docs/demo/images', 'docs/public/docs/demo/images', {
   force: true,
 });
 
-console.log(`Synced ${cssFiles.length} CSS files and demo assets to docs/public/`);
+// Keep the standalone demo HTML in sync with the VitePress /demo/ route.
+await mkdir('docs/public/demo', { recursive: true });
+await cp('src/docs/demo/index.html', 'docs/public/demo/index.html', { force: true });
+
+console.log(`Synced ${cssFiles.length} CSS files, demo assets, and demo HTML to docs/public/`);

@@ -65,8 +65,8 @@ function buildAllCss() {
   return {
     name: 'build-all-css',
     async configureServer(server) {
-      // Serve compiled CSS during dev so the demo/landing links to
-      // ./css/bullframe-*.min.css resolve without a prior production build.
+      // Serve compiled CSS during dev so the demo links to
+      // /css/bullframe-*.min.css resolve without a prior production build.
       server.middlewares.use(async (req, res, next) => {
         const match = req.url?.match(/^\/css\/(.+?)\.min\.css(?:\?.*)?$/);
         if (!match) return next();
@@ -146,8 +146,7 @@ export default defineConfig({
     emptyOutDir: true, // Clean before build
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src/index.html'), // Landing page
-        demo: path.resolve(__dirname, 'src/docs/demo/index.html'), // Demo page
+        demo: path.resolve(__dirname, 'src/docs/demo/index.html'),
       },
       output: {
         entryFileNames: `[name].js`,
@@ -163,6 +162,6 @@ export default defineConfig({
     copyDocsFiles(), // Copy docs files including demo
   ],
   server: {
-    open: '/index.html', // Dev server opens landing page
+    open: '/docs/demo/',
   },
 });

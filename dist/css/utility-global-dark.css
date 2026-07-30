@@ -1,27 +1,11 @@
-/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css 
- */
+/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
-/* Dark mode overrides — Always dark (no media query).
- *
- * Pulls in the shared dark rules used by both this and
- * utility-global-dark-prefers.css, then adds the always-dark-only extras:
- * an IE select-arrow hack and the .bf-disabled button rules.
- *
- * Dark-mode scrollbars are layered in via utilities/global-dark-scrollbars.css
- * by the variant entry points (bullframe-dark.css, bullframe-classless-dark.css).
- */
+/* Always-dark overrides (no media query). Shared rules + IE select hack + disabled buttons.
+ * Scrollbars come from utilities/global-dark-scrollbars.css via dark entry builds. */
 
-/* Shared dark-mode rules — imported by:
- *  - utility-global-dark.css         (unconditional, for the always-dark variant)
- *  - utility-global-dark-prefers.css (wrapped in @media (prefers-color-scheme: dark)
- *                                     via media-conditional @import)
- *
- * Contains every dark-mode rule that applies in BOTH variants. Variant-specific
- * extras (the IE select-arrow hack and the .bf-disabled button rules) live in
- * utility-global-dark.css. Dark-mode scrollbars live in utilities/global-dark-scrollbars.css.
- *
- * Underscore prefix keeps this file out of the buildAllCss glob in vite.config.js.
- */
+/* Shared dark-mode rules for always-dark and prefers-color-scheme builds.
+ * Variant-only extras: utility-global-dark.css. Scrollbars: global-dark-scrollbars.css.
+ * Underscore prefix excludes this file from the buildAllCss glob. */
 
 html {
   color: var(--bf-light);

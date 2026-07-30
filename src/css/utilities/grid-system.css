@@ -1,4 +1,4 @@
-/* Utilities - Grid system */
+/* 12-column flex grid: .bf-container / .bf-row / .bf-col-* (+ optional --break-* stacking). */
 
 .bf-container,
 .bf-container--fluid {
@@ -40,7 +40,7 @@
   padding-left: 0;
 }
 
-/* Column widths */
+/* Column spans (12ths). */
 .bf-col-12 {
   flex-basis: 100%;
   max-width: 100%;
@@ -101,7 +101,7 @@
   max-width: 8.3333%;
 }
 
-/* Responsive breakpoints: stack columns */
+/* Stack columns below breakpoint when container has .bf-container--break-{xs|md|lg}. */
 @media (max-width: 575px) {
   .bf-container--break-xs .bf-row {
     margin-left: 0;
@@ -147,7 +147,7 @@
   }
 }
 
-/* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
+/* Table cells with col classes: keep static positioning (legacy v4 compatibility). */
 table td[class^='bf-col'],
 table th[class^='bf-col'] {
   position: static;

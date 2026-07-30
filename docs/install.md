@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Install
 ---
 
 <script setup>
@@ -12,4 +12,4 @@ onMounted(() => {
 })
 </script>
 
-Introduction is part of [Get started](/getting-started).
+Install moved to [Get started](/getting-started).

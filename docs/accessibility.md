@@ -8,11 +8,12 @@ Bullframe CSS is built with accessibility in mind. The framework includes sensib
 
 ## Color Contrast (WCAG AA)
 
-All default colors meet **WCAG AA** contrast requirements (4.5:1 ratio for normal text):
+Default tokens meet **WCAG AA** contrast (4.5:1 for normal text) on light and dark surfaces:
 
-- **Links**: `--bf-blue` on white background passes AA
-- **Primary buttons**: white text on `--bf-blue` background passes AA
-- **Form focus rings**: clearly visible on both light and dark backgrounds
+- **Links**: `--bf-blue` on white passes AA
+- **Primary buttons**: white text on `--bf-blue` passes AA
+- **Dark builds**: default foreground/background pairs meet AA
+- **Form focus rings**: visible on light and dark backgrounds
 
 To check your own color overrides, use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
 

@@ -23,13 +23,14 @@ const linkFor = (rel) => '/' + rel.replace(/\.md$/i, '');
 
 const sidebar = chapters.map((c) => ({
   text: c.text,
-  collapsed: false,
+  // Keep Overview open; collapse the rest so first paint stays light.
+  collapsed: c.text !== 'Overview',
   items: c.files.map((f) => ({ text: titleFor(f), link: linkFor(f) })),
 }));
 
 const siteUrl = 'https://bullframecss.marcopontili.com';
 const siteDescription =
-  'A lightweight CSS framework for building fast, responsive, and accessible UIs. Semantic, themeable, and classless-friendly.';
+  'Semantic by default. Classless when you want it. System dark built in. Zero JavaScript. Eight builds.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -59,6 +60,22 @@ const jsonLd = {
   ],
 };
 
+/** Serve static demo HTML for /demo/ in docs:dev (VitePress SPA would 404 otherwise). */
+function serveDemoHtml() {
+  return {
+    name: 'bf-serve-demo-html',
+    configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        const url = req.url?.split('?')[0];
+        if (url === '/demo' || url === '/demo/') {
+          req.url = '/demo/index.html';
+        }
+        next();
+      });
+    },
+  };
+}
+
 export default defineConfig({
   title: 'Bullframe CSS',
   description: siteDescription,
@@ -73,19 +90,47 @@ export default defineConfig({
     html: true,
   },
   srcExclude: [...excludeDirs.map((d) => `${d}/**`), '**/node_modules/**'],
+  // Dev nav felt 1–3s cold: avoid watching build output, warm common pages.
+  vite: {
+    plugins: [serveDemoHtml()],
+    server: {
+      watch: {
+        ignored: [
+          '**/docs/.vitepress/dist/**',
+          '**/docs/.vitepress/cache/**',
+          '**/docs/.vitepress/.temp/**',
+        ],
+      },
+      warmup: {
+        clientFiles: [
+          './.vitepress/theme/index.js',
+          './.vitepress/theme/components/HomeAfterHero.vue',
+          './index.md',
+          './README.md',
+          './getting-started.md',
+          './variables.md',
+          './utilities.md',
+          './theming.md',
+          './accessibility.md',
+        ],
+      },
+    },
+  },
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/docs/demo/icons/favicon-32x32.png',
     siteTitle: 'Bullframe CSS',
     search: { provider: 'local' },
     outline: { level: [2, 3] },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Introduction', link: '/intro' },
-      { text: 'Getting Started', link: '/getting-started' },
-      { text: 'Demo', link: '/demo/' },
+      { text: 'Get started', link: '/getting-started' },
+      { text: 'Docs', link: '/README' },
+      { text: 'Demo', link: '/demo/', target: '_blank', rel: 'noopener' },
     ],
     sidebar,
-    socialLinks: [{ icon: 'github', link: 'https://github.com/marcop135/bullframe.css' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/marcop135/bullframe.css' },
+      { icon: 'npm', link: 'https://www.npmjs.com/package/bullframe.css' },
+    ],
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026 Marco Pontili',
@@ -100,7 +145,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/docs/demo/icons/favicon-32x32.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/docs/demo/icons/apple-touch-icon.png' }],
     ['link', { rel: 'shortcut icon', href: '/docs/demo/icons/favicon.ico' }],
-    ['meta', { name: 'theme-color', content: '#f95c1f' }],
+    ['meta', { name: 'theme-color', content: '#c2410c' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],
     ['meta', { property: 'og:title', content: 'Bullframe CSS' }],

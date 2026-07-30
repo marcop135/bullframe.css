@@ -18,22 +18,22 @@
   <img alt="Bullframe CSS" src="https://raw.githubusercontent.com/marcop135/bullframe.css/v6/src/docs/github-readme/bf-readme-hero-light.png">
 </picture>
 
-**Lightweight CSS for fast, accessible UIs.** Semantic, themeable, classless-friendly. Three authoring modes, eight build files, zero JavaScript. ~8 KB gzipped.
+**One UI framework. Three ways to write it. Zero JavaScript.** Semantic by default. Classless when you want it. System dark built in. Eight builds. ~8 KB gzipped. Simply add it, start building, and stay in control.
 
 > **v6 is current. v5 is stable** (security fixes). See the [migration guide](https://bullframecss.marcopontili.com/migration).
 
 ## Install
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
-```
-
 ```bash
 npm install bullframe.css
 ```
 
-```css
-@import 'bullframe.css';
+```js
+import 'bullframe.css';
+```
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
 ```
 
 ## Builds
@@ -49,7 +49,7 @@ All variants share `--bf-*` tokens. Override variables to theme; no rebuild requ
 
 ## Docs
 
-[bullframecss.marcopontili.com](https://bullframecss.marcopontili.com) · [API reference](https://bullframecss.marcopontili.com/api-reference) · [Demo](https://bullframecss.marcopontili.com/demo/) · [Changelog](CHANGELOG.md)
+[Docs](https://bullframecss.marcopontili.com/README) · [Get started](https://bullframecss.marcopontili.com/getting-started) · [API reference](https://bullframecss.marcopontili.com/api-reference) · [Demo](https://bullframecss.marcopontili.com/demo/) · [Changelog](CHANGELOG.md)
 
 ## License
 

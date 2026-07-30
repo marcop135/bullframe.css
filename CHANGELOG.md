@@ -35,6 +35,7 @@
 - CI now also verifies that `dist/css/bullframe-modern.css` is produced.
 - README CI badge filter switched from `branch=v6` to `branch=master` so the badge tracks the stable line. (v6 has not been merged into master.)
 - Removed Docusaurus v3 dependencies and the `website/` directory; added VitePress as a dev dependency.
+- Tightened npm publish surface: `files` stays CSS-only (`dist/css`, `src/css`); `.npmignore` denies docs, demo, scripts, tests, and non-CSS `dist/` assets; `exports` limited to `dist/css/*` (dropped broad `dist/*`).
 
 ### Landing page
 

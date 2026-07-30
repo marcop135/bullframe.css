@@ -54,10 +54,7 @@ Fastest path. Pin to `@6` once the v6 release is on npm if you need a fixed majo
 For a specific build, use the full path and swap the filename (`bullframe-classless.min.css`, `bullframe-modern.min.css`, …):
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
 ```
 
 ## npm
@@ -96,10 +93,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
   </head>
   <body>
     <div class="bf-container">
@@ -119,10 +113,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css" />
     <style>
       body {
         margin-left: auto;
@@ -145,16 +136,16 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
 
 Eight files share the same `--bf-*` tokens. Default build is about **8 KB gzipped**. No JavaScript runtime.
 
-| File | Mode |
-|------|------|
-| `bullframe.css` | Class-based, light |
-| `bullframe-dark.css` | Class-based, always dark |
-| `bullframe-system-default.css` | Class-based, `prefers-color-scheme` |
-| `bullframe-classless.css` | Semantic HTML, light |
-| `bullframe-classless-dark.css` | Classless, always dark |
-| `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme` |
-| `bullframe-utilities.css` | Utilities only |
-| `bullframe-modern.css` | System-default plus modern CSS |
+| File                                     | Mode                                |
+| ---------------------------------------- | ----------------------------------- |
+| `bullframe.css`                          | Class-based, light                  |
+| `bullframe-dark.css`                     | Class-based, always dark            |
+| `bullframe-system-default.css`           | Class-based, `prefers-color-scheme` |
+| `bullframe-classless.css`                | Semantic HTML, light                |
+| `bullframe-classless-dark.css`           | Classless, always dark              |
+| `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`   |
+| `bullframe-utilities.css`                | Utilities only                      |
+| `bullframe-modern.css`                   | System-default plus modern CSS      |
 
 Modern CSS (`light-dark()`, `oklch()`, `:has()`, container queries): [Theming](/theming#modern-css-variant). Upgrading from v5: [Migration](/migration).
 

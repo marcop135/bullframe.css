@@ -1,0 +1,53 @@
+# Bullframe CSS - https://bullframecss.marcopontili.com
+# Docs are open to search engines and AI crawlers.
+# The interactive /demo/ specimen sheet is excluded from indexing.
+
+User-agent: *
+Allow: /
+Disallow: /demo/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /demo/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /demo/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /demo/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /demo/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /demo/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /demo/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /demo/
+
+User-agent: CCBot
+Allow: /
+Disallow: /demo/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /demo/
+
+User-agent: Diffbot
+Allow: /
+Disallow: /demo/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /demo/
+
+Sitemap: https://bullframecss.marcopontili.com/sitemap.xml

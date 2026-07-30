@@ -45,3 +45,10 @@
   from = "/docs/*"
   to = "/:splat"
   status = 301
+
+# Interactive demo: keep out of search indexes and AI training crawls.
+# Docs remain fully crawlable (no site-wide noindex).
+[[headers]]
+  for = "/demo/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, noai, noimageai"

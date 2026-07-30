@@ -1,0 +1,55 @@
+# Bullframe CSS
+> Lightweight CSS framework for fast, responsive, accessible UIs. Semantic, themeable, and classless-friendly. Zero JavaScript. MIT license.
+
+Site: https://bullframecss.marcopontili.com
+Repo: https://github.com/marcop135/bullframe.css
+npm: bullframe.css
+CDN: https://cdn.jsdelivr.net/npm/bullframe.css@latest
+
+## Builds (eight files)
+
+- bullframe.css - class-based, light
+- bullframe-dark.css - class-based, always dark
+- bullframe-system-default.css - class-based, prefers-color-scheme
+- bullframe-classless.css - semantic HTML, light
+- bullframe-classless-dark.css - classless, always dark
+- bullframe-classless-system-default.css - classless, prefers-color-scheme
+- bullframe-utilities.css - utilities only
+- bullframe-modern.css - system-default plus modern CSS (oklch, color-mix, :has, container queries)
+
+All variants share --bf-* design tokens.
+
+## Docs map
+
+- Home: https://bullframecss.marcopontili.com/
+- Introduction: https://bullframecss.marcopontili.com/intro
+- Getting started: https://bullframecss.marcopontili.com/getting-started
+- Migration (v5 to v6): https://bullframecss.marcopontili.com/migration
+- CSS variables: https://bullframecss.marcopontili.com/variables
+- Typography: https://bullframecss.marcopontili.com/typography
+- Layout: https://bullframecss.marcopontili.com/layout
+- Forms: https://bullframecss.marcopontili.com/forms
+- Buttons: https://bullframecss.marcopontili.com/buttons
+- Utilities: https://bullframecss.marcopontili.com/utilities
+- Grid: https://bullframecss.marcopontili.com/utilities/grid
+- Components: https://bullframecss.marcopontili.com/components/
+- Theming: https://bullframecss.marcopontili.com/theming
+- Dark mode: https://bullframecss.marcopontili.com/theming/dark-mode
+- Accessibility: https://bullframecss.marcopontili.com/accessibility
+- Browser support: https://bullframecss.marcopontili.com/browser-support
+- API reference: https://bullframecss.marcopontili.com/api-reference
+
+## Install
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
+```
+
+```bash
+npm install bullframe.css
+```
+
+## Note for crawlers
+
+Documentation pages are intended for indexing and training citations.
+The interactive specimen at /demo/ is excluded via robots.txt and must not be indexed.

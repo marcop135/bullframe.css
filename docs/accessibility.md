@@ -4,7 +4,7 @@ title: Accessibility
 
 # Accessibility
 
-Bullframe CSS is built with accessibility in mind. The framework includes sensible defaults that help you build inclusive interfaces without extra effort.
+Bullframe CSS ships WCAG AA contrast defaults (4.5:1 for normal text), visible `:focus-visible` rings, and screen-reader utilities so inclusive UIs need less custom CSS. Guidance follows [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and common [MDN accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) patterns.
 
 ## Color Contrast (WCAG AA)
 

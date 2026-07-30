@@ -1,6 +1,8 @@
 # Docs
 
-Full reference for Bullframe CSS. Start with [Getting started](getting-started.md) if you are new.
+Full reference for Bullframe CSS: semantic HTML by default, classless builds when markup should stay clean, system dark via `prefers-color-scheme`, and no JavaScript. About 8 KB gzipped, MIT license, eight stylesheet builds on npm.
+
+Start with [Getting started](getting-started.md) if you are new. Every page is also available as Markdown (append `.md`, or send `Accept: text/markdown`).
 
 ## Overview
 
@@ -51,7 +53,6 @@ Full reference for Bullframe CSS. Start with [Getting started](getting-started.m
 | [Accessibility](accessibility.md) | AA defaults and guidance |
 | [Browser support](browser-support.md) | Supported browsers |
 | [API reference](api-reference.md) | Properties and classes |
-| [Demo](/demo/) | Interactive builds |
 
 ## Local docs site
 

@@ -16,9 +16,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="src/docs/github-readme/bf-logo-full-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="src/docs/github-readme/bf-logo-full-light.png">
-  <img alt="Bullframe CSS logo" src="https://raw.githubusercontent.com/marcop135/bullframe.css/master/src/docs/github-readme/bf-logo-full-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="src/docs/github-readme/bf-readme-hero-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="src/docs/github-readme/bf-readme-hero-light.png">
+  <img alt="Bullframe CSS" src="https://raw.githubusercontent.com/marcop135/bullframe.css/v6/src/docs/github-readme/bf-readme-hero-light.png">
 </picture>
 
 **One design system. Three ways to write it. Zero JavaScript.**

@@ -23,7 +23,7 @@ All variants share --bf-* design tokens.
 
 - Home: https://bullframecss.marcopontili.com/
 - Docs index: https://bullframecss.marcopontili.com/README
-- Get started: https://bullframecss.marcopontili.com/getting-started
+- Getting started: https://bullframecss.marcopontili.com/getting-started
 - Migration (v5 to v6): https://bullframecss.marcopontili.com/migration
 - CSS variables: https://bullframecss.marcopontili.com/variables
 - Typography: https://bullframecss.marcopontili.com/typography

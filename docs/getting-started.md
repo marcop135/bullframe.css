@@ -1,4 +1,4 @@
-# Get started
+# Getting started
 
 Eight builds, shared `--bf-*` tokens, zero JavaScript. Pick an authoring mode, then add one stylesheet.
 

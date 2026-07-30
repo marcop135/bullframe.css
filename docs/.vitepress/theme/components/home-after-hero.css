@@ -10,7 +10,7 @@
   --bfh-line: var(--vp-c-divider);
   --bfh-code-bg: var(--vp-code-bg);
   --bfh-soft: var(--vp-c-bg-soft);
-  max-width: 960px;
+  max-width: 1152px;
   margin: 0 auto;
   padding: 0.5rem 24px 4.5rem;
 }

@@ -95,7 +95,7 @@ const stats = [
   <div class="bfh">
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">Why it stands out</p>
+        <p class="bfh-eyebrow">Modes</p>
         <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic. Classless. Dark that follows the OS.</h2>
       </div>
       <ul class="bfh-pillars">
@@ -195,7 +195,7 @@ const stats = [
         <h2 id="bfh-cta-heading" class="bfh-heading">Ready when you are.</h2>
       </div>
       <div class="bfh-cta">
-        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Get started</a>
+        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Getting started</a>
         <a
           class="bfh-cta__btn bfh-cta__btn--alt"
           href="https://github.com/marcop135/bullframe.css"

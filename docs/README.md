@@ -1,31 +1,63 @@
 # Docs
 
-Reference for the Bullframe CSS framework: how to install, customize, and use each build, utility, and component.
+Full reference for Bullframe CSS. Start with [Getting started](getting-started.md) if you are new.
 
-| Doc | Contents |
-|-----|----------|
-| [Get started](getting-started.md) | Authoring modes, CDN/npm, starters, and builds |
-| [Migration](migration.md) | Migrating from v5 to v6 |
-| [CSS Variables](variables.md) | Design tokens and custom properties |
-| [Typography](typography.md) | Headings, body text, lists, and typography utilities |
-| [Layout](layout.md) | Containers, grid, and responsive layout |
-| [Forms](forms.md) | Form element styles and validation |
-| [Buttons](buttons.md) | Button classes and variants |
-| [Utilities](utilities.md) | Utility classes overview |
-| [Components](components/index.md) | Pre-built component patterns |
-| [Theming](theming.md) | Customization, dark mode, and design tokens |
-| [Accessibility](accessibility.md) | Accessibility features and best practices |
-| [Browser Support](browser-support.md) | Supported browsers and fallbacks |
-| [API Reference](api-reference.md) | Auto-generated list of CSS custom properties and classes |
-| [Demo](/demo/) | Interactive demo of all builds and components |
+## Overview
 
-The root [README on GitHub](https://github.com/marcop135/bullframe.css#readme) stays a short overview; details live here.
+| | |
+|---|---|
+| [Getting started](getting-started.md) | Modes, install, CDN/npm, starters |
+| [Migration](migration.md) | v5 to v6 |
 
-## Run this site locally
+## Core
+
+| | |
+|---|---|
+| [Variables](variables.md) | `--bf-*` tokens |
+| [Typography](typography.md) | Headings, body, lists |
+| [Layout](layout.md) | Containers, grid, responsive |
+| [Forms](forms.md) | Controls and validation |
+| [Buttons](buttons.md) | Button classes |
+
+## Utilities
+
+| | |
+|---|---|
+| [Utilities](utilities.md) | Overview |
+| [Grid](utilities/grid.md) · [Spacing](utilities/spacing.md) · [Text](utilities/text.md) | Layout helpers |
+| [Tables](utilities/tables.md) · [Lists](utilities/lists.md) · [Embeds](utilities/embeds.md) | Content |
+| [Filters](utilities/filters.md) · [Print](utilities/print.md) | Extras |
+
+## Components
+
+| | |
+|---|---|
+| [Components](components/index.md) | Patterns overview |
+| [Buttons](components/button-patterns.md) · [Forms](components/forms.md) · [Modals](components/modals.md) | |
+| [Cards](components/cards.md) · [Navigation](components/navigation.md) | |
+
+## Theming
+
+| | |
+|---|---|
+| [Theming](theming.md) | Approach and tokens |
+| [Dark mode](theming/dark-mode.md) | Light, dark, system |
+| [Customization](theming/customization.md) | Override and extend |
+
+## Reference
+
+| | |
+|---|---|
+| [Accessibility](accessibility.md) | AA defaults and guidance |
+| [Browser support](browser-support.md) | Supported browsers |
+| [API reference](api-reference.md) | Properties and classes |
+| [Demo](/demo/) | Interactive builds |
+
+## Local docs site
 
 ```bash
-npm install        # once
-npm run docs:dev   # http://localhost:5173/
+npm install
+npm run docs:dev
 ```
 
-Other scripts: `npm run docs:build` (static build to `docs/.vitepress/dist/`), `npm run docs:preview` (serve the build).
+Build: `npm run docs:build` · Preview: `npm run docs:preview`

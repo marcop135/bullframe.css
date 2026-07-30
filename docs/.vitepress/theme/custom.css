@@ -40,9 +40,148 @@
   --vp-home-hero-name-background: linear-gradient(120deg, #ff9f78, #ffc4a8);
 }
 
-/* Slightly tighter home column so hero + after-hero align. */
+/*
+ * Align home hero with .bfh: same 1152px column and 24px side inset.
+ * VitePress puts side padding on .VPHero and none on .container, which
+ * makes the hero content wider than the after-hero blocks.
+ */
+.VPHome .VPHero {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .VPHome .VPHero .container {
-  max-width: 960px;
+  max-width: 1152px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+/* Compact left column; keep type readable next to the large illustration. */
+.VPHome .VPHero .name,
+.VPHome .VPHero .text {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.VPHome .VPHero .text {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+.VPHome .VPHero .name {
+  max-width: 20rem;
+}
+
+.VPHome .VPHero .text {
+  max-width: 100%;
+}
+
+.VPHome .VPHero .tagline {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 22rem;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .name,
+  .VPHome .VPHero .text {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .VPHome .VPHero .text {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .VPHome .VPHero .name {
+    max-width: 24rem;
+  }
+
+  .VPHome .VPHero .tagline {
+    font-size: 17px;
+    line-height: 26px;
+    max-width: 26rem;
+  }
+
+  .VPHome .VPHero .image-container {
+    width: 460px;
+    height: 460px;
+  }
+
+  .VPHome .VPHero .image-src {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero.has-image .main {
+    max-width: 400px;
+    width: 38%;
+  }
+
+  .VPHome .VPHero .name,
+  .VPHome .VPHero .text {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .VPHome .VPHero .text {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .VPHome .VPHero .name {
+    max-width: 22rem;
+  }
+
+  .VPHome .VPHero .tagline {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 24rem;
+  }
+
+  .VPHome .VPHero .image-container {
+    width: 100%;
+    height: 100%;
+    transform: translate(-8px, -16px);
+  }
+
+  .VPHome .VPHero .image-bg {
+    width: 520px;
+    height: 520px;
+  }
+
+  .VPHome .VPHero .image-src {
+    max-width: 460px;
+    max-height: 460px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+}
+
+/* Larger hero CTAs (VitePress defaults to size="medium"). */
+.VPHome .VPHero .actions .VPButton {
+  border-radius: 24px;
+  padding: 0 28px;
+  line-height: 48px;
+  font-size: 16px;
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .actions .VPButton {
+    padding: 0 32px;
+    line-height: 52px;
+    font-size: 17px;
+  }
 }
 
 /* Full-width mobile nav screen (default theme caps .container at 288px). */

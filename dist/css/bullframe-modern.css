@@ -1,27 +1,18 @@
-/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css 
- */
+/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
-/* Bullframe CSS - Modern variant
- *
- * Layered on top of the system-default variant (which auto-switches via
- * prefers-color-scheme). This variant adds modern CSS features available in
- * 2024+ browsers: color-scheme, color-mix(), oklch(), :has(), container queries.
- *
- * Browser support: Chrome 111+, Safari 16.4+, Firefox 113+ (covers latest 2 majors).
- *
- * Use this when you want the bleeding edge. Use bullframe-system-default.css for
- * the maximum-compatibility classic build.
- */
+/* Modern build: system-default plus color-scheme, color-mix, oklch, :has, container queries.
+ * Target latest 2 majors (Chrome 111+, Safari 16.4+, Firefox 113+). Prefer system-default for wider reach. */
 
-/* Bullframe CSS v6.0.0 - System Default (auto dark/light via prefers-color-scheme) */
+/* Class-based + system dark: bullframe.css, then dark rules under prefers-color-scheme. */
 
-/* Bullframe CSS v6.0.0 - Main Entry Point */
+/* Class-based default build (light). Import map for the full framework. */
 
 /* Variables */
-/* Bullframe CSS v6.0.0 - CSS Custom Properties (Variables) */
+/* Design tokens (--bf-*). Shared by every build variant.
+ * Override on :root (or a scope) to theme without rebuilding. */
 
 :root {
-  /* Colors - Backgrounds, texts and borders */
+  /* Neutrals */
   --bf-white: rgb(255 255 255);
   --bf-light: rgb(240 240 240);
   --bf-gray-light-extra: rgb(233 233 233);
@@ -33,37 +24,32 @@
   --bf-dark-extra: rgb(17 17 17);
   --bf-black: rgb(0 0 0);
 
-  /* Colors - Mark and ins */
+  /* Highlight / mark */
   --bf-yellow-light: rgb(255 255 153);
   --bf-yellow: rgb(255 255 0);
   --bf-orange: rgb(255 165 0);
 
-  /* Colors - Anchors and accent */
-  /* WCAG AA: --bf-blue meets 4.5:1 for blue-on-white (links). --bf-blue-light meets 4.5:1 for white-on-blue (buttons). */
-  --bf-blue: rgb(
-    0 86 179
-  ); /* Darkened from rgb(0 123 255) for WCAG AA contrast (links on white) */
-
-  --bf-blue-light: rgb(0 65 135); /* Darkened for hover states */
+  /* Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1) */
+  --bf-blue: rgb(0 86 179);
+  --bf-blue-light: rgb(0 65 135);
   --bf-blue-light-extra: rgb(190 216 254);
 
-  /* Colors - Invalid forms */
+  /* Invalid / error */
   --bf-red: rgb(255 0 0);
 
-  /* Colors - Dark mode adjustments */
-  /* These are used in dark mode to ensure proper contrast and visibility */
-  --bf-dark-bg: rgb(28 28 28); /* dark-extra + 7.5% lightness for body background */
-  --bf-dark-link: rgb(77 165 255); /* blue + 20% lightness for better visibility on dark */
-  --bf-dark-link-hover: rgb(77 165 255); /* blue-light + 20% lightness */
-  --bf-dark-border-focus: rgb(26 140 255); /* blue + 10% lightness for form focus borders */
-  --bf-dark-shadow-focus: rgb(3 102 214 / 50%); /* blue shadow for focus states */
-  --bf-dark-mark-bg: rgb(230 230 0); /* yellow - 10% lightness */
-  --bf-dark-ins-bg: rgb(255 255 200); /* yellow-light + 45% lightness */
-  --bf-dark-button-hover: rgb(184 184 184); /* gray-light -10% lightness */
-  --bf-dark-button-shadow: rgb(255 255 255 / 45%); /* white shadow for button focus */
-  --bf-dark-invalid: rgb(255 38 38); /* red adjusted for dark mode visibility */
+  /* Dark-mode surfaces (used by utility-global-dark*.css) */
+  --bf-dark-bg: rgb(28 28 28);
+  --bf-dark-link: rgb(77 165 255);
+  --bf-dark-link-hover: rgb(77 165 255);
+  --bf-dark-border-focus: rgb(26 140 255);
+  --bf-dark-shadow-focus: rgb(3 102 214 / 50%);
+  --bf-dark-mark-bg: rgb(230 230 0);
+  --bf-dark-ins-bg: rgb(255 255 200);
+  --bf-dark-button-hover: rgb(184 184 184);
+  --bf-dark-button-shadow: rgb(255 255 255 / 45%);
+  --bf-dark-invalid: rgb(255 38 38);
 
-  /* Spacing */
+  /* Spacing scale + grid gutter */
   --bf-spacing-sm: 0.25rem;
   --bf-spacing-md: 0.5rem;
   --bf-spacing-lg: 1rem;
@@ -71,7 +57,7 @@
   --bf-spacing-xxl: 3rem;
   --bf-spacing-grid-gutter: 1.5rem;
 
-  /* Typography */
+  /* Type */
   --bf-font-sans-serif:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -82,7 +68,7 @@
   --bf-body-font-size-rem: 1.6rem;
   --bf-body-line-height: 1.5;
 
-  /* Breakpoints */
+  /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;
   --bf-breakpoint-sm: 576px;
   --bf-breakpoint-md: 768px;
@@ -1350,7 +1336,8 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
-/* Miscellaneous - Focus */
+/* Keyboard-first focus: hide outline unless :focus-visible; orange ring for keyboard users.
+ * Form controls clear UA outline here; field chrome lives in forms/styling.css. */
 
 /* Remove focus outline if it's not keyboard-triggered */
 :where(:focus:not(:focus-visible)) {
@@ -1698,23 +1685,9 @@ caption {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
-/* Accessibility — user preference media queries.
- *
- * These rules ONLY apply when the user has opted in via OS or browser
- * settings (prefers-contrast: more, forced-colors: active). They do not
- * change the default rendering for anyone else, so they are strictly
- * additive and safe to ship in a minor release.
- */
+/* Preference media queries only (prefers-contrast, forced-colors). Additive; no default visual change. */
 
-/* prefers-contrast: more
- *
- * Triggered when the user requests higher contrast (macOS "Increase
- * contrast", Windows Contrast Themes, GNOME high-contrast). We:
- *  - underline links unconditionally (no longer relying on color alone
- *    to convey "this is a link" — WCAG 1.4.1 Use of Color)
- *  - thicken the focus ring so it's harder to miss
- *  - strengthen form-field borders
- */
+/* prefers-contrast: more: underline links, thicker focus, stronger field borders (WCAG 1.4.1). */
 @media (prefers-contrast: more) {
   a {
     text-decoration: underline;
@@ -1744,16 +1717,7 @@ caption {
   }
 }
 
-/* forced-colors: active (Windows High Contrast Mode and similar)
- *
- * In Forced Colors Mode the OS overrides authored colors with a fixed
- * system palette. Most things keep working automatically, but the
- * focus ring (outline: 0.2rem solid var(--bf-orange)) gets stripped
- * because Forced Colors ignores authored colors. Restoring it via the
- * Highlight system color keeps the focus indicator visible.
- *
- * UA+ already covers <mark>; this complements that for focus and links.
- */
+/* forced-colors: restore focus via Highlight; underline links; keep button borders. */
 @media (forced-colors: active) {
   :focus-visible {
     outline-color: Highlight;
@@ -2193,7 +2157,7 @@ p.bf-lead {
 body.bf-responsive-typography {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
-/* Utilities - Grid system */
+/* 12-column flex grid: .bf-container / .bf-row / .bf-col-* (+ optional --break-* stacking). */
 
 .bf-container,
 .bf-container--fluid {
@@ -2235,7 +2199,7 @@ body.bf-responsive-typography {
   padding-left: 0;
 }
 
-/* Column widths */
+/* Column spans (12ths). */
 .bf-col-12 {
   flex-basis: 100%;
   max-width: 100%;
@@ -2296,7 +2260,7 @@ body.bf-responsive-typography {
   max-width: 8.3333%;
 }
 
-/* Responsive breakpoints: stack columns */
+/* Stack columns below breakpoint when container has .bf-container--break-{xs|md|lg}. */
 @media (max-width: 575px) {
   .bf-container--break-xs .bf-row {
     margin-left: 0;
@@ -2342,7 +2306,7 @@ body.bf-responsive-typography {
   }
 }
 
-/* Table fix (not needed for flexbox, but kept for compatibility with Bullframe v4.x) */
+/* Table cells with col classes: keep static positioning (legacy v4 compatibility). */
 table td[class^='bf-col'],
 table th[class^='bf-col'] {
   position: static;
@@ -2933,19 +2897,8 @@ dt {
     transition-duration: 0s !important;
   }
 }
-/* Font smoothing utilities (opt-in).
- *
- * Class names and property values match Tailwind's font-smoothing utilities:
- * https://tailwindcss.com/docs/font-smoothing
- * — devs migrating from a Tailwind project get the same API.
- *
- * Bullframe does NOT apply font-smoothing globally because Apple's own guidance
- * recommends subpixel-antialiased rendering for body text on macOS — using
- * antialiased everywhere makes text thinner and harder to read at small sizes.
- *
- * Use these utilities when you specifically need control (e.g. light text on
- * dark backgrounds, where subpixel rendering can produce color fringing).
- */
+/* Opt-in font-smoothing (.bf-antialiased / .bf-subpixel-antialiased).
+ * Names match Tailwind. Not applied globally: Apple recommends subpixel for body text on macOS. */
 
 .bf-antialiased {
   -webkit-font-smoothing: antialiased;
@@ -3034,29 +2987,13 @@ dt {
     border-collapse: collapse !important;
   }
 }
-/* Dark mode overrides — System preference (prefers-color-scheme: dark).
- *
- * Both imports below use postcss-import's media-conditional @import support:
- * the imported content is wrapped in @media (prefers-color-scheme: dark) at
- * build time. This is the native-CSS replacement for the old Sass mixin
- * pattern that previously duplicated all of these rules.
- *
- * Source of truth for the dark rules: src/css/_utility-global-dark-shared.css
- * Source of truth for the scrollbars: src/css/utilities/global-dark-scrollbars.css
- */
+/* System-preference dark: shared dark rules + scrollbars under prefers-color-scheme.
+ * postcss-import wraps each import in the media query at build time. */
 @media (prefers-color-scheme: dark) {
 
-/* Shared dark-mode rules — imported by:
- *  - utility-global-dark.css         (unconditional, for the always-dark variant)
- *  - utility-global-dark-prefers.css (wrapped in @media (prefers-color-scheme: dark)
- *                                     via media-conditional @import)
- *
- * Contains every dark-mode rule that applies in BOTH variants. Variant-specific
- * extras (the IE select-arrow hack and the .bf-disabled button rules) live in
- * utility-global-dark.css. Dark-mode scrollbars live in utilities/global-dark-scrollbars.css.
- *
- * Underscore prefix keeps this file out of the buildAllCss glob in vite.config.js.
- */
+/* Shared dark-mode rules for always-dark and prefers-color-scheme builds.
+ * Variant-only extras: utility-global-dark.css. Scrollbars: global-dark-scrollbars.css.
+ * Underscore prefix excludes this file from the buildAllCss glob. */
 
 html {
   color: var(--bf-light);
@@ -3311,9 +3248,7 @@ html {
    * Visually equivalent to v6.0.0's rgb(0 65 135), now provenance-traceable. */
   --bf-blue-light: color-mix(in oklab, var(--bf-blue), black 18%);
 
-  /* Opt-in perceptually-uniform palette. Use these when you want predictable
-   * lightness math (e.g. building hover/active variants programmatically).
-   * Not consumed by default classes — reference them yourself. */
+  /* Opt-in oklch palette for custom theming. Not wired into default classes. */
   --bf-blue-oklch: oklch(40% 0.16 250);
   --bf-red-oklch: oklch(55% 0.22 27);
   --bf-yellow-oklch: oklch(95% 0.18 100);

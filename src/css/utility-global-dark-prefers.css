@@ -1,13 +1,5 @@
-/* Dark mode overrides — System preference (prefers-color-scheme: dark).
- *
- * Both imports below use postcss-import's media-conditional @import support:
- * the imported content is wrapped in @media (prefers-color-scheme: dark) at
- * build time. This is the native-CSS replacement for the old Sass mixin
- * pattern that previously duplicated all of these rules.
- *
- * Source of truth for the dark rules: src/css/_utility-global-dark-shared.css
- * Source of truth for the scrollbars: src/css/utilities/global-dark-scrollbars.css
- */
+/* System-preference dark: shared dark rules + scrollbars under prefers-color-scheme.
+ * postcss-import wraps each import in the media query at build time. */
 
 @import './_utility-global-dark-shared.css' (prefers-color-scheme: dark);
 @import './utilities/global-dark-scrollbars.css' (prefers-color-scheme: dark);

@@ -1,4 +1,5 @@
-/* Miscellaneous - Focus */
+/* Keyboard-first focus: hide outline unless :focus-visible; orange ring for keyboard users.
+ * Form controls clear UA outline here; field chrome lives in forms/styling.css. */
 
 /* Remove focus outline if it's not keyboard-triggered */
 :where(:focus:not(:focus-visible)) {

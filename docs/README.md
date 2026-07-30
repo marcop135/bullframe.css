@@ -20,7 +20,7 @@ Reference for the Bullframe CSS framework: how to install, customize, and use ea
 | [API Reference](api-reference.md) | Auto-generated list of CSS custom properties and classes |
 | [Demo](/demo/) | Interactive demo of all builds and components |
 
-The root [README](../README.md) stays a short overview; details live here.
+The root [README on GitHub](https://github.com/marcop135/bullframe.css#readme) stays a short overview; details live here.
 
 ## Run this site locally
 

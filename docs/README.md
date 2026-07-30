@@ -18,7 +18,7 @@ Reference for the Bullframe CSS framework: how to install, customize, and use ea
 | [Accessibility](accessibility.md) | Accessibility features and best practices |
 | [Browser Support](browser-support.md) | Supported browsers and fallbacks |
 | [API Reference](api-reference.md) | Auto-generated list of CSS custom properties and classes |
-| [Demo](demo.md) | Interactive demo of all builds and components |
+| [Demo](/demo/) | Interactive demo of all builds and components |
 
 The root [README](../README.md) stays a short overview; details live here.
 

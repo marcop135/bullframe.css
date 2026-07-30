@@ -14,7 +14,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: View demo
-      link: /demo
+      link: /demo/
     - theme: alt
       text: GitHub
       link: https://github.com/marcop135/bullframe.css

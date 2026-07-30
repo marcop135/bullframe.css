@@ -122,7 +122,7 @@ export default defineConfig({
     search: { provider: 'local' },
     outline: { level: [2, 3] },
     nav: [
-      { text: 'Get started', link: '/getting-started' },
+      { text: 'Getting started', link: '/getting-started' },
       { text: 'Docs', link: '/README' },
       { text: 'Demo', link: '/demo/', target: '_blank', rel: 'noopener' },
     ],

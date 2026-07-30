@@ -12,4 +12,4 @@ onMounted(() => {
 })
 </script>
 
-Introduction is part of [Get started](/getting-started).
+Introduction is part of [Getting started](/getting-started).

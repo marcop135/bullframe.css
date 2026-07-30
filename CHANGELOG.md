@@ -1,112 +1,16 @@
-# Changes to Bullframe CSS
+# Changelog
 
 ## Unreleased
 
-### New build variant
+`6.0.0` candidate (not tagged on npm yet) - BREAKING CHANGES
 
-- Added `bullframe-modern.css` - extends `bullframe-system-default.css` with modern CSS:
-  - `color-scheme: light dark` for native browser UI hints
-  - `color-mix(in oklab, ...)` to compute hover tints from base colors (visually equivalent to v6.0.0)
-  - `oklch()` palette tokens (`--bf-blue-oklch`, `--bf-red-oklch`, `--bf-yellow-oklch`, `--bf-orange-oklch`) - opt-in, additive
-  - `:has()`-based form validation hint via `.bf-form-modern` wrapper class
-  - Container-query support via `data-bf-container-query` attribute and `.bf-cq-*` classes
-- New package export: `import 'bullframe.css/modern'`
-- Existing seven core build variants are unchanged byte-for-byte; modern features are strictly additive.
-
-### New utilities
-
-- `.bf-antialiased` and `.bf-subpixel-antialiased` - opt-in font-smoothing utilities. Class names and property values mirror [Tailwind's font-smoothing utilities](https://tailwindcss.com/docs/font-smoothing). Bullframe does not apply antialiasing globally; subpixel rendering is better for body text on macOS at small sizes.
-
-### Documentation
-
-- Migrated the documentation site from Docusaurus v3 to VitePress (`docs/`, brand orange `#f95c1f`).
-- Interactive specimen at `/demo/` (synced via `npm run docs:sync-demo`); redesigned demo shell with build switching, quieter panels, and Nu Html Checker cleanups.
-- New `docs/components/` patterns, `docs/api-reference.md`, and `scripts/build-api-reference.mjs`.
-- Docs index at `/README` (Docs); get-started guide at `/getting-started` (`/intro` and `/install` redirect).
-- Home: engineer-first pitch, quieter transparent bull mark hero, CDN copy control, mode file row, and stats. Theming owns the modern-CSS variant.
-- Shortened root README to install, eight-build table, docs links, and license.
-- Docs QA: dead-link checks enforced; SPA hard-nav for `/demo/` so the specimen does not 404; idle/hover page warmup for faster client navigation; full-width mobile nav screen.
-- Docs brand oranges darkened for WCAG AA 4.5:1 (text on light, white on brand buttons); bright orange kept for decorative SVG marks.
-- Crawl policy: `robots.txt` and demo `noindex` / Apache `X-Robots-Tag` hide `/demo/`; docs stay open with sitemap, Open Graph, JSON-LD, and `llms.txt`.
-
-### Build & deployment
-
-- GitHub Actions FTPS deploy (`.github/workflows/deploy-docs.yaml`) uploads `docs/.vitepress/dist/` to Netsons; Apache rules in `docs/public/.htaccess`. Netlify site removed.
-- `npm run docs:sync-demo` copies CSS and demo assets into the VitePress public folder; `docs:dev` runs sync first.
-- CI verifies `dist/css/bullframe-modern.css`; runs on Node 20 and 22.
-- README CI badge tracks `main` (stable line). Docs deploy triggers on `v6` and `main`.
-- Removed Docusaurus / `website/`; VitePress is the docs toolchain.
-- Tightened npm publish surface: `files` stays CSS-only (`dist/css`, `src/css`); `.npmignore` denies docs, demo, scripts, tests, and non-CSS `dist/` assets; `exports` limited to `dist/css/*`.
-
-### Source
-
-- Tightened CSS module comments on entry builds, tokens, grid, dark-mode layers, focus, and preference queries. Comment-only; no public API or visual changes.
-
-### Fixed
-
-- Removed redundant `bullframe-dark-prefers.css` and `bullframe-classless-dark-prefers.css` (identical to system-default builds).
-- Added missing `utilities/font-smoothing.css` import to `bullframe-utilities.css`.
-- Added missing `miscellaneous/accessibility-preferences.css` import to `bullframe-classless.css`.
-- Fixed `npm run dev` so demo pages can serve compiled CSS without a prior production build.
-- Fixed variant counts, `@latest` install snippets, and demo build selector for `bullframe-modern.css`.
-- Fixed VitePress social-card metadata; improved API-reference generator multi-line handling.
-- Fixed demo dark theme switching (body `background-image` vs shorthand; `data-demo-theme` for panels).
-- Made Playwright visual-regression snapshots platform-specific (Linux CI and Windows).
-
-## 6.0.0 (April 17, 2026) - BREAKING CHANGES
-
-### Architecture
-
-- **MAJOR**: Migrated from Sass/SCSS to native CSS with PostCSS
-- **BREAKING**: All Sass variables replaced with CSS custom properties (`--bf-*`)
-- **BREAKING**: All Sass mixins removed — replaced with utility classes or direct CSS
-- **BREAKING**: Build process now uses PostCSS (`postcss-import`, `autoprefixer`, `cssnano`) instead of Sass
-- Removed Sass-specific dependencies (`sass`, `stylelint-config-standard-scss`)
-- Removed legacy Sass source files (`src/scss/`) — git history preserves them
-- All CSS source now lives in `src/css/` with native CSS syntax
-
-### Dark Mode
-
-- Added three dark mode variants: always-dark, system-preference (`prefers-color-scheme`), and classless
-- Added dark mode CSS variables (`--bf-dark-bg`, `--bf-dark-link`, `--bf-dark-border-focus`, etc.)
-- Added dark scrollbar styling for WebKit/Blink browsers
-
-### Accessibility
-
-- **BREAKING**: Darkened `--bf-blue` and `--bf-blue-light` for WCAG AA color contrast compliance (4.5:1)
-  - Primary buttons: white text on blue background now meets contrast requirements
-  - Links: blue text on white background now meets contrast requirements
-  - Visual change: blues are slightly darker — override with CSS variables if needed
-- Enhanced `:focus-visible` handling for keyboard-only focus indicators
-- Added `prefers-reduced-motion` support via `.bf-reduced-motion` utility
-- Added ARIA attribute styling (`aria-busy`, `aria-disabled`, `aria-hidden`)
-- Integrated [UA+ enhancements](https://fokus.dev/tools/uaplus/) for better browser defaults
-
-### Documentation
-
-- Added Docusaurus v3 documentation site (`website/`)
-- Documentation covers: getting started, CSS variables, typography, layout, forms, buttons, utilities, theming, dark mode, browser support
-- Dark theme enabled by default with system preference respect
-
-### Build & Tooling
-
-- Vite build with custom plugins (`buildAllCss`, `copyDocsFiles`)
-- Source maps generated for all CSS builds
-- Updated stylelint config from SCSS to standard CSS
-- Updated all npm dependencies to latest versions
-
-### New Features
-
-- Added landing page with Vite build
-- Added interactive demo page with build variant selector
-- Added social banner HTML generator (1200x630)
-- RTL (right-to-left) support maintained across all variants
-
-### Fixes
-
-- Fixed markdown table alignment issues in README
-- Improved HTML demo validation via [html-validate](https://html-validate.org/)
-- Updated demo page to reference v6.0.0
+- Replaced Sass with native CSS and PostCSS; `$bf-*` / mixins → `--bf-*` and utilities
+- Darkened link/button blues for WCAG AA 4.5:1 (visual change; override with variables)
+- Shipped class-based, classless, dark, and system-default builds from one token set
+- Added `bullframe-modern.css` for `color-scheme`, `color-mix`, `oklch`, `:has()`, and container queries
+- Added opt-in font-smoothing, reduced-motion, and stronger focus/ARIA defaults
+- Replaced the Docusaurus site with VitePress docs and a `/demo/` specimen
+- Removed Sass sources, redundant `*-dark-prefers` builds, and Netlify docs hosting
 
 ## 5.1.0 - (July 08, 2025)
 

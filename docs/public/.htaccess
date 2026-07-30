@@ -10,7 +10,7 @@ DirectoryIndex index.html
   # Force /demo trailing slash
   RewriteRule ^demo$ /demo/ [R=301,L]
 
-  # Intro / Install merged into Get started
+  # Intro / Install merged into Getting started
   RewriteRule ^intro/?$ /getting-started [R=301,L]
   RewriteRule ^intro\.html$ /getting-started [R=301,L]
   RewriteRule ^install/?$ /getting-started [R=301,L]

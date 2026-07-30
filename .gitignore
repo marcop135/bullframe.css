@@ -36,4 +36,5 @@ docs/public/demo/
 playwright-report/
 test-results/
 .playwright/
+.playwright-mcp/
 tests/e2e/.design-check/

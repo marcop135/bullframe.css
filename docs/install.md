@@ -12,4 +12,4 @@ onMounted(() => {
 })
 </script>
 
-Install moved to [Get started](/getting-started).
+Install moved to [Getting started](/getting-started).

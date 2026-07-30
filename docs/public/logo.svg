@@ -3,14 +3,15 @@
   <circle cx="16" cy="21" r="2.5" fill="#f95c1f"/>
   <circle cx="24" cy="21" r="2.5" fill="#f95c1f"/>
   <circle cx="32" cy="21" r="2.5" fill="#f95c1f"/>
-  <path
-    d="M22 38c0-6 5-10 10-10s10 4 10 10v4c0 2-1 4-3 4H25c-2 0-3-2-3-4v-4Z"
-    fill="#f95c1f"
-  />
-  <path
-    d="M18 30c2-6 6-8 8-8s4 2 4 4-2 4-4 4-6-2-8 0Zm28 0c-2-6-6-8-8-8s-4 2-4 4 2 4 4 4 6-2 8 0Z"
-    fill="#f95c1f"
-  />
-  <circle cx="26" cy="38" r="2" fill="#fff"/>
-  <circle cx="38" cy="38" r="2" fill="#fff"/>
+  <!-- Geometric bull head mark -->
+  <path d="M14 28c-1-8 3-14 7-16 2-1 3.5.5 3 2.5-1 4-.5 8 1 11z" fill="#f95c1f"/>
+  <path d="M50 28c1-8-3-14-7-16-2-1-3.5.5-3 2.5 1 4 .5 8-1 11z" fill="#f95c1f"/>
+  <ellipse cx="18" cy="34" rx="3.5" ry="5" transform="rotate(-24 18 34)" fill="#f95c1f"/>
+  <ellipse cx="46" cy="34" rx="3.5" ry="5" transform="rotate(24 46 34)" fill="#f95c1f"/>
+  <path d="M20.5 36c0-8 5-13 11.5-13S43.5 28 43.5 36v6c0 5-3.5 8.5-11.5 8.5S20.5 47 20.5 42z" fill="#f95c1f"/>
+  <path d="M26 39c1.5-2.5 5-2.5 6.5 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M33.5 39c1.5-2.5 5-2.5 6.5 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="26" y="43" width="12" height="7.5" rx="2.5" fill="#fff"/>
+  <ellipse cx="29.5" cy="46.8" rx="1.1" ry="1.4" fill="#f95c1f"/>
+  <ellipse cx="34.5" cy="46.8" rx="1.1" ry="1.4" fill="#f95c1f"/>
 </svg>

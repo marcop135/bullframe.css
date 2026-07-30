@@ -2,7 +2,7 @@
   "name": "bullframe.css",
   "version": "6.0.0",
   "type": "module",
-  "description": "Bullframe CSS is a lightweight CSS framework for building fast, responsive, and accessible UIs; semantic, themeable, and classless-friendly, with solid cross-browser support.",
+  "description": "Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default, classless when you want it, system dark built in. Eight builds, shared tokens, solid cross-browser support. One UI framework. Three ways to write it. Any stack.",
   "main": "dist/css/bullframe.css",
   "style": "dist/css/bullframe.css",
   "jsdelivr": "dist/css/bullframe.css",

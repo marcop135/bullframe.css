@@ -41,6 +41,13 @@
   color: var(--bfh-orange);
 }
 
+.bfh-bridge {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--bfh-muted);
+}
+
 .bfh-heading {
   margin: 0;
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);

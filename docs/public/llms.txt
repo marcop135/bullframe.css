@@ -1,6 +1,6 @@
 # Bullframe CSS
 
-> One UI framework. Three ways to write it. Semantic by default. Classless when you want it. System dark built in. Zero JavaScript. Eight builds. ~8 KB gzipped. Zero runtime dependencies. MIT license.
+> One UI framework. Three ways to write it. Any stack. Semantic by default. Classless when you want it. System dark built in. Eight builds. ~8 KB gzipped. Zero runtime dependencies. MIT license.
 
 Site: https://bullframecss.marcopontili.com
 Repo: https://github.com/marcop135/bullframe.css

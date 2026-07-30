@@ -75,8 +75,8 @@ const stats = [
   },
   {
     value: '0',
-    label: 'JavaScript',
-    detail: 'Zero runtime JS. Zero dependencies. One stylesheet.',
+    label: 'Dependencies',
+    detail: 'One stylesheet. Shared --bf-* tokens. Any stack.',
   },
   {
     value: 'AA',
@@ -96,7 +96,8 @@ const stats = [
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Modes</p>
-        <h2 id="bfh-pillars-heading" class="bfh-heading">One framework. Three authoring modes. Zero JavaScript.</h2>
+        <p class="bfh-bridge">Drop in a stylesheet. Keep your stack.</p>
+        <h2 id="bfh-pillars-heading" class="bfh-heading">One framework. Three authoring modes. Any stack.</h2>
       </div>
       <ul class="bfh-pillars">
         <li v-for="p in pillars" :key="p.label" class="bfh-pillar">
@@ -178,7 +179,7 @@ const stats = [
     <section class="bfh-section bfh-section--stats" aria-labelledby="bfh-stats-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">By the numbers</p>
-        <h2 id="bfh-stats-heading" class="bfh-heading">Small file. No runtime. Accessible defaults.</h2>
+        <h2 id="bfh-stats-heading" class="bfh-heading">Small file. Zero dependencies. Accessible defaults.</h2>
       </div>
       <div class="bfh-stats">
         <div v-for="s in stats" :key="s.label" class="bfh-stat">
@@ -195,15 +196,8 @@ const stats = [
         <h2 id="bfh-cta-heading" class="bfh-heading">Ready when you are.</h2>
       </div>
       <div class="bfh-cta">
-        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Getting started</a>
-        <a
-          class="bfh-cta__btn bfh-cta__btn--alt"
-          href="https://github.com/marcop135/bullframe.css"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
+        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Read the docs</a>
+        <a class="bfh-cta__btn bfh-cta__btn--alt" href="/demo/">View the demo</a>
       </div>
     </section>
   </div>

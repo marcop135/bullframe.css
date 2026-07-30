@@ -9,6 +9,22 @@ const { Layout } = DefaultTheme;
 onMounted(() => {
   if (!inBrowser) return;
 
+  // Swap home hero art for VitePress dark / light appearance.
+  const syncHomeHero = () => {
+    const img = document.querySelector('.VPHome .VPHero .image-src');
+    if (!img) return;
+    const dark = document.documentElement.classList.contains('dark');
+    const next = dark ? '/bullframe-hero-dark.png' : '/bullframe-hero.png';
+    if (!img.getAttribute('src')?.endsWith(next)) {
+      img.setAttribute('src', next);
+    }
+  };
+  syncHomeHero();
+  new MutationObserver(syncHomeHero).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class'],
+  });
+
   // Static /demo/ is not a VitePress page; SPA navigation 404s. Force a full load.
   document.addEventListener(
     'click',

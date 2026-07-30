@@ -133,19 +133,14 @@
     min-inline-size: 0;
   }
 
-  /* Turn labels into block elements
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Labels for inputs, with the exception of radio buttons and checkboxes, selects, and
-   * textarea should be block elements.
-   */
-  label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
-    display: block;
+  /* Labels for text-like controls are block; :has() gated for older engines. */
+  @supports selector(:has(*)) {
+    label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
+      display: block;
+    }
   }
 
   /* Increase the block-size of textareas
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
    * The default height of textareas is small. We increase it a bit.
    * Note: This complements existing textarea rules in forms/normalization.css
    */
@@ -218,43 +213,40 @@
     padding: 0.25em 0.5em;
   }
 
-  /* Fading dialogs
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
-   * Add fade in and fade out transitions for dialogs and popovers and backdrops and
-   * reduce the opacity of the backdrop.
-   */
-  dialog::backdrop {
-    background: oklch(0% 0 0 / 0.3);
-  }
+  /* Soft dialog / popover enter transitions (skip when reduced-motion is on). */
+  @media (prefers-reduced-motion: no-preference) {
+    dialog::backdrop {
+      background: rgb(0 0 0 / 0.3);
+    }
 
-  dialog,
-  [popover],
-  dialog::backdrop {
-    opacity: 0;
-    transition:
-      opacity 300ms ease-out,
-      display 300ms allow-discrete,
-      overlay 300ms allow-discrete;
-  }
+    dialog,
+    [popover],
+    dialog::backdrop {
+      opacity: 0;
+      transition:
+        opacity 300ms ease-out,
+        display 300ms allow-discrete,
+        overlay 300ms allow-discrete;
+    }
 
-  dialog[open],
-  :popover-open,
-  dialog[open]::backdrop {
-    opacity: 1;
-  }
-
-  @starting-style {
     dialog[open],
     :popover-open,
     dialog[open]::backdrop {
-      opacity: 0;
+      opacity: 1;
+    }
+
+    @supports (overlay: auto) {
+      @starting-style {
+        dialog[open],
+        :popover-open,
+        dialog[open]::backdrop {
+          opacity: 0;
+        }
+      }
     }
   }
 
   /* Increase specificity of [hidden]
-   * Source: UA+ - https://fokus.dev/tools/uaplus/
-   * 
    * Make it harder to accidentally unhide elements with the `[hidden]` attribute while
    * still maintaining the until-found functionality.
    * Note: This complements existing [hidden] rules in layout.css

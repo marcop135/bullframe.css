@@ -1,16 +1,7 @@
-/* Always-dark overrides (no media query). Shared rules + IE select hack + disabled buttons.
+/* Always-dark overrides (no media query). Shared rules + disabled buttons.
  * Scrollbars come from utilities/global-dark-scrollbars.css via dark entry builds. */
 
 @import './_utility-global-dark-shared.css';
-
-/* stylelint-disable-next-line unit-no-unknown -- legacy browser hack */
-@media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
-  select:not([size], select[multiple]),
-  *[dir='rtl'] select:not([size], select[multiple]),
-  select[dir='rtl']:not([size], select[multiple]) {
-    background-image: none;
-  }
-}
 
 button.bf-disabled,
 [type='button'].bf-disabled,

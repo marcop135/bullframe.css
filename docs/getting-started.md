@@ -147,7 +147,7 @@ Eight files share the same `--bf-*` tokens. Default build is about **8 KB gzippe
 | `bullframe-utilities.css`                | Utilities only                      |
 | `bullframe-modern.css`                   | System-default plus modern CSS      |
 
-Modern CSS (`light-dark()`, `oklch()`, `:has()`, container queries): [Theming](/theming#modern-css-variant). Upgrading from v5: [Migration](/migration).
+Modern CSS (`color-scheme`, `oklch()`, `:has()`, container queries): [Theming](/theming#modern-css-variant). Upgrading from v5: [Migration](/migration).
 
 ## Next
 

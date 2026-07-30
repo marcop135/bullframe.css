@@ -3,51 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Demo B | Bullframe CSS</title>
+    <title>Demo C - Article | Bullframe CSS</title>
     <meta name="description" content="Bullframe is a lightweight CSS framework for responsive, cross-browser UIs. Fast, semantic, themeable, and classless-friendly." />
     <link rel="icon" type="image/png" sizes="16x16" href="/docs/demo/icons/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/docs/demo/icons/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/docs/demo/icons/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/docs/demo/icons/favicon.ico" />
     <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v6" />
-    <style>
-      .demo-shell {
-        max-width: 160rem;
-      }
-      #grid-specimen .grid-cell {
-        border: 1px solid var(--bf-gray-light);
-      }
-    </style>
   </head>
   <body class="bf-responsive-typography bf-reduced-motion">
     <a class="bf-sr-only focusable" href="#main-content">Skip to content</a>
-    <div class="bf-container bf-container--fluid bf-container--break-md demo-shell">
-      <header class="bf-m-b-3 bf-p-t-2">
-        <h1 class="bf-h2 bf-m-b-1">Bullframe CSS demo</h1>
-        <p class="bf-lead bf-m-b-2">Bullframe is a lightweight CSS framework for fast, accessible UIs. No JavaScript.</p>
-        <p class="bf-m-b-2">This page is a live specimen sheet so you can switch builds and inspect every element.</p>
-        <p class="bf-m-b-2">
-          <a class="bf-btn bf-m-b-2" href="/">Docs</a>
+    <div class="bf-container bf-container--break-md">
+      <header class="bf-m-b-4 bf-p-t-3">
+        <p class="bf-m-b-1"><mark><code>Variant C</code></mark> Docs article layout</p>
+        <h1>Demo</h1>
+        <p class="bf-lead">Each section opens like a documentation page: a title, a one-line lead, then specimens grouped in fieldsets.</p>
+        <p class="bf-m-b-3">
+          <a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css">GitHub</a>
+          <a class="bf-btn" href="/">Docs</a>
+          <a class="bf-btn" href="https://www.npmjs.com/package/bullframe.css">npm</a>
         </p>
-        <p class="bf-m-b-0">
-          <b><code>&lt;body&gt;</code> classes:</b>
-          <mark><code>.bf-responsive-typography</code></mark>
-          <mark><code>.bf-reduced-motion</code></mark>
-        </p>
-        <p class="bf-m-b-0">
-          <b>Layout:</b>
-          <mark><code>.bf-container--fluid</code></mark>
-          <mark><code>.bf-container--break-md</code></mark>
-        </p>
-      </header>
-      <div class="bf-row">
-        <aside class="bf-col-3 bf-m-b-3">
-          <nav class="bf-position-sticky bf-p-2" aria-label="Demo">
-            <p class="bf-t-weight-700 bf-m-b-2">Demo</p>
-            <fieldset class="bf-m-b-3">
-              <legend>CSS build</legend>
-              <label class="bf-display-block bf-m-b-1" for="build-selector">Theme / build</label>
-              <select id="build-selector" class="bf-width-100 bf-m-b-2" data-build-selector>
+        <fieldset class="bf-m-b-3">
+          <legend>Select CSS build</legend>
+          <label class="bf-display-block bf-m-b-1" for="build-selector">Build variant</label>
+          <select id="build-selector" data-build-selector>
             <option value="bullframe-system-default.min.css" selected>System Default (Light/Dark)</option>
             <option value="bullframe.min.css">Light Theme</option>
             <option value="bullframe-dark.min.css">Dark Theme</option>
@@ -56,41 +35,62 @@
             <option value="bullframe-classless-system-default.min.css">Classless (System Default)</option>
             <option value="bullframe-utilities.min.css">Utilities Only</option>
             <option value="bullframe-modern.min.css">Modern (Light/Dark)</option>
-              </select>
-              <p class="bf-m-t-2 bf-m-b-0">
-                <mark class="current-build"><code>bullframe-system-default.min.css</code></mark>
-              </p>
-            </fieldset>
-            <p class="bf-t-weight-700 bf-m-b-2">On this page</p>
-            <ul class="bf-list-unstyled">
-              <li class="bf-m-b-1"><a href="#texts">Text</a></li>
-              <li class="bf-m-b-1"><a href="#embedded-content">Embedded</a></li>
-              <li class="bf-m-b-1"><a href="#interactive-elements">Interactive</a></li>
-              <li class="bf-m-b-1"><a href="#forms">Forms</a></li>
-              <li class="bf-m-b-1"><a href="#components">Components</a></li>
-              <li class="bf-m-b-1"><a href="#tables">Tables</a></li>
-              <li class="bf-m-b-1"><a href="#grid-system">Grid</a></li>
-            </ul>
-            <hr />
-            <p class="bf-m-b-1"><a href="#top">Back to top</a></p>
-          </nav>
-        </aside>
-        <div class="bf-col-9">
-          <main id="main-content">
+          </select>
+          <p class="bf-m-t-2">
+            <b>CSS build in use:</b>
+            <mark class="current-build"><code>bullframe-system-default.min.css</code></mark>
+          </p>
+          <p>
+            <b><code>&lt;body&gt;</code> classes:</b>
+            <mark><code>.bf-responsive-typography</code></mark>
+            <mark><code>.bf-reduced-motion</code></mark>
+          </p>
+        </fieldset>
+        <nav class="bf-m-b-3" aria-label="Demo sections">
+          <p>
+            <a href="#texts">Text</a> ·
+            <a href="#embedded-content">Embedded</a> ·
+            <a href="#interactive-elements">Interactive</a> ·
+            <a href="#forms">Forms</a> ·
+            <a href="#components">Components</a> ·
+            <a href="#tables">Tables</a> ·
+            <a href="#grid-system">Grid</a>
+          </p>
+        </nav>
+        <hr />
+      </header>
+      <main id="main-content">
 
-        <h2 id="texts" class="bf-m-t-4 bf-m-b-2">Text elements</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Text elements</legend>
+<h2 id="texts" class="bf-m-t-4 bf-m-b-2">Text elements</h2>
+            <p class="bf-lead bf-m-b-3">Typography, inline elements, lists, quotes, and code samples.</p>
         <div class="bf-row">
           <div class="bf-col-12">
             <div class="bf-m-b-4">
-              <h3>Headings</h3>
+              <h3 class="bf-m-b-1">Headings</h3>
               <h1>Heading 1 <a href="#">with link</a></h1>
               <h2>Heading 2 <a href="#">with link</a></h2>
-              <h3>Heading 3 <a href="#">with link</a></h3>
-              <h4>Heading 4 <a href="#">with link</a></h4>
+              <h3 class="bf-m-b-1">Heading 3 <a href="#">with link</a></h3>
+              <h4 class="bf-m-b-1">Heading 4 <a href="#">with link</a></h4>
               <h5>Heading 5 <a href="#">with link</a></h5>
               <h6>Heading 6 <a href="#">with link</a></h6>
             </div>
-            <h3>Paragraphs with headings utilities</h3>
+            <h3 class="bf-m-b-1">Paragraphs with headings utilities</h3>
             <p class="bf-h1">Heading 1</p>
             <p class="bf-h2">Heading 2</p>
             <p class="bf-h3">Heading 3</p>
@@ -99,7 +99,7 @@
             <p class="bf-h6">Heading 6</p>
           </div>
           <div class="bf-col-12">
-            <h3>Inline text elements</h3>
+            <h3 class="bf-m-b-1">Inline text elements</h3>
             <p>
               The <a href="#">a element</a> example<br />
               The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples
@@ -134,41 +134,41 @@
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>Paragraphs</h3>
+            <h3 class="bf-m-b-1">Paragraphs</h3>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
             <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable.</p>
           </div>
           <div class="bf-col-12">
-            <h3>hidden attribute</h3>
+            <h3 class="bf-m-b-1">hidden attribute</h3>
             <p hidden>This should be hidden in all browsers</p>
-            <h3>Template content</h3>
+            <h3 class="bf-m-b-1">Template content</h3>
             <template>
               <h1>{{title}}</h1>
               <slot></slot>
             </template>
-            <h3>Address</h3>
+            <h3 class="bf-m-b-1">Address</h3>
             <address>Address: somewhere, world</address>
           </div>
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>hr</h3>
+            <h3 class="bf-m-b-1">hr</h3>
             <hr />
           </div>
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>pre (383 characters)</h3>
+            <h3 class="bf-m-b-1">pre (383 characters)</h3>
             <pre>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
             </pre>
-            <h3>code (526 characters)</h3>
+            <h3 class="bf-m-b-1">code (526 characters)</h3>
             <code> html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline} </code>
           </div>
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>pre code</h3>
+            <h3 class="bf-m-b-1">pre code</h3>
             <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -185,7 +185,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>blockquotes</h3>
+            <h3 class="bf-m-b-1">blockquotes</h3>
             <blockquote>
               <p>
                 Some sort of famous witty quote marked up with a
@@ -201,7 +201,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>Ordered list</h3>
+            <h3 class="bf-m-b-1">Ordered list</h3>
             <ol>
               <li>list item 1</li>
               <li>
@@ -224,7 +224,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </ol>
           </div>
           <div class="bf-col-12">
-            <h3>Unordered list</h3>
+            <h3 class="bf-m-b-1">Unordered list</h3>
             <ul>
               <li>list item 1</li>
               <li>
@@ -247,7 +247,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </ul>
           </div>
           <div class="bf-col-12">
-            <h3>Definition list</h3>
+            <h3 class="bf-m-b-1">Definition list</h3>
             <dl>
               <dt>Description name</dt>
               <dd>Description value</dd>
@@ -260,7 +260,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>Unstyled list</h3>
+            <h3 class="bf-m-b-1">Unstyled list</h3>
             <ol class="bf-list-unstyled">
               <li>list item 1</li>
               <li>
@@ -283,8 +283,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </ol>
           </div>
           <div class="bf-col-12">
-            <h3>Navigation list</h3>
-            <nav>
+            <h3 class="bf-m-b-1">Navigation list</h3>
+            <nav aria-label="Example navigation">
               <ul>
                 <li>list item 1</li>
                 <li>
@@ -308,14 +308,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </nav>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Embedded content</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="embedded-content" class="bf-m-t-4 bf-m-b-2">Embedded content</h2>
+            <p class="bf-lead bf-m-b-3">Images, media, embeds, progress, and meter.</p>
           </div>
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>Linked figure with an image and a caption</h3>
+            <h3 class="bf-m-b-1">Linked figure with an image and a caption</h3>
             <figure>
               <a href="#">
                 <img src="/docs/demo/images/placeholder-img-800x400.jpg" alt="just a placeholder" loading="lazy" />
@@ -324,7 +328,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </figure>
           </div>
           <div class="bf-col-12">
-            <h3>SVG</h3>
+            <h3 class="bf-m-b-1">SVG</h3>
             <svg width="200px" height="200px">
               <circle cx="0" cy="0" r="200" fill="#ff0000" />
             </svg>
@@ -333,7 +337,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <div class="bf-row">
           <div class="bf-col-12">
             <div class="bf-m-b-3">
-              <h3>HTML5 video with controls</h3>
+              <h3 class="bf-m-b-1">HTML5 video with controls</h3>
               <video poster="/docs/demo/images/video-poster.png" controls width="450">
                 <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
                 <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/mp4" />
@@ -341,7 +345,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </video>
             </div>
             <div class="bf-m-b-3">
-              <h3>Audio with controls</h3>
+              <h3 class="bf-m-b-1">Audio with controls</h3>
               <audio controls>
                 <source src="https://9eb231f8-a305-47de-b45a-3042679fa3f3.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3" type="audio/mp3" />
                 <p>Your browser does not support the HTML5 Audio element.</p>
@@ -349,7 +353,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </div>
           </div>
           <div class="bf-col-12">
-            <h3>YouTube iframe 16:9 (default)</h3>
+            <h3 class="bf-m-b-1">YouTube iframe 16:9 (default)</h3>
             <div class="bf-embed-responsive">
               <iframe width="560" height="315" title="" src="https://www.youtube-nocookie.com/embed/tYSo0LsHhvo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
@@ -357,22 +361,26 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12 bf-m-b-4">
-            <h3>Progress</h3>
+            <h3 class="bf-m-b-1">Progress</h3>
             <div class="bf-m-b-3">
               <label for="file">File progress:</label>
               <progress id="file" max="100" value="70">70%</progress>
             </div>
-            <h3>Meter</h3>
+            <h3 class="bf-m-b-1">Meter</h3>
             <label for="fuel">Fuel level:</label>
             <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">at 50/100</meter>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Interactive elements</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="interactive-elements" class="bf-m-t-4 bf-m-b-2">Interactive elements</h2>
+            <p class="bf-lead bf-m-b-3">Details/summary and native dialog.</p>
           </div>
           <div class="bf-col-12">
-            <h3>Details with a summary</h3>
+            <h3 class="bf-m-b-1">Details with a summary</h3>
             <div class="bf-m-b-2">
               <details>
                 <summary>Click to Open</summary>
@@ -385,7 +393,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </details>
           </div>
           <div class="bf-col-12">
-            <h3>Dialog</h3>
+            <h3 class="bf-m-b-1">Dialog</h3>
             <button type="button" id="openBtn" class="bf-btn bf-m-b-2">Open Dialog</button>
             <dialog id="myDialog">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ducimus optio quis expedita, modi libero maxime voluptate temporibus quia tempore molestiae necessitatibus id in nostrum a, alias beatae! Molestias, voluptatem?</p>
@@ -406,14 +414,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             >
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Forms</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="forms" class="bf-m-t-4 bf-m-b-2">Forms</h2>
+            <p class="bf-lead bf-m-b-3">Inputs, selects, textareas, and fieldsets across common states.</p>
           </div>
         </div>
         <div class="bf-row">
           <div class="bf-col-12 bf-m-b-3">
-            <h3>Inputs</h3>
+            <h3 class="bf-m-b-1">Inputs</h3>
             <form>
               <fieldset>
                 <legend>HTML5 has several new input types for forms (legend).</legend>
@@ -463,8 +475,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                   <label>Range input</label>
                   <input id="ir" type="range" value="10" />
                 </div>
-                <h3>Radio and checkbox inputs</h3>
-                <h4>Radios</h4>
+                <h3 class="bf-m-b-1">Radio and checkbox inputs</h3>
+                <h4 class="bf-m-b-1">Radios</h4>
                 <div class="bf-m-b-3">
                   <div>
                     <input type="radio" id="huey" name="drone" value="huey" checked />
@@ -479,7 +491,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                     <label class="bf-disabled" for="jake">Jake (disabled)</label>
                   </div>
                 </div>
-                <h4>Checkboxes</h4>
+                <h4 class="bf-m-b-1">Checkboxes</h4>
                 <div>
                   <input type="checkbox" id="scales" name="scales" />
                   <label for="scales">Scales</label>
@@ -495,7 +507,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
                 <hr />
 
-                <h4>Custom Radios</h4>
+                <h4 class="bf-m-b-1">Custom Radios</h4>
                 <div class="bf-m-b-3 custom-radio-wrapper">
                   <div>
                     <input type="radio" id="huey2" name="drone2" value="huey2" checked />
@@ -511,7 +523,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                   </div>
                 </div>
 
-                <h4>Custom Checkboxes</h4>
+                <h4 class="bf-m-b-1">Custom Checkboxes</h4>
                 <div class="custom-checkbox-wrapper">
                   <div>
                     <input type="checkbox" id="scales2" name="scales2" />
@@ -531,7 +543,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
           <div class="bf-col-12">
             <form>
-              <h3>Selects</h3>
+              <h3 class="bf-m-b-1">Selects</h3>
               <fieldset>
                 <legend>Choose your options below</legend>
                 <label for="s">Select field</label>
@@ -591,7 +603,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                 </select>
               </fieldset>
             </form>
-            <h3>Textareas</h3>
+            <h3 class="bf-m-b-1">Textareas</h3>
             <form>
               <fieldset>
                 <legend>Write your message below</legend>
@@ -601,7 +613,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                 <textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text." rows="7"></textarea>
               </fieldset>
             </form>
-            <h3>Textareas (disabled)</h3>
+            <h3 class="bf-m-b-1">Textareas (disabled)</h3>
             <form>
               <fieldset disabled>
                 <legend>Write your message below</legend>
@@ -615,7 +627,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>Clickable inputs</h3>
+            <h3 class="bf-m-b-1">Clickable inputs</h3>
             <fieldset class="bf-m-b-3">
               <legend>Click the buttons below</legend>
               <div class="input-image bf-m-b-2">
@@ -640,7 +652,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </fieldset>
             <fieldset disabled>
               <legend>Click the buttons below</legend>
-              <h3>Clickable inputs (disabled)</h3>
+              <h3 class="bf-m-b-1">Clickable inputs (disabled)</h3>
               <div class="input-image bf-m-b-2">
                 <input alt="Image (input)" src="/docs/demo/images/placeholder-img-130x140.jpg" type="image" /><br />
                 <code>input type="image" (130x40px)</code>
@@ -663,151 +675,76 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </fieldset>
           </div>
           <div class="bf-col-12">
-            <h3>Buttons</h3>
+            <h3 class="bf-m-b-1">Buttons</h3>
             <fieldset class="bf-m-b-3">
               <legend>Click the buttons below</legend>
-              <div>
-                <button type="reset">Reset (button)</button>
+              <div class="bf-m-b-2">
+                <button type="reset" class="bf-m-b-2">Reset (button)</button>
               </div>
-              <div>
-                <button type="button">Button (button)</button>
+              <div class="bf-m-b-2">
+                <button type="button" class="bf-m-b-2">Button (button)</button>
               </div>
-              <div>
-                <button type="submit">Submit (button)</button>
+              <div class="bf-m-b-2">
+                <button type="submit" class="bf-m-b-2">Submit (button)</button>
               </div>
-              <div>
+              <div class="bf-m-b-2">
                 <button class="bf-btn bf-btn--primary bf-m-b-2" type="submit">Primary submit (button)</button>
               </div>
             </fieldset>
-            <h3>Buttons (.bf-disabled)</h3>
+            <h3 class="bf-m-b-1">Buttons (.bf-disabled)</h3>
             <fieldset>
               <legend>The buttons below are disabled.</legend>
-              <div>
-                <button type="reset" class="bf-disabled">Reset (button)</button>
+              <div class="bf-m-b-2">
+                <button type="reset" class="bf-disabled bf-m-b-2">Reset (button)</button>
               </div>
-              <div>
-                <button type="button" class="bf-disabled">Button (button)</button>
+              <div class="bf-m-b-2">
+                <button type="button" class="bf-disabled bf-m-b-2">Button (button)</button>
               </div>
-              <div>
-                <button type="submit" class="bf-disabled">Submit (button)</button>
+              <div class="bf-m-b-2">
+                <button type="submit" class="bf-disabled bf-m-b-2">Submit (button)</button>
               </div>
-              <div>
+              <div class="bf-m-b-2">
                 <button class="bf-btn bf-btn--primary bf-disabled bf-m-b-2" type="submit">Primary submit (button)</button>
               </div>
             </fieldset>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Components</legend>
+<div class="bf-row">
           <div class="bf-col-12">
-            <h2 id="components" class="bf-m-t-4 bf-m-b-2">Pre-built Components</h2>
-            <p class="bf-lead">Ready-to-use components you can copy and paste into your projects.</p>
-          </div>
-        </div>
-
-        <!-- Button Components -->
-        <div class="bf-row">
-          <div class="bf-col-12">
-            <h3 id="button-components">Button Components</h3>
+            <h2 id="components" class="bf-sr-only">Components</h2>
           </div>
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h4>Button Variants</h4>
+            <h4 class="bf-m-b-1">Button Variants</h4>
             <div class="bf-m-b-3">
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-btn--primary bf-m-b-2">Primary</button></div>
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-m-b-2">Default</button></div>
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-m-b-2" disabled>Disabled</button></div>
             </div>
 
-            <h4>Button Sizes</h4>
+            <h4 class="bf-m-b-1">Button Sizes</h4>
             <div class="bf-m-b-3">
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-btn--primary bf-m-b-2">Primary</button></div>
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-m-b-2">Default</button></div>
             </div>
 
-            <h4>Button Groups</h4>
+            <h4 class="bf-m-b-1">Button Groups</h4>
             <div class="bf-m-b-3">
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-m-b-2">Left</button></div>
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-m-b-2">Middle</button></div>
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-m-b-2">Right</button></div>
             </div>
 
-            <h4>Full Width Button</h4>
+            <h4 class="bf-m-b-1">Full Width Button</h4>
             <div class="bf-m-b-3">
               <button type="button" class="bf-btn bf-btn--primary bf-width-100 bf-m-b-2">Full Width Button</button>
             </div>
           </div>
-          <div class="bf-col-12">
-            <h4>Code Example</h4>
-            <pre><code>&lt;button class="bf-btn bf-btn--primary bf-m-b-2"&gt;Primary&lt;/button&gt;
-&lt;button class="bf-btn bf-m-b-2"&gt;Default&lt;/button&gt;
-&lt;button class="bf-btn bf-m-b-2" disabled&gt;Disabled&lt;/button&gt;
-
-&lt;button class="bf-btn bf-m-b-2"&gt;Left&lt;/button&gt;
-&lt;button class="bf-btn bf-m-b-2"&gt;Middle&lt;/button&gt;
-&lt;button class="bf-btn bf-m-b-2"&gt;Right&lt;/button&gt;
-
-&lt;button class="bf-btn bf-btn--primary bf-width-100 bf-m-b-2"&gt;Full Width&lt;/button&gt;</code></pre>
-          </div>
         </div>
-
-        <!-- Modal/Dialog Components -->
-        <div class="bf-row">
-          <div class="bf-col-12">
-            <h3 id="modal-components">Modal/Dialog Components</h3>
-          </div>
-        </div>
-        <div class="bf-row">
-          <div class="bf-col-12">
-            <h4>Basic Modal</h4>
-            <div class="bf-m-b-3">
-              <button id="openModal1" class="bf-btn bf-btn--primary bf-m-b-2">Open Modal</button>
-              <dialog id="modal1">
-                <h2>Modal Title</h2>
-                <p>This is a basic modal dialog. Click outside or press ESC to close.</p>
-                <form method="dialog">
-                  <button class="bf-btn bf-btn--primary bf-m-b-2">Close</button>
-                </form>
-              </dialog>
-            </div>
-
-            <h4>Confirmation Dialog</h4>
-            <div class="bf-m-b-3">
-              <button id="openModal2" class="bf-btn bf-m-b-2">Open Confirmation</button>
-              <dialog id="modal2">
-                <h2>Confirm Action</h2>
-                <p>Are you sure you want to proceed?</p>
-                <form method="dialog" class="bf-display-flex bf-display-flex--wrap">
-                  <button class="bf-btn bf-m-b-2" value="cancel">Cancel</button>
-                  <button class="bf-btn bf-btn--primary bf-m-b-2" value="confirm">Confirm</button>
-                </form>
-              </dialog>
-            </div>
-          </div>
-          <div class="bf-col-12">
-            <h4>Code Example</h4>
-            <pre><code>&lt;!-- Basic Modal --&gt;
-&lt;button id="openModal" class="bf-btn bf-btn--primary bf-m-b-2"&gt;Open Modal&lt;/button&gt;
-&lt;dialog id="modal"&gt;
-  &lt;h2&gt;Modal Title&lt;/h2&gt;
-  &lt;p&gt;Modal content goes here.&lt;/p&gt;
-  &lt;form method="dialog"&gt;
-    &lt;button class="bf-btn bf-btn--primary bf-m-b-2"&gt;Close&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
-
-&lt;script&gt;
-  const modal = document.getElementById('modal');
-  const openBtn = document.getElementById('openModal');
-  
-  openBtn.addEventListener('click', () =&gt; {
-    modal.showModal();
-  });
-&lt;/script&gt;</code></pre>
-          </div>
-        </div>
-
-        <!-- Form Components -->
         <div class="bf-row">
           <div class="bf-col-12">
             <h3 id="form-components">Form Components</h3>
@@ -815,7 +752,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h4>Login Form</h4>
+            <h4 class="bf-m-b-1">Login Form</h4>
             <form class="bf-m-b-4 bf-width-50">
               <div class="bf-m-b-2">
                 <label for="login-email">Email</label>
@@ -834,7 +771,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <button type="submit" class="bf-btn bf-btn--primary bf-width-100 bf-m-b-2">Sign In</button>
             </form>
 
-            <h4>Contact Form</h4>
+            <h4 class="bf-m-b-1">Contact Form</h4>
             <form class="bf-m-b-4 bf-width-50">
               <div class="bf-m-b-2">
                 <label for="contact-name">Name</label>
@@ -860,95 +797,20 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <button type="submit" class="bf-btn bf-btn--primary bf-m-b-2">Send Message</button>
             </form>
           </div>
-          <div class="bf-col-12">
-            <h4>Code Example - Login Form</h4>
-            <pre><code>&lt;form&gt;
-  &lt;div class="bf-m-b-2"&gt;
-    &lt;label for="email"&gt;Email&lt;/label&gt;
-    &lt;input type="email" id="email" name="email" required&gt;
-  &lt;/div&gt;
-  &lt;div class="bf-m-b-2"&gt;
-    &lt;label for="password"&gt;Password&lt;/label&gt;
-    &lt;input type="password" id="password" name="password" required&gt;
-  &lt;/div&gt;
-  &lt;div class="bf-m-b-2"&gt;
-    &lt;label&gt;
-      &lt;input type="checkbox" name="remember"&gt;
-      Remember me
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;button type="submit" class="bf-btn bf-btn--primary bf-width-100 bf-m-b-2"&gt;Sign In&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-
-            <h4>Code Example - Contact Form</h4>
-            <pre><code>&lt;form&gt;
-  &lt;div class="bf-m-b-2"&gt;
-    &lt;label for="name"&gt;Name&lt;/label&gt;
-    &lt;input type="text" id="name" name="name" required&gt;
-  &lt;/div&gt;
-  &lt;div class="bf-m-b-2"&gt;
-    &lt;label for="email"&gt;Email&lt;/label&gt;
-    &lt;input type="email" id="email" name="email" required&gt;
-  &lt;/div&gt;
-  &lt;div class="bf-m-b-2"&gt;
-    &lt;label for="subject"&gt;Subject&lt;/label&gt;
-    &lt;select id="subject" name="subject" required&gt;
-      &lt;option value=""&gt;Choose a subject&lt;/option&gt;
-      &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
-      &lt;option value="support"&gt;Support&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-  &lt;div class="bf-m-b-2"&gt;
-    &lt;label for="message"&gt;Message&lt;/label&gt;
-    &lt;textarea id="message" name="message" rows="5" required&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-  &lt;button type="submit" class="bf-btn bf-btn--primary bf-m-b-2"&gt;Send Message&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-          </div>
         </div>
 
-        <!-- Card Component -->
-        <div class="bf-row">
-          <div class="bf-col-12">
-            <h3 id="card-components">Card Components</h3>
-          </div>
-        </div>
-        <div class="bf-row">
-          <div class="bf-col-12">
-            <article class="bf-m-b-3 bf-p-3">
-              <h4 class="bf-m-t-0">Card Title</h4>
-              <p>Simple card composed from spacing utilities and a button. No card class required.</p>
-              <button type="button" class="bf-btn bf-btn--primary bf-m-b-2">Action</button>
-            </article>
-          </div>
-          <div class="bf-col-12">
-            <article class="bf-m-b-3">
-              <img class="bf-width-100 bf-m-b-2" src="/docs/demo/images/placeholder-img-800x400.jpg" alt="Card image" loading="lazy" />
-              <div class="bf-p-3">
-                <h4 class="bf-m-t-0">Card with Image</h4>
-                <p>Card content with an image.</p>
-                <a href="#" class="bf-btn bf-m-b-2">Learn More</a>
-              </div>
-            </article>
-          </div>
-          <div class="bf-col-12">
-            <h4>Code Example</h4>
-            <pre><code>&lt;article class="bf-m-b-3 bf-p-3"&gt;
-  &lt;h4 class="bf-m-t-0"&gt;Card Title&lt;/h4&gt;
-  &lt;p&gt;Card content goes here.&lt;/p&gt;
-  &lt;button class="bf-btn bf-btn--primary bf-m-b-2"&gt;Action&lt;/button&gt;
-&lt;/article&gt;</code></pre>
-          </div>
-        </div>
-
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Tables</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="tables" class="bf-m-t-4 bf-m-b-2">Tables</h2>
+            <p class="bf-lead bf-m-b-3">Default and utility-enhanced tables.</p>
           </div>
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>Unstyled tabular data</h3>
+            <h3 class="bf-m-b-1">Unstyled tabular data</h3>
             <table>
               <caption>
                 Jimi Hendrix - albums
@@ -992,7 +854,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </table>
           </div>
           <div class="bf-col-12">
-            <h3>Styled tabular data</h3>
+            <h3 class="bf-m-b-1">Styled tabular data</h3>
             <table class="bf-table">
               <caption>
                 Jimi Hendrix - albums
@@ -1038,7 +900,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12">
-            <h3>Styled responsive tabular data</h3>
+            <h3 class="bf-m-b-1">Styled responsive tabular data</h3>
             <div class="bf-table-responsive">
               <table class="bf-table">
                 <caption>
@@ -1126,7 +988,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         </div>
         <div class="bf-row">
           <div class="bf-col-12 bf-m-b-3">
-            <h3>Styled tabular data + zebra striping</h3>
+            <h3 class="bf-m-b-1">Styled tabular data + zebra striping</h3>
             <table class="bf-table bf-table--zebra">
               <caption>
                 Jimi Hendrix - albums
@@ -1170,7 +1032,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </table>
           </div>
           <div class="bf-col-12">
-            <h3>Styled responsive tabular data + zebra striping</h3>
+            <h3 class="bf-m-b-1">Styled responsive tabular data + zebra striping</h3>
             <div class="bf-table-responsive bf-table-responsive--zebra">
               <table class="bf-table">
                 <caption>
@@ -1256,9 +1118,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </div>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Grid system</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="grid-system" class="bf-m-t-4 bf-m-b-2">Grid System</h2>
+            <p class="bf-lead bf-m-b-3">Fluid 12-column layout with optional breakpoint collapses.</p>
             <p>
               12 columns fluid Grid System with containers, rows and columns.<br />
               At 575, 768 or 991 pixels the columns could be 100% of the row's width.<br />
@@ -1274,179 +1140,161 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <div class="bf-m-b-4" id="grid-specimen">
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-12">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>12 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">12 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-11">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>11 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">11 col</p>
             </div>
             <div class="bf-col-1">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>1 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">1 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-10">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>10 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">10 col</p>
             </div>
             <div class="bf-col-2">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-9">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>9 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">9 col</p>
             </div>
             <div class="bf-col-3">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>3 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">3 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-8">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>8 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">8 col</p>
             </div>
             <div class="bf-col-4">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>4 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">4 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-7">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>7 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">7 col</p>
             </div>
             <div class="bf-col-5">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>5 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">5 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-6">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>6 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">6 col</p>
             </div>
             <div class="bf-col-6">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>6 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">6 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-5">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>5 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">5 col</p>
             </div>
             <div class="bf-col-7">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>7 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">7 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-4">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>4 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">4 col</p>
             </div>
             <div class="bf-col-4">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>4 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">4 col</p>
             </div>
             <div class="bf-col-4">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>4 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">4 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-3">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>3 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">3 col</p>
             </div>
             <div class="bf-col-3">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>3 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">3 col</p>
             </div>
             <div class="bf-col-3">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>3 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">3 col</p>
             </div>
             <div class="bf-col-3">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>3 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">3 col</p>
             </div>
           </div>
           <div class="bf-row bf-m-b-2">
             <div class="bf-col-2">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
           </div>
           <p>No gutters between columns (<code>.bf-no-gutters</code>)</p>
           <div class="bf-row bf-no-gutters">
             <div class="bf-col-2 bf-no-gutters">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2 bf-no-gutters">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2 bf-no-gutters">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2 bf-no-gutters">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2 bf-no-gutters">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
             <div class="bf-col-2 bf-no-gutters">
-              <p class="bf-t-center bf-m-b-2 bf-p-2 grid-cell"><strong>2 col</strong></p>
+              <p class="bf-t-center bf-m-t-2 bf-m-b-2 bf-p-2 grid-cell">2 col</p>
             </div>
           </div>
         </div>
       
-          </main>
-          <nav class="bf-m-t-4 bf-p-2" aria-label="Demo end">
-            <p class="bf-t-weight-700 bf-m-b-2">Demo (end)</p>
-            <fieldset class="bf-m-b-3">
-              <legend>CSS build</legend>
-              <label class="bf-display-block bf-m-b-1" for="build-selector-end">Theme / build</label>
-              <select id="build-selector-end" class="bf-width-100 bf-m-b-2" data-build-selector>
-            <option value="bullframe-system-default.min.css" selected>System Default (Light/Dark)</option>
-            <option value="bullframe.min.css">Light Theme</option>
-            <option value="bullframe-dark.min.css">Dark Theme</option>
-            <option value="bullframe-classless.min.css">Classless (Light)</option>
-            <option value="bullframe-classless-dark.min.css">Classless (Dark)</option>
-            <option value="bullframe-classless-system-default.min.css">Classless (System Default)</option>
-            <option value="bullframe-utilities.min.css">Utilities Only</option>
-            <option value="bullframe-modern.min.css">Modern (Light/Dark)</option>
-              </select>
-              <p class="bf-m-t-2 bf-m-b-0">
-                <mark class="current-build"><code>bullframe-system-default.min.css</code></mark>
-              </p>
-            </fieldset>
-            <p class="bf-t-weight-700 bf-m-b-2">On this page</p>
-            <ul class="bf-list-unstyled">
-              <li class="bf-m-b-1"><a href="#texts">Text</a></li>
-              <li class="bf-m-b-1"><a href="#embedded-content">Embedded</a></li>
-              <li class="bf-m-b-1"><a href="#interactive-elements">Interactive</a></li>
-              <li class="bf-m-b-1"><a href="#forms">Forms</a></li>
-              <li class="bf-m-b-1"><a href="#components">Components</a></li>
-              <li class="bf-m-b-1"><a href="#tables">Tables</a></li>
-              <li class="bf-m-b-1"><a href="#grid-system">Grid</a></li>
-            </ul>
-            <hr />
-            <p class="bf-m-b-1"><a href="#top">Back to top</a></p>
-          </nav>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </fieldset>
+
+      </main>
       <footer class="bf-m-t-4 bf-m-b-4 bf-t-center">
         <hr />
         <h2>Bullframe CSS</h2>
         <p>A lightweight CSS framework for building fast, responsive, and accessible UIs.</p>
         <p class="bf-m-b-2">
-          <a class="bf-btn bf-btn--primary bf-m-b-2" href="https://github.com/marcop135/bullframe.css">GitHub</a>
-          <a class="bf-btn bf-m-b-2" href="/">Docs home</a>
+          <a class="bf-btn bf-btn--primary bf-m-b-2" href="/">Docs home</a>
+          <a class="bf-btn bf-m-b-2" href="https://github.com/marcop135/bullframe.css">GitHub</a>
         </p>
         <p><small>Built by <a href="https://github.com/marcop135" rel="noopener noreferrer">@marcop135</a></small></p>
         <p><a href="#top">Back to top</a></p>
       </footer>
-        </div>
-      </div>
     </div>
     <!-- Enable <dialog> modal interaction -->
     <script>

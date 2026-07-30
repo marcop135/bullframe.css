@@ -3,51 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Demo B | Bullframe CSS</title>
+    <title>Demo C - Article | Bullframe CSS</title>
     <meta name="description" content="Bullframe is a lightweight CSS framework for responsive, cross-browser UIs. Fast, semantic, themeable, and classless-friendly." />
     <link rel="icon" type="image/png" sizes="16x16" href="/docs/demo/icons/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/docs/demo/icons/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/docs/demo/icons/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/docs/demo/icons/favicon.ico" />
     <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v6" />
-    <style>
-      .demo-shell {
-        max-width: 160rem;
-      }
-      #grid-specimen .grid-cell {
-        border: 1px solid var(--bf-gray-light);
-      }
-    </style>
   </head>
   <body class="bf-responsive-typography bf-reduced-motion">
     <a class="bf-sr-only focusable" href="#main-content">Skip to content</a>
-    <div class="bf-container bf-container--fluid bf-container--break-md demo-shell">
-      <header class="bf-m-b-3 bf-p-t-2">
-        <h1 class="bf-h2 bf-m-b-1">Bullframe CSS demo</h1>
-        <p class="bf-lead bf-m-b-2">Bullframe is a lightweight CSS framework for fast, accessible UIs. No JavaScript.</p>
-        <p class="bf-m-b-2">This page is a live specimen sheet so you can switch builds and inspect every element.</p>
-        <p class="bf-m-b-2">
-          <a class="bf-btn bf-m-b-2" href="/">Docs</a>
+    <div class="bf-container bf-container--break-md">
+      <header class="bf-m-b-4 bf-p-t-3">
+        <p class="bf-m-b-1"><mark><code>Variant C</code></mark> Docs article layout</p>
+        <h1>Demo</h1>
+        <p class="bf-lead">Each section opens like a documentation page: a title, a one-line lead, then specimens grouped in fieldsets.</p>
+        <p class="bf-m-b-3">
+          <a class="bf-btn bf-btn--primary" href="https://github.com/marcop135/bullframe.css">GitHub</a>
+          <a class="bf-btn" href="/">Docs</a>
+          <a class="bf-btn" href="https://www.npmjs.com/package/bullframe.css">npm</a>
         </p>
-        <p class="bf-m-b-0">
-          <b><code>&lt;body&gt;</code> classes:</b>
-          <mark><code>.bf-responsive-typography</code></mark>
-          <mark><code>.bf-reduced-motion</code></mark>
-        </p>
-        <p class="bf-m-b-0">
-          <b>Layout:</b>
-          <mark><code>.bf-container--fluid</code></mark>
-          <mark><code>.bf-container--break-md</code></mark>
-        </p>
-      </header>
-      <div class="bf-row">
-        <aside class="bf-col-3 bf-m-b-3">
-          <nav class="bf-position-sticky bf-p-2" aria-label="Demo">
-            <p class="bf-t-weight-700 bf-m-b-2">Demo</p>
-            <fieldset class="bf-m-b-3">
-              <legend>CSS build</legend>
-              <label class="bf-display-block bf-m-b-1" for="build-selector">Theme / build</label>
-              <select id="build-selector" class="bf-width-100 bf-m-b-2" data-build-selector>
+        <fieldset class="bf-m-b-3">
+          <legend>Select CSS build</legend>
+          <label class="bf-display-block bf-m-b-1" for="build-selector">Build variant</label>
+          <select id="build-selector" data-build-selector>
             <option value="bullframe-system-default.min.css" selected>System Default (Light/Dark)</option>
             <option value="bullframe.min.css">Light Theme</option>
             <option value="bullframe-dark.min.css">Dark Theme</option>
@@ -56,31 +35,38 @@
             <option value="bullframe-classless-system-default.min.css">Classless (System Default)</option>
             <option value="bullframe-utilities.min.css">Utilities Only</option>
             <option value="bullframe-modern.min.css">Modern (Light/Dark)</option>
-              </select>
-              <p class="bf-m-t-2 bf-m-b-0">
-                <mark class="current-build"><code>bullframe-system-default.min.css</code></mark>
-              </p>
-            </fieldset>
-            <p class="bf-t-weight-700 bf-m-b-2">On this page</p>
-            <ul class="bf-list-unstyled">
-              <li class="bf-m-b-1"><a href="#texts">Text</a></li>
-              <li class="bf-m-b-1"><a href="#embedded-content">Embedded</a></li>
-              <li class="bf-m-b-1"><a href="#interactive-elements">Interactive</a></li>
-              <li class="bf-m-b-1"><a href="#forms">Forms</a></li>
-              <li class="bf-m-b-1"><a href="#components">Components</a></li>
-              <li class="bf-m-b-1"><a href="#tables">Tables</a></li>
-              <li class="bf-m-b-1"><a href="#grid-system">Grid</a></li>
-            </ul>
-            <hr />
-            <p class="bf-m-b-1"><a href="#top">Back to top</a></p>
-          </nav>
-        </aside>
-        <div class="bf-col-9">
-          <main id="main-content">
+          </select>
+          <p class="bf-m-t-2">
+            <b>CSS build in use:</b>
+            <mark class="current-build"><code>bullframe-system-default.min.css</code></mark>
+          </p>
+          <p>
+            <b><code>&lt;body&gt;</code> classes:</b>
+            <mark><code>.bf-responsive-typography</code></mark>
+            <mark><code>.bf-reduced-motion</code></mark>
+          </p>
+        </fieldset>
+        <nav class="bf-m-b-3" aria-label="Demo sections">
+          <p>
+            <a href="#texts">Text</a> ·
+            <a href="#embedded-content">Embedded</a> ·
+            <a href="#interactive-elements">Interactive</a> ·
+            <a href="#forms">Forms</a> ·
+            <a href="#components">Components</a> ·
+            <a href="#tables">Tables</a> ·
+            <a href="#grid-system">Grid</a>
+          </p>
+        </nav>
+        <hr />
+      </header>
+      <main id="main-content">
 
-        <h2 id="texts" class="bf-m-t-4 bf-m-b-2">Text elements</h2>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Text elements</legend>
+<h2 id="texts" class="bf-m-t-4 bf-m-b-2">Text elements</h2>
+            <p class="bf-lead bf-m-b-3">Typography, inline elements, lists, quotes, and code samples.</p>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <div class="bf-m-b-4">
               <h3>Headings</h3>
               <h1>Heading 1 <a href="#">with link</a></h1>
@@ -98,7 +84,7 @@
             <p class="bf-h5">Heading 5</p>
             <p class="bf-h6">Heading 6</p>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Inline text elements</h3>
             <p>
               The <a href="#">a element</a> example<br />
@@ -133,12 +119,12 @@
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Paragraphs</h3>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
             <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable.</p>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>hidden attribute</h3>
             <p hidden>This should be hidden in all browsers</p>
             <h3>Template content</h3>
@@ -200,7 +186,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-4">
             <h3>Ordered list</h3>
             <ol>
               <li>list item 1</li>
@@ -223,7 +209,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <li>list item 1</li>
             </ol>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-4">
             <h3>Unordered list</h3>
             <ul>
               <li>list item 1</li>
@@ -246,7 +232,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <li>list item 1</li>
             </ul>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-4">
             <h3>Definition list</h3>
             <dl>
               <dt>Description name</dt>
@@ -259,7 +245,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Unstyled list</h3>
             <ol class="bf-list-unstyled">
               <li>list item 1</li>
@@ -282,7 +268,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <li>list item 1</li>
             </ol>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Navigation list</h3>
             <nav>
               <ul>
@@ -308,13 +294,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </nav>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Embedded content</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="embedded-content" class="bf-m-t-4 bf-m-b-2">Embedded content</h2>
+            <p class="bf-lead bf-m-b-3">Images, media, embeds, progress, and meter.</p>
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Linked figure with an image and a caption</h3>
             <figure>
               <a href="#">
@@ -323,7 +313,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <figcaption>The image above is 800x400 pixels</figcaption>
             </figure>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>SVG</h3>
             <svg width="200px" height="200px">
               <circle cx="0" cy="0" r="200" fill="#ff0000" />
@@ -331,7 +321,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <div class="bf-m-b-3">
               <h3>HTML5 video with controls</h3>
               <video poster="/docs/demo/images/video-poster.png" controls width="450">
@@ -348,7 +338,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </audio>
             </div>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>YouTube iframe 16:9 (default)</h3>
             <div class="bf-embed-responsive">
               <iframe width="560" height="315" title="" src="https://www.youtube-nocookie.com/embed/tYSo0LsHhvo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -367,11 +357,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">at 50/100</meter>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Interactive elements</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="interactive-elements" class="bf-m-t-4 bf-m-b-2">Interactive elements</h2>
+            <p class="bf-lead bf-m-b-3">Details/summary and native dialog.</p>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Details with a summary</h3>
             <div class="bf-m-b-2">
               <details>
@@ -384,7 +378,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               Something small enough to escape casual notice.
             </details>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Dialog</h3>
             <button type="button" id="openBtn" class="bf-btn bf-m-b-2">Open Dialog</button>
             <dialog id="myDialog">
@@ -406,13 +400,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             >
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Forms</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="forms" class="bf-m-t-4 bf-m-b-2">Forms</h2>
+            <p class="bf-lead bf-m-b-3">Inputs, selects, textareas, and fieldsets across common states.</p>
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12 bf-m-b-3">
+          <div class="bf-col-6 bf-m-b-3">
             <h3>Inputs</h3>
             <form>
               <fieldset>
@@ -529,7 +527,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </fieldset>
             </form>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <form>
               <h3>Selects</h3>
               <fieldset>
@@ -614,7 +612,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Clickable inputs</h3>
             <fieldset class="bf-m-b-3">
               <legend>Click the buttons below</legend>
@@ -662,7 +660,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </div>
             </fieldset>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Buttons</h3>
             <fieldset class="bf-m-b-3">
               <legend>Click the buttons below</legend>
@@ -697,9 +695,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </fieldset>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Components</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="components" class="bf-m-t-4 bf-m-b-2">Pre-built Components</h2>
+            <p class="bf-lead bf-m-b-3">Copy-paste patterns composed from Bullframe utilities.</p>
             <p class="bf-lead">Ready-to-use components you can copy and paste into your projects.</p>
           </div>
         </div>
@@ -711,7 +713,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h4>Button Variants</h4>
             <div class="bf-m-b-3">
               <div class="bf-m-b-2"><button type="button" class="bf-btn bf-btn--primary bf-m-b-2">Primary</button></div>
@@ -737,7 +739,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <button type="button" class="bf-btn bf-btn--primary bf-width-100 bf-m-b-2">Full Width Button</button>
             </div>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h4>Code Example</h4>
             <pre><code>&lt;button class="bf-btn bf-btn--primary bf-m-b-2"&gt;Primary&lt;/button&gt;
 &lt;button class="bf-btn bf-m-b-2"&gt;Default&lt;/button&gt;
@@ -758,7 +760,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h4>Basic Modal</h4>
             <div class="bf-m-b-3">
               <button id="openModal1" class="bf-btn bf-btn--primary bf-m-b-2">Open Modal</button>
@@ -784,7 +786,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </dialog>
             </div>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h4>Code Example</h4>
             <pre><code>&lt;!-- Basic Modal --&gt;
 &lt;button id="openModal" class="bf-btn bf-btn--primary bf-m-b-2"&gt;Open Modal&lt;/button&gt;
@@ -814,7 +816,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h4>Login Form</h4>
             <form class="bf-m-b-4 bf-width-50">
               <div class="bf-m-b-2">
@@ -860,7 +862,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <button type="submit" class="bf-btn bf-btn--primary bf-m-b-2">Send Message</button>
             </form>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h4>Code Example - Login Form</h4>
             <pre><code>&lt;form&gt;
   &lt;div class="bf-m-b-2"&gt;
@@ -914,14 +916,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-4">
             <article class="bf-m-b-3 bf-p-3">
               <h4 class="bf-m-t-0">Card Title</h4>
               <p>Simple card composed from spacing utilities and a button. No card class required.</p>
               <button type="button" class="bf-btn bf-btn--primary bf-m-b-2">Action</button>
             </article>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-4">
             <article class="bf-m-b-3">
               <img class="bf-width-100 bf-m-b-2" src="/docs/demo/images/placeholder-img-800x400.jpg" alt="Card image" loading="lazy" />
               <div class="bf-p-3">
@@ -931,7 +933,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </div>
             </article>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-4">
             <h4>Code Example</h4>
             <pre><code>&lt;article class="bf-m-b-3 bf-p-3"&gt;
   &lt;h4 class="bf-m-t-0"&gt;Card Title&lt;/h4&gt;
@@ -941,13 +943,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
 
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Tables</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="tables" class="bf-m-t-4 bf-m-b-2">Tables</h2>
+            <p class="bf-lead bf-m-b-3">Default and utility-enhanced tables.</p>
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Unstyled tabular data</h3>
             <table>
               <caption>
@@ -991,7 +997,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </tfoot>
             </table>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-6">
             <h3>Styled tabular data</h3>
             <table class="bf-table">
               <caption>
@@ -1125,7 +1131,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
         <div class="bf-row">
-          <div class="bf-col-12 bf-m-b-3">
+          <div class="bf-col-4 bf-m-b-3">
             <h3>Styled tabular data + zebra striping</h3>
             <table class="bf-table bf-table--zebra">
               <caption>
@@ -1169,7 +1175,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </tfoot>
             </table>
           </div>
-          <div class="bf-col-12">
+          <div class="bf-col-8">
             <h3>Styled responsive tabular data + zebra striping</h3>
             <div class="bf-table-responsive bf-table-responsive--zebra">
               <table class="bf-table">
@@ -1256,9 +1262,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </div>
           </div>
         </div>
-        <div class="bf-row">
+        </fieldset>
+        <fieldset class="bf-m-b-4">
+          <legend class="bf-t-weight-700">Grid system</legend>
+<div class="bf-row">
           <div class="bf-col-12">
             <h2 id="grid-system" class="bf-m-t-4 bf-m-b-2">Grid System</h2>
+            <p class="bf-lead bf-m-b-3">Fluid 12-column layout with optional breakpoint collapses.</p>
             <p>
               12 columns fluid Grid System with containers, rows and columns.<br />
               At 575, 768 or 991 pixels the columns could be 100% of the row's width.<br />
@@ -1401,39 +1411,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
           </div>
         </div>
       
-          </main>
-          <nav class="bf-m-t-4 bf-p-2" aria-label="Demo end">
-            <p class="bf-t-weight-700 bf-m-b-2">Demo (end)</p>
-            <fieldset class="bf-m-b-3">
-              <legend>CSS build</legend>
-              <label class="bf-display-block bf-m-b-1" for="build-selector-end">Theme / build</label>
-              <select id="build-selector-end" class="bf-width-100 bf-m-b-2" data-build-selector>
-            <option value="bullframe-system-default.min.css" selected>System Default (Light/Dark)</option>
-            <option value="bullframe.min.css">Light Theme</option>
-            <option value="bullframe-dark.min.css">Dark Theme</option>
-            <option value="bullframe-classless.min.css">Classless (Light)</option>
-            <option value="bullframe-classless-dark.min.css">Classless (Dark)</option>
-            <option value="bullframe-classless-system-default.min.css">Classless (System Default)</option>
-            <option value="bullframe-utilities.min.css">Utilities Only</option>
-            <option value="bullframe-modern.min.css">Modern (Light/Dark)</option>
-              </select>
-              <p class="bf-m-t-2 bf-m-b-0">
-                <mark class="current-build"><code>bullframe-system-default.min.css</code></mark>
-              </p>
-            </fieldset>
-            <p class="bf-t-weight-700 bf-m-b-2">On this page</p>
-            <ul class="bf-list-unstyled">
-              <li class="bf-m-b-1"><a href="#texts">Text</a></li>
-              <li class="bf-m-b-1"><a href="#embedded-content">Embedded</a></li>
-              <li class="bf-m-b-1"><a href="#interactive-elements">Interactive</a></li>
-              <li class="bf-m-b-1"><a href="#forms">Forms</a></li>
-              <li class="bf-m-b-1"><a href="#components">Components</a></li>
-              <li class="bf-m-b-1"><a href="#tables">Tables</a></li>
-              <li class="bf-m-b-1"><a href="#grid-system">Grid</a></li>
-            </ul>
-            <hr />
-            <p class="bf-m-b-1"><a href="#top">Back to top</a></p>
-          </nav>
+        </fieldset>
+
+      </main>
       <footer class="bf-m-t-4 bf-m-b-4 bf-t-center">
         <hr />
         <h2>Bullframe CSS</h2>
@@ -1445,8 +1425,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <p><small>Built by <a href="https://github.com/marcop135" rel="noopener noreferrer">@marcop135</a></small></p>
         <p><a href="#top">Back to top</a></p>
       </footer>
-        </div>
-      </div>
     </div>
     <!-- Enable <dialog> modal interaction -->
     <script>

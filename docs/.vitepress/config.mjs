@@ -219,7 +219,10 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: '/logo.svg',
+    logo: {
+      light: '/logo.svg',
+      dark: '/logo-dark.svg',
+    },
     siteTitle: 'Bullframe CSS',
     search: { provider: 'local' },
     outline: { level: [2, 3] },
@@ -241,7 +244,7 @@ export default defineConfig({
     ],
     footer: {
       message:
-        '<span class="bf-footer-brand"><img class="bf-footer-logo" src="/logo.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 Marco Pontili</span></span></span>',
+        '<span class="bf-footer-brand"><img class="bf-footer-logo bf-footer-logo--light" src="/logo.svg" width="36" height="36" alt="" /><img class="bf-footer-logo bf-footer-logo--dark" src="/logo-dark.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 Marco Pontili</span></span></span>',
     },
     editLink: {
       pattern: 'https://github.com/marcop135/bullframe.css/edit/v6/docs/:path',
@@ -250,15 +253,15 @@ export default defineConfig({
   },
   head: [
     // Cross-browser favicons: SVG first, then ICO/PNG fallbacks, Apple, mask, manifest.
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
+    ['link', { rel: 'icon', href: '/favicon.svg?v=3', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.ico?v=3', sizes: 'any' }],
     [
       'link',
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/favicon-32x32.png',
+        href: '/favicon-32x32.png?v=3',
       },
     ],
     [
@@ -267,14 +270,14 @@ export default defineConfig({
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: '/favicon-16x16.png',
+        href: '/favicon-16x16.png?v=3',
       },
     ],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
-    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#c2410c' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=3' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=3', color: '#0056b3' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
-    ['meta', { name: 'theme-color', content: '#c2410c' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#c2410c' }],
+    ['meta', { name: 'theme-color', content: '#0056b3' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#0056b3' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],
     ['meta', { property: 'og:title', content: 'Bullframe CSS' }],

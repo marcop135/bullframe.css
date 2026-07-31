@@ -13,8 +13,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="npm version"></a>
-  <a href="https://codepen.io/collection/nxpjRe"><img src="https://img.shields.io/badge/codepen-collection-1e1f26?style=flat-square" alt="CodePen collection"></a>
-  <a href="https://bullframecss.marcopontili.com/"><img src="https://img.shields.io/badge/docs-online-c2410c?style=flat-square" alt="Docs"></a>
+  <a href="https://bullframecss.marcopontili.com/"><img src="https://img.shields.io/badge/docs-online-0056b3?style=flat-square" alt="Docs"></a>
   <img src="https://img.shields.io/badge/gzip-~8%20kB-0a7ea4?style=flat-square" alt="~8 kB gzipped">
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen?style=flat-square" alt="Zero dependencies">
   <img src="https://img.shields.io/badge/any%20stack-555555?style=flat-square" alt="Any stack">

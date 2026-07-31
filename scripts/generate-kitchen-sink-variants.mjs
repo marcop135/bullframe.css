@@ -400,13 +400,6 @@ function addButtonMargin(body) {
 
 mainInner = cleanSpecimens(mainInner);
 
-const brandStyle = `    <style>
-      :root {
-        --bf-blue: #f95c1f;
-        --bf-blue-light: #ff7a45;
-      }
-    </style>`;
-
 const gridCellStyle = `    <style>
       body {
         background-image:
@@ -558,10 +551,8 @@ const gridCellStyle = `    <style>
       }
     </style>`;
 
-function headCommon(title, { brand = false, gridBorders = false } = {}) {
-  const extras = [brand ? brandStyle : '', gridBorders ? gridCellStyle : '']
-    .filter(Boolean)
-    .join('\n');
+function headCommon(title, { gridBorders = false } = {}) {
+  const extras = [gridBorders ? gridCellStyle : ''].filter(Boolean).join('\n');
   return `<!doctype html>
 <html id="top" lang="en">
   <head>
@@ -786,7 +777,7 @@ function wrapFieldsets(inner) {
 
 fs.mkdirSync(outDir, { recursive: true });
 
-const variantA = `${headCommon('Demo A - Home', { brand: false })}
+const variantA = `${headCommon('Demo A - Home')}
   <body class="bf-responsive-typography bf-reduced-motion">
     <a class="bf-sr-only focusable" href="#main-content">Skip to content</a>
     <div class="bf-container bf-container--break-md">
@@ -835,7 +826,7 @@ function forceOneColMain(inner) {
 
 const mainInnerOneCol = withSectionLeads(forceOneColMain(mainInner), { skipIds: ['components'] });
 
-const variantB = `${headCommon('Demo', { brand: false, gridBorders: true })}
+const variantB = `${headCommon('Demo', { gridBorders: true })}
   <body class="bf-responsive-typography bf-reduced-motion">
     <a class="bf-sr-only focusable" href="#main-content">Skip to content</a>
     <div class="bf-container bf-container--break-md">
@@ -887,7 +878,7 @@ ${footer}
 `;
 
 const mainC = wrapFieldsets(withSectionLeads(mainInner));
-const variantC = `${headCommon('Demo C - Article', { brand: false })}
+const variantC = `${headCommon('Demo C - Article')}
   <body class="bf-responsive-typography bf-reduced-motion">
     <a class="bf-sr-only focusable" href="#main-content">Skip to content</a>
     <div class="bf-container bf-container--break-md">

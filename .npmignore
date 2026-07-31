@@ -1,6 +1,6 @@
-# Deny-list for the npm tarball.
-# Primary allowlist is package.json "files" (dist/css, src/css, LICENSE, README, CHANGELOG).
-# Keep this list current so tooling/docs never ship if "files" is widened by mistake.
+# Defense-in-depth deny-list. The real allowlist is package.json "files"
+# (dist/css only, plus LICENSE / README / CHANGELOG which npm always includes).
+# Keep this current so tooling, docs, and demos never ship if "files" is widened.
 
 # VCS / editors / agents
 .git
@@ -8,19 +8,21 @@
 .claude
 .cursor
 .playwright-mcp
+.playwright
 AGENTS.md
 CLAUDE.md
 
-# Docs site, demo, GitHub-only assets, tests, build scripts
+# Docs, demos, sources (rebuild from the git repo, not the npm tarball)
 docs
-src/docs
+src
 scripts
 tests
 playwright-report
 test-results
+pw-ci-artifacts
 .netlify
 
-# dist contents other than CSS builds (demo HTML, favicons, media)
+# Non-CSS dist (demo HTML, favicons, media)
 dist/docs
 dist/demo.css
 dist/favicon.ico
@@ -37,6 +39,7 @@ dist/video-poster.png
 .gitattributes
 .npmignore
 .prettierignore
+.stylelintignore
 .htmlvalidate.cjs
 stylelint.config.js
 prettier.config.js
@@ -45,7 +48,12 @@ vite.config.js
 playwright.config.js
 package-lock.json
 
-# Local scratch / screenshots
+# Local scratch / caches / screenshots
+.tmp
+.tmp-heroes
+.tmp-favicon
+.cache
+.vite
 *.log
 demo-*.png
 modern-demo-full.png

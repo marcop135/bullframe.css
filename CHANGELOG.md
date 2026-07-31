@@ -14,11 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replaced Sass with native CSS and PostCSS (`--bf-*` tokens). See [Migration](docs/migration.md).
 - Unified class-based, classless, dark, and system-default builds on one token set.
 - Darkened link and button blues for WCAG AA contrast.
-- Replaced the docs site with VitePress; kitchen sink at `/kitchen-sink/`.
+- Replaced the [docs site](https://bullframecss.marcopontili.com/) with VitePress; kitchen sink at `/kitchen-sink/`.
 - Documented browser support against Browserslist `defaults`.
 
 ### Added
 
+- Brand identity for docs and README: mascot and logo mark, favicon variants, hero illustrations, and OG/social imagery.
 - Opt-in font-smoothing, reduced-motion utilities, stronger focus / ARIA defaults.
 - Progressive `@supports` gates for range, `:has()` label layout, and dialog enter.
 

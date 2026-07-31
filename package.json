@@ -5,8 +5,8 @@
   "description": "Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default. Any stack. Classless when you want it. System dark built in. Seven builds, solid cross-browser support.",
   "main": "dist/css/bullframe.css",
   "style": "dist/css/bullframe.css",
-  "jsdelivr": "dist/css/bullframe.css",
-  "unpkg": "dist/css/bullframe.css",
+  "jsdelivr": "dist/css/bullframe.min.css",
+  "unpkg": "dist/css/bullframe.min.css",
   "exports": {
     ".": "./dist/css/bullframe.css",
     "./dark": "./dist/css/bullframe-dark.css",
@@ -20,8 +20,6 @@
   },
   "files": [
     "dist/css/",
-    "src/css/",
-    "src/docs/github-readme/",
     "LICENSE",
     "README.md",
     "CHANGELOG.md"

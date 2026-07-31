@@ -1,7 +1,7 @@
 <div align="center">
 
-![Bullframe CSS](./src/docs/github-readme/bf-readme-hero-light-16x9.png#gh-light-mode-only)
-![Bullframe CSS](./src/docs/github-readme/bf-readme-hero-dark-16x9.png#gh-dark-mode-only)
+![Bullframe CSS](https://raw.githubusercontent.com/marcop135/bullframe.css/v6/src/docs/github-readme/bf-readme-hero-light-16x9.png#gh-light-mode-only)
+![Bullframe CSS](https://raw.githubusercontent.com/marcop135/bullframe.css/v6/src/docs/github-readme/bf-readme-hero-dark-16x9.png#gh-dark-mode-only)
 
 </div>
 

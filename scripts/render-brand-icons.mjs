@@ -2,8 +2,7 @@
  * Render transparent light brand icons and solid apple-touch / android chrome assets.
  * Run: node scripts/render-brand-icons.mjs
  *
- * Mark geometry: bbox ~1.4–30.6 × 1.2–24.1, center (16, 12.65).
- * Logos use scale(1.01 1.288) for even ~1.25px pad. Solid icons use scale(0.94 1.20).
+ * Mark: side crescent bull horns on the window frame.
  */
 import { writeFileSync, copyFileSync, unlinkSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -16,9 +15,30 @@ const logoDarkPublic = path.join(root, 'docs/public/logo-dark.svg');
 const faviconSvgPublic = path.join(root, 'docs/public/favicon.svg');
 const appleTmp = path.join(root, 'src/docs/brand/.tmp-apple.svg');
 
+const leftHorn = `M5.5 15.5
+C1.2 14.0 -0.2 8.5 1.4 4.2
+L2.0 2.0
+L3.6 3.6
+C2.6 5.2 2.4 7.5 3.4 9.5
+C4.4 11.8 5.2 13.5 6.8 14.6
+L8.2 15.4
+L7.2 16.0
+L5.5 15.5
+Z`;
+const rightHorn = `M26.5 15.5
+C30.8 14.0 32.2 8.5 30.6 4.2
+L30.0 2.0
+L28.4 3.6
+C29.4 5.2 29.6 7.5 28.6 9.5
+C27.6 11.8 26.8 13.5 25.2 14.6
+L23.8 15.4
+L24.8 16.0
+L26.5 15.5
+Z`;
+
 const appleSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <rect width="32" height="32" rx="6" fill="#0056b3"/>
-  <g transform="translate(16 16) scale(0.94 1.20) translate(-16 -12.65)">
+  <g transform="translate(16 16) scale(0.911 0.975) translate(-16 -13.0)">
     <path fill="#ffffff" fill-rule="evenodd" d="
       M6.2 10.2 H25.8 A1.3 1.3 0 0 1 27.1 11.5 V22.8 A1.3 1.3 0 0 1 25.8 24.1 H6.2 A1.3 1.3 0 0 1 4.9 22.8 V11.5 A1.3 1.3 0 0 1 6.2 10.2 Z
       M7.8 13.6 V21.6 H24.2 V13.6 Z"/>
@@ -26,20 +46,8 @@ const appleSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fi
     <circle cx="9.4" cy="11.9" r="0.65" fill="#0056b3"/>
     <circle cx="11.5" cy="11.9" r="0.65" fill="#0056b3"/>
     <circle cx="13.6" cy="11.9" r="0.65" fill="#0056b3"/>
-    <path fill="#ffffff" d="
-      M7.4 11
-      C4.6 6.2 2.4 3.2 1.4 2.2
-      C0.7 1.4 1.8 0.7 2.8 1.2
-      C6.2 2.8 9.4 7.2 11.2 10.4
-      C9.8 10.5 8.4 10.7 7.4 11
-      Z"/>
-    <path fill="#ffffff" d="
-      M24.6 11
-      C27.4 6.2 29.6 3.2 30.6 2.2
-      C31.3 1.4 30.2 0.7 29.2 1.2
-      C25.8 2.8 22.6 7.2 20.8 10.4
-      C22.2 10.5 23.6 10.7 24.6 11
-      Z"/>
+    <path fill="#ffffff" d="${leftHorn}"/>
+    <path fill="#ffffff" d="${rightHorn}"/>
   </g>
 </svg>`;
 
@@ -75,6 +83,21 @@ for (const { file, size, src } of outs) {
     `PNG32:${path.join(root, file)}`,
   ]);
   console.log('wrote', file);
+}
+
+for (const f of [
+  'docs/public/favicon-16x16.png',
+  'docs/public/favicon-32x32.png',
+  'docs/public/logo-32.png',
+  'src/docs/brand/logo-32.png',
+  'src/docs/kitchen-sink/icons/favicon-16x16.png',
+  'src/docs/kitchen-sink/icons/favicon-32x32.png',
+]) {
+  const abs = path.join(root, f);
+  const dim = execFileSync('magick', ['identify', '-format', '%wx%h', abs], {
+    encoding: 'utf8',
+  });
+  magick([abs, '-background', 'none', '-gravity', 'center', '-extent', dim, `PNG32:${abs}`]);
 }
 
 magick([

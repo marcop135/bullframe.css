@@ -253,15 +253,15 @@ export default defineConfig({
   },
   head: [
     // Cross-browser favicons: SVG first, then ICO/PNG fallbacks, Apple, mask, manifest.
-    ['link', { rel: 'icon', href: '/favicon.svg?v=3', type: 'image/svg+xml' }],
-    ['link', { rel: 'icon', href: '/favicon.ico?v=3', sizes: 'any' }],
+    ['link', { rel: 'icon', href: '/favicon.svg?v=5', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.ico?v=5', sizes: 'any' }],
     [
       'link',
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/favicon-32x32.png?v=3',
+        href: '/favicon-32x32.png?v=5',
       },
     ],
     [
@@ -270,11 +270,11 @@ export default defineConfig({
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: '/favicon-16x16.png?v=3',
+        href: '/favicon-16x16.png?v=5',
       },
     ],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=3' }],
-    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=3', color: '#0056b3' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=5' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=5', color: '#0056b3' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#0056b3' }],
     ['meta', { name: 'msapplication-TileColor', content: '#0056b3' }],

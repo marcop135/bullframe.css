@@ -1,6 +1,6 @@
 # Docs brand mark
 
-Canonical mark: **horned window** (blue on white seal). Matches product `--bf-blue` (`#0056b3`).
+Canonical mark: **horned window** with side crescent bull horns (not upright ears). Product blue `#0056b3`.
 
 | File | Use |
 | ---- | --- |

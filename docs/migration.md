@@ -30,10 +30,8 @@ The CDN link also changes:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5" />
 
 <!-- v6 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
 ```
-
-> `@latest` currently resolves to v5.1.0 until v6 is published to npm, then it will roll forward to v6 automatically.
 
 ## 2. Replace Sass Variables with CSS Custom Properties
 

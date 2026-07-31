@@ -1,19 +1,19 @@
 # Theming
 
-Bullframe CSS provides multiple theme variants and easy customization options. All builds share the same `--bf-*` tokens; override variables to theme without rebuilding.
+Bullframe CSS provides multiple theme variants and easy customization options. Override `--bf-*` custom properties to theme without rebuilding.
 
 ## Theme variants
 
 ### Light theme (default)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css" />
 ```
 
 ### Dark theme
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-dark.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css" />
 ```
 
 ### System default theme
@@ -21,7 +21,7 @@ Bullframe CSS provides multiple theme variants and easy customization options. A
 Switches between light and dark from `prefers-color-scheme`:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-system-default.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-system-default.min.css" />
 ```
 
 More on dark mode: [Dark Mode](/theming/dark-mode).

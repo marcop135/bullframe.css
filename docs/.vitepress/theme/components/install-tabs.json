@@ -20,7 +20,7 @@
     "label": "CDN",
     "title": "Drop in a CDN link.",
     "lang": "html",
-    "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bullframe.css@latest\">",
-    "highlighted": "<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">&#x3C;</span><span style=\"--shiki-light:#22863A;--shiki-dark:#85E89D\">link</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> rel</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"stylesheet\"</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> href</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"https://cdn.jsdelivr.net/npm/bullframe.css@latest\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">></span></span>"
+    "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bullframe.css\">",
+    "highlighted": "<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">&#x3C;</span><span style=\"--shiki-light:#22863A;--shiki-dark:#85E89D\">link</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> rel</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"stylesheet\"</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> href</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"https://cdn.jsdelivr.net/npm/bullframe.css\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">></span></span>"
   }
 ]

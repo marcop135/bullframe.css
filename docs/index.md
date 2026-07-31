@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Bullframe CSS
-  text: One UI framework. Three ways to write it. Any stack.
+  text: One UI framework. Any stack.
   tagline: Semantic by default. Classless when you want it. System dark built in.
   image:
     src: /bullframe-hero.png

@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  One UI framework. Three ways to write it. Any stack.
+  One UI framework. Any stack.
 </p>
 
 <p align="center">
@@ -21,26 +21,13 @@
 
 ---
 
-## Why Bullframe
+## Why Bullframe CSS
 
-- **Semantic HTML first** — real elements styled by default; less class tax to ship a page
-- **Classless when you want it** — drop in `bullframe-classless.css` and keep markup clean
-- **System dark built in** — system-default builds follow `prefers-color-scheme`
-- **Shared `--bf-*` tokens** — theme once; seven builds stay in sync
-- **~8 KB gzipped** — reset, typography, forms, grid, and utilities in one stylesheet
-- **WCAG AA defaults** — link and primary button blues meet 4.5:1; solid cross-browser support
-
-## Links
-
-| | |
-|---|---|
-| Docs | [bullframecss.marcopontili.com](https://bullframecss.marcopontili.com/) |
-| Getting started | [Docs → Getting started](https://bullframecss.marcopontili.com/getting-started) |
-| Demo | [Live specimen](https://bullframecss.marcopontili.com/demo/) |
-| npm | [bullframe.css](https://www.npmjs.com/package/bullframe.css) |
-| CodePen | [Collection](https://codepen.io/collection/nxpjRe) |
-| Migration | [v5 → v6](https://bullframecss.marcopontili.com/migration) |
-| Changelog | [CHANGELOG.md](CHANGELOG.md) |
+- **Semantic HTML first:** headings, forms, tables, and links are styled without a pile of classes
+- **Classless when you want it:** swap in `bullframe-classless.css` and keep markup as plain HTML
+- **Dark without a script:** always-dark builds, or system-default builds that follow `prefers-color-scheme`
+- **Accessible defaults:** focus-visible rings, reduced-motion respect, WCAG AA contrast on links and primary buttons
+- **Native CSS, any stack:** PostCSS builds, no Sass, no runtime JavaScript, solid cross-browser support
 
 ## Getting started
 
@@ -53,11 +40,21 @@ import 'bullframe.css';
 ```
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
-Seven builds (class-based, classless, utilities, dark, system-default). Shared `--bf-*` tokens. Details in the [docs](https://bullframecss.marcopontili.com/getting-started).
+## Docs
+
+[bullframecss.marcopontili.com](https://bullframecss.marcopontili.com/)
+
+## Contributing
+
+See [CONTRIBUTING.md](./.github/CONTRIBUTING.md). Bug reports and feature requests go through [issues](https://github.com/marcop135/bullframe.css/issues).
+
+## Author
+
+[Marco Pontili](https://marcopontili.com)
 
 ## License
 
-[MIT](LICENSE) · [Marco Pontili](https://marcopontili.com)
+[MIT](./LICENSE)

@@ -18,7 +18,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `bullframe-modern.css` for `color-scheme`, `color-mix()`, `oklch()` tokens, `:has()`, and container queries (does not ship `light-dark()`).
 - Opt-in font-smoothing, reduced-motion, and stronger focus / ARIA defaults.
 - Progressive `@supports` gates for range styling, `:has()` label layout, and dialog enter transitions.
 
@@ -28,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Redundant `*-dark-prefers` builds.
 - Netlify docs hosting residue and ghost npmignore paths.
 - Legacy IE / Edge hacks (`0\0` media queries, `::-ms-expand`).
+- `bullframe-modern.css` and the `bullframe.css/modern` export.
 
 ### Fixed
 

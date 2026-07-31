@@ -6,13 +6,13 @@ Entry point for AI agents in this repository. Detailed maintainer rules live in 
 
 ## Stack
 
-Native **CSS + PostCSS** (no Sass). Eight builds via Vite. Docs: **VitePress**. Visual regression: Playwright. Live docs: FTPS to Netsons.
+Native **CSS + PostCSS** (no Sass). Seven builds via Vite. Docs: **VitePress**. Visual regression: Playwright. Live docs: FTPS to Netsons.
 
 ## Build / test
 
 | Command | Purpose |
 | ----------------------- | -------------------------------- |
-| `npm run build` | Compile eight CSS builds to `dist/css/` |
+| `npm run build` | Compile seven CSS builds to `dist/css/` |
 | `npm run lint` | Stylelint on `src/css/**/*.css` |
 | `npm run lint:html` | html-validate on `src/**/*.html` |
 | `npm run format:check` | Prettier check |
@@ -20,7 +20,7 @@ Native **CSS + PostCSS** (no Sass). Eight builds via Vite. Docs: **VitePress**. 
 | `npm run docs:build` | Framework build + VitePress production |
 | `npm run test:e2e` | Playwright visual tests |
 
-Keep `bullframe-modern.css`. Do not remove the modern build.
+Do not add a `bullframe-modern.css` build back.
 
 ## Git
 
@@ -35,7 +35,7 @@ Keep `bullframe-modern.css`. Do not remove the modern build.
 - Commit secrets (`.env`, credentials, FTP passwords).
 - Invent `FTP_*` / `NPM_TOKEN` secret values; document names only.
 - Add Sass back.
-- Ship ungated modern-only APIs (`oklch`, `:has`, `@starting-style`, `light-dark`) in the seven core builds.
+- Ship ungated niche CSS APIs without `@supports` / progressive enhancement.
 - Force-push `main` / `v6` unless explicitly requested.
 
 ## Cursor CLI

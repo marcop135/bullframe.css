@@ -5,6 +5,11 @@ on:
     branches:
       - v6
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: FTPS dry run (log planned changes, no upload)
+        type: boolean
+        default: false
 
 concurrency:
   group: docs-production-deploy
@@ -47,3 +52,4 @@ jobs:
           security: strict
           dangerous-clean-slate: false
           timeout: 120000
+          dry-run: ${{ inputs.dry_run == true }}

@@ -28,8 +28,8 @@ For CSS bugs, prefer a [reduced test case](https://css-tricks.com/reduced-test-c
 ## Stack notes
 
 - Native CSS + PostCSS (no Sass).
-- Eight builds stay, including `bullframe-modern.css`.
-- Core builds target Browserslist `defaults`; modern-only APIs belong in the modern build or behind `@supports`.
+- Seven builds stay (no `bullframe-modern.css`).
+- Builds target Browserslist `defaults`; progressive enhancements use `@supports`.
 
 ## Docs deploy (maintainers)
 

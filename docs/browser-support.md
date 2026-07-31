@@ -1,10 +1,10 @@
 # Browser Support
 
-Bullframe CSS targets browsers covered by the Browserslist query in [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/v6/.browserslistrc): **`defaults`**. Autoprefixer uses that same query when building CSS. Prefixes are added where needed; there are no polyfills for modern CSS APIs.
+Bullframe CSS targets browsers covered by the Browserslist query in [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/v6/.browserslistrc): **`defaults`**. Autoprefixer uses that same query when building CSS. Prefixes are added where needed; there are no polyfills for unsupported CSS APIs.
 
-## Core builds
+## Builds
 
-The seven default / classless / utilities / dark / system-default builds are intended for that `defaults` audience. They rely on:
+All seven builds (default / classless / utilities / dark / system-default) are intended for that `defaults` audience. They rely on:
 
 - CSS custom properties (`--bf-*`)
 - Flexbox and CSS Grid
@@ -13,21 +13,6 @@ The seven default / classless / utilities / dark / system-default builds are int
 - Progressive enhancements gated with `@supports` where needed (for example range styling and some form/dialog polish)
 
 Optional enhancements in the default pipeline (UA+ layer) use `@supports` / `prefers-reduced-motion` so older engines keep usable native UI.
-
-## Modern build
-
-`bullframe-modern.css` is **opt-in**. Prefer it when you can assume recent evergreen browsers (roughly Chrome 111+, Safari 16.4+, Firefox 113+). It adds:
-
-| Feature                          | Role                                  |
-| -------------------------------- | ------------------------------------- |
-| `color-scheme`                   | Native control / scrollbar theming    |
-| `color-mix()` / `oklch()` tokens | Opt-in palette helpers                |
-| `:has()`                         | `.bf-form-modern` invalid-submit hint |
-| Container queries                | `.bf-cq-*` grid helpers               |
-
-It does **not** ship `light-dark()` in CSS today; theme with `--bf-*` overrides or system-default builds instead.
-
-If you need the wider core baseline, keep using the other seven files. Details: [Theming → Modern CSS variant](/theming#modern-css-variant).
 
 ## Mobile
 

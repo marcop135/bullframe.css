@@ -34,7 +34,6 @@ scripts = scripts.replace(
           'bullframe-classless-dark.min.css': 'bullframe-classless-dark.min.css',
           'bullframe-classless-system-default.min.css': 'bullframe-classless-system-default.min.css',
           'bullframe-utilities.min.css': 'bullframe-utilities.min.css',
-          'bullframe-modern.min.css': 'bullframe-modern.min.css',
         };
 
         if (!buildSelectors.length || !cssLink) return;
@@ -58,7 +57,7 @@ scripts = scripts.replace(
           const root = document.documentElement;
           if (/dark/.test(buildName) && !/system-default/.test(buildName)) {
             root.setAttribute('data-demo-theme', 'dark');
-          } else if (/system-default|modern/.test(buildName)) {
+          } else if (/system-default/.test(buildName)) {
             root.removeAttribute('data-demo-theme');
           } else {
             root.setAttribute('data-demo-theme', 'light');
@@ -587,7 +586,7 @@ const buildSelectOptions = `            <option value="bullframe-system-default.
             <option value="bullframe-classless-dark.min.css">Classless (Dark)</option>
             <option value="bullframe-classless-system-default.min.css">Classless (System Default)</option>
             <option value="bullframe-utilities.min.css">Utilities Only</option>
-            <option value="bullframe-modern.min.css">Modern (Light/Dark)</option>`;
+`;
 
 function buildFieldsetBlock({ id = 'build-selector', selectClass = '' } = {}) {
   const cls = selectClass ? ` class="${selectClass}"` : '';
@@ -853,8 +852,8 @@ const variantB = `${headCommon('Demo', { brand: false, gridBorders: true })}
           <div class="demo-meta">
             <p class="bf-t-weight-700 bf-m-b-2">What this page covers</p>
             <dl class="bf-m-b-3">
-              <dt class="bf-t-weight-700">8 builds</dt>
-              <dd>Switch live between system, light, dark, classless, utilities, and modern CSS builds.</dd>
+              <dt class="bf-t-weight-700">7 builds</dt>
+              <dd>Switch live between system, light, dark, classless, and utilities builds.</dd>
               <dt class="bf-t-weight-700">7 specimen groups</dt>
               <dd>Text, embedded content, interactive elements, forms, components, tables, and grid.</dd>
               <dt class="bf-t-weight-700">12-column layout</dt>

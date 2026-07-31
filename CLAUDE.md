@@ -4,15 +4,15 @@ Guidance for Claude Code and other agents in this repository. Read once at sessi
 
 ## What this project is
 
-**Bullframe CSS** — a lightweight CSS framework for fast, accessible UIs. Semantic by default, classless when you want it, system dark built in. Eight builds, shared `--bf-*` tokens, zero runtime JS dependencies. Live docs: https://bullframecss.marcopontili.com.
+**Bullframe CSS** — a lightweight CSS framework for fast, accessible UIs. Semantic by default, classless when you want it, system dark built in. Seven builds, shared `--bf-*` tokens, zero runtime JS dependencies. Live docs: https://bullframecss.marcopontili.com.
 
 Slogan: *One UI framework. Three ways to write it. Any stack.*
 
 ## Stack constraints
 
 - **Native CSS + PostCSS only.** No Sass, no CSS-in-JS runtime.
-- **Eight builds** must remain: default, dark, system-default, classless (+ dark / system-default), utilities, and **`bullframe-modern.css`**.
-- **Core vs modern:** the seven core builds target Browserslist `defaults`. Gate progressive enhancements with `@supports` / `prefers-reduced-motion`. Put true modern-only APIs (`color-mix` / `oklch` tokens, `:has()` form hint, container queries) in `bullframe-modern.css` only. Do **not** ship `light-dark()` in CSS this release.
+- **Seven builds** must remain: default, dark, system-default, classless (+ dark / system-default), and utilities. Do **not** add `bullframe-modern.css`.
+- Builds target Browserslist `defaults`. Gate progressive enhancements with `@supports` / `prefers-reduced-motion`.
 - **Accessibility:** keep focus-visible rings, reduced-motion respect, and WCAG AA contrast on default link/button blues unless intentionally overriding via tokens.
 
 ## Common commands
@@ -21,7 +21,7 @@ Uses **npm**. Node `>=20`.
 
 | Command | Purpose |
 | ----------------------- | -------------------------------- |
-| `npm run build` | Eight CSS builds → `dist/css/` |
+| `npm run build` | Seven CSS builds → `dist/css/` |
 | `npm run lint` | Stylelint |
 | `npm run lint:html` | html-validate |
 | `npm run format` / `format:check` | Prettier |

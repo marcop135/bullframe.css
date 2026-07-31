@@ -1,6 +1,6 @@
 # Getting started
 
-Bullframe CSS is a lightweight CSS framework: eight builds, shared `--bf-*` tokens, zero runtime dependencies, and about 8 KB gzipped for the default build. Works with any stack. Pick an authoring mode, then add one stylesheet.
+Bullframe CSS is a lightweight CSS framework: seven builds, shared `--bf-*` tokens, zero runtime dependencies, and about 8 KB gzipped for the default build. Works with any stack. Pick an authoring mode, then add one stylesheet.
 
 ## Choose a mode
 
@@ -51,7 +51,7 @@ Fastest path. Pin to `@6` once the v6 release is on npm if you need a fixed majo
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest" />
 ```
 
-For a specific build, use the full path and swap the filename (`bullframe-classless.min.css`, `bullframe-modern.min.css`, …):
+For a specific build, use the full path and swap the filename (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …):
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
@@ -69,7 +69,6 @@ npm install bullframe.css
 @import 'bullframe.css';
 @import 'bullframe.css/dark';
 @import 'bullframe.css/classless';
-@import 'bullframe.css/modern';
 @import 'bullframe.css/utilities';
 ```
 
@@ -134,7 +133,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
 
 ## Builds
 
-Eight files share the same `--bf-*` tokens. Default build is about **8 KB gzipped**. No JavaScript runtime.
+Seven files share the same `--bf-*` tokens. Default build is about **8 KB gzipped**. No JavaScript runtime.
 
 | File                                     | Mode                                |
 | ---------------------------------------- | ----------------------------------- |
@@ -145,9 +144,8 @@ Eight files share the same `--bf-*` tokens. Default build is about **8 KB gzippe
 | `bullframe-classless-dark.css`           | Classless, always dark              |
 | `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`   |
 | `bullframe-utilities.css`                | Utilities only                      |
-| `bullframe-modern.css`                   | System-default plus modern CSS      |
 
-Modern CSS (`color-scheme`, `oklch()`, `:has()`, container queries): [Theming](/theming#modern-css-variant). Upgrading from v5: [Migration](/migration).
+Upgrading from v5: [Migration](/migration).
 
 ## Next
 

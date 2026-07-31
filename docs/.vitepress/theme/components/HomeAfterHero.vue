@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import installTabs from './install-tabs.json';
 
 const tabs = installTabs;
@@ -7,6 +7,42 @@ const tabs = installTabs;
 const activeId = ref('npm');
 const active = computed(() => tabs.find((t) => t.id === activeId.value) ?? tabs[0]);
 const installTitle = computed(() => active.value.title);
+
+const root = ref(null);
+let sectionObserver;
+
+onMounted(() => {
+  const sections = root.value?.querySelectorAll('.bfh-section');
+  if (!sections?.length) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    sections.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  sectionObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('is-visible');
+        sectionObserver.unobserve(entry.target);
+      }
+    },
+    { rootMargin: '0px 0px -10% 0px', threshold: 0.08 }
+  );
+
+  sections.forEach((el, i) => {
+    if (i === 0) {
+      el.classList.add('is-visible');
+      return;
+    }
+    sectionObserver.observe(el);
+  });
+});
+
+onUnmounted(() => {
+  sectionObserver?.disconnect();
+});
 
 const copied = ref(false);
 let copiedTimer;
@@ -55,6 +91,26 @@ const pillars = [
     detail: 'Always-dark builds, or system-default builds that follow prefers-color-scheme.',
   },
 ];
+
+const whenToUse = [
+  {
+    label: 'Pages and forms',
+    detail: 'Docs, blogs, landings, help centers, listings, micro-sites. Not complex app UIs.',
+  },
+  {
+    label: 'One stylesheet',
+    detail: 'Reset, typography, forms, and layout in a single drop-in CSS file.',
+  },
+  {
+    label: 'Class-based or classless',
+    detail: 'Pick how you write HTML. Utilities stay a companion build, not the default path.',
+  },
+  {
+    label: 'No utility pipeline',
+    detail: 'Skip Tailwind-style build setup when semantic HTML and a CDN link are enough.',
+  },
+];
+
 const builds = [
   { file: 'bullframe.css', use: 'Class-based, light' },
   { file: 'bullframe-dark.css', use: 'Class-based, always dark' },
@@ -62,7 +118,7 @@ const builds = [
   { file: 'bullframe-classless.css', use: 'Semantic HTML, light' },
   { file: 'bullframe-classless-dark.css', use: 'Classless, always dark' },
   { file: 'bullframe-classless-system-default.css', use: 'Classless, follows the OS' },
-  { file: 'bullframe-utilities.css', use: 'Utilities only' },
+  { file: 'bullframe-utilities.css', use: 'Utilities companion only' },
 ];
 
 const stats = [
@@ -81,22 +137,44 @@ const stats = [
     label: 'Builds',
     detail: 'Class-based and classless, each with light, dark, and system themes, plus a utilities companion.',
   },
+  {
+    value: '~8',
+    label: 'kB gzipped',
+    detail: 'Default build size. One stylesheet for reset, type, forms, and layout.',
+  },
 ];
 </script>
 
 <template>
-  <div class="bfh">
+  <div class="bfh" ref="root">
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">Why</p>
+        <p class="bfh-eyebrow">Why use it</p>
         <p class="bfh-bridge">Drop in a stylesheet. Keep your stack.</p>
-        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic. Classless. System dark.</h2>
+        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic by default. Classless when you want it. System dark built in.</h2>
       </div>
       <ul class="bfh-pillars">
         <li v-for="p in pillars" :key="p.label" class="bfh-pillar">
           <span class="bfh-pillar__kicker" aria-hidden="true">{{ p.kicker }}</span>
           <span class="bfh-pillar__label">{{ p.label }}</span>
           <p class="bfh-pillar__detail">{{ p.detail }}</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bfh-section" aria-labelledby="bfh-when-heading">
+      <div class="bfh-section__head">
+        <p class="bfh-eyebrow">When to use</p>
+        <h2 id="bfh-when-heading" class="bfh-heading">Pages and forms, not complex app UIs.</h2>
+        <p class="bfh-bridge">
+          Docs, blogs, landings, help centers, listings, micro-sites. One stylesheet for reset, type,
+          forms, and layout. Class-based or classless. No Tailwind-style utility pipeline.
+        </p>
+      </div>
+      <ul class="bfh-pillars bfh-pillars--quad">
+        <li v-for="item in whenToUse" :key="item.label" class="bfh-pillar">
+          <span class="bfh-pillar__label">{{ item.label }}</span>
+          <p class="bfh-pillar__detail">{{ item.detail }}</p>
         </li>
       </ul>
     </section>

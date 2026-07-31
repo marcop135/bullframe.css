@@ -29,8 +29,8 @@ The CDN link also changes:
 <!-- v5 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5" />
 
-<!-- v6 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
+<!-- v6: pin a version; add integrity + crossorigin for SRI (see Getting started) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" />
 ```
 
 ## 2. Replace Sass Variables with CSS Custom Properties

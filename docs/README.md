@@ -1,6 +1,6 @@
 # Docs
 
-Full reference for Bullframe CSS: semantic HTML by default, classless builds when markup should stay clean, dark or system themes without a script, accessible defaults, native CSS. About 8 KB gzipped, MIT license, seven stylesheet builds on npm. Any stack.
+Full reference for Bullframe CSS. Semantic by default. Any stack. Classless when you want it. System dark built in. About 8 KB gzipped, MIT license, seven stylesheet builds on npm.
 
 Start with [Getting started](getting-started.md) if you are new. Live specimen: [Demo](https://bullframecss.marcopontili.com/demo/). Every page is also available as Markdown (append `.md`, or send `Accept: text/markdown`).
 

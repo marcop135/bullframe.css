@@ -1,6 +1,6 @@
 # Bullframe CSS
 
-> One UI framework. Any stack. Semantic by default. Classless when you want it. System dark built in. Accessible defaults. Native CSS, seven builds, ~8 KB gzipped. Zero runtime dependencies. MIT license.
+> Semantic by default. Any stack. Classless when you want it. System dark built in. Accessible defaults. Native CSS, seven builds, ~8 KB gzipped. Zero runtime dependencies. MIT license.
 
 Site: https://bullframecss.marcopontili.com
 Repo: https://github.com/marcop135/bullframe.css
@@ -47,6 +47,8 @@ Every docs page is also available as clean Markdown: append `.md` to the path (f
 ```bash
 npm install bullframe.css
 ```
+
+For a version-pinned CDN URL with Subresource Integrity, see [Getting started](https://bullframecss.marcopontili.com/getting-started) and [/sri.json](https://bullframecss.marcopontili.com/sri.json).
 
 ## Note for crawlers
 

@@ -1,5 +1,5 @@
 /* UA+ enhancements (adapted from https://fokus.dev/tools/uaplus/).
- * Improves UA defaults without a heavy reset; complements Bullframe base styles. */
+ * Light UA improvements; complements Bullframe base styles. */
 
 @layer {
   /* Spacing between content and focus outline (enhances focus.css). */

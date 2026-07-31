@@ -1,6 +1,5 @@
-/* Utilities - Layout */
+/* Display, visibility, float, position, and width helpers. */
 
-/* clearfix */
 .bf-clearfix::before,
 .bf-clearfix::after {
   content: ' ';
@@ -15,7 +14,6 @@
   display: none !important;
 }
 
-/* assistive text for screen reader only (e.g. form labels) */
 .bf-hidden {
   display: none !important;
   visibility: hidden !important;
@@ -31,7 +29,7 @@
   padding: 0 !important;
 }
 
-/* Visually hidden, available to screen readers (h5bp / Snook pattern). */
+/* Visually hidden; available to screen readers (h5bp / Snook). */
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -44,7 +42,7 @@
   width: 1px !important;
 }
 
-/* .bf-sr-only that becomes visible when focused. */
+/* .bf-sr-only, revealed on focus (skip links). */
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -132,7 +130,7 @@
   position: relative !important;
 }
 
-/* Absolute centering helper. */
+/* Absolute center inside a relative parent. */
 .bf-align-center-unknown {
   position: relative !important;
 }

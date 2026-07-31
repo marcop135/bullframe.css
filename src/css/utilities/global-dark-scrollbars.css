@@ -1,10 +1,10 @@
-/* Utilities - Dark mode scrollbars */
+/* Dark scrollbar colors (Firefox + WebKit). */
 
 html {
   scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
 }
 
-/* WebKit scrollbar chrome */
+/* WebKit thumb / track. */
 
 ::-webkit-scrollbar {
   width: 1.5rem;

@@ -1,4 +1,4 @@
-/* Utilities - Buttons */
+/* .bf-btn and variants. */
 
 .bf-btn {
   display: inline-block;
@@ -26,7 +26,7 @@
 .bf-btn:focus {
   text-decoration: none;
   color: var(--bf-dark);
-  background: rgb(184 184 184); /* color.adjust(gray-light, -10%) */
+  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
 }
 
 .bf-btn:active,
@@ -34,7 +34,7 @@
   box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
 }
 
-/* Primary button: white on --bf-blue meets WCAG AA 4.5:1 contrast */
+/* Primary: white on --bf-blue (WCAG AA 4.5:1). */
 .bf-btn.bf-btn--primary {
   color: var(--bf-white);
   background: var(--bf-blue);

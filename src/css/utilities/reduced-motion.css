@@ -1,4 +1,4 @@
-/* Utilities - Reduced motion (cssremedy-style opt-in). */
+/* Reduced-motion opt-in (cssremedy-style). */
 
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,

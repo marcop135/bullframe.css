@@ -1,6 +1,4 @@
-/* Forms - Normalization */
-
-/* normalization, enhancement and responsiveness */
+/* Form control reset: inheritance, sizing, and UA quirks. */
 
 :where(html input, button, select, optgroup, textarea) {
   color: inherit;
@@ -17,7 +15,7 @@
   width: 100%;
 }
 
-/* re-set width auto where needed */
+/* Shrink-to-content controls stay auto-width. */
 :where(
   html label,
   button,
@@ -31,9 +29,7 @@
   width: auto;
 }
 
-/* inline-block display gives the best cross-browser combination
- * and allow several properties
- */
+/* inline-block: consistent sizing and vertical-align across engines. */
 :where(
   html input,
   label,
@@ -65,18 +61,18 @@
   margin: 0;
 }
 
-/* Remove intrinsic min-width of fieldset. */
+/* Drop fieldset min-content width so nested grids can shrink. */
 :where(fieldset) {
   border: 0;
   padding: 0;
   margin: 0;
-  min-width: 0; /* 1. */
+  min-width: 0;
 }
 
 :where(legend) {
-  display: table; /* Correct the text wrapping in Edge and IE. */
+  display: table; /* Text wrapping in Edge / IE. */
   max-width: 100%;
-  white-space: normal; /* enable line-wrapping in FF4/5 */
+  white-space: normal;
   border: 0;
   padding: 0;
   font-weight: 400;
@@ -131,9 +127,8 @@
   word-wrap: normal;
 }
 
-/* Taken from Bootstrap Reboot v5.2
- * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
- */
+/* Hide WebKit datalist picker chrome (Bootstrap Reboot 5.2).
+ * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css */
 :where([list]):not(
     [type='date'],
     [type='datetime-local'],
@@ -147,11 +142,11 @@
 :where(optgroup) {
   font-family: inherit;
   font-size: inherit;
-  font-style: inherit; /* fallback for font families without 600 */
+  font-style: inherit; /* Families without a 600 face. */
   font-weight: 600;
 }
 
-/* remove -webkit-appearance listing every single elements that needed it */
+/* Reset WebKit / Blink appearance on text-like controls. */
 :where(
   button,
   html [type='button'],
@@ -225,7 +220,7 @@
   resize: vertical;
 }
 
-/* Remove the inner border and padding of focus outlines in Firefox */
+/* Firefox: strip inner focus padding/border. */
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -241,7 +236,7 @@
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
   border: 0;
-  background-image: none; /* FF mobile */
+  background-image: none; /* Firefox mobile */
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):hover,
@@ -260,30 +255,19 @@
   cursor: pointer;
 }
 
-/* FF placeholder bug
- * Issue: If one change the text color of input fields, FF will change
- * the default color of placeholders too!
- * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
- */
+/* Firefox: input color must not override placeholder color.
+ * https://github.com/necolas/normalize.css/issues/150 */
 :where(input::placeholder, textarea::placeholder) {
   color: var(--bf-gray-dark);
 }
 
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-
+/* Firefox: modern focus ring on all focusable elements. */
 :-moz-focusring {
   outline: auto;
 }
 
-/* remove ':invalid' styles in FF
- * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
- *
- * for form validation in JavaScript
- * use '.bf-invalid' class in /utilities/form-states.css instead
- * documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
- */
+/* Firefox: drop :-moz-ui-invalid glow; use .bf-invalid for JS validation.
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */
 :-moz-ui-invalid {
   box-shadow: none;
 }

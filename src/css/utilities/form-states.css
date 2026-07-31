@@ -1,4 +1,4 @@
-/* Utilities - Form states */
+/* Focused / invalid / disabled form state classes. */
 
 .bf-focused {
   transition:

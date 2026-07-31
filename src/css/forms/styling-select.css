@@ -1,28 +1,18 @@
-/* Forms - Select styling */
-
-/* Custom arrow via appearance:none + SVG for single-value selects.
+/* Select: custom arrow for single-value controls.
  * Skip [size] / [multiple] (native UI differs by engine). Inspired by water.css. */
+
 :where(select):not([size], select[multiple]) {
   appearance: none;
-
-  /* add a new svg arrow */
   background: var(--bf-white)
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
-
-  /* space the arrow */
   padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 
-/* RTL: mirror custom arrow when appearance:none removed the native control. */
+/* RTL: mirror arrow after appearance:none removes the native control. */
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
-  /* move the arrow icon to the left */
   background-position: left 0.85rem top 50%;
-
-  /* go back to default forms padding */
   padding-right: calc(var(--bf-spacing-lg) * 0.75);
-
-  /* add custom left padding, matching the custom LTR one */
   padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }

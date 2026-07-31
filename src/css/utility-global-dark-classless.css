@@ -1,4 +1,4 @@
-/* Dark mode overrides - Always dark for classless (no media query) */
+/* Always-dark overrides for classless (no media query). */
 
 html {
   color: var(--bf-light);

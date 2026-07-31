@@ -1,0 +1,51 @@
+/* Preference queries only (prefers-contrast, forced-colors). Additive. */
+
+/* prefers-contrast: more: underline links, thicker focus, stronger borders (WCAG 1.4.1). */
+@media (prefers-contrast: more) {
+  a {
+    text-decoration: underline;
+  }
+
+  :focus-visible {
+    outline-width: 0.3rem;
+    outline-offset: 0.4rem;
+  }
+
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
+  input[list],
+  select,
+  textarea {
+    border-width: 2px;
+  }
+}
+
+/* forced-colors: restore focus via Highlight; underline links; keep button borders. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: Highlight;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  /* Keep button borders so disabled/active stay distinguishable. */
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
+  .bf-btn {
+    border: 1px solid ButtonText;
+  }
+}

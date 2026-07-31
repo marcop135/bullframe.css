@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Warm grain film scan">
+  <defs>
+    <linearGradient id="wsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7f1d1d"/>
+      <stop offset="55%" stop-color="#0056b3"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#wsky)"/>
+  <ellipse cx="320" cy="300" rx="280" ry="90" fill="#78350f" opacity="0.45"/>
+  <path d="M0 310 L80 290 L160 315 L240 285 L320 320 L400 295 L480 325 L560 300 L640 318 L640 400 L0 400 Z" fill="#451a03" opacity="0.55"/>
+  <circle cx="480" cy="100" r="54" fill="#fecaca" opacity="0.9"/>
+  <g fill="#fef3c7" opacity="0.25">
+    <circle cx="60" cy="80" r="2"/><circle cx="140" cy="140" r="1.5"/><circle cx="220" cy="60" r="2"/>
+    <circle cx="300" cy="120" r="1"/><circle cx="380" cy="40" r="1.5"/><circle cx="500" cy="180" r="2"/>
+    <circle cx="560" cy="70" r="1"/><circle cx="100" cy="200" r="1.5"/><circle cx="420" cy="220" r="2"/>
+  </g>
+</svg>

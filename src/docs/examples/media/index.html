@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media · Examples · Bullframe CSS</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="/css/bullframe.min.css" />
+    <link rel="stylesheet" href="/examples/shared.css" />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <header class="ex-bar">
+      <div class="bf-container">
+        <p><a href="/examples">← Examples</a> · <span class="ex-build">bullframe.min.css</span></p>
+      </div>
+    </header>
+    <main class="bf-container bf-container--break-md bf-p-b-4">
+      <h1 class="bf-m-b-1">Media</h1>
+      <p class="bf-lead">Responsive embeds, figures, and a mixed media grid.</p>
+
+      <section class="bf-m-t-3">
+        <h2>Video embed · 16:9</h2>
+        <p>Wrap the player in <code>.bf-embed-responsive</code>. Default ratio is 16:9.</p>
+        <div class="bf-embed-responsive">
+          <video controls playsinline poster="/kitchen-sink/images/video-poster.png" width="1280" height="720">
+            <source src="https://marcopontili.com/assets/videos/video.webm" type="video/webm" />
+            <source src="https://marcopontili.com/assets/videos/video.mp4" type="video/mp4" />
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        </div>
+      </section>
+
+      <section class="bf-row bf-m-t-3" style="align-items: start">
+        <div class="bf-col-6">
+          <h2>Map-style embed · 4:3</h2>
+          <p>Add <code>.bf-embed-responsive--4-3</code> for a taller box.</p>
+          <div class="bf-embed-responsive bf-embed-responsive--4-3">
+            <div class="bf-embed-responsive--item ex-map" role="img" aria-label="Sample 4:3 map embed">
+              <span class="ex-map__pin" aria-hidden="true"></span>
+              <span class="ex-map__label">Munich · Studio</span>
+            </div>
+          </div>
+        </div>
+        <div class="bf-col-6">
+          <h2>Figure + caption</h2>
+          <figure class="ex-media-wrap bf-m-b-0">
+            <img class="ex-media" src="/examples/album/thumbs/forest.svg" width="640" height="400" alt="Forest path illustration" />
+            <figcaption class="ex-body bf-m-b-0"><code>&lt;figure&gt;</code> with caption. Image scales with the column.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="bf-m-t-3">
+        <h2>Mixed media cards</h2>
+        <p>Grid utilities. Cards stack on small screens.</p>
+        <div class="bf-row">
+          <div class="bf-col-4">
+            <article class="ex-media-wrap bf-m-b-2">
+              <img class="ex-media" src="/examples/album/thumbs/night.svg" width="640" height="400" alt="" />
+              <div class="ex-body">
+                <h3 class="bf-m-t-0" style="font-size: 1.15rem">Night reel</h3>
+                <p class="bf-m-b-0">Short clip · 24s</p>
+              </div>
+            </article>
+          </div>
+          <div class="bf-col-4">
+            <article class="ex-media-wrap bf-m-b-2">
+              <img class="ex-media" src="/examples/album/thumbs/studio.svg" width="640" height="400" alt="" />
+              <div class="ex-body">
+                <h3 class="bf-m-t-0" style="font-size: 1.15rem">Product still</h3>
+                <p class="bf-m-b-0">PNG · transparent</p>
+              </div>
+            </article>
+          </div>
+          <div class="bf-col-4">
+            <article class="ex-media-wrap bf-m-b-2">
+              <div class="ex-media ex-audio" role="img" aria-label="Audio waveform placeholder">
+                <span class="ex-audio__bars" aria-hidden="true"></span>
+              </div>
+              <div class="ex-body">
+                <h3 class="bf-m-t-0" style="font-size: 1.15rem">Interview</h3>
+                <p class="bf-m-b-0">Audio · 12 min</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

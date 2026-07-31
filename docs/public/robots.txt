@@ -1,0 +1,66 @@
+# Bullframe CSS - https://bullframecss.marcopontili.com
+# Docs are open to search engines and AI crawlers.
+# The interactive /kitchen-sink/ is excluded from indexing.
+
+User-agent: *
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: GPTBot
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: CCBot
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: Diffbot
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /kitchen-sink/
+Disallow: /demo/
+
+Sitemap: https://bullframecss.marcopontili.com/sitemap.xml

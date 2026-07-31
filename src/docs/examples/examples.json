@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "starter",
+    "title": "Starter",
+    "blurb": "Headings, text, list, and buttons.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "typography",
+    "title": "Typography",
+    "blurb": "Headings, lead, lists, quotes, and tables.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "media",
+    "title": "Media",
+    "blurb": "16:9 and 4:3 embeds, figures, media grid.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "branded",
+    "title": "Branded",
+    "blurb": "Default build plus a short custom.css.",
+    "build": "bullframe.min.css + custom.css"
+  },
+  {
+    "slug": "album",
+    "title": "Album",
+    "blurb": "Photo grid with filters and captions.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "pricing",
+    "title": "Pricing",
+    "blurb": "Three plans and a compare table.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "product",
+    "title": "Product",
+    "blurb": "Hero, feature row, and CTAs.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "checkout",
+    "title": "Checkout",
+    "blurb": "Billing and payment form.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "contact",
+    "title": "Contact",
+    "blurb": "Form with address and hours.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "help-center",
+    "title": "Help center",
+    "blurb": "Search, topics, and article teasers.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "sign-in",
+    "title": "Sign in",
+    "blurb": "Centered auth form, light build.",
+    "build": "bullframe.min.css"
+  },
+  {
+    "slug": "sign-in-dark",
+    "title": "Sign in (dark)",
+    "blurb": "Same form on the dark build.",
+    "build": "bullframe-dark.min.css"
+  },
+  {
+    "slug": "cover",
+    "title": "Cover",
+    "blurb": "Full-viewport landing, dark build.",
+    "build": "bullframe-dark.min.css"
+  },
+  {
+    "slug": "blog",
+    "title": "Blog",
+    "blurb": "Classless article with sidebar TOC.",
+    "build": "bullframe-classless.min.css"
+  },
+  {
+    "slug": "blog-dark",
+    "title": "Blog (dark)",
+    "blurb": "Same layout on classless dark.",
+    "build": "bullframe-classless-dark.min.css"
+  }
+]

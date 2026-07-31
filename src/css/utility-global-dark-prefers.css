@@ -1,0 +1,5 @@
+/* System-preference dark: shared dark rules + scrollbars under prefers-color-scheme.
+ * postcss-import wraps each import in the media query at build time. */
+
+@import './_utility-global-dark-shared.css' (prefers-color-scheme: dark);
+@import './utilities/global-dark-scrollbars.css' (prefers-color-scheme: dark);

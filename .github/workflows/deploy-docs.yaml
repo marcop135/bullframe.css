@@ -1,0 +1,55 @@
+name: Deploy docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: FTPS dry run (log planned changes, no upload)
+        type: boolean
+        default: false
+
+concurrency:
+  group: docs-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and FTP deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Setup Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build docs
+        run: npm run docs:build
+
+      - name: Sync docs dist via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
+        with:
+          # FTP_HOST must match the CN/SAN on the FTPS server's TLS cert
+          # (typically the bare shared-hosting hostname), not a vanity FQDN
+          # like ftp.example.com. With `security: strict`, hostname mismatch
+          # aborts the deploy.
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME_PRODUCTION }}
+          password: ${{ secrets.FTP_PASSWORD_PRODUCTION }}
+          server-dir: ./
+          local-dir: ./docs/.vitepress/dist/
+          protocol: ftps
+          port: 21
+          security: strict
+          dangerous-clean-slate: false
+          timeout: 120000
+          dry-run: ${{ inputs.dry_run == true }}

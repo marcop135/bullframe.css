@@ -1,0 +1,38 @@
+.ex-cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top left, rgb(249 115 22 / 0.22), transparent 28rem),
+    radial-gradient(circle at bottom right, rgb(56 189 248 / 0.12), transparent 24rem),
+    var(--bf-dark-bg, #1c1c1c);
+}
+
+.ex-cover__bar {
+  margin-bottom: 0;
+  border-bottom-color: transparent;
+  background: transparent;
+}
+
+.ex-cover__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem 4rem;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.ex-cover__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 0.85rem;
+  color: var(--bf-gray);
+  margin-bottom: 0.75rem;
+}
+
+.ex-cover__main h1 {
+  margin-top: 0;
+}

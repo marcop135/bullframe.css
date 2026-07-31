@@ -1,106 +1,124 @@
 // Vite config tools and dependencies
-import { defineConfig } from "vite";
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
-import path from "path";
-import fs from "fs";
-import { glob } from "glob";
-import * as sass from "sass";
-import postcss from "postcss";
+import { defineConfig } from 'vite';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import postcssImport from 'postcss-import';
+import path from 'path';
+import fs from 'fs';
+import { glob } from 'glob';
+import postcss from 'postcss';
+
+// Read the version from package.json so the dist/ header stays in lockstep with
+// whatever `npm version` produces — no more hardcoded "v6.0.0" drifting out of sync.
+const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'package.json'), 'utf-8'));
+const pkgVersion = pkg.version;
 
 // Custom PostCSS plugin: adds license header as a comment at the top of each CSS file
 const addHeader = () => {
   return {
-    postcssPlugin: "add-header",
+    postcssPlugin: 'add-header',
     Once(root) {
       root.prepend({
-        type: "comment",
-        text: "! Bullframe CSS v5.1.0 | MIT License | https://github.com/marcop135/bullframe.css ",
+        type: 'comment',
+        text: `! Bullframe CSS v${pkgVersion} | MIT License | https://github.com/marcop135/bullframe.css `,
       });
     },
   };
 };
 addHeader.postcss = true;
 
-// Custom Vite plugin: compiles all SCSS files (except partials) to CSS and minified CSS
-function buildAllScss() {
-  return {
-    name: "build-all-scss",
-    async closeBundle() {
-      // Find all SCSS files in src/scss (excluding partials that start with _)
-      const files = await glob("src/scss/**/*.scss");
-      const scssFiles = files.filter(
-        (file) => !path.basename(file).startsWith("_")
-      );
+// Compile a single CSS entry file through the same PostCSS pipeline used in
+// production. Returns the processed CSS string and source map (when requested).
+async function compileCss(file, { minified = false } = {}) {
+  const from = path.resolve(__dirname, file);
+  const cssContent = fs.readFileSync(from, 'utf-8');
 
-      // Output directory for generated CSS
-      const outDir = path.resolve("dist/css");
+  const postcssResult = await postcss([postcssImport(), addHeader(), autoprefixer()]).process(
+    cssContent,
+    {
+      from,
+      to: from,
+      map: { inline: false, annotation: false },
+    }
+  );
+
+  if (minified) {
+    const minifiedResult = await postcss([autoprefixer(), cssnano()]).process(postcssResult.css, {
+      from,
+      to: from,
+      map: { inline: false, annotation: false },
+    });
+    return { css: minifiedResult.css, map: minifiedResult.map };
+  }
+
+  return { css: postcssResult.css, map: postcssResult.map };
+}
+
+// Seven consumer builds only. Helper sheets (variables*, utility-global-dark*)
+// stay import-only under src/css/ and are not emitted as dist entries.
+async function listEntryCss() {
+  const files = await glob('src/css/bullframe*.css', { cwd: __dirname });
+  return files.filter((file) => !path.basename(file).startsWith('_'));
+}
+
+// Custom Vite plugin: compiles all CSS files (except partials) to CSS and minified CSS
+function buildAllCss() {
+  return {
+    name: 'build-all-css',
+    async configureServer(server) {
+      // Serve compiled CSS during dev so the kitchen sink links to
+      // /css/bullframe-*.min.css resolve without a prior production build.
+      server.middlewares.use(async (req, res, next) => {
+        const match = req.url?.match(/^\/css\/(.+?)\.min\.css(?:\?.*)?$/);
+        if (!match) return next();
+
+        const name = match[1];
+        const srcFile = path.join(__dirname, 'src/css', `${name}.css`);
+        if (!fs.existsSync(srcFile)) return next();
+
+        try {
+          const { css } = await compileCss(srcFile, { minified: true });
+          res.setHeader('Content-Type', 'text/css');
+          res.setHeader('Cache-Control', 'no-cache');
+          res.end(css);
+        } catch (err) {
+          res.statusCode = 500;
+          res.end(`/* CSS build error: ${err.message} */`);
+        }
+      });
+    },
+    async closeBundle() {
+      const cssFiles = await listEntryCss();
+      const outDir = path.resolve(__dirname, 'dist/css');
       fs.mkdirSync(outDir, { recursive: true });
 
-      // Compile and process each SCSS file
-      for (const file of scssFiles) {
-        const name = path.basename(file, ".scss");
+      for (const file of cssFiles) {
+        const name = path.basename(file, '.css');
         const outFile = path.join(outDir, `${name}.css`);
         const minFile = path.join(outDir, `${name}.min.css`);
 
-        // Step 1: Compile SCSS to CSS with source maps
-        const result = await sass.compileAsync(file, {
-          style: "expanded",
-          sourceMap: true,
-          sourceMapIncludeSources: true,
-        });
+        const { css, map } = await compileCss(file, { minified: false });
+        fs.writeFileSync(outFile, css);
+        if (map) fs.writeFileSync(`${outFile}.map`, map.toString());
 
-        // Step 2: Run PostCSS with header + autoprefixer
-        const postcssResult = await postcss([
-          addHeader(),
-          autoprefixer(),
-        ]).process(result.css, {
-          from: path.resolve(file),
-          to: outFile,
-          map: {
-            prev: result.sourceMap ? JSON.stringify(result.sourceMap) : false,
-            inline: false,
-            annotation: true,
-          },
-        });
-
-        // Write normal CSS and source map
-        fs.writeFileSync(outFile, postcssResult.css);
-        if (postcssResult.map) {
-          fs.writeFileSync(`${outFile}.map`, postcssResult.map.toString());
-        }
-
-        // Step 3: Minify with cssnano + autoprefixer (again) + source maps
-        const minified = await postcss([autoprefixer(), cssnano()]).process(
-          postcssResult.css,
-          {
-            from: outFile,
-            to: minFile,
-            map: {
-              prev: postcssResult.map ? postcssResult.map.toString() : false,
-              inline: false,
-              annotation: true,
-            },
-          }
-        );
-
-        // Write minified CSS and source map
-        fs.writeFileSync(minFile, minified.css);
-        if (minified.map) {
-          fs.writeFileSync(`${minFile}.map`, minified.map.toString());
-        }
+        const { css: minCss, map: minMap } = await compileCss(file, { minified: true });
+        fs.writeFileSync(minFile, minCss);
+        if (minMap) fs.writeFileSync(`${minFile}.map`, minMap.toString());
       }
     },
   };
 }
 
-// Copy static files from src/docs to dist/docs (e.g. demo HTML, images, etc.)
+// Copy static files from src/docs to dist/docs (kitchen sink HTML, images, etc.)
 function copyDocsFiles() {
   return {
-    name: "copy-docs-files",
+    name: 'copy-docs-files',
     closeBundle() {
-      const srcDir = path.resolve(__dirname, "src/docs");
-      const destDir = path.resolve(__dirname, "dist/docs");
+      const srcDir = path.resolve(__dirname, 'src/docs');
+      const destDir = path.resolve(__dirname, 'dist/docs');
+
+      // Skip brand/examples: source of truth is src/docs + docs:sync-public.
+      const skipTopLevel = new Set(['brand', 'examples']);
 
       function copyRecursive(src, dest) {
         if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
@@ -119,30 +137,53 @@ function copyDocsFiles() {
         }
       }
 
-      copyRecursive(srcDir, destDir);
+      if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+      for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
+        if (skipTopLevel.has(entry.name)) continue;
+        const srcPath = path.join(srcDir, entry.name);
+        const destPath = path.join(destDir, entry.name);
+        if (entry.isDirectory()) {
+          copyRecursive(srcPath, destPath);
+        } else {
+          fs.copyFileSync(srcPath, destPath);
+        }
+      }
     },
   };
 }
 
 // Main Vite config
 export default defineConfig({
-  root: "src", // Vite project root
+  root: 'src', // Vite project root
   build: {
-    outDir: "../dist", // Output directory
+    outDir: '../dist', // Output directory
     emptyOutDir: true, // Clean before build
     rollupOptions: {
-      input: path.resolve(__dirname, "src/docs/demo/index.html"), // Entry point for HTML
+      // Avoid HTML MPA input: Vite's html-inline-proxy breaks on Windows with
+      // inline <style> in the kitchen sink. Docs HTML is copied by the plugin.
+      input: path.resolve(__dirname, 'scripts/vite-css-entry.js'),
       output: {
         entryFileNames: `[name].js`,
         chunkFileNames: `[name].js`,
-        assetFileNames: `[name][extname]`, // Keep asset file names flat
+        assetFileNames: `[name][extname]`,
       },
     },
-    assetsDir: "", // No subdir for assets
-    sourcemap: true, // Enable source maps
+    assetsDir: '',
+    sourcemap: false, // CSS source maps are generated by buildAllCss; JS is trivial
   },
-  plugins: [buildAllScss()], // Use the custom SCSS build plugin
+  plugins: [
+    buildAllCss(),
+    copyDocsFiles(),
+    {
+      name: 'omit-noop-entry',
+      generateBundle(_options, bundle) {
+        for (const fileName of Object.keys(bundle)) {
+          if (fileName.includes('vite-css-entry')) delete bundle[fileName];
+        }
+      },
+    },
+  ],
   server: {
-    open: "/docs/demo/index.html", // Dev server opens demo page
+    open: '/docs/kitchen-sink/',
   },
 });

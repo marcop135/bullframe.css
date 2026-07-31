@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Forest path">
+  <defs>
+    <linearGradient id="fsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87a96b"/>
+      <stop offset="100%" stop-color="#d9f99d"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#fsky)"/>
+  <ellipse cx="320" cy="420" rx="420" ry="160" fill="#14532d"/>
+  <ellipse cx="120" cy="300" rx="90" ry="140" fill="#166534"/>
+  <ellipse cx="520" cy="290" rx="110" ry="160" fill="#15803d"/>
+  <ellipse cx="250" cy="270" rx="70" ry="120" fill="#166534"/>
+  <ellipse cx="400" cy="280" rx="80" ry="130" fill="#14532d"/>
+  <path d="M280 400 Q320 250 360 400" fill="none" stroke="#a3e635" stroke-width="28" stroke-linecap="round" opacity="0.5"/>
+  <path d="M300 400 Q320 280 340 400" fill="none" stroke="#fef3c7" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+  <rect x="100" y="250" width="12" height="90" fill="#3f2a1a"/>
+  <rect x="480" y="240" width="14" height="100" fill="#3f2a1a"/>
+  <circle cx="106" cy="230" r="36" fill="#22c55e"/>
+  <circle cx="487" cy="220" r="42" fill="#16a34a"/>
+</svg>

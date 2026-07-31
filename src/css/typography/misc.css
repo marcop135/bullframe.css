@@ -1,0 +1,81 @@
+/* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
+
+p {
+  margin: 0 0 var(--bf-spacing-xl) 0;
+}
+
+/* abbr (Bootstrap 4): dotted underline + help cursor. */
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  border-bottom: 0;
+}
+
+mark {
+  background-color: var(--bf-yellow);
+  color: var(--bf-black);
+}
+
+ins {
+  background-color: var(--bf-yellow-light);
+  color: var(--bf-black);
+  text-decoration: none;
+}
+
+/* Inherit first so Safari does not double-apply bolder, then set bolder. */
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -8px;
+  top: -0.8rem;
+}
+
+sub {
+  bottom: -4px;
+  bottom: -0.4rem;
+}
+
+small {
+  font-size: 80%;
+}
+
+/* Tighter leading when a paragraph contains <small>. */
+@supports selector(:has(*)) {
+  p:has(small) {
+    line-height: 1.25;
+  }
+}
+
+hr {
+  box-sizing: content-box;
+  display: block;
+  height: 0;
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  margin: var(--bf-spacing-xl) 0;
+  padding: 0;
+  overflow: visible; /* Edge: show overflow. */
+}

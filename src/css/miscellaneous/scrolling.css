@@ -1,0 +1,7 @@
+/* Smooth scrolling when motion is allowed. */
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}

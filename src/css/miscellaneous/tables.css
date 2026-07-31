@@ -1,0 +1,45 @@
+/* Table border collapse and cell alignment. */
+
+table {
+  caption-side: bottom;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-color: currentcolor; /* Chrome / Safari inheritance. */
+  text-indent: 0; /* Chrome / Safari table indent. */
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+  font-weight: 700;
+}
+
+caption {
+  padding-top: var(--bf-spacing-md);
+  padding-bottom: var(--bf-spacing-md);
+  color: var(--bf-gray);
+  text-align: left;
+  caption-side: bottom;
+  line-height: 1.375;
+  font-size: 90%;
+}

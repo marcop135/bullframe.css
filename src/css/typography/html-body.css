@@ -1,0 +1,51 @@
+/* Root type and page chrome. */
+
+html {
+  text-size-adjust: 100%;
+
+  /* 62.5% root so 1rem ≈ 10px. */
+  font-size: 62.5%;
+
+  color: var(--bf-dark);
+  font-family: system-ui, sans-serif;
+  line-height: 1.15;
+
+  /* No tap flash on touch. */
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+body {
+  margin: 0;
+  font-size: var(--bf-body-font-size-rem);
+  line-height: var(--bf-body-line-height);
+  font-weight: 400;
+  text-align: left;
+
+  /* System UI stack (OS-native). */
+  font-family:
+    /* Safari / iOS (San Francisco) */
+    -apple-system,
+    /* Chrome < 56 on macOS (San Francisco) */ BlinkMacSystemFont,
+    /* Windows */ 'Segoe UI',
+    /* Android */ Roboto,
+    /* KDE */ Oxygen-Sans,
+    /* Ubuntu */ Ubuntu,
+    /* GNOME */ Cantarell,
+    /* macOS 10.10 and below */ 'Helvetica Neue',
+    Helvetica,
+    /* Web fallback */ Arial,
+    'Noto Sans',
+    sans-serif,
+    /* Emoji */ 'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  /* Ligatures and kerning. */
+  text-rendering: optimizeLegibility;
+
+  /* Long unbroken strings (e.g. headlines) wrap instead of overflowing. */
+  word-wrap: break-word;
+
+  background-color: var(--bf-white);
+}

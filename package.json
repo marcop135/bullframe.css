@@ -44,7 +44,7 @@
     "docs:dev": "npm run docs:sync-public && vitepress dev docs",
     "docs:sync-public": "node scripts/sync-docs-public.mjs",
     "docs:api-reference": "node scripts/build-api-reference.mjs",
-    "docs:sri": "node scripts/generate-sri.mjs",
+    "docs:sri": "node scripts/generate-sri.mjs && prettier --write docs/getting-started.md docs/theming.md docs/theming/dark-mode.md",
     "docs:build": "npm run build && npm run docs:sri && npm run docs:sync-public && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "examples:shots": "node scripts/capture-example-screenshots.mjs"

@@ -8,6 +8,7 @@ node_modules/
 .vite/
 .tmp-favicon/
 .tmp-heroes/
+pw-ci-artifacts/
 
 # Vite copyDocsFiles noise (source of truth: src/docs/ → docs:sync-public)
 dist/docs/brand/

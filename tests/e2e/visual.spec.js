@@ -14,6 +14,26 @@ for (const { name, path, fullPage } of pages) {
       page.evaluate(() => document.fonts.ready),
       new Promise((r) => setTimeout(r, 3_000)),
     ]);
+    // WebKit can leave document.fonts.ready pending forever on heavy pages;
+    // Playwright's screenshot path waits on it, so settle a resolved FontFaceSet.
+    await page.evaluate(() => {
+      const settled = {
+        ready: Promise.resolve(),
+        status: 'loaded',
+        check: () => true,
+        load: async () => [],
+        forEach() {},
+        values() {
+          return [][Symbol.iterator]();
+        },
+        addEventListener() {},
+        removeEventListener() {},
+      };
+      Object.defineProperty(document, 'fonts', {
+        configurable: true,
+        get: () => settled,
+      });
+    });
     await new Promise((r) => setTimeout(r, 300));
     await expect(page).toHaveScreenshot(`${name}.png`, {
       fullPage,

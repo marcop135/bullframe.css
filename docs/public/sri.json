@@ -1,7 +1,7 @@
 {
   "version": "6.0.0",
   "algorithm": "sha384",
-  "generatedAt": "2026-07-31T14:24:51.435Z",
+  "generatedAt": "2026-07-31T14:41:24.205Z",
   "files": {
     "bullframe.min.css": {
       "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css",

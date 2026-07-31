@@ -58,6 +58,7 @@ Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
 ## CDN
 
 <!-- sri:cdn:start -->
+
 Quick drop-in (latest published package entry):
 
 ```html

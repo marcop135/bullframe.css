@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Lint CSS
-        run: npx stylelint "src/css/**/*.css"
+        run: npx stylelint "src/**/*.css"
 
       - name: Build
         run: npm run build
@@ -64,7 +64,7 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Build (vite + sync-demo + vitepress)
+      - name: Build (vite + sync-public + vitepress)
         run: npm run docs:build
 
       - name: Run visual tests

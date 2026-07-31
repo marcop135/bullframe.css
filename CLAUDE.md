@@ -23,8 +23,8 @@ Uses **npm**. Node `>=20`.
 | Command | Purpose |
 | ----------------------- | -------------------------------- |
 | `npm run build` | Seven CSS builds → `dist/css/` |
-| `npm run lint` | Stylelint |
-| `npm run lint:html` | html-validate |
+| `npm run lint` | Stylelint (`src/**/*.css`) |
+| `npm run lint:html` | html-validate (`src/**/*.html`) |
 | `npm run format` / `format:check` | Prettier |
 | `npm run docs:dev` | Local VitePress (port from VitePress defaults) |
 | `npm run docs:build` | Production docs |
@@ -35,7 +35,7 @@ Uses **npm**. Node `>=20`.
 
 - `src/css/` — source CSS (entry files + partials).
 - `dist/css/` — published builds (also listed in `package.json` `files` / `exports`).
-- `docs/` — VitePress site; demo synced into `docs/public/demo/` by `docs:sync-demo`.
+- `docs/` — VitePress site; kitchen sink synced into `docs/public/kitchen-sink/` by `docs:sync-public`.
 - `tests/e2e/` — Playwright specs and `__screenshots__` baselines.
 - `.github/workflows/ci.yml` — lint/build/e2e on `v6` and `main`.
 - `.github/workflows/deploy-docs.yaml` — FTPS deploy of `docs/.vitepress/dist/`.

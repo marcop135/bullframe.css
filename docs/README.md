@@ -1,15 +1,16 @@
 # Docs
 
-Full reference for Bullframe CSS. Semantic by default. Any stack. Classless when you want it. System dark built in. About 8 KB gzipped, MIT license, seven stylesheet builds on npm.
+Reference for Bullframe CSS v6: native CSS + PostCSS, seven builds, ~8 KB gzip default, MIT.
 
-Start with [Getting started](getting-started.md) if you are new. Live specimen: [Demo](https://bullframecss.marcopontili.com/demo/). Every page is also available as Markdown (append `.md`, or send `Accept: text/markdown`).
+Start with [Getting started](getting-started.md). Browse [Examples](examples.md) or the [Kitchen sink](https://bullframecss.marcopontili.com/kitchen-sink/). Every page is also available as Markdown (append `.md`, or send `Accept: text/markdown`).
 
 ## Overview
 
 | | |
 |---|---|
-| [Getting started](getting-started.md) | Modes, install, CDN/npm, starters |
-| [Migration](migration.md) | v5 to v6 |
+| [Getting started](getting-started.md) | Install, modes, themes, starters |
+| [Examples](examples.md) | Standalone HTML templates |
+| [Migration](migration.md) | v5 → v6 |
 
 ## Core
 
@@ -17,8 +18,8 @@ Start with [Getting started](getting-started.md) if you are new. Live specimen: 
 |---|---|
 | [Variables](variables.md) | `--bf-*` tokens |
 | [Typography](typography.md) | Headings, body, lists |
-| [Layout](layout.md) | Containers, grid, responsive |
-| [Forms](forms.md) | Controls and validation |
+| [Layout](layout.md) | Containers, grid |
+| [Forms](forms.md) | Controls |
 | [Buttons](buttons.md) | Button classes |
 
 ## Utilities
@@ -34,7 +35,7 @@ Start with [Getting started](getting-started.md) if you are new. Live specimen: 
 
 | | |
 |---|---|
-| [Components](components/index.md) | Patterns overview |
+| [Components](components/index.md) | Pattern recipes |
 | [Buttons](components/button-patterns.md) · [Forms](components/forms.md) · [Modals](components/modals.md) | |
 | [Cards](components/cards.md) · [Navigation](components/navigation.md) | |
 
@@ -42,23 +43,14 @@ Start with [Getting started](getting-started.md) if you are new. Live specimen: 
 
 | | |
 |---|---|
-| [Theming](theming.md) | Approach and tokens |
-| [Dark mode](theming/dark-mode.md) | Light, dark, system |
-| [Customization](theming/customization.md) | Override and extend |
+| [Theming](theming.md) | Builds and tokens |
+| [Dark mode](theming/dark-mode.md) | Dark / system builds |
+| [Customization](theming/customization.md) | Override `--bf-*` |
 
 ## Reference
 
 | | |
 |---|---|
-| [Accessibility](accessibility.md) | AA defaults and guidance |
-| [Browser support](browser-support.md) | Supported browsers |
-| [API reference](api-reference.md) | Properties and classes |
-
-## Local docs site
-
-```bash
-npm install
-npm run docs:dev
-```
-
-Build: `npm run docs:build` · Preview: `npm run docs:preview`
+| [Accessibility](accessibility.md) | Focus, motion, contrast |
+| [Browser support](browser-support.md) | Browserslist `defaults` |
+| [API reference](api-reference.md) | Class and token index |

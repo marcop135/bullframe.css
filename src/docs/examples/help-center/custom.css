@@ -1,0 +1,19 @@
+.ex-help-hero {
+  padding: 2rem 1rem;
+  border: 1px solid var(--bf-gray-light);
+  border-radius: 0.75rem;
+  background: rgb(194 65 12 / 0.04);
+}
+
+.ex-help-search {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 36rem;
+  margin: 1.25rem auto 0;
+}
+
+.ex-help-search input {
+  flex: 1;
+  margin: 0;
+}

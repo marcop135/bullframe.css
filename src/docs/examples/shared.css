@@ -1,0 +1,59 @@
+/* Shared example chrome: back link + build badge. */
+.ex-bar {
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--bf-gray-light);
+  margin-bottom: 2rem;
+}
+
+.ex-bar p {
+  margin: 0;
+  /* Root is 62.5% (1rem ≈ 10px); match body scale (~1.6rem), not 1rem. */
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--bf-gray-dark);
+}
+
+.ex-build {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.4rem;
+}
+
+.ex-card {
+  border: 1px solid var(--bf-gray-light);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.ex-card--featured {
+  border-color: var(--bf-blue);
+  border-width: 2px;
+}
+
+.ex-media {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  background: var(--bf-gray-light);
+  border: 0;
+}
+
+.ex-media-wrap {
+  border: 1px solid var(--bf-gray-light);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ex-media-wrap .ex-body {
+  padding: 1.25rem;
+}
+
+.ex-swatch {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(135deg, #c2410c 0%, #f97316 55%, #ffedd5 100%);
+}

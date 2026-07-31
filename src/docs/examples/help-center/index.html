@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Help center · Examples · Bullframe CSS</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="/css/bullframe.min.css" />
+    <link rel="stylesheet" href="/examples/shared.css" />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <header class="ex-bar">
+      <div class="bf-container">
+        <p><a href="/examples">← Examples</a> · <span class="ex-build">bullframe.min.css</span></p>
+      </div>
+    </header>
+    <main class="bf-container bf-container--break-md bf-p-b-4">
+      <section class="ex-help-hero bf-t-center bf-m-b-4">
+        <h1>Help center</h1>
+        <p class="bf-lead">Search guides, or browse topics below.</p>
+        <form role="search" class="ex-help-search" action="#" method="get">
+          <label class="bf-sr-only" for="help-q">Search help</label>
+          <input id="help-q" type="search" name="q" placeholder="Search articles…" />
+          <button type="submit" class="bf-btn bf-btn--primary">Search</button>
+        </form>
+      </section>
+
+      <section class="bf-row bf-m-b-4">
+        <div class="bf-col-4">
+          <article class="ex-card">
+            <h2 class="bf-m-t-0" style="font-size: 1.25rem">Getting started</h2>
+            <ul class="bf-m-b-0">
+              <li><a href="#">Install via npm</a></li>
+              <li><a href="#">CDN quick start</a></li>
+              <li><a href="#">Pick a build</a></li>
+            </ul>
+          </article>
+        </div>
+        <div class="bf-col-4">
+          <article class="ex-card">
+            <h2 class="bf-m-t-0" style="font-size: 1.25rem">Theming</h2>
+            <ul class="bf-m-b-0">
+              <li><a href="#">CSS variables</a></li>
+              <li><a href="#">Dark mode</a></li>
+              <li><a href="#">Classless mode</a></li>
+            </ul>
+          </article>
+        </div>
+        <div class="bf-col-4">
+          <article class="ex-card">
+            <h2 class="bf-m-t-0" style="font-size: 1.25rem">Forms &amp; a11y</h2>
+            <ul class="bf-m-b-0">
+              <li><a href="#">Labels and autocomplete</a></li>
+              <li><a href="#">Focus-visible</a></li>
+              <li><a href="#">Reduced motion</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Popular articles</h2>
+        <article class="ex-card bf-m-b-2">
+          <h3 class="bf-m-t-0" style="font-size: 1.15rem"><a href="/migration">Migrate from v5 to v6</a></h3>
+          <p class="bf-m-b-0">Sass removed. Native CSS tokens and seven PostCSS builds.</p>
+        </article>
+        <article class="ex-card bf-m-b-2">
+          <h3 class="bf-m-t-0" style="font-size: 1.15rem"><a href="/theming/dark-mode">Dark mode without a script</a></h3>
+          <p class="bf-m-b-0">Always-dark and system-default builds cover the common cases.</p>
+        </article>
+        <article class="ex-card">
+          <h3 class="bf-m-t-0" style="font-size: 1.15rem"><a href="/utilities">Utilities companion</a></h3>
+          <p class="bf-m-b-0">Grid, spacing, and text helpers when classless defaults are not enough.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

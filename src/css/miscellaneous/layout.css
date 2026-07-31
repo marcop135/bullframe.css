@@ -1,4 +1,4 @@
-/* Layout - Box sizing and HTML5 elements */
+/* Border-box and HTML5 block elements. */
 
 *,
 *::before,
@@ -26,7 +26,7 @@ template {
   display: none;
 }
 
-/* Make elements with the HTML hidden attribute stay hidden by default. */
+/* [hidden] stays hidden (except until-found). */
 [hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }

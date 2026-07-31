@@ -1,4 +1,4 @@
-/* Utilities - Tables */
+/* Table padding, overflow, and zebra helpers. */
 
 .bf-table th,
 .bf-table td {
@@ -7,7 +7,7 @@
   margin-bottom: var(--bf-spacing-md);
 }
 
-/* responsive tables */
+/* Horizontal scroll wrapper. */
 .bf-table-responsive {
   overflow: auto hidden;
   -ms-overflow-style: scrollbar;
@@ -18,12 +18,12 @@
   margin-bottom: var(--bf-spacing-md);
 }
 
-/* force webkit scrollbars appearance */
+/* Prefer always-visible scrollbars on WebKit. */
 .bf-table-responsive.scrollbar {
   -webkit-overflow-scrolling: auto;
 }
 
-/* zebra striping */
+/* Odd-row striping. */
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
   background-color: var(--bf-gray-light-extra);

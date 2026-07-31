@@ -55,7 +55,7 @@
     page-break-after: avoid;
   }
 
-  /* Bullframe-specific print rules */
+  /* Framework print tweaks. */
   body,
   .bf-container {
     min-width: 992px !important;

@@ -1,7 +1,5 @@
-/* Forms - Range input styling */
-
-/* Custom thumb/track only when appearance can be reset. Native range otherwise.
- * Demo: https://codepen.io/marcop135/pen/JjGrNMx */
+/* Range: custom thumb/track when appearance:none is supported.
+ * CodePen: https://codepen.io/marcop135/pen/JjGrNMx */
 
 @supports (appearance: none) {
   :where([type='range']) {

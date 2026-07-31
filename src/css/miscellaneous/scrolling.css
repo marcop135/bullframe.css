@@ -1,4 +1,4 @@
-/* Miscellaneous - Scrolling */
+/* Smooth scrolling when motion is allowed. */
 
 @media (prefers-reduced-motion: no-preference) {
   :root {

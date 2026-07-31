@@ -101,7 +101,7 @@
   max-width: 8.3333%;
 }
 
-/* Stack columns below breakpoint when container has .bf-container--break-{xs|md|lg}. */
+/* Breakpoint stacking via .bf-container--break-{xs|md|lg}. */
 @media (max-width: 575px) {
   .bf-container--break-xs .bf-row {
     margin-left: 0;
@@ -147,7 +147,7 @@
   }
 }
 
-/* Table cells with col classes: keep static positioning (legacy v4 compatibility). */
+/* Table cells with col classes stay position:static (v4 compat). */
 table td[class^='bf-col'],
 table th[class^='bf-col'] {
   position: static;

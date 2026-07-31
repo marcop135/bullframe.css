@@ -1,4 +1,4 @@
-/* Utilities - Filters */
+/* Filter helpers (.bf-filter-*). */
 
 .bf-filter-invert {
   filter: invert(100%) !important;

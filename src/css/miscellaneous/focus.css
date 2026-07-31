@@ -1,24 +1,22 @@
-/* Keyboard-first focus: hide outline unless :focus-visible; orange ring for keyboard users.
- * Form controls clear UA outline here; field chrome lives in forms/styling.css. */
+/* Keyboard-first focus: orange :focus-visible ring; mute mouse outline.
+ * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
-/* Remove focus outline if it's not keyboard-triggered */
 :where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
-/* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
+/* tabindex="-1" targets should not show a ring on programmatic focus. */
 :where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
-/* Restore focus style for keyboard users only */
 :focus-visible {
   outline: 0.2rem solid var(--bf-orange);
   outline-offset: 0.3rem;
 }
 
-/* Clear UA focus outline on text-like controls (chrome in forms/styling.css).
- * Leave color/range/file alone; they often use custom widgets. */
+/* Clear UA outline on text-like controls (styled fields keep their own chrome).
+ * Leave color / range / file alone; they often use custom widgets. */
 button:focus,
 [type='button']:focus,
 [type='reset']:focus,

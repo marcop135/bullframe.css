@@ -1,6 +1,6 @@
 # Browser Support
 
-Bullframe CSS targets browsers covered by the Browserslist query in [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/v6/.browserslistrc): **`defaults`**. Autoprefixer uses that same query when building CSS. Prefixes are added where needed; there are no polyfills for unsupported CSS APIs.
+Bullframe CSS targets browsers covered by the Browserslist query in [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/main/.browserslistrc): **`defaults`**. Autoprefixer uses that same query when building CSS. Prefixes are added where needed; there are no polyfills for unsupported CSS APIs.
 
 ## Builds
 
@@ -25,4 +25,4 @@ Tested against current Chromium and WebKit mobile. Forms (`select`, `range`) and
 
 ## Checking support
 
-Inspect [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/v6/.browserslistrc) and [browsersl.ist](https://browsersl.ist/) for the live coverage of `defaults`.
+Inspect [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/main/.browserslistrc) and [browsersl.ist](https://browsersl.ist/) for the live coverage of `defaults`.

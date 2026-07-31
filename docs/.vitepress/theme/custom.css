@@ -1,43 +1,43 @@
 /*
  * Bullframe CSS brand skin for VitePress.
- * Brand oranges chosen for WCAG AA 4.5:1 (text on light, white on solid buttons).
- * Decorative bright orange remains in SVG/hero assets only.
+ * Product blues (--bf-blue / --bf-blue-light) for WCAG AA 4.5:1
+ * (text on light, white on solid buttons). Matches framework link/button accent.
  */
 
 :root {
   /* Links / accents on light surfaces */
-  --vp-c-brand-1: #c2410c;
+  --vp-c-brand-1: #0056b3;
   /* Hover / stronger */
-  --vp-c-brand-2: #a83409;
+  --vp-c-brand-2: #004187;
   /* Solid fills (buttons) */
-  --vp-c-brand-3: #c2410c;
-  --vp-c-brand-soft: rgba(194, 65, 12, 0.14);
+  --vp-c-brand-3: #0056b3;
+  --vp-c-brand-soft: rgba(0, 86, 179, 0.14);
 
   /* Explicit button tokens: white on brand must stay AA (do not lighten on hover). */
-  --vp-button-brand-bg: #c2410c;
-  --vp-button-brand-hover-bg: #a83409;
-  --vp-button-brand-active-bg: #9a2f08;
+  --vp-button-brand-bg: #0056b3;
+  --vp-button-brand-hover-bg: #004187;
+  --vp-button-brand-active-bg: #00356d;
   --vp-button-brand-text: #ffffff;
   --vp-button-brand-hover-text: #ffffff;
   --vp-button-brand-active-text: #ffffff;
 
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #c2410c, #d14812);
+  --vp-home-hero-name-background: linear-gradient(120deg, #0056b3, #004187);
 }
 
 .dark {
   /* Links on dark surfaces */
-  --vp-c-brand-1: #ff9f78;
-  --vp-c-brand-2: #ffb090;
+  --vp-c-brand-1: #4da5ff;
+  --vp-c-brand-2: #7eb8ff;
   /* Keep solid fills dark enough for white button text */
-  --vp-c-brand-3: #c2410c;
-  --vp-c-brand-soft: rgba(255, 159, 120, 0.18);
+  --vp-c-brand-3: #0056b3;
+  --vp-c-brand-soft: rgba(77, 165, 255, 0.18);
 
-  --vp-button-brand-bg: #c2410c;
-  --vp-button-brand-hover-bg: #a83409;
-  --vp-button-brand-active-bg: #9a2f08;
+  --vp-button-brand-bg: #0056b3;
+  --vp-button-brand-hover-bg: #004187;
+  --vp-button-brand-active-bg: #00356d;
 
-  --vp-home-hero-name-background: linear-gradient(120deg, #ff9f78, #ffc4a8);
+  --vp-home-hero-name-background: linear-gradient(120deg, #4da5ff, #7eb8ff);
 }
 
 /*
@@ -117,6 +117,14 @@
   background: transparent;
 }
 
+/* Nav mark: match title text scale; footer keeps the larger mark. */
+.VPNavBarTitle .logo {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
+
 /* Footer: logo first, then name + copyright. */
 .VPFooter .bf-footer-brand {
   display: inline-flex;
@@ -130,6 +138,19 @@
   height: 2.25rem;
   flex-shrink: 0;
   overflow: visible;
+  object-fit: contain;
+}
+
+.VPFooter .bf-footer-logo--dark {
+  display: none;
+}
+
+.dark .VPFooter .bf-footer-logo--light {
+  display: none;
+}
+
+.dark .VPFooter .bf-footer-logo--dark {
+  display: inline-block;
 }
 
 .VPFooter .bf-footer-text {

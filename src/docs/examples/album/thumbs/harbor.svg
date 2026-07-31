@@ -2,12 +2,12 @@
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e3a5f"/>
-      <stop offset="45%" stop-color="#c2410c"/>
+      <stop offset="45%" stop-color="#0056b3"/>
       <stop offset="100%" stop-color="#fdba74"/>
     </linearGradient>
   </defs>
   <rect width="640" height="400" fill="url(#sky)"/>
-  <ellipse cx="520" cy="120" rx="48" ry="48" fill="#ffedd5" opacity="0.95"/>
+  <ellipse cx="520" cy="120" rx="48" ry="48" fill="#bed8fe" opacity="0.95"/>
   <path d="M0 250 Q160 210 320 250 T640 240 L640 400 L0 400 Z" fill="#0f172a"/>
   <path d="M0 270 Q200 250 360 275 T640 265 L640 400 L0 400 Z" fill="#1e293b"/>
   <rect x="80" y="200" width="18" height="90" fill="#334155"/>

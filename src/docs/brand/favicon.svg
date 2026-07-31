@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- Adaptive favicon. Even ~1.25px pad in the square. -->
+  <!-- Adaptive favicon. Thick side crescents, sharp tips. -->
   <style>
     .mark { fill: #0056b3; }
     .dot { fill: #ffffff; }
@@ -8,7 +8,7 @@
       .dot { fill: #0b1220; }
     }
   </style>
-  <g transform="translate(16 16) scale(1.01 1.288) translate(-16 -12.65)">
+  <g transform="translate(16 16) scale(0.99 1.06) translate(-16 -13.0)">
     <path class="mark" fill-rule="evenodd" d="
       M6.2 10.2 H25.8 A1.3 1.3 0 0 1 27.1 11.5 V22.8 A1.3 1.3 0 0 1 25.8 24.1 H6.2 A1.3 1.3 0 0 1 4.9 22.8 V11.5 A1.3 1.3 0 0 1 6.2 10.2 Z
       M7.8 13.6 V21.6 H24.2 V13.6 Z"/>
@@ -17,18 +17,26 @@
     <circle class="dot" cx="11.5" cy="11.9" r="0.65"/>
     <circle class="dot" cx="13.6" cy="11.9" r="0.65"/>
     <path class="mark" d="
-      M7.4 11
-      C4.6 6.2 2.4 3.2 1.4 2.2
-      C0.7 1.4 1.8 0.7 2.8 1.2
-      C6.2 2.8 9.4 7.2 11.2 10.4
-      C9.8 10.5 8.4 10.7 7.4 11
+      M5.5 15.5
+      C1.2 14.0 -0.2 8.5 1.4 4.2
+      L2.0 2.0
+      L3.6 3.6
+      C2.6 5.2 2.4 7.5 3.4 9.5
+      C4.4 11.8 5.2 13.5 6.8 14.6
+      L8.2 15.4
+      L7.2 16.0
+      L5.5 15.5
       Z"/>
     <path class="mark" d="
-      M24.6 11
-      C27.4 6.2 29.6 3.2 30.6 2.2
-      C31.3 1.4 30.2 0.7 29.2 1.2
-      C25.8 2.8 22.6 7.2 20.8 10.4
-      C22.2 10.5 23.6 10.7 24.6 11
+      M26.5 15.5
+      C30.8 14.0 32.2 8.5 30.6 4.2
+      L30.0 2.0
+      L28.4 3.6
+      C29.4 5.2 29.6 7.5 28.6 9.5
+      C27.6 11.8 26.8 13.5 25.2 14.6
+      L23.8 15.4
+      L24.8 16.0
+      L26.5 15.5
       Z"/>
   </g>
 </svg>

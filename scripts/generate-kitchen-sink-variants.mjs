@@ -676,7 +676,7 @@ const footer = `      <footer class="demo-footer bf-m-b-4">
           <div class="bf-row">
             <div class="bf-col-8">
               <p class="demo-kicker bf-m-b-1">Bullframe CSS</p>
-              <p class="bf-lead bf-m-b-2">Lightweight CSS for fast, accessible UIs.</p>
+              <p class="bf-lead bf-m-b-2">Semantic by default. Any stack.</p>
               <p class="bf-m-b-2">
                 <a class="bf-btn bf-btn--primary bf-m-b-2" href="/">Docs home</a>
                 <a class="bf-btn bf-m-b-2" href="https://github.com/marcop135/bullframe.css">GitHub</a>

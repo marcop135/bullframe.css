@@ -54,9 +54,10 @@ async function compileCss(file, { minified = false } = {}) {
   return { css: postcssResult.css, map: postcssResult.map };
 }
 
-// Find the entry-point CSS files that should be exposed as build artifacts.
+// Seven consumer builds only. Helper sheets (variables*, utility-global-dark*)
+// stay import-only under src/css/ and are not emitted as dist entries.
 async function listEntryCss() {
-  const files = await glob('src/css/*.css', { cwd: __dirname });
+  const files = await glob('src/css/bullframe*.css', { cwd: __dirname });
   return files.filter((file) => !path.basename(file).startsWith('_'));
 }
 
@@ -116,6 +117,9 @@ function copyDocsFiles() {
       const srcDir = path.resolve(__dirname, 'src/docs');
       const destDir = path.resolve(__dirname, 'dist/docs');
 
+      // Skip brand/examples: source of truth is src/docs + docs:sync-public.
+      const skipTopLevel = new Set(['brand', 'examples']);
+
       function copyRecursive(src, dest) {
         if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
 
@@ -133,7 +137,17 @@ function copyDocsFiles() {
         }
       }
 
-      copyRecursive(srcDir, destDir);
+      if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+      for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
+        if (skipTopLevel.has(entry.name)) continue;
+        const srcPath = path.join(srcDir, entry.name);
+        const destPath = path.join(destDir, entry.name);
+        if (entry.isDirectory()) {
+          copyRecursive(srcPath, destPath);
+        } else {
+          fs.copyFileSync(srcPath, destPath);
+        }
+      }
     },
   };
 }

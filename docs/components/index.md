@@ -2,7 +2,7 @@
 
 Copy-paste HTML patterns built with Bullframe's existing classes. No JavaScript, no extra CSS, no dependencies; just markup.
 
-These pages complement the [Core Concepts](../buttons) reference (which covers individual classes). Use these when you need a complete pattern: a login form, a header nav, a card grid.
+These pages complement the [Buttons](../buttons) reference (and the rest of Core Concepts). Use these when you need a complete pattern: a login form, a header nav, a card grid.
 
 ## Available patterns
 

@@ -75,7 +75,7 @@
 }
 
 /* Layout */
-/* Layout - Box sizing and HTML5 elements */
+/* Border-box and HTML5 block elements. */
 
 *,
 *::before,
@@ -103,12 +103,12 @@ template {
   display: none;
 }
 
-/* Make elements with the HTML hidden attribute stay hidden by default. */
+/* [hidden] stays hidden (except until-found). */
 [hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
 /* UA+ enhancements (adapted from https://fokus.dev/tools/uaplus/).
- * Improves UA defaults without a heavy reset; complements Bullframe base styles. */
+ * Light UA improvements; complements Bullframe base styles. */
 
 @layer {
   /* Spacing between content and focus outline (enhances focus.css). */
@@ -232,23 +232,23 @@ template {
       background: rgb(0 0 0 / 0.3);
     }
 
-    dialog,
-    [popover],
-    dialog::backdrop {
-      opacity: 0;
-      transition:
-        opacity 300ms ease-out,
-        display 300ms allow-discrete,
-        overlay 300ms allow-discrete;
-    }
-
-    dialog[open],
-    :popover-open,
-    dialog[open]::backdrop {
-      opacity: 1;
-    }
-
     @supports (overlay: auto) {
+      dialog,
+      [popover],
+      dialog::backdrop {
+        opacity: 0;
+        transition:
+          opacity 300ms ease-out,
+          display 300ms allow-discrete,
+          overlay 300ms allow-discrete;
+      }
+
+      dialog[open],
+      :popover-open,
+      dialog[open]::backdrop {
+        opacity: 1;
+      }
+
       @starting-style {
         dialog[open],
         :popover-open,
@@ -289,68 +289,60 @@ template {
 }
 
 /* Typography */
-/* Typography - HTML and Body */
+/* Root type and page chrome. */
 
 html {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
 
-  /* 62.5% root so 1rem ≈ 10px for easy rem math. */
+  /* 62.5% root so 1rem ≈ 10px. */
   font-size: 62.5%;
 
   color: var(--bf-dark);
-
-  /* set a default font-family and line-height */
   font-family: system-ui, sans-serif;
   line-height: 1.15;
 
-  /* remove a tap background when a link or interactive element is focused
-   * if is touch
-   */
+  /* No tap flash on touch. */
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 body {
   margin: 0;
-  font-size: var(--bf-body-font-size-rem); /* '1.6rem' by default */
-  line-height: var(--bf-body-line-height); /* '1.5' by default */
-
-  /* this is useful to inherit values for some elements (e.g. forms) */
+  font-size: var(--bf-body-font-size-rem);
+  line-height: var(--bf-body-line-height);
   font-weight: 400;
   text-align: left;
 
-  /* System UI font stack (OS-native look). */
+  /* System UI stack (OS-native). */
   font-family:
-    /* Safari for OS X and iOS (San Francisco) */
+    /* Safari / iOS (San Francisco) */
     -apple-system,
-    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
+    /* Chrome < 56 on macOS (San Francisco) */ BlinkMacSystemFont,
     /* Windows */ 'Segoe UI',
     /* Android */ Roboto,
-    /* Linux with KDE */ Oxygen-Sans,
-    /* Ubuntu (all variants) */ Ubuntu,
-    /* Linux with GNOME Shell */ Cantarell,
-    /* macOS 1.10 and below */ 'Helvetica Neue',
+    /* KDE */ Oxygen-Sans,
+    /* Ubuntu */ Ubuntu,
+    /* GNOME */ Cantarell,
+    /* macOS 10.10 and below */ 'Helvetica Neue',
     Helvetica,
-    /* Basic web fallback */ Arial,
+    /* Web fallback */ Arial,
     'Noto Sans',
     sans-serif,
-    /* emoji fonts */ 'Apple Color Emoji',
+    /* Emoji */ 'Apple Color Emoji',
     'Segoe UI Emoji',
     'Segoe UI Symbol',
     'Noto Color Emoji';
 
-  /* this enable font ligatures */
+  /* Ligatures and kerning. */
   text-rendering: optimizeLegibility;
 
-  /* break very long texts by default, especially on old browsers
-   * e.g. big <h1> or <h2> headlines
-   */
+  /* Long unbroken strings (e.g. headlines) wrap instead of overflowing. */
   word-wrap: break-word;
 
   background-color: var(--bf-white);
 }
-/* Typography - Headings */
+/* Heading scale and rhythm. */
 
 h1,
 h2,
@@ -358,7 +350,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0; /* fallback */
+  margin-top: 0;
   font-weight: 600;
   font-family: inherit;
   color: inherit;
@@ -392,7 +384,7 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* Typography - Blockquotes */
+/* Blockquote and citation. */
 
 blockquote {
   margin: 0 0 var(--bf-spacing-xl);
@@ -416,25 +408,20 @@ blockquote small::before {
 q {
   quotes: '\201C' '\201D' '\2018' '\2019';
 }
-/* Typography - Miscellaneous */
+/* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
   margin: 0 0 var(--bf-spacing-xl) 0;
 }
 
-/* Abbreviations (taken from Bootstrap 4)
- *
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- * 3. Add explicit cursor to indicate changed behavior.
- */
+/* abbr (Bootstrap 4): dotted underline + help cursor. */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  text-decoration: underline; /* 2 */
+  text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
-  border-bottom: 0; /* 2 */
+          text-decoration: underline dotted;
+  border-bottom: 0;
 }
 
 mark {
@@ -448,15 +435,12 @@ ins {
   text-decoration: none;
 }
 
-/* Prevent the duplicate application of `bolder` by the next rule
- * in Safari 6
- */
+/* Inherit first so Safari does not double-apply bolder, then set bolder. */
 b,
 strong {
   font-weight: inherit;
 }
 
-/* Add the correct font weight in Chrome, Edge, and Safari */
 b,
 strong {
   font-weight: bolder;
@@ -488,9 +472,11 @@ small {
   font-size: 80%;
 }
 
-/* Reduce line-height for <small> elements inside <p> */
-p:has(small) {
-  line-height: 1.25;
+/* Tighter leading when a paragraph contains <small>. */
+@supports selector(:has(*)) {
+  p:has(small) {
+    line-height: 1.25;
+  }
 }
 
 hr {
@@ -502,21 +488,21 @@ hr {
   color: inherit;
   margin: var(--bf-spacing-xl) 0;
   padding: 0;
-  overflow: visible; /* Show the overflow in Edge */
+  overflow: visible; /* Edge: show overflow. */
 }
-/* Typography - Monospaced elements */
+/* pre / code / kbd / samp. */
 
 pre {
   margin: 0 0 var(--bf-spacing-xl) 0;
 
   display: block;
   overflow: auto;
-  word-break: break-all; /* webkit */
+  word-break: break-all; /* WebKit */
   word-wrap: break-word;
   white-space: pre;
   hyphens: none;
 
-  /* Disable auto-hiding scrollbar in legacy Edge
+  /* Keep scrollbars visible in legacy Edge.
    * https://github.com/twbs/bootstrap/pull/30685 */
   -ms-overflow-style: auto;
 }
@@ -526,13 +512,12 @@ code,
 kbd,
 samp {
   font-family:
-    /* macOS 1.10+ */
+    /* macOS 10.10+ */
     Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono',
     'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
 
-  /* a monospaced text font should looks bigger, so a smaller font-size
-   * is preferred */
+  /* Mono faces read large; use a slightly smaller size. */
   font-size: 0.875em;
 }
 
@@ -551,9 +536,7 @@ pre code {
 }
 
 /* Forms */
-/* Forms - Normalization */
-
-/* normalization, enhancement and responsiveness */
+/* Form control reset: inheritance, sizing, and UA quirks. */
 
 :where(html input, button, select, optgroup, textarea) {
   color: inherit;
@@ -570,7 +553,7 @@ pre code {
   width: 100%;
 }
 
-/* re-set width auto where needed */
+/* Shrink-to-content controls stay auto-width. */
 :where(
   html label,
   button,
@@ -584,9 +567,7 @@ pre code {
   width: auto;
 }
 
-/* inline-block display gives the best cross-browser combination
- * and allow several properties
- */
+/* inline-block: consistent sizing and vertical-align across engines. */
 :where(
   html input,
   label,
@@ -618,18 +599,18 @@ pre code {
   margin: 0;
 }
 
-/* Remove intrinsic min-width of fieldset. */
+/* Drop fieldset min-content width so nested grids can shrink. */
 :where(fieldset) {
   border: 0;
   padding: 0;
   margin: 0;
-  min-width: 0; /* 1. */
+  min-width: 0;
 }
 
 :where(legend) {
-  display: table; /* Correct the text wrapping in Edge and IE. */
+  display: table; /* Text wrapping in Edge / IE. */
   max-width: 100%;
-  white-space: normal; /* enable line-wrapping in FF4/5 */
+  white-space: normal;
   border: 0;
   padding: 0;
   font-weight: 400;
@@ -684,9 +665,8 @@ pre code {
   word-wrap: normal;
 }
 
-/* Taken from Bootstrap Reboot v5.2
- * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css
- */
+/* Hide WebKit datalist picker chrome (Bootstrap Reboot 5.2).
+ * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css */
 :where([list]):not(
     [type='date'],
     [type='datetime-local'],
@@ -700,11 +680,11 @@ pre code {
 :where(optgroup) {
   font-family: inherit;
   font-size: inherit;
-  font-style: inherit; /* fallback for font families without 600 */
+  font-style: inherit; /* Families without a 600 face. */
   font-weight: 600;
 }
 
-/* remove -webkit-appearance listing every single elements that needed it */
+/* Reset WebKit / Blink appearance on text-like controls. */
 :where(
   button,
   html [type='button'],
@@ -776,7 +756,7 @@ pre code {
   resize: vertical;
 }
 
-/* Remove the inner border and padding of focus outlines in Firefox */
+/* Firefox: strip inner focus padding/border. */
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -794,7 +774,7 @@ pre code {
      -moz-user-select: none;
           user-select: none;
   border: 0;
-  background-image: none; /* FF mobile */
+  background-image: none; /* Firefox mobile */
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):hover,
@@ -813,11 +793,8 @@ pre code {
   cursor: pointer;
 }
 
-/* FF placeholder bug
- * Issue: If one change the text color of input fields, FF will change
- * the default color of placeholders too!
- * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150
- */
+/* Firefox: input color must not override placeholder color.
+ * https://github.com/necolas/normalize.css/issues/150 */
 :where(input::-moz-placeholder, textarea::-moz-placeholder) {
   color: var(--bf-gray-dark);
 }
@@ -825,25 +802,17 @@ pre code {
   color: var(--bf-gray-dark);
 }
 
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-
+/* Firefox: modern focus ring on all focusable elements. */
 :-moz-focusring {
   outline: auto;
 }
 
-/* remove ':invalid' styles in FF
- * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
- *
- * for form validation in JavaScript
- * use '.bf-invalid' class in /utilities/form-states.css instead
- * documentation https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid
- */
+/* Firefox: drop :-moz-ui-invalid glow; use .bf-invalid for JS validation.
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */
 :-moz-ui-invalid {
   box-shadow: none;
 }
-/* Forms - Styling */
+/* Form field and button chrome (borders, focus, disabled). */
 
 :where(
   [type='email'],
@@ -930,7 +899,7 @@ Use the modern Firefox focus style for all focusable elements.
   ) {
   text-decoration: none;
   color: var(--bf-dark);
-  background: rgb(184 184 184); /* color.adjust($bf-gray-light, $lightness: -10%) */
+  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
@@ -940,7 +909,7 @@ Use the modern Firefox focus style for all focusable elements.
   box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
 }
 
-/* disabled groups */
+/* Disabled / aria-disabled / fieldset[disabled]. */
 :where(
   fieldset[disabled] button,
   fieldset[disabled] input,
@@ -975,50 +944,38 @@ Use the modern Firefox focus style for all focusable elements.
   textarea[aria-disabled='true'],
   label[aria-disabled='true']
 ) {
-  cursor: default !important; /* fallback */
+  cursor: default !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  outline: none !important; /* disable focus ring */
+  outline: none !important;
   opacity: 0.5 !important;
 }
-/* Forms - Select styling */
-
-/* Custom arrow via appearance:none + SVG for single-value selects.
+/* Select: custom arrow for single-value controls.
  * Skip [size] / [multiple] (native UI differs by engine). Inspired by water.css. */
+
 :where(select):not([size], select[multiple]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-
-  /* add a new svg arrow */
   background: var(--bf-white)
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
-
-  /* space the arrow */
   padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 
-/* RTL: mirror custom arrow when appearance:none removed the native control. */
+/* RTL: mirror arrow after appearance:none removes the native control. */
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
-  /* move the arrow icon to the left */
   background-position: left 0.85rem top 50%;
-
-  /* go back to default forms padding */
   padding-right: calc(var(--bf-spacing-lg) * 0.75);
-
-  /* add custom left padding, matching the custom LTR one */
   padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
-/* Forms - Range input styling */
-
-/* Custom thumb/track only when appearance can be reset. Native range otherwise.
- * Demo: https://codepen.io/marcop135/pen/JjGrNMx */
+/* Range: custom thumb/track when appearance:none is supported.
+ * CodePen: https://codepen.io/marcop135/pen/JjGrNMx */
 
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   :where([type='range']) {
@@ -1130,15 +1087,12 @@ Use the modern Firefox focus style for all focusable elements.
 }
 
 /* Miscellaneous */
-/* Miscellaneous - Anchors */
+/* Link defaults. --bf-blue meets WCAG AA 4.5:1 on white. */
 
-/* Link color meets WCAG AA 4.5:1 contrast on white background */
 a {
   color: var(--bf-blue);
   text-decoration: none;
-
-  /* Transparent active background (legacy Edge). */
-  background-color: transparent;
+  background-color: transparent; /* Legacy Edge active background. */
 }
 
 a:hover,
@@ -1147,7 +1101,7 @@ a:focus {
   color: var(--bf-blue-light);
 }
 
-/* Non-href anchors inherit text color (Bootstrap reboot pattern). */
+/* Non-href anchors inherit text (Bootstrap reboot pattern). */
 a:not([href], [tabindex]) {
   color: inherit;
   text-decoration: none;
@@ -1162,27 +1116,25 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
-/* Keyboard-first focus: hide outline unless :focus-visible; orange ring for keyboard users.
- * Form controls clear UA outline here; field chrome lives in forms/styling.css. */
+/* Keyboard-first focus: orange :focus-visible ring; mute mouse outline.
+ * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
-/* Remove focus outline if it's not keyboard-triggered */
 :where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
-/* Suppress outline on non-keyboard-focusable elements (e.g. tabindex="-1") */
+/* tabindex="-1" targets should not show a ring on programmatic focus. */
 :where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
-/* Restore focus style for keyboard users only */
 :focus-visible {
   outline: 0.2rem solid var(--bf-orange);
   outline-offset: 0.3rem;
 }
 
-/* Clear UA focus outline on text-like controls (chrome in forms/styling.css).
- * Leave color/range/file alone; they often use custom widgets. */
+/* Clear UA outline on text-like controls (styled fields keep their own chrome).
+ * Leave color / range / file alone; they often use custom widgets. */
 button:focus,
 [type='button']:focus,
 [type='reset']:focus,
@@ -1207,7 +1159,7 @@ textarea:focus,
 .bf-btn:focus {
   outline: 0;
 }
-/* Miscellaneous - Lists */
+/* List spacing and nav list reset. */
 
 menu,
 ol,
@@ -1252,7 +1204,7 @@ nav li::before {
   content: '\200B';
   position: absolute;
 }
-/* Miscellaneous - Embedded content */
+/* Media elements, figures, progress/meter, and iframes. */
 
 audio,
 canvas,
@@ -1327,26 +1279,20 @@ meter {
   max-width: 100%;
 }
 
-/* <progress> normalization
- *
- * https://css-tricks.com/html5-progress-element/ */
+/* progress[value] reset (https://css-tricks.com/html5-progress-element/). */
 progress[value] {
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none; /* reset the default appearance */
-  border: none; /* Get rid of default border in Firefox */
+          appearance: none;
+  border: none; /* Firefox default border. */
 
   height: 20px;
   height: 2rem;
 
-  /* progress bar background color */
   background: var(--bf-gray-light);
-
-  /* progress value background color in IE10+ */
-  color: var(--bf-blue);
+  color: var(--bf-blue); /* Progress fill in IE10+. */
 }
 
-/* progress value background color in webkit */
 progress[value]::-webkit-progress-bar {
   background: var(--bf-gray-light);
 }
@@ -1355,16 +1301,11 @@ progress[value]::-webkit-progress-value {
   background: var(--bf-blue);
 }
 
-/* remove default border in old browsers
- * and for embeds (e.g. youtube) that don't remove the border with the attribute
- * frameborder="0"
- *
- * e.g.
- * <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/..."> */
+/* No default border (covers embeds that ignore frameborder="0"). */
 iframe {
   border-style: none;
 }
-/* Miscellaneous - Interactive elements */
+/* Address, details/summary, and dialog defaults. */
 
 address {
   font-style: normal;
@@ -1383,7 +1324,6 @@ summary {
 }
 
 dialog {
-  /* match body background color */
   background-color: var(--bf-white);
   color: var(--bf-dark);
   border: none;
@@ -1401,8 +1341,7 @@ dialog {
   }
 }
 
-/* Overrides 'hidden' attribute
- * <dialog id="myDialog" hidden>...</dialog> */
+/* Open dialog wins over [hidden] (e.g. <dialog hidden open>). */
 dialog[open] {
   display: block !important;
 }
@@ -1410,23 +1349,21 @@ dialog[open] {
 dialog::backdrop {
   background: rgb(0 0 0 / 40%);
 }
-/* Miscellaneous - Scrolling */
+/* Smooth scrolling when motion is allowed. */
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
-/* Miscellaneous - Tables */
+/* Table border collapse and cell alignment. */
 
 table {
   caption-side: bottom;
   max-width: 100%;
   border-collapse: collapse;
-  /* Correct table border color inheritance in Chrome and Safari */
-  border-color: currentcolor;
-  /* Remove text indentation from table contents in Chrome and Safari */
-  text-indent: 0;
+  border-color: currentcolor; /* Chrome / Safari inheritance. */
+  text-indent: 0; /* Chrome / Safari table indent. */
 }
 
 thead,
@@ -1466,28 +1403,17 @@ caption {
 }
 /* Accessibility helpers (adapted from sanitize.css). */
 
-/**
- * Change the cursor on busy elements in all browsers (opinionated).
- */
-
+/* Busy: progress cursor. */
 :where([aria-busy='true' i]) {
   cursor: progress;
 }
 
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements in all browsers (opinionated).
- */
-
+/* Disabled / inoperable: not-allowed cursor. */
 :where([aria-disabled='true' i], [disabled]) {
   cursor: not-allowed;
 }
 
-/*
- * Change the display on visually hidden accessible elements
- * in all browsers (opinionated).
- */
-
+/* aria-hidden="false" on [hidden]: keep in a11y tree when not focused. */
 :where([aria-hidden='false' i][hidden]) {
   display: initial;
 }
@@ -1496,9 +1422,9 @@ caption {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
-/* Preference media queries only (prefers-contrast, forced-colors). Additive; no default visual change. */
+/* Preference queries only (prefers-contrast, forced-colors). Additive. */
 
-/* prefers-contrast: more: underline links, thicker focus, stronger field borders (WCAG 1.4.1). */
+/* prefers-contrast: more: underline links, thicker focus, stronger borders (WCAG 1.4.1). */
 @media (prefers-contrast: more) {
   a {
     text-decoration: underline;
@@ -1538,8 +1464,7 @@ caption {
     text-decoration: underline;
   }
 
-  /* Keep button borders rendered in forced-colors so disabled/active
-   * states remain distinguishable. */
+  /* Keep button borders so disabled/active stay distinguishable. */
   button,
   [type='button'],
   [type='reset'],
@@ -1768,13 +1693,13 @@ progress[value]::-webkit-progress-value {
 }
 @media (prefers-color-scheme: dark) {
 
-/* Utilities - Dark mode scrollbars */
+/* Dark scrollbar colors (Firefox + WebKit). */
 
 html {
   scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
 }
 
-/* WebKit scrollbar chrome */
+/* WebKit thumb / track. */
 
 ::-webkit-scrollbar {
   width: 1.5rem;

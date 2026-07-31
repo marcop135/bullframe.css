@@ -6,6 +6,12 @@ node_modules/
 .stylelintcache
 .cache/
 .vite/
+.tmp-favicon/
+.tmp-heroes/
+
+# Vite copyDocsFiles noise (source of truth: src/docs/ → docs:sync-public)
+dist/docs/brand/
+dist/docs/examples/
 
 # Logs
 npm-debug.log*

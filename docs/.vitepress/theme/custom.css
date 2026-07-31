@@ -128,8 +128,8 @@
 .VPFooter .bf-footer-logo {
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 50%;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .VPFooter .bf-footer-text {

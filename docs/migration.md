@@ -101,12 +101,14 @@ To restore the brighter v5 colors:
 
 ## 6. New Dark Mode Variants
 
-v6 introduces three dark mode build variants:
+v6 ships dark and system themes for both markup modes:
 
-| File                           | Behavior                       |
-| ------------------------------ | ------------------------------ |
-| `bullframe-dark.css`           | Always dark                    |
-| `bullframe-system-default.css` | Follows `prefers-color-scheme` |
+| File                                     | Behavior                       |
+| ---------------------------------------- | ------------------------------ |
+| `bullframe-dark.css`                     | Always dark (class-based)      |
+| `bullframe-system-default.css`           | Follows `prefers-color-scheme` |
+| `bullframe-classless-dark.css`           | Always dark (classless)        |
+| `bullframe-classless-system-default.css` | Classless + system preference  |
 
 See [Dark Mode](/theming/dark-mode) for implementation details.
 

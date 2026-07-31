@@ -62,8 +62,10 @@ small {
 }
 
 /* Tighter leading when a paragraph contains <small>. */
-p:has(small) {
-  line-height: 1.25;
+@supports selector(:has(*)) {
+  p:has(small) {
+    line-height: 1.25;
+  }
 }
 
 hr {

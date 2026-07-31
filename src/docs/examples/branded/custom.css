@@ -12,7 +12,8 @@
   --bf-light: #f0fdfa;
   --bf-font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
   --bf-font-sans-serif:
-    'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
   background:
     radial-gradient(circle at top right, rgb(15 118 110 / 0.12), transparent 28rem),
     var(--bf-light);

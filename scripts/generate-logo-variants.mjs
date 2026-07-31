@@ -74,7 +74,7 @@ Minimal marks derived from the home hero bull and \`{ }\` shirt badge. Designed 
 Each stem includes \`.svg\` plus \`-512.png\`, \`-180.png\`, \`-32.png\`, \`-16.png\` (PNGs from \`node scripts/generate-logo-variants.mjs\` when sharp is available).
 
 Brand orange: \`${ORANGE}\` (small-size pop). Deep accent: \`${ORANGE_DEEP}\`.
-`,
+`
 );
 
 let sharp;
@@ -106,7 +106,7 @@ if (sharp) {
       const r = spawnSync(
         'magick',
         ['-background', 'none', svgPath, '-resize', `${size}x${size}`, `PNG32:${pngPath}`],
-        { encoding: 'utf8' },
+        { encoding: 'utf8' }
       );
       if (r.status !== 0) {
         console.error(r.stderr || r.stdout || `magick failed for ${name}-${size}`);

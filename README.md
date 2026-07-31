@@ -7,7 +7,8 @@
 
 <p align="center">
   <strong>Bullframe CSS</strong><br>
-  Semantic by default. Any stack.
+  Semantic by default. Any stack.<br>
+  <em>Classless when you want it. System dark built in.</em>
 </p>
 
 <p align="center">

@@ -153,7 +153,7 @@ const stats = [
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Why use it</p>
-        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic CSS. No JS runtime.</h2>
+        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic by default. Any stack.</h2>
         <p class="bfh-bridge">npm or CDN. Class-based or classless. Dark is a build, not a theme script.</p>
       </div>
       <ul class="bfh-pillars">

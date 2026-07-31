@@ -7,34 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.0.0] - 2026-07-31 - BREAKING CHANGES
+
 ### Changed
 
-- Replaced Sass with native CSS and PostCSS; `$bf-*` / mixins become `--bf-*` custom properties and utilities. See [Migration](docs/migration.md).
-- Darkened link and button blues for WCAG AA 4.5:1 contrast (override with `--bf-*` if needed).
+- Replaced Sass with native CSS and PostCSS (`--bf-*` tokens). See [Migration](docs/migration.md).
 - Unified class-based, classless, dark, and system-default builds on one token set.
-- Replaced the Docusaurus site with VitePress docs and a `/kitchen-sink/` page; docs deploy via FTPS.
-- CI runs on `main` and `v6` (dropped `master`).
-- Documented browser support against Browserslist `defaults` and Autoprefixer honesty.
+- Darkened link and button blues for WCAG AA contrast.
+- Replaced the docs site with VitePress; kitchen sink at `/kitchen-sink/`.
+- Documented browser support against Browserslist `defaults`.
 
 ### Added
 
-- Opt-in font-smoothing, reduced-motion, and stronger focus / ARIA defaults.
-- Progressive `@supports` gates for range styling, `:has()` label layout, and dialog enter transitions.
+- Opt-in font-smoothing, reduced-motion utilities, stronger focus / ARIA defaults.
+- Progressive `@supports` gates for range, `:has()` label layout, and dialog enter.
 
 ### Removed
 
 - Sass sources and the Sass build path.
-- Redundant `*-dark-prefers` builds.
-- Netlify docs hosting residue and ghost npmignore paths.
-- Legacy IE / Edge hacks (`0\0` media queries, `::-ms-expand`).
+- Standalone `*-dark-prefers` and helper dist entries (`variables*`, `utility-global-dark*`); dark/system behavior lives in the seven builds.
 - `bullframe-modern.css` and the `bullframe.css/modern` export.
+- Legacy IE / Edge hacks.
 
 ### Fixed
 
-- Dialog `min-width` uses `min(25rem, 100%)` so narrow viewports are not overflowed.
-- Dialog / popover fades respect `prefers-reduced-motion`.
-- Default dialog backdrop uses `rgb()` so `oklch` does not leak into core builds.
-- Advanced dialog transition APIs gated behind `@supports` where needed.
+- Dialog min-width on narrow viewports, reduced-motion fades, backdrop color, gated transition APIs.
 
 ## 5.1.0 - (July 08, 2025)
 
@@ -490,3 +487,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
+
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...HEAD
+[6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

@@ -35,10 +35,10 @@ Element selectors only. No classes required for base styling.
 
 Each markup mode has three theme files:
 
-| Theme | Suffix | Behavior |
-| --- | --- | --- |
-| Light | (none) | Always light |
-| Dark | `-dark` | Always dark |
+| Theme  | Suffix            | Behavior               |
+| ------ | ----------------- | ---------------------- |
+| Light  | (none)            | Always light           |
+| Dark   | `-dark`           | Always dark            |
 | System | `-system-default` | `prefers-color-scheme` |
 
 Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
@@ -67,7 +67,7 @@ Quick drop-in (latest published package entry):
 **Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-AYv1LjHDO3SO85iGSHCj/uz2Bi5GlLhxRtYKo5/2xkhLOuZ/23bnFTvOIU1E+gqQ" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
 ```
 
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
@@ -84,18 +84,26 @@ npm install bullframe.css
 ```css
 @import 'bullframe.css';
 @import 'bullframe.css/dark';
+@import 'bullframe.css/system';
 @import 'bullframe.css/classless';
+@import 'bullframe.css/classless/dark';
+@import 'bullframe.css/classless/system';
 @import 'bullframe.css/utilities';
 ```
 
 ```javascript
 import 'bullframe.css';
+import 'bullframe.css/dark';
+import 'bullframe.css/system';
 import 'bullframe.css/classless';
+import 'bullframe.css/classless/dark';
+import 'bullframe.css/classless/system';
+import 'bullframe.css/utilities';
 ```
 
 ## Download
 
-Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.css/archive/refs/heads/v6.zip). Source maps ship beside the minified CSS in `dist/css/`.
+Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v6.0.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
 
 ## Starter HTML
 
@@ -108,7 +116,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-AYv1LjHDO3SO85iGSHCj/uz2Bi5GlLhxRtYKo5/2xkhLOuZ/23bnFTvOIU1E+gqQ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
   </head>
   <body>
     <div class="bf-container">
@@ -128,7 +136,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-W/W4TaN5+g2R7qgAAGMwzkMErCnE26LTZ5dqmTYUREkRQ7i7JZRhIw99O26IfOG6" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-wOR0wjfWF/k9hTANeN1G5aQwUaIWAtd62pvEL7VkSC+nwdtTNyjs8giAfnB91hX3" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;

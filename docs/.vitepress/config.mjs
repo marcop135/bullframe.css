@@ -158,11 +158,7 @@ export default defineConfig({
   lang: 'en-US',
   cleanUrls: true,
   base: '/',
-  ignoreDeadLinks: [
-    /^\/examples\/[^/]+\/?$/,
-    /^\/kitchen-sink\/?$/,
-    /^\/demo\/?$/,
-  ],
+  ignoreDeadLinks: [/^\/examples\/[^/]+\/?$/, /^\/kitchen-sink\/?$/, /^\/demo\/?$/],
   sitemap: {
     hostname: siteUrl,
   },
@@ -253,34 +249,32 @@ export default defineConfig({
     },
   },
   head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: '/kitchen-sink/icons/favicon-16x16.png',
-      },
-    ],
+    // Cross-browser favicons: SVG first, then ICO/PNG fallbacks, Apple, mask, manifest.
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
     [
       'link',
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/kitchen-sink/icons/favicon-32x32.png',
+        href: '/favicon-32x32.png',
       },
     ],
     [
       'link',
       {
-        rel: 'apple-touch-icon',
-        sizes: '180x180',
-        href: '/kitchen-sink/icons/apple-touch-icon.png',
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
       },
     ],
-    ['link', { rel: 'shortcut icon', href: '/kitchen-sink/icons/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#c2410c' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#c2410c' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#c2410c' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],
     ['meta', { property: 'og:title', content: 'Bullframe CSS' }],

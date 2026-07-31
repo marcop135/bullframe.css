@@ -125,7 +125,11 @@ patchMarked('docs/theming.md', 'sri:cdn-light', fenceLink('bullframe.min.css'));
 patchMarked('docs/theming.md', 'sri:cdn-dark', fenceLink('bullframe-dark.min.css'));
 patchMarked('docs/theming.md', 'sri:cdn-system', fenceLink('bullframe-system-default.min.css'));
 
-patchMarked('docs/theming/dark-mode.md', 'sri:cdn-system', fenceLink('bullframe-system-default.min.css'));
+patchMarked(
+  'docs/theming/dark-mode.md',
+  'sri:cdn-system',
+  fenceLink('bullframe-system-default.min.css')
+);
 patchMarked('docs/theming/dark-mode.md', 'sri:cdn-dark', fenceLink('bullframe-dark.min.css'));
 
 function patchCdnLinksInFile(fileRel) {

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact · Examples · Bullframe CSS</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="/css/bullframe.min.css" />
+    <link rel="stylesheet" href="/examples/shared.css" />
+  </head>
+  <body>
+    <header class="ex-bar">
+      <div class="bf-container">
+        <p><a href="/examples">← Examples</a> · <span class="ex-build">bullframe.min.css</span></p>
+      </div>
+    </header>
+    <main class="bf-container bf-container--break-md bf-p-b-4">
+      <h1>Contact</h1>
+      <p class="bf-lead">Tell us what you need. We usually reply within one business day.</p>
+
+      <div class="bf-row">
+        <div class="bf-col-7">
+          <form action="#" method="post">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" type="text" name="name" required autocomplete="name" />
+
+            <label for="contact-email">Email</label>
+            <input id="contact-email" type="email" name="email" required autocomplete="email" />
+
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="">Choose one&hellip;</option>
+              <option value="sales">Sales</option>
+              <option value="support">Support</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+
+            <p class="bf-m-t-2">
+              <button type="submit" class="bf-btn bf-btn--primary">Send message</button>
+            </p>
+          </form>
+        </div>
+        <div class="bf-col-5">
+          <aside class="ex-card">
+            <h2 class="bf-m-t-0">Office</h2>
+            <p>
+              Via Example 12<br />
+              00100 Rome, Italy
+            </p>
+            <h3>Hours</h3>
+            <p class="bf-m-b-0">Mon–Fri, 09:00–18:00 CET</p>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

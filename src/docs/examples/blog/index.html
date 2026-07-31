@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog · Examples · Bullframe CSS</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="/css/bullframe-classless.min.css" />
+    <link rel="stylesheet" href="/examples/shared.css" />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <header class="ex-bar" aria-label="Example chrome">
+      <div class="ex-blog-shell">
+        <p>
+          <a href="/examples">← Examples</a> ·
+          <span class="ex-build">bullframe-classless.min.css</span>
+        </p>
+      </div>
+    </header>
+
+    <div class="ex-blog-shell ex-blog-layout">
+      <div class="ex-blog-primary">
+        <header class="ex-blog-hero" aria-label="Article title">
+          <p class="ex-blog__meta">March 12, 2026 · Field notes · 4 min read</p>
+          <h1>Packing light for a week of site drafts</h1>
+          <p class="ex-blog__lead">What stays in the kit when the job is mostly markup, screenshots, and a quiet place to write.</p>
+          <p class="ex-blog__byline">By <strong>Marco Pontili</strong> · Munich</p>
+        </header>
+
+        <main>
+          <article>
+            <p>Most of the week is not design-system work. It is outlines, a few reference shots, and pages that need to read cleanly on a laptop and a phone. The less ceremony around that, the better.</p>
+            <p>I keep one stylesheet, ordinary HTML, and a short list of habits: one <code>h1</code>, real lists, and figures with captions. Grids and spacing helpers only show up when the layout needs them.</p>
+
+            <figure>
+              <img src="/examples/album/thumbs/harbor.svg" width="640" height="400" alt="Harbor at sunrise" />
+              <figcaption>Morning light on the dock. Sample figure for the layout.</figcaption>
+            </figure>
+
+            <h2 id="kit">What stays in the kit</h2>
+            <p>A laptop, a second monitor when available, and a folder of unfinished drafts. Prefer real headings over nested <code>div</code> trees so the structure stays clear for readers and tools.</p>
+            <p>
+              Inline styles still work the way authors expect:
+              <strong>strong</strong>, <em>emphasis</em>, <code>code</code>, and <a href="/getting-started">plain links</a>.
+            </p>
+            <blockquote>
+              <p>Write the page first. Style it second.</p>
+            </blockquote>
+
+            <h2 id="routine">A simple routine</h2>
+            <ol>
+              <li>Sketch the outline in plain text.</li>
+              <li>Move it into HTML with real headings.</li>
+              <li>Check contrast and focus on a phone-width viewport.</li>
+            </ol>
+
+            <h2 id="install">Link one file</h2>
+            <p>For classless pages, one link is enough:</p>
+            <pre><code>&lt;link rel="stylesheet" href="bullframe-classless.min.css" /&gt;</code></pre>
+            <p>Lists, tables, and forms then share the same tokens as the rest of the site.</p>
+
+            <h2 id="checklist">Before you publish</h2>
+            <ul>
+              <li>One <code>h1</code>, then a clear <code>h2</code> ladder</li>
+              <li>A short lead under the title</li>
+              <li>Real lists instead of line breaks</li>
+              <li>A dark build if the reading surface should stay dark</li>
+            </ul>
+
+            <h2 id="next">More examples</h2>
+            <p>See the <a href="/examples">gallery</a>, the <a href="/kitchen-sink/">kitchen sink</a>, or <a href="/typography">typography</a> for the type scale.</p>
+          </article>
+        </main>
+      </div>
+
+      <aside class="ex-blog-sidebar" aria-label="Article sidebar">
+        <section class="ex-blog-panel">
+          <h2>On this page</h2>
+          <nav aria-label="Table of contents">
+            <ol>
+              <li><a href="#kit">What stays in the kit</a></li>
+              <li><a href="#routine">A simple routine</a></li>
+              <li><a href="#install">Link one file</a></li>
+              <li><a href="#checklist">Before you publish</a></li>
+              <li><a href="#next">More examples</a></li>
+            </ol>
+          </nav>
+        </section>
+
+        <section class="ex-blog-panel">
+          <h2>Author</h2>
+          <p><strong>Marco Pontili</strong></p>
+          <p>Munich. Works on Bullframe CSS and related docs.</p>
+        </section>
+
+        <section class="ex-blog-panel">
+          <h2>Topics</h2>
+          <ul class="ex-blog-tags">
+            <li>Classless</li>
+            <li>Typography</li>
+            <li>Workflow</li>
+          </ul>
+        </section>
+
+        <section class="ex-blog-panel">
+          <h2>Related</h2>
+          <ul>
+            <li><a href="/examples/typography/">Typography</a></li>
+            <li><a href="/examples/branded/">Branded</a></li>
+            <li><a href="/examples/cover/">Cover</a></li>
+            <li><a href="/examples/blog-dark/">Blog (dark)</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </body>
+</html>

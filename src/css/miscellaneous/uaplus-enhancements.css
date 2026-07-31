@@ -1,0 +1,174 @@
+/* UA+ enhancements (adapted from https://fokus.dev/tools/uaplus/).
+ * Light UA improvements; complements Bullframe base styles. */
+
+@layer {
+  /* Spacing between content and focus outline (enhances focus.css). */
+  :focus-visible {
+    outline-offset: 3px;
+  }
+
+  /* Disable mobile landscape text inflation on optimized layouts. */
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* Comfortable default root line-height (body still uses --bf-body-line-height). */
+  html {
+    line-height: 1.5;
+  }
+
+  /* Stable scrollbar gutter avoids layout jump on short pages. */
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  /* Nested h1 size/margin: match modern UA (Safari still nests sectioning styles). */
+  h1 {
+    font-size: 2em;
+    margin-block: 0.67em;
+  }
+
+  /* abbr[title]: dotted underline + help cursor across engines. */
+  abbr[title] {
+    cursor: help;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+
+  /* mark: system Highlight colors under forced-colors. */
+  @media (forced-colors: active) {
+    mark {
+      color: HighlightText;
+      background-color: Highlight;
+    }
+  }
+
+  /* Embedded media: stay within container block/inline size. */
+  audio,
+  iframe,
+  img,
+  svg,
+  video {
+    max-block-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  /* fieldset: avoid min-content overflow from children. */
+  fieldset {
+    min-inline-size: 0;
+  }
+
+  /* Labels for text-like controls are block; :has() gated for older engines. */
+  @supports selector(:has(*)) {
+    label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
+      display: block;
+    }
+  }
+
+  /* Taller default textarea when rows is omitted. */
+  textarea:not([rows]) {
+    min-block-size: 6em;
+  }
+
+  /* Form controls inherit page font family/size. */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* Search: drop WebKit rounded search chrome. */
+  [type='search'] {
+    -webkit-appearance: textfield;
+  }
+
+  /* iOS only: system border/background for search. */
+  @supports (-webkit-touch-callout: none) {
+    [type='search'] {
+      border: 1px solid -apple-system-secondary-label;
+      background-color: canvas;
+    }
+  }
+
+  /* Keep tel/url/email/number LTR when a value is present (RTL placeholders stay). */
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :placeholder-shown
+    ) {
+    direction: ltr;
+  }
+
+  /* Tables: collapsed borders + cell padding for scanability. */
+  table {
+    border: 1px solid currentColor;
+  }
+
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 0.25em 0.5em;
+  }
+
+  /* Soft dialog / popover enter transitions (skip when reduced-motion is on). */
+  @media (prefers-reduced-motion: no-preference) {
+    dialog::backdrop {
+      background: rgb(0 0 0 / 0.3);
+    }
+
+    @supports (overlay: auto) {
+      dialog,
+      [popover],
+      dialog::backdrop {
+        opacity: 0;
+        transition:
+          opacity 300ms ease-out,
+          display 300ms allow-discrete,
+          overlay 300ms allow-discrete;
+      }
+
+      dialog[open],
+      :popover-open,
+      dialog[open]::backdrop {
+        opacity: 1;
+      }
+
+      @starting-style {
+        dialog[open],
+        :popover-open,
+        dialog[open]::backdrop {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  /* Keep [hidden] hard-hidden except until-found. */
+  [hidden]:not([hidden='until-found']) {
+    display: none !important;
+  }
+
+  /* Images as blocks (max-width still from embedded-content.css). */
+  img {
+    display: block;
+  }
+
+  /* summary: pointer on the whole control, not only ::marker. */
+  summary {
+    cursor: default;
+  }
+
+  /* iframes: no default border. */
+  iframe {
+    border: none;
+  }
+
+  /* Popovers: anchor near trigger when position-area is supported. */
+  @supports (position-area: block-end span-inline-end) {
+    [popover] {
+      margin: 0;
+      position-area: block-end span-inline-end;
+    }
+  }
+}

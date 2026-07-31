@@ -1,0 +1,24 @@
+/* Dark scrollbar colors (Firefox + WebKit). */
+
+html {
+  scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
+}
+
+/* WebKit thumb / track. */
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bf-dark-extra);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(97 97 97); /* gray-dark -5% lightness */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(115 115 115); /* gray-dark +10% lightness */
+}

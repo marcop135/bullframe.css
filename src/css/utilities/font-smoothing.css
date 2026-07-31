@@ -1,0 +1,12 @@
+/* Opt-in font-smoothing (.bf-antialiased / .bf-subpixel-antialiased).
+ * Names match Tailwind. Not applied globally: Apple recommends subpixel for body text on macOS. */
+
+.bf-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bf-subpixel-antialiased {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}

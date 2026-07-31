@@ -1,0 +1,99 @@
+/* Media elements, figures, progress/meter, and iframes. */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+img,
+canvas,
+audio,
+video,
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+audio,
+video,
+canvas,
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+  border-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+figure,
+figcaption {
+  display: block;
+}
+
+figcaption {
+  line-height: 1.375;
+  font-size: 90%;
+}
+
+video {
+  height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+progress,
+meter {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* progress[value] reset (https://css-tricks.com/html5-progress-element/). */
+progress[value] {
+  appearance: none;
+  border: none; /* Firefox default border. */
+
+  height: 20px;
+  height: 2rem;
+
+  background: var(--bf-gray-light);
+  color: var(--bf-blue); /* Progress fill in IE10+. */
+}
+
+progress[value]::-webkit-progress-bar {
+  background: var(--bf-gray-light);
+}
+
+progress[value]::-webkit-progress-value {
+  background: var(--bf-blue);
+}
+
+/* No default border (covers embeds that ignore frameborder="0"). */
+iframe {
+  border-style: none;
+}

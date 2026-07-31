@@ -1,0 +1,44 @@
+/* pre / code / kbd / samp. */
+
+pre {
+  margin: 0 0 var(--bf-spacing-xl) 0;
+
+  display: block;
+  overflow: auto;
+  word-break: break-all; /* WebKit */
+  word-wrap: break-word;
+  white-space: pre;
+  hyphens: none;
+
+  /* Keep scrollbars visible in legacy Edge.
+   * https://github.com/twbs/bootstrap/pull/30685 */
+  -ms-overflow-style: auto;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family:
+    /* macOS 10.10+ */
+    Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono',
+    'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  /* Mono faces read large; use a slightly smaller size. */
+  font-size: 0.875em;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}

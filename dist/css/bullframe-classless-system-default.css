@@ -1,5 +1,82 @@
-/* ! Bullframe CSS v5.1.0 | MIT License | https://github.com/marcop135/bullframe.css  */
-@charset "UTF-8";
+/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+
+/* Classless + system dark via prefers-color-scheme. */
+
+/* Classless build: semantic element styles only (no .bf-* utilities). */
+
+/* Variables */
+/* Design tokens (--bf-*). Shared by every build variant.
+ * Override on :root (or a scope) to theme without rebuilding. */
+
+:root {
+  /* Neutrals */
+  --bf-white: rgb(255 255 255);
+  --bf-light: rgb(240 240 240);
+  --bf-gray-light-extra: rgb(233 233 233);
+  --bf-gray-light: rgb(204 204 204);
+  --bf-gray: rgb(153 153 153);
+  --bf-gray-dark: rgb(102 102 102);
+  --bf-gray-dark-extra: rgb(51 51 51);
+  --bf-dark: rgb(34 34 34);
+  --bf-dark-extra: rgb(17 17 17);
+  --bf-black: rgb(0 0 0);
+
+  /* Highlight / mark */
+  --bf-yellow-light: rgb(255 255 153);
+  --bf-yellow: rgb(255 255 0);
+  --bf-orange: rgb(255 165 0);
+
+  /* Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1) */
+  --bf-blue: rgb(0 86 179);
+  --bf-blue-light: rgb(0 65 135);
+  --bf-blue-light-extra: rgb(190 216 254);
+
+  /* Invalid / error */
+  --bf-red: rgb(255 0 0);
+
+  /* Dark-mode surfaces (used by utility-global-dark*.css) */
+  --bf-dark-bg: rgb(28 28 28);
+  --bf-dark-link: rgb(77 165 255);
+  --bf-dark-link-hover: rgb(77 165 255);
+  --bf-dark-border-focus: rgb(26 140 255);
+  --bf-dark-shadow-focus: rgb(3 102 214 / 50%);
+  --bf-dark-mark-bg: rgb(230 230 0);
+  --bf-dark-ins-bg: rgb(255 255 200);
+  --bf-dark-button-hover: rgb(184 184 184);
+  --bf-dark-button-shadow: rgb(255 255 255 / 45%);
+  --bf-dark-invalid: rgb(255 38 38);
+
+  /* Spacing scale + grid gutter */
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
+
+  /* Type */
+  --bf-font-sans-serif:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
+  --bf-font-monospace:
+    SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
+
+  /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
+  --bf-breakpoint-xs: 0;
+  --bf-breakpoint-sm: 576px;
+  --bf-breakpoint-md: 768px;
+  --bf-breakpoint-lg: 992px;
+  --bf-breakpoint-xl: 1200px;
+  --bf-breakpoint-xxl: 1400px;
+}
+
+/* Layout */
+/* Border-box and HTML5 block elements. */
+
 *,
 *::before,
 *::after {
@@ -26,32 +103,246 @@ template {
   display: none;
 }
 
-[hidden] {
+/* [hidden] stays hidden (except until-found). */
+[hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
+/* UA+ enhancements (adapted from https://fokus.dev/tools/uaplus/).
+ * Light UA improvements; complements Bullframe base styles. */
+
+@layer {
+  /* Spacing between content and focus outline (enhances focus.css). */
+  :focus-visible {
+    outline-offset: 3px;
+  }
+
+  /* Disable mobile landscape text inflation on optimized layouts. */
+  html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+         text-size-adjust: none;
+  }
+
+  /* Comfortable default root line-height (body still uses --bf-body-line-height). */
+  html {
+    line-height: 1.5;
+  }
+
+  /* Stable scrollbar gutter avoids layout jump on short pages. */
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  /* Nested h1 size/margin: match modern UA (Safari still nests sectioning styles). */
+  h1 {
+    font-size: 2em;
+    margin-block: 0.67em;
+  }
+
+  /* abbr[title]: dotted underline + help cursor across engines. */
+  abbr[title] {
+    cursor: help;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+
+  /* mark: system Highlight colors under forced-colors. */
+  @media (forced-colors: active) {
+    mark {
+      color: HighlightText;
+      background-color: Highlight;
+    }
+  }
+
+  /* Embedded media: stay within container block/inline size. */
+  audio,
+  iframe,
+  img,
+  svg,
+  video {
+    max-block-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  /* fieldset: avoid min-content overflow from children. */
+  fieldset {
+    min-inline-size: 0;
+  }
+
+  /* Labels for text-like controls are block; :has() gated for older engines. */
+  @supports selector(:has(*)) {
+    label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
+      display: block;
+    }
+  }
+
+  /* Taller default textarea when rows is omitted. */
+  textarea:not([rows]) {
+    min-block-size: 6em;
+  }
+
+  /* Form controls inherit page font family/size. */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* Search: drop WebKit rounded search chrome. */
+  [type='search'] {
+    -webkit-appearance: textfield;
+  }
+
+  /* iOS only: system border/background for search. */
+  @supports (-webkit-touch-callout: none) {
+    [type='search'] {
+      border: 1px solid -apple-system-secondary-label;
+      background-color: canvas;
+    }
+  }
+
+  /* Keep tel/url/email/number LTR when a value is present (RTL placeholders stay). */
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :-moz-placeholder
+    ) {
+    direction: ltr;
+  }
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :placeholder-shown
+    ) {
+    direction: ltr;
+  }
+
+  /* Tables: collapsed borders + cell padding for scanability. */
+  table {
+    border: 1px solid currentColor;
+  }
+
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 0.25em 0.5em;
+  }
+
+  /* Soft dialog / popover enter transitions (skip when reduced-motion is on). */
+  @media (prefers-reduced-motion: no-preference) {
+    dialog::backdrop {
+      background: rgb(0 0 0 / 0.3);
+    }
+
+    @supports (overlay: auto) {
+      dialog,
+      [popover],
+      dialog::backdrop {
+        opacity: 0;
+        transition:
+          opacity 300ms ease-out,
+          display 300ms allow-discrete,
+          overlay 300ms allow-discrete;
+      }
+
+      dialog[open],
+      :popover-open,
+      dialog[open]::backdrop {
+        opacity: 1;
+      }
+
+      @starting-style {
+        dialog[open],
+        :popover-open,
+        dialog[open]::backdrop {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  /* Keep [hidden] hard-hidden except until-found. */
+  [hidden]:not([hidden='until-found']) {
+    display: none !important;
+  }
+
+  /* Images as blocks (max-width still from embedded-content.css). */
+  img {
+    display: block;
+  }
+
+  /* summary: pointer on the whole control, not only ::marker. */
+  summary {
+    cursor: default;
+  }
+
+  /* iframes: no default border. */
+  iframe {
+    border: none;
+  }
+
+  /* Popovers: anchor near trigger when position-area is supported. */
+  @supports (position-area: block-end span-inline-end) {
+    [popover] {
+      margin: 0;
+      position-area: block-end span-inline-end;
+    }
+  }
+}
+
+/* Typography */
+/* Root type and page chrome. */
 
 html {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
+
+  /* 62.5% root so 1rem ≈ 10px. */
   font-size: 62.5%;
-  color: #222;
-  font-family: sans-serif;
+
+  color: var(--bf-dark);
+  font-family: system-ui, sans-serif;
   line-height: 1.15;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* No tap flash on touch. */
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 body {
   margin: 0;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: var(--bf-body-font-size-rem);
+  line-height: var(--bf-body-line-height);
   font-weight: 400;
   text-align: left;
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* System UI stack (OS-native). */
+  font-family:
+    /* Safari / iOS (San Francisco) */
+    -apple-system,
+    /* Chrome < 56 on macOS (San Francisco) */ BlinkMacSystemFont,
+    /* Windows */ 'Segoe UI',
+    /* Android */ Roboto,
+    /* KDE */ Oxygen-Sans,
+    /* Ubuntu */ Ubuntu,
+    /* GNOME */ Cantarell,
+    /* macOS 10.10 and below */ 'Helvetica Neue',
+    Helvetica,
+    /* Web fallback */ Arial,
+    'Noto Sans',
+    sans-serif,
+    /* Emoji */ 'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  /* Ligatures and kerning. */
   text-rendering: optimizeLegibility;
+
+  /* Long unbroken strings (e.g. headlines) wrap instead of overflowing. */
   word-wrap: break-word;
-  background-color: #fff;
+
+  background-color: var(--bf-white);
 }
+/* Heading scale and rhythm. */
 
 h1,
 h2,
@@ -64,7 +355,8 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: var(--bf-spacing-lg);
+  text-wrap: balance;
 }
 
 h1 {
@@ -92,9 +384,10 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem;
 }
+/* Blockquote and citation. */
 
 blockquote {
-  margin-bottom: 2rem;
+  margin: 0 0 var(--bf-spacing-xl);
   padding-left: 0;
   font-style: italic;
 }
@@ -104,56 +397,24 @@ blockquote p {
 }
 
 blockquote small {
-  color: #999;
+  color: var(--bf-gray);
   display: block;
 }
 
 blockquote small::before {
-  content: "— ";
+  content: '\2014 \00A0';
 }
 
 q {
-  quotes: "“" "”" "‘" "’";
+  quotes: '\201C' '\201D' '\2018' '\2019';
 }
-
-pre {
-  margin: 0 0 2rem 0;
-  display: block;
-  overflow: auto;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
-  -webkit-hyphens: none;
-          hyphens: none;
-  -ms-overflow-style: auto;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-family: Menlo, Consolas, "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.875em;
-}
-
-code {
-  word-wrap: break-word;
-}
-
-a > code {
-  color: inherit;
-}
-
-pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
-}
+/* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
 }
 
+/* abbr (Bootstrap 4): dotted underline + help cursor. */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
@@ -164,16 +425,17 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: var(--bf-yellow);
+  color: var(--bf-black);
 }
 
 ins {
-  background-color: #ff9;
-  color: #000;
+  background-color: var(--bf-yellow-light);
+  color: var(--bf-black);
   text-decoration: none;
 }
 
+/* Inherit first so Safari does not double-apply bolder, then set bolder. */
 b,
 strong {
   font-weight: inherit;
@@ -181,7 +443,6 @@ strong {
 
 b,
 strong {
-  /* stylelint-disable-next-line */
   font-weight: bolder;
 }
 
@@ -211,8 +472,11 @@ small {
   font-size: 80%;
 }
 
-p:has(small) {
-  line-height: 1.25;
+/* Tighter leading when a paragraph contains <small>. */
+@supports selector(:has(*)) {
+  p:has(small) {
+    line-height: 1.25;
+  }
 }
 
 hr {
@@ -222,21 +486,622 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: 2rem 0;
+  margin: var(--bf-spacing-xl) 0;
   padding: 0;
-  overflow: visible;
+  overflow: visible; /* Edge: show overflow. */
+}
+/* pre / code / kbd / samp. */
+
+pre {
+  margin: 0 0 var(--bf-spacing-xl) 0;
+
+  display: block;
+  overflow: auto;
+  word-break: break-all; /* WebKit */
+  word-wrap: break-word;
+  white-space: pre;
+  hyphens: none;
+
+  /* Keep scrollbars visible in legacy Edge.
+   * https://github.com/twbs/bootstrap/pull/30685 */
+  -ms-overflow-style: auto;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
+pre,
+code,
+kbd,
+samp {
+  font-family:
+    /* macOS 10.10+ */
+    Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono',
+    'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  /* Mono faces read large; use a slightly smaller size. */
+  font-size: 0.875em;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
+
+/* Forms */
+/* Form control reset: inheritance, sizing, and UA quirks. */
+
+:where(html input, button, select, optgroup, textarea) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+:where(html input, button, [type='radio'], [type='checkbox'], select, optgroup, textarea) {
+  margin: 0;
+}
+
+:where(html input, select, textarea, legend) {
+  width: 100%;
+}
+
+/* Shrink-to-content controls stay auto-width. */
+:where(
+  html label,
+  button,
+  [type='image'],
+  [type='submit'],
+  [type='reset'],
+  html [type='button'],
+  [type='radio'],
+  [type='checkbox']
+) {
+  width: auto;
+}
+
+/* inline-block: consistent sizing and vertical-align across engines. */
+:where(
+  html input,
+  label,
+  select,
+  textarea,
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  output
+) {
+  display: inline-block;
+}
+
+:where([type='file']) {
+  display: block;
   background-color: transparent;
 }
-a:hover, a:focus {
-  text-decoration: underline;
-  color: #0056b3;
+
+:where(button, html input, select, textarea) {
+  background-image: none;
 }
 
+:where(input, select, textarea) {
+  vertical-align: baseline;
+}
+
+:where(form) {
+  margin: 0;
+}
+
+/* Drop fieldset min-content width so nested grids can shrink. */
+:where(fieldset) {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+:where(legend) {
+  display: table; /* Text wrapping in Edge / IE. */
+  max-width: 100%;
+  white-space: normal;
+  border: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: var(--bf-spacing-md);
+  font-size: inherit;
+  line-height: 1.375;
+  color: inherit;
+}
+
+:where(label) {
+  font-weight: 400;
+  font-size: 90%;
+  line-height: 1.375;
+  margin-bottom: var(--bf-spacing-md);
+}
+
+:where(label input, label select, label textarea) {
+  font-size: 110%;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+:where([type='search']) {
+  outline-offset: calc(-1 * var(--bf-spacing-sm));
+}
+
+:where(output) {
+  vertical-align: middle;
+}
+
+:where(button, select) {
+  text-transform: none;
+}
+
+:where(select) {
+  word-wrap: normal;
+}
+
+/* Hide WebKit datalist picker chrome (Bootstrap Reboot 5.2).
+ * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css */
+:where([list]):not(
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='time']
+  )::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+:where(optgroup) {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit; /* Families without a 600 face. */
+  font-weight: 600;
+}
+
+/* Reset WebKit / Blink appearance on text-like controls. */
+:where(
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  [type='email'],
+  [type='number'],
+  [type='text'],
+  [type='tel'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='url'],
+  [type='image'],
+  [type='password'],
+  [type='search'],
+  [type='search']::-webkit-search-decoration,
+  [type='search']::-webkit-search-cancel-button,
+  input[list],
+  textarea
+) {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+::file-selector-button {
+  font: inherit;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+
+:where(button, input, select, textarea) {
+  border-radius: var(--bf-spacing-sm);
+}
+
+:where([type='radio']) {
+  border-radius: 50%;
+}
+
+:where([type='checkbox']) {
+  border-radius: var(--bf-spacing-md);
+}
+
+:where([type='radio'], [type='checkbox']) {
+  padding: 0;
+  background-color: var(--bf-white);
+}
+
+:where([type='range' i]) {
+  background-color: transparent;
+}
+
+:where(select[size], select[multiple]) {
+  height: auto;
+}
+
+:where(select[multiple]) {
+  background-image: none;
+}
+
+:where(textarea) {
+  height: auto;
+  min-height: 60px;
+  min-height: 6rem;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* Firefox: strip inner focus padding/border. */
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: 0;
+  background-image: none; /* Firefox mobile */
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus {
+  text-decoration: none;
+  color: var(--bf-dark);
+}
+
+:where(
+  button:not(:disabled),
+  [type='button']:not(:disabled),
+  [type='reset']:not(:disabled),
+  [type='submit']:not(:disabled)
+) {
+  cursor: pointer;
+}
+
+/* Firefox: input color must not override placeholder color.
+ * https://github.com/necolas/normalize.css/issues/150 */
+:where(input::-moz-placeholder, textarea::-moz-placeholder) {
+  color: var(--bf-gray-dark);
+}
+:where(input::placeholder, textarea::placeholder) {
+  color: var(--bf-gray-dark);
+}
+
+/* Firefox: modern focus ring on all focusable elements. */
+:-moz-focusring {
+  outline: auto;
+}
+
+/* Firefox: drop :-moz-ui-invalid glow; use .bf-invalid for JS validation.
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+/* Form field and button chrome (borders, focus, disabled). */
+
+:where(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea
+) {
+  background-color: var(--bf-white);
+  border: 1px solid var(--bf-gray);
+  padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
+}
+
+:where(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):active,
+:where(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):focus {
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+  border-color: var(--bf-blue);
+  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  color: var(--bf-dark);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  background: var(--bf-gray-light);
+  transition:
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
+  text-decoration: none;
+  color: var(--bf-dark);
+  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+}
+
+/* Disabled / aria-disabled / fieldset[disabled]. */
+:where(
+  fieldset[disabled] button,
+  fieldset[disabled] input,
+  fieldset[disabled] input::after,
+  fieldset[disabled] input::before,
+  fieldset[disabled] input:checked,
+  fieldset[disabled] select,
+  fieldset[disabled] textarea,
+  fieldset[disabled] label,
+  button[disabled],
+  input[disabled],
+  input[disabled]::after,
+  input[disabled]::before,
+  input[disabled]:checked,
+  select[disabled],
+  textarea[disabled],
+  label[disabled],
+  button:disabled,
+  input:disabled,
+  input:disabled::after,
+  input:disabled::before,
+  input:disabled:checked,
+  select:disabled,
+  textarea:disabled,
+  label:disabled,
+  button[aria-disabled='true'],
+  input[aria-disabled='true'],
+  input[aria-disabled='true']::after,
+  input[aria-disabled='true']::before,
+  input[aria-disabled='true']:checked,
+  select[aria-disabled='true'],
+  textarea[aria-disabled='true'],
+  label[aria-disabled='true']
+) {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  opacity: 0.5 !important;
+}
+/* Select: custom arrow for single-value controls.
+ * Skip [size] / [multiple] (native UI differs by engine). Inspired by water.css. */
+
+:where(select):not([size], select[multiple]) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: var(--bf-white)
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.85rem center/8px 10px;
+  padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
+}
+
+/* RTL: mirror arrow after appearance:none removes the native control. */
+:where(*[dir='rtl']) :where(select):not([size], select[multiple]),
+:where(select[dir='rtl']):not([size], select[multiple]) {
+  background-position: left 0.85rem top 50%;
+  padding-right: calc(var(--bf-spacing-lg) * 0.75);
+  padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
+}
+/* Range: custom thumb/track when appearance:none is supported.
+ * CodePen: https://codepen.io/marcop135/pen/JjGrNMx */
+
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+  :where([type='range']) {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 100%;
+    height: 1.4rem;
+  }
+
+  :where([type='range'])::-webkit-slider-thumb {
+    border: 0;
+    -webkit-appearance: none;
+            appearance: none;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.25rem;
+    background-color: var(--bf-blue);
+    border-radius: 1.5rem;
+    -webkit-transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
+
+  :where([type='range'])::-webkit-slider-thumb:active {
+    background-color: var(--bf-blue);
+  }
+
+  :where([type='range'])::-moz-range-thumb {
+    border: 0;
+    -moz-appearance: none;
+         appearance: none;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--bf-blue);
+    border-radius: 1.5rem;
+    -moz-transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
+
+  :where([type='range'])::-moz-range-thumb:active {
+    background-color: var(--bf-blue);
+  }
+
+  :where([type='range'])::-webkit-slider-runnable-track {
+    color: transparent;
+    border-color: transparent;
+
+    width: 100%;
+    height: 0.65rem;
+    cursor: pointer;
+    background-color: var(--bf-gray-light-extra);
+  }
+
+  :where([type='range'])::-moz-range-track {
+    color: transparent;
+    border-color: transparent;
+
+    width: 100%;
+    height: 0.65rem;
+    cursor: pointer;
+    background-color: var(--bf-gray-light-extra);
+  }
+
+  :where([type='range']):focus {
+    outline: none;
+  }
+
+  :where([type='range']):focus::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
+
+  :where([type='range']):focus::-moz-range-thumb {
+    box-shadow:
+      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
+
+  :where([type='range'])::-moz-focus-outer {
+    border: 0;
+  }
+
+  :where([type='range']):disabled {
+    pointer-events: none;
+  }
+
+  :where([type='range']):disabled::-webkit-slider-thumb {
+    background-color: var(--bf-gray-light);
+  }
+
+  :where([type='range']):disabled::-moz-range-thumb {
+    background-color: var(--bf-gray-light);
+  }
+}
+
+/* Miscellaneous */
+/* Link defaults. --bf-blue meets WCAG AA 4.5:1 on white. */
+
+a {
+  color: var(--bf-blue);
+  text-decoration: none;
+  background-color: transparent; /* Legacy Edge active background. */
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: var(--bf-blue-light);
+}
+
+/* Non-href anchors inherit text (Bootstrap reboot pattern). */
 a:not([href], [tabindex]) {
   color: inherit;
   text-decoration: none;
@@ -251,52 +1116,56 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
+/* Keyboard-first focus: orange :focus-visible ring; mute mouse outline.
+ * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
 :where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
-:where([tabindex="-1"]:focus:not(:focus-visible)) {
+/* tabindex="-1" targets should not show a ring on programmatic focus. */
+:where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
-:where(a:focus, input:focus) {
-  outline: 2px solid orange;
+:focus-visible {
+  outline: 0.2rem solid var(--bf-orange);
+  outline-offset: 0.3rem;
 }
 
-:where(:focus-visible) {
-  outline: 2px solid orange;
-}
-
-:where(button,
-[type=button],
-[type=reset],
-[type=submit],
-[type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=time],
-[type=week],
-[type=url],
-[type=radio],
-[type=checkbox],
-input[list],
-select,
-textarea):focus {
+/* Clear UA outline on text-like controls (styled fields keep their own chrome).
+ * Leave color / range / file alone; they often use custom widgets. */
+button:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='tel']:focus,
+[type='search']:focus,
+[type='text']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[type='url']:focus,
+[type='radio']:focus,
+[type='checkbox']:focus,
+input[list]:focus,
+select:focus,
+textarea:focus,
+.bf-btn:focus {
   outline: 0;
 }
+/* List spacing and nav list reset. */
 
 menu,
 ol,
 ul,
 dl {
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
   padding: 0;
 }
 
@@ -312,7 +1181,7 @@ dd {
 
 ul,
 ol {
-  margin-left: 2rem;
+  margin-left: var(--bf-spacing-xl);
 }
 
 nav ol,
@@ -330,10 +1199,12 @@ dd {
   margin-left: 0;
 }
 
+/* VoiceOver: zero-width space so list-style:none lists stay announced. */
 nav li::before {
-  content: "​";
+  content: '\200B';
   position: absolute;
 }
+/* Media elements, figures, progress/meter, and iframes. */
 
 audio,
 canvas,
@@ -408,33 +1279,37 @@ meter {
   max-width: 100%;
 }
 
+/* progress[value] reset (https://css-tricks.com/html5-progress-element/). */
 progress[value] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border: none;
+  border: none; /* Firefox default border. */
+
   height: 20px;
   height: 2rem;
-  background: #ccc;
-  color: #007bff;
+
+  background: var(--bf-gray-light);
+  color: var(--bf-blue); /* Progress fill in IE10+. */
 }
 
 progress[value]::-webkit-progress-bar {
-  background: #ccc;
+  background: var(--bf-gray-light);
 }
 
 progress[value]::-webkit-progress-value {
-  background: #007bff;
+  background: var(--bf-blue);
 }
 
+/* No default border (covers embeds that ignore frameborder="0"). */
 iframe {
   border-style: none;
 }
+/* Address, details/summary, and dialog defaults. */
 
 address {
   font-style: normal;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: var(--bf-spacing-lg);
   line-height: inherit;
 }
 
@@ -449,42 +1324,46 @@ summary {
 }
 
 dialog {
-  background-color: #fff;
-  color: #222;
+  background-color: var(--bf-white);
+  color: var(--bf-dark);
   border: none;
-  border-radius: 0.25rem;
-  padding: 20px;
-  padding: 2rem;
+  border-radius: var(--bf-spacing-sm);
+  padding: var(--bf-spacing-xl);
   height: -moz-fit-content;
   height: fit-content;
-  min-width: 25rem;
-  max-width: calc(100vw - 3rem);
+  min-width: min(25rem, 100%);
+  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
+
 @media (min-width: 768px) {
   dialog {
     max-width: 50rem;
   }
 }
 
+/* Open dialog wins over [hidden] (e.g. <dialog hidden open>). */
 dialog[open] {
   display: block !important;
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0 / 40%);
 }
+/* Smooth scrolling when motion is allowed. */
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
+/* Table border collapse and cell alignment. */
+
 table {
   caption-side: bottom;
   max-width: 100%;
   border-collapse: collapse;
-  border-color: currentcolor;
-  text-indent: 0;
+  border-color: currentcolor; /* Chrome / Safari inheritance. */
+  text-indent: 0; /* Chrome / Safari table indent. */
 }
 
 thead,
@@ -514,767 +1393,328 @@ th {
 }
 
 caption {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  color: #999;
+  padding-top: var(--bf-spacing-md);
+  padding-bottom: var(--bf-spacing-md);
+  color: var(--bf-gray);
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;
   font-size: 90%;
 }
+/* Accessibility helpers (adapted from sanitize.css). */
 
-/* Accessibility
- * ========================================================================== */
-/**
- * Change the cursor on busy elements in all browsers (opinionated).
- */
-:where([aria-busy=true i]) {
+/* Busy: progress cursor. */
+:where([aria-busy='true' i]) {
   cursor: progress;
 }
 
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements in all browsers (opinionated).
- */
-:where([aria-disabled=true i], [disabled]) {
+/* Disabled / inoperable: not-allowed cursor. */
+:where([aria-disabled='true' i], [disabled]) {
   cursor: not-allowed;
 }
 
-/*
- * Change the display on visually hidden accessible elements
- * in all browsers (opinionated).
- */
-:where([aria-hidden=false i][hidden]) {
+/* aria-hidden="false" on [hidden]: keep in a11y tree when not focused. */
+:where([aria-hidden='false' i][hidden]) {
   display: initial;
 }
 
-:where([aria-hidden=false i][hidden]:not(:focus)) {
+:where([aria-hidden='false' i][hidden]:not(:focus)) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+/* Preference queries only (prefers-contrast, forced-colors). Additive. */
 
-:where(html input, button, select, optgroup, textarea) {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-:where(html input,
-button,
-[type=radio],
-[type=checkbox],
-select,
-optgroup,
-textarea) {
-  margin: 0;
-}
-
-:where(html input, select, textarea, legend) {
-  width: 100%;
-}
-
-:where(html label,
-button,
-[type=image],
-[type=submit],
-[type=reset],
-html [type=button],
-[type=radio],
-[type=checkbox]) {
-  width: auto;
-}
-
-:where(html input,
-label,
-select,
-textarea,
-button,
-html [type=button],
-[type=reset],
-[type=submit],
-output) {
-  display: inline-block;
-}
-
-:where([type=file]) {
-  display: block;
-  background-color: transparent;
-}
-
-:where(button, html input, select, textarea) {
-  background-image: none;
-}
-
-:where(input, select, textarea) {
-  vertical-align: baseline;
-}
-
-:where(form) {
-  margin: 0;
-}
-
-:where(fieldset) {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-}
-
-:where(legend) {
-  display: table;
-  max-width: 100%;
-  white-space: normal;
-  border: 0;
-  padding: 0;
-  font-weight: 400;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
-  font-size: inherit;
-  line-height: 1.375;
-  color: inherit;
-}
-
-:where(label) {
-  font-weight: 400;
-  font-size: 90%;
-  line-height: 1.375;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
-}
-
-:where(label input, label select, label textarea) {
-  font-size: 110%;
-}
-
-::-webkit-inner-spin-button {
-  height: auto;
-}
-
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-minute,
-::-webkit-datetime-edit-hour-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-year-field {
-  padding: 0;
-}
-
-::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-:where([type=search]) {
-  outline-offset: -0.25rem;
-}
-
-:where(output) {
-  vertical-align: middle;
-}
-
-:where(button, select) {
-  text-transform: none;
-}
-
-:where(select) {
-  word-wrap: normal;
-}
-
-:where([list]):not([type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time])::-webkit-calendar-picker-indicator {
-  display: none !important;
-}
-
-:where(optgroup) {
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: 600;
-}
-
-:where(button,
-html [type=button],
-[type=reset],
-[type=submit],
-[type=email],
-[type=number],
-[type=text],
-[type=tel],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=url],
-[type=image],
-[type=password],
-[type=search],
-[type=search]::-webkit-search-decoration,
-[type=search]::-webkit-search-cancel-button,
-input[list],
-textarea) {
-  -webkit-appearance: none;
-          appearance: none;
-}
-
-::file-selector-button {
-  font: inherit;
-  -webkit-appearance: auto;
-     -moz-appearance: auto;
-          appearance: auto;
-}
-
-:where(button, input, select, textarea) {
-  border-radius: 0.25rem;
-}
-
-:where([type=radio]) {
-  border-radius: 50%;
-}
-
-:where([type=checkbox]) {
-  border-radius: 0.5rem;
-}
-
-:where([type=radio], [type=checkbox]) {
-  padding: 0;
-  background-color: #fff;
-}
-
-:where([type=range i]) {
-  background-color: transparent;
-}
-
-:where(select[size], select[multiple]) {
-  height: auto;
-}
-
-:where(select[multiple]) {
-  background-image: none;
-}
-
-:where(textarea) {
-  height: auto;
-  min-height: 60px;
-  min-height: 6rem;
-  overflow: auto;
-  vertical-align: top;
-  resize: vertical;
-}
-
-::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-
-:where(button, [type=button], [type=reset], [type=submit]) {
-  line-height: normal;
-  text-align: center;
-  margin: 0;
-  background-clip: padding-box;
-  vertical-align: baseline;
-  overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  border: 0;
-  background-image: none;
-}
-:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
-  text-decoration: none;
-  color: #222;
-}
-
-:where(button:not(:disabled),
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled)) {
-  cursor: pointer;
-}
-
-:where(input::-moz-placeholder, textarea::-moz-placeholder) {
-  color: #666;
-}
-
-:where(input::placeholder, textarea::placeholder) {
-  color: #666;
-}
-
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-:-moz-focusring {
-  outline: auto;
-}
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-:where([type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-input[list],
-select,
-textarea) {
-  background-color: #fff;
-  border: 1px solid #999;
-  padding: 0.5rem 0.75rem;
-}
-
-:where([type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-input[list],
-select,
-textarea,
-[type=radio],
-[type=checkbox]):active, :where([type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-input[list],
-select,
-textarea,
-[type=radio],
-[type=checkbox]):focus {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
-}
-
-:where(button, [type=button], [type=reset], [type=submit]) {
-  color: #222;
-  padding: 0.6666666667rem 1.3333333333rem;
-  background: #ccc;
-  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
-}
-:where(button, [type=button], [type=reset], [type=submit]):hover, :where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
-  text-decoration: none;
-  color: #222;
-  background: rgb(178.5, 178.5, 178.5);
-}
-:where(button, [type=button], [type=reset], [type=submit]):active, :where(button, [type=button], [type=reset], [type=submit]):focus {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-}
-
-:where(fieldset[disabled] button,
-fieldset[disabled] input,
-fieldset[disabled] input::after,
-fieldset[disabled] input::before,
-fieldset[disabled] input:checked,
-fieldset[disabled] select,
-fieldset[disabled] textarea,
-fieldset[disabled] label,
-button[disabled],
-input[disabled],
-input[disabled]::after,
-input[disabled]::before,
-input[disabled]:checked,
-select[disabled],
-textarea[disabled],
-label[disabled],
-button:disabled,
-input:disabled,
-input:disabled::after,
-input:disabled::before,
-input:disabled:checked,
-select:disabled,
-textarea:disabled,
-label:disabled,
-button[aria-disabled=true],
-input[aria-disabled=true],
-input[aria-disabled=true]::after,
-input[aria-disabled=true]::before,
-input[aria-disabled=true]:checked,
-select[aria-disabled=true],
-textarea[aria-disabled=true],
-label[aria-disabled=true]) {
-  cursor: default !important;
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
-  box-shadow: none !important;
-  opacity: 0.5 !important;
-}
-
-:where(select):not([size], select[multiple]) {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
-  padding-right: 2rem;
-}
-
-:where(select)::-ms-expand {
-  display: none;
-}
-
-:where(*[dir=rtl]) :where(select):not([size], select[multiple]),
-:where(select[dir=rtl]):not([size], select[multiple]) {
-  background-position: left 0.85rem top 50%;
-  padding-right: 0.75rem;
-  padding-left: 2rem;
-}
-
-:where([type=checkbox], [type=radio]) {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  height: 1.8rem;
-  width: 1.8rem;
-  vertical-align: top;
-  position: relative;
-  border: 1px solid/#999;
-}
-:where([type=checkbox], [type=radio]) + label {
-  line-height: 1.8rem;
-  vertical-align: top;
-  margin-left: 5px;
-  margin-left: 0.5rem;
-}
-*[dir=rtl] :where([type=checkbox], [type=radio]) + label, :where([type=checkbox], [type=radio])[dir=rtl] + label {
-  margin-left: 0;
-  margin-right: 5px;
-  margin-right: 0.5rem;
-}
-:where([type=checkbox], [type=radio])::after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-:where([type=checkbox], [type=radio]):checked {
-  background-color: #007bff;
-  border-color: #000;
-}
-
-:where([type=radio])::after {
-  width: 1.8rem;
-  height: 1.8rem;
-  left: -0.05rem;
-  top: -0.05rem;
-  border-radius: 50%;
-  background: #fff;
-  transform: scale(0.35);
-}
-
-:where([type=checkbox])::after {
-  width: 0.6rem;
-  height: 0.8rem;
-  border: 2px solid/#fff;
-  border-top: 0;
-  border-left: 0;
-  left: 35%;
-  top: 20%;
-  transform: rotate(43deg);
-}
-
-:where([type=range]) {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100%;
-  height: 1.4rem;
-}
-
-:where([type=range])::-webkit-slider-thumb {
-  border: 0;
-  -webkit-appearance: none;
-          appearance: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: -0.25rem;
-  background-color: #007bff;
-  border-radius: 1.5rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-:where([type=range])::-webkit-slider-thumb:active {
-  background-color: #007bff;
-}
-
-:where([type=range])::-moz-range-thumb {
-  border: 0;
-  -moz-appearance: none;
-       appearance: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #007bff;
-  border-radius: 1.5rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-:where([type=range])::-moz-range-thumb:active {
-  background-color: #007bff;
-}
-
-:where([type=range])::-webkit-slider-runnable-track {
-  color: transparent;
-  border-color: transparent;
-  width: 100%;
-  height: 0.65rem;
-  cursor: pointer;
-  background-color: #e9e9e9;
-}
-
-:where([type=range])::-moz-range-track {
-  color: transparent;
-  border-color: transparent;
-  width: 100%;
-  height: 0.65rem;
-  cursor: pointer;
-  background-color: #e9e9e9;
-}
-
-:where([type=range]):focus {
-  outline: none;
-}
-:where([type=range]):focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-:where([type=range]):focus::-moz-slider-thumb {
-  box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-:where([type=range])::-moz-focus-outer {
-  border: 0;
-}
-
-:where([type=range]):focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.1rem/#fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-:where([type=range]):disabled {
-  pointer-events: none;
-}
-:where([type=range]):disabled::-webkit-slider-thumb {
-  background-color: #ccc;
-}
-:where([type=range]):disabled::-moz-slider-thumb {
-  background-color: #ccc;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color: #f0f0f0;
-  }
-  body {
-    background-color: rgb(36.125, 36.125, 36.125);
-  }
+/* prefers-contrast: more: underline links, thicker focus, stronger borders (WCAG 1.4.1). */
+@media (prefers-contrast: more) {
   a {
-    color: rgb(102, 175.8, 255);
+    text-decoration: underline;
   }
-  a:hover, a:focus {
-    color: rgb(26, 136.0223463687, 255);
+
+  :focus-visible {
+    outline-width: 0.3rem;
+    outline-offset: 0.4rem;
   }
-  mark {
-    background-color: #cccc00;
-  }
-  ins {
-    background-color: hsl(60, 100%, 125%);
-  }
-  [type=email],
-  [type=number],
-  [type=password],
-  [type=tel],
-  [type=search],
-  [type=text],
-  [type=date],
-  [type=datetime-local],
-  [type=month],
-  [type=week],
-  [type=time],
-  [type=url],
-  [type=range],
+
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
   input[list],
   select,
-  select:not([size], select[multiple]),
   textarea {
-    background-color: #111;
-    border-color: #000;
-    color: #ccc;
+    border-width: 2px;
   }
-  [type=email]:active, [type=email]:focus,
-  [type=number]:active,
-  [type=number]:focus,
-  [type=password]:active,
-  [type=password]:focus,
-  [type=tel]:active,
-  [type=tel]:focus,
-  [type=search]:active,
-  [type=search]:focus,
-  [type=text]:active,
-  [type=text]:focus,
-  [type=date]:active,
-  [type=date]:focus,
-  [type=datetime-local]:active,
-  [type=datetime-local]:focus,
-  [type=month]:active,
-  [type=month]:focus,
-  [type=week]:active,
-  [type=week]:focus,
-  [type=time]:active,
-  [type=time]:focus,
-  [type=url]:active,
-  [type=url]:focus,
-  [type=range]:active,
-  [type=range]:focus,
-  input[list]:active,
-  input[list]:focus,
-  select:active,
-  select:focus,
-  select:not([size], select[multiple]):active,
-  select:not([size], select[multiple]):focus,
-  textarea:active,
-  textarea:focus {
-    background-color: #111;
-    border-color: rgb(51, 149.4, 255);
-  }
-  [type=email]:active, [type=email]:focus,
-  [type=number]:active,
-  [type=number]:focus,
-  [type=password]:active,
-  [type=password]:focus,
-  [type=tel]:active,
-  [type=tel]:focus,
-  [type=search]:active,
-  [type=search]:focus,
-  [type=text]:active,
-  [type=text]:focus,
-  [type=date]:active,
-  [type=date]:focus,
-  [type=datetime-local]:active,
-  [type=datetime-local]:focus,
-  [type=month]:active,
-  [type=month]:focus,
-  [type=week]:active,
-  [type=week]:focus,
-  [type=time]:active,
-  [type=time]:focus,
-  [type=url]:active,
-  [type=url]:focus,
-  input[list]:active,
-  input[list]:focus,
-  select:active,
-  select:focus,
-  select:not([size], select[multiple]):active,
-  select:not([size], select[multiple]):focus,
-  textarea:active,
-  textarea:focus {
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.5);
-  }
-  select:not([size], select[multiple]) {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
-  }
-  /* stylelint-disable-next-line */
 }
-@media screen and (prefers-color-scheme: dark) and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
-  select:not([size], select[multiple]),
-  *[dir=rtl] select:not([size], select[multiple]),
-  select[dir=rtl]:not([size], select[multiple]) {
-    background-image: none;
+
+/* forced-colors: restore focus via Highlight; underline links; keep button borders. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: Highlight;
   }
+
+  a {
+    text-decoration: underline;
+  }
+
+  /* Keep button borders so disabled/active stay distinguishable. */
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
+  .bf-btn {
+    border: 1px solid ButtonText;
+  }
+}
+/* System-preference dark: shared dark rules + scrollbars under prefers-color-scheme.
+ * postcss-import wraps each import in the media query at build time. */
+@media (prefers-color-scheme: dark) {
+
+/* Shared dark-mode rules for always-dark and prefers-color-scheme builds.
+ * Variant-only extras: utility-global-dark.css. Scrollbars: global-dark-scrollbars.css.
+ * Underscore prefix excludes this file from the buildAllCss glob. */
+
+html {
+  color: var(--bf-light);
+}
+
+body {
+  background-color: var(--bf-dark-bg);
+}
+
+a {
+  color: var(--bf-dark-link);
+}
+
+a:hover,
+a:focus {
+  color: var(--bf-dark-link-hover);
+}
+
+mark {
+  background-color: var(--bf-dark-mark-bg);
+}
+
+ins {
+  background-color: var(--bf-dark-ins-bg);
+}
+
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='search'],
+[type='text'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='url'],
+[type='range'],
+input[list],
+select,
+select:not([size], select[multiple]),
+textarea {
+  background-color: var(--bf-dark-extra);
+  border-color: var(--bf-black);
+  color: var(--bf-gray-light);
+}
+
+[type='email']:active,
+[type='email']:focus,
+[type='number']:active,
+[type='number']:focus,
+[type='password']:active,
+[type='password']:focus,
+[type='tel']:active,
+[type='tel']:focus,
+[type='search']:active,
+[type='search']:focus,
+[type='text']:active,
+[type='text']:focus,
+[type='date']:active,
+[type='date']:focus,
+[type='datetime-local']:active,
+[type='datetime-local']:focus,
+[type='month']:active,
+[type='month']:focus,
+[type='week']:active,
+[type='week']:focus,
+[type='time']:active,
+[type='time']:focus,
+[type='url']:active,
+[type='url']:focus,
+input[list]:active,
+input[list]:focus,
+select:active,
+select:focus,
+select:not([size], select[multiple]):active,
+select:not([size], select[multiple]):focus,
+textarea:active,
+textarea:focus {
+  background-color: var(--bf-dark-extra);
+  border-color: var(--bf-dark-border-focus);
+  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
+}
+
+.bf-focused {
+  border-color: var(--bf-dark-border-focus) !important;
+  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
+}
+
+.bf-invalid,
+.bf-invalid:focus {
+  color: var(--bf-dark-invalid) !important;
+  border-color: var(--bf-dark-invalid) !important;
+}
+
+select:not([size], select[multiple]) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+}
+
+[type='range'] {
+  background-color: transparent;
+}
+
+[type='range']:focus {
+  background-color: transparent;
+}
+
+[type='range']::-webkit-slider-runnable-track {
+  background-color: var(--bf-dark-extra);
+}
+
+[type='range']::-moz-range-track {
+  background-color: var(--bf-dark-extra);
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: var(--bf-gray);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--bf-gray);
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'],
+.bf-btn {
+  background: var(--bf-gray-light);
+}
+
+button:hover,
+button:active,
+button:focus,
+[type='button']:hover,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:hover,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:hover,
+[type='submit']:active,
+[type='submit']:focus,
+.bf-btn:hover,
+.bf-btn:active,
+.bf-btn:focus {
+  background: var(--bf-dark-button-hover);
+}
+
+button:active,
+button:focus,
+[type='button']:active,
+[type='button']:focus,
+[type='reset']:active,
+[type='reset']:focus,
+[type='submit']:active,
+[type='submit']:focus,
+.bf-btn:active,
+.bf-btn:focus {
+  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
+}
+
+.bf-btn.bf-btn--primary {
+  background: var(--bf-blue);
+}
+
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  background: var(--bf-blue-light);
+}
+
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
+  box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
+}
+
+.bf-table th,
+.bf-table td {
+  border-color: var(--bf-gray-dark);
+}
+
+.bf-table--zebra tbody tr:nth-child(odd),
+.bf-table-responsive--zebra tbody tr:nth-child(odd) {
+  background-color: var(--bf-gray-dark-extra);
+}
+
+dialog {
+  color: var(--bf-light);
+  background-color: var(--bf-dark-bg);
+}
+
+caption {
+  color: var(--bf-gray-light);
+}
+
+progress[value] {
+  background: var(--bf-gray-dark-extra);
+  color: var(--bf-blue);
+}
+
+progress[value]::-webkit-progress-bar {
+  background: var(--bf-gray-dark-extra);
+}
+
+progress[value]::-webkit-progress-value {
+  background: var(--bf-blue);
+}
 }
 @media (prefers-color-scheme: dark) {
-  [type=range] {
-    background-color: transparent;
-  }
-  [type=range]:focus {
-    background-color: transparent;
-  }
-  [type=range]::-webkit-slider-runnable-track {
-    background-color: #111;
-  }
-  [type=range]::-moz-range-track {
-    background-color: #111;
-  }
-  input::-moz-placeholder, textarea::-moz-placeholder {
-    color: #999;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    color: #999;
-  }
-  button,
-  [type=button],
-  [type=reset],
-  [type=submit] {
-    background: #ccc;
-  }
-  button:hover, button:active, button:focus,
-  [type=button]:hover,
-  [type=button]:active,
-  [type=button]:focus,
-  [type=reset]:hover,
-  [type=reset]:active,
-  [type=reset]:focus,
-  [type=submit]:hover,
-  [type=submit]:active,
-  [type=submit]:focus {
-    background: rgb(178.5, 178.5, 178.5);
-  }
-  button:active, button:focus,
-  [type=button]:active,
-  [type=button]:focus,
-  [type=reset]:active,
-  [type=reset]:focus,
-  [type=submit]:active,
-  [type=submit]:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
-  }
-  button:active, button:focus,
-  [type=button]:active,
-  [type=button]:focus,
-  [type=reset]:active,
-  [type=reset]:focus,
-  [type=submit]:active,
-  [type=submit]:focus,
-  .bf-btn:active,
-  .bf-btn:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
-  }
-  a:focus,
-  input:focus {
-    outline-color: rgb(178.5, 115.5, 0);
-  }
-  :focus-visible {
-    outline-color: rgb(178.5, 115.5, 0);
-  }
-  dialog {
-    color: #f0f0f0;
-    background-color: rgb(36.125, 36.125, 36.125);
-  }
+
+/* Dark scrollbar colors (Firefox + WebKit). */
+
+html {
+  scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
 }
-/*# sourceMappingURL=bullframe-classless-system-default.css.map */
+
+/* WebKit thumb / track. */
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bf-dark-extra);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(97 97 97); /* gray-dark -5% lightness */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(115 115 115); /* gray-dark +10% lightness */
+}
+}

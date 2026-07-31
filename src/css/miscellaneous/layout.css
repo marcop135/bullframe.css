@@ -1,0 +1,32 @@
+/* Border-box and HTML5 block elements. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+details {
+  display: block;
+}
+
+template {
+  display: none;
+}
+
+/* [hidden] stays hidden (except until-found). */
+[hidden]:where(:not([hidden='until-found'])) {
+  display: none !important;
+}

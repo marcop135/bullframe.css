@@ -1,0 +1,56 @@
+# Bullframe CSS
+
+> Semantic by default. Any stack. Classless when you want it. System dark built in. Accessible defaults. Native CSS, seven builds, ~8 KB gzipped. Zero runtime dependencies. MIT license.
+
+Site: https://bullframecss.marcopontili.com
+Repo: https://github.com/marcop135/bullframe.css
+npm: bullframe.css
+CDN: https://cdn.jsdelivr.net/npm/bullframe.css
+
+Every docs page is also available as clean Markdown: append `.md` to the path (for example `/getting-started.md`), or send `Accept: text/markdown`. Full corpus: [/llms-full.txt](https://bullframecss.marcopontili.com/llms-full.txt).
+
+## Builds (seven files)
+
+- bullframe.css - class-based, light
+- bullframe-dark.css - class-based, always dark
+- bullframe-system-default.css - class-based, prefers-color-scheme
+- bullframe-classless.css - semantic HTML, light
+- bullframe-classless-dark.css - classless, always dark
+- bullframe-classless-system-default.css - classless, prefers-color-scheme
+- bullframe-utilities.css - utilities only
+
+## Docs
+
+- [Home](https://bullframecss.marcopontili.com/): Product overview
+- [Docs index](https://bullframecss.marcopontili.com/README): Full reference map
+- [Getting started](https://bullframecss.marcopontili.com/getting-started): Modes, CDN/npm, starters
+- [Migration](https://bullframecss.marcopontili.com/migration): v5 to v6
+- [Variables](https://bullframecss.marcopontili.com/variables): `--bf-*` tokens
+- [Typography](https://bullframecss.marcopontili.com/typography): Headings, body, lists
+- [Layout](https://bullframecss.marcopontili.com/layout): Containers, grid, responsive
+- [Forms](https://bullframecss.marcopontili.com/forms): Controls and validation
+- [Buttons](https://bullframecss.marcopontili.com/buttons): Button classes
+- [Utilities](https://bullframecss.marcopontili.com/utilities): Utility overview
+- [Components](https://bullframecss.marcopontili.com/components/): UI patterns
+- [Theming](https://bullframecss.marcopontili.com/theming): Themes and customization
+- [Dark mode](https://bullframecss.marcopontili.com/theming/dark-mode): System and always-dark
+- [Accessibility](https://bullframecss.marcopontili.com/accessibility): a11y defaults
+- [Browser support](https://bullframecss.marcopontili.com/browser-support): Target browsers
+- [API reference](https://bullframecss.marcopontili.com/api-reference): Generated tokens and classes
+
+## Install
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
+```
+
+```bash
+npm install bullframe.css
+```
+
+For a version-pinned CDN URL with Subresource Integrity, see [Getting started](https://bullframecss.marcopontili.com/getting-started) and [/sri.json](https://bullframecss.marcopontili.com/sri.json).
+
+## Note for crawlers
+
+Documentation pages are intended for indexing, live AI context, and training citations (`Content-Signal: search=yes, ai-input=yes, ai-train=yes`).
+The interactive kitchen sink at `/kitchen-sink/` is excluded via `robots.txt` and must not be indexed.

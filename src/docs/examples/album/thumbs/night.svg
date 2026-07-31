@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="City at night">
+  <rect width="640" height="400" fill="#020617"/>
+  <circle cx="90" cy="70" r="2" fill="#e2e8f0"/>
+  <circle cx="180" cy="40" r="1.5" fill="#e2e8f0"/>
+  <circle cx="260" cy="90" r="2" fill="#cbd5e1"/>
+  <circle cx="420" cy="55" r="1.5" fill="#e2e8f0"/>
+  <circle cx="510" cy="100" r="2" fill="#cbd5e1"/>
+  <circle cx="580" cy="35" r="1.5" fill="#e2e8f0"/>
+  <rect x="60" y="160" width="70" height="240" fill="#1e293b"/>
+  <rect x="150" y="120" width="90" height="280" fill="#0f172a"/>
+  <rect x="260" y="180" width="60" height="220" fill="#1e293b"/>
+  <rect x="340" y="100" width="110" height="300" fill="#111827"/>
+  <rect x="470" y="150" width="80" height="250" fill="#1e293b"/>
+  <rect x="560" y="200" width="50" height="200" fill="#0f172a"/>
+  <g fill="#fbbf24" opacity="0.85">
+    <rect x="75" y="180" width="10" height="12"/><rect x="95" y="180" width="10" height="12"/>
+    <rect x="75" y="210" width="10" height="12"/><rect x="95" y="230" width="10" height="12"/>
+    <rect x="170" y="150" width="12" height="14"/><rect x="195" y="150" width="12" height="14"/>
+    <rect x="170" y="190" width="12" height="14"/><rect x="210" y="220" width="12" height="14"/>
+    <rect x="360" y="130" width="14" height="16"/><rect x="390" y="130" width="14" height="16"/>
+    <rect x="360" y="170" width="14" height="16"/><rect x="410" y="200" width="14" height="16"/>
+    <rect x="490" y="180" width="12" height="14"/><rect x="515" y="210" width="12" height="14"/>
+  </g>
+  <rect y="360" width="640" height="40" fill="#020617"/>
+  <rect y="355" width="640" height="6" fill="#38bdf8" opacity="0.35"/>
+</svg>

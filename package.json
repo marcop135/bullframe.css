@@ -1,38 +1,75 @@
 {
   "name": "bullframe.css",
-  "version": "5.1.0",
-  "description": "Bullframe CSS is a lightweight Sass (SCSS) framework for building fast, responsive, and accessible UIs — semantic, themeable, and classless-friendly, with solid cross-browser support.",
-  "jsdelivr": "dist/css/bullframe.css",
-  "unpkg": "dist/css/bullframe.css",
+  "version": "6.0.0",
+  "type": "module",
+  "description": "Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default. Any stack. Classless when you want it. System dark built in. Seven builds, solid cross-browser support.",
   "main": "dist/css/bullframe.css",
-  "directories": {
-    "doc": "dist/docs/"
+  "style": "dist/css/bullframe.css",
+  "jsdelivr": "dist/css/bullframe.min.css",
+  "unpkg": "dist/css/bullframe.min.css",
+  "exports": {
+    ".": "./dist/css/bullframe.css",
+    "./dark": "./dist/css/bullframe-dark.css",
+    "./system": "./dist/css/bullframe-system-default.css",
+    "./classless": "./dist/css/bullframe-classless.css",
+    "./classless/dark": "./dist/css/bullframe-classless-dark.css",
+    "./classless/system": "./dist/css/bullframe-classless-system-default.css",
+    "./utilities": "./dist/css/bullframe-utilities.css",
+    "./dist/css/*": "./dist/css/*",
+    "./package.json": "./package.json"
   },
+  "files": [
+    "dist/css/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build",
+    "lint": "stylelint \"src/**/*.css\"",
+    "lint:fix": "stylelint \"src/**/*.css\" --fix",
+    "lint:html": "html-validate \"src/**/*.html\"",
+    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
+    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
+    "test:e2e": "playwright test",
+    "test:e2e:update": "playwright test --update-snapshots",
+    "docs:dev": "npm run docs:sync-public && vitepress dev docs",
+    "docs:sync-public": "node scripts/sync-docs-public.mjs",
+    "docs:api-reference": "node scripts/build-api-reference.mjs",
+    "docs:sri": "node scripts/generate-sri.mjs && prettier --write docs/getting-started.md docs/theming.md docs/theming/dark-mode.md",
+    "docs:build": "npm run build && npm run docs:sri && npm run docs:sync-public && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "examples:shots": "node scripts/capture-example-screenshots.mjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcop135/bullframe.css.git"
   },
   "keywords": [
-    "boilerplate",
-    "cross-browser",
     "css",
     "css-framework",
-    "dark",
-    "dark-theme",
-    "darkmode",
-    "normalize-css",
-    "reset-css",
     "responsive",
     "responsive-web-design",
-    "sass",
-    "sass-framework",
-    "scss",
-    "typography"
+    "accessibility",
+    "a11y",
+    "dark-mode",
+    "dark-theme",
+    "classless",
+    "classless-css",
+    "postcss",
+    "normalize-css",
+    "reset-css",
+    "typography",
+    "cross-browser",
+    "lightweight",
+    "css-custom-properties",
+    "theming"
   ],
   "author": "Marco Pontili",
   "license": "MIT",
@@ -41,16 +78,21 @@
   },
   "homepage": "https://bullframecss.marcopontili.com",
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "cssnano": "^7.0.7",
-    "fs": "^0.0.1-security",
-    "glob": "^11.0.3",
-    "htmlhint": "^1.6.3",
-    "path": "^0.12.7",
-    "postcss": "^8.5.6",
-    "sass": "^1.89.2",
-    "stylelint": "^16.21.1",
-    "stylelint-config-standard-scss": "^15.0.1",
-    "vite": "^7.0.2"
+    "@playwright/test": "^1.59.1",
+    "autoprefixer": "^10.4.24",
+    "cssnano": "^7.1.2",
+    "glob": "^13.0.1",
+    "html-validate": "^10.7.0",
+    "postcss": "^8.5.12",
+    "postcss-import": "^16.1.1",
+    "prettier": "^3.5.3",
+    "stylelint": "^17.1.1",
+    "stylelint-config-standard": "^40.0.0",
+    "vite": "^7.3.1",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-llms": "^1.13.4"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

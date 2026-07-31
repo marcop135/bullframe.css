@@ -1,0 +1,49 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify dist output
+        run: |
+          for f in \
+            bullframe \
+            bullframe-dark \
+            bullframe-system-default \
+            bullframe-classless \
+            bullframe-classless-dark \
+            bullframe-classless-system-default \
+            bullframe-utilities
+          do
+            test -f "dist/css/${f}.css" || (echo "Missing ${f}.css" && exit 1)
+            test -f "dist/css/${f}.min.css" || (echo "Missing ${f}.min.css" && exit 1)
+          done
+          test ! -e dist/css/bullframe-modern.css || (echo "Unexpected bullframe-modern.css" && exit 1)
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

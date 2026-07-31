@@ -1,0 +1,273 @@
+/* Form control reset: inheritance, sizing, and UA quirks. */
+
+:where(html input, button, select, optgroup, textarea) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+:where(html input, button, [type='radio'], [type='checkbox'], select, optgroup, textarea) {
+  margin: 0;
+}
+
+:where(html input, select, textarea, legend) {
+  width: 100%;
+}
+
+/* Shrink-to-content controls stay auto-width. */
+:where(
+  html label,
+  button,
+  [type='image'],
+  [type='submit'],
+  [type='reset'],
+  html [type='button'],
+  [type='radio'],
+  [type='checkbox']
+) {
+  width: auto;
+}
+
+/* inline-block: consistent sizing and vertical-align across engines. */
+:where(
+  html input,
+  label,
+  select,
+  textarea,
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  output
+) {
+  display: inline-block;
+}
+
+:where([type='file']) {
+  display: block;
+  background-color: transparent;
+}
+
+:where(button, html input, select, textarea) {
+  background-image: none;
+}
+
+:where(input, select, textarea) {
+  vertical-align: baseline;
+}
+
+:where(form) {
+  margin: 0;
+}
+
+/* Drop fieldset min-content width so nested grids can shrink. */
+:where(fieldset) {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+:where(legend) {
+  display: table; /* Text wrapping in Edge / IE. */
+  max-width: 100%;
+  white-space: normal;
+  border: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: var(--bf-spacing-md);
+  font-size: inherit;
+  line-height: 1.375;
+  color: inherit;
+}
+
+:where(label) {
+  font-weight: 400;
+  font-size: 90%;
+  line-height: 1.375;
+  margin-bottom: var(--bf-spacing-md);
+}
+
+:where(label input, label select, label textarea) {
+  font-size: 110%;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+:where([type='search']) {
+  outline-offset: calc(-1 * var(--bf-spacing-sm));
+}
+
+:where(output) {
+  vertical-align: middle;
+}
+
+:where(button, select) {
+  text-transform: none;
+}
+
+:where(select) {
+  word-wrap: normal;
+}
+
+/* Hide WebKit datalist picker chrome (Bootstrap Reboot 5.2).
+ * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css */
+:where([list]):not(
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='time']
+  )::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+:where(optgroup) {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit; /* Families without a 600 face. */
+  font-weight: 600;
+}
+
+/* Reset WebKit / Blink appearance on text-like controls. */
+:where(
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  [type='email'],
+  [type='number'],
+  [type='text'],
+  [type='tel'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='url'],
+  [type='image'],
+  [type='password'],
+  [type='search'],
+  [type='search']::-webkit-search-decoration,
+  [type='search']::-webkit-search-cancel-button,
+  input[list],
+  textarea
+) {
+  appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  appearance: auto;
+}
+
+::file-selector-button {
+  font: inherit;
+  appearance: auto;
+}
+
+:where(button, input, select, textarea) {
+  border-radius: var(--bf-spacing-sm);
+}
+
+:where([type='radio']) {
+  border-radius: 50%;
+}
+
+:where([type='checkbox']) {
+  border-radius: var(--bf-spacing-md);
+}
+
+:where([type='radio'], [type='checkbox']) {
+  padding: 0;
+  background-color: var(--bf-white);
+}
+
+:where([type='range' i]) {
+  background-color: transparent;
+}
+
+:where(select[size], select[multiple]) {
+  height: auto;
+}
+
+:where(select[multiple]) {
+  background-image: none;
+}
+
+:where(textarea) {
+  height: auto;
+  min-height: 60px;
+  min-height: 6rem;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* Firefox: strip inner focus padding/border. */
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  user-select: none;
+  border: 0;
+  background-image: none; /* Firefox mobile */
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus {
+  text-decoration: none;
+  color: var(--bf-dark);
+}
+
+:where(
+  button:not(:disabled),
+  [type='button']:not(:disabled),
+  [type='reset']:not(:disabled),
+  [type='submit']:not(:disabled)
+) {
+  cursor: pointer;
+}
+
+/* Firefox: input color must not override placeholder color.
+ * https://github.com/necolas/normalize.css/issues/150 */
+:where(input::placeholder, textarea::placeholder) {
+  color: var(--bf-gray-dark);
+}
+
+/* Firefox: modern focus ring on all focusable elements. */
+:-moz-focusring {
+  outline: auto;
+}
+
+/* Firefox: drop :-moz-ui-invalid glow; use .bf-invalid for JS validation.
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */
+:-moz-ui-invalid {
+  box-shadow: none;
+}

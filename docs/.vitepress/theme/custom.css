@@ -1,0 +1,348 @@
+/*
+ * Bullframe CSS brand skin for VitePress.
+ * Product blues (--bf-blue / --bf-blue-light) for WCAG AA 4.5:1
+ * (text on light, white on solid buttons). Matches framework link/button accent.
+ */
+
+:root {
+  /* Links / accents on light surfaces */
+  --vp-c-brand-1: #0056b3;
+  /* Hover / stronger */
+  --vp-c-brand-2: #004187;
+  /* Solid fills (buttons) */
+  --vp-c-brand-3: #0056b3;
+  --vp-c-brand-soft: rgba(0, 86, 179, 0.14);
+
+  /* Explicit button tokens: white on brand must stay AA (do not lighten on hover). */
+  --vp-button-brand-bg: #0056b3;
+  --vp-button-brand-hover-bg: #004187;
+  --vp-button-brand-active-bg: #00356d;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-active-text: #ffffff;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #0056b3, #004187);
+}
+
+.dark {
+  /* Links on dark surfaces */
+  --vp-c-brand-1: #4da5ff;
+  --vp-c-brand-2: #7eb8ff;
+  /* Keep solid fills dark enough for white button text */
+  --vp-c-brand-3: #0056b3;
+  --vp-c-brand-soft: rgba(77, 165, 255, 0.18);
+
+  --vp-button-brand-bg: #0056b3;
+  --vp-button-brand-hover-bg: #004187;
+  --vp-button-brand-active-bg: #00356d;
+
+  --vp-home-hero-name-background: linear-gradient(120deg, #4da5ff, #7eb8ff);
+}
+
+/*
+ * Align home hero with .bfh: same 1152px column and 24px side inset.
+ * VitePress puts side padding on .VPHero and none on .container, which
+ * makes the hero content wider than the after-hero blocks.
+ */
+.VPHome .VPHero {
+  padding-left: 0;
+  padding-right: 0;
+  /* Extra air under the nav so the hero art clears the header. */
+  padding-top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 72px);
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero {
+    padding-top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 112px);
+  }
+}
+
+/* VitePress pulls the stacked hero image up under the nav; keep clearance. */
+.VPHome .VPHero .image {
+  margin-top: -48px;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .image {
+    margin-top: -64px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .image {
+    margin-top: 0;
+  }
+}
+
+.VPHome .VPHero .container {
+  max-width: 1152px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+/* Compact left column; keep type readable next to the large illustration. */
+.VPHome .VPHero .name,
+.VPHome .VPHero .text {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.VPHome .VPHero .text {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+.VPHome .VPHero .name {
+  max-width: 20rem;
+}
+
+.VPHome .VPHero .text {
+  max-width: 100%;
+}
+
+.VPHome .VPHero .tagline {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 22rem;
+}
+
+/* VitePress draws a soft circle behind hero art; keep the PNG only. */
+.VPHome .VPHero .image-bg {
+  display: none;
+}
+
+.VPHome .VPHero .image-src {
+  background: transparent;
+}
+
+/* Nav mark: match title text scale; footer keeps the larger mark. */
+.VPNavBarTitle .logo {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
+
+/* Footer: logo first, then name + copyright. */
+.VPFooter .bf-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.VPFooter .bf-footer-logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  overflow: visible;
+  object-fit: contain;
+}
+
+.VPFooter .bf-footer-logo--dark {
+  display: none;
+}
+
+.dark .VPFooter .bf-footer-logo--light {
+  display: none;
+}
+
+.dark .VPFooter .bf-footer-logo--dark {
+  display: inline-block;
+}
+
+.VPFooter .bf-footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1.35;
+}
+
+.VPFooter .bf-footer-name {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.VPFooter .bf-footer-legal {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+}
+
+.VPFooter .message {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .name,
+  .VPHome .VPHero .text {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .VPHome .VPHero .text {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .VPHome .VPHero .name {
+    max-width: 24rem;
+  }
+
+  .VPHome .VPHero .tagline {
+    font-size: 17px;
+    line-height: 26px;
+    max-width: 26rem;
+  }
+
+  .VPHome .VPHero .image-container {
+    width: 460px;
+    height: 460px;
+  }
+
+  .VPHome .VPHero .image-src {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero.has-image .main {
+    max-width: 400px;
+    width: 38%;
+  }
+
+  .VPHome .VPHero .name,
+  .VPHome .VPHero .text {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .VPHome .VPHero .text {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .VPHome .VPHero .name {
+    max-width: 22rem;
+  }
+
+  .VPHome .VPHero .tagline {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 24rem;
+  }
+
+  .VPHome .VPHero .image-container {
+    width: 100%;
+    height: 100%;
+    /* Avoid subpixel transforms: they soft-blur the PNG after SPA / back-forward. */
+    margin-left: -8px;
+    transform: none;
+  }
+
+  .VPHome .VPHero .image-src {
+    max-width: 460px;
+    max-height: 460px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    image-rendering: auto;
+    backface-visibility: hidden;
+  }
+}
+
+/* Larger hero CTAs (VitePress defaults to size="medium"). */
+.VPHome .VPHero .actions .VPButton {
+  border-radius: 24px;
+  padding: 0 28px;
+  line-height: 48px;
+  font-size: 16px;
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .actions .VPButton {
+    padding: 0 32px;
+    line-height: 52px;
+    font-size: 17px;
+  }
+}
+
+/*
+ * Raise top-nav desktop breakpoint above VitePress’s 768px default.
+ * Four nav labels + search + extra overflow before the hamburger would
+ * otherwise appear; keep hamburger chrome through 959px.
+ */
+@media (max-width: 959px) {
+  .VPNavBarMenu {
+    display: none !important;
+  }
+
+  .VPNavBarHamburger {
+    display: flex !important;
+  }
+
+  .VPNavBarExtra {
+    display: none !important;
+  }
+
+  /*
+   * VitePress hides .VPNavScreen from 768px up; keep it usable while the
+   * hamburger is still shown (through 959px).
+   */
+  .VPNavScreen {
+    display: block !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .VPNavScreen .container {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1.25rem 1.5rem 4rem !important;
+  }
+
+  .VPNavScreen .menu,
+  .VPNavScreen .appearance,
+  .VPNavScreen .social-links,
+  .VPNavScreen .translations {
+    width: 100%;
+  }
+
+  .VPNavScreenSocialLinks {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPNavBarMenu {
+    display: flex !important;
+  }
+
+  .VPNavBarHamburger {
+    display: none !important;
+  }
+
+  .VPNavBarExtra {
+    display: block !important;
+  }
+
+  .VPNavScreen {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .VPNavBarExtra {
+    display: none !important;
+  }
+}

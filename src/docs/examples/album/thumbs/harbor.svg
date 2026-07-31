@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Harbor at sunrise">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="45%" stop-color="#0056b3"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#sky)"/>
+  <ellipse cx="520" cy="120" rx="48" ry="48" fill="#bed8fe" opacity="0.95"/>
+  <path d="M0 250 Q160 210 320 250 T640 240 L640 400 L0 400 Z" fill="#0f172a"/>
+  <path d="M0 270 Q200 250 360 275 T640 265 L640 400 L0 400 Z" fill="#1e293b"/>
+  <rect x="80" y="200" width="18" height="90" fill="#334155"/>
+  <rect x="140" y="180" width="14" height="110" fill="#475569"/>
+  <rect x="200" y="210" width="16" height="80" fill="#334155"/>
+  <path d="M40 290 L120 270 L200 295 L280 275 L360 300 L440 280 L520 305 L600 285 L640 295 L640 400 L0 400 Z" fill="#64748b" opacity="0.55"/>
+</svg>

@@ -1,18 +1,18 @@
 # Node modules
 node_modules/
 
-# Build output
-dist/
-build/
-.out/
-
 # Caches
 .eslintcache
 .stylelintcache
-.sass-cache/
-.next/
 .cache/
 .vite/
+.tmp-favicon/
+.tmp-heroes/
+pw-ci-artifacts/
+
+# Vite copyDocsFiles noise (source of truth: src/docs/ → docs:sync-public)
+dist/docs/brand/
+dist/docs/examples/
 
 # Logs
 npm-debug.log*
@@ -23,4 +23,29 @@ pnpm-debug.log*
 
 # OS generated files
 .DS_Store
-Th
+Thumbs.db
+
+# VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Synced kitchen sink, examples & compiled CSS (rebuilt by `npm run docs:sync-public`)
+docs/public/css/
+docs/public/demo/
+docs/public/kitchen-sink/
+docs/public/examples/
+
+# Netlify CLI local state
+.netlify/
+
+# Claude Code local settings and scratch worktrees
+.claude/settings.local.json
+.claude/worktrees/
+
+# Playwright artifacts (keep tests/e2e/__screenshots__ baselines tracked)
+playwright-report/
+test-results/
+.playwright/
+.playwright-mcp/
+tests/e2e/.design-check/
+.tmp/

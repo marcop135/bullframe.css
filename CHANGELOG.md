@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replaced Sass with native CSS and PostCSS; `$bf-*` / mixins become `--bf-*` custom properties and utilities. See [Migration](docs/migration.md).
 - Darkened link and button blues for WCAG AA 4.5:1 contrast (override with `--bf-*` if needed).
 - Unified class-based, classless, dark, and system-default builds on one token set.
-- Replaced the Docusaurus site with VitePress docs and a `/demo/` specimen; docs deploy via FTPS.
+- Replaced the Docusaurus site with VitePress docs and a `/kitchen-sink/` page; docs deploy via FTPS.
 - CI runs on `main` and `v6` (dropped `master`).
 - Documented browser support against Browserslist `defaults` and Autoprefixer honesty.
 

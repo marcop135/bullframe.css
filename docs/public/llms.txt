@@ -53,4 +53,4 @@ For a version-pinned CDN URL with Subresource Integrity, see [Getting started](h
 ## Note for crawlers
 
 Documentation pages are intended for indexing, live AI context, and training citations (`Content-Signal: search=yes, ai-input=yes, ai-train=yes`).
-The interactive specimen at `/demo/` is excluded via `robots.txt` and must not be indexed.
+The interactive kitchen sink at `/kitchen-sink/` is excluded via `robots.txt` and must not be indexed.

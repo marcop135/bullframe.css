@@ -1,10 +1,9 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="src/docs/github-readme/bf-readme-hero-dark-16x9.png">
-    <source media="(prefers-color-scheme: light)" srcset="src/docs/github-readme/bf-readme-hero-light-16x9.png">
-    <img alt="Bullframe CSS" width="1280" src="src/docs/github-readme/bf-readme-hero-light-16x9.png" style="max-width:100%;height:auto;">
-  </picture>
-</p>
+<div align="center">
+
+![Bullframe CSS](./src/docs/github-readme/bf-readme-hero-light-16x9.png#gh-light-mode-only)
+![Bullframe CSS](./src/docs/github-readme/bf-readme-hero-dark-16x9.png#gh-dark-mode-only)
+
+</div>
 
 <p align="center">
   <strong>Bullframe CSS</strong><br>
@@ -52,6 +51,14 @@ import 'bullframe.css';
 ## Docs
 
 [bullframecss.marcopontili.com](https://bullframecss.marcopontili.com/)
+
+## Examples
+
+[Example templates](https://bullframecss.marcopontili.com/examples)
+
+## Kitchen sink
+
+[Every styled element in one page](https://bullframecss.marcopontili.com/kitchen-sink/)
 
 ## Contributing
 

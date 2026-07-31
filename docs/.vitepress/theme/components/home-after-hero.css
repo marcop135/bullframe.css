@@ -12,7 +12,7 @@
   --bfh-soft: var(--vp-c-bg-soft);
   max-width: 1152px;
   margin: 0 auto;
-  padding: 0.5rem 24px 4.5rem;
+  padding: 2.5rem 24px 4.5rem;
 }
 
 .bfh-section {
@@ -32,9 +32,19 @@
 }
 
 .bfh-section:first-child {
-  margin-top: 2.25rem;
+  margin-top: 3.5rem;
   padding-top: 0;
   border-top: 0;
+}
+
+@media (min-width: 960px) {
+  .bfh {
+    padding-top: 3.25rem;
+  }
+
+  .bfh-section:first-child {
+    margin-top: 4.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -240,12 +250,54 @@ html:not(.dark) .bfh-code span {
   color: var(--bfh-ink);
 }
 
-.bfh-pillar__detail {
-  margin: 0.2rem 0 0;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: var(--bfh-muted);
+.bfh-pillar--mute {
+  background: var(--bfh-soft);
+  box-shadow: none;
 }
+
+.bfh-pillar--mute:hover {
+  transform: none;
+  border-color: var(--bfh-line);
+  box-shadow: none;
+}
+
+.bfh-inline-link {
+  color: var(--bfh-orange);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.bfh-inline-link:hover {
+  color: var(--bfh-ink);
+}
+
+.bfh .bf-ex-gallery {
+  margin: 0;
+}
+
+.bfh .bf-ex-gallery--compact {
+  gap: 1.15rem;
+}
+
+@media (min-width: 960px) {
+  .bfh .bf-ex-gallery--compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.bfh .bf-ex-card__body {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.bfh .bf-ex-card__title {
+  font-size: 1.05rem;
+}
+
+.bfh .bf-ex-card__blurb {
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+}
+
 
 .bfh-section--stats .bfh-section__head {
   margin-bottom: 1.5rem;

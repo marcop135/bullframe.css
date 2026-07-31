@@ -1,0 +1,88 @@
+/*
+ * Branded example: show how a short custom layer restyles Bullframe.
+ * Override tokens first; add a few layout/type rules only where needed.
+ */
+.ex-branded {
+  --bf-blue: #0f766e;
+  --bf-blue-light: #0d9488;
+  --bf-blue-light-extra: #ccfbf1;
+  --bf-dark: #134e4a;
+  --bf-gray-dark: #3f5f5b;
+  --bf-gray-light: #c7e0db;
+  --bf-light: #f0fdfa;
+  --bf-font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --bf-font-sans-serif:
+    'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background:
+    radial-gradient(circle at top right, rgb(15 118 110 / 0.12), transparent 28rem),
+    var(--bf-light);
+  color: var(--bf-dark);
+  font-family: var(--bf-font-sans-serif);
+}
+
+.ex-branded__bar {
+  background: transparent;
+  border-bottom-color: rgb(15 118 110 / 0.15);
+}
+
+.ex-branded__kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+  color: var(--bf-blue);
+  font-weight: 650;
+}
+
+.ex-branded__title {
+  max-width: 14ch;
+  font-family: var(--bf-font-serif);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+  margin-top: 0;
+}
+
+.ex-branded__lead {
+  max-width: 38rem;
+}
+
+.ex-branded h2 {
+  font-family: var(--bf-font-serif);
+  font-size: 1.45rem;
+  margin-top: 0;
+}
+
+.ex-branded__card {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border: 1px solid rgb(15 118 110 / 0.22);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0.72);
+}
+
+.ex-branded__quote {
+  margin-top: 2.5rem;
+  border-left: 3px solid var(--bf-blue);
+  padding-left: 1.25rem;
+  max-width: 36rem;
+  font-family: var(--bf-font-serif);
+  font-size: 1.25rem;
+  color: var(--bf-dark);
+}
+
+.ex-branded .bf-btn--primary {
+  background: var(--bf-blue);
+  border-color: var(--bf-blue);
+}
+
+.ex-branded .bf-btn--primary:hover,
+.ex-branded .bf-btn--primary:focus {
+  background: var(--bf-blue-light);
+  border-color: var(--bf-blue-light);
+}
+
+.ex-branded a:not(.bf-btn) {
+  color: var(--bf-blue);
+}

@@ -78,15 +78,30 @@ function acceptsMarkdown(accept) {
   return true;
 }
 
-/** Serve static demo HTML for /demo/ in docs:dev (VitePress SPA would 404 otherwise). */
-function serveDemoHtml() {
+/**
+ * Serve static kitchen-sink / example HTML in docs:dev (VitePress SPA would 404 otherwise).
+ * Gallery lives at VitePress /examples; templates are /examples/{slug}/.
+ */
+function serveStaticHtml() {
   return {
-    name: 'bf-serve-demo-html',
+    name: 'bf-serve-static-html',
     configureServer(server) {
-      server.middlewares.use((req, _res, next) => {
-        const url = req.url?.split('?')[0];
+      server.middlewares.use((req, res, next) => {
+        const url = req.url?.split('?')[0] ?? '';
         if (url === '/demo' || url === '/demo/') {
-          req.url = '/demo/index.html';
+          res.statusCode = 302;
+          res.setHeader('Location', '/kitchen-sink/');
+          res.end();
+          return;
+        }
+        if (url === '/kitchen-sink' || url === '/kitchen-sink/') {
+          req.url = '/kitchen-sink/index.html';
+        } else {
+          // Slug dirs only (not /examples/shared.css or other files).
+          const ex = url.match(/^\/examples\/([^/]+)\/?$/);
+          if (ex && !ex[1].includes('.')) {
+            req.url = `/examples/${ex[1]}/index.html`;
+          }
         }
         next();
       });
@@ -104,7 +119,13 @@ function negotiateMarkdownDev() {
         const raw = url.split('?')[0] ?? '';
         // Let Vite transform page modules (e.g. /index.md?import); do not raw-serve those.
         if (/[?&]import(?:&|=|$)/.test(url)) return next();
-        if (raw.startsWith('/demo') || raw.startsWith('/@') || raw.startsWith('/node_modules')) {
+        if (
+          raw.startsWith('/kitchen-sink') ||
+          raw.startsWith('/demo') ||
+          raw.startsWith('/examples/') ||
+          raw.startsWith('/@') ||
+          raw.startsWith('/node_modules')
+        ) {
           return next();
         }
         if (/\.(?:css|js|mjs|map|png|jpe?g|webp|gif|svg|ico|woff2?|json|txt)$/i.test(raw)) {
@@ -137,7 +158,11 @@ export default defineConfig({
   lang: 'en-US',
   cleanUrls: true,
   base: '/',
-  ignoreDeadLinks: false,
+  ignoreDeadLinks: [
+    /^\/examples\/[^/]+\/?$/,
+    /^\/kitchen-sink\/?$/,
+    /^\/demo\/?$/,
+  ],
   sitemap: {
     hostname: siteUrl,
   },
@@ -161,7 +186,7 @@ export default defineConfig({
   // Dev nav felt 1–3s cold: avoid watching build output, warm common pages.
   vite: {
     plugins: [
-      serveDemoHtml(),
+      serveStaticHtml(),
       negotiateMarkdownDev(),
       llmstxt({
         domain: siteUrl,
@@ -198,13 +223,15 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: '/docs/demo/icons/favicon-32x32.png',
+    logo: '/logo.svg',
     siteTitle: 'Bullframe CSS',
     search: { provider: 'local' },
     outline: { level: [2, 3] },
     nav: [
       { text: 'Get started', link: '/getting-started' },
       { text: 'Read the docs', link: '/README' },
+      { text: 'Examples', link: '/examples' },
+      { text: 'Kitchen sink', link: '/kitchen-sink/', target: '_blank', rel: 'noopener' },
     ],
     sidebar,
     socialLinks: [
@@ -217,8 +244,8 @@ export default defineConfig({
       },
     ],
     footer: {
-      message: 'Bullframe CSS Docs',
-      copyright: 'Copyright © 2026 Marco Pontili',
+      message:
+        '<span class="bf-footer-brand"><img class="bf-footer-logo" src="/logo.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 Marco Pontili</span></span></span>',
     },
     editLink: {
       pattern: 'https://github.com/marcop135/bullframe.css/edit/v6/docs/:path',
@@ -232,7 +259,7 @@ export default defineConfig({
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: '/docs/demo/icons/favicon-16x16.png',
+        href: '/kitchen-sink/icons/favicon-16x16.png',
       },
     ],
     [
@@ -241,7 +268,7 @@ export default defineConfig({
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/docs/demo/icons/favicon-32x32.png',
+        href: '/kitchen-sink/icons/favicon-32x32.png',
       },
     ],
     [
@@ -249,10 +276,10 @@ export default defineConfig({
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: '/docs/demo/icons/apple-touch-icon.png',
+        href: '/kitchen-sink/icons/apple-touch-icon.png',
       },
     ],
-    ['link', { rel: 'shortcut icon', href: '/docs/demo/icons/favicon.ico' }],
+    ['link', { rel: 'shortcut icon', href: '/kitchen-sink/icons/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#c2410c' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],

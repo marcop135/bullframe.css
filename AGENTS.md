@@ -13,10 +13,10 @@ Native **CSS + PostCSS** (no Sass). Seven builds via Vite. Docs: **VitePress**. 
 | Command | Purpose |
 | ----------------------- | -------------------------------- |
 | `npm run build` | Compile seven CSS builds to `dist/css/` |
-| `npm run lint` | Stylelint on `src/css/**/*.css` |
-| `npm run lint:html` | html-validate on `src/**/*.html` |
+| `npm run lint` | Stylelint on `src/**/*.css` (framework + kitchen sink + examples) |
+| `npm run lint:html` | html-validate on `src/**/*.html` (kitchen sink + examples) |
 | `npm run format:check` | Prettier check |
-| `npm run docs:dev` | VitePress local docs (syncs demo first) |
+| `npm run docs:dev` | VitePress local docs (syncs public assets first) |
 | `npm run docs:build` | Framework build + VitePress production |
 | `npm run test:e2e` | Playwright visual tests |
 

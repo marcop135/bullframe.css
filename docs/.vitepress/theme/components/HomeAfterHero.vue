@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, onMounted, onUnmounted } from 'vue';
 import installTabs from './install-tabs.json';
+import ExamplesGallery from './ExamplesGallery.vue';
 
 const tabs = installTabs;
 
@@ -77,70 +78,72 @@ function selectTab(id) {
 const pillars = [
   {
     kicker: '01',
-    label: 'Semantic',
-    detail: 'Headings, forms, tables, and links are styled without a pile of classes.',
+    label: 'Semantic HTML',
+    detail: 'Style real elements. Pages without a class on every heading and form.',
   },
   {
     kicker: '02',
-    label: 'Classless',
-    detail: 'Swap in bullframe-classless.css and keep markup as plain HTML.',
+    label: 'Classless build',
+    detail: 'Point at bullframe-classless.css when the markup should stay plain HTML.',
   },
   {
     kicker: '03',
-    label: 'System dark',
-    detail: 'Always-dark builds, or system-default builds that follow prefers-color-scheme.',
+    label: 'Dark without JS',
+    detail: 'Always-dark builds, or system-default builds wired to prefers-color-scheme.',
   },
 ];
 
 const whenToUse = [
   {
-    label: 'Pages and forms',
-    detail: 'Docs, blogs, landings, help centers, listings, micro-sites. Not complex app UIs.',
+    label: 'Good fit',
+    detail: 'Docs, blogs, landings, help centers, and forms.',
   },
   {
-    label: 'One stylesheet',
-    detail: 'Reset, typography, forms, and layout in a single drop-in CSS file.',
+    label: 'One CSS file',
+    detail: 'Reset, type, forms, layout. npm or CDN.',
   },
   {
-    label: 'Class-based or classless',
-    detail: 'Pick how you write HTML. Utilities stay a companion build, not the default path.',
+    label: 'Two markup modes',
+    detail: 'Class-based (.bf-*) or classless. Utilities are optional.',
   },
   {
-    label: 'No utility pipeline',
-    detail: 'Skip Tailwind-style build setup when semantic HTML and a CDN link are enough.',
+    label: 'Skip when',
+    detail: 'Dense app shells, data grids, or a JS component library.',
   },
 ];
 
+const showcaseSlugs = ['blog', 'cover', 'pricing', 'album', 'sign-in', 'branded'];
+
 const builds = [
-  { file: 'bullframe.css', use: 'Class-based, light' },
-  { file: 'bullframe-dark.css', use: 'Class-based, always dark' },
-  { file: 'bullframe-system-default.css', use: 'Class-based, follows the OS' },
-  { file: 'bullframe-classless.css', use: 'Semantic HTML, light' },
-  { file: 'bullframe-classless-dark.css', use: 'Classless, always dark' },
-  { file: 'bullframe-classless-system-default.css', use: 'Classless, follows the OS' },
-  { file: 'bullframe-utilities.css', use: 'Utilities companion only' },
+  { file: 'bullframe.css', use: 'Class-based · light' },
+  { file: 'bullframe-dark.css', use: 'Class-based · always dark' },
+  { file: 'bullframe-system-default.css', use: 'Class-based · OS theme' },
+  { file: 'bullframe-classless.css', use: 'Classless · light' },
+  { file: 'bullframe-classless-dark.css', use: 'Classless · always dark' },
+  { file: 'bullframe-classless-system-default.css', use: 'Classless · OS theme' },
+  { file: 'bullframe-utilities.css', use: 'Utilities only' },
 ];
 
 const stats = [
   {
     value: '0',
-    label: 'Dependencies',
-    detail: 'Native CSS, PostCSS builds, no Sass, no runtime JavaScript. Any stack.',
+    label: 'Runtime deps',
+    detail: 'PostCSS builds to plain CSS. No Sass. No JS runtime.',
   },
   {
     value: 'AA',
-    label: 'Contrast',
-    detail: 'Focus-visible rings, reduced-motion respect, WCAG AA on links and primary buttons.',
+    label: 'Defaults',
+    detail: 'Focus-visible, reduced-motion, WCAG AA on links and primary buttons.',
   },
   {
     value: '7',
     label: 'Builds',
-    detail: 'Class-based and classless, each with light, dark, and system themes, plus a utilities companion.',
+    detail: 'Class-based + classless × light / dark / system, plus utilities.',
   },
   {
     value: '~8',
-    label: 'kB gzipped',
-    detail: 'Default build size. One stylesheet for reset, type, forms, and layout.',
+    label: 'kB gzip',
+    detail: 'Default build. One file for reset, type, forms, layout.',
   },
 ];
 </script>
@@ -150,8 +153,8 @@ const stats = [
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Why use it</p>
-        <p class="bfh-bridge">Drop in a stylesheet. Keep your stack.</p>
-        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic by default. Classless when you want it. System dark built in.</h2>
+        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic CSS. No JS runtime.</h2>
+        <p class="bfh-bridge">npm or CDN. Class-based or classless. Dark is a build, not a theme script.</p>
       </div>
       <ul class="bfh-pillars">
         <li v-for="p in pillars" :key="p.label" class="bfh-pillar">
@@ -165,18 +168,35 @@ const stats = [
     <section class="bfh-section" aria-labelledby="bfh-when-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">When to use</p>
-        <h2 id="bfh-when-heading" class="bfh-heading">Pages and forms, not complex app UIs.</h2>
+        <h2 id="bfh-when-heading" class="bfh-heading">Use Bullframe for pages, not apps.</h2>
         <p class="bfh-bridge">
-          Docs, blogs, landings, help centers, listings, micro-sites. One stylesheet for reset, type,
-          forms, and layout. Class-based or classless. No Tailwind-style utility pipeline.
+          Good for docs, blogs, landings, help centers, and forms. If you need a dashboard shell, data
+          grid, or design-system components, use a UI kit instead.
         </p>
       </div>
       <ul class="bfh-pillars bfh-pillars--quad">
-        <li v-for="item in whenToUse" :key="item.label" class="bfh-pillar">
+        <li
+          v-for="item in whenToUse"
+          :key="item.label"
+          class="bfh-pillar"
+          :class="{ 'bfh-pillar--mute': item.label === 'Skip when' }"
+        >
           <span class="bfh-pillar__label">{{ item.label }}</span>
           <p class="bfh-pillar__detail">{{ item.detail }}</p>
         </li>
       </ul>
+    </section>
+
+    <section class="bfh-section" aria-labelledby="bfh-examples-heading">
+      <div class="bfh-section__head">
+        <p class="bfh-eyebrow">Examples</p>
+        <h2 id="bfh-examples-heading" class="bfh-heading">Example pages</h2>
+        <p class="bfh-bridge">
+          Live HTML on the published builds.
+          <a class="bfh-inline-link" href="/examples">All examples</a>.
+        </p>
+      </div>
+      <ExamplesGallery :slugs="showcaseSlugs" compact />
     </section>
 
     <section class="bfh-section" aria-labelledby="bfh-install-heading">
@@ -227,7 +247,8 @@ const stats = [
     <section class="bfh-section" aria-labelledby="bfh-builds-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Seven builds</p>
-        <h2 id="bfh-builds-heading" class="bfh-heading">Pick a file. Same defaults in every build.</h2>
+        <h2 id="bfh-builds-heading" class="bfh-heading">Seven CSS builds</h2>
+        <p class="bfh-bridge">Markup mode and theme are in the filename. Same tokens in every build.</p>
       </div>
       <div class="bfh-builds">
         <table>
@@ -249,8 +270,8 @@ const stats = [
 
     <section class="bfh-section bfh-section--stats" aria-labelledby="bfh-stats-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">By the numbers</p>
-        <h2 id="bfh-stats-heading" class="bfh-heading">Zero dependencies. Accessible defaults.</h2>
+        <p class="bfh-eyebrow">Specs</p>
+        <h2 id="bfh-stats-heading" class="bfh-heading">Package defaults</h2>
       </div>
       <div class="bfh-stats">
         <div v-for="s in stats" :key="s.label" class="bfh-stat">
@@ -263,8 +284,7 @@ const stats = [
 
     <section class="bfh-section bfh-section--cta" aria-labelledby="bfh-cta-heading">
       <div class="bfh-section__head bfh-section__head--center">
-        <p class="bfh-eyebrow">Next</p>
-        <h2 id="bfh-cta-heading" class="bfh-heading">Ready when you are.</h2>
+        <h2 id="bfh-cta-heading" class="bfh-heading">Next steps</h2>
       </div>
       <div class="bfh-cta">
         <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Get started</a>

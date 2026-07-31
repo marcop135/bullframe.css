@@ -1,14 +1,14 @@
 # Getting started
 
-Bullframe CSS is a lightweight CSS framework for fast, accessible UIs. Semantic by default. Any stack. Seven builds, zero runtime dependencies, about 8 KB gzipped for the default build. Pick a markup mode and a theme, then add one stylesheet.
+Install Bullframe, pick a markup mode and a theme, link one CSS file. Default build is ~8 KB gzipped. No runtime JS.
 
-## Choose a mode
+## Markup modes
 
-Two markup modes. Same accessible defaults in both. Pick how you write HTML.
+Two ways to write HTML. Same components and a11y defaults.
 
 ### Class-based
 
-`bullframe.css` (+ dark / system-default). Grid, buttons, forms, tables via `.bf-*` classes.
+Use `.bf-*` for layout, buttons, and forms.
 
 ```html
 <link rel="stylesheet" href="…/bullframe.min.css" />
@@ -21,7 +21,7 @@ Two markup modes. Same accessible defaults in both. Pick how you write HTML.
 
 ### Classless
 
-`bullframe-classless.css` (+ dark / system-default). Semantic HTML only; no classes to add.
+Element selectors only. No classes required for base styling.
 
 ```html
 <link rel="stylesheet" href="…/bullframe-classless.min.css" />
@@ -31,21 +31,21 @@ Two markup modes. Same accessible defaults in both. Pick how you write HTML.
 <form>…</form>
 ```
 
-## Choose a theme
+## Themes
 
-Each markup mode ships in three themes:
+Each markup mode has three theme files:
 
-| Theme | File suffix | Behavior |
+| Theme | Suffix | Behavior |
 | --- | --- | --- |
 | Light | (none) | Always light |
 | Dark | `-dark` | Always dark |
-| System | `-system-default` | Follows `prefers-color-scheme` |
+| System | `-system-default` | `prefers-color-scheme` |
 
 Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
 
-## Utilities
+## Utilities companion
 
-`bullframe-utilities.css` is a companion build, not a markup mode. Use it when you already have a reset and only want `.bf-*` helpers.
+`bullframe-utilities.css` is not a markup mode. Add it when you already have a reset and only need `.bf-*` helpers.
 
 ```html
 <link rel="stylesheet" href="…/bullframe-utilities.min.css" />
@@ -167,4 +167,5 @@ Upgrading from v5: [Migration](/migration).
 
 - [CSS Variables](/variables)
 - [Utilities](/utilities)
-- [Demo](/demo/)
+- [Examples](/examples)
+- [Kitchen sink](/kitchen-sink/)

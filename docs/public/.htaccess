@@ -10,8 +10,12 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Force /demo trailing slash
-  RewriteRule ^demo$ /demo/ [R=301,L]
+  # Force /kitchen-sink trailing slash
+  RewriteRule ^kitchen-sink$ /kitchen-sink/ [R=301,L]
+
+  # Legacy /demo → /kitchen-sink
+  RewriteRule ^demo/?$ /kitchen-sink/ [R=301,L]
+  RewriteRule ^demo/(.*)$ /kitchen-sink/$1 [R=301,L]
 
   # Intro / Install merged into Getting started
   RewriteRule ^intro/?$ /getting-started [R=301,L]
@@ -19,15 +23,17 @@ DirectoryIndex index.html
   RewriteRule ^install/?$ /getting-started [R=301,L]
   RewriteRule ^install\.html$ /getting-started [R=301,L]
 
-  # Legacy demo paths (old production root pointed here)
-  RewriteRule ^dist/docs/demo/?$ /demo/ [R=301,L]
-  RewriteRule ^dist/docs/demo/(.*)$ /demo/$1 [R=301,L]
+  # Legacy kitchen-sink paths (old production root pointed at dist/docs/demo)
+  RewriteRule ^dist/docs/demo/?$ /kitchen-sink/ [R=301,L]
+  RewriteRule ^dist/docs/demo/(.*)$ /kitchen-sink/$1 [R=301,L]
+  RewriteRule ^dist/docs/kitchen-sink/?$ /kitchen-sink/ [R=301,L]
+  RewriteRule ^dist/docs/kitchen-sink/(.*)$ /kitchen-sink/$1 [R=301,L]
 
   # Old Docusaurus-style /docs/* paths
   RewriteRule ^docs/(.*)$ /$1 [R=301,L]
 
-  # Mark demo responses for X-Robots-Tag (see mod_headers below)
-  RewriteRule ^demo/ - [E=BF_DEMO:1]
+  # Mark kitchen-sink responses for X-Robots-Tag (see mod_headers below)
+  RewriteRule ^kitchen-sink/ - [E=BF_KITCHEN_SINK:1]
 
   # Static assets: do not negotiate
   RewriteRule \.(?:css|js|mjs|map|png|jpe?g|webp|gif|svg|avif|ico|woff2?|ttf|otf|eot|xml|json|pdf|mp4|webm|zip)$ - [L,NC]
@@ -41,26 +47,26 @@ DirectoryIndex index.html
   RewriteCond %{HTTP:Accept} text/markdown [NC]
   RewriteCond %{HTTP:Accept} !text/markdown\s*;\s*q\s*=\s*0(?:\.0+)?(?:\s|,|$) [NC]
   RewriteCond %{REQUEST_URI} !\.(?:md|txt|html)$ [NC]
-  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{REQUEST_URI} !^/kitchen-sink [NC]
   RewriteCond %{DOCUMENT_ROOT}/$1.md -f
   RewriteRule ^(.+?)/?$ /$1.md [L,E=BF_MD_PAGE:$1]
 
   RewriteCond %{HTTP:Accept} text/markdown [NC]
   RewriteCond %{HTTP:Accept} !text/markdown\s*;\s*q\s*=\s*0(?:\.0+)?(?:\s|,|$) [NC]
-  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{REQUEST_URI} !^/kitchen-sink [NC]
   RewriteCond %{DOCUMENT_ROOT}/index.md -f
   RewriteRule ^$ /index.md [L,E=BF_MD_ROOT:1]
 
   # Clean URLs → .html (page.html, then page/index.html)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{REQUEST_URI} !^/kitchen-sink [NC]
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+?)/?$ /$1.html [L,E=BF_HTML_PAGE:$1]
 
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} !^/demo [NC]
+  RewriteCond %{REQUEST_URI} !^/kitchen-sink [NC]
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.+?)/?$ /$1/index.html [L,E=BF_HTML_PAGE:$1]
 </IfModule>
@@ -70,8 +76,8 @@ DirectoryIndex index.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  # Interactive demo: keep out of search indexes and AI training crawls.
-  Header set X-Robots-Tag "noindex, nofollow, noarchive, noai, noimageai" env=BF_DEMO
+  # Kitchen sink: keep out of search indexes and AI training crawls.
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, noai, noimageai" env=BF_KITCHEN_SINK
 
   Header merge Vary Accept
 

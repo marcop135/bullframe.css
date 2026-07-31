@@ -1,0 +1,149 @@
+/*
+ * Blog layout for the classless build (no .bf-row / .bf-container).
+ * Centered shell, article + sidebar, stacks below 800px.
+ */
+.ex-blog-shell {
+  width: 100%;
+  max-width: 108rem;
+  margin-inline: auto;
+  padding-inline: 4rem;
+  box-sizing: border-box;
+}
+
+.ex-bar .ex-blog-shell {
+  padding-block: 0;
+}
+
+.ex-blog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28rem;
+  gap: 4rem;
+  align-items: start;
+  padding-bottom: 4rem;
+}
+
+.ex-blog-primary {
+  min-width: 0;
+}
+
+.ex-blog-hero {
+  padding: 0.5rem 0 2rem;
+  border-bottom: 1px solid var(--bf-gray-dark-extra, #333);
+  margin-bottom: 2rem;
+}
+
+.ex-blog__meta {
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  font-size: 1.3rem;
+  color: var(--bf-gray);
+  margin: 0 0 1rem;
+}
+
+.ex-blog-hero h1 {
+  margin-top: 0;
+  max-width: 22ch;
+  line-height: 1.15;
+}
+
+.ex-blog__lead {
+  font-size: 120%;
+  max-width: 54rem;
+  color: var(--bf-gray-light);
+  margin-bottom: 1.25rem;
+}
+
+.ex-blog__byline {
+  margin: 0;
+  font-size: 1.45rem;
+  color: var(--bf-gray);
+}
+
+.ex-blog-layout figure {
+  margin: 2.5rem 0;
+}
+
+.ex-blog-layout figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.ex-blog-layout figcaption {
+  margin-top: 0.75rem;
+  font-size: 1.4rem;
+  color: var(--bf-gray);
+}
+
+.ex-blog-sidebar {
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ex-blog-panel {
+  padding: 1.5rem;
+  border: 1px solid var(--bf-gray-dark-extra, #333);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0.03);
+}
+
+.ex-blog-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.ex-blog-panel p,
+.ex-blog-panel ol,
+.ex-blog-panel ul {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.ex-blog-panel ol,
+.ex-blog-panel ul {
+  padding-left: 1.4rem;
+}
+
+.ex-blog-panel li + li {
+  margin-top: 0.45rem;
+}
+
+.ex-blog-tags {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.ex-blog-tags li {
+  margin: 0;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--bf-gray-dark-extra, #333);
+  border-radius: 999rem;
+  font-size: 1.3rem;
+  color: var(--bf-gray-light);
+}
+
+@media (max-width: 799px) {
+  .ex-blog-shell {
+    padding-inline: 2.4rem;
+  }
+
+  .ex-blog-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ex-blog-sidebar {
+    position: static;
+  }
+
+  .ex-blog-hero h1 {
+    max-width: none;
+  }
+}

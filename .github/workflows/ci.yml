@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [v6, master]
+    branches: [v6, main]
   pull_request:
-    branches: [v6, master]
+    branches: [v6, main]
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,10 @@ jobs:
         run: npm ci
 
       - name: Lint CSS
-        run: npx stylelint "src/css/**/*.css"
+        run: npx stylelint "src/**/*.css"
+
+      - name: Format check
+        run: npm run format:check
 
       - name: Build
         run: npm run build
@@ -38,11 +41,21 @@ jobs:
 
       - name: Verify dist output
         run: |
-          test -f dist/css/bullframe.css || (echo "Missing bullframe.css" && exit 1)
-          test -f dist/css/bullframe.min.css || (echo "Missing bullframe.min.css" && exit 1)
-          test -f dist/css/bullframe-dark.css || (echo "Missing bullframe-dark.css" && exit 1)
-          test -f dist/css/bullframe-classless.css || (echo "Missing bullframe-classless.css" && exit 1)
-          test -f dist/css/bullframe-modern.css || (echo "Missing bullframe-modern.css" && exit 1)
+          for f in \
+            bullframe \
+            bullframe-dark \
+            bullframe-system-default \
+            bullframe-classless \
+            bullframe-classless-dark \
+            bullframe-classless-system-default \
+            bullframe-utilities
+          do
+            test -f "dist/css/${f}.css" || (echo "Missing ${f}.css" && exit 1)
+            test -f "dist/css/${f}.min.css" || (echo "Missing ${f}.min.css" && exit 1)
+          done
+          test ! -e dist/css/bullframe-modern.css || (echo "Unexpected bullframe-modern.css" && exit 1)
+          test ! -e dist/css/variables.css || (echo "Unexpected variables.css dist entry" && exit 1)
+          test ! -e dist/css/utility-global-dark-prefers.css || (echo "Unexpected utility-global-dark-prefers.css dist entry" && exit 1)
           echo "All expected dist files present"
 
   playwright:
@@ -63,7 +76,7 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Build (vite + sync-demo + vitepress)
+      - name: Build (vite + sync-public + vitepress)
         run: npm run docs:build
 
       - name: Run visual tests

@@ -29,11 +29,9 @@ The CDN link also changes:
 <!-- v5 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5" />
 
-<!-- v6 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest" />
+<!-- v6: pin a version; add integrity + crossorigin for SRI (see Getting started) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" />
 ```
-
-> `@latest` currently resolves to v5.1.0 until v6 is published to npm, then it will roll forward to v6 automatically.
 
 ## 2. Replace Sass Variables with CSS Custom Properties
 
@@ -103,12 +101,14 @@ To restore the brighter v5 colors:
 
 ## 6. New Dark Mode Variants
 
-v6 introduces three dark mode build variants:
+v6 ships dark and system themes for both markup modes:
 
-| File                           | Behavior                       |
-| ------------------------------ | ------------------------------ |
-| `bullframe-dark.css`           | Always dark                    |
-| `bullframe-system-default.css` | Follows `prefers-color-scheme` |
+| File                                     | Behavior                       |
+| ---------------------------------------- | ------------------------------ |
+| `bullframe-dark.css`                     | Always dark (class-based)      |
+| `bullframe-system-default.css`           | Follows `prefers-color-scheme` |
+| `bullframe-classless-dark.css`           | Always dark (classless)        |
+| `bullframe-classless-system-default.css` | Classless + system preference  |
 
 See [Dark Mode](/theming/dark-mode) for implementation details.
 

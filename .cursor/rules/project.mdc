@@ -1,0 +1,15 @@
+---
+description: Bullframe CSS project rules for agents
+alwaysApply: true
+---
+
+# bullframe.css
+
+- Native CSS + PostCSS only. No Sass.
+- Keep seven builds. Do not add `bullframe-modern.css`.
+- Branch / PR into `v6` for v6 work. Do not touch `main` unless asked.
+- Builds: Browserslist `defaults`. Gate progressive enhancements with `@supports`.
+- Docs deploy secrets (names only): `FTP_HOST`, `FTP_USERNAME_PRODUCTION`, `FTP_PASSWORD_PRODUCTION`. Never invent values.
+- No agent / Cursor attribution in commits or PRs.
+- Prefer short CSS banners; one third-party attribution where needed.
+- Before push: `npm run lint`, `npm run build`; add docs/e2e when those surfaces change.

@@ -8,7 +8,7 @@ import { chapters, excludeDirs } from './chapters.mjs';
 const docsRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const siteUrl = 'https://bullframecss.marcopontili.com';
 const siteDescription =
-  'Semantic by default. Classless when you want it. System dark built in. Zero JavaScript. Eight builds. ~8 KB gzipped. Zero runtime dependencies.';
+  'Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default. Any stack. Classless when you want it. System dark built in. Seven builds, solid cross-browser support.';
 
 // Derive a nav label from a doc's first H1 (falls back to a prettified filename).
 function titleFor(rel) {
@@ -78,15 +78,30 @@ function acceptsMarkdown(accept) {
   return true;
 }
 
-/** Serve static demo HTML for /demo/ in docs:dev (VitePress SPA would 404 otherwise). */
-function serveDemoHtml() {
+/**
+ * Serve static kitchen-sink / example HTML in docs:dev (VitePress SPA would 404 otherwise).
+ * Gallery lives at VitePress /examples; templates are /examples/{slug}/.
+ */
+function serveStaticHtml() {
   return {
-    name: 'bf-serve-demo-html',
+    name: 'bf-serve-static-html',
     configureServer(server) {
-      server.middlewares.use((req, _res, next) => {
-        const url = req.url?.split('?')[0];
+      server.middlewares.use((req, res, next) => {
+        const url = req.url?.split('?')[0] ?? '';
         if (url === '/demo' || url === '/demo/') {
-          req.url = '/demo/index.html';
+          res.statusCode = 302;
+          res.setHeader('Location', '/kitchen-sink/');
+          res.end();
+          return;
+        }
+        if (url === '/kitchen-sink' || url === '/kitchen-sink/') {
+          req.url = '/kitchen-sink/index.html';
+        } else {
+          // Slug dirs only (not /examples/shared.css or other files).
+          const ex = url.match(/^\/examples\/([^/]+)\/?$/);
+          if (ex && !ex[1].includes('.')) {
+            req.url = `/examples/${ex[1]}/index.html`;
+          }
         }
         next();
       });
@@ -100,8 +115,17 @@ function negotiateMarkdownDev() {
     name: 'bf-negotiate-markdown',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
-        const raw = req.url?.split('?')[0] ?? '';
-        if (raw.startsWith('/demo') || raw.startsWith('/@') || raw.startsWith('/node_modules')) {
+        const url = req.url ?? '';
+        const raw = url.split('?')[0] ?? '';
+        // Let Vite transform page modules (e.g. /index.md?import); do not raw-serve those.
+        if (/[?&]import(?:&|=|$)/.test(url)) return next();
+        if (
+          raw.startsWith('/kitchen-sink') ||
+          raw.startsWith('/demo') ||
+          raw.startsWith('/examples/') ||
+          raw.startsWith('/@') ||
+          raw.startsWith('/node_modules')
+        ) {
           return next();
         }
         if (/\.(?:css|js|mjs|map|png|jpe?g|webp|gif|svg|ico|woff2?|json|txt)$/i.test(raw)) {
@@ -134,7 +158,7 @@ export default defineConfig({
   lang: 'en-US',
   cleanUrls: true,
   base: '/',
-  ignoreDeadLinks: false,
+  ignoreDeadLinks: [/^\/examples\/[^/]+\/?$/, /^\/kitchen-sink\/?$/, /^\/demo\/?$/],
   sitemap: {
     hostname: siteUrl,
   },
@@ -158,7 +182,7 @@ export default defineConfig({
   // Dev nav felt 1–3s cold: avoid watching build output, warm common pages.
   vite: {
     plugins: [
-      serveDemoHtml(),
+      serveStaticHtml(),
       negotiateMarkdownDev(),
       llmstxt({
         domain: siteUrl,
@@ -195,23 +219,29 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: '/docs/demo/icons/favicon-32x32.png',
+    logo: '/logo.svg',
     siteTitle: 'Bullframe CSS',
     search: { provider: 'local' },
     outline: { level: [2, 3] },
     nav: [
-      { text: 'Getting started', link: '/getting-started' },
-      { text: 'Docs', link: '/README' },
-      { text: 'Demo', link: '/demo/', target: '_blank', rel: 'noopener' },
+      { text: 'Get started', link: '/getting-started' },
+      { text: 'Read the docs', link: '/README' },
+      { text: 'Examples', link: '/examples' },
+      { text: 'Kitchen sink', link: '/kitchen-sink/', target: '_blank', rel: 'noopener' },
     ],
     sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/marcop135/bullframe.css' },
       { icon: 'npm', link: 'https://www.npmjs.com/package/bullframe.css' },
+      {
+        icon: 'codepen',
+        link: 'https://codepen.io/collection/nxpjRe',
+        ariaLabel: 'CodePen collection',
+      },
     ],
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2026 Marco Pontili',
+      message:
+        '<span class="bf-footer-brand"><img class="bf-footer-logo" src="/logo.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 Marco Pontili</span></span></span>',
     },
     editLink: {
       pattern: 'https://github.com/marcop135/bullframe.css/edit/v6/docs/:path',
@@ -219,44 +249,45 @@ export default defineConfig({
     },
   },
   head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: '/docs/demo/icons/favicon-16x16.png',
-      },
-    ],
+    // Cross-browser favicons: SVG first, then ICO/PNG fallbacks, Apple, mask, manifest.
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
     [
       'link',
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/docs/demo/icons/favicon-32x32.png',
+        href: '/favicon-32x32.png',
       },
     ],
     [
       'link',
       {
-        rel: 'apple-touch-icon',
-        sizes: '180x180',
-        href: '/docs/demo/icons/apple-touch-icon.png',
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
       },
     ],
-    ['link', { rel: 'shortcut icon', href: '/docs/demo/icons/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#c2410c' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#c2410c' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#c2410c' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],
     ['meta', { property: 'og:title', content: 'Bullframe CSS' }],
     ['meta', { property: 'og:description', content: siteDescription }],
     ['meta', { property: 'og:url', content: siteUrl }],
-    ['meta', { property: 'og:image', content: `${siteUrl}/bullframe-css-social-image.png` }],
+    ['meta', { property: 'og:image', content: `${siteUrl}/og-image.jpg` }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:image:type', content: 'image/jpeg' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Bullframe CSS' }],
     ['meta', { name: 'twitter:description', content: siteDescription }],
-    ['meta', { name: 'twitter:image', content: `${siteUrl}/bullframe-css-social-image.png` }],
+    ['meta', { name: 'twitter:image', content: `${siteUrl}/og-image.jpg` }],
     ['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)],
   ],
 });

@@ -2,7 +2,7 @@
 
 Copy-paste HTML patterns built with Bullframe's existing classes. No JavaScript, no extra CSS, no dependencies; just markup.
 
-These pages complement the [Core Concepts](../buttons) reference (which covers individual classes). Use these when you need a complete pattern: a login form, a header nav, a card grid.
+These pages complement the [Buttons](../buttons) reference (and the rest of Core Concepts). Use these when you need a complete pattern: a login form, a header nav, a card grid.
 
 ## Available patterns
 
@@ -17,7 +17,7 @@ These pages complement the [Core Concepts](../buttons) reference (which covers i
 Every snippet on these pages:
 
 - Uses only Bullframe classes (`.bf-*`) and standard HTML.
-- Works in the default `bullframe.css` build. Variants like `bullframe-modern.css` are noted explicitly.
+- Works in the default `bullframe.css` build (and the other shipped variants unless noted).
 - Is keyboard-accessible and meets WCAG AA contrast.
 - Has zero JavaScript unless the pattern fundamentally requires it (e.g. dialog open/close, where one-line JS is shown).
 

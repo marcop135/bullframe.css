@@ -1,17 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Bullframe CSS logo">
-  <rect x="6" y="10" width="52" height="44" rx="6" stroke="#f95c1f" stroke-width="4"/>
-  <circle cx="16" cy="21" r="2.5" fill="#f95c1f"/>
-  <circle cx="24" cy="21" r="2.5" fill="#f95c1f"/>
-  <circle cx="32" cy="21" r="2.5" fill="#f95c1f"/>
-  <!-- Geometric bull head mark -->
-  <path d="M14 28c-1-8 3-14 7-16 2-1 3.5.5 3 2.5-1 4-.5 8 1 11z" fill="#f95c1f"/>
-  <path d="M50 28c1-8-3-14-7-16-2-1-3.5.5-3 2.5 1 4 .5 8-1 11z" fill="#f95c1f"/>
-  <ellipse cx="18" cy="34" rx="3.5" ry="5" transform="rotate(-24 18 34)" fill="#f95c1f"/>
-  <ellipse cx="46" cy="34" rx="3.5" ry="5" transform="rotate(24 46 34)" fill="#f95c1f"/>
-  <path d="M20.5 36c0-8 5-13 11.5-13S43.5 28 43.5 36v6c0 5-3.5 8.5-11.5 8.5S20.5 47 20.5 42z" fill="#f95c1f"/>
-  <path d="M26 39c1.5-2.5 5-2.5 6.5 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M33.5 39c1.5-2.5 5-2.5 6.5 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
-  <rect x="26" y="43" width="12" height="7.5" rx="2.5" fill="#fff"/>
-  <ellipse cx="29.5" cy="46.8" rx="1.1" ry="1.4" fill="#f95c1f"/>
-  <ellipse cx="34.5" cy="46.8" rx="1.1" ry="1.4" fill="#f95c1f"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Horned window (cut 1). Mark inset so horns clear the seal / img edge. -->
+  <circle cx="16" cy="16" r="16" fill="#ffffff"/>
+  <g transform="translate(16 16) scale(0.64) translate(-16 -16)">
+    <path fill="#ea580c" fill-rule="evenodd" d="
+      M6.2 10.2 H25.8 A1.3 1.3 0 0 1 27.1 11.5 V22.8 A1.3 1.3 0 0 1 25.8 24.1 H6.2 A1.3 1.3 0 0 1 4.9 22.8 V11.5 A1.3 1.3 0 0 1 6.2 10.2 Z
+      M7.8 13.6 V21.6 H24.2 V13.6 Z"/>
+    <rect x="7.8" y="10.2" width="16.4" height="3.4" fill="#ea580c"/>
+    <circle cx="9.4" cy="11.9" r="0.65" fill="#ffffff"/>
+    <circle cx="11.5" cy="11.9" r="0.65" fill="#ffffff"/>
+    <circle cx="13.6" cy="11.9" r="0.65" fill="#ffffff"/>
+    <path fill="#ea580c" d="
+      M7.4 11
+      C4.6 6.2 2.4 3.2 1.4 2.2
+      C0.7 1.4 1.8 0.7 2.8 1.2
+      C6.2 2.8 9.4 7.2 11.2 10.4
+      C9.8 10.5 8.4 10.7 7.4 11
+      Z"/>
+    <path fill="#ea580c" d="
+      M24.6 11
+      C27.4 6.2 29.6 3.2 30.6 2.2
+      C31.3 1.4 30.2 0.7 29.2 1.2
+      C25.8 2.8 22.6 7.2 20.8 10.4
+      C22.2 10.5 23.6 10.7 24.6 11
+      Z"/>
+  </g>
 </svg>

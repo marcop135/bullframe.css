@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout · Examples · Bullframe CSS</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="/css/bullframe.min.css" />
+    <link rel="stylesheet" href="/examples/shared.css" />
+  </head>
+  <body>
+    <header class="ex-bar">
+      <div class="bf-container">
+        <p><a href="/examples">← Examples</a> · <span class="ex-build">bullframe.min.css</span></p>
+      </div>
+    </header>
+    <main class="bf-container bf-container--break-md bf-p-b-4">
+      <h1>Checkout</h1>
+      <p class="bf-lead">Billing and payment on one page.</p>
+
+      <form action="#" method="post" class="bf-row">
+        <div class="bf-col-8">
+          <fieldset>
+            <legend>Billing</legend>
+            <label for="bill-name">Full name</label>
+            <input id="bill-name" name="bill-name" type="text" required autocomplete="name" />
+
+            <label for="bill-email">Email</label>
+            <input id="bill-email" name="bill-email" type="email" required autocomplete="email" />
+
+            <label for="bill-address">Address</label>
+            <input id="bill-address" name="bill-address" type="text" required autocomplete="address-line1" />
+
+            <div class="bf-row">
+              <div class="bf-col-6">
+                <label for="bill-city">City</label>
+                <input id="bill-city" name="bill-city" type="text" required autocomplete="address-level2" />
+              </div>
+              <div class="bf-col-6">
+                <label for="bill-postal">Postal code</label>
+                <input id="bill-postal" name="bill-postal" type="text" required autocomplete="postal-code" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="bf-m-t-3">
+            <legend>Payment</legend>
+            <label for="card-name">Name on card</label>
+            <input id="card-name" name="card-name" type="text" required autocomplete="cc-name" />
+
+            <label for="card-number">Card number</label>
+            <input id="card-number" name="card-number" type="text" inputmode="numeric" required autocomplete="cc-number" />
+
+            <div class="bf-row">
+              <div class="bf-col-6">
+                <label for="card-exp">Expiry</label>
+                <input id="card-exp" name="card-exp" type="text" placeholder="MM/YY" required autocomplete="cc-exp" />
+              </div>
+              <div class="bf-col-6">
+                <label for="card-cvc">CVC</label>
+                <input id="card-cvc" name="card-cvc" type="text" required autocomplete="cc-csc" />
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="bf-col-4">
+          <aside class="ex-card">
+            <h2 class="bf-m-t-0">Order</h2>
+            <dl>
+              <dt>Pro plan</dt>
+              <dd>$15.00</dd>
+              <dt>Tax</dt>
+              <dd>$0.00</dd>
+              <dt>Total</dt>
+              <dd><strong>$15.00</strong></dd>
+            </dl>
+            <button type="submit" class="bf-btn bf-btn--primary" style="width: 100%">Pay now</button>
+          </aside>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

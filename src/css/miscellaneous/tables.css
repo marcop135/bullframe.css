@@ -1,13 +1,11 @@
-/* Miscellaneous - Tables */
+/* Table border collapse and cell alignment. */
 
 table {
   caption-side: bottom;
   max-width: 100%;
   border-collapse: collapse;
-  /* Correct table border color inheritance in Chrome and Safari */
-  border-color: currentcolor;
-  /* Remove text indentation from table contents in Chrome and Safari */
-  text-indent: 0;
+  border-color: currentcolor; /* Chrome / Safari inheritance. */
+  text-indent: 0; /* Chrome / Safari table indent. */
 }
 
 thead,

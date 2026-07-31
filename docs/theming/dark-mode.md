@@ -6,9 +6,11 @@ Bullframe CSS includes built-in dark mode with no JavaScript. System-default bui
 
 The `bullframe-system-default.css` build automatically switches between light and dark themes based on the user's system preference:
 
+<!-- sri:cdn-system:start -->
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-system-default.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-system-default.min.css" integrity="sha384-LOW8rRdon0H88bBWmI2gZ1Q72ZoEYJiaLpIsn6uFjSU3uAHZDRghhzXPkymoaRYW" crossorigin="anonymous" />
 ```
+<!-- sri:cdn-system:end -->
 
 This uses the `prefers-color-scheme` media query to detect the user's preference.
 
@@ -16,13 +18,17 @@ This uses the `prefers-color-scheme` media query to detect the user's preference
 
 Use `bullframe-dark.css` for a permanent dark theme:
 
+<!-- sri:cdn-dark:start -->
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-dark.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-dark.min.css" integrity="sha384-jkBv9zPyzjYp7ExKBcp4Gm5ouJPhRo/rpqjKwkLSwTx8AUAh0RN55n+mETMMYSYu" crossorigin="anonymous" />
 ```
+<!-- sri:cdn-dark:end -->
 
-## Manual Dark Mode Toggle
+## Manual dark mode (advanced)
 
-You can implement your own dark mode toggle by switching between light and dark CSS files, or by overriding CSS variables:
+Default path: pick a dark or system-default build by filename. No script.
+
+If you need a runtime toggle on top of the light build, override tokens and set `data-theme` yourself:
 
 ```css
 [data-theme='dark'] {
@@ -32,8 +38,8 @@ You can implement your own dark mode toggle by switching between light and dark 
 }
 ```
 
-Then toggle the `data-theme` attribute:
-
 ```javascript
 document.documentElement.setAttribute('data-theme', 'dark');
 ```
+
+This is DIY theming, not a built-in Bullframe API. Prefer `bullframe-dark.css` or `bullframe-system-default.css` when a static theme is enough.

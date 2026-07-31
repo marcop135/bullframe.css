@@ -2,7 +2,7 @@
   {
     "id": "npm",
     "label": "npm",
-    "title": "Install from npm.",
+    "title": "npm install",
     "lang": "bash",
     "code": "npm install bullframe.css",
     "highlighted": "<span class=\"line\"><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\">npm</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> install</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> bullframe.css</span></span>"
@@ -10,7 +10,7 @@
   {
     "id": "import",
     "label": "Import",
-    "title": "Import the stylesheet.",
+    "title": "ESM / bundler import",
     "lang": "javascript",
     "code": "import 'bullframe.css';",
     "highlighted": "<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">import</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> 'bullframe.css'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">;</span></span>"
@@ -18,9 +18,9 @@
   {
     "id": "cdn",
     "label": "CDN",
-    "title": "Drop in a CDN link.",
+    "title": "CDN link",
     "lang": "html",
-    "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bullframe.css@latest\">",
-    "highlighted": "<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">&#x3C;</span><span style=\"--shiki-light:#22863A;--shiki-dark:#85E89D\">link</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> rel</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"stylesheet\"</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> href</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"https://cdn.jsdelivr.net/npm/bullframe.css@latest\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">></span></span>"
+    "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bullframe.css\">",
+    "highlighted": "<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">&#x3C;</span><span style=\"--shiki-light:#22863A;--shiki-dark:#85E89D\">link</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> rel</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"stylesheet\"</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> href</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"https://cdn.jsdelivr.net/npm/bullframe.css\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">></span></span>"
   }
 ]

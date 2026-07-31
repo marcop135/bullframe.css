@@ -9,7 +9,7 @@ export const excludeDirs = [];
 export const chapters = [
   {
     text: 'Overview',
-    files: ['README.md', 'getting-started.md', 'migration.md'],
+    files: ['README.md', 'getting-started.md', 'examples.md', 'migration.md'],
   },
   {
     text: 'Core Concepts',
@@ -46,6 +46,6 @@ export const chapters = [
   },
   {
     text: 'Reference',
-    files: ['accessibility.md', 'browser-support.md', 'api-reference.md'],
+    files: ['accessibility.md', 'browser-support.md', 'api-reference.md', 'changelog.md'],
   },
 ];

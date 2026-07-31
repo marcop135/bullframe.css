@@ -1,35 +1,39 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="src/docs/github-readme/bf-readme-hero-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="src/docs/github-readme/bf-readme-hero-light.png">
-    <img alt="Bullframe CSS" width="1280" src="src/docs/github-readme/bf-readme-hero-light.png">
-  </picture>
-</p>
+<div align="center">
+
+![Bullframe CSS](./src/docs/github-readme/bf-readme-hero-light-16x9.png#gh-light-mode-only)
+![Bullframe CSS](./src/docs/github-readme/bf-readme-hero-dark-16x9.png#gh-dark-mode-only)
+
+</div>
 
 <p align="center">
-  One UI framework. Three ways to write it. Zero JavaScript.
+  <strong>Bullframe CSS</strong><br>
+  Semantic by default. Any stack.<br>
+  <em>Classless when you want it. System dark built in.</em>
 </p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="npm version"></a>
-  <a href="https://github.com/marcop135/bullframe.css/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=v6&style=flat-square&label=CI" alt="CI"></a>
+  <a href="https://codepen.io/collection/nxpjRe"><img src="https://img.shields.io/badge/codepen-collection-1e1f26?style=flat-square" alt="CodePen collection"></a>
   <a href="https://bullframecss.marcopontili.com/"><img src="https://img.shields.io/badge/docs-online-c2410c?style=flat-square" alt="Docs"></a>
   <img src="https://img.shields.io/badge/gzip-~8%20kB-0a7ea4?style=flat-square" alt="~8 kB gzipped">
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen?style=flat-square" alt="Zero dependencies">
-  <img src="https://img.shields.io/badge/JS-0-555555?style=flat-square" alt="Zero JavaScript">
+  <img src="https://img.shields.io/badge/any%20stack-555555?style=flat-square" alt="Any stack">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT License"></a>
 </p>
 
 ---
 
-## Documentation
+## Why use it
 
-Full docs: [bullframecss.marcopontili.com](https://bullframecss.marcopontili.com/)
+- **Semantic HTML first:** headings, forms, tables, and links are styled without a pile of classes
+- **Classless when you want it:** swap in `bullframe-classless.css` and keep markup as plain HTML
+- **Dark without a script:** always-dark builds, or system-default builds that follow `prefers-color-scheme`
+- **Accessible defaults:** focus-visible rings, reduced-motion respect, WCAG AA contrast on links and primary buttons
+- **Native CSS, any stack:** PostCSS builds, no Sass, no runtime JavaScript, solid cross-browser support
 
-- [Getting started](https://bullframecss.marcopontili.com/getting-started)
-- [Docs index](https://bullframecss.marcopontili.com/README)
-- [Migration (v5 to v6)](https://bullframecss.marcopontili.com/migration)
-- [Changelog](CHANGELOG.md)
+## When to use
+
+Pages and forms, not complex app UIs: docs, blogs, landings, help centers, listings, micro-sites. One stylesheet for reset, type, forms, and layout. Class-based or classless. No Tailwind-style utility pipeline.
 
 ## Getting started
 
@@ -42,11 +46,29 @@ import 'bullframe.css';
 ```
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
-Eight builds (class-based, classless, utilities, dark, system-default, modern). Shared `--bf-*` tokens. Details in the [docs](https://bullframecss.marcopontili.com/getting-started).
+## Docs
+
+[bullframecss.marcopontili.com](https://bullframecss.marcopontili.com/)
+
+## Examples
+
+[Example templates](https://bullframecss.marcopontili.com/examples)
+
+## Kitchen sink
+
+[Every styled element in one page](https://bullframecss.marcopontili.com/kitchen-sink/)
+
+## Contributing
+
+See [CONTRIBUTING.md](./.github/CONTRIBUTING.md). Bug reports and feature requests go through [issues](https://github.com/marcop135/bullframe.css/issues).
+
+## Author
+
+[Marco Pontili](https://marcopontili.com)
 
 ## License
 
-[MIT](LICENSE) · [Marco Pontili](https://marcopontili.com)
+[MIT](./LICENSE)

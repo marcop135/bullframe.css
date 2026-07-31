@@ -1,26 +1,14 @@
 # Getting started
 
-Bullframe CSS is a lightweight CSS framework: eight builds, shared `--bf-*` tokens, zero JavaScript, zero runtime dependencies, and about 8 KB gzipped for the default build. Pick an authoring mode, then add one stylesheet.
+Install Bullframe, pick a markup mode and a theme, link one CSS file. Default build is ~8 KB gzipped. No runtime JS.
 
-## Choose a mode
+## Markup modes
 
-Same tokens and accessible defaults in every mode. Pick how you write HTML.
-
-### Classless
-
-`bullframe-classless.css` (+ dark / system-default). Semantic HTML only; no classes to add.
-
-```html
-<link rel="stylesheet" href="…/bullframe-classless.min.css" />
-
-<h1>Hello</h1>
-<p>Just semantic HTML.</p>
-<form>…</form>
-```
+Two ways to write HTML. Same components and a11y defaults.
 
 ### Class-based
 
-`bullframe.css` (+ dark / system-default). Grid, buttons, forms, tables via `.bf-*` classes.
+Use `.bf-*` for layout, buttons, and forms.
 
 ```html
 <link rel="stylesheet" href="…/bullframe.min.css" />
@@ -31,9 +19,33 @@ Same tokens and accessible defaults in every mode. Pick how you write HTML.
 </div>
 ```
 
-### Utility-first
+### Classless
 
-`bullframe-utilities.css`. You already have a reset; you just want `.bf-*` helpers.
+Element selectors only. No classes required for base styling.
+
+```html
+<link rel="stylesheet" href="…/bullframe-classless.min.css" />
+
+<h1>Hello</h1>
+<p>Just semantic HTML.</p>
+<form>…</form>
+```
+
+## Themes
+
+Each markup mode has three theme files:
+
+| Theme  | Suffix            | Behavior               |
+| ------ | ----------------- | ---------------------- |
+| Light  | (none)            | Always light           |
+| Dark   | `-dark`           | Always dark            |
+| System | `-system-default` | `prefers-color-scheme` |
+
+Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
+
+## Utilities companion
+
+`bullframe-utilities.css` is not a markup mode. Add it when you already have a reset and only need `.bf-*` helpers.
 
 ```html
 <link rel="stylesheet" href="…/bullframe-utilities.min.css" />
@@ -45,17 +57,21 @@ Same tokens and accessible defaults in every mode. Pick how you write HTML.
 
 ## CDN
 
-Fastest path. Pin to `@6` once the v6 release is on npm if you need a fixed major.
+<!-- sri:cdn:start -->
+Quick drop-in (latest published package entry):
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
 ```
 
-For a specific build, use the full path and swap the filename (`bullframe-classless.min.css`, `bullframe-modern.min.css`, …):
+**Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
 ```
+
+Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
+<!-- sri:cdn:end -->
 
 ## npm
 
@@ -68,19 +84,26 @@ npm install bullframe.css
 ```css
 @import 'bullframe.css';
 @import 'bullframe.css/dark';
+@import 'bullframe.css/system';
 @import 'bullframe.css/classless';
-@import 'bullframe.css/modern';
+@import 'bullframe.css/classless/dark';
+@import 'bullframe.css/classless/system';
 @import 'bullframe.css/utilities';
 ```
 
 ```javascript
 import 'bullframe.css';
+import 'bullframe.css/dark';
+import 'bullframe.css/system';
 import 'bullframe.css/classless';
+import 'bullframe.css/classless/dark';
+import 'bullframe.css/classless/system';
+import 'bullframe.css/utilities';
 ```
 
 ## Download
 
-Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.css/archive/refs/heads/v6.zip). Source maps ship beside the minified CSS in `dist/css/`.
+Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v6.0.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
 
 ## Starter HTML
 
@@ -93,7 +116,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
   </head>
   <body>
     <div class="bf-container">
@@ -113,7 +136,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-wOR0wjfWF/k9hTANeN1G5aQwUaIWAtd62pvEL7VkSC+nwdtTNyjs8giAfnB91hX3" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;
@@ -134,23 +157,23 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
 
 ## Builds
 
-Eight files share the same `--bf-*` tokens. Default build is about **8 KB gzipped**. No JavaScript runtime.
+Seven builds. Default build is about **8 KB gzipped**. No JavaScript runtime.
 
-| File                                     | Mode                                |
+| File                                     | Use when                            |
 | ---------------------------------------- | ----------------------------------- |
 | `bullframe.css`                          | Class-based, light                  |
 | `bullframe-dark.css`                     | Class-based, always dark            |
 | `bullframe-system-default.css`           | Class-based, `prefers-color-scheme` |
-| `bullframe-classless.css`                | Semantic HTML, light                |
+| `bullframe-classless.css`                | Classless, light                    |
 | `bullframe-classless-dark.css`           | Classless, always dark              |
 | `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`   |
-| `bullframe-utilities.css`                | Utilities only                      |
-| `bullframe-modern.css`                   | System-default plus modern CSS      |
+| `bullframe-utilities.css`                | Utilities companion only            |
 
-Modern CSS (`light-dark()`, `oklch()`, `:has()`, container queries): [Theming](/theming#modern-css-variant). Upgrading from v5: [Migration](/migration).
+Upgrading from v5: [Migration](/migration).
 
 ## Next
 
 - [CSS Variables](/variables)
 - [Utilities](/utilities)
-- [Demo](/demo/)
+- [Examples](/examples)
+- [Kitchen sink](/kitchen-sink/)

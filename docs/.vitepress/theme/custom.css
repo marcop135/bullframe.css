@@ -113,6 +113,10 @@
   display: none;
 }
 
+.VPHome .VPHero .image-src {
+  background: transparent;
+}
+
 @media (min-width: 640px) {
   .VPHome .VPHero .name,
   .VPHome .VPHero .text {

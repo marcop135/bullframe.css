@@ -8,7 +8,7 @@ import { chapters, excludeDirs } from './chapters.mjs';
 const docsRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const siteUrl = 'https://bullframecss.marcopontili.com';
 const siteDescription =
-  'Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default, classless when you want it, system dark built in. Eight builds, shared tokens, solid cross-browser support. One UI framework. Three ways to write it. Any stack.';
+  'Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default, classless when you want it, system dark built in. Seven builds, shared tokens, solid cross-browser support. One UI framework. Three ways to write it. Any stack.';
 
 // Derive a nav label from a doc's first H1 (falls back to a prettified filename).
 function titleFor(rel) {
@@ -203,9 +203,8 @@ export default defineConfig({
     search: { provider: 'local' },
     outline: { level: [2, 3] },
     nav: [
-      { text: 'Getting started', link: '/getting-started' },
-      { text: 'Docs', link: '/README' },
-      { text: 'Demo', link: '/demo/', target: '_blank', rel: 'noopener' },
+      { text: 'Get started', link: '/getting-started' },
+      { text: 'Read the docs', link: '/README' },
     ],
     sidebar,
     socialLinks: [
@@ -213,7 +212,8 @@ export default defineConfig({
       { icon: 'npm', link: 'https://www.npmjs.com/package/bullframe.css' },
     ],
     footer: {
-      message: 'Released under the MIT License.',
+      message:
+        '<a href="/getting-started">Get started</a> · <a href="/README">Read the docs</a>',
       copyright: 'Copyright © 2026 Marco Pontili',
     },
     editLink: {

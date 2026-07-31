@@ -64,15 +64,9 @@ const builds = [
   { file: 'bullframe-classless-dark.css', use: 'Classless, always dark' },
   { file: 'bullframe-classless-system-default.css', use: 'Classless, follows the OS' },
   { file: 'bullframe-utilities.css', use: 'Utilities only' },
-  { file: 'bullframe-modern.css', use: 'System-default + modern CSS' },
 ];
 
 const stats = [
-  {
-    value: '~8 KB',
-    label: 'Gzipped',
-    detail: 'Default build. Reset, typography, forms, grid, utilities.',
-  },
   {
     value: '0',
     label: 'Dependencies',
@@ -84,7 +78,7 @@ const stats = [
     detail: 'Body, link, and primary button colors meet 4.5:1 on light and dark.',
   },
   {
-    value: '8',
+    value: '7',
     label: 'Builds',
     detail: 'Classless, class-based, utilities, dark, and system-default variants.',
   },
@@ -155,7 +149,7 @@ const stats = [
 
     <section class="bfh-section" aria-labelledby="bfh-builds-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">Eight builds</p>
+        <p class="bfh-eyebrow">Seven builds</p>
         <h2 id="bfh-builds-heading" class="bfh-heading">Pick a file. Keep the same system.</h2>
       </div>
       <div class="bfh-builds">
@@ -179,7 +173,7 @@ const stats = [
     <section class="bfh-section bfh-section--stats" aria-labelledby="bfh-stats-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">By the numbers</p>
-        <h2 id="bfh-stats-heading" class="bfh-heading">Small file. Zero dependencies. Accessible defaults.</h2>
+        <h2 id="bfh-stats-heading" class="bfh-heading">Zero dependencies. Accessible defaults.</h2>
       </div>
       <div class="bfh-stats">
         <div v-for="s in stats" :key="s.label" class="bfh-stat">
@@ -196,8 +190,8 @@ const stats = [
         <h2 id="bfh-cta-heading" class="bfh-heading">Ready when you are.</h2>
       </div>
       <div class="bfh-cta">
-        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Read the docs</a>
-        <a class="bfh-cta__btn bfh-cta__btn--alt" href="/demo/">View the demo</a>
+        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Get started</a>
+        <a class="bfh-cta__btn bfh-cta__btn--alt" href="/README">Read the docs</a>
       </div>
     </section>
   </div>

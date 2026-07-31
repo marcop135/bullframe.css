@@ -8,7 +8,7 @@ import { chapters, excludeDirs } from './chapters.mjs';
 const docsRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const siteUrl = 'https://bullframecss.marcopontili.com';
 const siteDescription =
-  'Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default, classless when you want it, system dark built in. Seven builds, solid cross-browser support. One UI framework. Any stack.';
+  'Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default. Any stack. Classless when you want it. System dark built in. Seven builds, solid cross-browser support.';
 
 // Derive a nav label from a doc's first H1 (falls back to a prettified filename).
 function titleFor(rel) {
@@ -210,10 +210,14 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/marcop135/bullframe.css' },
       { icon: 'npm', link: 'https://www.npmjs.com/package/bullframe.css' },
+      {
+        icon: 'codepen',
+        link: 'https://codepen.io/collection/nxpjRe',
+        ariaLabel: 'CodePen collection',
+      },
     ],
     footer: {
-      message:
-        '<a href="/getting-started">Get started</a> · <a href="/README">Read the docs</a>',
+      message: 'Bullframe CSS Docs',
       copyright: 'Copyright © 2026 Marco Pontili',
     },
     editLink: {

@@ -1,6 +1,6 @@
 # Getting started
 
-Bullframe CSS is a lightweight CSS framework for fast, accessible UIs: seven builds, zero runtime dependencies, about 8 KB gzipped for the default build. Native CSS, any stack. Pick a markup mode and a theme, then add one stylesheet.
+Bullframe CSS is a lightweight CSS framework for fast, accessible UIs. Semantic by default. Any stack. Seven builds, zero runtime dependencies, about 8 KB gzipped for the default build. Pick a markup mode and a theme, then add one stylesheet.
 
 ## Choose a mode
 
@@ -57,17 +57,21 @@ Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
 
 ## CDN
 
-Fastest path. Pin to `@6` if you need a fixed major.
+<!-- sri:cdn:start -->
+Quick drop-in (latest published package entry):
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
 ```
 
-For a specific build, use the full path and swap the filename (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …):
+**Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-AYv1LjHDO3SO85iGSHCj/uz2Bi5GlLhxRtYKo5/2xkhLOuZ/23bnFTvOIU1E+gqQ" crossorigin="anonymous" />
 ```
+
+Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
+<!-- sri:cdn:end -->
 
 ## npm
 
@@ -104,7 +108,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-AYv1LjHDO3SO85iGSHCj/uz2Bi5GlLhxRtYKo5/2xkhLOuZ/23bnFTvOIU1E+gqQ" crossorigin="anonymous" />
   </head>
   <body>
     <div class="bf-container">
@@ -124,7 +128,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-W/W4TaN5+g2R7qgAAGMwzkMErCnE26LTZ5dqmTYUREkRQ7i7JZRhIw99O26IfOG6" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;

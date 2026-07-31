@@ -1,0 +1,42 @@
+{
+  "version": "6.0.0",
+  "algorithm": "sha384",
+  "generatedAt": "2026-07-31T09:54:00.815Z",
+  "files": {
+    "bullframe.min.css": {
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css",
+      "integrity": "sha384-AYv1LjHDO3SO85iGSHCj/uz2Bi5GlLhxRtYKo5/2xkhLOuZ/23bnFTvOIU1E+gqQ",
+      "crossorigin": "anonymous"
+    },
+    "bullframe-dark.min.css": {
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-dark.min.css",
+      "integrity": "sha384-B8ZUlnyvcDECShwEs20376tddsQ20JgqpYcBWhJkPmiOS6gUsEImHLBlGsxIMtpP",
+      "crossorigin": "anonymous"
+    },
+    "bullframe-system-default.min.css": {
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-system-default.min.css",
+      "integrity": "sha384-KEXu8x+O/W/QmdW5aZ9UIXLDvyKyi4Xidk2L8e0dzKZYeAcR+QZ9ILAfBNQM5lcb",
+      "crossorigin": "anonymous"
+    },
+    "bullframe-classless.min.css": {
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless.min.css",
+      "integrity": "sha384-W/W4TaN5+g2R7qgAAGMwzkMErCnE26LTZ5dqmTYUREkRQ7i7JZRhIw99O26IfOG6",
+      "crossorigin": "anonymous"
+    },
+    "bullframe-classless-dark.min.css": {
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless-dark.min.css",
+      "integrity": "sha384-riHlyUVFgS8aP/9t0d42gW2spJSOScanzWE5qTCYvpNNz1e6t7W7X9ZJxxpTld9Q",
+      "crossorigin": "anonymous"
+    },
+    "bullframe-classless-system-default.min.css": {
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless-system-default.min.css",
+      "integrity": "sha384-XwfzEF+eAKR2iefaYPuooezgCpkxjmVAJquASTzZ/r56GXcUKeV0THffSPF/m3P+",
+      "crossorigin": "anonymous"
+    },
+    "bullframe-utilities.min.css": {
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-utilities.min.css",
+      "integrity": "sha384-qQXYU4ewIqch3pRhUvS3plDeeigYNylNBLvOUqkoJlKr2wZgbWiLvhVdHkDgW+SV",
+      "crossorigin": "anonymous"
+    }
+  }
+}

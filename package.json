@@ -2,7 +2,7 @@
   "name": "bullframe.css",
   "version": "6.0.0",
   "type": "module",
-  "description": "Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default, classless when you want it, system dark built in. Seven builds, solid cross-browser support. One UI framework. Any stack.",
+  "description": "Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default. Any stack. Classless when you want it. System dark built in. Seven builds, solid cross-browser support.",
   "main": "dist/css/bullframe.css",
   "style": "dist/css/bullframe.css",
   "jsdelivr": "dist/css/bullframe.css",
@@ -40,7 +40,8 @@
     "docs:dev": "npm run docs:sync-demo && vitepress dev docs",
     "docs:sync-demo": "node scripts/sync-demo-to-vitepress.mjs",
     "docs:api-reference": "node scripts/build-api-reference.mjs",
-    "docs:build": "npm run build && npm run docs:sync-demo && vitepress build docs",
+    "docs:sri": "node scripts/generate-sri.mjs",
+    "docs:build": "npm run build && npm run docs:sri && npm run docs:sync-demo && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "repository": {

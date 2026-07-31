@@ -7,11 +7,13 @@
 </p>
 
 <p align="center">
-  One UI framework. Any stack.
+  <strong>Bullframe CSS</strong><br>
+  Semantic by default. Any stack.
 </p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://codepen.io/collection/nxpjRe"><img src="https://img.shields.io/badge/codepen-collection-1e1f26?style=flat-square" alt="CodePen collection"></a>
   <a href="https://bullframecss.marcopontili.com/"><img src="https://img.shields.io/badge/docs-online-c2410c?style=flat-square" alt="Docs"></a>
   <img src="https://img.shields.io/badge/gzip-~8%20kB-0a7ea4?style=flat-square" alt="~8 kB gzipped">
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen?style=flat-square" alt="Zero dependencies">
@@ -21,13 +23,17 @@
 
 ---
 
-## Why Bullframe CSS
+## Why use it
 
 - **Semantic HTML first:** headings, forms, tables, and links are styled without a pile of classes
 - **Classless when you want it:** swap in `bullframe-classless.css` and keep markup as plain HTML
 - **Dark without a script:** always-dark builds, or system-default builds that follow `prefers-color-scheme`
 - **Accessible defaults:** focus-visible rings, reduced-motion respect, WCAG AA contrast on links and primary buttons
 - **Native CSS, any stack:** PostCSS builds, no Sass, no runtime JavaScript, solid cross-browser support
+
+## When to use
+
+Pages and forms, not complex app UIs: docs, blogs, landings, help centers, listings, micro-sites. One stylesheet for reset, type, forms, and layout. Class-based or classless. No Tailwind-style utility pipeline.
 
 ## Getting started
 

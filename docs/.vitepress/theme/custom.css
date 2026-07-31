@@ -48,6 +48,31 @@
 .VPHome .VPHero {
   padding-left: 0;
   padding-right: 0;
+  /* Extra air under the nav so the hero art clears the header. */
+  padding-top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 72px);
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero {
+    padding-top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 112px);
+  }
+}
+
+/* VitePress pulls the stacked hero image up under the nav; keep clearance. */
+.VPHome .VPHero .image {
+  margin-top: -48px;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .image {
+    margin-top: -64px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .image {
+    margin-top: 0;
+  }
 }
 
 .VPHome .VPHero .container {
@@ -81,6 +106,11 @@
   font-size: 16px;
   line-height: 24px;
   max-width: 22rem;
+}
+
+/* VitePress draws a soft circle behind hero art; keep the PNG only. */
+.VPHome .VPHero .image-bg {
+  display: none;
 }
 
 @media (min-width: 640px) {
@@ -150,12 +180,7 @@
   .VPHome .VPHero .image-container {
     width: 100%;
     height: 100%;
-    transform: translate(-8px, -16px);
-  }
-
-  .VPHome .VPHero .image-bg {
-    width: 520px;
-    height: 520px;
+    transform: translate(-8px, 0);
   }
 
   .VPHome .VPHero .image-src {

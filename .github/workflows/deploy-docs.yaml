@@ -3,7 +3,7 @@ name: Deploy docs
 on:
   push:
     branches:
-      - v6
+      - main
   workflow_dispatch:
     inputs:
       dry_run:

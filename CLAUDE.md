@@ -37,13 +37,12 @@ Uses **npm**. Node `>=20`.
 - `dist/css/` — published builds (npm `files` / `exports` / jsDelivr).
 - `docs/` — VitePress site; kitchen sink synced into `docs/public/kitchen-sink/` by `docs:sync-public`.
 - `tests/e2e/` — Playwright specs and `__screenshots__` baselines.
-- `.github/workflows/ci.yml` — lint/build/e2e on `v6` and `main`.
-- `.github/workflows/deploy-docs.yaml` — FTPS deploy of `docs/.vitepress/dist/`.
+- `.github/workflows/ci.yml` — lint/build/e2e on `main` (and legacy `v6` while it exists).
+- `.github/workflows/deploy-docs.yaml` — FTPS deploy of `docs/.vitepress/dist/` on `main`.
 
 ## Git / branch policy
 
-- Feature work for the v6 line branches off **`v6`** and opens PRs **into `v6`**.
-- Do not checkout, push, merge, or open PRs against `main` for v6 final-pass work.
+- Feature work branches off **`main`** and opens PRs **into `main`**.
 - No agent attribution in commits, trailers, or PR bodies.
 
 ## Deploy secrets (document only; never invent values)

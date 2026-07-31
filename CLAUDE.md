@@ -33,8 +33,8 @@ Uses **npm**. Node `>=20`.
 
 ## Project layout
 
-- `src/css/` — source CSS (entry files + partials).
-- `dist/css/` — published builds (also listed in `package.json` `files` / `exports`).
+- `src/css/` — source CSS (entry files + partials; not published to npm).
+- `dist/css/` — published builds (npm `files` / `exports` / jsDelivr).
 - `docs/` — VitePress site; kitchen sink synced into `docs/public/kitchen-sink/` by `docs:sync-public`.
 - `tests/e2e/` — Playwright specs and `__screenshots__` baselines.
 - `.github/workflows/ci.yml` — lint/build/e2e on `v6` and `main`.

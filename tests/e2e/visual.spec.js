@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 
 const pages = [
   { name: 'landing', path: '/', fullPage: true },
-  // Viewport-only: full-page demo screenshots are huge and flaky under CI load.
-  { name: 'demo', path: '/demo/', fullPage: false },
+  // Viewport-only: full-page kitchen-sink screenshots are huge and flaky under CI load.
+  { name: 'kitchen-sink', path: '/kitchen-sink/', fullPage: false },
 ];
 
 for (const { name, path, fullPage } of pages) {

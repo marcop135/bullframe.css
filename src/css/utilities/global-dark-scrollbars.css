@@ -1,17 +1,10 @@
-/* Utilities - Dark mode scrollbars */
+/* Dark scrollbar colors (Firefox + WebKit). */
 
-/* standard property
- * 'scrollbar-color'
- * https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
- */
 html {
   scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
 }
 
-/* these features are not standard, and blink and webkit only
- * '::-webkit-scrollbar'
- * https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
- */
+/* WebKit thumb / track. */
 
 ::-webkit-scrollbar {
   width: 1.5rem;

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Cyan print poster">
+  <rect width="640" height="400" fill="#083344"/>
+  <circle cx="320" cy="200" r="120" fill="none" stroke="#22d3ee" stroke-width="18"/>
+  <circle cx="320" cy="200" r="70" fill="none" stroke="#a5f3fc" stroke-width="10"/>
+  <rect x="80" y="60" width="120" height="16" fill="#67e8f9"/>
+  <rect x="80" y="90" width="80" height="10" fill="#155e75"/>
+  <rect x="440" y="300" width="120" height="16" fill="#67e8f9"/>
+  <rect x="480" y="330" width="80" height="10" fill="#155e75"/>
+  <path d="M160 320 L320 80 L480 320 Z" fill="none" stroke="#06b6d4" stroke-width="6" opacity="0.7"/>
+</svg>

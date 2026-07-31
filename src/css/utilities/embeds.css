@@ -1,5 +1,4 @@
-/* Utilities - Embeds (from Bootstrap)
- * https://getbootstrap.com/docs/4.4/utilities/embed/ */
+/* Responsive embed box (Bootstrap-style aspect ratio). */
 
 .bf-embed-responsive {
   position: relative;

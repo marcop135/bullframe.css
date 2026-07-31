@@ -1,15 +1,15 @@
 # Bullframe CSS
 
-> One UI framework. Three ways to write it. Semantic by default. Classless when you want it. System dark built in. Zero JavaScript. Eight builds. ~8 KB gzipped. Zero runtime dependencies. MIT license.
+> Semantic by default. Any stack. Classless when you want it. System dark built in. Accessible defaults. Native CSS, seven builds, ~8 KB gzipped. Zero runtime dependencies. MIT license.
 
 Site: https://bullframecss.marcopontili.com
 Repo: https://github.com/marcop135/bullframe.css
 npm: bullframe.css
-CDN: https://cdn.jsdelivr.net/npm/bullframe.css@latest
+CDN: https://cdn.jsdelivr.net/npm/bullframe.css
 
 Every docs page is also available as clean Markdown: append `.md` to the path (for example `/getting-started.md`), or send `Accept: text/markdown`. Full corpus: [/llms-full.txt](https://bullframecss.marcopontili.com/llms-full.txt).
 
-## Builds (eight files)
+## Builds (seven files)
 
 - bullframe.css - class-based, light
 - bullframe-dark.css - class-based, always dark
@@ -18,9 +18,6 @@ Every docs page is also available as clean Markdown: append `.md` to the path (f
 - bullframe-classless-dark.css - classless, always dark
 - bullframe-classless-system-default.css - classless, prefers-color-scheme
 - bullframe-utilities.css - utilities only
-- bullframe-modern.css - system-default plus modern CSS (oklch, color-mix, :has, container queries)
-
-All variants share `--bf-*` design tokens.
 
 ## Docs
 
@@ -44,14 +41,16 @@ All variants share `--bf-*` design tokens.
 ## Install
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
 ```
 
 ```bash
 npm install bullframe.css
 ```
 
+For a version-pinned CDN URL with Subresource Integrity, see [Getting started](https://bullframecss.marcopontili.com/getting-started) and [/sri.json](https://bullframecss.marcopontili.com/sri.json).
+
 ## Note for crawlers
 
 Documentation pages are intended for indexing, live AI context, and training citations (`Content-Signal: search=yes, ai-input=yes, ai-train=yes`).
-The interactive specimen at `/demo/` is excluded via `robots.txt` and must not be indexed.
+The interactive kitchen sink at `/kitchen-sink/` is excluded via `robots.txt` and must not be indexed.

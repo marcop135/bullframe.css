@@ -1,16 +1,37 @@
 # Changelog
 
-## Unreleased
+All notable changes to this project are documented in this file.
 
-`6.0.0` candidate (not tagged on npm yet) - BREAKING CHANGES
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-- Replaced Sass with native CSS and PostCSS; `$bf-*` / mixins → `--bf-*` and utilities
-- Darkened link/button blues for WCAG AA 4.5:1 (visual change; override with variables)
-- Shipped class-based, classless, dark, and system-default builds from one token set
-- Added `bullframe-modern.css` for `color-scheme`, `color-mix`, `oklch`, `:has()`, and container queries
-- Added opt-in font-smoothing, reduced-motion, and stronger focus/ARIA defaults
-- Replaced the Docusaurus site with VitePress docs and a `/demo/` specimen
-- Removed Sass sources, redundant `*-dark-prefers` builds, and Netlify docs hosting
+## [Unreleased]
+
+## [6.0.0] - 2026-07-31 - BREAKING CHANGES
+
+### Changed
+
+- Replaced Sass with native CSS and PostCSS (`--bf-*` tokens). See [Migration](docs/migration.md).
+- Unified class-based, classless, dark, and system-default builds on one token set.
+- Darkened link and button blues for WCAG AA contrast.
+- Replaced the docs site with VitePress; kitchen sink at `/kitchen-sink/`.
+- Documented browser support against Browserslist `defaults`.
+
+### Added
+
+- Opt-in font-smoothing, reduced-motion utilities, stronger focus / ARIA defaults.
+- Progressive `@supports` gates for range, `:has()` label layout, and dialog enter.
+
+### Removed
+
+- Sass sources and the Sass build path.
+- Standalone `*-dark-prefers` and helper dist entries (`variables*`, `utility-global-dark*`); dark/system behavior lives in the seven builds.
+- `bullframe-modern.css` and the `bullframe.css/modern` export.
+- Legacy IE / Edge hacks.
+
+### Fixed
+
+- Dialog min-width on narrow viewports, reduced-motion fades, backdrop color, gated transition APIs.
 
 ## 5.1.0 - (July 08, 2025)
 
@@ -32,7 +53,7 @@
 - Refreshed HTML demo page with new examples
 - Streamlined `README.md` copy and layout
 - Updated all npm dependencies
-- Updated stylelint, htmlhint, and prettier configs
+- Updated stylelint, html-validate, and prettier configs
 - Ensured HTML demo page passed W3C validation
 
 ## 4.2.2 (May 28, 2025)
@@ -466,3 +487,6 @@
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
+
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...HEAD
+[6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

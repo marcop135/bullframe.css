@@ -73,21 +73,3 @@ Why these autocomplete tokens matter: password managers and `<input>` fill behav
   <button type="submit" class="bf-btn bf-btn--primary">Subscribe</button>
 </form>
 ```
-
-## Form with validation hint (modern variant)
-
-Requires `bullframe-modern.css`. The submit button dims when any field is invalid; no JavaScript.
-
-```html
-<form class="bf-form-modern" style="max-width: 28rem;">
-  <label for="modern-email">Email</label>
-  <input id="modern-email" type="email" required />
-
-  <label for="modern-password">Password</label>
-  <input id="modern-password" type="password" required minlength="8" />
-
-  <button type="submit" class="bf-btn bf-btn--primary">Create account</button>
-</form>
-```
-
-The `:has(:invalid)` selector handles this in pure CSS. Browser support: Chrome 105+, Safari 15.4+, Firefox 121+.

@@ -1,4 +1,4 @@
-/* Miscellaneous - Embedded content */
+/* Media elements, figures, progress/meter, and iframes. */
 
 audio,
 canvas,
@@ -73,24 +73,18 @@ meter {
   max-width: 100%;
 }
 
-/* <progress> normalization
- *
- * https://css-tricks.com/html5-progress-element/ */
+/* progress[value] reset (https://css-tricks.com/html5-progress-element/). */
 progress[value] {
-  appearance: none; /* reset the default appearance */
-  border: none; /* Get rid of default border in Firefox */
+  appearance: none;
+  border: none; /* Firefox default border. */
 
   height: 20px;
   height: 2rem;
 
-  /* progress bar background color */
   background: var(--bf-gray-light);
-
-  /* progress value background color in IE10+ */
-  color: var(--bf-blue);
+  color: var(--bf-blue); /* Progress fill in IE10+. */
 }
 
-/* progress value background color in webkit */
 progress[value]::-webkit-progress-bar {
   background: var(--bf-gray-light);
 }
@@ -99,12 +93,7 @@ progress[value]::-webkit-progress-value {
   background: var(--bf-blue);
 }
 
-/* remove default border in old browsers
- * and for embeds (e.g. youtube) that don't remove the border with the attribute
- * frameborder="0"
- *
- * e.g.
- * <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/..."> */
+/* No default border (covers embeds that ignore frameborder="0"). */
 iframe {
   border-style: none;
 }

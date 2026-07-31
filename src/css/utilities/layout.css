@@ -1,8 +1,5 @@
-/* Utilities - Layout */
+/* Display, visibility, float, position, and width helpers. */
 
-/* micro-clearfix
- * http://nicolasgallagher.com/micro-clearfix-hack/
- */
 .bf-clearfix::before,
 .bf-clearfix::after {
   content: ' ';
@@ -17,7 +14,6 @@
   display: none !important;
 }
 
-/* assistive text for screen reader only (e.g. form labels) */
 .bf-hidden {
   display: none !important;
   visibility: hidden !important;
@@ -33,16 +29,7 @@
   padding: 0 !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+/* Visually hidden; available to screen readers (h5bp / Snook). */
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -55,13 +42,7 @@
   width: 1px !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/* .bf-sr-only, revealed on focus (skip links). */
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -149,7 +130,7 @@
   position: relative !important;
 }
 
-/* https://css-tricks.com/centering-css-complete-guide */
+/* Absolute center inside a relative parent. */
 .bf-align-center-unknown {
   position: relative !important;
 }

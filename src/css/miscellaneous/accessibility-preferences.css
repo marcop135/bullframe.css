@@ -1,6 +1,6 @@
-/* Preference media queries only (prefers-contrast, forced-colors). Additive; no default visual change. */
+/* Preference queries only (prefers-contrast, forced-colors). Additive. */
 
-/* prefers-contrast: more: underline links, thicker focus, stronger field borders (WCAG 1.4.1). */
+/* prefers-contrast: more: underline links, thicker focus, stronger borders (WCAG 1.4.1). */
 @media (prefers-contrast: more) {
   a {
     text-decoration: underline;
@@ -40,8 +40,7 @@
     text-decoration: underline;
   }
 
-  /* Keep button borders rendered in forced-colors so disabled/active
-   * states remain distinguishable. */
+  /* Keep button borders so disabled/active stay distinguishable. */
   button,
   [type='button'],
   [type='reset'],

@@ -6,6 +6,12 @@ node_modules/
 .stylelintcache
 .cache/
 .vite/
+.tmp-favicon/
+.tmp-heroes/
+
+# Vite copyDocsFiles noise (source of truth: src/docs/ → docs:sync-public)
+dist/docs/brand/
+dist/docs/examples/
 
 # Logs
 npm-debug.log*
@@ -22,14 +28,17 @@ Thumbs.db
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 
-# Synced demo & compiled CSS (rebuilt by `npm run docs:sync-demo`)
+# Synced kitchen sink, examples & compiled CSS (rebuilt by `npm run docs:sync-public`)
 docs/public/css/
 docs/public/demo/
+docs/public/kitchen-sink/
+docs/public/examples/
 
 # Netlify CLI local state
 .netlify/
 
-# Claude Code per-session scratch worktrees (keep .claude/settings.local.json tracked)
+# Claude Code local settings and scratch worktrees
+.claude/settings.local.json
 .claude/worktrees/
 
 # Playwright artifacts (keep tests/e2e/__screenshots__ baselines tracked)

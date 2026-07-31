@@ -49,8 +49,6 @@ Note `alt=""` on decorative images; keeps the link list clean for screen readers
 </div>
 ```
 
-For the modern variant: drop the breakpoint classes and use a container query instead.
-
 ## Pricing card
 
 ```html

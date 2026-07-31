@@ -1,12 +1,49 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import installTabs from './install-tabs.json';
+import ExamplesGallery from './ExamplesGallery.vue';
 
 const tabs = installTabs;
 
 const activeId = ref('npm');
 const active = computed(() => tabs.find((t) => t.id === activeId.value) ?? tabs[0]);
 const installTitle = computed(() => active.value.title);
+
+const root = ref(null);
+let sectionObserver;
+
+onMounted(() => {
+  const sections = root.value?.querySelectorAll('.bfh-section');
+  if (!sections?.length) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    sections.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  sectionObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('is-visible');
+        sectionObserver.unobserve(entry.target);
+      }
+    },
+    { rootMargin: '0px 0px -10% 0px', threshold: 0.08 }
+  );
+
+  sections.forEach((el, i) => {
+    if (i === 0) {
+      el.classList.add('is-visible');
+      return;
+    }
+    sectionObserver.observe(el);
+  });
+});
+
+onUnmounted(() => {
+  sectionObserver?.disconnect();
+});
 
 const copied = ref(false);
 let copiedTimer;
@@ -41,62 +78,83 @@ function selectTab(id) {
 const pillars = [
   {
     kicker: '01',
-    label: 'Semantic',
-    detail: 'Real HTML elements, styled by default. No class tax to ship a page.',
+    label: 'Semantic HTML',
+    detail: 'Style real elements. Pages without a class on every heading and form.',
   },
   {
     kicker: '02',
-    label: 'Classless',
-    detail: 'Drop in bullframe-classless.css when markup should stay clean.',
+    label: 'Classless build',
+    detail: 'Point at bullframe-classless.css when the markup should stay plain HTML.',
   },
   {
     kicker: '03',
-    label: 'System dark',
-    detail: 'System-default builds follow prefers-color-scheme. No extra script.',
+    label: 'Dark without JS',
+    detail: 'Always-dark builds, or system-default builds wired to prefers-color-scheme.',
   },
 ];
 
+const whenToUse = [
+  {
+    label: 'Good fit',
+    detail: 'Docs, blogs, landings, help centers, and forms.',
+  },
+  {
+    label: 'One CSS file',
+    detail: 'Reset, type, forms, layout. npm or CDN.',
+  },
+  {
+    label: 'Two markup modes',
+    detail: 'Class-based (.bf-*) or classless. Utilities are optional.',
+  },
+  {
+    label: 'Skip when',
+    detail: 'Dense app shells, data grids, or a JS component library.',
+  },
+];
+
+const showcaseSlugs = ['blog', 'cover', 'pricing', 'album', 'sign-in', 'branded'];
+
 const builds = [
-  { file: 'bullframe.css', use: 'Class-based, light' },
-  { file: 'bullframe-dark.css', use: 'Class-based, always dark' },
-  { file: 'bullframe-system-default.css', use: 'Class-based, follows the OS' },
-  { file: 'bullframe-classless.css', use: 'Semantic HTML, light' },
-  { file: 'bullframe-classless-dark.css', use: 'Classless, always dark' },
-  { file: 'bullframe-classless-system-default.css', use: 'Classless, follows the OS' },
+  { file: 'bullframe.css', use: 'Class-based · light' },
+  { file: 'bullframe-dark.css', use: 'Class-based · always dark' },
+  { file: 'bullframe-system-default.css', use: 'Class-based · OS theme' },
+  { file: 'bullframe-classless.css', use: 'Classless · light' },
+  { file: 'bullframe-classless-dark.css', use: 'Classless · always dark' },
+  { file: 'bullframe-classless-system-default.css', use: 'Classless · OS theme' },
   { file: 'bullframe-utilities.css', use: 'Utilities only' },
-  { file: 'bullframe-modern.css', use: 'System-default + modern CSS' },
 ];
 
 const stats = [
   {
-    value: '~8 KB',
-    label: 'Gzipped',
-    detail: 'Default build. Reset, typography, forms, grid, utilities.',
-  },
-  {
     value: '0',
-    label: 'JavaScript',
-    detail: 'Zero runtime JS. Zero dependencies. One stylesheet.',
+    label: 'Runtime deps',
+    detail: 'PostCSS builds to plain CSS. No Sass. No JS runtime.',
   },
   {
     value: 'AA',
-    label: 'Contrast',
-    detail: 'Body, link, and primary button colors meet 4.5:1 on light and dark.',
+    label: 'Defaults',
+    detail: 'Focus-visible, reduced-motion, WCAG AA on links and primary buttons.',
   },
   {
-    value: '8',
+    value: '7',
     label: 'Builds',
-    detail: 'Classless, class-based, utilities, dark, and system-default variants.',
+    detail: 'Class-based + classless × light / dark / system, plus utilities.',
+  },
+  {
+    value: '~8',
+    label: 'kB gzip',
+    detail: 'Default build. One file for reset, type, forms, layout.',
   },
 ];
 </script>
 
 <template>
-  <div class="bfh">
+  <div class="bfh" ref="root">
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">Modes</p>
-        <h2 id="bfh-pillars-heading" class="bfh-heading">One framework. Three authoring modes. Zero JavaScript.</h2>
+        <p class="bfh-eyebrow">Why use it</p>
+        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic by default. Any stack.</h2>
+        <p class="bfh-bridge">npm or CDN. Class-based or classless. Dark is a build, not a theme script.</p>
       </div>
       <ul class="bfh-pillars">
         <li v-for="p in pillars" :key="p.label" class="bfh-pillar">
@@ -105,6 +163,40 @@ const stats = [
           <p class="bfh-pillar__detail">{{ p.detail }}</p>
         </li>
       </ul>
+    </section>
+
+    <section class="bfh-section" aria-labelledby="bfh-when-heading">
+      <div class="bfh-section__head">
+        <p class="bfh-eyebrow">When to use</p>
+        <h2 id="bfh-when-heading" class="bfh-heading">Use Bullframe for pages, not apps.</h2>
+        <p class="bfh-bridge">
+          Good for docs, blogs, landings, help centers, and forms. If you need a dashboard shell, data
+          grid, or design-system components, use a UI kit instead.
+        </p>
+      </div>
+      <ul class="bfh-pillars bfh-pillars--quad">
+        <li
+          v-for="item in whenToUse"
+          :key="item.label"
+          class="bfh-pillar"
+          :class="{ 'bfh-pillar--mute': item.label === 'Skip when' }"
+        >
+          <span class="bfh-pillar__label">{{ item.label }}</span>
+          <p class="bfh-pillar__detail">{{ item.detail }}</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bfh-section" aria-labelledby="bfh-examples-heading">
+      <div class="bfh-section__head">
+        <p class="bfh-eyebrow">Examples</p>
+        <h2 id="bfh-examples-heading" class="bfh-heading">Example pages</h2>
+        <p class="bfh-bridge">
+          Live HTML on the published builds.
+          <a class="bfh-inline-link" href="/examples">All examples</a>.
+        </p>
+      </div>
+      <ExamplesGallery :slugs="showcaseSlugs" compact />
     </section>
 
     <section class="bfh-section" aria-labelledby="bfh-install-heading">
@@ -154,8 +246,9 @@ const stats = [
 
     <section class="bfh-section" aria-labelledby="bfh-builds-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">Eight builds</p>
-        <h2 id="bfh-builds-heading" class="bfh-heading">Pick a file. Keep the same system.</h2>
+        <p class="bfh-eyebrow">Seven builds</p>
+        <h2 id="bfh-builds-heading" class="bfh-heading">Seven CSS builds</h2>
+        <p class="bfh-bridge">Markup mode and theme are in the filename. Same tokens in every build.</p>
       </div>
       <div class="bfh-builds">
         <table>
@@ -177,8 +270,8 @@ const stats = [
 
     <section class="bfh-section bfh-section--stats" aria-labelledby="bfh-stats-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">By the numbers</p>
-        <h2 id="bfh-stats-heading" class="bfh-heading">Small file. No runtime. Accessible defaults.</h2>
+        <p class="bfh-eyebrow">Specs</p>
+        <h2 id="bfh-stats-heading" class="bfh-heading">Package defaults</h2>
       </div>
       <div class="bfh-stats">
         <div v-for="s in stats" :key="s.label" class="bfh-stat">
@@ -191,19 +284,11 @@ const stats = [
 
     <section class="bfh-section bfh-section--cta" aria-labelledby="bfh-cta-heading">
       <div class="bfh-section__head bfh-section__head--center">
-        <p class="bfh-eyebrow">Next</p>
-        <h2 id="bfh-cta-heading" class="bfh-heading">Ready when you are.</h2>
+        <h2 id="bfh-cta-heading" class="bfh-heading">Next steps</h2>
       </div>
       <div class="bfh-cta">
-        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Getting started</a>
-        <a
-          class="bfh-cta__btn bfh-cta__btn--alt"
-          href="https://github.com/marcop135/bullframe.css"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
+        <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Get started</a>
+        <a class="bfh-cta__btn bfh-cta__btn--alt" href="/README">Read the docs</a>
       </div>
     </section>
   </div>

@@ -9,10 +9,10 @@
 .cursor
 .playwright-mcp
 AGENTS.md
+CLAUDE.md
 
 # Docs site, demo, GitHub-only assets, tests, build scripts
 docs
-website
 src/docs
 scripts
 tests
@@ -43,7 +43,6 @@ prettier.config.js
 postcss.config.js
 vite.config.js
 playwright.config.js
-netlify.toml
 package-lock.json
 
 # Local scratch / screenshots

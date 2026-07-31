@@ -1,4 +1,4 @@
-/* Miscellaneous - Interactive elements */
+/* Address, details/summary, and dialog defaults. */
 
 address {
   font-style: normal;
@@ -17,14 +17,13 @@ summary {
 }
 
 dialog {
-  /* match body background color */
   background-color: var(--bf-white);
   color: var(--bf-dark);
   border: none;
   border-radius: var(--bf-spacing-sm);
   padding: var(--bf-spacing-xl);
   height: fit-content;
-  min-width: 25rem;
+  min-width: min(25rem, 100%);
   max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
 
@@ -34,8 +33,7 @@ dialog {
   }
 }
 
-/* Overrides 'hidden' attribute
- * <dialog id="myDialog" hidden>...</dialog> */
+/* Open dialog wins over [hidden] (e.g. <dialog hidden open>). */
 dialog[open] {
   display: block !important;
 }

@@ -73,11 +73,8 @@
 }
 
 /* Utilities */
-/* Utilities - Layout */
+/* Display, visibility, float, position, and width helpers. */
 
-/* micro-clearfix
- * http://nicolasgallagher.com/micro-clearfix-hack/
- */
 .bf-clearfix::before,
 .bf-clearfix::after {
   content: ' ';
@@ -92,7 +89,6 @@
   display: none !important;
 }
 
-/* assistive text for screen reader only (e.g. form labels) */
 .bf-hidden {
   display: none !important;
   visibility: hidden !important;
@@ -108,16 +104,7 @@
   padding: 0 !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+/* Visually hidden; available to screen readers (h5bp / Snook). */
 .bf-sr-only {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
@@ -130,13 +117,7 @@
   width: 1px !important;
 }
 
-/*
- * taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
- *
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/* .bf-sr-only, revealed on focus (skip links). */
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
   clip: auto !important;
@@ -224,7 +205,7 @@
   position: relative !important;
 }
 
-/* https://css-tricks.com/centering-css-complete-guide */
+/* Absolute center inside a relative parent. */
 .bf-align-center-unknown {
   position: relative !important;
 }
@@ -266,7 +247,7 @@
 .bf-width-auto {
   width: auto !important;
 }
-/* Utilities - Texts */
+/* Text alignment, weight, truncate, and font-stack helpers. */
 
 .bf-t-transform-uppercase {
   text-transform: uppercase !important;
@@ -297,12 +278,12 @@
   font-style: italic !important;
 }
 
-/* useful to 'reset' <i> inherited style */
+/* Reset italic inheritance (e.g. nested <i>). */
 .bf-t-style-normal {
   font-style: normal !important;
 }
 
-/* useful to 'reset' <b> inherited style */
+/* Weight utilities (e.g. reset <b>). */
 .bf-t-weight-300 {
   font-weight: 300 !important;
 }
@@ -376,7 +357,7 @@
   font-family: var(--bf-font-monospace) !important;
 }
 
-/* Font stacks from Modern Font Stacks (https://modernfontstacks.com/) */
+/* Opt-in stacks from Modern Font Stacks (https://modernfontstacks.com/). */
 .bf-sans-serif--system {
   font-family: system-ui, sans-serif;
 }
@@ -594,7 +575,7 @@ body.bf-responsive-typography {
   max-width: 8.3333%;
 }
 
-/* Stack columns below breakpoint when container has .bf-container--break-{xs|md|lg}. */
+/* Breakpoint stacking via .bf-container--break-{xs|md|lg}. */
 @media (max-width: 575px) {
   .bf-container--break-xs .bf-row {
     margin-left: 0;
@@ -640,12 +621,12 @@ body.bf-responsive-typography {
   }
 }
 
-/* Table cells with col classes: keep static positioning (legacy v4 compatibility). */
+/* Table cells with col classes stay position:static (v4 compat). */
 table td[class^='bf-col'],
 table th[class^='bf-col'] {
   position: static;
 }
-/* Utilities - Z-index */
+/* Z-index scale (.bf-z-index-*). */
 
 .bf-z-index-1 {
   z-index: 1;
@@ -710,8 +691,7 @@ table th[class^='bf-col'] {
 .bf-z-index-300 {
   z-index: 300;
 }
-/* Utilities - Spacing (similar to Bootstrap)
- * https://getbootstrap.com/docs/4.4/utilities/spacing/ */
+/* Margin / padding scale (.bf-m-*, .bf-p-*). */
 
 .bf-m-0 {
   margin: 0 !important;
@@ -848,7 +828,7 @@ table th[class^='bf-col'] {
 .bf-p-b-4 {
   padding-bottom: var(--bf-spacing-xxl) !important;
 }
-/* Utilities - Buttons */
+/* .bf-btn and variants. */
 
 .bf-btn {
   display: inline-block;
@@ -878,7 +858,7 @@ table th[class^='bf-col'] {
 .bf-btn:focus {
   text-decoration: none;
   color: var(--bf-dark);
-  background: rgb(184 184 184); /* color.adjust(gray-light, -10%) */
+  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
 }
 
 .bf-btn:active,
@@ -886,7 +866,7 @@ table th[class^='bf-col'] {
   box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
 }
 
-/* Primary button: white on --bf-blue meets WCAG AA 4.5:1 contrast */
+/* Primary: white on --bf-blue (WCAG AA 4.5:1). */
 .bf-btn.bf-btn--primary {
   color: var(--bf-white);
   background: var(--bf-blue);
@@ -921,7 +901,7 @@ table th[class^='bf-col'] {
   background-color: var(--bf-gray-light);
   outline: none !important;
 }
-/* Utilities - Form states */
+/* Focused / invalid / disabled form state classes. */
 
 .bf-focused {
   transition:
@@ -1021,7 +1001,7 @@ button.bf-disabled:focus,
   border-color: var(--bf-red) !important;
   box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }
-/* Utilities - Custom radio and checkbox */
+/* Custom radio / checkbox appearance. */
 
 .custom-checkbox-wrapper [type='checkbox'] {
   -webkit-appearance: none;
@@ -1105,7 +1085,7 @@ button.bf-disabled:focus,
   background-color: var(--bf-blue);
   border-color: var(--bf-black);
 }
-/* Utilities - Lists */
+/* Unstyled and inline list helpers. */
 
 .bf-list-unstyled,
 menu ul.bf-list-unstyled,
@@ -1123,7 +1103,7 @@ dd.bf-list-unstyled {
 dt {
   font-weight: 700;
 }
-/* Utilities - Tables */
+/* Table padding, overflow, and zebra helpers. */
 
 .bf-table th,
 .bf-table td {
@@ -1132,7 +1112,7 @@ dt {
   margin-bottom: var(--bf-spacing-md);
 }
 
-/* responsive tables */
+/* Horizontal scroll wrapper. */
 .bf-table-responsive {
   overflow: auto hidden;
   -ms-overflow-style: scrollbar;
@@ -1143,18 +1123,17 @@ dt {
   margin-bottom: var(--bf-spacing-md);
 }
 
-/* force webkit scrollbars appearance */
+/* Prefer always-visible scrollbars on WebKit. */
 .bf-table-responsive.scrollbar {
   -webkit-overflow-scrolling: auto;
 }
 
-/* zebra striping */
+/* Odd-row striping. */
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
   background-color: var(--bf-gray-light-extra);
 }
-/* Utilities - Embeds (from Bootstrap)
- * https://getbootstrap.com/docs/4.4/utilities/embed/ */
+/* Responsive embed box (Bootstrap-style aspect ratio). */
 
 .bf-embed-responsive {
   position: relative;
@@ -1187,12 +1166,7 @@ dt {
   height: 100%;
   border: 0;
 }
-/* Utilities - Reduced motion
- * prefers-reduced-motion media feature query
- * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
- *
- * Taken from https://github.com/jensimmons/cssremedy
- * See: https://github.com/mozdevs/cssremedy/issues/11 */
+/* Reduced-motion opt-in (cssremedy-style). */
 
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
@@ -1222,9 +1196,7 @@ dt {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
-/* Print styles - main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme
- * Inlined to avoid the additional HTTP request:
- * https://www.phpied.com/delay-loading-your-print-css/ */
+/* Print styles (adapted from h5bp main.css). */
 
 @media print {
   *,
@@ -1281,7 +1253,7 @@ dt {
     page-break-after: avoid;
   }
 
-  /* Bullframe-specific print rules */
+  /* Framework print tweaks. */
   body,
   .bf-container {
     min-width: 992px !important;
@@ -1300,7 +1272,7 @@ dt {
     border-collapse: collapse !important;
   }
 }
-/* Utilities - Filters */
+/* Filter helpers (.bf-filter-*). */
 
 .bf-filter-invert {
   filter: invert(100%) !important;

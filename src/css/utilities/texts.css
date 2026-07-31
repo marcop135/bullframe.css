@@ -1,4 +1,4 @@
-/* Utilities - Texts */
+/* Text alignment, weight, truncate, and font-stack helpers. */
 
 .bf-t-transform-uppercase {
   text-transform: uppercase !important;
@@ -29,12 +29,12 @@
   font-style: italic !important;
 }
 
-/* useful to 'reset' <i> inherited style */
+/* Reset italic inheritance (e.g. nested <i>). */
 .bf-t-style-normal {
   font-style: normal !important;
 }
 
-/* useful to 'reset' <b> inherited style */
+/* Weight utilities (e.g. reset <b>). */
 .bf-t-weight-300 {
   font-weight: 300 !important;
 }
@@ -106,7 +106,7 @@
   font-family: var(--bf-font-monospace) !important;
 }
 
-/* Font stacks from Modern Font Stacks (https://modernfontstacks.com/) */
+/* Opt-in stacks from Modern Font Stacks (https://modernfontstacks.com/). */
 .bf-sans-serif--system {
   font-family: system-ui, sans-serif;
 }

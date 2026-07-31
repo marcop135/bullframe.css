@@ -1,28 +1,16 @@
-/* Accessibility - Taken from sanitize.css
- * https://github.com/csstools/sanitize.css/blob/v13.0.0/sanitize.css */
+/* Accessibility helpers (adapted from sanitize.css). */
 
-/**
- * Change the cursor on busy elements in all browsers (opinionated).
- */
-
+/* Busy: progress cursor. */
 :where([aria-busy='true' i]) {
   cursor: progress;
 }
 
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements in all browsers (opinionated).
- */
-
+/* Disabled / inoperable: not-allowed cursor. */
 :where([aria-disabled='true' i], [disabled]) {
   cursor: not-allowed;
 }
 
-/*
- * Change the display on visually hidden accessible elements
- * in all browsers (opinionated).
- */
-
+/* aria-hidden="false" on [hidden]: keep in a11y tree when not focused. */
 :where([aria-hidden='false' i][hidden]) {
   display: initial;
 }

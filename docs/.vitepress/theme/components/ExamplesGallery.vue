@@ -24,7 +24,7 @@ const items = computed(() => {
     : examples;
   return list.map((ex) => ({
     ...ex,
-    href: `/examples/${ex.slug}/`,
+    href: props.compact ? '/examples' : `/examples/${ex.slug}/`,
     screenshot: `/examples/screenshots/${ex.slug}.png`,
   }));
 });

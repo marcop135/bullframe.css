@@ -3,8 +3,8 @@
  */
 
 .bfh {
-  --bfh-orange: var(--vp-c-brand-1);
-  --bfh-orange-solid: var(--vp-button-brand-bg);
+  --bfh-brand: var(--vp-c-brand-1);
+  --bfh-brand-solid: var(--vp-button-brand-bg);
   --bfh-ink: var(--vp-c-text-1);
   --bfh-muted: var(--vp-c-text-2);
   --bfh-line: var(--vp-c-divider);
@@ -122,8 +122,8 @@
 }
 
 .bfh-tab.is-active {
-  color: var(--bfh-orange);
-  border-bottom-color: var(--bfh-orange);
+  color: var(--bfh-brand);
+  border-bottom-color: var(--bfh-brand);
 }
 
 .bfh-code-wrap {
@@ -183,14 +183,14 @@ html:not(.dark) .bfh-code span {
 .bfh-copy:hover,
 .bfh-copy:focus-visible {
   opacity: 1;
-  border-color: var(--vp-code-copy-code-hover-border-color, var(--bfh-orange));
+  border-color: var(--vp-code-copy-code-hover-border-color, var(--bfh-brand));
   background-color: var(--vp-code-copy-code-hover-bg, var(--vp-c-bg));
   outline: none;
 }
 
 .bfh-copy.is-copied {
   background-image: var(--vp-icon-copied);
-  border-color: var(--bfh-orange);
+  border-color: var(--bfh-brand);
 }
 
 .bfh-copy__icon {
@@ -229,7 +229,7 @@ html:not(.dark) .bfh-code span {
 }
 
 .bfh-pillar:hover {
-  border-color: color-mix(in srgb, var(--bfh-orange) 55%, var(--bfh-line));
+  border-color: color-mix(in srgb, var(--bfh-brand) 55%, var(--bfh-line));
   transform: translateY(-3px);
   box-shadow:
     0 1px 0 color-mix(in srgb, var(--bfh-ink) 4%, transparent),
@@ -240,7 +240,7 @@ html:not(.dark) .bfh-code span {
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.06em;
-  color: var(--bfh-orange);
+  color: var(--bfh-brand);
 }
 
 .bfh-pillar__label {
@@ -262,7 +262,7 @@ html:not(.dark) .bfh-code span {
 }
 
 .bfh-inline-link {
-  color: var(--bfh-orange);
+  color: var(--bfh-brand);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -318,7 +318,7 @@ html:not(.dark) .bfh-code span {
   border-right: 1px solid var(--bfh-line);
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--bfh-orange) 7%, transparent) 0,
+    color-mix(in srgb, var(--bfh-brand) 7%, transparent) 0,
     transparent 42%
   );
 }
@@ -331,7 +331,7 @@ html:not(.dark) .bfh-code span {
   font-size: clamp(1.75rem, 2.8vw, 2.15rem);
   font-weight: 600;
   letter-spacing: -0.03em;
-  color: var(--bfh-orange);
+  color: var(--bfh-brand);
   line-height: 1.05;
 }
 
@@ -386,7 +386,7 @@ html:not(.dark) .bfh-code span {
 
 .bfh-builds td code {
   font-size: 0.86em;
-  color: var(--bfh-orange);
+  color: var(--bfh-brand);
 }
 
 .bfh-builds td:last-child {
@@ -425,9 +425,9 @@ html:not(.dark) .bfh-code span {
 }
 
 .bfh-cta__btn--brand {
-  background: var(--bfh-orange-solid);
+  background: var(--bfh-brand-solid);
   color: #fff;
-  border: 1px solid var(--bfh-orange-solid);
+  border: 1px solid var(--bfh-brand-solid);
 }
 
 .bfh-cta__btn--brand:hover {
@@ -442,8 +442,8 @@ html:not(.dark) .bfh-code span {
 }
 
 .bfh-cta__btn--alt:hover {
-  border-color: color-mix(in srgb, var(--bfh-orange) 45%, var(--bfh-line));
-  color: var(--bfh-orange);
+  border-color: color-mix(in srgb, var(--bfh-brand) 45%, var(--bfh-line));
+  color: var(--bfh-brand);
 }
 
 @media (max-width: 900px) {

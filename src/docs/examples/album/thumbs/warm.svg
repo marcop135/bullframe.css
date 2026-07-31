@@ -2,7 +2,7 @@
   <defs>
     <linearGradient id="wsky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7f1d1d"/>
-      <stop offset="55%" stop-color="#ea580c"/>
+      <stop offset="55%" stop-color="#0056b3"/>
       <stop offset="100%" stop-color="#fef3c7"/>
     </linearGradient>
   </defs>

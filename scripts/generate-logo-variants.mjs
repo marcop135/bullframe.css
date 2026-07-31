@@ -12,8 +12,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, '..', 'src', 'docs', 'brand', 'logo-variants');
 mkdirSync(outDir, { recursive: true });
 
-const ORANGE = '#ea580c';
-const ORANGE_DEEP = '#c2410c';
+const BLUE = '#0056b3';
+const BLUE_DEEP = '#004187';
 const CREAM = '#f5e6c8';
 const INK = '#1e272f';
 
@@ -23,12 +23,12 @@ const braces = `
 `;
 
 const variants = {
-  '01-braces-circle': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="${ORANGE}"/>${braces}</svg>`,
-  '02-braces-rounded': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="${ORANGE}"/>${braces}</svg>`,
+  '01-braces-circle': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="${BLUE}"/>${braces}</svg>`,
+  '02-braces-rounded': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="${BLUE}"/>${braces}</svg>`,
   '03-bull-mark': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <polygon fill="${CREAM}" points="7,13.5 3.2,3.8 10.9,10.9"/>
   <polygon fill="${CREAM}" points="25,13.5 28.8,3.8 21.1,10.9"/>
-  <circle cx="16" cy="18.5" r="9" fill="${ORANGE}"/>
+  <circle cx="16" cy="18.5" r="9" fill="${BLUE}"/>
   <ellipse cx="16" cy="22.4" rx="5.1" ry="3.8" fill="${CREAM}"/>
   <circle cx="13.4" cy="21.8" r="1.1" fill="${INK}"/>
   <circle cx="18.6" cy="21.8" r="1.1" fill="${INK}"/>
@@ -36,8 +36,8 @@ const variants = {
   <circle cx="20.5" cy="15.4" r="1.4" fill="${INK}"/>
 </svg>`,
   '04-bull-circle': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <circle cx="16" cy="16" r="16" fill="${ORANGE}"/>
-  <circle cx="16" cy="19" r="10.2" fill="${ORANGE_DEEP}"/>
+  <circle cx="16" cy="16" r="16" fill="${BLUE}"/>
+  <circle cx="16" cy="19" r="10.2" fill="${BLUE_DEEP}"/>
   <polygon fill="${CREAM}" points="6.4,12.8 2.6,3.2 10.9,10.2"/>
   <polygon fill="${CREAM}" points="25.6,12.8 29.4,3.2 21.1,10.2"/>
   <ellipse cx="16" cy="22.4" rx="5.8" ry="4.5" fill="${CREAM}"/>
@@ -46,7 +46,7 @@ const variants = {
   <circle cx="10.9" cy="14.7" r="1.6" fill="${INK}"/>
   <circle cx="21.1" cy="14.7" r="1.6" fill="${INK}"/>
 </svg>`,
-  '05-horns-braces': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="${ORANGE}"/>
+  '05-horns-braces': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="${BLUE}"/>
   <polygon fill="${CREAM}" points="7,12.2 3.2,2.6 11.5,9.6"/>
   <polygon fill="${CREAM}" points="25,12.2 28.8,2.6 20.5,9.6"/>
   ${braces}
@@ -65,15 +65,15 @@ Minimal marks derived from the home hero bull and \`{ }\` shirt badge. Designed 
 
 | ID | File stem | Idea |
 | -- | --------- | ---- |
-| 01 | \`01-braces-circle\` | White \`{ }\` on orange circle |
+| 01 | \`01-braces-circle\` | White \`{ }\` on blue circle |
 | 02 | \`02-braces-rounded\` | White \`{ }\` on rounded square |
 | 03 | \`03-bull-mark\` | Geometric bull head (transparent) |
-| 04 | \`04-bull-circle\` | Geometric bull head on orange circle |
-| 05 | \`05-horns-braces\` | Cream horns + \`{ }\` on orange circle |
+| 04 | \`04-bull-circle\` | Geometric bull head on blue circle |
+| 05 | \`05-horns-braces\` | Cream horns + \`{ }\` on blue circle |
 
 Each stem includes \`.svg\` plus \`-512.png\`, \`-180.png\`, \`-32.png\`, \`-16.png\` (PNGs from \`node scripts/generate-logo-variants.mjs\` when sharp is available).
 
-Brand orange: \`${ORANGE}\` (small-size pop). Deep accent: \`${ORANGE_DEEP}\`.
+Brand blue: \`${BLUE}\` (product \`--bf-blue\`). Deep accent: \`${BLUE_DEEP}\` (\`--bf-blue-light\`).
 `
 );
 

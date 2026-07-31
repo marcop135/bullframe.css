@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <g transform="translate(8 8) scale(0.64) translate(-8 -8)">
+  <!-- Mask icon. Even pad. Color from rel=mask-icon. -->
+  <g transform="translate(8 8) scale(1.01 1.288) translate(-8 -6.325)">
     <path fill="#000" fill-rule="evenodd" d="
       M3.1 5.1 H12.9 A0.65 0.65 0 0 1 13.55 5.75 V11.4 A0.65 0.65 0 0 1 12.9 12.05 H3.1 A0.65 0.65 0 0 1 2.45 11.4 V5.75 A0.65 0.65 0 0 1 3.1 5.1 Z
       M3.9 6.8 V10.8 H12.1 V6.8 Z"/>

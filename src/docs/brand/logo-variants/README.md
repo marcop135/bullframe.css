@@ -1,8 +1,8 @@
 # Logo / favicon variants (archive)
 
-Canonical mark is **horned window** (orange on white): `../logo.svg` (icon proposals cut 1 / `c1-needle`).
+Canonical mark is **horned window** (blue on white): `../logo.svg` (icon proposals cut 1 / `c1-needle`).
 
-These files are earlier explorations only:
+These files are earlier explorations only (regenerated with product `--bf-blue`):
 
 | # | File | Note |
 | - | ---- | ---- |

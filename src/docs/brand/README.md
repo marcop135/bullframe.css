@@ -1,6 +1,6 @@
 # Docs brand mark
 
-Canonical mark: **horned window** (orange on white seal). Chosen from icon proposals cut 1.
+Canonical mark: **horned window** (blue on white seal). Matches product `--bf-blue` (`#0056b3`).
 
 | File | Use |
 | ---- | --- |

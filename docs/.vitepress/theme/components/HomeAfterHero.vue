@@ -191,10 +191,7 @@ const stats = [
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Examples</p>
         <h2 id="bfh-examples-heading" class="bfh-heading">Example pages</h2>
-        <p class="bfh-bridge">
-          Live HTML on the published builds.
-          <a class="bfh-inline-link" href="/examples">All examples</a>.
-        </p>
+        <p class="bfh-bridge">Live HTML on the published builds.</p>
       </div>
       <ExamplesGallery :slugs="showcaseSlugs" compact />
     </section>

@@ -7,7 +7,7 @@ alwaysApply: true
 
 - Native CSS + PostCSS only. No Sass.
 - Keep seven builds. Do not add `bullframe-modern.css`.
-- Branch / PR into `v6` for v6 work. Do not touch `main` unless asked.
+- Branch / PR into `main`.
 - Builds: Browserslist `defaults`. Gate progressive enhancements with `@supports`.
 - Docs deploy secrets (names only): `FTP_HOST`, `FTP_USERNAME_PRODUCTION`, `FTP_PASSWORD_PRODUCTION`. Never invent values.
 - FTPS (`deploy-docs.yaml`, same pattern as md2pdf): `security: strict`, so `FTP_HOST` must be the bare Netsons shared-host name on the TLS cert CN/SAN (e.g. `hostingssd94.netsons.net`), not a vanity `ftp.…` / site FQDN. Vanity host → `ERR_TLS_CERT_ALTNAME_INVALID`; wrong/unreachable host → `Timeout (control socket)`. Dry-run via `workflow_dispatch` input `dry_run`.

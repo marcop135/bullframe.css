@@ -4,8 +4,7 @@ Thanks for helping improve Bullframe CSS.
 
 ## Branches
 
-- **v6 work:** branch off `v6` and open pull requests **into `v6`**.
-- **`main`:** published / stable line until v6 is released. Do not use `main` for v6 final-pass changes unless a maintainer asks.
+- Branch off **`main`** and open pull requests **into `main`**.
 - Prefer focused branches (`fix/…`, `docs/…`, `chore/…`).
 
 ## Issues and bugs
@@ -16,7 +15,7 @@ For CSS bugs, prefer a [reduced test case](https://css-tricks.com/reduced-test-c
 
 ## Pull requests
 
-1. Fork, clone, and branch from the latest `v6` (for v6 work).
+1. Fork, clone, and branch from the latest `main`.
 2. Match existing CSS / docs style (Prettier + Stylelint).
 3. Run before push:
    - `npm run lint`
@@ -43,7 +42,7 @@ Add these **repository Actions secrets** in the GitHub UI (do not commit values)
 | `FTP_USERNAME_PRODUCTION` | FTPS username |
 | `FTP_PASSWORD_PRODUCTION` | FTPS password |
 
-After secrets exist, push to `v6` / `main` or run **Deploy docs** via `workflow_dispatch`.
+After secrets exist, push to `main` or run **Deploy docs** via `workflow_dispatch`.
 
 ## Releases (maintainers)
 

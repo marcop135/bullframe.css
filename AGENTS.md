@@ -24,9 +24,8 @@ Do not add a `bullframe-modern.css` build back.
 
 ## Git
 
-- Active work targets **`v6`**. Open PRs into `v6`. Do not touch `main` unless the maintainer asks.
-- `main` remains the published/stable line until v6 is cut and published.
-- Push to `v6` / `main` triggers [Deploy docs](.github/workflows/deploy-docs.yaml) (needs FTP secrets).
+- Active work targets **`main`**. Open PRs into `main`.
+- Push to `main` triggers [Deploy docs](.github/workflows/deploy-docs.yaml) (needs FTP secrets), or run via `workflow_dispatch`.
 - Do not force-push shared branches unless explicitly requested.
 - No agent / Cursor attribution in commits or PRs.
 
@@ -36,7 +35,7 @@ Do not add a `bullframe-modern.css` build back.
 - Invent `FTP_*` / `NPM_TOKEN` secret values; document names only.
 - Add Sass back.
 - Ship ungated niche CSS APIs without `@supports` / progressive enhancement.
-- Force-push `main` / `v6` unless explicitly requested.
+- Force-push `main` unless explicitly requested.
 
 ## Cursor CLI
 

@@ -6,7 +6,7 @@ Guidance for Claude Code and other agents in this repository. Read once at sessi
 
 **Bullframe CSS** — a lightweight CSS framework for fast, accessible UIs. Semantic by default, classless when you want it, system dark built in. Seven builds, shared `--bf-*` tokens, zero runtime JS dependencies. Live docs: https://bullframecss.marcopontili.com.
 
-Slogan: *One UI framework. Three ways to write it. Any stack.*
+Slogan: *One UI framework. Any stack.*
 
 ## Stack constraints
 

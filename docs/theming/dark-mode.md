@@ -7,7 +7,7 @@ Bullframe CSS includes built-in dark mode with no JavaScript. System-default bui
 The `bullframe-system-default.css` build automatically switches between light and dark themes based on the user's system preference:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-system-default.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-system-default.min.css" />
 ```
 
 This uses the `prefers-color-scheme` media query to detect the user's preference.
@@ -17,7 +17,7 @@ This uses the `prefers-color-scheme` media query to detect the user's preference
 Use `bullframe-dark.css` for a permanent dark theme:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-dark.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-dark.min.css" />
 ```
 
 ## Manual Dark Mode Toggle

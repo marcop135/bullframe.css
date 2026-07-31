@@ -42,20 +42,19 @@ const pillars = [
   {
     kicker: '01',
     label: 'Semantic',
-    detail: 'Real HTML elements, styled by default. No class tax to ship a page.',
+    detail: 'Headings, forms, tables, and links are styled without a pile of classes.',
   },
   {
     kicker: '02',
     label: 'Classless',
-    detail: 'Drop in bullframe-classless.css when markup should stay clean.',
+    detail: 'Swap in bullframe-classless.css and keep markup as plain HTML.',
   },
   {
     kicker: '03',
     label: 'System dark',
-    detail: 'System-default builds follow prefers-color-scheme. No extra script.',
+    detail: 'Always-dark builds, or system-default builds that follow prefers-color-scheme.',
   },
 ];
-
 const builds = [
   { file: 'bullframe.css', use: 'Class-based, light' },
   { file: 'bullframe-dark.css', use: 'Class-based, always dark' },
@@ -70,17 +69,17 @@ const stats = [
   {
     value: '0',
     label: 'Dependencies',
-    detail: 'One stylesheet. Shared --bf-* tokens. Any stack.',
+    detail: 'Native CSS, PostCSS builds, no Sass, no runtime JavaScript. Any stack.',
   },
   {
     value: 'AA',
     label: 'Contrast',
-    detail: 'Body, link, and primary button colors meet 4.5:1 on light and dark.',
+    detail: 'Focus-visible rings, reduced-motion respect, WCAG AA on links and primary buttons.',
   },
   {
     value: '7',
     label: 'Builds',
-    detail: 'Classless, class-based, utilities, dark, and system-default variants.',
+    detail: 'Class-based and classless, each with light, dark, and system themes, plus a utilities companion.',
   },
 ];
 </script>
@@ -89,9 +88,9 @@ const stats = [
   <div class="bfh">
     <section class="bfh-section" aria-labelledby="bfh-pillars-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">Modes</p>
+        <p class="bfh-eyebrow">Why</p>
         <p class="bfh-bridge">Drop in a stylesheet. Keep your stack.</p>
-        <h2 id="bfh-pillars-heading" class="bfh-heading">One framework. Three authoring modes. Any stack.</h2>
+        <h2 id="bfh-pillars-heading" class="bfh-heading">Semantic. Classless. System dark.</h2>
       </div>
       <ul class="bfh-pillars">
         <li v-for="p in pillars" :key="p.label" class="bfh-pillar">
@@ -150,7 +149,7 @@ const stats = [
     <section class="bfh-section" aria-labelledby="bfh-builds-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Seven builds</p>
-        <h2 id="bfh-builds-heading" class="bfh-heading">Pick a file. Keep the same system.</h2>
+        <h2 id="bfh-builds-heading" class="bfh-heading">Pick a file. Same defaults in every build.</h2>
       </div>
       <div class="bfh-builds">
         <table>

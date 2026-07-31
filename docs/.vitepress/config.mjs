@@ -8,7 +8,7 @@ import { chapters, excludeDirs } from './chapters.mjs';
 const docsRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const siteUrl = 'https://bullframecss.marcopontili.com';
 const siteDescription =
-  'Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default, classless when you want it, system dark built in. Seven builds, shared tokens, solid cross-browser support. One UI framework. Three ways to write it. Any stack.';
+  'Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default, classless when you want it, system dark built in. Seven builds, solid cross-browser support. One UI framework. Any stack.';
 
 // Derive a nav label from a doc's first H1 (falls back to a prettified filename).
 function titleFor(rel) {

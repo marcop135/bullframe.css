@@ -1,22 +1,10 @@
 # Getting started
 
-Bullframe CSS is a lightweight CSS framework: seven builds, shared `--bf-*` tokens, zero runtime dependencies, and about 8 KB gzipped for the default build. Works with any stack. Pick an authoring mode, then add one stylesheet.
+Bullframe CSS is a lightweight CSS framework for fast, accessible UIs: seven builds, zero runtime dependencies, about 8 KB gzipped for the default build. Native CSS, any stack. Pick a markup mode and a theme, then add one stylesheet.
 
 ## Choose a mode
 
-Same tokens and accessible defaults in every mode. Pick how you write HTML.
-
-### Classless
-
-`bullframe-classless.css` (+ dark / system-default). Semantic HTML only; no classes to add.
-
-```html
-<link rel="stylesheet" href="…/bullframe-classless.min.css" />
-
-<h1>Hello</h1>
-<p>Just semantic HTML.</p>
-<form>…</form>
-```
+Two markup modes. Same accessible defaults in both. Pick how you write HTML.
 
 ### Class-based
 
@@ -31,9 +19,33 @@ Same tokens and accessible defaults in every mode. Pick how you write HTML.
 </div>
 ```
 
-### Utility-first
+### Classless
 
-`bullframe-utilities.css`. You already have a reset; you just want `.bf-*` helpers.
+`bullframe-classless.css` (+ dark / system-default). Semantic HTML only; no classes to add.
+
+```html
+<link rel="stylesheet" href="…/bullframe-classless.min.css" />
+
+<h1>Hello</h1>
+<p>Just semantic HTML.</p>
+<form>…</form>
+```
+
+## Choose a theme
+
+Each markup mode ships in three themes:
+
+| Theme | File suffix | Behavior |
+| --- | --- | --- |
+| Light | (none) | Always light |
+| Dark | `-dark` | Always dark |
+| System | `-system-default` | Follows `prefers-color-scheme` |
+
+Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
+
+## Utilities
+
+`bullframe-utilities.css` is a companion build, not a markup mode. Use it when you already have a reset and only want `.bf-*` helpers.
 
 ```html
 <link rel="stylesheet" href="…/bullframe-utilities.min.css" />
@@ -45,16 +57,16 @@ Same tokens and accessible defaults in every mode. Pick how you write HTML.
 
 ## CDN
 
-Fastest path. Pin to `@6` once the v6 release is on npm if you need a fixed major.
+Fastest path. Pin to `@6` if you need a fixed major.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
 ```
 
 For a specific build, use the full path and swap the filename (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …):
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css" />
 ```
 
 ## npm
@@ -92,7 +104,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe.min.css" />
   </head>
   <body>
     <div class="bf-container">
@@ -112,7 +124,7 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@latest/dist/css/bullframe-classless.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css" />
     <style>
       body {
         margin-left: auto;
@@ -133,17 +145,17 @@ Self-host from the [latest v6 archive](https://github.com/marcop135/bullframe.cs
 
 ## Builds
 
-Seven files share the same `--bf-*` tokens. Default build is about **8 KB gzipped**. No JavaScript runtime.
+Seven builds. Default build is about **8 KB gzipped**. No JavaScript runtime.
 
-| File                                     | Mode                                |
+| File                                     | Use when                            |
 | ---------------------------------------- | ----------------------------------- |
 | `bullframe.css`                          | Class-based, light                  |
 | `bullframe-dark.css`                     | Class-based, always dark            |
 | `bullframe-system-default.css`           | Class-based, `prefers-color-scheme` |
-| `bullframe-classless.css`                | Semantic HTML, light                |
+| `bullframe-classless.css`                | Classless, light                    |
 | `bullframe-classless-dark.css`           | Classless, always dark              |
 | `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`   |
-| `bullframe-utilities.css`                | Utilities only                      |
+| `bullframe-utilities.css`                | Utilities companion only            |
 
 Upgrading from v5: [Migration](/migration).
 

@@ -12,7 +12,18 @@ h6 {
   color: inherit;
   line-height: 1.25;
   margin-bottom: var(--bf-spacing-lg);
-  text-wrap: balance;
+}
+
+/* Balanced headings where supported; no-op elsewhere. */
+@supports (text-wrap: balance) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
 }
 
 h1 {

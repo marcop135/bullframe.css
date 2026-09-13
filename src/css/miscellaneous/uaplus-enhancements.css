@@ -19,8 +19,10 @@
   }
 
   /* Stable scrollbar gutter avoids layout jump on short pages. */
-  html {
-    scrollbar-gutter: stable;
+  @supports (scrollbar-gutter: stable) {
+    html {
+      scrollbar-gutter: stable;
+    }
   }
 
   /* Nested h1 size/margin: match modern UA (Safari still nests sectioning styles). */

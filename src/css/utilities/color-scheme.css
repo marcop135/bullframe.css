@@ -1,0 +1,14 @@
+/* Opt-in color-scheme. Put one on <html> so the UA themes native widgets
+ * (date pickers, select popups, autofill, scrollbars) to match the build. */
+
+.bf-scheme-light {
+  color-scheme: light;
+}
+
+.bf-scheme-dark {
+  color-scheme: dark;
+}
+
+.bf-scheme-auto {
+  color-scheme: light dark;
+}

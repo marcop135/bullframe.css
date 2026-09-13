@@ -1,4 +1,4 @@
-/* Keyboard-first focus: orange :focus-visible ring; mute mouse outline.
+/* Keyboard-first focus: :focus-visible ring from --bf-focus-ring-*; mute mouse outline.
  * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
 :where(:focus:not(:focus-visible)) {
@@ -11,8 +11,8 @@
 }
 
 :focus-visible {
-  outline: 0.2rem solid var(--bf-orange);
-  outline-offset: 0.3rem;
+  outline: var(--bf-focus-ring-width) solid var(--bf-focus-ring-color);
+  outline-offset: var(--bf-focus-ring-offset);
 }
 
 /* Clear UA outline on text-like controls (styled fields keep their own chrome).

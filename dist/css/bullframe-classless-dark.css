@@ -34,6 +34,12 @@
   /* Invalid / error */
   --bf-red: rgb(255 0 0);
 
+  /* Focus ring. Default keeps --bf-orange; re-point for 3:1 (WCAG 1.4.11).
+   * prefers-contrast: more raises it in accessibility-preferences.css. */
+  --bf-focus-ring-color: var(--bf-orange);
+  --bf-focus-ring-width: 0.2rem;
+  --bf-focus-ring-offset: 0.3rem;
+
   /* Dark-mode surfaces (used by utility-global-dark*.css) */
   --bf-dark-bg: rgb(28 28 28);
   --bf-dark-link: rgb(77 165 255);
@@ -129,8 +135,10 @@ template {
   }
 
   /* Stable scrollbar gutter avoids layout jump on short pages. */
-  html {
-    scrollbar-gutter: stable;
+  @supports (scrollbar-gutter: stable) {
+    html {
+      scrollbar-gutter: stable;
+    }
   }
 
   /* Nested h1 size/margin: match modern UA (Safari still nests sectioning styles). */
@@ -356,7 +364,18 @@ h6 {
   color: inherit;
   line-height: 1.25;
   margin-bottom: var(--bf-spacing-lg);
-  text-wrap: balance;
+}
+
+/* Balanced headings where supported; no-op elsewhere. */
+@supports (text-wrap: balance) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
 }
 
 h1 {
@@ -1116,7 +1135,7 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
-/* Keyboard-first focus: orange :focus-visible ring; mute mouse outline.
+/* Keyboard-first focus: :focus-visible ring from --bf-focus-ring-*; mute mouse outline.
  * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
 :where(:focus:not(:focus-visible)) {
@@ -1129,8 +1148,8 @@ a:not([href], [tabindex]):focus {
 }
 
 :focus-visible {
-  outline: 0.2rem solid var(--bf-orange);
-  outline-offset: 0.3rem;
+  outline: var(--bf-focus-ring-width) solid var(--bf-focus-ring-color);
+  outline-offset: var(--bf-focus-ring-offset);
 }
 
 /* Clear UA outline on text-like controls (styled fields keep their own chrome).
@@ -1430,6 +1449,12 @@ caption {
     text-decoration: underline;
   }
 
+  /* Darker amber clears WCAG 1.4.11 (3:1) on white, --bf-light and --bf-dark-bg;
+   * the default --bf-orange ring is only ~2:1 on white. */
+  :root {
+    --bf-focus-ring-color: rgb(184 115 0);
+  }
+
   :focus-visible {
     outline-width: 0.3rem;
     outline-offset: 0.4rem;
@@ -1472,6 +1497,94 @@ caption {
   .bf-btn {
     border: 1px solid ButtonText;
   }
+}
+/* Screen-reader and keyboard helpers. Shipped in every build, including
+ * classless, so skip links work without pulling in the .bf-* utilities. */
+
+/* Visually hidden; available to screen readers (h5bp / Snook). */
+.bf-sr-only {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+/* .bf-sr-only, revealed on focus. .focusable is the legacy name; both work. */
+.bf-sr-only.focusable:active,
+.bf-sr-only.focusable:focus,
+.bf-sr-only.bf-focusable:active,
+.bf-sr-only.bf-focusable:focus {
+  clip: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  position: static !important;
+  white-space: inherit !important;
+  width: auto !important;
+}
+
+/* Skip link: hidden until focused, then pinned to the top-left without
+ * reflowing the page (unlike .bf-sr-only.focusable, which returns to flow). */
+.bf-skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
+  color: var(--bf-blue);
+  background-color: var(--bf-white);
+  border: 1px solid var(--bf-gray-light);
+  transform: translateY(-100%);
+}
+
+.bf-skip-link:focus,
+.bf-skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Accessibility helpers only. The classless build ships no other .bf-* class. */
+/* Reduced-motion opt-in (cssremedy-style). */
+
+@media (prefers-reduced-motion: reduce) {
+  .bf-reduced-motion,
+  .bf-reduced-motion::before,
+  .bf-reduced-motion::after,
+  .bf-reduced-motion *,
+  .bf-reduced-motion *::before,
+  .bf-reduced-motion *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+/* Opt-in color-scheme. Put one on <html> so the UA themes native widgets
+ * (date pickers, select popups, autofill, scrollbars) to match the build. */
+
+.bf-scheme-light {
+  color-scheme: light;
+}
+
+.bf-scheme-dark {
+  color-scheme: dark;
+}
+
+.bf-scheme-auto {
+  color-scheme: light dark;
+}
+/* Opt-in accent-color: native checkbox, radio, range and progress follow
+ * --bf-blue instead of the UA default. Put it on <html> or any container. */
+
+.bf-accent-native {
+  accent-color: var(--bf-blue);
 }
 /* Always-dark overrides for classless (no media query). */
 

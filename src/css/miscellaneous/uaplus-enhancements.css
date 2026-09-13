@@ -2,20 +2,10 @@
  * Light UA improvements; complements Bullframe base styles. */
 
 @layer {
-  /* Spacing between content and focus outline (enhances focus.css). */
-  :focus-visible {
-    outline-offset: 3px;
-  }
-
   /* Disable mobile landscape text inflation on optimized layouts. */
   html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
-  }
-
-  /* Comfortable default root line-height (body still uses --bf-body-line-height). */
-  html {
-    line-height: 1.5;
   }
 
   /* Stable scrollbar gutter avoids layout jump on short pages. */
@@ -29,13 +19,6 @@
   h1 {
     font-size: 2em;
     margin-block: 0.67em;
-  }
-
-  /* abbr[title]: dotted underline + help cursor across engines. */
-  abbr[title] {
-    cursor: help;
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
   }
 
   /* mark: system Highlight colors under forced-colors. */
@@ -102,15 +85,10 @@
     direction: ltr;
   }
 
-  /* Tables: collapsed borders + cell padding for scanability. */
+  /* Tables: outer border. Cell borders and padding come from
+   * miscellaneous/tables.css, which is unlayered and therefore wins. */
   table {
     border: 1px solid currentColor;
-  }
-
-  th,
-  td {
-    border: 1px solid currentColor;
-    padding: 0.25em 0.5em;
   }
 
   /* Soft dialog / popover enter transitions (skip when reduced-motion is on). */
@@ -146,24 +124,9 @@
     }
   }
 
-  /* Keep [hidden] hard-hidden except until-found. */
-  [hidden]:not([hidden='until-found']) {
-    display: none !important;
-  }
-
   /* Images as blocks (max-width still from embedded-content.css). */
   img {
     display: block;
-  }
-
-  /* summary: pointer on the whole control, not only ::marker. */
-  summary {
-    cursor: default;
-  }
-
-  /* iframes: no default border. */
-  iframe {
-    border: none;
   }
 
   /* Popovers: anchor near trigger when position-area is supported. */

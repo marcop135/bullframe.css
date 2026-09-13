@@ -30,6 +30,7 @@ strong {
   font-weight: inherit;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors -- normalize.css Safari fix */
 b,
 strong {
   font-weight: bolder;

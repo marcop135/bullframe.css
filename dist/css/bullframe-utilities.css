@@ -32,6 +32,12 @@
   /* Invalid / error */
   --bf-red: rgb(255 0 0);
 
+  /* Focus ring. Default keeps --bf-orange; re-point for 3:1 (WCAG 1.4.11).
+   * prefers-contrast: more raises it in accessibility-preferences.css. */
+  --bf-focus-ring-color: var(--bf-orange);
+  --bf-focus-ring-width: 0.2rem;
+  --bf-focus-ring-offset: 0.3rem;
+
   /* Dark-mode surfaces (used by utility-global-dark*.css) */
   --bf-dark-bg: rgb(28 28 28);
   --bf-dark-link: rgb(77 165 255);
@@ -72,6 +78,56 @@
   --bf-breakpoint-xxl: 1400px;
 }
 
+/* Accessibility helpers (class-only, no element styles) */
+/* Screen-reader and keyboard helpers. Shipped in every build, including
+ * classless, so skip links work without pulling in the .bf-* utilities. */
+
+/* Visually hidden; available to screen readers (h5bp / Snook). */
+.bf-sr-only {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+/* .bf-sr-only, revealed on focus. .focusable is the legacy name; both work. */
+.bf-sr-only.focusable:active,
+.bf-sr-only.focusable:focus,
+.bf-sr-only.bf-focusable:active,
+.bf-sr-only.bf-focusable:focus {
+  clip: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  position: static !important;
+  white-space: inherit !important;
+  width: auto !important;
+}
+
+/* Skip link: hidden until focused, then pinned to the top-left without
+ * reflowing the page (unlike .bf-sr-only.focusable, which returns to flow). */
+.bf-skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
+  color: var(--bf-blue);
+  background-color: var(--bf-white);
+  border: 1px solid var(--bf-gray-light);
+  transform: translateY(-100%);
+}
+
+.bf-skip-link:focus,
+.bf-skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 /* Utilities */
 /* Display, visibility, float, position, and width helpers. */
 
@@ -104,30 +160,8 @@
   padding: 0 !important;
 }
 
-/* Visually hidden; available to screen readers (h5bp / Snook). */
-.bf-sr-only {
-  border: 0 !important;
-  clip: rect(0, 0, 0, 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
-  width: 1px !important;
-}
-
-/* .bf-sr-only, revealed on focus (skip links). */
-.bf-sr-only.focusable:active,
-.bf-sr-only.focusable:focus {
-  clip: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  overflow: visible !important;
-  position: static !important;
-  white-space: inherit !important;
-  width: auto !important;
-}
+/* .bf-sr-only, .bf-focusable and .bf-skip-link live in
+ * miscellaneous/a11y-helpers.css so the classless builds get them too. */
 
 .bf-invisible {
   visibility: hidden !important;
@@ -1195,6 +1229,52 @@ dt {
 .bf-subpixel-antialiased {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+/* Opt-in color-scheme. Put one on <html> so the UA themes native widgets
+ * (date pickers, select popups, autofill, scrollbars) to match the build. */
+
+.bf-scheme-light {
+  color-scheme: light;
+}
+
+.bf-scheme-dark {
+  color-scheme: dark;
+}
+
+.bf-scheme-auto {
+  color-scheme: light dark;
+}
+/* Opt-in minimum target size (WCAG 2.5.8, 24x24 CSS px).
+ * Grows the hit box only; the painted control keeps its size. */
+
+.bf-target-size,
+.bf-target-size a,
+.bf-target-size button,
+.bf-target-size [type='button'],
+.bf-target-size [type='reset'],
+.bf-target-size [type='submit'],
+.bf-target-size [type='checkbox'],
+.bf-target-size [type='radio'],
+.bf-target-size select,
+.bf-target-size summary,
+.bf-target-size .bf-btn {
+  min-block-size: 24px;
+  min-inline-size: 24px;
+}
+
+/* Inline links in running text are exempt (WCAG 2.5.8 inline exception). */
+.bf-target-size p a,
+.bf-target-size li a,
+.bf-target-size td a,
+.bf-target-size dd a {
+  min-block-size: 0;
+  min-inline-size: 0;
+}
+/* Opt-in accent-color: native checkbox, radio, range and progress follow
+ * --bf-blue instead of the UA default. Put it on <html> or any container. */
+
+.bf-accent-native {
+  accent-color: var(--bf-blue);
 }
 /* Print styles (adapted from h5bp main.css). */
 

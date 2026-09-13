@@ -42,7 +42,8 @@ Uses **npm**. Node `>=20`.
 
 ## Git / branch policy
 
-- Feature work branches off **`main`** and opens PRs **into `main`**.
+- `develop` is the integration branch. Feature work branches off **`develop`** and opens PRs **into `develop`**.
+- `main` is the release branch. Only release PRs (`develop` into `main`) land there; a push to `main` deploys the docs.
 - No agent attribution in commits, trailers, or PR bodies.
 
 ## Deploy secrets (document only; never invent values)

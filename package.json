@@ -35,8 +35,8 @@
     "lint": "stylelint \"src/**/*.css\"",
     "lint:fix": "stylelint \"src/**/*.css\" --fix",
     "lint:html": "html-validate \"src/**/*.html\"",
-    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
-    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
+    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.mjs\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
+    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.mjs\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
     "test:e2e": "playwright test",
     "test:e2e:update": "playwright test --update-snapshots",
     "docs:dev": "npm run docs:sync-public && vitepress dev docs",
@@ -48,8 +48,8 @@
     "examples:shots": "node scripts/capture-example-screenshots.mjs",
     "kitchen-sink:variants": "node scripts/generate-kitchen-sink-variants.mjs",
     "brand:icons": "node scripts/render-brand-icons.mjs",
-    "brand:heroes": "node scripts/generate-brand-heroes.mjs",
-    "brand:heroes:review": "node scripts/generate-brand-heroes.mjs --desktop"
+    "brand:images": "node scripts/generate-brand-images.mjs",
+    "brand:images:check": "node scripts/generate-brand-images.mjs --check"
   },
   "repository": {
     "type": "git",

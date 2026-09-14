@@ -79,8 +79,8 @@
 }
 
 /* Accessibility helpers (class-only, no element styles) */
-/* Screen-reader and keyboard helpers. Shipped in every build, including
- * classless, so skip links work without pulling in the .bf-* utilities. */
+/* Screen-reader and keyboard helpers (.bf-sr-only, .bf-skip-link, .bf-focusable).
+ * Class-based and utilities builds only; classless ships no .bf-* classes. */
 
 /* Visually hidden; available to screen readers (h5bp / Snook). */
 .bf-sr-only {
@@ -161,7 +161,7 @@
 }
 
 /* .bf-sr-only, .bf-focusable and .bf-skip-link live in
- * miscellaneous/a11y-helpers.css so the classless builds get them too. */
+ * miscellaneous/a11y-helpers.css (class-based and utilities builds). */
 
 .bf-invisible {
   visibility: hidden !important;
@@ -865,6 +865,10 @@ table th[class^='bf-col'] {
   transition: all 0.2s;
 }
 
+.bf-btn:focus {
+  outline: 0;
+}
+
 .bf-btn:hover,
 .bf-btn:active,
 .bf-btn:focus {
@@ -912,6 +916,12 @@ table th[class^='bf-col'] {
   opacity: 0.5 !important;
   background-color: var(--bf-gray-light);
   outline: none !important;
+}
+
+@media (forced-colors: active) {
+  .bf-btn {
+    border: 1px solid ButtonText;
+  }
 }
 /* Focused / invalid / disabled form state classes. */
 

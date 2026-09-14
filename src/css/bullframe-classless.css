@@ -1,4 +1,4 @@
-/* Classless build: semantic element styles only (no .bf-* utilities). */
+/* Classless build: semantic element styles only (no .bf-* classes). */
 
 /* Variables */
 @import './variables.css';
@@ -30,9 +30,3 @@
 @import './miscellaneous/tables.css';
 @import './miscellaneous/accessibility.css';
 @import './miscellaneous/accessibility-preferences.css';
-@import './miscellaneous/a11y-helpers.css';
-
-/* Accessibility helpers only. The classless build ships no other .bf-* class. */
-@import './utilities/reduced-motion.css';
-@import './utilities/color-scheme.css';
-@import './utilities/accent-color.css';

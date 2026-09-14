@@ -37,7 +37,6 @@ button:focus,
 [type='checkbox']:focus,
 input[list]:focus,
 select:focus,
-textarea:focus,
-.bf-btn:focus {
+textarea:focus {
   outline: 0;
 }

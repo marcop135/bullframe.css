@@ -21,6 +21,10 @@
   transition: all 0.2s;
 }
 
+.bf-btn:focus {
+  outline: 0;
+}
+
 .bf-btn:hover,
 .bf-btn:active,
 .bf-btn:focus {
@@ -66,4 +70,10 @@
   opacity: 0.5 !important;
   background-color: var(--bf-gray-light);
   outline: none !important;
+}
+
+@media (forced-colors: active) {
+  .bf-btn {
+    border: 1px solid ButtonText;
+  }
 }

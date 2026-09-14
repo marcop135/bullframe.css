@@ -1,5 +1,5 @@
-/* Screen-reader and keyboard helpers. Shipped in every build, including
- * classless, so skip links work without pulling in the .bf-* utilities. */
+/* Screen-reader and keyboard helpers (.bf-sr-only, .bf-skip-link, .bf-focusable).
+ * Class-based and utilities builds only; classless ships no .bf-* classes. */
 
 /* Visually hidden; available to screen readers (h5bp / Snook). */
 .bf-sr-only {

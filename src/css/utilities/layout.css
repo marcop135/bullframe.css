@@ -30,7 +30,7 @@
 }
 
 /* .bf-sr-only, .bf-focusable and .bf-skip-link live in
- * miscellaneous/a11y-helpers.css so the classless builds get them too. */
+ * miscellaneous/a11y-helpers.css (class-based and utilities builds). */
 
 .bf-invisible {
   visibility: hidden !important;

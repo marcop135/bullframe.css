@@ -13,6 +13,10 @@ DirectoryIndex index.html
   # Force /kitchen-sink trailing slash
   RewriteRule ^kitchen-sink$ /kitchen-sink/ [R=301,L]
 
+  # VitePress gallery is examples.html; physical examples/ holds slug templates.
+  # Map /examples and /examples/ to the gallery; leave /examples/{slug}/ alone.
+  RewriteRule ^examples/?$ /examples.html [L]
+
   # Legacy /demo → /kitchen-sink
   RewriteRule ^demo/?$ /kitchen-sink/ [R=301,L]
   RewriteRule ^demo/(.*)$ /kitchen-sink/$1 [R=301,L]

@@ -116,14 +116,15 @@ Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/a
   <head>
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
   </head>
   <body>
-    <div class="bf-container">
+    <a class="bf-skip-link" href="#main">Skip to content</a>
+    <main id="main" class="bf-container">
       <h1>Hello, Bullframe CSS!</h1>
       <p>Class-based starter.</p>
-    </div>
+    </main>
   </body>
 </html>
 ```
@@ -136,7 +137,7 @@ Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/a
   <head>
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-wOR0wjfWF/k9hTANeN1G5aQwUaIWAtd62pvEL7VkSC+nwdtTNyjs8giAfnB91hX3" crossorigin="anonymous" />
     <style>
       body {
@@ -148,7 +149,8 @@ Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/a
     </style>
   </head>
   <body>
-    <main>
+    <a class="bf-skip-link" href="#main">Skip to content</a>
+    <main id="main">
       <h1>Hello, Bullframe CSS!</h1>
       <p>Semantic HTML only; no utility classes.</p>
     </main>

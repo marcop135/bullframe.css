@@ -114,6 +114,7 @@ Seven files in `dist/css/`, each with a minified twin and a source map. Pick one
 | [Components](https://bullframecss.marcopontili.com/components/) | Cards, modals, navigation, buttons |
 | [Theming](https://bullframecss.marcopontili.com/theming) | Colours and dark mode |
 | [API reference](https://bullframecss.marcopontili.com/api-reference) | Full token and class list |
+| [Changelog](./CHANGELOG.md) | Release notes |
 
 ## Contributing
 

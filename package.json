@@ -41,7 +41,7 @@
     "test:e2e:update": "playwright test --update-snapshots",
     "docs:dev": "npm run docs:sync-public && vitepress dev docs",
     "docs:sync-public": "node scripts/sync-docs-public.mjs",
-    "docs:api-reference": "node scripts/build-api-reference.mjs",
+    "docs:api-reference": "node scripts/build-api-reference.mjs && prettier --write docs/api-reference.md",
     "docs:sri": "node scripts/generate-sri.mjs && prettier --write docs/getting-started.md docs/theming.md docs/theming/dark-mode.md",
     "docs:build": "npm run build && npm run docs:sri && npm run docs:sync-public && vitepress build docs",
     "docs:preview": "vitepress preview docs",

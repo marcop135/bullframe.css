@@ -34,8 +34,7 @@
   /* Invalid / error */
   --bf-red: rgb(255 0 0);
 
-  /* Focus ring. Default keeps --bf-orange; re-point for 3:1 (WCAG 1.4.11).
-   * prefers-contrast: more raises it in accessibility-preferences.css. */
+  /* Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11) */
   --bf-focus-ring-color: var(--bf-orange);
   --bf-focus-ring-width: 0.2rem;
   --bf-focus-ring-offset: 0.3rem;

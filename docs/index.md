@@ -4,7 +4,6 @@ layout: home
 hero:
   name: Bullframe CSS
   text: Semantic by default. Any stack.
-  tagline: Classless when you want it. System dark built in.
   image:
     src: /bullframe-hero.png
     alt: Bullframe CSS

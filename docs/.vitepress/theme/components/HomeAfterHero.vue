@@ -5,7 +5,7 @@ import ExamplesGallery from './ExamplesGallery.vue';
 
 const tabs = installTabs;
 
-const activeId = ref('npm');
+const activeId = ref('cdn');
 const active = computed(() => tabs.find((t) => t.id === activeId.value) ?? tabs[0]);
 const installTitle = computed(() => active.value.title);
 

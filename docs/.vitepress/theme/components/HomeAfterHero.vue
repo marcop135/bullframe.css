@@ -84,7 +84,7 @@ const pillars = [
   {
     kicker: '02',
     label: 'Classless build',
-    detail: 'Point at bullframe-classless.css when the markup should stay plain HTML.',
+    detail: 'Point at bullframe-classless.css for plain HTML. No .bf-* classes in that build.',
   },
   {
     kicker: '03',

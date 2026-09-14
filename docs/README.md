@@ -51,6 +51,6 @@ Start with [Getting started](getting-started.md). Browse [Examples](examples.md)
 
 | | |
 |---|---|
-| [Accessibility](accessibility.md) | Focus, motion, contrast |
+| [Accessibility](accessibility.md) | Focus, motion, contrast, class helpers |
 | [Browser support](browser-support.md) | Browserslist `defaults` |
 | [API reference](api-reference.md) | Class and token index |

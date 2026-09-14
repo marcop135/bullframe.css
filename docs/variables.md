@@ -49,6 +49,18 @@ Bullframe CSS uses CSS custom properties (variables) for easy customization. All
 }
 ```
 
+### Focus Ring
+
+```css
+:root {
+  --bf-focus-ring-color: var(--bf-orange);
+  --bf-focus-ring-width: 0.2rem;
+  --bf-focus-ring-offset: 0.3rem;
+}
+```
+
+Under `prefers-contrast: more`, `--bf-focus-ring-color` is raised automatically for WCAG 1.4.11. Override these tokens to restyle keyboard focus globally. See [Accessibility](/accessibility).
+
 ## Spacing Variables
 
 ```css

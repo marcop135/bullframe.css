@@ -4,7 +4,7 @@ title: Accessibility
 
 # Accessibility
 
-Bullframe CSS ships WCAG AA contrast defaults (4.5:1 for normal text), visible `:focus-visible` rings, and screen-reader utilities so inclusive UIs need less custom CSS. Guidance follows [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and common [MDN accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) patterns.
+Bullframe ships WCAG AA contrast defaults (4.5:1 for normal text), visible `:focus-visible` rings, and ARIA attribute styling on every build. Class-based and utilities builds also include screen-reader and opt-in helpers. Guidance follows [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and common [MDN accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) patterns.
 
 ## Color Contrast (WCAG AA)
 
@@ -19,51 +19,56 @@ To check your own color overrides, use the [WebAIM Contrast Checker](https://web
 
 ## Focus Indicators
 
-Bullframe uses `:focus-visible` to show focus rings **only for keyboard navigation**, not mouse clicks:
+Bullframe uses `:focus-visible` to show focus rings **only for keyboard navigation**, not mouse clicks. Ring appearance comes from tokens:
 
 ```css
 :focus-visible {
-  outline: 0.2rem solid var(--bf-orange);
-  outline-offset: 0.3rem;
+  outline: var(--bf-focus-ring-width) solid var(--bf-focus-ring-color);
+  outline-offset: var(--bf-focus-ring-offset);
 }
 ```
 
-This avoids visual clutter for mouse users while keeping the interface navigable for keyboard users.
+Defaults match the previous orange ring. Under `prefers-contrast: more`, `--bf-focus-ring-color` rises to a darker amber so the ring meets WCAG 1.4.11 (3:1) on white, `--bf-light`, and `--bf-dark-bg`. Override the tokens on `:root` if you need a custom ring.
 
 ## Screen Reader Utilities
 
-Hide content visually while keeping it accessible to screen readers:
+Class-based and utilities builds only. Classless ships element styles and has no `.bf-*` classes.
 
 ```html
 <span class="bf-sr-only">This text is only visible to screen readers</span>
 
-<!-- Also focusable (e.g., skip links) -->
-<a class="bf-sr-only focusable" href="#main">Skip to main content</a>
+<!-- Preferred skip link (stays out of flow until focused) -->
+<a class="bf-skip-link" href="#main">Skip to content</a>
+
+<!-- Legacy pattern still works -->
+<a class="bf-sr-only bf-focusable" href="#main">Skip to main content</a>
 ```
+
+`.bf-focusable` is the prefixed alias for the older `.focusable` class; both work with `.bf-sr-only`.
 
 ## Reduced Motion
 
-For users who prefer reduced motion, apply `.bf-reduced-motion` to the `<body>` or any container:
+Class-based and utilities builds. Apply `.bf-reduced-motion` to `<body>` or a container:
 
 ```html
 <body class="bf-reduced-motion"></body>
 ```
 
-This disables animations and transitions when the user's system has `prefers-reduced-motion: reduce` enabled:
+When the user has `prefers-reduced-motion: reduce`, animations and transitions inside that tree are effectively disabled. Dialog enter transitions also respect reduced motion on every build without a class.
 
-```css
-@media (prefers-reduced-motion: reduce) {
-  .bf-reduced-motion * {
-    animation-duration: 1ms !important;
-    transition-duration: 0s !important;
-    scroll-behavior: auto !important;
-  }
-}
-```
+## Opt-in Helpers
+
+Class-based and utilities builds. Put these on `<html>` or a container when you need them:
+
+| Class                                                      | Purpose                                                                                     |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `.bf-scheme-light` / `.bf-scheme-dark` / `.bf-scheme-auto` | Sets `color-scheme` so native widgets match the page                                        |
+| `.bf-accent-native`                                        | Sets `accent-color` to `--bf-blue` on checkboxes, radios, range, and progress               |
+| `.bf-target-size`                                          | Minimum 24×24px hit boxes (WCAG 2.5.8); inline links in `p` / `li` / `td` / `dd` are exempt |
 
 ## ARIA Attribute Styling
 
-Bullframe automatically styles elements based on ARIA attributes:
+Every build styles elements based on ARIA attributes:
 
 | Attribute                          | Effect                                                             |
 | ---------------------------------- | ------------------------------------------------------------------ |
@@ -75,7 +80,7 @@ These styles use `:where()` for zero specificity, so they're easy to override.
 
 ## Semantic HTML
 
-Bullframe's classless variants (`bullframe-classless.css`) style semantic HTML elements directly. This means you get accessible, well-styled pages just by writing proper HTML:
+Classless builds (`bullframe-classless*.css`) style semantic HTML elements only. No `.bf-*` classes ship in those files. Write proper HTML and you get accessible base styling:
 
 ```html
 <nav>
@@ -92,6 +97,8 @@ Bullframe's classless variants (`bullframe-classless.css`) style semantic HTML e
   </article>
 </main>
 ```
+
+For skip links, screen-reader-only text, or the opt-in helpers above, use a class-based or utilities build.
 
 ## Tips
 

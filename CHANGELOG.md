@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.1.0] - 2026-09-14
+
+### Added
+
+- Focus ring tokens (`--bf-focus-ring-*`), with a stronger ring under `prefers-contrast: more` for WCAG 1.4.11.
+- Skip link and screen-reader helpers (`.bf-skip-link`, `.bf-sr-only`, `.bf-focusable`) in class-based and utilities builds.
+- Opt-in utilities: colour-scheme (`.bf-scheme-*`), target size (`.bf-target-size`), and native accent colour (`.bf-accent-native`).
+- Progressive `@supports` gates for `text-wrap: balance` and `scrollbar-gutter: stable`.
+
+### Changed
+
+- Split dark-mode sheets into shared element rules and `.bf-*` extras so classless dark stays element-only.
+- Classless builds are element styles only; `.bf-*` helpers stay on class-based and utilities builds.
+- Deduplicated spacing utility selectors (`.bf-m-*` / `.bf-m-b-*`, `.bf-p-*` / `.bf-p-b-*`); class names unchanged.
+- Reworked the GitHub README and documented the unversioned CDN URL for quick drop-in (pinned + SRI remain in the docs).
+
+### Fixed
+
+- Missing `caption` and `progress` dark overrides on classless always-dark.
+- Kitchen sink and example template accessibility (labels, landmarks, headings, embeds).
+- `/examples` and `/examples/` serving a 403 instead of the docs gallery.
+
+### Removed
+
+- Dead UA+ rules that never applied under the anonymous `@layer` (duplicate focus, table cell, abbr, hidden, summary, and iframe styles).
+
 ## [6.0.0] - 2026-07-31 - BREAKING CHANGES
 
 ### Changed
@@ -489,5 +515,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
 
-[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...HEAD
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...HEAD
+[6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

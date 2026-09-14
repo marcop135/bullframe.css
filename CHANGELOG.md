@@ -12,12 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Focus ring tokens (`--bf-focus-ring-*`); stronger under `prefers-contrast: more` (WCAG 1.4.11).
-- `.bf-skip-link`, `.bf-sr-only`, `.bf-focusable`, and opt-in `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native` on class-based and utilities builds.
+- `.bf-skip-link`, `.bf-focusable`, and opt-in `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native` (class-based and utilities only).
 - `@supports` gates for `text-wrap: balance` and `scrollbar-gutter: stable`.
 
 ### Changed
 
-- Classless builds are element-only; dark sheets split so classless dark stays free of `.bf-*`.
+- Dark sheets split into shared element rules and `.bf-*` extras so classless dark stays element-only.
 - Deduplicated spacing utility selectors (class names unchanged).
 - README install/CDN/examples; unversioned CDN for drop-in (pinned + SRI stay in the docs).
 
@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+- `.bf-*` accessibility helpers (`.bf-sr-only`, `.bf-skip-link`, `.bf-focusable`) and opt-in `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native` from classless builds.
 - Dead UA+ rules that never applied under the anonymous `@layer`.
 
 ## [6.0.0] - 2026-07-31 - BREAKING CHANGES

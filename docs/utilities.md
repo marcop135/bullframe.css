@@ -1,17 +1,19 @@
 # Utilities Overview
 
-Utility classes for layout, spacing, typography, tables, embeds, filters, and print.
+Utility classes for layout, spacing, typography, tables, embeds, filters, print, and a11y helpers. These ship in class-based builds and in `bullframe-utilities.css`. Classless builds have no `.bf-*` classes.
 
 ## Categories
 
 - [Grid System](/utilities/grid) - 12-column responsive grid
 - [Spacing](/utilities/spacing) - Margin and padding
-- [Text](/utilities/text) - Typography helpers
+- [Text](/utilities/text) - Typography helpers (includes `.bf-sr-only`)
 - [Tables](/utilities/tables) - Table and responsive table helpers
 - [Lists](/utilities/lists) - Unstyled and utility list classes
 - [Embeds](/utilities/embeds) - Responsive media embeds
 - [Filters](/utilities/filters) - Visual filter utilities
 - [Print](/utilities/print) - Print stylesheet helpers
+
+Skip link, reduced motion, colour-scheme, target size, and native accent helpers are documented under [Accessibility](/accessibility).
 
 ## Quick Reference
 

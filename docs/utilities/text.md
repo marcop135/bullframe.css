@@ -54,8 +54,10 @@ Hide text visually while keeping it accessible to screen readers:
 
 ## Screen Reader Only
 
-Show text only to screen readers:
+Show text only to screen readers (class-based and utilities builds):
 
 ```html
-<span class="bf-sr-only">Screen reader only</span> <span class="bf-sr-only focusable">Focusable screen reader text</span>
+<span class="bf-sr-only">Screen reader only</span> <span class="bf-sr-only bf-focusable">Focusable screen reader text</span>
 ```
+
+For a skip link that stays out of document flow until focused, prefer `.bf-skip-link`. See [Accessibility](/accessibility).

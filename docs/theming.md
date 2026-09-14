@@ -40,11 +40,13 @@ More on dark mode: [Dark Mode](/theming/dark-mode).
 
 ## Classless variants
 
-The same light / dark / system themes without utility classes:
+The same light / dark / system themes as element styles only (no `.bf-*` classes):
 
 - `bullframe-classless.css`
 - `bullframe-classless-dark.css`
 - `bullframe-classless-system-default.css`
+
+For skip links and other `.bf-*` helpers, use a class-based build or add `bullframe-utilities.css`.
 
 ## Customization
 

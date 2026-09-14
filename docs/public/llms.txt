@@ -14,10 +14,10 @@ Every docs page is also available as clean Markdown: append `.md` to the path (f
 - bullframe.css - class-based, light
 - bullframe-dark.css - class-based, always dark
 - bullframe-system-default.css - class-based, prefers-color-scheme
-- bullframe-classless.css - semantic HTML, light
+- bullframe-classless.css - semantic HTML only, light (no .bf-* classes)
 - bullframe-classless-dark.css - classless, always dark
 - bullframe-classless-system-default.css - classless, prefers-color-scheme
-- bullframe-utilities.css - utilities only
+- bullframe-utilities.css - .bf-* helpers only
 
 ## Docs
 

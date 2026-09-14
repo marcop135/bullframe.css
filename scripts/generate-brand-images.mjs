@@ -8,7 +8,7 @@
  * How it works: src/docs/brand/images/scene.mjs builds a standalone HTML
  * document sized to the exact output, Chromium screenshots it at
  * deviceScaleFactor 1, and the bytes are written straight to disk. Nothing is
- * resampled, recoloured, cropped or flood-filled after the fact — the previous
+ * resampled, recoloured, cropped or flood-filled after the fact. The previous
  * heroes were post-processed rasters, which is where the soft type, the stray
  * dashes and the blue fringe on the mascot came from.
  *
@@ -55,7 +55,7 @@ try {
     const { file, width, height, theme, layout, jpegQuality, transparent } = target;
 
     if (transparent && jpegQuality) {
-      throw new Error(`${file}: JPEG has no alpha channel — drop transparent or jpegQuality`);
+      throw new Error(`${file}: JPEG has no alpha channel, drop transparent or jpegQuality`);
     }
 
     await page.setViewportSize({ width, height });

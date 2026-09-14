@@ -1,19 +1,19 @@
 /**
  * Scene builder for the generated brand images.
  *
- * Returns a standalone HTML document that Chromium screenshots 1:1 — the output
+ * Returns a standalone HTML document that Chromium screenshots 1:1; the output
  * PNG/JPEG is never resampled, which is what keeps the label type crisp. Every
  * coordinate is computed in whole pixels for the same reason: a box or a label
  * parked on a half pixel is the difference between a hairline and a smear.
  *
  * Two layouts share one geometry model:
  *   - `wide`   copy column on the left, artwork on the right (README 16:9, OG)
- *   - `square` artwork only (site hero — VitePress renders the copy beside it)
+ *   - `square` artwork only (site hero: VitePress renders the copy beside it)
  *
  * The artwork is three concentric frames labelled BODY / MAIN / ARTICLE with a
  * browser mock nested inside, i.e. the document outline the framework styles.
- * Each label is painted on the page background so it punches a real gap in the
- * frame border instead of sitting on top of a line that runs through it.
+ * Each label cuts a real gap in its frame border (see the mask script at the
+ * foot of the document) rather than sitting on a line that runs through it.
  */
 
 import { COPY, FONT_MONO, FONT_SANS, FRAME_LABELS, themeTokens } from './tokens.mjs';
@@ -27,7 +27,7 @@ const MASCOT_HEIGHT = 454;
 /**
  * Artwork box and the derived frame/window rectangles, in canvas pixels.
  * The browser mock sits one full step inside the innermost (ARTICLE) frame, so
- * all three frames close on every side — nothing is clipped by the mock.
+ * all three frames close on every side; nothing is clipped by the mock.
  */
 function geometry({ width, height, layout }) {
   let box;
@@ -62,7 +62,7 @@ function geometry({ width, height, layout }) {
   mock.bar = Math.min(52, Math.max(38, Math.round(mock.w * 0.105)));
   mock.view = mock.h - mock.bar;
   // Leave headroom above the horns, and never upscale past the mascot's native
-  // height — enlarging a raster is exactly the softness we are removing.
+  // height: enlarging a raster is exactly the softness we are removing.
   mock.mascot = Math.min(MASCOT_HEIGHT, mock.view - Math.round(mock.view * 0.06));
 
   return { box, step, frames, mock };
@@ -71,7 +71,7 @@ function geometry({ width, height, layout }) {
 /**
  * One labelled frame. `i === 0` (BODY) is dashed: the outer edge of the page.
  *
- * The label does not paint a background to hide the border behind it — that
+ * The label does not paint a background to hide the border behind it, and that
  * only works on an opaque canvas, and the site hero renders transparent. The
  * inline script below masks the gap out of the frame instead, measured from the
  * laid-out label, so the border is genuinely absent under the text.
@@ -168,7 +168,7 @@ function escapeHtml(value) {
  * @param {string} options.mascotDataUri  `data:image/png;base64,…` for the mascot.
  * @param {boolean} [options.transparent] Drop the page fill and the accent wash
  *   so the art sits directly on whatever renders it. Used by the docs-site hero,
- *   which then needs no theme-matched backdrop. PNG only — JPEG has no alpha.
+ *   which then needs no theme-matched backdrop. PNG only, since JPEG has no alpha.
  * @returns {string} A complete HTML document sized exactly to the output.
  */
 export function buildScene({ width, height, theme, layout, mascotDataUri, transparent = false }) {
@@ -266,7 +266,7 @@ export function buildScene({ width, height, theme, layout, mascotDataUri, transp
     background-color: ${t.viewport};
     /* Mascot is drawn flush to its own right/bottom edge: anchor it there and
        scale by height only, so it never stretches. Height comes from geometry()
-       and is capped at the source's native 454px — no upscaling, no softness. */
+       and is capped at the source's native 454px: no upscaling, no softness. */
     background-repeat: no-repeat;
     background-position: right bottom;
   }

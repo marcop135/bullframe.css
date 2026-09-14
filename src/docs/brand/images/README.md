@@ -13,7 +13,7 @@ npm run brand:images -- --only readme|hero|og
 
 `scene.mjs` builds one standalone HTML document sized to the exact output.
 Chromium screenshots it at `deviceScaleFactor: 1` and the bytes go straight to
-disk — nothing is resampled, recoloured or cropped afterwards. That is the whole
+disk; nothing is resampled, recoloured or cropped afterwards. That is the whole
 point: the previous heroes were post-processed rasters, which is where the soft
 type, the stray dashes and the blue fringe on the mascot came from.
 
@@ -25,7 +25,7 @@ type, the stray dashes and the blue fringe on the mascot came from.
 | `mascot-bull-ok.png` | The only raster input. Alpha-cut, placed, never recoloured |
 
 Outputs are listed in `targets.mjs` and land in `src/docs/github-readme/` and
-`docs/public/`. Nothing here ships to npm — `package.json` `files` is
+`docs/public/`. Nothing here ships to npm: `package.json` `files` is
 `dist/css/` only.
 
 `bf-social-preview-1280x640.png` is the one output nothing links to: GitHub
@@ -40,9 +40,13 @@ hand after a regeneration.
 - **Light viewport in both themes.** The browser mock frames a _page_, so the
   orange mascot always sits on the ground it was drawn for and its cutout never
   shows a fringe.
-- **Labels punch the border.** `BODY` / `MAIN` / `ARTICLE` are painted on the
-  page background so they cut a real gap in the frame, instead of sitting on a
-  line that runs through them.
+- **Labels punch the border.** `BODY` / `MAIN` / `ARTICLE` cut a real gap out of
+  the frame with a composited mask, measured from the laid-out label once fonts
+  settle. Painting a background strip behind them would look the same on an
+  opaque canvas and break on the transparent site hero.
+- **Transparency is per target.** `transparent: true` drops the page fill and
+  the accent wash; it is PNG-only, and the generator refuses it alongside
+  `jpegQuality`.
 
 ## Changing the artwork
 

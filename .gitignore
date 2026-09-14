@@ -49,3 +49,6 @@ test-results/
 .playwright-mcp/
 tests/e2e/.design-check/
 .tmp/
+
+# Brand hero review renders (npm run brand:heroes)
+src/docs/brand/heroes/review/

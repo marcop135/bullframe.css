@@ -3,6 +3,9 @@
 /* Variables */
 @import './variables.css';
 
+/* Accessibility helpers (class-only, no element styles) */
+@import './miscellaneous/a11y-helpers.css';
+
 /* Utilities */
 @import './utilities/layout.css';
 @import './utilities/texts.css';
@@ -17,5 +20,8 @@
 @import './utilities/embeds.css';
 @import './utilities/reduced-motion.css';
 @import './utilities/font-smoothing.css';
+@import './utilities/color-scheme.css';
+@import './utilities/target-size.css';
+@import './utilities/accent-color.css';
 @import './utilities/print.css';
 @import './utilities/filters.css';

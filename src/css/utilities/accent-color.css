@@ -1,0 +1,6 @@
+/* Opt-in accent-color: native checkbox, radio, range and progress follow
+ * --bf-blue instead of the UA default. Put it on <html> or any container. */
+
+.bf-accent-native {
+  accent-color: var(--bf-blue);
+}

@@ -1,4 +1,5 @@
-/* Classless + system dark via prefers-color-scheme. */
+/* Classless + system dark via prefers-color-scheme (element styles only). */
 
 @import './bullframe-classless.css';
-@import './utility-global-dark-prefers.css';
+@import './utility-global-dark-classless.css' (prefers-color-scheme: dark);
+@import './utilities/global-dark-scrollbars.css' (prefers-color-scheme: dark);

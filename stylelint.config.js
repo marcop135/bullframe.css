@@ -16,7 +16,7 @@ export default {
     "at-rule-empty-line-before": null,
     "declaration-empty-line-before": null,
     "media-feature-range-notation": "prefix",
-    "no-duplicate-selectors": null,
+    "no-duplicate-selectors": true,
     "declaration-block-single-line-max-declarations": null,
     "selector-id-pattern": null,
 
@@ -36,7 +36,7 @@ export default {
     "selector-not-notation": null,
 
     // Allow shorthand/longhand overlap (intentional in normalization CSS)
-    "declaration-block-no-redundant-longhand-properties": null,
+    "declaration-block-no-redundant-longhand-properties": true,
 
     // Allow missing generic font families in utility classes
     "font-family-no-missing-generic-family-keyword": null,

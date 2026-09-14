@@ -1,8 +1,8 @@
-/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+/* ! Bullframe CSS v6.1.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
-/* Classless + system dark via prefers-color-scheme. */
+/* Classless + system dark via prefers-color-scheme (element styles only). */
 
-/* Classless build: semantic element styles only (no .bf-* utilities). */
+/* Classless build: semantic element styles only (no .bf-* classes). */
 
 /* Variables */
 /* Design tokens (--bf-*). Shared by every build variant.
@@ -33,6 +33,11 @@
 
   /* Invalid / error */
   --bf-red: rgb(255 0 0);
+
+  /* Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11) */
+  --bf-focus-ring-color: var(--bf-orange);
+  --bf-focus-ring-width: 0.2rem;
+  --bf-focus-ring-offset: 0.3rem;
 
   /* Dark-mode surfaces (used by utility-global-dark*.css) */
   --bf-dark-bg: rgb(28 28 28);
@@ -111,11 +116,6 @@ template {
  * Light UA improvements; complements Bullframe base styles. */
 
 @layer {
-  /* Spacing between content and focus outline (enhances focus.css). */
-  :focus-visible {
-    outline-offset: 3px;
-  }
-
   /* Disable mobile landscape text inflation on optimized layouts. */
   html {
     -webkit-text-size-adjust: none;
@@ -123,27 +123,17 @@ template {
          text-size-adjust: none;
   }
 
-  /* Comfortable default root line-height (body still uses --bf-body-line-height). */
-  html {
-    line-height: 1.5;
-  }
-
   /* Stable scrollbar gutter avoids layout jump on short pages. */
-  html {
-    scrollbar-gutter: stable;
+  @supports (scrollbar-gutter: stable) {
+    html {
+      scrollbar-gutter: stable;
+    }
   }
 
   /* Nested h1 size/margin: match modern UA (Safari still nests sectioning styles). */
   h1 {
     font-size: 2em;
     margin-block: 0.67em;
-  }
-
-  /* abbr[title]: dotted underline + help cursor across engines. */
-  abbr[title] {
-    cursor: help;
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
   }
 
   /* mark: system Highlight colors under forced-colors. */
@@ -215,15 +205,10 @@ template {
     direction: ltr;
   }
 
-  /* Tables: collapsed borders + cell padding for scanability. */
+  /* Tables: outer border. Cell borders and padding come from
+   * miscellaneous/tables.css, which is unlayered and therefore wins. */
   table {
     border: 1px solid currentColor;
-  }
-
-  th,
-  td {
-    border: 1px solid currentColor;
-    padding: 0.25em 0.5em;
   }
 
   /* Soft dialog / popover enter transitions (skip when reduced-motion is on). */
@@ -259,24 +244,9 @@ template {
     }
   }
 
-  /* Keep [hidden] hard-hidden except until-found. */
-  [hidden]:not([hidden='until-found']) {
-    display: none !important;
-  }
-
   /* Images as blocks (max-width still from embedded-content.css). */
   img {
     display: block;
-  }
-
-  /* summary: pointer on the whole control, not only ::marker. */
-  summary {
-    cursor: default;
-  }
-
-  /* iframes: no default border. */
-  iframe {
-    border: none;
   }
 
   /* Popovers: anchor near trigger when position-area is supported. */
@@ -356,7 +326,18 @@ h6 {
   color: inherit;
   line-height: 1.25;
   margin-bottom: var(--bf-spacing-lg);
-  text-wrap: balance;
+}
+
+/* Balanced headings where supported; no-op elsewhere. */
+@supports (text-wrap: balance) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
 }
 
 h1 {
@@ -441,6 +422,7 @@ strong {
   font-weight: inherit;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors -- normalize.css Safari fix */
 b,
 strong {
   font-weight: bolder;
@@ -1116,7 +1098,7 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
-/* Keyboard-first focus: orange :focus-visible ring; mute mouse outline.
+/* Keyboard-first focus: :focus-visible ring from --bf-focus-ring-*; mute mouse outline.
  * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
 :where(:focus:not(:focus-visible)) {
@@ -1129,8 +1111,8 @@ a:not([href], [tabindex]):focus {
 }
 
 :focus-visible {
-  outline: 0.2rem solid var(--bf-orange);
-  outline-offset: 0.3rem;
+  outline: var(--bf-focus-ring-width) solid var(--bf-focus-ring-color);
+  outline-offset: var(--bf-focus-ring-offset);
 }
 
 /* Clear UA outline on text-like controls (styled fields keep their own chrome).
@@ -1155,8 +1137,7 @@ button:focus,
 [type='checkbox']:focus,
 input[list]:focus,
 select:focus,
-textarea:focus,
-.bf-btn:focus {
+textarea:focus {
   outline: 0;
 }
 /* List spacing and nav list reset. */
@@ -1187,7 +1168,6 @@ ol {
 nav ol,
 nav ul {
   list-style: none;
-  list-style-image: none;
   margin-left: 0;
 }
 
@@ -1430,6 +1410,12 @@ caption {
     text-decoration: underline;
   }
 
+  /* Darker amber clears WCAG 1.4.11 (3:1) on white, --bf-light and --bf-dark-bg;
+   * the default --bf-orange ring is only ~2:1 on white. */
+  :root {
+    --bf-focus-ring-color: rgb(184 115 0);
+  }
+
   :focus-visible {
     outline-width: 0.3rem;
     outline-offset: 0.4rem;
@@ -1468,17 +1454,19 @@ caption {
   button,
   [type='button'],
   [type='reset'],
-  [type='submit'],
-  .bf-btn {
+  [type='submit'] {
     border: 1px solid ButtonText;
   }
 }
-/* System-preference dark: shared dark rules + scrollbars under prefers-color-scheme.
- * postcss-import wraps each import in the media query at build time. */
 @media (prefers-color-scheme: dark) {
 
-/* Shared dark-mode rules for always-dark and prefers-color-scheme builds.
- * Variant-only extras: utility-global-dark.css. Scrollbars: global-dark-scrollbars.css.
+/* Always-dark overrides for classless (no media query, no .bf-* selectors). */
+}
+@media (prefers-color-scheme: dark) {
+
+/* Element-level dark-mode rules, shared by the class-based and classless dark
+ * sheets. Contains no .bf-* selector, so the classless builds can import it as
+ * they are. Class-based extras live in _utility-global-dark-shared.css.
  * Underscore prefix excludes this file from the buildAllCss glob. */
 
 html {
@@ -1565,17 +1553,6 @@ textarea:focus {
   box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
 }
 
-.bf-focused {
-  border-color: var(--bf-dark-border-focus) !important;
-  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
-}
-
-.bf-invalid,
-.bf-invalid:focus {
-  color: var(--bf-dark-invalid) !important;
-  border-color: var(--bf-dark-invalid) !important;
-}
-
 select:not([size], select[multiple]) {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23f0f0f0' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
 }
@@ -1608,8 +1585,7 @@ textarea::placeholder {
 button,
 [type='button'],
 [type='reset'],
-[type='submit'],
-.bf-btn {
+[type='submit'] {
   background: var(--bf-gray-light);
 }
 
@@ -1624,10 +1600,7 @@ button:focus,
 [type='reset']:focus,
 [type='submit']:hover,
 [type='submit']:active,
-[type='submit']:focus,
-.bf-btn:hover,
-.bf-btn:active,
-.bf-btn:focus {
+[type='submit']:focus {
   background: var(--bf-dark-button-hover);
 }
 
@@ -1638,35 +1611,8 @@ button:focus,
 [type='reset']:active,
 [type='reset']:focus,
 [type='submit']:active,
-[type='submit']:focus,
-.bf-btn:active,
-.bf-btn:focus {
+[type='submit']:focus {
   box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
-}
-
-.bf-btn.bf-btn--primary {
-  background: var(--bf-blue);
-}
-
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
-  background: var(--bf-blue-light);
-}
-
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
-}
-
-.bf-table th,
-.bf-table td {
-  border-color: var(--bf-gray-dark);
-}
-
-.bf-table--zebra tbody tr:nth-child(odd),
-.bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: var(--bf-gray-dark-extra);
 }
 
 dialog {
@@ -1691,6 +1637,19 @@ progress[value]::-webkit-progress-value {
   background: var(--bf-blue);
 }
 }
+
+@media (prefers-color-scheme: dark) {
+
+a:focus,
+input:focus {
+  outline-color: rgb(214 140 0); /* orange -15% */
+}
+
+:focus-visible {
+  outline-color: rgb(214 140 0); /* orange -15% */
+}
+}
+
 @media (prefers-color-scheme: dark) {
 
 /* Dark scrollbar colors (Firefox + WebKit). */

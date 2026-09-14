@@ -109,49 +109,6 @@ function buildAllCss() {
   };
 }
 
-// Copy static files from src/docs to dist/docs (kitchen sink HTML, images, etc.)
-function copyDocsFiles() {
-  return {
-    name: 'copy-docs-files',
-    closeBundle() {
-      const srcDir = path.resolve(__dirname, 'src/docs');
-      const destDir = path.resolve(__dirname, 'dist/docs');
-
-      // Skip brand/examples: source of truth is src/docs + docs:sync-public.
-      const skipTopLevel = new Set(['brand', 'examples']);
-
-      function copyRecursive(src, dest) {
-        if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
-
-        const entries = fs.readdirSync(src, { withFileTypes: true });
-
-        for (const entry of entries) {
-          const srcPath = path.join(src, entry.name);
-          const destPath = path.join(dest, entry.name);
-
-          if (entry.isDirectory()) {
-            copyRecursive(srcPath, destPath);
-          } else {
-            fs.copyFileSync(srcPath, destPath);
-          }
-        }
-      }
-
-      if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
-      for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
-        if (skipTopLevel.has(entry.name)) continue;
-        const srcPath = path.join(srcDir, entry.name);
-        const destPath = path.join(destDir, entry.name);
-        if (entry.isDirectory()) {
-          copyRecursive(srcPath, destPath);
-        } else {
-          fs.copyFileSync(srcPath, destPath);
-        }
-      }
-    },
-  };
-}
-
 // Main Vite config
 export default defineConfig({
   root: 'src', // Vite project root
@@ -160,7 +117,8 @@ export default defineConfig({
     emptyOutDir: true, // Clean before build
     rollupOptions: {
       // Avoid HTML MPA input: Vite's html-inline-proxy breaks on Windows with
-      // inline <style> in the kitchen sink. Docs HTML is copied by the plugin.
+      // inline <style> in the kitchen sink. Docs HTML never enters the bundle —
+      // `npm run docs:sync-public` copies src/docs/ into docs/public/ instead.
       input: path.resolve(__dirname, 'scripts/vite-css-entry.js'),
       output: {
         entryFileNames: `[name].js`,
@@ -173,7 +131,6 @@ export default defineConfig({
   },
   plugins: [
     buildAllCss(),
-    copyDocsFiles(),
     {
       name: 'omit-noop-entry',
       generateBundle(_options, bundle) {

@@ -24,8 +24,8 @@ Do not add a `bullframe-modern.css` build back.
 
 ## Git
 
-- Active work targets **`main`**. Open PRs into `main`.
-- Push to `main` triggers [Deploy docs](.github/workflows/deploy-docs.yaml) (needs FTP secrets), or run via `workflow_dispatch`.
+- Feature work branches off **`develop`** and opens PRs into `develop`. Release PRs go `develop` into `main`.
+- Push to `main` triggers [Deploy docs](.github/workflows/deploy-docs.yaml) (needs FTP secrets), or run via `workflow_dispatch`. `develop` does not deploy.
 - Do not force-push shared branches unless explicitly requested.
 - No agent / Cursor attribution in commits or PRs.
 

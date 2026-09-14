@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Classless dark CSS: element rules only. `.bf-*` dark rules stay in the class-based dark builds.
 - Spacing utility CSS is smaller. Public class names are the same.
 - README: install, CDN, examples. Unversioned CDN in the README; pinned URL + SRI in the docs.
+- README hero, docs header image, `og:image`, and social image artwork.
 
 ### Fixed
 

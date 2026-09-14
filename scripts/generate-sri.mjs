@@ -2,8 +2,8 @@
  * Generate Subresource Integrity (SRI) hashes for the seven published min builds.
  *
  * Reads dist/css/*.min.css, writes docs/public/sri.json, and refreshes the
- * recommended CDN snippets in getting-started / theming docs (not README or
- * the docs home install tab, which keep the short package CDN URL).
+ * recommended CDN snippets in README / getting-started / theming docs (not the
+ * docs home install tab, which keeps the short package CDN URL).
  *
  * Run after `npm run build` (hashes must match the files you publish):
  *   npm run docs:sri
@@ -116,6 +116,10 @@ ${defaultLinkSlash}
 Swap the filename for another build (\`bullframe-classless.min.css\`, \`bullframe-dark.min.css\`, …). Hashes for all seven builds: [sri.json](/sri.json).`;
 
 patchMarked('docs/getting-started.md', 'sri:cdn', cdnSectionMd);
+
+// README carries only the pinned + SRI snippet; the prose around it is hand-written.
+// README.md is the sole entry in .prettierignore, so it is never passed to prettier.
+patchMarked('README.md', 'sri:cdn', `\`\`\`html\n${defaultLinkSlash}\n\`\`\``);
 
 function fenceLink(file) {
   return `\`\`\`html\n${linkTag(file, hashes[file], { selfClosing: true })}\n\`\`\``;

@@ -117,9 +117,13 @@ Swap the filename for another build (\`bullframe-classless.min.css\`, \`bullfram
 
 patchMarked('docs/getting-started.md', 'sri:cdn', cdnSectionMd);
 
-// README carries only the pinned + SRI snippet; the prose around it is hand-written.
+// README keeps the short package-root CDN URL; prose around it is hand-written.
 // README.md is the sole entry in .prettierignore, so it is never passed to prettier.
-patchMarked('README.md', 'sri:cdn', `\`\`\`html\n${defaultLinkSlash}\n\`\`\``);
+patchMarked(
+  'README.md',
+  'sri:cdn',
+  '```html\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">\n```'
+);
 
 function fenceLink(file) {
   return `\`\`\`html\n${linkTag(file, hashes[file], { selfClosing: true })}\n\`\`\``;

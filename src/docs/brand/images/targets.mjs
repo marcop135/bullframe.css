@@ -3,7 +3,7 @@
  *
  * Every generated brand image is listed here exactly once, with the path that
  * ships it. Nothing under this directory is published to npm (package.json
- * `files` is `dist/css/` only) — these assets serve GitHub and the docs site.
+ * `files` is `dist/css/` only). These assets serve GitHub and the docs site.
  *
  * Consumers:
  *   - README.md            → src/docs/github-readme/bf-readme-hero-*-16x9.png

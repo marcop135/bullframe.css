@@ -124,7 +124,7 @@
 /*
  * Hero art ships with no backdrop of its own; the page shows through.
  * VitePress caps the stacked (narrow) hero image at 192px, which reads as a
- * thumbnail on a phone — size it off the viewport instead so it keeps its share
+ * thumbnail on a phone. Size it off the viewport instead, so it keeps its share
  * of the column at every width.
  */
 .VPHome .VPHero .image-src {

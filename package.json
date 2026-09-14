@@ -47,7 +47,9 @@
     "docs:preview": "vitepress preview docs",
     "examples:shots": "node scripts/capture-example-screenshots.mjs",
     "kitchen-sink:variants": "node scripts/generate-kitchen-sink-variants.mjs",
-    "brand:icons": "node scripts/render-brand-icons.mjs"
+    "brand:icons": "node scripts/render-brand-icons.mjs",
+    "brand:heroes": "node scripts/generate-brand-heroes.mjs",
+    "brand:heroes:review": "node scripts/generate-brand-heroes.mjs --desktop"
   },
   "repository": {
     "type": "git",

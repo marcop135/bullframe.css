@@ -45,7 +45,9 @@
     "docs:sri": "node scripts/generate-sri.mjs && prettier --write docs/getting-started.md docs/theming.md docs/theming/dark-mode.md",
     "docs:build": "npm run build && npm run docs:sri && npm run docs:sync-public && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "examples:shots": "node scripts/capture-example-screenshots.mjs"
+    "examples:shots": "node scripts/capture-example-screenshots.mjs",
+    "kitchen-sink:variants": "node scripts/generate-kitchen-sink-variants.mjs",
+    "brand:icons": "node scripts/render-brand-icons.mjs"
   },
   "repository": {
     "type": "git",

@@ -4,11 +4,11 @@ Install Bullframe, pick a markup mode and a theme, link one CSS file. Default bu
 
 ## Markup modes
 
-Two ways to write HTML. Same components and a11y defaults.
+Two ways to write HTML. Element-level a11y (focus rings, ARIA cursors, contrast preferences) ships in both. `.bf-*` helpers are class-based and utilities only.
 
 ### Class-based
 
-Use `.bf-*` for layout, buttons, and forms.
+Use `.bf-*` for layout, buttons, forms, skip links, and other helpers.
 
 ```html
 <link rel="stylesheet" href="…/bullframe.min.css" />
@@ -21,7 +21,7 @@ Use `.bf-*` for layout, buttons, and forms.
 
 ### Classless
 
-Element selectors only. No classes required for base styling.
+Element selectors only. No `.bf-*` classes in the stylesheet.
 
 ```html
 <link rel="stylesheet" href="…/bullframe-classless.min.css" />
@@ -68,7 +68,7 @@ Quick drop-in (latest published package entry):
 **Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe.min.css" integrity="sha384-UXvhLVyH1oK8aPptQI5JFQy0NBIPo4iW5KCOfj9N2dHOhmwoAlX2XKyAwZLy27DS" crossorigin="anonymous" />
 ```
 
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
@@ -104,7 +104,7 @@ import 'bullframe.css/utilities';
 
 ## Download
 
-Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v6.0.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
+Self-host from the [v6.1.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v6.1.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
 
 ## Starter HTML
 
@@ -116,14 +116,15 @@ Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/a
   <head>
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe.min.css" integrity="sha384-UXvhLVyH1oK8aPptQI5JFQy0NBIPo4iW5KCOfj9N2dHOhmwoAlX2XKyAwZLy27DS" crossorigin="anonymous" />
   </head>
   <body>
-    <div class="bf-container">
+    <a class="bf-skip-link" href="#main">Skip to content</a>
+    <main id="main" class="bf-container">
       <h1>Hello, Bullframe CSS!</h1>
       <p>Class-based starter.</p>
-    </div>
+    </main>
   </body>
 </html>
 ```
@@ -136,8 +137,8 @@ Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/a
   <head>
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-wOR0wjfWF/k9hTANeN1G5aQwUaIWAtd62pvEL7VkSC+nwdtTNyjs8giAfnB91hX3" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe-classless.min.css" integrity="sha384-vTCMnLv1WWuNZpdjd8IZFxHdNbj1eYFwEH01LrhqTiWQMkh+HQydRZCcStCpoVZe" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;
@@ -148,7 +149,7 @@ Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/a
     </style>
   </head>
   <body>
-    <main>
+    <main id="main">
       <h1>Hello, Bullframe CSS!</h1>
       <p>Semantic HTML only; no utility classes.</p>
     </main>
@@ -160,15 +161,15 @@ Self-host from the [v6.0.0 archive](https://github.com/marcop135/bullframe.css/a
 
 Seven builds. Default build is about **8 KB gzipped**. No JavaScript runtime.
 
-| File                                     | Use when                            |
-| ---------------------------------------- | ----------------------------------- |
-| `bullframe.css`                          | Class-based, light                  |
-| `bullframe-dark.css`                     | Class-based, always dark            |
-| `bullframe-system-default.css`           | Class-based, `prefers-color-scheme` |
-| `bullframe-classless.css`                | Classless, light                    |
-| `bullframe-classless-dark.css`           | Classless, always dark              |
-| `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`   |
-| `bullframe-utilities.css`                | Utilities companion only            |
+| File                                     | Use when                             |
+| ---------------------------------------- | ------------------------------------ |
+| `bullframe.css`                          | Class-based, light                   |
+| `bullframe-dark.css`                     | Class-based, always dark             |
+| `bullframe-system-default.css`           | Class-based, `prefers-color-scheme`  |
+| `bullframe-classless.css`                | Classless, light (elements only)     |
+| `bullframe-classless-dark.css`           | Classless, always dark               |
+| `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`    |
+| `bullframe-utilities.css`                | `.bf-*` helpers only, no base styles |
 
 Upgrading from v5: [Migration](/migration).
 

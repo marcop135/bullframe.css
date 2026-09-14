@@ -15,7 +15,9 @@ CLAUDE.md
 # Docs, demos, sources (rebuild from the git repo, not the npm tarball)
 docs
 src
+src/docs/brand/images
 scripts
+scripts/generate-brand-images.mjs
 tests
 playwright-report
 test-results
@@ -50,7 +52,6 @@ package-lock.json
 
 # Local scratch / caches / screenshots
 .tmp
-.tmp-heroes
 .tmp-favicon
 .cache
 .vite

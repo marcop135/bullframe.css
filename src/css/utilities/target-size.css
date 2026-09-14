@@ -1,0 +1,26 @@
+/* Opt-in minimum target size (WCAG 2.5.8, 24x24 CSS px).
+ * Grows the hit box only; the painted control keeps its size. */
+
+.bf-target-size,
+.bf-target-size a,
+.bf-target-size button,
+.bf-target-size [type='button'],
+.bf-target-size [type='reset'],
+.bf-target-size [type='submit'],
+.bf-target-size [type='checkbox'],
+.bf-target-size [type='radio'],
+.bf-target-size select,
+.bf-target-size summary,
+.bf-target-size .bf-btn {
+  min-block-size: 24px;
+  min-inline-size: 24px;
+}
+
+/* Inline links in running text are exempt (WCAG 2.5.8 inline exception). */
+.bf-target-size p a,
+.bf-target-size li a,
+.bf-target-size td a,
+.bf-target-size dd a {
+  min-block-size: 0;
+  min-inline-size: 0;
+}

@@ -6,6 +6,12 @@
     text-decoration: underline;
   }
 
+  /* Darker amber clears WCAG 1.4.11 (3:1) on white, --bf-light and --bf-dark-bg;
+   * the default --bf-orange ring is only ~2:1 on white. */
+  :root {
+    --bf-focus-ring-color: rgb(184 115 0);
+  }
+
   :focus-visible {
     outline-width: 0.3rem;
     outline-offset: 0.4rem;
@@ -44,8 +50,7 @@
   button,
   [type='button'],
   [type='reset'],
-  [type='submit'],
-  .bf-btn {
+  [type='submit'] {
     border: 1px solid ButtonText;
   }
 }

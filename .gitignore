@@ -10,9 +10,8 @@ node_modules/
 .tmp-heroes/
 pw-ci-artifacts/
 
-# Vite copyDocsFiles noise (source of truth: src/docs/ → docs:sync-public)
-dist/docs/brand/
-dist/docs/examples/
+# Stale build output. dist/ ships CSS only; docs assets go src/docs/ → docs/public/
+dist/docs/
 
 # Logs
 npm-debug.log*
@@ -39,8 +38,7 @@ docs/public/examples/
 .netlify/
 
 # Claude Code local settings and scratch worktrees
-.claude/settings.local.json
-.claude/worktrees/
+.claude/
 
 # Playwright artifacts (keep tests/e2e/__screenshots__ baselines tracked)
 playwright-report/

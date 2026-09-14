@@ -30,7 +30,7 @@ The CDN link also changes:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@5" />
 
 <!-- v6: pin a version; add integrity + crossorigin for SRI (see Getting started) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe.min.css" />
 ```
 
 ## 2. Replace Sass Variables with CSS Custom Properties
@@ -116,11 +116,17 @@ See [Dark Mode](/theming/dark-mode) for implementation details.
 
 v6 adds built-in support for:
 
-- `:focus-visible` keyboard-only focus indicators
-- `prefers-reduced-motion` via `.bf-reduced-motion`
-- ARIA attribute styling (`aria-busy`, `aria-disabled`, `aria-hidden`)
+- `:focus-visible` keyboard-only focus indicators (every build)
+- ARIA attribute styling (`aria-busy`, `aria-disabled`, `aria-hidden`) on every build
+- `prefers-reduced-motion` via `.bf-reduced-motion` on class-based and utilities builds
 
-These are included automatically; no migration needed.
+### v6.1 notes
+
+- Focus ring tokens: `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`
+- `.bf-skip-link`, `.bf-focusable`, and opt-in `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native` on class-based and utilities builds
+- Classless builds stay element styles only (no `.bf-*` classes)
+
+See [Accessibility](/accessibility).
 
 ## Need Help?
 

@@ -26,7 +26,6 @@ ol {
 nav ol,
 nav ul {
   list-style: none;
-  list-style-image: none;
   margin-left: 0;
 }
 

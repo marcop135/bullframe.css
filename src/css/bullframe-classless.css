@@ -1,4 +1,4 @@
-/* Classless build: semantic element styles only (no .bf-* utilities). */
+/* Classless build: semantic element styles only (no .bf-* classes). */
 
 /* Variables */
 @import './variables.css';

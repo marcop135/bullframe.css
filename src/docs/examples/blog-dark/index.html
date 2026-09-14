@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="custom.css" />
   </head>
   <body>
-    <header class="ex-bar" aria-label="Example chrome">
+    <header class="ex-bar">
       <div class="ex-blog-shell">
         <p>
           <a href="/examples">← Examples</a> ·
@@ -21,59 +21,57 @@
     </header>
 
     <div class="ex-blog-shell ex-blog-layout">
-      <div class="ex-blog-primary">
-        <header class="ex-blog-hero" aria-label="Article title">
+      <main id="main-content" class="ex-blog-primary">
+        <header class="ex-blog-hero">
           <p class="ex-blog__meta">March 12, 2026 · Field notes · 4 min read</p>
           <h1>Packing light for a week of site drafts</h1>
           <p class="ex-blog__lead">What stays in the kit when the job is mostly markup, screenshots, and a quiet place to write.</p>
           <p class="ex-blog__byline">By <strong>Marco Pontili</strong> · Munich</p>
         </header>
 
-        <main>
-          <article>
-            <p>Most of the week is not design-system work. It is outlines, a few reference shots, and pages that need to read cleanly on a laptop and a phone. The less ceremony around that, the better.</p>
-            <p>I keep one stylesheet, ordinary HTML, and a short list of habits: one <code>h1</code>, real lists, and figures with captions. Grids and spacing helpers only show up when the layout needs them.</p>
+        <article>
+          <p>Most of the week is not design-system work. It is outlines, a few reference shots, and pages that need to read cleanly on a laptop and a phone. The less ceremony around that, the better.</p>
+          <p>I keep one stylesheet, ordinary HTML, and a short list of habits: one <code>h1</code>, real lists, and figures with captions. Grids and spacing helpers only show up when the layout needs them.</p>
 
-            <figure>
-              <img src="/examples/album/thumbs/harbor.svg" width="640" height="400" alt="Harbor at sunrise" />
-              <figcaption>Morning light on the dock. Sample figure for the layout.</figcaption>
-            </figure>
+          <figure>
+            <img src="/examples/album/thumbs/harbor.svg" width="640" height="400" alt="Harbor at sunrise" />
+            <figcaption>Morning light on the dock. Sample figure for the layout.</figcaption>
+          </figure>
 
-            <h2 id="kit">What stays in the kit</h2>
-            <p>A laptop, a second monitor when available, and a folder of unfinished drafts. Prefer real headings over nested <code>div</code> trees so the structure stays clear for readers and tools.</p>
-            <p>
-              Inline styles still work the way authors expect:
-              <strong>strong</strong>, <em>emphasis</em>, <code>code</code>, and <a href="/getting-started">plain links</a>.
-            </p>
-            <blockquote>
-              <p>Write the page first. Style it second.</p>
-            </blockquote>
+          <h2 id="kit">What stays in the kit</h2>
+          <p>A laptop, a second monitor when available, and a folder of unfinished drafts. Prefer real headings over nested <code>div</code> trees so the structure stays clear for readers and tools.</p>
+          <p>
+            Inline styles still work the way authors expect:
+            <strong>strong</strong>, <em>emphasis</em>, <code>code</code>, and <a href="/getting-started">plain links</a>.
+          </p>
+          <blockquote>
+            <p>Write the page first. Style it second.</p>
+          </blockquote>
 
-            <h2 id="routine">A simple routine</h2>
-            <ol>
-              <li>Sketch the outline in plain text.</li>
-              <li>Move it into HTML with real headings.</li>
-              <li>Check contrast and focus on a phone-width viewport.</li>
-            </ol>
+          <h2 id="routine">A simple routine</h2>
+          <ol>
+            <li>Sketch the outline in plain text.</li>
+            <li>Move it into HTML with real headings.</li>
+            <li>Check contrast and focus on a phone-width viewport.</li>
+          </ol>
 
-            <h2 id="install">Link one file</h2>
-            <p>For classless dark pages, one link is enough:</p>
-            <pre><code>&lt;link rel="stylesheet" href="bullframe-classless-dark.min.css" /&gt;</code></pre>
-            <p>Lists, tables, and forms then share the same tokens as the rest of the site.</p>
+          <h2 id="install">Link one file</h2>
+          <p>For classless dark pages, one link is enough:</p>
+          <pre><code>&lt;link rel="stylesheet" href="bullframe-classless-dark.min.css" /&gt;</code></pre>
+          <p>Lists, tables, and forms then share the same tokens as the rest of the site.</p>
 
-            <h2 id="checklist">Before you publish</h2>
-            <ul>
-              <li>One <code>h1</code>, then a clear <code>h2</code> ladder</li>
-              <li>A short lead under the title</li>
-              <li>Real lists instead of line breaks</li>
-              <li>A dark build if the reading surface should stay dark</li>
-            </ul>
+          <h2 id="checklist">Before you publish</h2>
+          <ul>
+            <li>One <code>h1</code>, then a clear <code>h2</code> ladder</li>
+            <li>A short lead under the title</li>
+            <li>Real lists instead of line breaks</li>
+            <li>A dark build if the reading surface should stay dark</li>
+          </ul>
 
-            <h2 id="next">More examples</h2>
-            <p>See the <a href="/examples">gallery</a>, the <a href="/kitchen-sink/">kitchen sink</a>, or <a href="/typography">typography</a> for the type scale.</p>
-          </article>
-        </main>
-      </div>
+          <h2 id="next">More examples</h2>
+          <p>See the <a href="/examples">gallery</a>, the <a href="/kitchen-sink/">kitchen sink</a>, or <a href="/typography">typography</a> for the type scale.</p>
+        </article>
+      </main>
 
       <aside class="ex-blog-sidebar" aria-label="Article sidebar">
         <section class="ex-blog-panel">

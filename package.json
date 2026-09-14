@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "type": "module",
   "description": "Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default. Any stack. Classless when you want it. System dark built in. Seven builds, solid cross-browser support.",
   "main": "dist/css/bullframe.css",
@@ -35,17 +35,21 @@
     "lint": "stylelint \"src/**/*.css\"",
     "lint:fix": "stylelint \"src/**/*.css\" --fix",
     "lint:html": "html-validate \"src/**/*.html\"",
-    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
-    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
+    "format": "prettier --write \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.mjs\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
+    "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.mjs\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
     "test:e2e": "playwright test",
     "test:e2e:update": "playwright test --update-snapshots",
     "docs:dev": "npm run docs:sync-public && vitepress dev docs",
     "docs:sync-public": "node scripts/sync-docs-public.mjs",
-    "docs:api-reference": "node scripts/build-api-reference.mjs",
+    "docs:api-reference": "node scripts/build-api-reference.mjs && prettier --write docs/api-reference.md",
     "docs:sri": "node scripts/generate-sri.mjs && prettier --write docs/getting-started.md docs/theming.md docs/theming/dark-mode.md",
     "docs:build": "npm run build && npm run docs:sri && npm run docs:sync-public && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "examples:shots": "node scripts/capture-example-screenshots.mjs"
+    "examples:shots": "node scripts/capture-example-screenshots.mjs",
+    "kitchen-sink:variants": "node scripts/generate-kitchen-sink-variants.mjs",
+    "brand:icons": "node scripts/render-brand-icons.mjs",
+    "brand:images": "node scripts/generate-brand-images.mjs",
+    "brand:images:check": "node scripts/generate-brand-images.mjs --check"
   },
   "repository": {
     "type": "git",

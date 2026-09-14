@@ -20,8 +20,11 @@ Tested against current Chromium and WebKit mobile. Forms (`select`, `range`) and
 
 ## Accessibility preferences
 
-- `prefers-reduced-motion`: dialog enter transitions are skipped when reduced motion is requested
+- `prefers-reduced-motion`: dialog enter transitions are skipped when reduced motion is requested; `.bf-reduced-motion` (class-based / utilities) opt-in disables motion inside a subtree
+- `prefers-contrast: more`: stronger focus ring via `--bf-focus-ring-color`
 - `forced-colors` / high contrast: marked text and related rules adapt under Windows forced colors where implemented
+
+Progressive CSS such as `text-wrap: balance` and `scrollbar-gutter: stable` is gated with `@supports` so unsupported engines skip those declarations.
 
 ## Checking support
 

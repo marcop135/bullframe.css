@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.1.0] - 2026-09-14
+
+### Added
+
+- CSS variables `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`.
+- `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native`.
+- `@supports` for `text-wrap: balance` and `scrollbar-gutter: stable`.
+
+### Changed
+
+- README: install, CDN, examples; unversioned CDN (docs stay pinned + SRI).
+- README, hero, OG, and social preview images regenerated from one source (`npm run brand:images`).
+
+### Fixed
+
+- `caption` and `progress` in classless always-dark.
+- Accessibility markup in the kitchen sink and examples.
+
+### Removed
+
+- Dead UA+ rules that never applied inside `@layer`.
+
 ## [6.0.0] - 2026-07-31 - BREAKING CHANGES
 
 ### Changed
@@ -489,5 +511,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
 
-[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...HEAD
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...HEAD
+[6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

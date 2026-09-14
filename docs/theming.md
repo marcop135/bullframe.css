@@ -9,7 +9,7 @@ Bullframe CSS provides multiple theme variants and easy customization options. O
 <!-- sri:cdn-light:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe.min.css" integrity="sha384-PmNrso3izTA34YeyStq0cOIHC+WeIrpAw8EIhflrUW7pZVJp4mqWXYmRC3GnWxR4" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe.min.css" integrity="sha384-UXvhLVyH1oK8aPptQI5JFQy0NBIPo4iW5KCOfj9N2dHOhmwoAlX2XKyAwZLy27DS" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-light:end -->
@@ -19,7 +19,7 @@ Bullframe CSS provides multiple theme variants and easy customization options. O
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-dark.min.css" integrity="sha384-jkBv9zPyzjYp7ExKBcp4Gm5ouJPhRo/rpqjKwkLSwTx8AUAh0RN55n+mETMMYSYu" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe-dark.min.css" integrity="sha384-yt2H5woAQDAF5yOwoeqTsT9gHnNy2K5z1agtrhYiip5eTtGzRNreZNozDUr7CHZ1" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->
@@ -31,7 +31,7 @@ Switches between light and dark from `prefers-color-scheme`:
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.0.0/dist/css/bullframe-system-default.min.css" integrity="sha384-LOW8rRdon0H88bBWmI2gZ1Q72ZoEYJiaLpIsn6uFjSU3uAHZDRghhzXPkymoaRYW" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe-system-default.min.css" integrity="sha384-Oc2OGESnGoNygg5hfUoaHHaxhbtPzJmMGj91fBX3S4QUgUcsxRWYBJjMhCqny5tG" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->
@@ -40,11 +40,13 @@ More on dark mode: [Dark Mode](/theming/dark-mode).
 
 ## Classless variants
 
-The same light / dark / system themes without utility classes:
+The same light / dark / system themes as element styles only (no `.bf-*` classes):
 
 - `bullframe-classless.css`
 - `bullframe-classless-dark.css`
 - `bullframe-classless-system-default.css`
+
+For skip links and other `.bf-*` helpers, use a class-based build or add `bullframe-utilities.css`.
 
 ## Customization
 

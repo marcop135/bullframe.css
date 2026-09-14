@@ -50,17 +50,17 @@
 
 ## Skip link
 
-The first focusable element on the page. Hidden by default; visible when keyboard-focused. Sends keyboard users past the nav to the main content.
+Class-based and utilities builds. The first focusable element on the page. Hidden by default; visible when keyboard-focused. Sends keyboard users past the nav to the main content.
 
 ```html
-<a class="bf-sr-only focusable" href="#main">Skip to content</a>
+<a class="bf-skip-link" href="#main">Skip to content</a>
 <!-- ...header, nav... -->
 <main id="main" tabindex="-1">
   <!-- content -->
 </main>
 ```
 
-`tabindex="-1"` on `<main>` makes it focusable when the skip link activates. Without it, the browser jumps to the anchor visually but doesn't move focus.
+`tabindex="-1"` on `<main>` makes it focusable when the skip link activates. Without it, the browser jumps to the anchor visually but doesn't move focus. Legacy `.bf-sr-only.bf-focusable` still works; `.bf-skip-link` is preferred because it does not reflow the page when revealed.
 
 ## Sidebar nav
 

@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `caption` and `progress` in classless always-dark.
 - Accessibility markup in the kitchen sink and examples.
+- Docs site cache headers, so a new release reaches returning visitors.
 
 ### Removed
 

@@ -1,8 +1,14 @@
 const { defineConfig } = require("html-validate");
 
 module.exports = defineConfig({
-  extends: ["html-validate:recommended"],
+  extends: ["html-validate:recommended", "html-validate:a11y"],
   rules: {
+    // From html-validate:document. The demo pages are the framework's own
+    // accessibility showcase, so unlabelled controls and skipped heading
+    // levels are bugs, not demo licence.
+    "input-missing-label": "error",
+    "heading-level": "error",
+
     // Demo pages intentionally use inline styles for showcasing
     "no-inline-style": "off",
     // Demo pages showcase all input types including deprecated ones

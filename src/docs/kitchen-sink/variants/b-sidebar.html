@@ -261,6 +261,7 @@
               <div class="bf-col-12">
                 <div class="bf-m-b-4">
                   <h3 class="bf-m-t-3 bf-m-b-2">Headings</h3>
+                  <!-- [html-validate-disable-next heading-level -- specimen: this block deliberately renders every real heading element to show the default scale; the page outline is carried by the header h1 and the section h2s] -->
                   <h1>Heading 1 <a href="#">with link</a></h1>
                   <h2>Heading 2 <a href="#">with link</a></h2>
                   <h3 class="bf-m-t-3 bf-m-b-2">Heading 3 <a href="#">with link</a></h3>
@@ -504,7 +505,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               </div>
               <div class="bf-col-12">
                 <h3 class="bf-m-t-3 bf-m-b-2">SVG</h3>
-                <svg width="200px" height="200px">
+                <svg width="200px" height="200px" role="img" aria-label="Red quarter circle, an inline SVG specimen">
                   <circle cx="0" cy="0" r="200" fill="#ff0000" />
                 </svg>
               </div>
@@ -513,7 +514,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <div class="bf-col-12">
                 <div class="bf-m-b-3">
                   <h3 class="bf-m-t-3 bf-m-b-2">HTML5 video with controls</h3>
-                  <video poster="https://marcopontili.com/assets/images/video-poster.PNG" controls width="450">
+                  <video poster="/kitchen-sink/images/video-poster.png" controls width="450">
                     <source src="https://marcopontili.com/assets/videos/video.webm" type="video/webm" />
                     <source src="https://marcopontili.com/assets/videos/video.mp4" type="video/mp4" />
                     Sorry, your browser doesn't support embedded videos.
@@ -530,7 +531,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
               <div class="bf-col-12">
                 <h3 class="bf-m-t-3 bf-m-b-2">YouTube iframe 16:9 (default)</h3>
                 <div class="bf-embed-responsive">
-                  <iframe width="560" height="315" title="" src="https://www.youtube.com/embed/sX-KDxOimNs?si=9wGgqGUCM3oAV-zh" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  <iframe width="560" height="315" title="Sample YouTube embed" src="https://www.youtube.com/embed/sX-KDxOimNs?si=9wGgqGUCM3oAV-zh" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
               </div>
             </div>
@@ -598,35 +599,37 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                   <fieldset class="bf-m-b-4">
                     <legend>HTML5 has several new input types for forms (legend).</legend>
                     <div class="bf-m-b-4">
-                      <label>Text input as sibling of label</label>
-                      <input type="text" value="default value that goes on and on without stopping or punctuation" />
+                      <label for="in-text">Text input as sibling of label</label>
+                      <input id="in-text" type="text" value="default value that goes on and on without stopping or punctuation" />
                       <label>Text input as descendant of label (not recommended) <input type="text" value="default value that goes on and on without stopping or punctuation" /></label>
-                      <input type="text" value="default value that goes on and on without stopping or punctuation" disabled />
-                      <label aria-disabled="true">Text input as sibling of label (aria-disabled)</label>
-                      <input type="text" value="default value that goes on and on without stopping or punctuation" aria-disabled="true" />
-                      <label class="bf-disabled">Text input as sibling of label (.bf-disabled)</label>
-                      <input type="text" value="default value that goes on and on without stopping or punctuation" class="bf-disabled" />
+                      <label for="in-text-disabled">Text input (disabled)</label>
+                      <input id="in-text-disabled" type="text" value="default value that goes on and on without stopping or punctuation" disabled />
+                      <label for="in-text-aria-disabled">Text input as sibling of label (aria-disabled)</label>
+                      <input id="in-text-aria-disabled" type="text" value="default value that goes on and on without stopping or punctuation" aria-disabled="true" />
+                      <label class="bf-disabled" for="in-text-class-disabled">Text input as sibling of label (.bf-disabled)</label>
+                      <input id="in-text-class-disabled" type="text" value="default value that goes on and on without stopping or punctuation" class="bf-disabled" />
                       <label class="bf-disabled">Text input as descendant of label (disabled, not recommended) <input type="text" value="default value" disabled /></label>
-                      <label>Text input (focused)</label>
-                      <input class="bf-focused" type="text" value="default value" />
-                      <label>Text input (invalid)</label>
-                      <input class="bf-invalid" type="text" value="invalid value" />
-                      <label>Email input (required)</label>
-                      <input type="email" required />
-                      <label>Number input</label>
+                      <label for="in-text-focused">Text input (focused)</label>
+                      <input id="in-text-focused" class="bf-focused" type="text" value="default value" />
+                      <label for="in-text-invalid">Text input (invalid)</label>
+                      <input id="in-text-invalid" class="bf-invalid" type="text" value="invalid value" />
+                      <label for="in-email">Email input (required)</label>
+                      <input id="in-email" type="email" required />
+                      <label for="in">Number input</label>
                       <input id="in" max="10" min="0" type="number" value="5" />
-                      <label>Tel input</label> <input type="tel" /> <label>URL input</label> <input type="url" />
-                      <label>Date input</label>
+                      <label for="in-tel">Tel input</label> <input id="in-tel" type="tel" /> <label for="in-url">URL input</label>
+                      <input id="in-url" type="url" />
+                      <label for="idd">Date input</label>
                       <input id="idd" type="date" value="1970-01-01" />
-                      <label>Month input</label>
+                      <label for="idm">Month input</label>
                       <input id="idm" type="month" value="1970-01" />
-                      <label>Week input</label>
+                      <label for="idw">Week input</label>
                       <input id="idw" type="week" value="1970-W01" />
-                      <label>Datetime-local input</label>
+                      <label for="idtl">Datetime-local input</label>
                       <input id="idtl" type="datetime-local" value="1970-01-01T00:00" />
-                      <label>Password input</label>
-                      <input type="password" value="password" />
-                      <label>Search input</label>
+                      <label for="in-password">Password input</label>
+                      <input id="in-password" type="password" value="password" />
+                      <label for="search">Search input</label>
                       <input id="search" name="search" type="search" />
                       <label for="myBrowser">Input datalist (choose a browser)</label>
                       <input type="text" list="browsers" id="myBrowser" name="myBrowser" />
@@ -638,9 +641,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                         <option value="Safari"></option>
                         <option value="Microsoft Edge"></option>
                       </datalist>
-                      <label>File input</label>
-                      <input type="file" />
-                      <label>Range input</label>
+                      <label for="in-file">File input</label>
+                      <input id="in-file" type="file" />
+                      <label for="ir">Range input</label>
                       <input id="ir" type="range" value="10" />
                     </div>
                     <h3 class="bf-m-t-3 bf-m-b-2">Radio and checkbox inputs</h3>
@@ -682,7 +685,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                         <label for="huey2">Huey</label>
                       </div>
                       <div>
-                        <input type="radio" id="louie2" name="drone" value="louie2" checked />
+                        <input type="radio" id="louie2" name="drone2" value="louie2" checked />
                         <label for="louie2">Louie (checked)</label>
                       </div>
                       <div>
@@ -695,7 +698,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                     <div class="custom-checkbox-wrapper">
                       <div>
                         <input type="checkbox" id="scales2" name="scales2" />
-                        <label for="scales">Scales</label>
+                        <label for="scales2">Scales</label>
                       </div>
                       <div>
                         <input type="checkbox" id="horns2" name="horns2" checked />
@@ -738,7 +741,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                       <option>Option 04</option>
                       <option>Option 05</option>
                     </select>
-                    <label for="select_multi">Select [size="2"]</label>
+                    <label for="select_size">Select [size="2"]</label>
                     <select id="select_size" name="select_size" size="2">
                       <optgroup label="Group 1">
                         <option value="1">Some text goes here</option>
@@ -775,9 +778,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                 <form>
                   <fieldset class="bf-m-b-4">
                     <legend>Write your message below</legend>
-                    <label>Textarea</label>
-                    <textarea rows="7">Textarea text</textarea>
-                    <label>Textarea placeholder</label>
+                    <label for="textarea-plain">Textarea</label>
+                    <textarea id="textarea-plain" rows="7">Textarea text</textarea>
+                    <label for="textarea">Textarea placeholder</label>
                     <textarea id="textarea" name="textarea" placeholder="This is an example of HTML5 placeholder text." rows="7"></textarea>
                   </fieldset>
                 </form>
@@ -785,9 +788,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                 <form>
                   <fieldset class="bf-m-b-4" disabled>
                     <legend>Write your message below</legend>
-                    <label>Textarea</label>
-                    <textarea rows="7">Textarea text</textarea>
-                    <label>Textarea placeholder</label>
+                    <label for="textarea-plain2">Textarea</label>
+                    <textarea id="textarea-plain2" rows="7">Textarea text</textarea>
+                    <label for="textarea2">Textarea placeholder</label>
                     <textarea id="textarea2" name="textarea2" placeholder="This is an example of HTML5 placeholder text." rows="7"></textarea>
                   </fieldset>
                 </form>
@@ -799,6 +802,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                 <fieldset class="bf-m-b-4">
                   <legend>Click the buttons below</legend>
                   <div class="input-image bf-m-b-2">
+                    <!-- [html-validate-disable-next input-missing-label -- input type="image" takes its accessible name from alt] -->
                     <input alt="Image (input)" src="/kitchen-sink/images/placeholder-img-130x140.jpg" type="image" /><br />
                     <code>input type="image" (130x40px)</code>
                   </div>
@@ -812,16 +816,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                     <input type="submit" value="Submit (input)" />
                   </div>
                   <div class="bf-m-b-2">
-                    <a class="bf-btn bf-m-b-2" href="#" title="button link" role="button">Button (link)</a>
+                    <a class="bf-btn bf-m-b-2" href="#main-content">Button (link)</a>
                   </div>
                   <div class="bf-m-b-2">
-                    <a class="bf-btn bf-btn--primary bf-m-b-2" href="#" title="button link" role="button">Primary button (link)</a>
+                    <a class="bf-btn bf-btn--primary bf-m-b-2" href="#main-content">Primary button (link)</a>
                   </div>
                 </fieldset>
                 <fieldset class="bf-m-b-4" disabled>
                   <legend>Click the buttons below</legend>
                   <h3 class="bf-m-t-3 bf-m-b-2">Clickable inputs (disabled)</h3>
                   <div class="input-image bf-m-b-2">
+                    <!-- [html-validate-disable-next input-missing-label -- input type="image" takes its accessible name from alt] -->
                     <input alt="Image (input)" src="/kitchen-sink/images/placeholder-img-130x140.jpg" type="image" /><br />
                     <code>input type="image" (130x40px)</code>
                   </div>
@@ -835,10 +840,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                     <input type="submit" value="Submit (input)" />
                   </div>
                   <div class="bf-m-b-2">
-                    <a class="bf-btn bf-m-b-2" href="#" title="button link" role="button">Button (link)</a>
+                    <a class="bf-btn bf-m-b-2" href="#main-content">Button (link)</a>
                   </div>
                   <div class="bf-m-b-2">
-                    <a class="bf-btn bf-btn--primary bf-m-b-2" href="#" title="button link" role="button">Primary button (link)</a>
+                    <a class="bf-btn bf-btn--primary bf-m-b-2" href="#main-content">Primary button (link)</a>
                   </div>
                 </fieldset>
               </div>
@@ -879,7 +884,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
             </div>
             <div class="bf-row">
               <div class="bf-col-12">
-                <h2 id="components" class="bf-sr-only">Components</h2>
+                <h2 id="components" class="bf-m-t-4 bf-m-b-2 demo-section-title">Components</h2>
               </div>
             </div>
             <div class="bf-row">

@@ -11,27 +11,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Focus ring tokens (`--bf-focus-ring-*`), with a stronger ring under `prefers-contrast: more` for WCAG 1.4.11.
-- Skip link and screen-reader helpers (`.bf-skip-link`, `.bf-sr-only`, `.bf-focusable`) in class-based and utilities builds.
-- Opt-in utilities: colour-scheme (`.bf-scheme-*`), target size (`.bf-target-size`), and native accent colour (`.bf-accent-native`).
-- Progressive `@supports` gates for `text-wrap: balance` and `scrollbar-gutter: stable`.
+- Focus ring tokens (`--bf-focus-ring-*`); stronger under `prefers-contrast: more` (WCAG 1.4.11).
+- `.bf-skip-link`, `.bf-sr-only`, `.bf-focusable`, and opt-in `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native` on class-based and utilities builds.
+- `@supports` gates for `text-wrap: balance` and `scrollbar-gutter: stable`.
 
 ### Changed
 
-- Split dark-mode sheets into shared element rules and `.bf-*` extras so classless dark stays element-only.
-- Classless builds are element styles only; `.bf-*` helpers stay on class-based and utilities builds.
-- Deduplicated spacing utility selectors (`.bf-m-*` / `.bf-m-b-*`, `.bf-p-*` / `.bf-p-b-*`); class names unchanged.
-- Reworked the GitHub README and documented the unversioned CDN URL for quick drop-in (pinned + SRI remain in the docs).
+- Classless builds are element-only; dark sheets split so classless dark stays free of `.bf-*`.
+- Deduplicated spacing utility selectors (class names unchanged).
+- README install/CDN/examples; unversioned CDN for drop-in (pinned + SRI stay in the docs).
 
 ### Fixed
 
-- Missing `caption` and `progress` dark overrides on classless always-dark.
-- Kitchen sink and example template accessibility (labels, landmarks, headings, embeds).
-- `/examples` and `/examples/` serving a 403 instead of the docs gallery.
+- Classless always-dark `caption` / `progress` overrides; kitchen-sink and example a11y; `/examples` 403.
 
 ### Removed
 
-- Dead UA+ rules that never applied under the anonymous `@layer` (duplicate focus, table cell, abbr, hidden, summary, and iframe styles).
+- Dead UA+ rules that never applied under the anonymous `@layer`.
 
 ## [6.0.0] - 2026-07-31 - BREAKING CHANGES
 

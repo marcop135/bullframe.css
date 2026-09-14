@@ -107,3 +107,41 @@ DirectoryIndex index.html
     Header set Content-Type "text/plain; charset=utf-8"
   </IfModule>
 </FilesMatch>
+
+# Caching.
+#
+# Nothing here set Cache-Control before, so browsers fell back to heuristic
+# freshness (RFC 9111 4.2.2) and a returning visitor kept serving a deployed
+# release from disk. Three tiers:
+#
+#   1. /assets/  VitePress content-hashes these filenames, so a changed file is
+#                a new URL. Safe to keep forever.
+#   2. Other static files (hero PNGs, og-image.jpg, /css/*.min.css, favicons,
+#                llms.txt, sri.json). Stable names, new bytes every release, so
+#                they get a short window and then revalidate: a 304 is cheap.
+#   3. HTML      Always revalidate. This is the file that points at everything
+#                else, so a stale one pins a whole stale release.
+#
+# Order matters: the immutable rule is second on purpose, so it overwrites tier
+# 2 for the /assets/ files that match both patterns.
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    SetEnvIf Request_URI "\.(?:css|js|mjs|map|png|jpe?g|webp|gif|svg|avif|ico|woff2?|ttf|otf|eot|json|txt|xml|pdf|mp4|webm|zip)$" BF_CACHE_ASSET=1
+    SetEnvIf Request_URI "^/assets/" BF_CACHE_IMMUTABLE=1
+
+    Header set Cache-Control "public, max-age=600, must-revalidate" env=BF_CACHE_ASSET
+    Header set Cache-Control "public, max-age=31536000, immutable" env=BF_CACHE_IMMUTABLE
+  </IfModule>
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+
+  # Markdown siblings are the same page under content negotiation; treat them
+  # like the HTML, not like a static asset.
+  <FilesMatch "\.md$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

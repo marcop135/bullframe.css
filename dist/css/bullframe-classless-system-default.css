@@ -1,8 +1,8 @@
 /* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
-/* Classless + system dark via prefers-color-scheme. */
+/* Classless + system dark via prefers-color-scheme (element styles only). */
 
-/* Classless build: semantic element styles only (no .bf-* utilities). */
+/* Classless build: semantic element styles only (no .bf-* classes). */
 
 /* Variables */
 /* Design tokens (--bf-*). Shared by every build variant.
@@ -1138,8 +1138,7 @@ button:focus,
 [type='checkbox']:focus,
 input[list]:focus,
 select:focus,
-textarea:focus,
-.bf-btn:focus {
+textarea:focus {
   outline: 0;
 }
 /* List spacing and nav list reset. */
@@ -1456,108 +1455,13 @@ caption {
   button,
   [type='button'],
   [type='reset'],
-  [type='submit'],
-  .bf-btn {
+  [type='submit'] {
     border: 1px solid ButtonText;
   }
 }
-/* Screen-reader and keyboard helpers. Shipped in every build, including
- * classless, so skip links work without pulling in the .bf-* utilities. */
-
-/* Visually hidden; available to screen readers (h5bp / Snook). */
-.bf-sr-only {
-  border: 0 !important;
-  clip: rect(0, 0, 0, 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
-  width: 1px !important;
-}
-
-/* .bf-sr-only, revealed on focus. .focusable is the legacy name; both work. */
-.bf-sr-only.focusable:active,
-.bf-sr-only.focusable:focus,
-.bf-sr-only.bf-focusable:active,
-.bf-sr-only.bf-focusable:focus {
-  clip: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  overflow: visible !important;
-  position: static !important;
-  white-space: inherit !important;
-  width: auto !important;
-}
-
-/* Skip link: hidden until focused, then pinned to the top-left without
- * reflowing the page (unlike .bf-sr-only.focusable, which returns to flow). */
-.bf-skip-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
-  color: var(--bf-blue);
-  background-color: var(--bf-white);
-  border: 1px solid var(--bf-gray-light);
-  transform: translateY(-100%);
-}
-
-.bf-skip-link:focus,
-.bf-skip-link:focus-visible {
-  transform: translateY(0);
-}
-
-/* Accessibility helpers only. The classless build ships no other .bf-* class. */
-/* Reduced-motion opt-in (cssremedy-style). */
-
-@media (prefers-reduced-motion: reduce) {
-  .bf-reduced-motion,
-  .bf-reduced-motion::before,
-  .bf-reduced-motion::after,
-  .bf-reduced-motion *,
-  .bf-reduced-motion *::before,
-  .bf-reduced-motion *::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
-  }
-}
-/* Opt-in color-scheme. Put one on <html> so the UA themes native widgets
- * (date pickers, select popups, autofill, scrollbars) to match the build. */
-
-.bf-scheme-light {
-  color-scheme: light;
-}
-
-.bf-scheme-dark {
-  color-scheme: dark;
-}
-
-.bf-scheme-auto {
-  color-scheme: light dark;
-}
-/* Opt-in accent-color: native checkbox, radio, range and progress follow
- * --bf-blue instead of the UA default. Put it on <html> or any container. */
-
-.bf-accent-native {
-  accent-color: var(--bf-blue);
-}
-/* System-preference dark: shared dark rules + scrollbars under prefers-color-scheme.
- * postcss-import wraps each import in the media query at build time. */
 @media (prefers-color-scheme: dark) {
 
-/* Shared dark-mode rules for always-dark and prefers-color-scheme builds.
- * Element rules come from _utility-global-dark-elements.css, which the
- * classless dark sheet imports too; only the .bf-* extras live here.
- * Variant-only extras: utility-global-dark.css. Scrollbars: global-dark-scrollbars.css.
- * Underscore prefix excludes this file from the buildAllCss glob. */
+/* Always-dark overrides for classless (no media query, no .bf-* selectors). */
 }
 @media (prefers-color-scheme: dark) {
 
@@ -1737,55 +1641,13 @@ progress[value]::-webkit-progress-value {
 
 @media (prefers-color-scheme: dark) {
 
-.bf-focused {
-  border-color: var(--bf-dark-border-focus) !important;
-  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
+a:focus,
+input:focus {
+  outline-color: rgb(214 140 0); /* orange -15% */
 }
 
-.bf-invalid,
-.bf-invalid:focus {
-  color: var(--bf-dark-invalid) !important;
-  border-color: var(--bf-dark-invalid) !important;
-}
-
-.bf-btn {
-  background: var(--bf-gray-light);
-}
-
-.bf-btn:hover,
-.bf-btn:active,
-.bf-btn:focus {
-  background: var(--bf-dark-button-hover);
-}
-
-.bf-btn:active,
-.bf-btn:focus {
-  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
-}
-
-.bf-btn.bf-btn--primary {
-  background: var(--bf-blue);
-}
-
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
-  background: var(--bf-blue-light);
-}
-
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
-}
-
-.bf-table th,
-.bf-table td {
-  border-color: var(--bf-gray-dark);
-}
-
-.bf-table--zebra tbody tr:nth-child(odd),
-.bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: var(--bf-gray-dark-extra);
+:focus-visible {
+  outline-color: rgb(214 140 0); /* orange -15% */
 }
 }
 

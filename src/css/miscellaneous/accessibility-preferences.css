@@ -50,8 +50,7 @@
   button,
   [type='button'],
   [type='reset'],
-  [type='submit'],
-  .bf-btn {
+  [type='submit'] {
     border: 1px solid ButtonText;
   }
 }

@@ -11,26 +11,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Focus ring variables: `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`. Colour darkens under `prefers-contrast: more` (WCAG 1.4.11).
-- `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native`.
+- `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`. Under `prefers-contrast: more`, the ring colour darkens (WCAG 1.4.11).
+- In `bullframe.css` (and its dark / system variants) and `bullframe-utilities.css`: `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native`.
 - `@supports` for `text-wrap: balance` and `scrollbar-gutter: stable`.
 
 ### Changed
 
-- Classless builds ship element styles only (no `.bf-*` classes).
-- Classless dark uses element dark rules only; `.bf-*` dark rules stay on class-based builds.
-- Spacing utility CSS is leaner; public class names are unchanged.
-- README covers install, CDN, and examples. README uses the unversioned CDN URL; docs keep pinned + SRI.
+- `bullframe-classless.css` and its dark / system variants: element styles only. They do not include `.bf-*` classes.
+- Classless dark CSS: element rules only. `.bf-*` dark rules stay in the class-based dark builds.
+- Spacing utility CSS is smaller. Public class names are the same.
+- README: install, CDN, examples. Unversioned CDN in the README; pinned URL + SRI in the docs.
 
 ### Fixed
 
-- Classless always-dark styles for `caption` and `progress`.
+- `caption` and `progress` in classless always-dark.
 - Accessibility markup in the kitchen sink and examples.
-- Docs `/examples` and `/examples/` returned 403.
+- `/examples` and `/examples/` on the docs site returned 403.
 
 ### Removed
 
-- `.bf-*` classes from classless builds (including `.bf-sr-only` and the a11y utilities listed under Added).
 - Dead UA+ rules that never applied inside `@layer`.
 
 ## [6.0.0] - 2026-07-31 - BREAKING CHANGES

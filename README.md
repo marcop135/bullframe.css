@@ -5,8 +5,7 @@
 
 # Bullframe CSS
 
-Semantic by default. Any stack.<br>
-<em>Classless when you want it. System dark built in.</em>
+Semantic by default. Any stack.
 
 </div>
 

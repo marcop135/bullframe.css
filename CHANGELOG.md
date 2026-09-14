@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Focus ring variables: `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`. Colour darkens under `prefers-contrast: more` (WCAG 1.4.11).
-- On class-based and utilities builds only: `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native`.
+- `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native`.
 - `@supports` for `text-wrap: balance` and `scrollbar-gutter: stable`.
 
 ### Changed

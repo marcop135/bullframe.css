@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`. Under `prefers-contrast: more`, the ring colour darkens (WCAG 1.4.11).
+- `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`.
 - In `bullframe.css` (and its dark / system variants) and `bullframe-utilities.css`: `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native`.
 - `@supports` for `text-wrap: balance` and `scrollbar-gutter: stable`.
 

@@ -17,7 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- `bullframe-classless.css` and its dark / system variants: element styles only. They do not include `.bf-*` classes.
 - Classless dark CSS: element rules only. `.bf-*` dark rules stay in the class-based dark builds.
 - Spacing utility CSS is smaller. Public class names are the same.
 - README: install, CDN, examples. Unversioned CDN in the README; pinned URL + SRI in the docs.

@@ -1,7 +1,7 @@
 <div align="center">
 
-![Bullframe CSS](https://raw.githubusercontent.com/marcop135/bullframe.css/main/src/docs/github-readme/bf-readme-hero-light-16x9.png#gh-light-mode-only)
-![Bullframe CSS](https://raw.githubusercontent.com/marcop135/bullframe.css/main/src/docs/github-readme/bf-readme-hero-dark-16x9.png#gh-dark-mode-only)
+![Bullframe CSS](src/docs/github-readme/bf-readme-hero-light-16x9.png#gh-light-mode-only)
+![Bullframe CSS](src/docs/github-readme/bf-readme-hero-dark-16x9.png#gh-dark-mode-only)
 
 # Bullframe CSS
 
@@ -17,7 +17,7 @@ Semantic by default. Any stack.
 
 ---
 
-One stylesheet, plain HTML, no build step, no JavaScript. Typography, forms, tables, buttons, and layout out of the box.
+One-stylesheet CSS framework for plain HTML: no build step, no JavaScript. Typography, forms, tables, buttons, and layout out of the box.
 
 Light or dark. Built for pages and forms: landings, docs, help centers, and marketing microsites.
 

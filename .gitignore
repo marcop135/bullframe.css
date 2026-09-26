@@ -28,11 +28,13 @@ Thumbs.db
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 
-# Synced kitchen sink, examples & compiled CSS (rebuilt by `npm run docs:sync-public`)
+# Synced kitchen sink, examples, skills & compiled CSS (rebuilt by `npm run docs:sync-public`)
 docs/public/css/
 docs/public/demo/
 docs/public/kitchen-sink/
 docs/public/examples/
+docs/public/skills/
+docs/public/api.json
 
 # Netlify CLI local state
 .netlify/

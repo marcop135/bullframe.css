@@ -73,6 +73,9 @@ import 'bullframe.css';
 
 Default import: class-based, light. Other builds: `bullframe.css/classless`, `bullframe.css/dark`, and so on. See [Builds](#builds) below.
 
+Using an AI coding agent? `npx bullframe.css skills install` drops the framework's
+conventions into `AGENTS.md` (and `.claude/skills/` when present). See [AI skills](https://bullframecss.marcopontili.com/ai-skills).
+
 ### CDN
 
 ```html
@@ -114,6 +117,7 @@ Seven files in `dist/css/`, each with a minified twin and a source map. Pick one
 | [Components](https://bullframecss.marcopontili.com/components/) | Cards, modals, navigation, buttons |
 | [Theming](https://bullframecss.marcopontili.com/theming) | Colours and dark mode |
 | [API reference](https://bullframecss.marcopontili.com/api-reference) | Full token and class list |
+| [AI skills](https://bullframecss.marcopontili.com/ai-skills) | Skills for AI coding agents |
 | [Changelog](./CHANGELOG.md) | Release notes |
 
 ## Contributing

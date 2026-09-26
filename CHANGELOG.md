@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- AI skills for coding agents: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`, shipped in the package and installed with `npx bullframe.css skills install`.
+- `bullframe` / `bullframe.css` CLI (`skills list`, `skills install`, `skills path`), zero dependencies, no postinstall hook.
+- Generated `api.json` (every `.bf-*` class and `--bf-*` token) in the package and at `/api.json`.
+- [AI skills](docs/ai-skills.md) documentation page.
+
+### Fixed
+
+- Documented classes that do not exist: per-breakpoint columns in [Grid](docs/utilities/grid.md) and [Cards](docs/components/cards.md), left/right and all-sides steps in [Spacing](docs/utilities/spacing.md), and twelve text utilities in [Text](docs/utilities/text.md).
+- Wrong v6 token names in the [migration guide](docs/migration.md): `--bf-font-sans-serif`, `--bf-body-font-size-rem`, `--bf-spacing-grid-gutter`.
+
 ## [6.1.0] - 2026-09-14
 
 ### Added

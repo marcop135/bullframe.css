@@ -6,13 +6,15 @@ Bullframe CSS provides margin and padding utilities for consistent spacing throu
 
 ### All Sides
 
+Only the `0` step clears every side.
+
 ```html
 <div class="bf-m-0">No margin</div>
-<div class="bf-m-1">Small margin</div>
-<div class="bf-m-2">Medium margin</div>
-<div class="bf-m-3">Large margin</div>
-<div class="bf-m-4">Extra large margin</div>
 ```
+
+`.bf-m-1` through `.bf-m-4` are the historical short form of `.bf-m-b-1` through
+`.bf-m-b-4`: they set `margin-bottom`, not all four sides. Prefer the explicit
+`.bf-m-b-*` form.
 
 ### Top Margin
 
@@ -34,33 +36,29 @@ Bullframe CSS provides margin and padding utilities for consistent spacing throu
 <div class="bf-m-b-4">Extra large bottom margin</div>
 ```
 
-### Left Margin
+### Left and Right Margin
+
+Left and right have a `0` step only; there is no numbered scale on those sides.
 
 ```html
 <div class="bf-m-l-0">No left margin</div>
-<div class="bf-m-l-1">Small left margin</div>
-<div class="bf-m-l-2">Medium left margin</div>
-```
-
-### Right Margin
-
-```html
 <div class="bf-m-r-0">No right margin</div>
-<div class="bf-m-r-1">Small right margin</div>
-<div class="bf-m-r-2">Medium right margin</div>
 ```
 
 ## Padding Utilities
 
+Padding mirrors margin exactly, including the bottom-only shorthand.
+
 ### All Sides
+
+Only the `0` step clears every side.
 
 ```html
 <div class="bf-p-0">No padding</div>
-<div class="bf-p-1">Small padding</div>
-<div class="bf-p-2">Medium padding</div>
-<div class="bf-p-3">Large padding</div>
-<div class="bf-p-4">Extra large padding</div>
 ```
+
+`.bf-p-1` through `.bf-p-4` are the short form of `.bf-p-b-1` through `.bf-p-b-4` and set
+`padding-bottom`.
 
 ### Top Padding
 
@@ -68,6 +66,8 @@ Bullframe CSS provides margin and padding utilities for consistent spacing throu
 <div class="bf-p-t-0">No top padding</div>
 <div class="bf-p-t-1">Small top padding</div>
 <div class="bf-p-t-2">Medium top padding</div>
+<div class="bf-p-t-3">Large top padding</div>
+<div class="bf-p-t-4">Extra large top padding</div>
 ```
 
 ### Bottom Padding
@@ -76,6 +76,15 @@ Bullframe CSS provides margin and padding utilities for consistent spacing throu
 <div class="bf-p-b-0">No bottom padding</div>
 <div class="bf-p-b-1">Small bottom padding</div>
 <div class="bf-p-b-2">Medium bottom padding</div>
+<div class="bf-p-b-3">Large bottom padding</div>
+<div class="bf-p-b-4">Extra large bottom padding</div>
+```
+
+### Left and Right Padding
+
+```html
+<div class="bf-p-l-0">No left padding</div>
+<div class="bf-p-r-0">No right padding</div>
 ```
 
 ## Spacing Scale

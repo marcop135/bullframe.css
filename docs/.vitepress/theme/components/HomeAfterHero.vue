@@ -285,6 +285,7 @@ const stats = [
       </div>
       <div class="bfh-cta">
         <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Get started</a>
+        <a class="bfh-cta__btn bfh-cta__btn--alt" href="/ai-skills">AI skills</a>
         <a class="bfh-cta__btn bfh-cta__btn--alt" href="/README">Read the docs</a>
       </div>
     </section>

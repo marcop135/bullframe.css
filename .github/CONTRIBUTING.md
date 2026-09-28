@@ -44,6 +44,7 @@ Add these **repository Actions secrets** in the GitHub UI (do not commit values)
 | `FTP_HOST` | FTPS server hostname (must match TLS cert CN/SAN) |
 | `FTP_USERNAME_PRODUCTION` | FTPS username |
 | `FTP_PASSWORD_PRODUCTION` | FTPS password |
+| `ANTHROPIC_API_KEY` | Optional. Manual Skills eval only (`skills-eval.yml`). Not required for docs deploy or for using the published skills. |
 
 After secrets exist, push to `main` or run **Deploy docs** via `workflow_dispatch`.
 

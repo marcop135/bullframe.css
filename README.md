@@ -74,7 +74,9 @@ import 'bullframe.css';
 Default import: class-based, light. Other builds: `bullframe.css/classless`, `bullframe.css/dark`, and so on. See [Builds](#builds) below.
 
 Using an AI coding agent? `npx bullframe.css skills install` drops the framework's
-conventions into `AGENTS.md` (and `.claude/skills/` when present). See [AI skills](https://bullframecss.marcopontili.com/ai-skills).
+conventions into `AGENTS.md`, and into `.claude/skills/`, `.cursor/skills/`, or
+`.agents/skills/` when those tool directories are present (Claude Code, Cursor, Codex).
+No API key. See [AI skills](https://bullframecss.marcopontili.com/ai-skills).
 
 ### CDN
 

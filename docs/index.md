@@ -12,6 +12,9 @@ hero:
       text: Get started
       link: /getting-started
     - theme: alt
+      text: AI skills
+      link: /ai-skills
+    - theme: alt
       text: Read the docs
       link: /README
 ---

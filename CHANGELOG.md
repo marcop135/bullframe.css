@@ -10,9 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - AI skills for coding agents: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`, shipped in the package and installed with `npx bullframe.css skills install`.
-- `bullframe` / `bullframe.css` CLI (`skills list`, `skills install`, `skills path`), zero dependencies, no postinstall hook.
+- `bullframe` / `bullframe.css` CLI (`skills list`, `skills install`, `skills path`), zero dependencies, no postinstall hook. Install targets: `agents`, `claude` (`.claude/skills/`), `cursor` (`.cursor/skills/`), `codex` (`.agents/skills/`), and `dir`.
 - Generated `api.json` (every `.bf-*` class and `--bf-*` token) in the package and at `/api.json`.
 - [AI skills](docs/ai-skills.md) documentation page.
+- Docs site 404 page (`themeConfig.notFound`) and Apache `ErrorDocument 404 /404.html`.
 
 ### Fixed
 

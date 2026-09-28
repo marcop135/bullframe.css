@@ -79,19 +79,54 @@ test('the default install writes the portable layout', async () => {
   assert.ok(existsSync(path.join(dir, 'bullframe-skills', 'api.json')));
   assert.ok(existsSync(path.join(dir, 'bullframe-skills', '_shared', 'conventions.md')));
   assert.ok(!existsSync(path.join(dir, '.claude')), 'claude target ran without a .claude dir');
+  assert.ok(!existsSync(path.join(dir, '.cursor')), 'cursor target ran without a .cursor dir');
+  assert.ok(!existsSync(path.join(dir, '.agents')), 'codex target ran without an .agents dir');
 });
+
+async function assertToolLayout(dir, skillsRoot) {
+  for (const skill of index.skills) {
+    assert.ok(existsSync(path.join(dir, skillsRoot, skill.name, 'SKILL.md')));
+  }
+  // `../_shared/…` links inside a SKILL.md have to resolve after the copy.
+  assert.ok(existsSync(path.join(dir, skillsRoot, '_shared', 'conventions.md')));
+  assert.ok(existsSync(path.join(dir, skillsRoot, '_shared', 'api.json')));
+}
 
 test('a .claude project also gets the Claude layout', async () => {
   const dir = await project();
   await mkdir(path.join(dir, '.claude'), { recursive: true });
   await cli(dir, ['skills', 'install']);
+  await assertToolLayout(dir, path.join('.claude', 'skills'));
+});
 
-  for (const skill of index.skills) {
-    assert.ok(existsSync(path.join(dir, '.claude', 'skills', skill.name, 'SKILL.md')));
-  }
-  // `../_shared/…` links inside a SKILL.md have to resolve after the copy.
-  assert.ok(existsSync(path.join(dir, '.claude', 'skills', '_shared', 'conventions.md')));
-  assert.ok(existsSync(path.join(dir, '.claude', 'skills', '_shared', 'api.json')));
+test('a .cursor project also gets the Cursor layout', async () => {
+  const dir = await project();
+  await mkdir(path.join(dir, '.cursor'), { recursive: true });
+  await cli(dir, ['skills', 'install']);
+  await assertToolLayout(dir, path.join('.cursor', 'skills'));
+});
+
+test('an .agents project also gets the Codex layout', async () => {
+  const dir = await project();
+  await mkdir(path.join(dir, '.agents'), { recursive: true });
+  await cli(dir, ['skills', 'install']);
+  await assertToolLayout(dir, path.join('.agents', 'skills'));
+});
+
+test('--target cursor writes the Cursor layout without AGENTS.md', async () => {
+  const dir = await project();
+  await cli(dir, ['skills', 'install', '--target', 'cursor']);
+  await assertToolLayout(dir, path.join('.cursor', 'skills'));
+  assert.ok(!existsSync(path.join(dir, 'AGENTS.md')));
+  assert.ok(!existsSync(path.join(dir, 'bullframe-skills')));
+});
+
+test('--target codex writes the Codex layout without AGENTS.md', async () => {
+  const dir = await project();
+  await cli(dir, ['skills', 'install', '--target', 'codex']);
+  await assertToolLayout(dir, path.join('.agents', 'skills'));
+  assert.ok(!existsSync(path.join(dir, 'AGENTS.md')));
+  assert.ok(!existsSync(path.join(dir, 'bullframe-skills')));
 });
 
 test('installing twice is idempotent', async () => {

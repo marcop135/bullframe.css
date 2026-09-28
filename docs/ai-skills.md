@@ -2,7 +2,8 @@
 
 Bullframe ships a set of agent skills: plain Markdown files that teach an AI coding agent
 how to build with this framework. They are part of the npm package, they need no server
-and no API key, and they work in any environment that can read a file.
+and no API key, and they work in any environment that can read a file. Install is local
+files only; no network call and no Anthropic (or other) key.
 
 ## Install
 
@@ -18,16 +19,25 @@ That writes two things into your project:
   `<!-- bullframe:skills:end -->`, holding the framework's rules and an index of the
   skills. Re-running replaces that block and leaves the rest of the file untouched.
 
-If the project has a `.claude` directory, the same command also writes
-`.claude/skills/`, where Claude Code discovers skills automatically.
+When a tool directory already exists, the same command also writes that tool's layout:
+
+| Directory | Layout written    | Tool        |
+| --------- | ----------------- | ----------- |
+| `.claude` | `.claude/skills/` | Claude Code |
+| `.cursor` | `.cursor/skills/` | Cursor      |
+| `.agents` | `.agents/skills/` | Codex       |
 
 ```bash
 npx bullframe.css skills install --target claude   # Claude layout only
+npx bullframe.css skills install --target cursor   # Cursor layout only
+npx bullframe.css skills install --target codex    # Codex layout only (.agents/skills)
 npx bullframe.css skills install --target agents   # AGENTS.md + local copy only
 npx bullframe.css skills install --target dir --dir vendor/bf
 npx bullframe.css skills install --dry-run         # show the plan, write nothing
 npx bullframe.css skills list
 ```
+
+Explicit `--target` creates the path even if the parent directory was missing.
 
 ## The skills
 
@@ -63,3 +73,7 @@ skill, a shared reference or a docs code block names a class or token that no lo
 exists in `src/css/`, and every HTML example in a skill is validated with the project's
 own accessibility rules. Skills version with the framework: one tag, one changelog, one
 `npm install`.
+
+An optional maintainer-only GitHub Actions workflow can call a model to grade generated
+markup. That path needs an `ANTHROPIC_API_KEY` repository secret, costs money, and never
+gates a pull request. Using the skills does not require it.

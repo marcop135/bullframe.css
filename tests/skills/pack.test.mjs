@@ -24,8 +24,13 @@ test('npm pack lists the tarball contents', async () => {
     shell: process.platform === 'win32',
     maxBuffer: 10 * 1024 * 1024,
   });
-  const json = JSON.parse(stdout.slice(stdout.indexOf('[')));
-  files = json[0].files.map((f) => f.path.replace(/\\/g, '/'));
+  // npm prints warnings on stderr; JSON may be an array (npm 10) or a
+  // name-keyed object (npm 11+). Take the first package either way.
+  const start = stdout.search(/[\[{]/);
+  assert.ok(start !== -1, 'npm pack --json produced no JSON');
+  const json = JSON.parse(stdout.slice(start));
+  const pkg = Array.isArray(json) ? json[0] : Object.values(json)[0];
+  files = pkg.files.map((f) => f.path.replace(/\\/g, '/'));
   assert.ok(files.length > 0);
 });
 

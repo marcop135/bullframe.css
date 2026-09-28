@@ -6,7 +6,7 @@
  * no postinstall hook, and it never touches the framework's CSS.
  *
  *   npx bullframe.css skills list
- *   npx bullframe.css skills install [--target claude,agents,dir] [--dir <path>]
+ *   npx bullframe.css skills install [--target claude,cursor,codex,agents,dir] [--dir <path>]
  *   npx bullframe.css skills path
  */
 import { cp, mkdir, readFile, writeFile, access } from 'node:fs/promises';
@@ -22,6 +22,15 @@ const START = '<!-- bullframe:skills:start -->';
 const END = '<!-- bullframe:skills:end -->';
 const LOCAL_DIR = 'bullframe-skills';
 
+/** Tool targets that write into `$parent/skills/` with the same SKILL.md layout. */
+const TOOL_TARGETS = {
+  claude: { parent: '.claude', label: '.claude/skills' },
+  cursor: { parent: '.cursor', label: '.cursor/skills' },
+  codex: { parent: '.agents', label: '.agents/skills' },
+};
+
+const KNOWN_TARGETS = [...Object.keys(TOOL_TARGETS), 'agents', 'dir'];
+
 const USAGE = `bullframe.css - agent skills for the Bullframe CSS framework
 
 Usage
@@ -30,8 +39,9 @@ Usage
   npx bullframe.css skills path
 
 Install options
-  --target <list>   Comma separated: claude, agents, dir. Default: agents, plus
-                    claude when a .claude directory exists.
+  --target <list>   Comma separated: claude, cursor, codex, agents, dir.
+                    Default: agents, plus claude / cursor / codex when a
+                    .claude, .cursor, or .agents directory exists.
   --dir <path>      Where the "dir" and "agents" targets copy the skills.
                     Default: ./${LOCAL_DIR}
   --dry-run         Print what would be written and exit without writing.
@@ -125,6 +135,33 @@ async function copyTree(from, to, { dryRun }, written, label) {
   await cp(from, to, { recursive: true, force: true });
 }
 
+/** Copy every skill plus `_shared` and `api.json` into `$parent/skills/`. */
+async function installToolLayout(index, parentDir, label, options, written) {
+  const root = path.join(parentDir, 'skills');
+  for (const skill of index.skills) {
+    await copyTree(
+      path.join(skillsDir, skill.name),
+      path.join(root, skill.name),
+      options,
+      written,
+      `${label}/${skill.name}/`
+    );
+  }
+  await copyTree(
+    path.join(skillsDir, '_shared'),
+    path.join(root, '_shared'),
+    options,
+    written,
+    `${label}/_shared/`
+  );
+  await writeFileIfNeeded(
+    path.join(root, '_shared', 'api.json'),
+    await readFile(path.join(skillsDir, 'api.json'), 'utf8'),
+    { ...options, force: true },
+    written
+  );
+}
+
 async function listSkills() {
   const index = await readIndex();
   console.log(`bullframe.css ${index.version} - ${index.skills.length} skills\n`);
@@ -144,38 +181,22 @@ async function installSkills(options) {
   let targets = options.targets;
   if (!targets) {
     targets = ['agents'];
-    if (await exists(path.join(cwd, '.claude'))) targets.push('claude');
+    for (const [name, { parent }] of Object.entries(TOOL_TARGETS)) {
+      if (await exists(path.join(cwd, parent))) targets.push(name);
+    }
   }
 
-  const unknown = targets.filter((t) => !['claude', 'agents', 'dir'].includes(t));
-  if (unknown.length) fail(`unknown target "${unknown[0]}". Use claude, agents or dir.`);
+  const unknown = targets.filter((t) => !KNOWN_TARGETS.includes(t));
+  if (unknown.length) {
+    fail(`unknown target "${unknown[0]}". Use ${KNOWN_TARGETS.join(', ')}.`);
+  }
 
   const written = [];
 
-  if (targets.includes('claude')) {
-    const root = path.join(cwd, '.claude', 'skills');
-    for (const skill of index.skills) {
-      await copyTree(
-        path.join(skillsDir, skill.name),
-        path.join(root, skill.name),
-        options,
-        written,
-        `.claude/skills/${skill.name}/`
-      );
-    }
-    await copyTree(
-      path.join(skillsDir, '_shared'),
-      path.join(root, '_shared'),
-      options,
-      written,
-      '.claude/skills/_shared/'
-    );
-    await writeFileIfNeeded(
-      path.join(root, '_shared', 'api.json'),
-      await readFile(path.join(skillsDir, 'api.json'), 'utf8'),
-      { ...options, force: true },
-      written
-    );
+  for (const name of Object.keys(TOOL_TARGETS)) {
+    if (!targets.includes(name)) continue;
+    const { parent, label } = TOOL_TARGETS[name];
+    await installToolLayout(index, path.join(cwd, parent), label, options, written);
   }
 
   if (targets.includes('agents') || targets.includes('dir')) {

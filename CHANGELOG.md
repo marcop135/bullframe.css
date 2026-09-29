@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.2.0] - 2026-09-29
+
+### Added
+
+- AI agent skills: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`; `npx bullframe.css skills install` (Claude, Cursor, Codex).
+- Generated `api.json` (`.bf-*` classes, `--bf-*` tokens) in the package and at `/api.json`.
+- AI skills docs page; docs site 404 page.
+- `npm run test:e2e:sync-from-ci` to copy Playwright linux baselines from a CI run artifact.
+
+### Fixed
+
+- Non-existent classes in Grid, Cards, Spacing, and Text docs.
+- Wrong v6 token names in the migration guide.
+
+### Changed
+
+- npm publish is manual from the release tag; **Publish to npm** is `workflow_dispatch` only (no `release: published` trigger).
+
+### Security
+
+- Explicit `permissions: contents: read` on CI, Deploy docs, and Skills eval workflows.
+
 ## [6.1.0] - 2026-09-14
 
 ### Added
@@ -512,6 +534,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
 
-[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...HEAD
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...HEAD
+[6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

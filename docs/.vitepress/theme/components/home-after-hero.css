@@ -147,6 +147,21 @@
   white-space: pre;
 }
 
+.bfh-skills-more {
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+}
+
+.bfh-skills-more a {
+  font-weight: 500;
+  color: var(--bfh-brand);
+  text-decoration: none;
+}
+
+.bfh-skills-more a:hover {
+  text-decoration: underline;
+}
+
 html:not(.dark) .bfh-code span {
   color: var(--shiki-light, inherit);
 }

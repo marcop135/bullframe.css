@@ -44,50 +44,39 @@ Bullframe CSS uses a 12-column flexbox grid system with responsive breakpoints.
 
 ## Responsive Columns
 
-Columns can be sized differently at different breakpoints:
+There are no per-breakpoint column classes. A column keeps its span at every width, and
+responsiveness comes from a modifier on the **container**: below the breakpoint, every
+column in that container stacks to full width.
+
+| Container modifier       | Stacks below |
+| ------------------------ | ------------ |
+| `bf-container--break-xs` | 576px        |
+| `bf-container--break-md` | 768px        |
+| `bf-container--break-lg` | 992px        |
 
 ```html
-<div class="bf-row">
-  <div class="bf-col-12 bf-col-md-6 bf-col-lg-4">Full width on mobile, half on tablet, third on desktop</div>
+<div class="bf-container bf-container--break-md">
+  <div class="bf-row">
+    <div class="bf-col-4">One third on desktop, full width below 768px</div>
+    <div class="bf-col-4">One third on desktop, full width below 768px</div>
+    <div class="bf-col-4">One third on desktop, full width below 768px</div>
+  </div>
 </div>
 ```
 
 ## Column Classes
 
-### All Breakpoints
-
 - `bf-col-1` through `bf-col-12`
 
-### Extra Small (xs) - 0px+
-
-- `bf-col-xs-1` through `bf-col-xs-12`
-
-### Small (sm) - 576px+
-
-- `bf-col-sm-1` through `bf-col-sm-12`
-
-### Medium (md) - 768px+
-
-- `bf-col-md-1` through `bf-col-md-12`
-
-### Large (lg) - 992px+
-
-- `bf-col-lg-1` through `bf-col-lg-12`
-
-### Extra Large (xl) - 1200px+
-
-- `bf-col-xl-1` through `bf-col-xl-12`
-
-### 2X Extra Large (xxl) - 1400px+
-
-- `bf-col-xxl-1` through `bf-col-xxl-12`
+The breakpoint table above documents the `--bf-breakpoint-*` tokens, which exist for your
+own media queries. The grid itself uses only the three container modifiers.
 
 ## No Gutters
 
 Remove gutters from rows and columns:
 
 ```html
-<div class="bf-row no-gutters">
+<div class="bf-row bf-no-gutters">
   <div class="bf-col-6">No gutters</div>
   <div class="bf-col-6">No gutters</div>
 </div>

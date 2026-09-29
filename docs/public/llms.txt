@@ -37,6 +37,16 @@ Every docs page is also available as clean Markdown: append `.md` to the path (f
 - [Accessibility](https://bullframecss.marcopontili.com/accessibility): a11y defaults
 - [Browser support](https://bullframecss.marcopontili.com/browser-support): Target browsers
 - [API reference](https://bullframecss.marcopontili.com/api-reference): Generated tokens and classes
+- [AI skills](https://bullframecss.marcopontili.com/ai-skills): Agent skills shipped with the package
+
+## Agent skills
+
+Skills that teach an agent this framework ship in the npm package and are published here:
+
+- [/skills/index.json](https://bullframecss.marcopontili.com/skills/index.json): Skill manifest
+- [/api.json](https://bullframecss.marcopontili.com/api.json): Every `.bf-*` class and `--bf-*` token, generated from source
+
+Install into a project with `npx bullframe.css skills install`.
 
 ## Install
 

@@ -1,0 +1,134 @@
+{
+  "name": "bullframe.css",
+  "version": "6.2.0",
+  "docs": "https://bullframecss.marcopontili.com",
+  "api": "api.json",
+  "agentsBlock": "AGENTS.bullframe.md",
+  "shared": [
+    "_shared/builds.md",
+    "_shared/conventions.md"
+  ],
+  "skills": [
+    {
+      "name": "bullframe-core",
+      "description": "Core conventions for writing HTML styled with Bullframe CSS. Use before any other Bullframe skill, and whenever choosing a build, scaffolding a page, theming with tokens, or deciding whether to write custom CSS.",
+      "path": "bullframe-core/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe.css",
+        "bullframe-dark.css",
+        "bullframe-system-default.css",
+        "bullframe-classless.css",
+        "bullframe-classless-dark.css",
+        "bullframe-classless-system-default.css",
+        "bullframe-utilities.css"
+      ],
+      "requires": [],
+      "docs": [
+        "https://bullframecss.marcopontili.com/getting-started",
+        "https://bullframecss.marcopontili.com/variables",
+        "https://bullframecss.marcopontili.com/theming",
+        "https://bullframecss.marcopontili.com/api-reference"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "bullframe-convert",
+      "description": "Convert existing HTML and CSS to Bullframe CSS. Use when migrating a page off Bootstrap, Tailwind, a hand-rolled stylesheet, or an older Bullframe version, and when asked to remove custom CSS in favour of the framework.",
+      "path": "bullframe-convert/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe.css",
+        "bullframe-classless.css",
+        "bullframe-utilities.css"
+      ],
+      "requires": [
+        "bullframe-core"
+      ],
+      "docs": [
+        "https://bullframecss.marcopontili.com/migration",
+        "https://bullframecss.marcopontili.com/utilities",
+        "https://bullframecss.marcopontili.com/api-reference"
+      ],
+      "files": [
+        "SKILL.md",
+        "examples/after.html",
+        "examples/before.html"
+      ]
+    },
+    {
+      "name": "bullframe-docs-page",
+      "description": "Build a documentation, article or reference page with Bullframe CSS. Use for docs, guides, changelogs, help center articles, blog posts, or any prose-first page.",
+      "path": "bullframe-docs-page/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe-classless.css",
+        "bullframe-classless-dark.css",
+        "bullframe-classless-system-default.css",
+        "bullframe.css"
+      ],
+      "requires": [
+        "bullframe-core"
+      ],
+      "docs": [
+        "https://bullframecss.marcopontili.com/typography",
+        "https://bullframecss.marcopontili.com/getting-started",
+        "https://bullframecss.marcopontili.com/examples"
+      ],
+      "files": [
+        "SKILL.md",
+        "examples/docs-page.html"
+      ]
+    },
+    {
+      "name": "bullframe-forms",
+      "description": "Build accessible forms with Bullframe CSS. Use when creating a contact form, login, signup, checkout, search box, filter bar, or any page with input controls.",
+      "path": "bullframe-forms/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe.css",
+        "bullframe-dark.css",
+        "bullframe-system-default.css",
+        "bullframe-classless.css"
+      ],
+      "requires": [
+        "bullframe-core"
+      ],
+      "docs": [
+        "https://bullframecss.marcopontili.com/forms",
+        "https://bullframecss.marcopontili.com/components/forms",
+        "https://bullframecss.marcopontili.com/accessibility"
+      ],
+      "files": [
+        "SKILL.md",
+        "examples/contact-form.html"
+      ]
+    },
+    {
+      "name": "bullframe-landing-page",
+      "description": "Build a marketing or product landing page with Bullframe CSS. Use for a hero, feature row, pricing block, call to action, or any multi-section marketing page.",
+      "path": "bullframe-landing-page/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe.css",
+        "bullframe-dark.css",
+        "bullframe-system-default.css"
+      ],
+      "requires": [
+        "bullframe-core"
+      ],
+      "docs": [
+        "https://bullframecss.marcopontili.com/layout",
+        "https://bullframecss.marcopontili.com/utilities/grid",
+        "https://bullframecss.marcopontili.com/buttons",
+        "https://bullframecss.marcopontili.com/components/cards"
+      ],
+      "files": [
+        "SKILL.md",
+        "examples/landing.html"
+      ]
+    }
+  ]
+}

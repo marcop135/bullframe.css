@@ -40,8 +40,9 @@ docs/public/api.json
 # Netlify CLI local state
 .netlify/
 
-# Claude Code local settings and scratch worktrees
+# Claude Code / Cursor local settings and scratch worktrees
 .claude/
+.cursor/
 
 # Playwright artifacts (keep tests/e2e/__screenshots__ baselines tracked)
 playwright-report/

@@ -37,7 +37,7 @@ Every docs page is also available as clean Markdown: append `.md` to the path (f
 - [Accessibility](https://bullframecss.marcopontili.com/accessibility): a11y defaults
 - [Browser support](https://bullframecss.marcopontili.com/browser-support): Target browsers
 - [API reference](https://bullframecss.marcopontili.com/api-reference): Generated tokens and classes
-- [AI skills](https://bullframecss.marcopontili.com/ai-skills): Agent skills shipped with the package
+- [Agent skills](https://bullframecss.marcopontili.com/agent-skills): Skills for coding agents shipped with the package
 
 ## Agent skills
 

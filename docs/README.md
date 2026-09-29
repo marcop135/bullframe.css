@@ -10,7 +10,7 @@ Start with [Getting started](getting-started.md). Browse [Examples](examples.md)
 |---|---|
 | [Getting started](getting-started.md) | Install, modes, themes, starters |
 | [Examples](examples.md) | Standalone HTML templates |
-| [AI skills](ai-skills.md) | Skills for AI coding agents |
+| [Agent skills](agent-skills.md) | Skills for coding agents |
 | [Migration](migration.md) | v5 → v6 |
 
 ## Core

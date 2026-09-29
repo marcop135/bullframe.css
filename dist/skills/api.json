@@ -1,0 +1,1023 @@
+{
+  "name": "bullframe.css",
+  "version": "6.1.0",
+  "docs": "https://bullframecss.marcopontili.com",
+  "builds": [
+    {
+      "name": "bullframe-classless-dark",
+      "file": "bullframe-classless-dark.css",
+      "min": "bullframe-classless-dark.min.css",
+      "subpath": "bullframe.css/classless/dark",
+      "mode": "classless",
+      "theme": "dark"
+    },
+    {
+      "name": "bullframe-classless-system-default",
+      "file": "bullframe-classless-system-default.css",
+      "min": "bullframe-classless-system-default.min.css",
+      "subpath": "bullframe.css/classless/system",
+      "mode": "classless",
+      "theme": "system"
+    },
+    {
+      "name": "bullframe-classless",
+      "file": "bullframe-classless.css",
+      "min": "bullframe-classless.min.css",
+      "subpath": "bullframe.css/classless",
+      "mode": "classless",
+      "theme": "light"
+    },
+    {
+      "name": "bullframe-dark",
+      "file": "bullframe-dark.css",
+      "min": "bullframe-dark.min.css",
+      "subpath": "bullframe.css/dark",
+      "mode": "class-based",
+      "theme": "dark"
+    },
+    {
+      "name": "bullframe-system-default",
+      "file": "bullframe-system-default.css",
+      "min": "bullframe-system-default.min.css",
+      "subpath": "bullframe.css/system",
+      "mode": "class-based",
+      "theme": "system"
+    },
+    {
+      "name": "bullframe-utilities",
+      "file": "bullframe-utilities.css",
+      "min": "bullframe-utilities.min.css",
+      "subpath": "bullframe.css/utilities",
+      "mode": "utilities",
+      "theme": "none"
+    },
+    {
+      "name": "bullframe",
+      "file": "bullframe.css",
+      "min": "bullframe.min.css",
+      "subpath": "bullframe.css",
+      "mode": "class-based",
+      "theme": "light"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "--bf-white",
+      "value": "rgb(255 255 255)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-light",
+      "value": "rgb(240 240 240)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-gray-light-extra",
+      "value": "rgb(233 233 233)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-gray-light",
+      "value": "rgb(204 204 204)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-gray",
+      "value": "rgb(153 153 153)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-gray-dark",
+      "value": "rgb(102 102 102)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-gray-dark-extra",
+      "value": "rgb(51 51 51)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-dark",
+      "value": "rgb(34 34 34)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-dark-extra",
+      "value": "rgb(17 17 17)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-black",
+      "value": "rgb(0 0 0)",
+      "section": "Neutrals"
+    },
+    {
+      "name": "--bf-yellow-light",
+      "value": "rgb(255 255 153)",
+      "section": "Highlight / mark"
+    },
+    {
+      "name": "--bf-yellow",
+      "value": "rgb(255 255 0)",
+      "section": "Highlight / mark"
+    },
+    {
+      "name": "--bf-orange",
+      "value": "rgb(255 165 0)",
+      "section": "Highlight / mark"
+    },
+    {
+      "name": "--bf-blue",
+      "value": "rgb(0 86 179)",
+      "section": "Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1)"
+    },
+    {
+      "name": "--bf-blue-light",
+      "value": "rgb(0 65 135)",
+      "section": "Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1)"
+    },
+    {
+      "name": "--bf-blue-light-extra",
+      "value": "rgb(190 216 254)",
+      "section": "Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1)"
+    },
+    {
+      "name": "--bf-red",
+      "value": "rgb(255 0 0)",
+      "section": "Invalid / error"
+    },
+    {
+      "name": "--bf-focus-ring-color",
+      "value": "var(--bf-orange)",
+      "section": "Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11)"
+    },
+    {
+      "name": "--bf-focus-ring-width",
+      "value": "0.2rem",
+      "section": "Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11)"
+    },
+    {
+      "name": "--bf-focus-ring-offset",
+      "value": "0.3rem",
+      "section": "Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11)"
+    },
+    {
+      "name": "--bf-dark-bg",
+      "value": "rgb(28 28 28)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-link",
+      "value": "rgb(77 165 255)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-link-hover",
+      "value": "rgb(77 165 255)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-border-focus",
+      "value": "rgb(26 140 255)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-shadow-focus",
+      "value": "rgb(3 102 214 / 50%)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-mark-bg",
+      "value": "rgb(230 230 0)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-ins-bg",
+      "value": "rgb(255 255 200)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-button-hover",
+      "value": "rgb(184 184 184)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-button-shadow",
+      "value": "rgb(255 255 255 / 45%)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-dark-invalid",
+      "value": "rgb(255 38 38)",
+      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
+    },
+    {
+      "name": "--bf-spacing-sm",
+      "value": "0.25rem",
+      "section": "Spacing scale + grid gutter"
+    },
+    {
+      "name": "--bf-spacing-md",
+      "value": "0.5rem",
+      "section": "Spacing scale + grid gutter"
+    },
+    {
+      "name": "--bf-spacing-lg",
+      "value": "1rem",
+      "section": "Spacing scale + grid gutter"
+    },
+    {
+      "name": "--bf-spacing-xl",
+      "value": "2rem",
+      "section": "Spacing scale + grid gutter"
+    },
+    {
+      "name": "--bf-spacing-xxl",
+      "value": "3rem",
+      "section": "Spacing scale + grid gutter"
+    },
+    {
+      "name": "--bf-spacing-grid-gutter",
+      "value": "1.5rem",
+      "section": "Spacing scale + grid gutter"
+    },
+    {
+      "name": "--bf-font-sans-serif",
+      "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+      "section": "Type"
+    },
+    {
+      "name": "--bf-font-serif",
+      "value": "Georgia, Times, 'Times New Roman', serif",
+      "section": "Type"
+    },
+    {
+      "name": "--bf-font-monospace",
+      "value": "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      "section": "Type"
+    },
+    {
+      "name": "--bf-body-font-size-rem",
+      "value": "1.6rem",
+      "section": "Type"
+    },
+    {
+      "name": "--bf-body-line-height",
+      "value": "1.5",
+      "section": "Type"
+    },
+    {
+      "name": "--bf-breakpoint-xs",
+      "value": "0",
+      "section": "Breakpoint tokens (documentation / tooling; media queries use literal px below)"
+    },
+    {
+      "name": "--bf-breakpoint-sm",
+      "value": "576px",
+      "section": "Breakpoint tokens (documentation / tooling; media queries use literal px below)"
+    },
+    {
+      "name": "--bf-breakpoint-md",
+      "value": "768px",
+      "section": "Breakpoint tokens (documentation / tooling; media queries use literal px below)"
+    },
+    {
+      "name": "--bf-breakpoint-lg",
+      "value": "992px",
+      "section": "Breakpoint tokens (documentation / tooling; media queries use literal px below)"
+    },
+    {
+      "name": "--bf-breakpoint-xl",
+      "value": "1200px",
+      "section": "Breakpoint tokens (documentation / tooling; media queries use literal px below)"
+    },
+    {
+      "name": "--bf-breakpoint-xxl",
+      "value": "1400px",
+      "section": "Breakpoint tokens (documentation / tooling; media queries use literal px below)"
+    }
+  ],
+  "classes": [
+    {
+      "name": "bf-accent-native",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-align-center-flex",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-align-center-unknown",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-align-center-unknown--item",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-antialiased",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-btn",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-btn--primary",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-clearfix",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-10",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-11",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-12",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-5",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-6",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-7",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-8",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-col-9",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-container",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-container--break-lg",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-container--break-md",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-container--break-xs",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-container--fluid",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-cursive--handwritten",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-disabled",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-block",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-block-center",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-flex",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-flex--justify-center",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-flex--justify-end",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-flex--justify-start",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-flex--nowrap",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-flex--wrap",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-inline",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-inline-block",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-display-inline-flex",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-embed-responsive",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-embed-responsive--4-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-embed-responsive--item",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-filter-blur",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-filter-dim-images",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-filter-grayscale",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-filter-invert",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-filter-none",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-float-left",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-float-right",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-focusable",
+      "group": "miscellaneous"
+    },
+    {
+      "name": "bf-focused",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-font-monospace",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-font-sans-serif",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-font-serif",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-h1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-h2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-h3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-h4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-h5",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-h6",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-hidden",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-hide",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-invalid",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-invisible",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-lead",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-list-unstyled",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-b-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-b-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-b-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-b-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-b-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-l-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-r-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-t-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-t-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-t-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-t-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-m-t-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-monospace--code",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-monospace--slab",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-no-gutters",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-no-select",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-b-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-b-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-b-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-b-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-b-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-l-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-r-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-t-0",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-t-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-t-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-t-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-p-t-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-position-fixed",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-position-relative",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-position-sticky",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-reduced-motion",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-responsive-typography",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-row",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-sans-serif--classical",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-sans-serif--geometric",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-sans-serif--humanist",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-sans-serif--industrial",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-sans-serif--neo-grotesque",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-sans-serif--rounded",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-sans-serif--system",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-scheme-auto",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-scheme-dark",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-scheme-light",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-serif--antique",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-serif--didone",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-serif--oldstyle",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-serif--slab",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-serif--transitional",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-skip-link",
+      "group": "miscellaneous"
+    },
+    {
+      "name": "bf-sr-only",
+      "group": "miscellaneous"
+    },
+    {
+      "name": "bf-subpixel-antialiased",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-center",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-italic",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-left",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-right",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-shadow",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-style-normal",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-transform-none",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-transform-uppercase",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-truncate",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-truncate--multiline-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-truncate--multiline-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-weight-300",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-weight-400",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-weight-500",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-weight-600",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-weight-700",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-t-weight-800",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-table",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-table--zebra",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-table-responsive",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-table-responsive--zebra",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-target-size",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-text-break",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-text-hide",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-visible",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-width-100",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-width-25",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-width-33",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-width-50",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-width-75",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-width-auto",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-1",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-10",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-100",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-2",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-20",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-200",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-3",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-30",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-300",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-4",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-40",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-5",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-50",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-6",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-60",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-7",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-70",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-8",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-80",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-9",
+      "group": "utilities"
+    },
+    {
+      "name": "bf-z-index-90",
+      "group": "utilities"
+    }
+  ],
+  "counts": {
+    "builds": 7,
+    "tokens": 47,
+    "classes": 179
+  }
+}

@@ -4,12 +4,14 @@
 // markdown files (paths relative to `docs/`) that belong to it. When you add
 // or move a doc under `docs/`, add it to a chapter here.
 
-export const excludeDirs = [];
+// Never built as pages. `public/` holds synced assets, including the agent skills,
+// whose Markdown links point at files rather than at routes.
+export const excludeDirs = ['public'];
 
 export const chapters = [
   {
     text: 'Overview',
-    files: ['README.md', 'getting-started.md', 'examples.md', 'migration.md'],
+    files: ['README.md', 'getting-started.md', 'examples.md', 'ai-skills.md', 'migration.md'],
   },
   {
     text: 'Core Concepts',

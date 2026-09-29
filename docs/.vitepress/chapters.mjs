@@ -11,7 +11,7 @@ export const excludeDirs = ['public'];
 export const chapters = [
   {
     text: 'Overview',
-    files: ['README.md', 'getting-started.md', 'examples.md', 'ai-skills.md', 'migration.md'],
+    files: ['README.md', 'getting-started.md', 'examples.md', 'agent-skills.md', 'migration.md'],
   },
   {
     text: 'Core Concepts',

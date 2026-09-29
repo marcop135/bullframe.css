@@ -3,7 +3,9 @@ import { basename } from 'node:path';
 import { glob } from 'glob';
 
 // Copy built CSS used by the kitchen sink and examples into VitePress public.
+// Wipe first so removed builds (legacy variables / utility-global-dark*) do not linger.
 const cssFiles = await glob('dist/css/*.min.css');
+await rm('docs/public/css', { recursive: true, force: true });
 await mkdir('docs/public/css', { recursive: true });
 for (const file of cssFiles) {
   await cp(file, `docs/public/css/${basename(file)}`);

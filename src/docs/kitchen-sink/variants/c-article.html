@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/kitchen-sink/icons/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/kitchen-sink/icons/favicon.ico" />
-    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v6" />
+    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v=621" />
   </head>
   <body class="bf-responsive-typography bf-reduced-motion">
     <a class="bf-sr-only focusable" href="#main-content">Skip to content</a>
@@ -1340,7 +1340,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         }
 
         function switchBuild(buildName) {
-          cssLink.href = '/css/' + buildName + '?v6';
+          cssLink.href = '/css/' + buildName + '?v=621';
 
           const root = document.documentElement;
           if (/dark/.test(buildName) && !/system-default/.test(buildName)) {

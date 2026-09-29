@@ -44,6 +44,8 @@ Add these **repository Actions secrets** in the GitHub UI (do not commit values)
 | `FTP_HOST` | FTPS server hostname (must match TLS cert CN/SAN) |
 | `FTP_USERNAME_PRODUCTION` | FTPS username |
 | `FTP_PASSWORD_PRODUCTION` | FTPS password |
+| `ANTHROPIC_API_KEY` | Optional. Manual Skills eval only (`skills-eval.yml`). Not required for docs deploy or for using the published skills. |
+| `NPM_TOKEN` | Optional. Only for the manual **Publish to npm** workflow (`workflow_dispatch`). Local `npm publish` from the release tag needs no Actions secret. |
 
 After secrets exist, push to `main` or run **Deploy docs** via `workflow_dispatch`.
 
@@ -52,9 +54,19 @@ After secrets exist, push to `main` or run **Deploy docs** via `workflow_dispatc
 1. On `develop`: update `CHANGELOG.md` (Keep a Changelog) and the `package.json` version.
 2. Run `npm run docs:build`. This rebuilds `dist/`, then `docs:sri` rewrites `docs/public/sri.json` and re-pins the versioned CDN + SRI snippets in `docs/getting-started.md`, `docs/theming.md` and `docs/theming/dark-mode.md`. Commit the result.
 3. Update the version strings no script patches: the self-host archive link in `docs/getting-started.md` and the `?v<major>` cache-buster in `src/docs/kitchen-sink/` (major releases only).
-4. Open the release PR `develop` into `main` and merge it.
-5. Create a GitHub Release / tag (`vX.Y.Z`) on `main`. `publish.yml` fires on `release: published` and runs `npm publish --provenance` with `NPM_TOKEN`.
-6. Confirm the docs deploy triggered by the push to `main`, then delete merged branches. Keep `develop`.
+4. Open the release PR `develop` into `main` and merge it. Confirm the docs deploy triggered by the push to `main`.
+5. On `main`, create an annotated tag and GitHub Release (`vX.Y.Z`). Publishing to npm is **manual**: check out the tag and run `npm publish --provenance --access public`. Optionally dispatch **Publish to npm** after `NPM_TOKEN` is set; the workflow does not run on `release: published`.
+6. Delete merged branches. Keep `develop`.
+
+### Visual baselines (Playwright)
+
+CI uploads `playwright-report/` and `test-results/` when the playwright job finishes (including failures). To refresh committed linux baselines from a failed run without installing browsers locally:
+
+```bash
+npm run test:e2e:sync-from-ci -- <run-id> landing
+```
+
+Prefer `npm run test:e2e:update` on a linux machine with `npx playwright install --with-deps` when you can. Do not scrape browser ZIPs from the Playwright CDN by hand.
 
 ## License
 

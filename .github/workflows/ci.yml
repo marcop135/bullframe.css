@@ -7,6 +7,9 @@ on:
     branches: [main, develop]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,6 +39,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Build skills
+        run: npm run skills:build
+
+      - name: Validate skills
+        run: npm run skills:check
+
       - name: Validate HTML
         run: npx html-validate "src/**/*.html"
 
@@ -56,6 +65,8 @@ jobs:
           test ! -e dist/css/bullframe-modern.css || (echo "Unexpected bullframe-modern.css" && exit 1)
           test ! -e dist/css/variables.css || (echo "Unexpected variables.css dist entry" && exit 1)
           test ! -e dist/css/utility-global-dark-prefers.css || (echo "Unexpected utility-global-dark-prefers.css dist entry" && exit 1)
+          test -f dist/skills/index.json || (echo "Missing dist/skills/index.json" && exit 1)
+          test -f dist/skills/api.json || (echo "Missing dist/skills/api.json" && exit 1)
           echo "All expected dist files present"
 
   playwright:

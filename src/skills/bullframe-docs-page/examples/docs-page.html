@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Installing Fieldnote · Docs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css/dist/css/bullframe-classless.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Breadcrumb"><a href="/docs">Docs</a> › <a href="/docs/install">Install</a></nav>
+    </header>
+
+    <main>
+      <article>
+        <h1>Installing Fieldnote</h1>
+        <p>Fieldnote runs as a single binary. This page covers install, first run and the two configuration files it reads.</p>
+
+        <nav aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#install">Install</a></li>
+            <li><a href="#configuration">Configuration</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="requirements">Requirements</h2>
+        <p>Node 20 or newer, and 200 MB of free disk space.</p>
+
+        <h2 id="install">Install</h2>
+        <pre><code>npm install --global fieldnote
+fieldnote init</code></pre>
+        <p>The <code>init</code> step writes <code>fieldnote.json</code> into the current directory and never overwrites an existing file.</p>
+
+        <h2 id="configuration">Configuration</h2>
+        <table>
+          <caption>
+            Configuration files, in load order
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">File</th>
+              <th scope="col">Scope</th>
+              <th scope="col">Wins</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>~/.fieldnote.json</code></td>
+              <td>User</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><code>fieldnote.json</code></td>
+              <td>Project</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <p>A missing configuration file is not an error. Fieldnote falls back to its defaults and says so on first run.</p>
+        </blockquote>
+      </article>
+    </main>
+
+    <footer>
+      <p>Last reviewed 26 September 2026.</p>
+    </footer>
+  </body>
+</html>

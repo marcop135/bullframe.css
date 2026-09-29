@@ -44,24 +44,24 @@ $bf-font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-
 
 /* v6 (CSS) */
 :root {
-  --bf-blue: rgb(0 102 204);
-  --bf-font-family-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --bf-blue: rgb(0 86 179);
+  --bf-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 ```
 
 ### Common Variable Renames
 
-| v5 Sass Variable             | v6 CSS Custom Property        |
-| ---------------------------- | ----------------------------- |
-| `$bf-blue`                   | `--bf-blue`                   |
-| `$bf-blue-light`             | `--bf-blue-light`             |
-| `$bf-spacing-sm`             | `--bf-spacing-sm`             |
-| `$bf-spacing-md`             | `--bf-spacing-md`             |
-| `$bf-spacing-lg`             | `--bf-spacing-lg`             |
-| `$bf-font-family-sans-serif` | `--bf-font-family-sans-serif` |
-| `$bf-body-font-size`         | `--bf-body-font-size`         |
-| `$bf-body-line-height`       | `--bf-body-line-height`       |
-| `$bf-grid-gutter`            | `--bf-grid-gutter`            |
+| v5 Sass Variable             | v6 CSS Custom Property     |
+| ---------------------------- | -------------------------- |
+| `$bf-blue`                   | `--bf-blue`                |
+| `$bf-blue-light`             | `--bf-blue-light`          |
+| `$bf-spacing-sm`             | `--bf-spacing-sm`          |
+| `$bf-spacing-md`             | `--bf-spacing-md`          |
+| `$bf-spacing-lg`             | `--bf-spacing-lg`          |
+| `$bf-font-family-sans-serif` | `--bf-font-sans-serif`     |
+| `$bf-body-font-size`         | `--bf-body-font-size-rem`  |
+| `$bf-body-line-height`       | `--bf-body-line-height`    |
+| `$bf-grid-gutter`            | `--bf-spacing-grid-gutter` |
 
 ## 3. Remove Sass Mixins
 

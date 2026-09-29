@@ -48,11 +48,17 @@ await writeFile(
 `
 );
 
+// Agent skills at /skills/, and the machine-readable API surface at /api.json so an
+// agent with a URL and no npm can still read them.
+await rm('docs/public/skills', { recursive: true, force: true });
+await cp('dist/skills', 'docs/public/skills', { recursive: true, force: true });
+await cp('dist/skills/api.json', 'docs/public/api.json', { force: true });
+
 // Example templates at /examples/{slug}/.
 await rm('docs/public/examples', { recursive: true, force: true });
 await mkdir('docs/public/examples', { recursive: true });
 await cp('src/docs/examples', 'docs/public/examples', { recursive: true, force: true });
 
 console.log(
-  `Synced ${cssFiles.length} CSS files, kitchen sink, demo redirect, and examples to docs/public/`
+  `Synced ${cssFiles.length} CSS files, kitchen sink, demo redirect, examples, and skills to docs/public/`
 );

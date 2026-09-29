@@ -90,6 +90,9 @@ function buildAllCss() {
     async closeBundle() {
       const cssFiles = await listEntryCss();
       const outDir = path.resolve(__dirname, 'dist/css');
+      // Clear only the CSS output. dist/ also holds the published agent skills, which
+      // this build must never touch (see scripts/build-skills.mjs).
+      fs.rmSync(outDir, { recursive: true, force: true });
       fs.mkdirSync(outDir, { recursive: true });
 
       for (const file of cssFiles) {
@@ -114,7 +117,7 @@ export default defineConfig({
   root: 'src', // Vite project root
   build: {
     outDir: '../dist', // Output directory
-    emptyOutDir: true, // Clean before build
+    emptyOutDir: false, // dist/css is cleaned by buildAllCss; dist/skills is not ours to delete
     rollupOptions: {
       // Avoid HTML MPA input: Vite's html-inline-proxy breaks on Windows with
       // inline <style> in the kitchen sink. Docs HTML never enters the bundle —

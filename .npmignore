@@ -1,6 +1,7 @@
 # Defense-in-depth deny-list. The real allowlist is package.json "files"
-# (dist/css only, plus LICENSE / README / CHANGELOG which npm always includes).
-# Keep this current so tooling, docs, and demos never ship if "files" is widened.
+# (dist/css, dist/skills and bin, plus LICENSE / README / CHANGELOG which npm
+# always includes). Keep this current so tooling, docs, and demos never ship if
+# "files" is widened. tests/skills/pack.test.mjs asserts both halves.
 
 # VCS / editors / agents
 .git

@@ -246,6 +246,13 @@ export default defineConfig({
       message:
         '<span class="bf-footer-brand"><img class="bf-footer-logo bf-footer-logo--light" src="/logo.svg" width="36" height="36" alt="" /><img class="bf-footer-logo bf-footer-logo--dark" src="/logo-dark.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 Marco Pontili</span></span></span>',
     },
+    notFound: {
+      code: '404',
+      title: 'Page not found',
+      quote: 'That path is not in the docs. Try Get started, or head home.',
+      linkLabel: 'go to home',
+      linkText: 'Take me home',
+    },
     editLink: {
       pattern: 'https://github.com/marcop135/bullframe.css/edit/v6/docs/:path',
       text: 'Edit this page on GitHub',

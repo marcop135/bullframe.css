@@ -1,0 +1,43 @@
+name: Skills eval
+
+# Manual only. This job calls a model, so it costs money and is not deterministic:
+# it never gates a pull request. Run it before a release, or after editing a skill.
+on:
+  workflow_dispatch:
+    inputs:
+      skill:
+        description: 'Single skill to evaluate (blank runs all)'
+        required: false
+        type: string
+      model:
+        description: 'Model id'
+        required: false
+        default: claude-sonnet-5
+        type: string
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build skills
+        run: npm run skills:build
+
+      - name: Evaluate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node scripts/eval-skills.mjs \
+            ${{ inputs.skill && format('--skill {0}', inputs.skill) || '' }} \
+            --model "${{ inputs.model }}"

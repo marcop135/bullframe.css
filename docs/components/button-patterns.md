@@ -1,5 +1,7 @@
 # Button Patterns
 
+<!-- bf-absent: bf-btn--block -->
+
 Composite button patterns. For individual button classes (`.bf-btn`, `.bf-btn--primary`, `.bf-disabled`), see [Buttons](../buttons).
 
 ## Button group

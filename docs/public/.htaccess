@@ -7,6 +7,9 @@
 Options -Indexes
 DirectoryIndex index.html
 
+# Unknown paths: VitePress builds 404.html at the site root.
+ErrorDocument 404 /404.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 

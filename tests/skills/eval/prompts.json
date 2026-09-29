@@ -1,0 +1,27 @@
+[
+  {
+    "skill": "bullframe-core",
+    "prompt": "Create a minimal page with Bullframe CSS: a title, one lead paragraph and a primary button. Return one complete HTML file and nothing else.",
+    "expect": { "document": true, "classBased": true }
+  },
+  {
+    "skill": "bullframe-landing-page",
+    "prompt": "Build a landing page for a time-tracking app called Tally with Bullframe CSS: hero with two calls to action, a three-column feature row and a closing call to action. Return one complete HTML file and nothing else.",
+    "expect": { "document": true, "classBased": true, "minRows": 1 }
+  },
+  {
+    "skill": "bullframe-forms",
+    "prompt": "Build a sign-up form with Bullframe CSS: full name, email, password, a newsletter checkbox and a submit button. Return one complete HTML file and nothing else.",
+    "expect": { "document": true, "classBased": true, "labelledControls": true }
+  },
+  {
+    "skill": "bullframe-docs-page",
+    "prompt": "Write a documentation page about installing a CLI called Tally with Bullframe CSS: intro, requirements, install steps with a code block and a configuration table. Return one complete HTML file and nothing else.",
+    "expect": { "document": true, "classless": true }
+  },
+  {
+    "skill": "bullframe-convert",
+    "prompt": "Convert this page to Bullframe CSS and return one complete HTML file and nothing else:\n<html><head><link rel=stylesheet href=/site.css></head><body><div class=\"container\"><div class=\"title\">Our team</div><div class=\"row\"><div class=\"col-md-6\"><div class=\"card\"><div class=\"card-title\">Engineering</div><p>Ships the product.</p></div></div><div class=\"col-md-6\"><div class=\"card\"><div class=\"card-title\">Support</div><p>Answers tickets.</p></div></div></div></div></body></html>",
+    "expect": { "document": true, "classBased": true }
+  }
+]

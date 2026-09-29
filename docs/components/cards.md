@@ -1,5 +1,7 @@
 # Card Patterns
 
+<!-- bf-absent: bf-card -->
+
 Bullframe doesn't ship a `.bf-card` class. Cards are usually one box with padding, a border or shadow, and consistent spacing. Easy enough to compose from existing utilities.
 
 ## Content card
@@ -33,18 +35,21 @@ Note `alt=""` on decorative images; keeps the link list clean for screen readers
 
 ## Card grid (responsive)
 
-3-up on desktop, 2-up on tablet, 1-up on phone.
+3-up on desktop, stacked below 768px. The breakpoint lives on the container, not on the
+columns: there are no per-breakpoint column classes.
 
 ```html
-<div class="bf-row">
-  <div class="bf-col-12 bf-col-md-6 bf-col-lg-4">
-    <!-- card -->
-  </div>
-  <div class="bf-col-12 bf-col-md-6 bf-col-lg-4">
-    <!-- card -->
-  </div>
-  <div class="bf-col-12 bf-col-md-6 bf-col-lg-4">
-    <!-- card -->
+<div class="bf-container bf-container--break-md">
+  <div class="bf-row">
+    <div class="bf-col-4">
+      <!-- card -->
+    </div>
+    <div class="bf-col-4">
+      <!-- card -->
+    </div>
+    <div class="bf-col-4">
+      <!-- card -->
+    </div>
   </div>
 </div>
 ```

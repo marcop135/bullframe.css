@@ -1,8 +1,9 @@
 name: Publish to npm
 
+# Manual only. Releases do not publish automatically: the maintainer runs
+# `npm publish --provenance --access public` from the tagged tree, or dispatches
+# this workflow after `NPM_TOKEN` is set in Actions secrets.
 on:
-  release:
-    types: [published]
   workflow_dispatch:
 
 jobs:
@@ -13,6 +14,15 @@ jobs:
       id-token: write
 
     steps:
+      - name: Require NPM_TOKEN
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "$NPM_TOKEN" ]; then
+            echo "::error::NPM_TOKEN is not set. Publish locally from the release tag, or add the secret and re-dispatch."
+            exit 1
+          fi
+
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Setup Node.js
@@ -43,6 +53,7 @@ jobs:
             test -f "dist/css/${f}.min.css" || (echo "Missing ${f}.min.css" && exit 1)
           done
           test ! -e dist/css/bullframe-modern.css || (echo "Unexpected bullframe-modern.css" && exit 1)
+
       - name: Publish to npm
         run: npm publish --provenance --access public
         env:

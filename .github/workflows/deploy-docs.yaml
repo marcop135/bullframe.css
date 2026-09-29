@@ -15,6 +15,9 @@ concurrency:
   group: docs-production-deploy
   cancel-in-progress: false
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     name: Build and FTP deploy docs

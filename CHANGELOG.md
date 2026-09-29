@@ -9,16 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- AI skills for coding agents: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`, shipped in the package and installed with `npx bullframe.css skills install`.
-- `bullframe` / `bullframe.css` CLI (`skills list`, `skills install`, `skills path`), zero dependencies, no postinstall hook. Install targets: `agents`, `claude` (`.claude/skills/`), `cursor` (`.cursor/skills/`), `codex` (`.agents/skills/`), and `dir`.
-- Generated `api.json` (every `.bf-*` class and `--bf-*` token) in the package and at `/api.json`.
-- [AI skills](docs/ai-skills.md) documentation page.
-- Docs site 404 page (`themeConfig.notFound`) and Apache `ErrorDocument 404 /404.html`.
+- AI agent skills: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`; `npx bullframe.css skills install` (Claude, Cursor, Codex).
+- Generated `api.json` (`.bf-*` classes, `--bf-*` tokens) in the package and at `/api.json`.
+- AI skills docs page; docs site 404 page.
 
 ### Fixed
 
-- Documented classes that do not exist: per-breakpoint columns in [Grid](docs/utilities/grid.md) and [Cards](docs/components/cards.md), left/right and all-sides steps in [Spacing](docs/utilities/spacing.md), and twelve text utilities in [Text](docs/utilities/text.md).
-- Wrong v6 token names in the [migration guide](docs/migration.md): `--bf-font-sans-serif`, `--bf-body-font-size-rem`, `--bf-spacing-grid-gutter`.
+- Non-existent classes in Grid, Cards, Spacing, and Text docs.
+- Wrong v6 token names in the migration guide.
 
 ## [6.1.0] - 2026-09-14
 

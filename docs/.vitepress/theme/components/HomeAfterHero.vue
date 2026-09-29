@@ -48,8 +48,7 @@ onUnmounted(() => {
 const copied = ref(false);
 let copiedTimer;
 
-async function copySnippet() {
-  const text = active.value.code;
+async function copyText(text, flag) {
   try {
     await navigator.clipboard.writeText(text);
   } catch {
@@ -63,11 +62,24 @@ async function copySnippet() {
     document.execCommand('copy');
     document.body.removeChild(ta);
   }
-  copied.value = true;
+  flag.value = true;
   clearTimeout(copiedTimer);
   copiedTimer = setTimeout(() => {
-    copied.value = false;
+    flag.value = false;
   }, 2000);
+}
+
+async function copySnippet() {
+  await copyText(active.value.code, copied);
+}
+
+const skillsCode = 'npx bullframe.css skills install';
+const skillsHighlighted =
+  '<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">npx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> bullframe.css</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> skills</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> install</span></span>';
+const skillsCopied = ref(false);
+
+async function copySkillsSnippet() {
+  await copyText(skillsCode, skillsCopied);
 }
 
 function selectTab(id) {
@@ -187,15 +199,6 @@ const stats = [
       </ul>
     </section>
 
-    <section class="bfh-section" aria-labelledby="bfh-examples-heading">
-      <div class="bfh-section__head">
-        <p class="bfh-eyebrow">Examples</p>
-        <h2 id="bfh-examples-heading" class="bfh-heading">Example pages</h2>
-        <p class="bfh-bridge">Live HTML on the published builds.</p>
-      </div>
-      <ExamplesGallery :slugs="showcaseSlugs" compact />
-    </section>
-
     <section class="bfh-section" aria-labelledby="bfh-install-heading">
       <div class="bfh-section__head">
         <p class="bfh-eyebrow">Install</p>
@@ -239,6 +242,43 @@ const stats = [
           </button>
         </div>
       </div>
+    </section>
+
+    <section class="bfh-section" aria-labelledby="bfh-skills-heading">
+      <div class="bfh-section__head">
+        <p class="bfh-eyebrow">AI skills</p>
+        <h2 id="bfh-skills-heading" class="bfh-heading">Teach agents Bullframe</h2>
+        <p class="bfh-bridge">
+          Markdown skills ship in the npm package. No server, no API key. Writes local skill files
+          and an <code>AGENTS.md</code> block.
+        </p>
+      </div>
+      <div class="bfh-install" role="group" aria-label="AI skills install">
+        <div class="bfh-code-wrap">
+          <pre class="bfh-code vp-code"><code v-html="skillsHighlighted"></code></pre>
+          <button
+            type="button"
+            class="bfh-copy"
+            :class="{ 'is-copied': skillsCopied }"
+            :aria-label="skillsCopied ? 'Copied' : 'Copy AI skills install snippet'"
+            @click="copySkillsSnippet"
+          >
+            <span class="bfh-copy__icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <p class="bfh-skills-more">
+        <a href="/ai-skills">AI skills docs</a>
+      </p>
+    </section>
+
+    <section class="bfh-section" aria-labelledby="bfh-examples-heading">
+      <div class="bfh-section__head">
+        <p class="bfh-eyebrow">Examples</p>
+        <h2 id="bfh-examples-heading" class="bfh-heading">Example pages</h2>
+        <p class="bfh-bridge">Live HTML on the published builds.</p>
+      </div>
+      <ExamplesGallery :slugs="showcaseSlugs" compact />
     </section>
 
     <section class="bfh-section" aria-labelledby="bfh-builds-heading">
@@ -285,7 +325,6 @@ const stats = [
       </div>
       <div class="bfh-cta">
         <a class="bfh-cta__btn bfh-cta__btn--brand" href="/getting-started">Get started</a>
-        <a class="bfh-cta__btn bfh-cta__btn--alt" href="/ai-skills">AI skills</a>
         <a class="bfh-cta__btn bfh-cta__btn--alt" href="/README">Read the docs</a>
       </div>
     </section>

@@ -73,7 +73,3 @@ skill, a shared reference or a docs code block names a class or token that no lo
 exists in `src/css/`, and every HTML example in a skill is validated with the project's
 own accessibility rules. Skills version with the framework: one tag, one changelog, one
 `npm install`.
-
-An optional maintainer-only GitHub Actions workflow can call a model to grade generated
-markup. That path needs an `ANTHROPIC_API_KEY` repository secret, costs money, and never
-gates a pull request. Using the skills does not require it.

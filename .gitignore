@@ -9,6 +9,7 @@ node_modules/
 .tmp-favicon/
 .tmp-heroes/
 pw-ci-artifacts/
+.artifacts/
 
 # Stale build output. dist/ ships CSS only; docs assets go src/docs/ → docs/public/
 dist/docs/

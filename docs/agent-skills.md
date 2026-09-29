@@ -1,4 +1,4 @@
-# AI skills
+# Agent skills
 
 Bullframe ships a set of agent skills: plain Markdown files that teach an AI coding agent
 how to build with this framework. They are part of the npm package, they need no server

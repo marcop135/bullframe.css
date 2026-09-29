@@ -30,6 +30,11 @@ ErrorDocument 404 /404.html
   RewriteRule ^install/?$ /getting-started [R=301,L]
   RewriteRule ^install\.html$ /getting-started [R=301,L]
 
+  # AI skills → agent skills
+  RewriteRule ^ai-skills/?$ /agent-skills [R=301,L]
+  RewriteRule ^ai-skills\.html$ /agent-skills [R=301,L]
+  RewriteRule ^ai-skills\.md$ /agent-skills.md [R=301,L]
+
   # Legacy kitchen-sink paths (old production root pointed at dist/docs/demo)
   RewriteRule ^dist/docs/demo/?$ /kitchen-sink/ [R=301,L]
   RewriteRule ^dist/docs/demo/(.*)$ /kitchen-sink/$1 [R=301,L]
@@ -113,17 +118,18 @@ ErrorDocument 404 /404.html
 
 # Caching.
 #
-# Nothing here set Cache-Control before, so browsers fell back to heuristic
-# freshness (RFC 9111 4.2.2) and a returning visitor kept serving a deployed
-# release from disk. Three tiers:
+# Three tiers:
 #
 #   1. /assets/  VitePress content-hashes these filenames, so a changed file is
 #                a new URL. Safe to keep forever.
 #   2. Other static files (hero PNGs, og-image.jpg, /css/*.min.css, favicons,
-#                llms.txt, sri.json). Stable names, new bytes every release, so
-#                they get a short window and then revalidate: a 304 is cheap.
-#   3. HTML      Always revalidate. This is the file that points at everything
-#                else, so a stale one pins a whole stale release.
+#                llms.txt, sri.json). Stable names, new bytes every release.
+#                Always revalidate (304 when unchanged). A fixed max-age left
+#                phones on the previous release's hero and kitchen-sink CSS.
+#   3. HTML / MD Entry points. no-store so a deploy cannot stick behind a
+#                false 304 from a stale Last-Modified after FTPS upload.
+#                Strip ETag and Last-Modified so validators cannot pin an
+#                old shell that still points at previous /assets/ hashes.
 #
 # Order matters: the immutable rule is second on purpose, so it overwrites tier
 # 2 for the /assets/ files that match both patterns.
@@ -132,19 +138,18 @@ ErrorDocument 404 /404.html
     SetEnvIf Request_URI "\.(?:css|js|mjs|map|png|jpe?g|webp|gif|svg|avif|ico|woff2?|ttf|otf|eot|json|txt|xml|pdf|mp4|webm|zip)$" BF_CACHE_ASSET=1
     SetEnvIf Request_URI "^/assets/" BF_CACHE_IMMUTABLE=1
 
-    Header set Cache-Control "public, max-age=600, must-revalidate" env=BF_CACHE_ASSET
+    Header set Cache-Control "public, max-age=0, must-revalidate" env=BF_CACHE_ASSET
     Header set Cache-Control "public, max-age=31536000, immutable" env=BF_CACHE_IMMUTABLE
   </IfModule>
 </IfModule>
 
-<IfModule mod_headers.c>
-  <FilesMatch "\.html$">
-    Header set Cache-Control "no-cache"
-  </FilesMatch>
-
-  # Markdown siblings are the same page under content negotiation; treat them
-  # like the HTML, not like a static asset.
-  <FilesMatch "\.md$">
-    Header set Cache-Control "no-cache"
-  </FilesMatch>
-</IfModule>
+<FilesMatch "\.(html|md)$">
+  FileETag None
+  <IfModule mod_headers.c>
+    Header unset ETag
+    Header unset Last-Modified
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </IfModule>
+</FilesMatch>

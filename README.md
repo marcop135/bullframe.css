@@ -17,13 +17,9 @@ Semantic by default. Any stack.
 
 ---
 
-One CSS file for plain HTML: type, forms, tables, buttons, and layout. No build step. No JavaScript.
+One-stylesheet CSS framework for plain HTML: no build step, no JavaScript. Typography, forms, tables, buttons, and layout out of the box.
 
-Class-based or classless. Light, dark, or system. About 8 kB gzipped. Drop it on a landing, docs site, or help center.
-
-## Quick start
-
-1. Add the stylesheet (CDN, always the latest release):
+Light or dark. Built for pages and forms: landings, docs, help centers, and marketing microsites.
 
 <!-- sri:cdn:start -->
 ```html
@@ -31,23 +27,7 @@ Class-based or classless. Light, dark, or system. About 8 kB gzipped. Drop it on
 ```
 <!-- sri:cdn:end -->
 
-2. Write semantic HTML. Headings, forms, tables, and buttons are styled without classes.
-
-3. Swap the build when you need classless, dark, or system. See [Builds](#builds).
-
-Or install from npm:
-
-```bash
-npm install bullframe.css
-```
-
-```js
-import 'bullframe.css';
-```
-
-Default import: class-based, light. Other builds: `bullframe.css/classless`, `bullframe.css/dark`, and so on.
-
-[Docs](https://bullframecss.marcopontili.com/) · [Examples](https://bullframecss.marcopontili.com/examples)
+[Check the docs →](https://bullframecss.marcopontili.com/)
 
 ## Features
 
@@ -55,11 +35,11 @@ Default import: class-based, light. Other builds: `bullframe.css/classless`, `bu
 - Classless when you want clean markup; classes when you need layout control
 - Light and dark out of the box, no theme script
 - One stylesheet, about 8 kB gzipped: type, forms, tables, buttons, layout
-- Restyle the page by changing a few colour tokens
-- Accessibility built in: clear focus, reduced motion, WCAG AA defaults
-- Works with any stack: landings, docs, help centers
+- Restyle the whole page by changing a few colour tokens
+- Accessibility built in: clear focus, reduced motion respect, WCAG AA defaults
+- Works with any stack: drop it on a landing, docs site, or help center
 - npm or CDN; nothing to compile to use it
-- AI skills for coding agents: `npx bullframe.css skills install`
+- Agent skills for coding agents
 
 ## Examples
 
@@ -82,17 +62,35 @@ Ready to copy: landings, blogs, forms, docs. Plain HTML, one stylesheet.
 
 [Browse all examples →](https://bullframecss.marcopontili.com/examples)
 
-## AI skills
+## Install
 
-Markdown skills for AI coding agents ship in the npm package. No server. No API key.
+```bash
+npm install bullframe.css
+```
+
+```js
+import 'bullframe.css';
+```
+
+[Install docs →](https://bullframecss.marcopontili.com/getting-started)
+
+### CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css">
+```
+
+[CDN docs →](https://bullframecss.marcopontili.com/getting-started)
+
+## Agent skills
+
+Markdown skills for Claude, Cursor, and Codex. No server. No API key.
 
 ```bash
 npx bullframe.css skills install
 ```
 
-Writes skill files plus a managed `AGENTS.md` block, and the matching layout under `.claude`, `.cursor`, or `.agents` when those folders exist.
-
-Details: [AI skills](https://bullframecss.marcopontili.com/ai-skills).
+[Agent skills docs →](https://bullframecss.marcopontili.com/agent-skills)
 
 ## Builds
 
@@ -127,7 +125,7 @@ Seven files in `dist/css/`, each with a minified twin and a source map. Pick one
 | [Components](https://bullframecss.marcopontili.com/components/) | Cards, modals, navigation, buttons |
 | [Theming](https://bullframecss.marcopontili.com/theming) | Colours and dark mode |
 | [API reference](https://bullframecss.marcopontili.com/api-reference) | Full token and class list |
-| [AI skills](https://bullframecss.marcopontili.com/ai-skills) | Skills for AI coding agents |
+| [Agent skills](https://bullframecss.marcopontili.com/agent-skills) | Skills for coding agents |
 | [Changelog](./CHANGELOG.md) | Release notes |
 
 ## Contributing

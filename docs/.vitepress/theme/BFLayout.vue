@@ -12,6 +12,25 @@ function heroSrcForAppearance() {
   return dark ? '/bullframe-hero-dark.png' : '/bullframe-hero.png';
 }
 
+const APPEARANCE_KEY = 'vitepress-theme-appearance';
+
+/** Keep meta color-scheme aligned with forced vs system appearance. */
+function syncColorSchemeMeta() {
+  if (!inBrowser) return;
+  let meta = document.querySelector('meta[name="color-scheme"]');
+  if (!meta) {
+    meta = document.createElement('meta');
+    meta.setAttribute('name', 'color-scheme');
+    document.head.prepend(meta);
+  }
+  const preference = localStorage.getItem(APPEARANCE_KEY) || 'auto';
+  if (!preference || preference === 'auto') {
+    meta.setAttribute('content', 'light dark');
+  } else {
+    meta.setAttribute('content', preference === 'dark' ? 'dark' : 'light');
+  }
+}
+
 /** Keep home hero sharp after SPA / bfcache navigations and theme toggles. */
 function syncHomeHero(force = false) {
   if (!inBrowser) return;

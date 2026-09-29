@@ -82,7 +82,7 @@ Repo Actions secrets required for docs deploy (same names as md2pdf FTPS):
 | `FTP_PASSWORD_PRODUCTION` | FTPS password |
 | `ANTHROPIC_API_KEY` | Optional. Only for the manual Skills eval workflow (`workflow_dispatch`). Absent → exit 0. Never a PR gate. |
 
-`NPM_TOKEN` is only needed at npm publish / GitHub Release time, not for docs deploy. The maintainer adds secrets in the GitHub UI; agents must not invent or commit secret values. Consumers of `npx bullframe.css skills install` need no API key.
+`NPM_TOKEN` is optional. Local `npm publish` from the release tag needs no Actions secret. The **Publish to npm** workflow is `workflow_dispatch` only (it does not run on GitHub Release publish). Dispatch it only after the secret exists. Agents must not invent or commit secret values. Consumers of `npx bullframe.css skills install` need no API key.
 
 ## Changelog
 

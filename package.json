@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "type": "module",
   "description": "Bullframe CSS is a lightweight CSS framework for fast, responsive, accessible UIs. Semantic by default. Any stack. Classless when you want it. System dark built in. Seven builds, solid cross-browser support.",
   "main": "dist/css/bullframe.css",
@@ -45,6 +45,7 @@
     "format:check": "prettier --check \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.mjs\" \"src/skills/**/*.md\" \"bin/**/*.mjs\" \"tests/**/*.mjs\" \"docs/**/*.md\" \"docs/.vitepress/**/*.css\" \"docs/.vitepress/**/*.mjs\" \"docs/.vitepress/**/*.js\" \"scripts/**/*.mjs\"",
     "test:e2e": "playwright test",
     "test:e2e:update": "playwright test --update-snapshots",
+    "test:e2e:sync-from-ci": "node scripts/sync-e2e-baselines-from-ci.mjs",
     "skills:build": "node scripts/build-skills.mjs",
     "skills:check": "node --test tests/skills/*.test.mjs",
     "skills:snapshot": "node scripts/build-skills.mjs --snapshot",

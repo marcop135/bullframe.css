@@ -1,10 +1,11 @@
-/* ! Bullframe CSS v6.1.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+/* ! Bullframe CSS v6.2.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
 /* Always-dark classless build. */
 
 /* Classless build: semantic element styles only (no .bf-* classes). */
 
 /* Variables */
+
 /* Design tokens (--bf-*). Shared by every build variant.
  * Override on :root (or a scope) to theme without rebuilding. */
 
@@ -80,6 +81,7 @@
 }
 
 /* Layout */
+
 /* Border-box and HTML5 block elements. */
 
 *,
@@ -259,6 +261,7 @@ template {
 }
 
 /* Typography */
+
 /* Root type and page chrome. */
 
 html {
@@ -312,6 +315,7 @@ body {
 
   background-color: var(--bf-white);
 }
+
 /* Heading scale and rhythm. */
 
 h1,
@@ -365,6 +369,7 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem;
 }
+
 /* Blockquote and citation. */
 
 blockquote {
@@ -389,6 +394,7 @@ blockquote small::before {
 q {
   quotes: '\201C' '\201D' '\2018' '\2019';
 }
+
 /* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
@@ -472,6 +478,7 @@ hr {
   padding: 0;
   overflow: visible; /* Edge: show overflow. */
 }
+
 /* pre / code / kbd / samp. */
 
 pre {
@@ -518,6 +525,7 @@ pre code {
 }
 
 /* Forms */
+
 /* Form control reset: inheritance, sizing, and UA quirks. */
 
 :where(html input, button, select, optgroup, textarea) {
@@ -1069,6 +1077,7 @@ pre code {
 }
 
 /* Miscellaneous */
+
 /* Link defaults. --bf-blue meets WCAG AA 4.5:1 on white. */
 
 a {
@@ -1098,6 +1107,7 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
+
 /* Keyboard-first focus: :focus-visible ring from --bf-focus-ring-*; mute mouse outline.
  * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
@@ -1329,6 +1339,7 @@ dialog[open] {
 dialog::backdrop {
   background: rgb(0 0 0 / 40%);
 }
+
 /* Smooth scrolling when motion is allowed. */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1336,6 +1347,7 @@ dialog::backdrop {
     scroll-behavior: smooth;
   }
 }
+
 /* Table border collapse and cell alignment. */
 
 table {
@@ -1381,6 +1393,7 @@ caption {
   line-height: 1.375;
   font-size: 90%;
 }
+
 /* Accessibility helpers (adapted from sanitize.css). */
 
 /* Busy: progress cursor. */
@@ -1402,6 +1415,7 @@ caption {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+
 /* Preference queries only (prefers-contrast, forced-colors). Additive. */
 
 /* prefers-contrast: more: underline links, thicker focus, stronger borders (WCAG 1.4.1). */
@@ -1459,7 +1473,6 @@ caption {
   }
 }
 /* Always-dark overrides for classless (no media query, no .bf-* selectors). */
-
 /* Element-level dark-mode rules, shared by the class-based and classless dark
  * sheets. Contains no .bf-* selector, so the classless builds can import it as
  * they are. Class-based extras live in _utility-global-dark-shared.css.
@@ -1641,6 +1654,7 @@ input:focus {
 :focus-visible {
   outline-color: rgb(214 140 0); /* orange -15% */
 }
+
 /* Dark scrollbar colors (Firefox + WebKit). */
 
 html {

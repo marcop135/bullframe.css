@@ -15,9 +15,6 @@ on:
         default: claude-sonnet-5
         type: string
 
-permissions:
-  contents: read
-
 jobs:
   eval:
     runs-on: ubuntu-latest

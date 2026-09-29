@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [6.2.0] - 2026-09-29
-
 ### Added
 
 - AI agent skills: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`; `npx bullframe.css skills install` (Claude, Cursor, Codex).
@@ -19,10 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Non-existent classes in Grid, Cards, Spacing, and Text docs.
 - Wrong v6 token names in the migration guide.
-
-### Security
-
-- Explicit `permissions: contents: read` on CI, Deploy docs, and Skills eval workflows.
 
 ## [6.1.0] - 2026-09-14
 

@@ -254,11 +254,29 @@ export default defineConfig({
       linkText: 'Take me home',
     },
     editLink: {
-      pattern: 'https://github.com/marcop135/bullframe.css/edit/v6/docs/:path',
+      pattern: 'https://github.com/marcop135/bullframe.css/edit/develop/docs/:path',
       text: 'Edit this page on GitHub',
     },
   },
   head: [
+    // Early: supported schemes before paint (canvas for first-time dark OS visitors).
+    ['meta', { name: 'color-scheme', content: 'light dark' }],
+    [
+      'meta',
+      {
+        name: 'theme-color',
+        content: '#ffffff',
+        media: '(prefers-color-scheme: light)',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'theme-color',
+        content: '#1b1b1f',
+        media: '(prefers-color-scheme: dark)',
+      },
+    ],
     // Cross-browser favicons: SVG first, then ICO/PNG fallbacks, Apple, mask, manifest.
     ['link', { rel: 'icon', href: '/favicon.svg?v=5', type: 'image/svg+xml' }],
     ['link', { rel: 'icon', href: '/favicon.ico?v=5', sizes: 'any' }],
@@ -283,7 +301,6 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=5' }],
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=5', color: '#0056b3' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
-    ['meta', { name: 'theme-color', content: '#0056b3' }],
     ['meta', { name: 'msapplication-TileColor', content: '#0056b3' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],

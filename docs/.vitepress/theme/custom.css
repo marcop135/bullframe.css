@@ -4,6 +4,17 @@
  * (text on light, white on solid buttons). Matches framework link/button accent.
  */
 
+/* Used scheme follows VitePress appearance (html.dark), not OS alone.
+ * Meta color-scheme stays "light dark" for the pre-CSS canvas; after CSS,
+ * these pins keep forced light/dark honest for UA widgets and scrollbars. */
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
 :root {
   /* Links / accents on light surfaces */
   --vp-c-brand-1: #0056b3;

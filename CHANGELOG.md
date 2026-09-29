@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.2.1] - 2026-09-29
+
+### Changed
+
+- Shorter README install, CDN, and agent skills sections.
+- Renamed docs "AI skills" to "agent skills" (`/agent-skills`; `/ai-skills` redirects).
+- Docs `color-scheme` (meta + CSS pins on `html` / `html.dark`, synced with the appearance toggle) and light/dark `theme-color`.
+
+### Fixed
+
+- Docs deploys reach returning visitors without a hard refresh.
+- Docs edit links and API source links pointed at a deleted `v6` branch.
+- Leftover legacy CSS files no longer linger in the docs public tree.
+
 ## [6.2.0] - 2026-09-29
 
 ### Added
@@ -534,7 +548,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
 
-[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...HEAD
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...HEAD
+[6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
 [6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

@@ -246,21 +246,21 @@ const stats = [
 
     <section class="bfh-section" aria-labelledby="bfh-skills-heading">
       <div class="bfh-section__head">
-        <p class="bfh-eyebrow">AI skills</p>
+        <p class="bfh-eyebrow">Agent skills</p>
         <h2 id="bfh-skills-heading" class="bfh-heading">Teach agents Bullframe</h2>
         <p class="bfh-bridge">
           Markdown skills ship in the npm package. No server, no API key. Writes local skill files
           and an <code>AGENTS.md</code> block.
         </p>
       </div>
-      <div class="bfh-install" role="group" aria-label="AI skills install">
+      <div class="bfh-install" role="group" aria-label="Agent skills install">
         <div class="bfh-code-wrap">
           <pre class="bfh-code vp-code"><code v-html="skillsHighlighted"></code></pre>
           <button
             type="button"
             class="bfh-copy"
             :class="{ 'is-copied': skillsCopied }"
-            :aria-label="skillsCopied ? 'Copied' : 'Copy AI skills install snippet'"
+            :aria-label="skillsCopied ? 'Copied' : 'Copy agent skills install snippet'"
             @click="copySkillsSnippet"
           >
             <span class="bfh-copy__icon" aria-hidden="true"></span>
@@ -268,7 +268,7 @@ const stats = [
         </div>
       </div>
       <p class="bfh-skills-more">
-        <a href="/ai-skills">AI skills docs</a>
+        <a href="/agent-skills">Agent skills docs</a>
       </p>
     </section>
 

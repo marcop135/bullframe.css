@@ -16,7 +16,7 @@ import { readCssApi, repoRoot } from './lib/css-api.mjs';
 
 const outFile = path.join(repoRoot, 'docs', 'api-reference.md');
 const repoUrl = 'https://github.com/marcop135/bullframe.css';
-const branch = 'v6';
+const branch = 'main';
 
 const { fileScores, classGroups, varGroups } = readCssApi();
 const dedupedClassCount = fileScores.size;

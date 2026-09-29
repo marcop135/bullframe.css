@@ -52,7 +52,7 @@ scripts = scripts.replace(
         }
 
         function switchBuild(buildName) {
-          cssLink.href = '/css/' + buildName + '?v6';
+          cssLink.href = '/css/' + buildName + '?v=621';
 
           const root = document.documentElement;
           if (/dark/.test(buildName) && !/system-default/.test(buildName)) {
@@ -566,7 +566,7 @@ function headCommon(title, { gridBorders = false } = {}) {
     <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/kitchen-sink/icons/apple-touch-icon.png">
     <link rel="shortcut icon" href="/kitchen-sink/icons/favicon.ico">
-    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v6">
+    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v=621">
 ${extras ? extras + '\n' : ''}  </head>`;
 }
 

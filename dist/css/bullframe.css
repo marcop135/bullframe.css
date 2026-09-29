@@ -1,9 +1,8 @@
-/* ! Bullframe CSS v6.2.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+/* ! Bullframe CSS v6.2.1 | MIT License | https://github.com/marcop135/bullframe.css  */
 
 /* Class-based default build (light). Import map for the full framework. */
 
 /* Variables */
-
 /* Design tokens (--bf-*). Shared by every build variant.
  * Override on :root (or a scope) to theme without rebuilding. */
 
@@ -79,7 +78,6 @@
 }
 
 /* Layout */
-
 /* Border-box and HTML5 block elements. */
 
 *,
@@ -259,7 +257,6 @@ template {
 }
 
 /* Typography */
-
 /* Root type and page chrome. */
 
 html {
@@ -313,7 +310,6 @@ body {
 
   background-color: var(--bf-white);
 }
-
 /* Heading scale and rhythm. */
 
 h1,
@@ -367,7 +363,6 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem;
 }
-
 /* Blockquote and citation. */
 
 blockquote {
@@ -392,7 +387,6 @@ blockquote small::before {
 q {
   quotes: '\201C' '\201D' '\2018' '\2019';
 }
-
 /* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
@@ -476,7 +470,6 @@ hr {
   padding: 0;
   overflow: visible; /* Edge: show overflow. */
 }
-
 /* pre / code / kbd / samp. */
 
 pre {
@@ -523,7 +516,6 @@ pre code {
 }
 
 /* Forms */
-
 /* Form control reset: inheritance, sizing, and UA quirks. */
 
 :where(html input, button, select, optgroup, textarea) {
@@ -1075,7 +1067,6 @@ pre code {
 }
 
 /* Miscellaneous */
-
 /* Link defaults. --bf-blue meets WCAG AA 4.5:1 on white. */
 
 a {
@@ -1105,7 +1096,6 @@ a:not([href], [class]):hover {
 a:not([href], [tabindex]):focus {
   outline: 0;
 }
-
 /* Keyboard-first focus: :focus-visible ring from --bf-focus-ring-*; mute mouse outline.
  * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
@@ -1337,7 +1327,6 @@ dialog[open] {
 dialog::backdrop {
   background: rgb(0 0 0 / 40%);
 }
-
 /* Smooth scrolling when motion is allowed. */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1345,7 +1334,6 @@ dialog::backdrop {
     scroll-behavior: smooth;
   }
 }
-
 /* Table border collapse and cell alignment. */
 
 table {
@@ -1391,7 +1379,6 @@ caption {
   line-height: 1.375;
   font-size: 90%;
 }
-
 /* Accessibility helpers (adapted from sanitize.css). */
 
 /* Busy: progress cursor. */
@@ -1413,7 +1400,6 @@ caption {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
-
 /* Preference queries only (prefers-contrast, forced-colors). Additive. */
 
 /* prefers-contrast: more: underline links, thicker focus, stronger borders (WCAG 1.4.1). */
@@ -1520,7 +1506,6 @@ caption {
 }
 
 /* Utilities */
-
 /* Display, visibility, float, position, and width helpers. */
 
 .bf-clearfix::before,
@@ -1673,7 +1658,6 @@ caption {
 .bf-width-auto {
   width: auto !important;
 }
-
 /* Text alignment, weight, truncate, and font-stack helpers. */
 
 .bf-t-transform-uppercase {
@@ -1899,7 +1883,6 @@ p.bf-lead {
 body.bf-responsive-typography {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
-
 /* 12-column flex grid: .bf-container / .bf-row / .bf-col-* (+ optional --break-* stacking). */
 
 .bf-container,
@@ -2234,7 +2217,6 @@ table th[class^='bf-col'] {
 .bf-p-t-4 {
   padding-top: var(--bf-spacing-xxl) !important;
 }
-
 /* .bf-btn and variants. */
 
 .bf-btn {
@@ -2318,7 +2300,6 @@ table th[class^='bf-col'] {
     border: 1px solid ButtonText;
   }
 }
-
 /* Focused / invalid / disabled form state classes. */
 
 .bf-focused {
@@ -2419,7 +2400,6 @@ button.bf-disabled:focus,
   border-color: var(--bf-red) !important;
   box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }
-
 /* Custom radio / checkbox appearance. */
 
 .custom-checkbox-wrapper [type='checkbox'] {
@@ -2504,7 +2484,6 @@ button.bf-disabled:focus,
   background-color: var(--bf-blue);
   border-color: var(--bf-black);
 }
-
 /* Unstyled and inline list helpers. */
 
 .bf-list-unstyled,
@@ -2523,7 +2502,6 @@ dd.bf-list-unstyled {
 dt {
   font-weight: 700;
 }
-
 /* Filter helpers (.bf-filter-*). */
 
 .bf-filter-invert {
@@ -2545,7 +2523,6 @@ dt {
 .bf-filter-none {
   filter: none !important;
 }
-
 /* Table padding, overflow, and zebra helpers. */
 
 .bf-table th,
@@ -2609,7 +2586,6 @@ dt {
   height: 100%;
   border: 0;
 }
-
 /* Reduced-motion opt-in (cssremedy-style). */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2628,7 +2604,6 @@ dt {
     transition-duration: 0s !important;
   }
 }
-
 /* Opt-in font-smoothing (.bf-antialiased / .bf-subpixel-antialiased).
  * Names match Tailwind. Not applied globally: Apple recommends subpixel for body text on macOS. */
 
@@ -2641,7 +2616,6 @@ dt {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
-
 /* Opt-in color-scheme. Put one on <html> so the UA themes native widgets
  * (date pickers, select popups, autofill, scrollbars) to match the build. */
 
@@ -2656,7 +2630,6 @@ dt {
 .bf-scheme-auto {
   color-scheme: light dark;
 }
-
 /* Opt-in minimum target size (WCAG 2.5.8, 24x24 CSS px).
  * Grows the hit box only; the painted control keeps its size. */
 
@@ -2689,7 +2662,6 @@ dt {
 .bf-accent-native {
   accent-color: var(--bf-blue);
 }
-
 /* Print styles (adapted from h5bp main.css). */
 
 @media print {

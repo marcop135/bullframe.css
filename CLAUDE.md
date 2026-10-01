@@ -34,7 +34,7 @@ Uses **npm**. Node `>=20`.
 | `npm run test:e2e` | Playwright visuals |
 | `npm run test:e2e:update` | Refresh baselines (only when intentional) |
 | `npm run brand:icons` | Favicons / touch icons from `src/docs/brand/logo.svg` |
-| `npm run brand:images` | README, site hero, OG, social preview → PNG/JPEG |
+| `npm run brand:images` | README (light/dark), OG, social preview from `.github/brand/*.svg` |
 | `npm run brand:images:check` | Fail if a committed brand image is out of date |
 
 ## Project layout
@@ -44,10 +44,9 @@ Uses **npm**. Node `>=20`.
 - `docs/` — **VitePress site** (Markdown pages, theme, deployable `docs/public/`).
 - `src/docs/` — **source assets**, not the docs site:
   - `brand/` — logo mark, favicons
-  - `brand/images/` — source scene for every generated brand image (`brand:images`)
   - `examples/` — HTML templates synced to `docs/public/examples/`
   - `kitchen-sink/` — kitchen sink synced to `docs/public/kitchen-sink/`
-  - `github-readme/` — README light/dark hero rasters (16:9) + GitHub social preview
+- `.github/brand/`: brand image SVG sources, `brand.config.json`, vendored repo-brand kit (`render.mjs`, fonts); README `readme.png` / `readme-dark.png`, `social.png`, OG to `docs/public/og-image.jpg`.
 - `tests/e2e/` — Playwright specs and `__screenshots__` baselines.
 - `.github/workflows/ci.yml` — lint/build/e2e on `main` (and legacy `v6` while it exists).
 - `.github/workflows/deploy-docs.yaml` — FTPS deploy of `docs/.vitepress/dist/` on `main`.
@@ -58,7 +57,7 @@ Uses **npm**. Node `>=20`.
 
 ## Brand images
 
-Never hand-edit a generated image. Change `src/docs/brand/images/` (`tokens.mjs` for colour and copy, `scene.mjs` for geometry, `targets.mjs` for outputs), re-run `npm run brand:images`, and commit source and output together. Post-processing a rendered PNG is what produced the soft type and the mascot fringe that this pipeline replaced.
+Never hand-edit a generated image. Edit the SVGs in `.github/brand/` (outputs in `brand.config.json`), re-run `npm run brand:images`, and commit source and output together. The kit files there (`render.mjs`, `embed-fonts.mjs`, `tokens.json`, `fonts/`) are vendored from marcopontili.com; do not edit them here. `docs/public/bullframe-hero*.png` (docs home hero) are static assets outside this pipeline.
 
 ## CDN / README
 

@@ -1,7 +1,7 @@
 <div align="center">
 
-![Bullframe CSS](src/docs/github-readme/bf-readme-hero-light-16x9.png#gh-light-mode-only)
-![Bullframe CSS](src/docs/github-readme/bf-readme-hero-dark-16x9.png#gh-dark-mode-only)
+![Bullframe CSS: semantic by default, any stack. The bull mascot inside nested body, main and article frames](.github/brand/readme.png#gh-light-mode-only)
+![Bullframe CSS: semantic by default, any stack. The bull mascot inside nested body, main and article frames](.github/brand/readme-dark.png#gh-dark-mode-only)
 
 # Bullframe CSS
 

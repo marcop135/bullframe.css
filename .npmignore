@@ -16,9 +16,7 @@ CLAUDE.md
 # Docs, demos, sources (rebuild from the git repo, not the npm tarball)
 docs
 src
-src/docs/brand/images
 scripts
-scripts/generate-brand-images.mjs
 tests
 playwright-report
 test-results

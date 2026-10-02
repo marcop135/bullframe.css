@@ -311,6 +311,14 @@ export default defineConfig({
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { property: 'og:image:type', content: 'image/jpeg' }],
+    [
+      'meta',
+      {
+        property: 'og:image:alt',
+        content:
+          'Bullframe CSS: semantic by default, any stack. The bull mascot inside nested body, main and article frames.',
+      },
+    ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Bullframe CSS' }],
     ['meta', { name: 'twitter:description', content: siteDescription }],

@@ -2,7 +2,8 @@
 # Copied into docs/.vitepress/dist/ via docs/public/.
 #
 # Serves clean URLs, Accept: text/markdown negotiation (pragmatic),
-# and Link rel=alternate between HTML and sibling .md files.
+# Link rel=alternate between HTML and sibling .md files, and a security
+# header baseline (CSP / HSTS / XFO / nosniff / Referrer-Policy / COOP).
 
 Options -Indexes
 DirectoryIndex index.html
@@ -99,6 +100,16 @@ ErrorDocument 404 /404.html
   # Markdown → HTML alternate
   Header set Link "</>; rel=\"alternate\"; type=\"text/html\"" env=BF_MD_ROOT
   Header set Link "</%{BF_MD_PAGE}e>; rel=\"alternate\"; type=\"text/html\"" env=BF_MD_PAGE
+
+  # Security baseline (HTML and related). VitePress needs 'unsafe-inline' for
+  # appearance bootstrap, hash map, and JSON-LD. frame-ancestors 'none' + XFO.
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin" "expr=%{CONTENT_TYPE} =~ m#text\/(css|html|javascript)|application\/pdf|xml#i"
+  Header always set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+  Header always set Cross-Origin-Opener-Policy "same-origin" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+  Header always set Permissions-Policy "accelerometer=(),autoplay=(),camera=(),display-capture=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),xr-spatial-tracking=()" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
 </IfModule>
 
 # Ensure .md is served as Markdown even if AddType is ignored

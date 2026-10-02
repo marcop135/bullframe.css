@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+
+- Docs site Apache headers: CSP (`frame-ancestors 'none'`), HSTS, X-Frame-Options, nosniff, Referrer-Policy, COOP, and Permissions-Policy in `docs/public/.htaccess`.
+
 ### Changed
 
 - README (light/dark), OG and GitHub social images redrawn as SVG in `.github/brand/` with the shared repo-brand kit: Catamaran, Cabin and Roboto Mono, sky accent, 2:1 layout. OG URL unchanged.

@@ -6,7 +6,7 @@ Entry point for AI agents in this repository. Detailed maintainer rules live in 
 
 ## Stack
 
-Native **CSS + PostCSS** (no Sass). Seven builds via Vite. Docs: **VitePress**. Visual regression: Playwright. Live docs: FTPS to Netsons.
+Native **CSS + PostCSS** (no Sass). Seven builds via Vite. Docs: **VitePress**. Visual regression: Playwright. Live docs: FTPS to Netsons. Docs Apache security + cache headers live in [`docs/public/.htaccess`](docs/public/.htaccess) (copied into the VitePress dist).
 
 ## Build / test
 

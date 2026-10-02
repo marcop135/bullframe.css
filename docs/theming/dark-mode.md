@@ -9,7 +9,7 @@ The `bullframe-system-default.css` build automatically switches between light an
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.2.1/dist/css/bullframe-system-default.min.css" integrity="sha384-PRYo6KOJBNupLQILMfcQQuZ3qfxYLT0JourY4DgfrpwN3d2+CQhQc3cPG41/tpg+" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.2.2/dist/css/bullframe-system-default.min.css" integrity="sha384-Auun6ZESNGdPZw2s9kfQ7sppDm4QMuZUg7MJPG3cBDwT8MsGbDpaRbwei4lwpNV2" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->
@@ -23,7 +23,7 @@ Use `bullframe-dark.css` for a permanent dark theme:
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.2.1/dist/css/bullframe-dark.min.css" integrity="sha384-rOBU+2K0jzOie/z89918PWzDd0HSmmN9w15GyJnZIOYbEylte7l9TJKtA95iyfjm" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.2.2/dist/css/bullframe-dark.min.css" integrity="sha384-7AtSvUjEjHp0wc6IBvtz+MfmBxglADw2GnlgPKOryTDE8YPGoxTo8rvectm5nJqd" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->

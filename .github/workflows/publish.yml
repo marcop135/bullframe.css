@@ -1,8 +1,9 @@
 name: Publish to npm
 
 # Manual only. Releases do not publish automatically: the maintainer runs
-# `npm publish --provenance --access public` from the tagged tree, or dispatches
-# this workflow after `NPM_TOKEN` is set in Actions secrets.
+# `npm publish --access public` from `develop`, or dispatches this
+# workflow after `NPM_TOKEN` is set in Actions secrets. `--provenance` needs
+# CI OIDC, so it only works here, not locally.
 on:
   workflow_dispatch:
 

@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - HTML-scene brand image generator.
 
+### Fixed
+
+- Built CSS banners, the skills index, and docs CDN + SRI snippets report 6.2.2.
+
 ## [6.2.1] - 2026-09-29
 
 ### Changed

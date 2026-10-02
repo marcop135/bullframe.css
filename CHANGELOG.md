@@ -5,21 +5,19 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [6.2.2] - 2026-10-02
 
 ### Security
 
-- Docs site Apache headers: CSP (`frame-ancestors 'none'`), HSTS, X-Frame-Options, nosniff, Referrer-Policy, COOP, and Permissions-Policy in `docs/public/.htaccess`.
+- Docs site: CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, COOP.
 
 ### Changed
 
-- README (light/dark), OG and GitHub social images redrawn as SVG in `.github/brand/` with the shared repo-brand kit: Catamaran, Cabin and Roboto Mono, sky accent, 2:1 layout. OG URL unchanged.
-- `brand:images` / `brand:images:check` now run `.github/brand/render.mjs`.
-- Docs `og:image:alt` meta.
+- README, OG, and social images use the shared repo-brand kit.
 
 ### Removed
 
-- HTML-scene brand image generator (`scripts/generate-brand-images.mjs`, `src/docs/brand/images/`) and the old `src/docs/github-readme/` rasters.
+- HTML-scene brand image generator.
 
 ## [6.2.1] - 2026-09-29
 

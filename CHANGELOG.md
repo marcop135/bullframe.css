@@ -113,11 +113,11 @@
 
 - Applied the `:where` pseudo-class to normalize form element specificity to `0`
 - Resolved issues with Sass source map generation
-- Documented one-page demo and CodePen collection in `README.md`
+- Documented one-page demo and CodePen collection in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 5.0.1 - (July 07, 2025)
 
-- Added missing LICENSE file and `.github/` folder
+- Added missing LICENSE file and [`.github/`](https://github.com/marcop135/bullframe.css/blob/develop/.github/) folder
 
 ## 5.0.0 (July 07, 2025) - BREAKING CHANGES
 
@@ -127,7 +127,7 @@
 - Reorganized Sass architecture for better clarity
 - Added `<dialog>` normalization with basic styling
 - Refreshed HTML demo page with new examples
-- Streamlined `README.md` copy and layout
+- Streamlined [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md) copy and layout
 - Updated all npm dependencies
 - Updated stylelint, html-validate, and prettier configs
 - Ensured HTML demo page passed W3C validation
@@ -137,7 +137,7 @@
 - Removed text indentation from table contents
 - Corrected table border color inheritance
 - Updated stylelint configuration and removed deprecated package
-- Clearly defined browser support in `README.md`
+- Clearly defined browser support in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 - Removed attempted support for GitHub Packages
 - Added maps to npm package
 - Ignored more common files in npm package
@@ -166,23 +166,23 @@
 
 - Moved from `dark-prefers` to `system-default` (no breaking changes)
 - Updated `.browserlistrc`
-- Cleaned up and improved `README.md`
+- Cleaned up and improved [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 4.0.1 (August 12, 2022)
 
 - Updated `.browserlistrc`
-- Updated `package.json` description and tags
+- Updated [`package.json`](https://github.com/marcop135/bullframe.css/blob/develop/package.json) description and tags
 
 ## 4.0.0 (August 11, 2022) - BREAKING CHANGES
 
 - Dropped support for IE8, IE9, and IE10
 - Upgraded all npm packages to latest minor and major versions (e.g. gulp-sass v5)
-- Cleaned up `README.md`
+- Cleaned up [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.8.2 (June 26, 2021)
 
 - Upgraded cssnano, autoprefixer, and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
-- Cleaned up `README.md`
+- Cleaned up [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.8.1 (June 22, 2021)
 
@@ -192,7 +192,7 @@
 
 - Reverted html/body `height` and `body` `min-height` to `auto` to avoid scrollbar issues
 - Added support for Skypack CDN
-- Added Synk vuln badge in `README.md`
+- Added Synk vuln badge in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.7.0 (April 24, 2021) - BREAKING CHANGES
 
@@ -237,7 +237,7 @@
 
 ## 3.4.1 (January 24, 2021)
 
-- Added missing v3.4.0 `CHANGELOG.md`
+- Added missing v3.4.0 [`CHANGELOG.md`](https://github.com/marcop135/bullframe.css/blob/develop/CHANGELOG.md)
 
 ## 3.4.0 (January 24, 2021)
 
@@ -246,11 +246,11 @@
 
 ## 3.3.9 (November 29, 2020)
 
-- Fixed broken anchors and URLs in `README.md`
+- Fixed broken anchors and URLs in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.3.8 (November 29, 2020)
 
-- Improved `README.md` fixes
+- Improved [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md) fixes
 - Reinforced mixins declarations
 
 ## 3.3.7 (November 27, 2020)
@@ -271,10 +271,10 @@
 
 ## 3.3.4 (September 03, 2020)
 
-- Added utilities reference in `README.md`
+- Added utilities reference in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 - Fixed grid system bug related to `.bf-col-3` and `.bf-col-4`
 - Added GitHub Packages support
-- Added UNPKG CDN in `README.md`
+- Added UNPKG CDN in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.3.3 (July 22, 2020)
 
@@ -286,8 +286,8 @@
 
 ## 3.3.1 (July 22, 2020)
 
-- Fixed "What's included" and "Gulp.js" sections in `README.md`
-- Fixed JSDelivr `package.json` settings
+- Fixed "What's included" and "Gulp.js" sections in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
+- Fixed JSDelivr [`package.json`](https://github.com/marcop135/bullframe.css/blob/develop/package.json) settings
 - Minor code improvements
 
 ## 3.3.0 (July 09, 2020)
@@ -310,7 +310,7 @@
 - Added `progress` normalization
 - Added dark theme scrollbars normalization
 - Added webkit/blink/gecko/trident screenshots/screencasts
-- Added quick overview of the utilities in `README.md`
+- Added quick overview of the utilities in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 - Added more examples in `index.html`
 - Added SCSS file structure improvements
 - Added responsive typography improvements
@@ -364,7 +364,7 @@
 
 ## 2.8.1 (03 April 2020)
 
-- Added `README.md` info
+- Added [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md) info
 - Updated browser compatibility list
 
 ## 2.8.0 (22 March 2020)

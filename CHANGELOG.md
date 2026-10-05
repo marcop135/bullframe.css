@@ -144,7 +144,7 @@
 
 ## 4.2.1 (April 26, 2025)
 
-- Fixed and simplified `/docs` directory structure [(#42)](https://github.com/marcop135/bullframe.css/issues/42)
+- Fixed and simplified `/docs` directory structure [#42](https://github.com/marcop135/bullframe.css/issues/42)
 - Removed screenshots and screencasts from repository to speed npm installation
 - Started support for GitHub Packages registry
 
@@ -242,7 +242,7 @@
 ## 3.4.0 (January 24, 2021)
 
 - Added `input range` styling in modern browsers only
-- Updated video source paths per MDN [(#22)](https://github.com/marcop135/bullframe.css/issues/12)
+- Updated video source paths per MDN [#22](https://github.com/marcop135/bullframe.css/issues/12)
 
 ## 3.3.9 (November 29, 2020)
 
@@ -305,8 +305,8 @@
 ## 3.2.0 (June 16, 2020)
 
 - Changed grid gutter width to match Bootstrap Grid
-- Added support for RTL [(#12)](https://github.com/marcop135/bullframe.css/issues/12)
-- Added `datalist` normalization [(#13)](https://github.com/marcop135/bullframe.css/issues/13)
+- Added support for RTL [#12](https://github.com/marcop135/bullframe.css/issues/12)
+- Added `datalist` normalization [#13](https://github.com/marcop135/bullframe.css/issues/13)
 - Added `progress` normalization
 - Added dark theme scrollbars normalization
 - Added webkit/blink/gecko/trident screenshots/screencasts
@@ -314,7 +314,7 @@
 - Added more examples in `index.html`
 - Added SCSS file structure improvements
 - Added responsive typography improvements
-- Added form states (e.g. `:invalid`) improvements [(#15)](https://github.com/marcop135/bullframe.css/issues/15)
+- Added form states (e.g. `:invalid`) improvements [#15](https://github.com/marcop135/bullframe.css/issues/15)
 
 ## 3.1.0 (May 06, 2020)
 

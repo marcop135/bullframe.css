@@ -1,9 +1,12 @@
 # Changelog
 
-All notable changes to this project are documented in this file.
+**Format:** Based on [Keep a Changelog](https://keepachangelog.com).
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+**Voice:** Use the imperative, like a commit message. Write add, fix, increase, force, not added, fixed, increased, forced.
+
+**Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
+
+**Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
 ## [6.2.2] - 2026-10-02
 

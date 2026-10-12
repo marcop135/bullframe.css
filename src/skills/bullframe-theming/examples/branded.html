@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northwind Press · Seasonal notes</title>
+    <meta name="description" content="Sample branded page using Bullframe token overrides." />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
+    <style>
+      .brand {
+        --bf-blue: #0f766e;
+        --bf-blue-light: #0d9488;
+        --bf-blue-light-extra: #ccfbf1;
+        --bf-dark: #134e4a;
+        --bf-gray-dark: #3f5f5b;
+        --bf-gray-light: #c7e0db;
+        --bf-light: #f0fdfa;
+        --bf-focus-ring-color: #0f766e;
+        --bf-font-serif: Georgia, 'Times New Roman', serif;
+        color: var(--bf-dark);
+        background: var(--bf-light);
+      }
+
+      .brand h1,
+      .brand h2 {
+        font-family: var(--bf-font-serif);
+      }
+    </style>
+  </head>
+  <body class="brand">
+    <a class="bf-skip-link" href="#main-content">Skip to content</a>
+
+    <main id="main-content" class="bf-container bf-container--break-md bf-p-b-4">
+      <p class="bf-m-b-1"><small>Northwind Press</small></p>
+      <h1>Seasonal notes from the shop</h1>
+      <p class="bf-lead">Colours and type come from token overrides on a brand scope class. The HTML stays ordinary Bullframe markup.</p>
+      <p>
+        <a class="bf-btn bf-btn--primary" href="#notes">Read the notes</a>
+        <a class="bf-btn" href="https://bullframecss.marcopontili.com/theming">Theming docs</a>
+      </p>
+
+      <div id="notes" class="bf-row bf-m-t-3">
+        <div class="bf-col-6">
+          <article style="border: 1px solid var(--bf-gray-light); border-radius: var(--bf-spacing-sm); padding: var(--bf-spacing-xl)">
+            <h2 class="bf-m-t-0">Token overrides</h2>
+            <p class="bf-m-b-0">Set <code>--bf-blue</code>, grays and font stacks. Buttons and links pick them up.</p>
+          </article>
+        </div>
+        <div class="bf-col-6">
+          <article style="border: 1px solid var(--bf-gray-light); border-radius: var(--bf-spacing-sm); padding: var(--bf-spacing-xl)">
+            <h2 class="bf-m-t-0">One base build</h2>
+            <p class="bf-m-b-0">Light, dark or system-default. Never stack two Bullframe stylesheets.</p>
+          </article>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

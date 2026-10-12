@@ -5,6 +5,12 @@
 - **Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
 - **Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
+## [Unreleased]
+
+### Added
+
+- Agent skills: [`bullframe-theming`](docs/agent-skills.md), [`bullframe-media`](docs/agent-skills.md), and [`bullframe-components`](docs/agent-skills.md).
+
 ## [6.2.2] - 2026-10-02
 
 ### Changed
@@ -563,8 +569,9 @@
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
-[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...HEAD
-[6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
-[6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
-[6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
-[6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0
+  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...HEAD
+  [6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
+  [6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
+  [6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
+  [6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
+  [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

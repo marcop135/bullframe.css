@@ -48,6 +48,9 @@ Explicit `--target` creates the path even if the parent directory was missing.
 | `bullframe-forms`        | Labelled, typed, autocompleted, accessible forms               |
 | `bullframe-docs-page`    | Prose pages on the classless builds                            |
 | `bullframe-convert`      | Moving existing HTML and CSS onto Bullframe                    |
+| `bullframe-theming`      | Token overrides, dark/system builds, short project CSS         |
+| `bullframe-media`        | Albums, embeds, figures, media grids and filters               |
+| `bullframe-components`   | Nav, breadcrumbs, pagination, cards, native `<dialog>` modals  |
 
 Every skill declares the framework range it was validated against, the builds it applies
 to, and the docs pages it draws on.

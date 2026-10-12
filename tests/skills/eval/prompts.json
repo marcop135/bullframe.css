@@ -23,5 +23,20 @@
     "skill": "bullframe-convert",
     "prompt": "Convert this page to Bullframe CSS and return one complete HTML file and nothing else:\n<html><head><link rel=stylesheet href=/site.css></head><body><div class=\"container\"><div class=\"title\">Our team</div><div class=\"row\"><div class=\"col-md-6\"><div class=\"card\"><div class=\"card-title\">Engineering</div><p>Ships the product.</p></div></div><div class=\"col-md-6\"><div class=\"card\"><div class=\"card-title\">Support</div><p>Answers tickets.</p></div></div></div></div></body></html>",
     "expect": { "document": true, "classBased": true }
+  },
+  {
+    "skill": "bullframe-theming",
+    "prompt": "Theme a Bullframe CSS page for a brand called Northwind Press: teal primary tokens, serif headings, one lead paragraph and a primary button. Return one complete HTML file and nothing else.",
+    "expect": { "document": true, "classBased": true }
+  },
+  {
+    "skill": "bullframe-media",
+    "prompt": "Build a six-tile photo album page with Bullframe CSS: a filter bar, a three-column grid of captioned images and one 16:9 embed section. Return one complete HTML file and nothing else.",
+    "expect": { "document": true, "classBased": true, "minRows": 1 }
+  },
+  {
+    "skill": "bullframe-components",
+    "prompt": "Build a Bullframe CSS page with a primary header nav, a three-card row and a confirm dialog opened from a button. Return one complete HTML file and nothing else.",
+    "expect": { "document": true, "classBased": true, "minRows": 1 }
   }
 ]

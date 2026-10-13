@@ -16,6 +16,7 @@
 ### Fixed
 
 - npm package README ships the light hero only; GitHub keeps light/dark theme images.
+- Pack-time README stash no longer lands in the npm tarball as `README.md.github`.
 
 ## [6.2.2] - 2026-10-02
 

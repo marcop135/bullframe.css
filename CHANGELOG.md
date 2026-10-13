@@ -11,6 +11,10 @@
 
 - Agent skills: [`bullframe-theming`](docs/agent-skills.md), [`bullframe-media`](docs/agent-skills.md), and [`bullframe-components`](docs/agent-skills.md).
 
+### Fixed
+
+- npm package README ships the light hero only; GitHub keeps light/dark theme images.
+
 ## [6.2.2] - 2026-10-02
 
 ### Changed

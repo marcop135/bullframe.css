@@ -37,10 +37,13 @@ Any docs page is Markdown by appending `.md`, for example
 
 ### Skills
 - `bullframe-core`: Core conventions for writing HTML styled with Bullframe CSS. Use before any other Bullframe skill, and whenever choosing a build, scaffolding a page, theming with tokens, or deciding whether to write custom CSS.
+- `bullframe-components`: Compose navigation, cards and native dialog modals with Bullframe CSS. Use when building a header nav, breadcrumb, pagination, content or media cards, or a confirm dialog without a component library.
 - `bullframe-convert`: Convert existing HTML and CSS to Bullframe CSS. Use when migrating a page off Bootstrap, Tailwind, a hand-rolled stylesheet, or an older Bullframe version, and when asked to remove custom CSS in favour of the framework.
 - `bullframe-docs-page`: Build a documentation, article or reference page with Bullframe CSS. Use for docs, guides, changelogs, help center articles, blog posts, or any prose-first page.
 - `bullframe-forms`: Build accessible forms with Bullframe CSS. Use when creating a contact form, login, signup, checkout, search box, filter bar, or any page with input controls.
 - `bullframe-landing-page`: Build a marketing or product landing page with Bullframe CSS. Use for a hero, feature row, pricing block, call to action, or any multi-section marketing page.
+- `bullframe-media`: Build galleries, responsive embeds and media grids with Bullframe CSS. Use when creating an album, photo grid, video or map embed, figure with caption, or mixed media cards.
+- `bullframe-theming`: Theme Bullframe CSS with token overrides, dark or system builds, and a short project stylesheet. Use when branding colours or fonts, picking a dark or prefers-color-scheme build, or adding custom.css on top of one base build.
 
 Local copies of these skills are in `bullframe-skills/`.
 Published copies: <https://bullframecss.marcopontili.com/skills/index.json>. Refresh with `npx bullframe.css skills install`.

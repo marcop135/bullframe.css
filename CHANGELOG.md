@@ -1,15 +1,23 @@
 # Changelog
 
-All notable changes to this project are documented in this file.
+- **Format:** Based on [Keep a Changelog](https://keepachangelog.com).
+- **Voice:** Use the imperative, like a commit message. Write add, fix, increase, force, not added, fixed, increased, forced.
+- **Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
+- **Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [Unreleased]
+
+## [6.3.0] - 2026-10-13
+
+### Added
+
+- Agent skills: [`bullframe-theming`](docs/agent-skills.md), [`bullframe-media`](docs/agent-skills.md), [`bullframe-components`](docs/agent-skills.md).
+
+### Fixed
+
+- npm package README ships the light hero only; GitHub keeps light/dark theme images.
 
 ## [6.2.2] - 2026-10-02
-
-### Security
-
-- Docs site: CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, COOP.
 
 ### Changed
 
@@ -22,6 +30,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Built CSS banners, the skills index, and docs CDN + SRI snippets report 6.2.2.
+
+### Security
+
+- Docs site: CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, COOP.
 
 ## [6.2.1] - 2026-09-29
 
@@ -46,14 +58,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - AI skills docs page; docs site 404 page.
 - `npm run test:e2e:sync-from-ci` to copy Playwright linux baselines from a CI run artifact.
 
+### Changed
+
+- npm publish is manual from the release tag; **Publish to npm** is `workflow_dispatch` only (no `release: published` trigger).
+
 ### Fixed
 
 - Non-existent classes in Grid, Cards, Spacing, and Text docs.
 - Wrong v6 token names in the migration guide.
-
-### Changed
-
-- npm publish is manual from the release tag; **Publish to npm** is `workflow_dispatch` only (no `release: published` trigger).
 
 ### Security
 
@@ -72,17 +84,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README: install, CDN, examples; unversioned CDN (docs stay pinned + SRI).
 - README, hero, OG, and social preview images regenerated from one source (`npm run brand:images`).
 
+### Removed
+
+- Dead UA+ rules that never applied inside `@layer`.
+
 ### Fixed
 
 - `caption` and `progress` in classless always-dark.
 - Accessibility markup in the kitchen sink and examples.
 - Docs site cache headers, so a new release reaches returning visitors.
 
-### Removed
-
-- Dead UA+ rules that never applied inside `@layer`.
-
 ## [6.0.0] - 2026-07-31 - BREAKING CHANGES
+
+### Added
+
+- Brand identity for docs and README: mascot and logo mark, favicon variants, hero illustrations, and OG/social imagery.
+- Opt-in font-smoothing, reduced-motion utilities, stronger focus / ARIA defaults.
+- Progressive `@supports` gates for range, `:has()` label layout, and dialog enter.
 
 ### Changed
 
@@ -91,12 +109,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Darkened link and button blues for WCAG AA contrast.
 - Replaced the [docs site](https://bullframecss.marcopontili.com/) with VitePress; kitchen sink at `/kitchen-sink/`.
 - Documented browser support against Browserslist `defaults`.
-
-### Added
-
-- Brand identity for docs and README: mascot and logo mark, favicon variants, hero illustrations, and OG/social imagery.
-- Opt-in font-smoothing, reduced-motion utilities, stronger focus / ARIA defaults.
-- Progressive `@supports` gates for range, `:has()` label layout, and dialog enter.
 
 ### Removed
 
@@ -113,11 +125,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Applied the `:where` pseudo-class to normalize form element specificity to `0`
 - Resolved issues with Sass source map generation
-- Documented one-page demo and CodePen collection in `README.md`
+- Documented one-page demo and CodePen collection in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 5.0.1 - (July 07, 2025)
 
-- Added missing LICENSE file and `.github/` folder
+- Added missing LICENSE file and [`.github/`](https://github.com/marcop135/bullframe.css/blob/develop/.github/) folder
 
 ## 5.0.0 (July 07, 2025) - BREAKING CHANGES
 
@@ -127,7 +139,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reorganized Sass architecture for better clarity
 - Added `<dialog>` normalization with basic styling
 - Refreshed HTML demo page with new examples
-- Streamlined `README.md` copy and layout
+- Streamlined [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md) copy and layout
 - Updated all npm dependencies
 - Updated stylelint, html-validate, and prettier configs
 - Ensured HTML demo page passed W3C validation
@@ -137,14 +149,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed text indentation from table contents
 - Corrected table border color inheritance
 - Updated stylelint configuration and removed deprecated package
-- Clearly defined browser support in `README.md`
+- Clearly defined browser support in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 - Removed attempted support for GitHub Packages
 - Added maps to npm package
 - Ignored more common files in npm package
 
 ## 4.2.1 (April 26, 2025)
 
-- Fixed and simplified `/docs` directory structure [(#42)](https://github.com/marcop135/bullframe.css/issues/42)
+- Fixed and simplified `/docs` directory structure [#42](https://github.com/marcop135/bullframe.css/issues/42)
 - Removed screenshots and screencasts from repository to speed npm installation
 - Started support for GitHub Packages registry
 
@@ -166,23 +178,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Moved from `dark-prefers` to `system-default` (no breaking changes)
 - Updated `.browserlistrc`
-- Cleaned up and improved `README.md`
+- Cleaned up and improved [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 4.0.1 (August 12, 2022)
 
 - Updated `.browserlistrc`
-- Updated `package.json` description and tags
+- Updated [`package.json`](https://github.com/marcop135/bullframe.css/blob/develop/package.json) description and tags
 
 ## 4.0.0 (August 11, 2022) - BREAKING CHANGES
 
 - Dropped support for IE8, IE9, and IE10
 - Upgraded all npm packages to latest minor and major versions (e.g. gulp-sass v5)
-- Cleaned up `README.md`
+- Cleaned up [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.8.2 (June 26, 2021)
 
 - Upgraded cssnano, autoprefixer, and postcss plugins to major versions [(a6a9ecc)](https://github.com/marcop135/bullframe.css/commit/a6a9ecc3b52a30e1a5c4408967268d22f46a8e2c)
-- Cleaned up `README.md`
+- Cleaned up [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.8.1 (June 22, 2021)
 
@@ -192,7 +204,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Reverted html/body `height` and `body` `min-height` to `auto` to avoid scrollbar issues
 - Added support for Skypack CDN
-- Added Synk vuln badge in `README.md`
+- Added Synk vuln badge in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.7.0 (April 24, 2021) - BREAKING CHANGES
 
@@ -237,20 +249,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 3.4.1 (January 24, 2021)
 
-- Added missing v3.4.0 `CHANGELOG.md`
+- Added missing v3.4.0 [`CHANGELOG.md`](https://github.com/marcop135/bullframe.css/blob/develop/CHANGELOG.md)
 
 ## 3.4.0 (January 24, 2021)
 
 - Added `input range` styling in modern browsers only
-- Updated video source paths per MDN [(#22)](https://github.com/marcop135/bullframe.css/issues/12)
+- Updated video source paths per MDN [#22](https://github.com/marcop135/bullframe.css/issues/12)
 
 ## 3.3.9 (November 29, 2020)
 
-- Fixed broken anchors and URLs in `README.md`
+- Fixed broken anchors and URLs in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.3.8 (November 29, 2020)
 
-- Improved `README.md` fixes
+- Improved [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md) fixes
 - Reinforced mixins declarations
 
 ## 3.3.7 (November 27, 2020)
@@ -271,10 +283,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 3.3.4 (September 03, 2020)
 
-- Added utilities reference in `README.md`
+- Added utilities reference in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 - Fixed grid system bug related to `.bf-col-3` and `.bf-col-4`
 - Added GitHub Packages support
-- Added UNPKG CDN in `README.md`
+- Added UNPKG CDN in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 
 ## 3.3.3 (July 22, 2020)
 
@@ -286,8 +298,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 3.3.1 (July 22, 2020)
 
-- Fixed "What's included" and "Gulp.js" sections in `README.md`
-- Fixed JSDelivr `package.json` settings
+- Fixed "What's included" and "Gulp.js" sections in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
+- Fixed JSDelivr [`package.json`](https://github.com/marcop135/bullframe.css/blob/develop/package.json) settings
 - Minor code improvements
 
 ## 3.3.0 (July 09, 2020)
@@ -305,16 +317,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 3.2.0 (June 16, 2020)
 
 - Changed grid gutter width to match Bootstrap Grid
-- Added support for RTL [(#12)](https://github.com/marcop135/bullframe.css/issues/12)
-- Added `datalist` normalization [(#13)](https://github.com/marcop135/bullframe.css/issues/13)
+- Added support for RTL [#12](https://github.com/marcop135/bullframe.css/issues/12)
+- Added `datalist` normalization [#13](https://github.com/marcop135/bullframe.css/issues/13)
 - Added `progress` normalization
 - Added dark theme scrollbars normalization
 - Added webkit/blink/gecko/trident screenshots/screencasts
-- Added quick overview of the utilities in `README.md`
+- Added quick overview of the utilities in [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md)
 - Added more examples in `index.html`
 - Added SCSS file structure improvements
 - Added responsive typography improvements
-- Added form states (e.g. `:invalid`) improvements [(#15)](https://github.com/marcop135/bullframe.css/issues/15)
+- Added form states (e.g. `:invalid`) improvements [#15](https://github.com/marcop135/bullframe.css/issues/15)
 
 ## 3.1.0 (May 06, 2020)
 
@@ -364,7 +376,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 2.8.1 (03 April 2020)
 
-- Added `README.md` info
+- Added [`README.md`](https://github.com/marcop135/bullframe.css/blob/develop/README.md) info
 - Updated browser compatibility list
 
 ## 2.8.0 (22 March 2020)
@@ -563,9 +575,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
-
-[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...HEAD
-[6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
-[6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
-[6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
-[6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0
+  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...HEAD
+  [6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
+  [6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
+  [6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
+  [6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
+  [6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
+  [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

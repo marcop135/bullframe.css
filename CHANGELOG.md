@@ -7,6 +7,12 @@
 
 ## [Unreleased]
 
+## [6.3.1] - 2026-10-13
+
+### Fixed
+
+- Keep the pack-time README stash out of the npm tarball.
+
 ## [6.3.0] - 2026-10-13
 
 ### Added
@@ -15,8 +21,7 @@
 
 ### Fixed
 
-- npm package README ships the light hero only; GitHub keeps light/dark theme images.
-- Pack-time README stash no longer lands in the npm tarball as `README.md.github`.
+- npm README ships the light hero only; GitHub keeps light/dark theme images.
 
 ## [6.2.2] - 2026-10-02
 
@@ -576,7 +581,8 @@
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
-  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...HEAD
+  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.3.1...HEAD
+  [6.3.1]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...v6.3.1
   [6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
   [6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
   [6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1

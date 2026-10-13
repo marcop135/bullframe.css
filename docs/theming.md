@@ -9,7 +9,7 @@ Bullframe CSS provides multiple theme variants and easy customization options. O
 <!-- sri:cdn-light:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.0/dist/css/bullframe.min.css" integrity="sha384-HI7c4Dwl/zfX3zlUpBwEhDFm1molmBsCmVsRIkIAWRPN5Yw5Mb/he7tQDuXPPYHn" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.1/dist/css/bullframe.min.css" integrity="sha384-knat1JVFQLFuoGD3Pca1RyvOLbRW5+bDAnT1TXy5d+CHWX3zY60FGbNvV/hKmRlX" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-light:end -->
@@ -19,7 +19,7 @@ Bullframe CSS provides multiple theme variants and easy customization options. O
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.0/dist/css/bullframe-dark.min.css" integrity="sha384-RgRtEN8gLsF+psakqT51RVjb8xSrGYGAFqyliFnjLRvhQvwoapScLNnuUAyZ85lL" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.1/dist/css/bullframe-dark.min.css" integrity="sha384-wtS9deIIzwdfE9RBg15DOI+pd0/Y3/EbcIC/k7P9lyoacqXURsVn2H3rQ0J5Cd8b" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->
@@ -31,7 +31,7 @@ Switches between light and dark from `prefers-color-scheme`:
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.0/dist/css/bullframe-system-default.min.css" integrity="sha384-HiIBDbubKUWLbcehRq//eQuCMpsSnTcTSiuiiZ0rNLNnyThOkZuRNnox1MP5kE6u" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.1/dist/css/bullframe-system-default.min.css" integrity="sha384-+ZUiXa6pJDqx/vltmaVVGatfAECPIkoTlm2BSZY187QCXwdsl6ezdedDwdT+MAJM" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->

@@ -14,9 +14,6 @@ pw-ci-artifacts/
 # Stale build output. dist/ ships CSS only; docs assets go src/docs/ → docs/public/
 dist/docs/
 
-# Pack-time README stash (scripts/npm-readme-light.mjs)
-README.md.github
-
 # Logs
 npm-debug.log*
 yarn-debug.log*

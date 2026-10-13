@@ -7,9 +7,11 @@
 
 ## [Unreleased]
 
+## [6.3.0] - 2026-10-13
+
 ### Added
 
-- Agent skills: [`bullframe-theming`](docs/agent-skills.md), [`bullframe-media`](docs/agent-skills.md), and [`bullframe-components`](docs/agent-skills.md).
+- Agent skills: [`bullframe-theming`](docs/agent-skills.md), [`bullframe-media`](docs/agent-skills.md), [`bullframe-components`](docs/agent-skills.md).
 
 ### Fixed
 
@@ -573,7 +575,8 @@
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
-  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...HEAD
+  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...HEAD
+  [6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
   [6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
   [6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
   [6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0

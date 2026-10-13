@@ -2,6 +2,8 @@
  * Pack-time README transform: GitHub keeps light/dark `#gh-*-mode-only` images;
  * the npm tarball ships the light hero only so marky-markdown does not double it.
  *
+ * Stash must NOT be named README* — npm always packs those into the tarball.
+ *
  * Usage:
  *   node scripts/npm-readme-light.mjs prepack
  *   node scripts/npm-readme-light.mjs postpack
@@ -9,9 +11,9 @@
 import {
   copyFileSync,
   existsSync,
+  mkdirSync,
   readFileSync,
   renameSync,
-  unlinkSync,
   writeFileSync,
 } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -19,16 +21,18 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const readmePath = join(root, 'README.md');
-const stashPath = join(root, 'README.md.github');
+const stashDir = join(root, '.artifacts');
+const stashPath = join(stashDir, 'readme-github.md');
 
 const mode = process.argv[2];
 
 if (mode === 'prepack') {
   if (existsSync(stashPath)) {
-    console.error('README.md.github already exists; aborting prepack to avoid clobbering stash');
+    console.error('stash already exists; aborting prepack to avoid clobbering');
     process.exit(1);
   }
   const original = readFileSync(readmePath, 'utf8');
+  mkdirSync(stashDir, { recursive: true });
   copyFileSync(readmePath, stashPath);
   const lightOnly = original
     .split('\n')
@@ -45,7 +49,7 @@ if (mode === 'prepack') {
 
 if (mode === 'postpack') {
   if (!existsSync(stashPath)) {
-    console.error('postpack: README.md.github missing; cannot restore');
+    console.error('postpack: stash missing; cannot restore');
     process.exit(1);
   }
   renameSync(stashPath, readmePath);

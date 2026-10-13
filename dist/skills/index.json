@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "6.2.2",
+  "version": "6.3.0",
   "docs": "https://bullframecss.marcopontili.com",
   "api": "api.json",
   "agentsBlock": "AGENTS.bullframe.md",
@@ -32,6 +32,30 @@
       ],
       "files": [
         "SKILL.md"
+      ]
+    },
+    {
+      "name": "bullframe-components",
+      "description": "Compose navigation, cards and native dialog modals with Bullframe CSS. Use when building a header nav, breadcrumb, pagination, content or media cards, or a confirm dialog without a component library.",
+      "path": "bullframe-components/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe.css",
+        "bullframe-dark.css",
+        "bullframe-system-default.css"
+      ],
+      "requires": [
+        "bullframe-core"
+      ],
+      "docs": [
+        "https://bullframecss.marcopontili.com/components/navigation",
+        "https://bullframecss.marcopontili.com/components/cards",
+        "https://bullframecss.marcopontili.com/components/modals",
+        "https://bullframecss.marcopontili.com/components/button-patterns"
+      ],
+      "files": [
+        "SKILL.md",
+        "examples/components.html"
       ]
     },
     {
@@ -128,6 +152,58 @@
       "files": [
         "SKILL.md",
         "examples/landing.html"
+      ]
+    },
+    {
+      "name": "bullframe-media",
+      "description": "Build galleries, responsive embeds and media grids with Bullframe CSS. Use when creating an album, photo grid, video or map embed, figure with caption, or mixed media cards.",
+      "path": "bullframe-media/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe.css",
+        "bullframe-dark.css",
+        "bullframe-system-default.css"
+      ],
+      "requires": [
+        "bullframe-core"
+      ],
+      "docs": [
+        "https://bullframecss.marcopontili.com/utilities/embeds",
+        "https://bullframecss.marcopontili.com/utilities/filters",
+        "https://bullframecss.marcopontili.com/utilities/grid",
+        "https://bullframecss.marcopontili.com/components/cards"
+      ],
+      "files": [
+        "SKILL.md",
+        "examples/album.html"
+      ]
+    },
+    {
+      "name": "bullframe-theming",
+      "description": "Theme Bullframe CSS with token overrides, dark or system builds, and a short project stylesheet. Use when branding colours or fonts, picking a dark or prefers-color-scheme build, or adding custom.css on top of one base build.",
+      "path": "bullframe-theming/SKILL.md",
+      "bullframe": ">=6.1.0 <7.0.0",
+      "builds": [
+        "bullframe.css",
+        "bullframe-dark.css",
+        "bullframe-system-default.css",
+        "bullframe-classless.css",
+        "bullframe-classless-dark.css",
+        "bullframe-classless-system-default.css",
+        "bullframe-utilities.css"
+      ],
+      "requires": [
+        "bullframe-core"
+      ],
+      "docs": [
+        "https://bullframecss.marcopontili.com/theming",
+        "https://bullframecss.marcopontili.com/theming/dark-mode",
+        "https://bullframecss.marcopontili.com/theming/customization",
+        "https://bullframecss.marcopontili.com/variables"
+      ],
+      "files": [
+        "SKILL.md",
+        "examples/branded.html"
       ]
     }
   ]

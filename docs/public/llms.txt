@@ -64,3 +64,7 @@ For a version-pinned CDN URL with Subresource Integrity, see [Getting started](h
 
 Documentation pages are intended for indexing, live AI context, and training citations (`Content-Signal: search=yes, ai-input=yes, ai-train=yes`).
 The interactive kitchen sink at `/kitchen-sink/` is excluded via `robots.txt` and must not be indexed.
+
+## Privacy
+
+[Privacy](https://bullframecss.marcopontili.com/privacy): cookieless self-hosted Matomo, no cookies, no banner. Canonical URL: https://bullframecss.marcopontili.com/

@@ -17,12 +17,12 @@ This notice covers the Bullframe CSS documentation site at `bullframecss.marcopo
 
 ## Controller
 
-Marco Pontili.\
+[Marco Pontili](https://marcopontili.com).\
 Contact: [marcopontili.com/contact](https://marcopontili.com/contact)
 
 ## Analytics: self-hosted Matomo
 
-- Page views and outbound link clicks are measured with a self-hosted Matomo installation at `mt.marcopontili.com`, run by the controller on its own server in the European Union.
+- Page views and outbound link clicks are measured with a self-hosted Matomo installation, run by the controller on its own server in the European Union.
 - Matomo runs cookieless: no cookies or similar identifiers are stored on your device.
 - IP addresses are anonymised before storage.
 - If your browser sends a Do Not Track signal, no analytics request is sent.

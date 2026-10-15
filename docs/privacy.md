@@ -18,7 +18,7 @@ This notice covers the Bullframe CSS documentation site at `bullframecss.marcopo
 ## Controller
 
 Marco Pontili, Rümannstraße 9, 80804 Munich, Germany.\
-Email: [marco.pontili@gmail.com](mailto:marco.pontili@gmail.com)
+Contact: [marcopontili.com/contact](https://marcopontili.com/contact)
 
 ## Analytics: self-hosted Matomo
 
@@ -45,4 +45,4 @@ No cookies are set. The site stores your light or dark theme choice in your brow
 
 ## Your rights
 
-You can request access to, correction, deletion, restriction, or portability of your data, and object to processing, by writing to the email above. You may lodge a complaint with a supervisory authority; the authority competent for the controller is the Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Promenade 27, 91522 Ansbach, Germany ([lda.bayern.de](https://www.lda.bayern.de)).
+You can request access to, correction, deletion, restriction, or portability of your data, and object to processing, through the contact page above. You may lodge a complaint with a supervisory authority; the authority competent for the controller is the Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Promenade 27, 91522 Ansbach, Germany ([lda.bayern.de](https://www.lda.bayern.de)).

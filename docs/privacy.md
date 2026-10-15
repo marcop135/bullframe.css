@@ -17,7 +17,7 @@ This notice covers the Bullframe CSS documentation site at `bullframecss.marcopo
 
 ## Controller
 
-Marco Pontili, Rümannstraße 9, 80804 Munich, Germany.\
+Marco Pontili.\
 Contact: [marcopontili.com/contact](https://marcopontili.com/contact)
 
 ## Analytics: self-hosted Matomo

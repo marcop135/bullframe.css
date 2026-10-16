@@ -1,11 +1,12 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme';
 import { nextTick, onMounted, watch } from 'vue';
-import { inBrowser, useRoute } from 'vitepress';
+import { inBrowser, useData, useRoute } from 'vitepress';
 import HomeAfterHero from './components/HomeAfterHero.vue';
 
 const { Layout } = DefaultTheme;
 const route = useRoute();
+const { frontmatter } = useData();
 
 function heroSrcForAppearance() {
   const dark = document.documentElement.classList.contains('dark');
@@ -161,6 +162,12 @@ onMounted(() => {
   <Layout>
     <template #home-hero-after>
       <HomeAfterHero />
+    </template>
+    <!-- Sidebar pages hide VPFooter, so the privacy link sits under the doc footer. -->
+    <template #doc-after>
+      <p v-if="frontmatter.sidebar !== false" class="bf-doc-legal">
+        Copyright © 2026 Marco Pontili · <a href="/privacy">Privacy</a>
+      </p>
     </template>
   </Layout>
 </template>

@@ -29,5 +29,20 @@ export default {
       }
       return prev?.(to);
     };
+    // /matomo.js counts the first load; count client-side navigations here.
+    let trackedPath = window.location.pathname;
+    const prevAfter = router.onAfterRouteChange;
+    router.onAfterRouteChange = (to) => {
+      prevAfter?.(to);
+      const path = window.location.pathname;
+      if (path === trackedPath || !window._paq) return;
+      trackedPath = path;
+      // Defer one tick so the head (title) reflects the new page.
+      setTimeout(() => {
+        window._paq.push(['setCustomUrl', window.location.href]);
+        window._paq.push(['setDocumentTitle', document.title]);
+        window._paq.push(['trackPageView']);
+      }, 0);
+    };
   },
 };

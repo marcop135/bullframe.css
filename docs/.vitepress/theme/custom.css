@@ -374,3 +374,22 @@ html.dark {
     display: none !important;
   }
 }
+
+/* Legal line under doc pages (VPFooter is hidden where a sidebar shows). */
+.bf-doc-legal {
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+}
+
+.bf-doc-legal a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.bf-doc-legal a:hover {
+  color: var(--vp-c-brand-1);
+}

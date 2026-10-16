@@ -68,7 +68,7 @@ Quick drop-in (latest published package entry):
 **Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.0/dist/css/bullframe.min.css" integrity="sha384-mv3MJZxSCrTCzF0SkbCDi4L7TOb+pJEDCZOhfqSKD4rnhf2ApUun8NCOhnLiiNVA" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.1/dist/css/bullframe.min.css" integrity="sha384-6x9/CdxjD9If9AkQ8jp10fMZK7sO6HcgV+gKdrTwIGbJUifQmKCWr+M6BUpzVmtR" crossorigin="anonymous" />
 ```
 
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
@@ -117,7 +117,7 @@ Self-host from the [v6.4.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.0/dist/css/bullframe.min.css" integrity="sha384-mv3MJZxSCrTCzF0SkbCDi4L7TOb+pJEDCZOhfqSKD4rnhf2ApUun8NCOhnLiiNVA" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.1/dist/css/bullframe.min.css" integrity="sha384-6x9/CdxjD9If9AkQ8jp10fMZK7sO6HcgV+gKdrTwIGbJUifQmKCWr+M6BUpzVmtR" crossorigin="anonymous" />
   </head>
   <body>
     <a class="bf-skip-link" href="#main">Skip to content</a>
@@ -138,7 +138,7 @@ Self-host from the [v6.4.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.0/dist/css/bullframe-classless.min.css" integrity="sha384-uRzD/F0JyvNmCS/wQnzJ8vwszBTD/paiFExg8KQ8tvwkA9hQRykwix0HjKrrjyDC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.1/dist/css/bullframe-classless.min.css" integrity="sha384-OVtp1fR8uKlokyzuO0Rgs8RCeIFgqOOrMft2MKc/g7lb2sNah8Gh0gkTh8yadR8G" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;

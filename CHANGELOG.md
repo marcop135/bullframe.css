@@ -5,7 +5,17 @@
 - **Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
 - **Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
-## [Unreleased]
+## [6.4.0] - 2026-10-16
+
+### Added
+
+- Docs: cookieless, self-hosted Matomo as `/matomo.js`, counting client-side navigations too.
+- Docs: [`/privacy`](https://bullframecss.marcopontili.com/privacy) notice, linked from the footer, every doc page, and `llms.txt`.
+- Docs: per-page `canonical` and `og:url`, and `/.well-known/security.txt`.
+
+### Security
+
+- Docs CSP allows self-hosted Matomo in `script-src`, `connect-src`, and `img-src`.
 
 ## [6.3.1] - 2026-10-13
 

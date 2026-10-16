@@ -168,6 +168,17 @@ export default defineConfig({
   srcExclude: [...excludeDirs.map((d) => `${d}/**`), '**/node_modules/**'],
   transformHead({ pageData }) {
     const rel = (pageData.relativePath || 'index.md').replace(/\\/g, '/');
+    const tags = [];
+    if (!pageData.isNotFound) {
+      const path =
+        rel === 'index.md'
+          ? '/'
+          : rel.endsWith('/index.md')
+            ? `/${rel.slice(0, -'index.md'.length)}`
+            : `/${rel.replace(/\.md$/i, '')}`;
+      tags.push(['link', { rel: 'canonical', href: `${siteUrl}${path}` }]);
+      tags.push(['meta', { property: 'og:url', content: `${siteUrl}${path}` }]);
+    }
     let href;
     if (rel === 'index.md') {
       href = '/index.md';
@@ -177,7 +188,8 @@ export default defineConfig({
     } else {
       href = `/${rel}`;
     }
-    return [['link', { rel: 'alternate', type: 'text/markdown', title: 'Markdown', href }]];
+    tags.push(['link', { rel: 'alternate', type: 'text/markdown', title: 'Markdown', href }]);
+    return tags;
   },
   // Dev nav felt 1–3s cold: avoid watching build output, warm common pages.
   vite: {
@@ -244,7 +256,7 @@ export default defineConfig({
     ],
     footer: {
       message:
-        '<span class="bf-footer-brand"><img class="bf-footer-logo bf-footer-logo--light" src="/logo.svg" width="36" height="36" alt="" /><img class="bf-footer-logo bf-footer-logo--dark" src="/logo-dark.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 Marco Pontili</span></span></span>',
+        '<span class="bf-footer-brand"><img class="bf-footer-logo bf-footer-logo--light" src="/logo.svg" width="36" height="36" alt="" /><img class="bf-footer-logo bf-footer-logo--dark" src="/logo-dark.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 Marco Pontili · <a href="/privacy">Privacy</a></span></span></span>',
     },
     notFound: {
       code: '404',
@@ -306,7 +318,6 @@ export default defineConfig({
     ['meta', { property: 'og:site_name', content: 'Bullframe CSS' }],
     ['meta', { property: 'og:title', content: 'Bullframe CSS' }],
     ['meta', { property: 'og:description', content: siteDescription }],
-    ['meta', { property: 'og:url', content: siteUrl }],
     ['meta', { property: 'og:image', content: `${siteUrl}/og-image.jpg` }],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
@@ -324,5 +335,7 @@ export default defineConfig({
     ['meta', { name: 'twitter:description', content: siteDescription }],
     ['meta', { name: 'twitter:image', content: `${siteUrl}/og-image.jpg` }],
     ['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)],
+    // Cookieless self-hosted Matomo: same-origin file, CSP allows mt.marcopontili.com.
+    ['script', { src: '/matomo.js', defer: '' }],
   ],
 });

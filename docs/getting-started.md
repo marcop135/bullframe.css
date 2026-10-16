@@ -68,7 +68,7 @@ Quick drop-in (latest published package entry):
 **Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.1/dist/css/bullframe.min.css" integrity="sha384-knat1JVFQLFuoGD3Pca1RyvOLbRW5+bDAnT1TXy5d+CHWX3zY60FGbNvV/hKmRlX" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.0/dist/css/bullframe.min.css" integrity="sha384-mv3MJZxSCrTCzF0SkbCDi4L7TOb+pJEDCZOhfqSKD4rnhf2ApUun8NCOhnLiiNVA" crossorigin="anonymous" />
 ```
 
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
@@ -104,7 +104,7 @@ import 'bullframe.css/utilities';
 
 ## Download
 
-Self-host from the [v6.3.1 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v6.3.1.zip). Source maps ship beside the minified CSS in `dist/css/`.
+Self-host from the [v6.4.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v6.4.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
 
 ## Starter HTML
 
@@ -117,7 +117,7 @@ Self-host from the [v6.3.1 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.1/dist/css/bullframe.min.css" integrity="sha384-knat1JVFQLFuoGD3Pca1RyvOLbRW5+bDAnT1TXy5d+CHWX3zY60FGbNvV/hKmRlX" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.0/dist/css/bullframe.min.css" integrity="sha384-mv3MJZxSCrTCzF0SkbCDi4L7TOb+pJEDCZOhfqSKD4rnhf2ApUun8NCOhnLiiNVA" crossorigin="anonymous" />
   </head>
   <body>
     <a class="bf-skip-link" href="#main">Skip to content</a>
@@ -138,7 +138,7 @@ Self-host from the [v6.3.1 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.3.1/dist/css/bullframe-classless.min.css" integrity="sha384-RrbStphlSZp18a6/i3hwW3xRe6kM0xexEu7nDqo800DAs7RPv5PrvtdOZMv0bWOH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.0/dist/css/bullframe-classless.min.css" integrity="sha384-uRzD/F0JyvNmCS/wQnzJ8vwszBTD/paiFExg8KQ8tvwkA9hQRykwix0HjKrrjyDC" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;

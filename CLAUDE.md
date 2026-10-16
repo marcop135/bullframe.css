@@ -51,6 +51,8 @@ Uses **npm**. Node `>=20`.
 - `.github/workflows/ci.yml` — lint/build/e2e on `main` (and legacy `v6` while it exists).
 - `.github/workflows/deploy-docs.yaml` — FTPS deploy of `docs/.vitepress/dist/` on `main`.
 
+Docs analytics: `docs/public/matomo.js` (cookieless Matomo, loaded from `head` in `config.mjs`); keep `mt.marcopontili.com` in the `docs/public/.htaccess` CSP. Privacy notice: `docs/privacy.md`.
+
 `docs:sync-public` is the bridge: it copies from `src/docs/` (and `dist/css/`) into `docs/public/`. Do not treat `docs/` and `src/docs/` as duplicates.
 
 `dist/` holds CSS only. Nothing copies `src/docs/` into `dist/docs/`; if that directory reappears, it is stale output, not a source.

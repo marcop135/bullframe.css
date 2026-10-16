@@ -7,6 +7,16 @@
 
 ## [Unreleased]
 
+### Added
+
+- Docs: cookieless, self-hosted Matomo as `/matomo.js`, counting client-side navigations too.
+- Docs: [`/privacy`](https://bullframecss.marcopontili.com/privacy) notice, linked from the footer, every doc page, and `llms.txt`.
+- Docs: per-page `canonical` and `og:url`, and `/.well-known/security.txt`.
+
+### Security
+
+- Docs CSP allows `mt.marcopontili.com` in `script-src`, `connect-src`, and `img-src`.
+
 ## [6.3.1] - 2026-10-13
 
 ### Fixed

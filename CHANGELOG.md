@@ -5,6 +5,12 @@
 - **Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
 - **Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
+## [Unreleased]
+
+### Changed
+
+- npm: add `semantic-html`, `wcag`, `html`, and `prefers-color-scheme` keywords to match the GitHub topics.
+
 ## [6.4.1] - 2026-10-16
 
 ### Fixed

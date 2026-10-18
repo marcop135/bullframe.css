@@ -85,7 +85,11 @@
     "cross-browser",
     "lightweight",
     "css-custom-properties",
-    "theming"
+    "theming",
+    "semantic-html",
+    "wcag",
+    "html",
+    "prefers-color-scheme"
   ],
   "author": "Marco Pontili",
   "license": "MIT",

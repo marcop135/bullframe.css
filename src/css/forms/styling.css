@@ -17,8 +17,8 @@
   select,
   textarea
 ) {
-  background-color: var(--bf-white);
-  border: 1px solid var(--bf-gray);
+  background-color: var(--bf-color-field-bg);
+  border: 1px solid var(--bf-color-field-border);
   padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
 }
 
@@ -37,9 +37,7 @@
   [type='url'],
   input[list],
   select,
-  textarea,
-  [type='radio'],
-  [type='checkbox']
+  textarea
 ):active,
 :where(
   [type='email'],
@@ -56,22 +54,31 @@
   [type='url'],
   input[list],
   select,
-  textarea,
-  [type='radio'],
-  [type='checkbox']
+  textarea
 ):focus {
   transition:
     border 0.2s,
     background-color 0.2s,
     box-shadow 0.2s;
-  border-color: var(--bf-blue);
+  border-color: var(--bf-color-field-border-focus, var(--bf-color-primary));
+  box-shadow: 0 0 0 3px var(--bf-color-field-focus-shadow);
+}
+
+/* Radio / checkbox keep the primary ring in every scheme. */
+:where([type='radio'], [type='checkbox']):active,
+:where([type='radio'], [type='checkbox']):focus {
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+  border-color: var(--bf-color-primary);
   box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']) {
-  color: var(--bf-dark);
+  color: var(--bf-color-on-neutral);
   padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
-  background: var(--bf-gray-light);
+  background: var(--bf-color-neutral);
   transition:
     color 0.2s,
     background 0.2s,
@@ -84,15 +91,15 @@
     [aria-disabled='true']
   ) {
   text-decoration: none;
-  color: var(--bf-dark);
-  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral-hover);
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
 :where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
     [aria-disabled='true']
   ) {
-  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+  box-shadow: 0 0 0 3px var(--bf-color-button-focus-shadow);
 }
 
 /* Disabled / aria-disabled / fieldset[disabled]. */

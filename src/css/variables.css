@@ -2,47 +2,59 @@
  * Override on :root (or a scope) to theme without rebuilding. */
 
 :root {
-  /* Neutrals */
-  --bf-white: rgb(255 255 255);
-  --bf-light: rgb(240 240 240);
-  --bf-gray-light-extra: rgb(233 233 233);
-  --bf-gray-light: rgb(204 204 204);
-  --bf-gray: rgb(153 153 153);
-  --bf-gray-dark: rgb(102 102 102);
-  --bf-gray-dark-extra: rgb(51 51 51);
-  --bf-dark: rgb(34 34 34);
-  --bf-dark-extra: rgb(17 17 17);
-  --bf-black: rgb(0 0 0);
+  /* Page */
+  --bf-color-bg: rgb(255 255 255);
+  --bf-color-text: rgb(34 34 34);
+  --bf-color-text-muted: rgb(153 153 153);
+  --bf-color-text-subtle: rgb(102 102 102);
+  --bf-color-text-shadow: rgb(34 34 34);
+  --bf-color-contrast: rgb(0 0 0);
+  --bf-color-surface: rgb(233 233 233);
+  --bf-color-border: rgb(204 204 204);
+  --bf-color-border-strong: rgb(102 102 102);
+  --bf-color-overlay-bg: rgb(255 255 255);
+  --bf-color-caption: rgb(153 153 153);
 
-  /* Highlight / mark */
-  --bf-yellow-light: rgb(255 255 153);
-  --bf-yellow: rgb(255 255 0);
-  --bf-orange: rgb(255 165 0);
+  /* Primary: WCAG AA on white (links 4.5:1) and on-primary text (4.5:1).
+   * Links and focused fields fall back to these unless --bf-color-link,
+   * --bf-color-link-hover or --bf-color-field-border-focus is set. */
+  --bf-color-primary: rgb(0 86 179);
+  --bf-color-primary-hover: rgb(0 65 135);
+  --bf-color-primary-subtle: rgb(190 216 254);
+  --bf-color-primary-focus-shadow: rgb(0 65 135 / 35%);
+  --bf-color-on-primary: rgb(255 255 255);
 
-  /* Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1) */
-  --bf-blue: rgb(0 86 179);
-  --bf-blue-light: rgb(0 65 135);
-  --bf-blue-light-extra: rgb(190 216 254);
+  /* Neutral buttons */
+  --bf-color-neutral: rgb(204 204 204);
+  --bf-color-neutral-hover: rgb(184 184 184);
+  --bf-color-on-neutral: rgb(34 34 34);
+  --bf-color-button-focus-shadow: rgb(0 0 0 / 15%);
+
+  /* Form fields and controls */
+  --bf-color-field-bg: rgb(255 255 255);
+  --bf-color-field-border: rgb(153 153 153);
+  --bf-color-field-focus-shadow: rgb(0 86 179 / 25%);
+  --bf-color-placeholder: rgb(102 102 102);
+  --bf-color-control-bg: rgb(255 255 255);
+  --bf-color-control-border: rgb(153 153 153);
+  --bf-color-range-track: rgb(233 233 233);
+  --bf-color-progress-track: rgb(204 204 204);
+
+  /* Highlight (mark / ins) */
+  --bf-color-highlight: rgb(255 255 0);
+  --bf-color-highlight-subtle: rgb(255 255 153);
 
   /* Invalid / error */
-  --bf-red: rgb(255 0 0);
+  --bf-color-danger: rgb(255 0 0);
+
+  /* Tables */
+  --bf-color-table-border: rgb(153 153 153);
+  --bf-color-table-stripe: rgb(233 233 233);
 
   /* Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11) */
-  --bf-focus-ring-color: var(--bf-orange);
+  --bf-focus-ring-color: rgb(255 165 0);
   --bf-focus-ring-width: 0.2rem;
   --bf-focus-ring-offset: 0.3rem;
-
-  /* Dark-mode surfaces (used by utility-global-dark*.css) */
-  --bf-dark-bg: rgb(28 28 28);
-  --bf-dark-link: rgb(77 165 255);
-  --bf-dark-link-hover: rgb(77 165 255);
-  --bf-dark-border-focus: rgb(26 140 255);
-  --bf-dark-shadow-focus: rgb(3 102 214 / 50%);
-  --bf-dark-mark-bg: rgb(230 230 0);
-  --bf-dark-ins-bg: rgb(255 255 200);
-  --bf-dark-button-hover: rgb(184 184 184);
-  --bf-dark-button-shadow: rgb(255 255 255 / 45%);
-  --bf-dark-invalid: rgb(255 38 38);
 
   /* Spacing scale + grid gutter */
   --bf-spacing-sm: 0.25rem;

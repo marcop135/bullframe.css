@@ -1,7 +1,7 @@
-/* Link defaults. --bf-blue meets WCAG AA 4.5:1 on white. */
+/* Link defaults. --bf-color-primary meets WCAG AA 4.5:1 on --bf-color-bg. */
 
 a {
-  color: var(--bf-blue);
+  color: var(--bf-color-link, var(--bf-color-primary));
   text-decoration: none;
   background-color: transparent; /* Legacy Edge active background. */
 }
@@ -9,7 +9,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-  color: var(--bf-blue-light);
+  color: var(--bf-color-link-hover, var(--bf-color-primary-hover));
 }
 
 /* Non-href anchors inherit text (Bootstrap reboot pattern). */

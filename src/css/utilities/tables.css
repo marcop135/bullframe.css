@@ -3,7 +3,7 @@
 .bf-table th,
 .bf-table td {
   padding: var(--bf-spacing-lg);
-  border-bottom: 1px solid var(--bf-gray);
+  border-bottom: 1px solid var(--bf-color-table-border);
   margin-bottom: var(--bf-spacing-md);
 }
 
@@ -26,5 +26,5 @@
 /* Odd-row striping. */
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: var(--bf-gray-light-extra);
+  background-color: var(--bf-color-table-stripe);
 }

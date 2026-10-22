@@ -21,8 +21,8 @@
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px var(--bf-dark) !important;
-  text-shadow: 0 0 0.2rem var(--bf-dark) !important;
+  text-shadow: 0 0 2px var(--bf-color-text-shadow) !important;
+  text-shadow: 0 0 0.2rem var(--bf-color-text-shadow) !important;
 }
 
 .bf-t-italic {

@@ -18,7 +18,7 @@
       }
       .demo-hero,
       .demo-panel {
-        border: 1px solid var(--bf-gray-light);
+        border: 1px solid var(--bf-color-border);
         border-radius: 1rem;
         box-shadow: 0 1rem 2.5rem -2rem rgb(0 0 0 / 0.45);
         padding: 1.5rem;
@@ -32,7 +32,7 @@
         text-transform: uppercase;
       }
       .demo-meta {
-        border-top: 1px solid var(--bf-gray-light);
+        border-top: 1px solid var(--bf-color-border);
         margin-top: 1.5rem;
         padding-top: 1.25rem;
       }
@@ -45,7 +45,7 @@
       .demo-meta dd {
         margin-left: 0;
         margin-bottom: 0.75rem;
-        color: var(--bf-gray-dark);
+        color: var(--bf-color-text-subtle);
       }
       .demo-meta code {
         white-space: nowrap;
@@ -58,7 +58,7 @@
       }
       .demo-build {
         padding-bottom: 1rem;
-        border-bottom: 1px solid var(--bf-gray-light);
+        border-bottom: 1px solid var(--bf-color-border);
       }
       .demo-build label {
         letter-spacing: 0.04em;
@@ -66,7 +66,7 @@
         font-size: 1.2rem;
       }
       .demo-build-file {
-        color: var(--bf-gray-dark);
+        color: var(--bf-color-text-subtle);
       }
       .demo-build-file code {
         font-size: 1.1rem;
@@ -135,13 +135,13 @@
       html[data-demo-theme='dark'] .demo-hero,
       html[data-demo-theme='dark'] .demo-panel {
         background-color: rgb(34 34 34 / 0.72);
-        border-color: var(--bf-gray-dark);
+        border-color: var(--bf-color-border-strong);
       }
       @media (prefers-color-scheme: dark) {
         html:not([data-demo-theme='light']) .demo-hero,
         html:not([data-demo-theme='light']) .demo-panel {
           background-color: rgb(34 34 34 / 0.72);
-          border-color: var(--bf-gray-dark);
+          border-color: var(--bf-color-border-strong);
         }
       }
       .demo-nav-mobile {

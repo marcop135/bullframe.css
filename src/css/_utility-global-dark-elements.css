@@ -3,29 +3,56 @@
  * they are. Class-based extras live in _utility-global-dark-shared.css.
  * Underscore prefix excludes this file from the buildAllCss glob. */
 
+/* Dark values for the --bf-color-* roles that change with the scheme. */
+:root {
+  --bf-color-bg: rgb(28 28 28);
+  --bf-color-text: rgb(240 240 240);
+  --bf-color-link: rgb(77 165 255);
+  --bf-color-link-hover: rgb(77 165 255);
+  --bf-color-caption: rgb(204 204 204);
+  --bf-color-highlight: rgb(230 230 0);
+  --bf-color-highlight-subtle: rgb(255 255 200);
+  --bf-color-field-bg: rgb(17 17 17);
+  --bf-color-field-border: rgb(0 0 0);
+  --bf-color-field-text: rgb(204 204 204);
+  --bf-color-field-border-focus: rgb(26 140 255);
+  --bf-color-field-focus-shadow: rgb(3 102 214 / 50%);
+  --bf-color-placeholder: rgb(153 153 153);
+  --bf-color-range-track: rgb(17 17 17);
+  --bf-color-progress-track: rgb(51 51 51);
+  --bf-color-button-focus-shadow: rgb(255 255 255 / 45%);
+  --bf-color-primary-focus-shadow: rgb(190 216 254 / 75%);
+  --bf-color-danger: rgb(255 38 38);
+  --bf-color-table-border: rgb(102 102 102);
+  --bf-color-table-stripe: rgb(51 51 51);
+  --bf-color-scrollbar-track: rgb(17 17 17);
+  --bf-color-scrollbar-thumb: rgb(97 97 97);
+  --bf-color-scrollbar-thumb-hover: rgb(115 115 115);
+}
+
 html {
-  color: var(--bf-light);
+  color: var(--bf-color-text);
 }
 
 body {
-  background-color: var(--bf-dark-bg);
+  background-color: var(--bf-color-bg);
 }
 
 a {
-  color: var(--bf-dark-link);
+  color: var(--bf-color-link);
 }
 
 a:hover,
 a:focus {
-  color: var(--bf-dark-link-hover);
+  color: var(--bf-color-link-hover);
 }
 
 mark {
-  background-color: var(--bf-dark-mark-bg);
+  background-color: var(--bf-color-highlight);
 }
 
 ins {
-  background-color: var(--bf-dark-ins-bg);
+  background-color: var(--bf-color-highlight-subtle);
 }
 
 [type='email'],
@@ -45,9 +72,9 @@ input[list],
 select,
 select:not([size], select[multiple]),
 textarea {
-  background-color: var(--bf-dark-extra);
-  border-color: var(--bf-black);
-  color: var(--bf-gray-light);
+  background-color: var(--bf-color-field-bg);
+  border-color: var(--bf-color-field-border);
+  color: var(--bf-color-field-text);
 }
 
 [type='email']:active,
@@ -82,9 +109,9 @@ select:not([size], select[multiple]):active,
 select:not([size], select[multiple]):focus,
 textarea:active,
 textarea:focus {
-  background-color: var(--bf-dark-extra);
-  border-color: var(--bf-dark-border-focus);
-  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
+  background-color: var(--bf-color-field-bg);
+  border-color: var(--bf-color-field-border-focus);
+  box-shadow: 0 0 0 3px var(--bf-color-field-focus-shadow);
 }
 
 select:not([size], select[multiple]) {
@@ -100,23 +127,23 @@ select:not([size], select[multiple]) {
 }
 
 [type='range']::-webkit-slider-runnable-track {
-  background-color: var(--bf-dark-extra);
+  background-color: var(--bf-color-range-track);
 }
 
 [type='range']::-moz-range-track {
-  background-color: var(--bf-dark-extra);
+  background-color: var(--bf-color-range-track);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--bf-gray);
+  color: var(--bf-color-placeholder);
 }
 
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-neutral);
 }
 
 button:hover,
@@ -131,7 +158,7 @@ button:focus,
 [type='submit']:hover,
 [type='submit']:active,
 [type='submit']:focus {
-  background: var(--bf-dark-button-hover);
+  background: var(--bf-color-neutral-hover);
 }
 
 button:active,
@@ -142,27 +169,27 @@ button:focus,
 [type='reset']:focus,
 [type='submit']:active,
 [type='submit']:focus {
-  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-focus-shadow);
 }
 
 dialog {
-  color: var(--bf-light);
-  background-color: var(--bf-dark-bg);
+  color: var(--bf-color-text);
+  background-color: var(--bf-color-bg);
 }
 
 caption {
-  color: var(--bf-gray-light);
+  color: var(--bf-color-caption);
 }
 
 progress[value] {
-  background: var(--bf-gray-dark-extra);
-  color: var(--bf-blue);
+  background: var(--bf-color-progress-track);
+  color: var(--bf-color-primary);
 }
 
 progress[value]::-webkit-progress-bar {
-  background: var(--bf-gray-dark-extra);
+  background: var(--bf-color-progress-track);
 }
 
 progress[value]::-webkit-progress-value {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }

@@ -11,6 +11,16 @@
 
 - npm: add `semantic-html`, `wcag`, `html`, and `prefers-color-scheme` keywords to match the GitHub topics.
 
+## [6.4.2] - 2026-10-22
+
+### Added
+
+- Add npm keywords matching the GitHub topics ([#97](https://github.com/marcop135/bullframe.css/pull/97)).
+
+### Fixed
+
+- Docs: let search engines crawl `/kitchen-sink/` so its `noindex` applies ([#98](https://github.com/marcop135/bullframe.css/pull/98)).
+
 ## [6.4.1] - 2026-10-16
 
 ### Fixed

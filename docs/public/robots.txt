@@ -1,11 +1,11 @@
 # Bullframe CSS - https://bullframecss.marcopontili.com
 # Docs are open to search engines and AI crawlers.
-# The interactive /kitchen-sink/ is excluded from indexing.
+# /kitchen-sink/ stays crawlable for search engines so they read its noindex
+# (meta tag and X-Robots-Tag); a Disallow would hide it and keep the URL indexed.
+# AI crawlers stay disallowed from it.
 
 User-agent: *
 Allow: /
-Disallow: /kitchen-sink/
-Disallow: /demo/
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: GPTBot

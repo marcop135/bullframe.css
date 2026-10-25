@@ -1,6 +1,6 @@
 .ex-help-hero {
   padding: 2rem 1rem;
-  border: 1px solid var(--bf-gray-light);
+  border: 1px solid var(--bf-color-border);
   border-radius: 0.75rem;
   background: rgb(194 65 12 / 0.04);
 }

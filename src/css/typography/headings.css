@@ -11,7 +11,7 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: var(--bf-spacing-lg);
+  margin-bottom: var(--bf-space-lg);
 }
 
 /* Balanced headings where supported; no-op elsewhere. */

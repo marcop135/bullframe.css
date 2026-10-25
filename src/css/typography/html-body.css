@@ -6,7 +6,7 @@ html {
   /* 62.5% root so 1rem ≈ 10px. */
   font-size: 62.5%;
 
-  color: var(--bf-dark);
+  color: var(--bf-color-text);
   font-family: system-ui, sans-serif;
   line-height: 1.15;
 
@@ -16,8 +16,8 @@ html {
 
 body {
   margin: 0;
-  font-size: var(--bf-body-font-size-rem);
-  line-height: var(--bf-body-line-height);
+  font-size: var(--bf-font-size-body);
+  line-height: var(--bf-line-height-body);
   font-weight: 400;
   text-align: left;
 
@@ -47,5 +47,5 @@ body {
   /* Long unbroken strings (e.g. headlines) wrap instead of overflowing. */
   word-wrap: break-word;
 
-  background-color: var(--bf-white);
+  background-color: var(--bf-color-bg);
 }

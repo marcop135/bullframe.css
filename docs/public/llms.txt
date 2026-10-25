@@ -24,7 +24,8 @@ Every docs page is also available as clean Markdown: append `.md` to the path (f
 - [Home](https://bullframecss.marcopontili.com/): Product overview
 - [Docs index](https://bullframecss.marcopontili.com/README): Full reference map
 - [Getting started](https://bullframecss.marcopontili.com/getting-started): Modes, CDN/npm, starters
-- [Migration](https://bullframecss.marcopontili.com/migration): v5 to v6
+- [Migration v7](https://bullframecss.marcopontili.com/migration-v7): v6 to v7
+- [Migration v6](https://bullframecss.marcopontili.com/migration): v5 to v6
 - [Variables](https://bullframecss.marcopontili.com/variables): `--bf-*` tokens
 - [Typography](https://bullframecss.marcopontili.com/typography): Headings, body, lists
 - [Layout](https://bullframecss.marcopontili.com/layout): Containers, grid, responsive

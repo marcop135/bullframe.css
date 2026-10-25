@@ -3,8 +3,8 @@
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: var(--bf-dark);
-  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  color: var(--bf-color-on-neutral);
+  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -13,15 +13,15 @@
   overflow: visible;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
-  border-radius: var(--bf-spacing-sm);
+  border-radius: var(--bf-space-sm);
 
   border: 0;
   background-image: none;
-  background-color: var(--bf-gray-light);
+  background-color: var(--bf-color-neutral);
   transition: all 0.2s;
 }
 
-.bf-btn:focus {
+.bf-btn:focus:not(:focus-visible) {
   outline: 0;
 }
 
@@ -29,31 +29,31 @@
 .bf-btn:active,
 .bf-btn:focus {
   text-decoration: none;
-  color: var(--bf-dark);
-  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral-hover);
 }
 
 .bf-btn:active,
 .bf-btn:focus {
-  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
-/* Primary: white on --bf-blue (WCAG AA 4.5:1). */
+/* Primary: --bf-color-on-primary on --bf-color-primary (WCAG AA 4.5:1). */
 .bf-btn.bf-btn--primary {
-  color: var(--bf-white);
-  background: var(--bf-blue);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary);
 }
 
 .bf-btn.bf-btn--primary:hover,
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  color: var(--bf-white);
-  background: var(--bf-blue-light);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary-hover);
 }
 
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgb(0 65 135 / 35%);
+  box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 
 :where(
@@ -68,8 +68,7 @@
   user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: var(--bf-gray-light);
-  outline: none !important;
+  background-color: var(--bf-color-neutral);
 }
 
 @media (forced-colors: active) {

@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
     <style>
       .brand {
-        --bf-blue: #0f766e;
-        --bf-blue-light: #0d9488;
-        --bf-blue-light-extra: #ccfbf1;
-        --bf-dark: #134e4a;
-        --bf-gray-dark: #3f5f5b;
-        --bf-gray-light: #c7e0db;
-        --bf-light: #f0fdfa;
-        --bf-focus-ring-color: #0f766e;
+        --bf-color-primary: #0f766e;
+        --bf-color-primary-hover: #0d9488;
+        --bf-color-primary-subtle: #ccfbf1;
+        --bf-color-bg: #f0fdfa;
+        --bf-color-text: #134e4a;
+        --bf-color-text-subtle: #3f5f5b;
+        --bf-color-on-neutral: #134e4a;
+        --bf-color-neutral: #c7e0db;
+        --bf-color-border: #c7e0db;
+        --bf-color-focus-ring: #0f766e;
         --bf-font-serif: Georgia, 'Times New Roman', serif;
-        color: var(--bf-dark);
-        background: var(--bf-light);
+        color: var(--bf-color-text);
+        background: var(--bf-color-bg);
       }
 
       .brand h1,
@@ -41,13 +43,13 @@
 
       <div id="notes" class="bf-row bf-m-t-3">
         <div class="bf-col-6">
-          <article style="border: 1px solid var(--bf-gray-light); border-radius: var(--bf-spacing-sm); padding: var(--bf-spacing-xl)">
+          <article style="border: 1px solid var(--bf-color-border); border-radius: var(--bf-space-sm); padding: var(--bf-space-xl)">
             <h2 class="bf-m-t-0">Token overrides</h2>
-            <p class="bf-m-b-0">Set <code>--bf-blue</code>, grays and font stacks. Buttons and links pick them up.</p>
+            <p class="bf-m-b-0">Set <code>--bf-color-primary</code>, neutrals and font stacks. Buttons and links pick them up.</p>
           </article>
         </div>
         <div class="bf-col-6">
-          <article style="border: 1px solid var(--bf-gray-light); border-radius: var(--bf-spacing-sm); padding: var(--bf-spacing-xl)">
+          <article style="border: 1px solid var(--bf-color-border); border-radius: var(--bf-space-sm); padding: var(--bf-space-xl)">
             <h2 class="bf-m-t-0">One base build</h2>
             <p class="bf-m-b-0">Light, dark or system-default. Never stack two Bullframe stylesheets.</p>
           </article>

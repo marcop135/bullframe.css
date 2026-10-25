@@ -1,4 +1,4 @@
-/* ! Bullframe CSS v6.4.2 | MIT License | https://github.com/marcop135/bullframe.css  */
+/* ! Bullframe CSS v7.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
 /* Always-dark class-based build. */
 
@@ -6,69 +6,84 @@
 
 /* Variables */
 /* Design tokens (--bf-*). Shared by every build variant.
- * Override on :root (or a scope) to theme without rebuilding. */
+ * Override on :root (or a scope) to theme without rebuilding. :where() keeps
+ * these at zero specificity, so the dark :root block and your overrides win
+ * whatever the load order (e.g. bullframe-utilities.css after a dark build). */
 
-:root {
-  /* Neutrals */
-  --bf-white: rgb(255 255 255);
-  --bf-light: rgb(240 240 240);
-  --bf-gray-light-extra: rgb(233 233 233);
-  --bf-gray-light: rgb(204 204 204);
-  --bf-gray: rgb(153 153 153);
-  --bf-gray-dark: rgb(102 102 102);
-  --bf-gray-dark-extra: rgb(51 51 51);
-  --bf-dark: rgb(34 34 34);
-  --bf-dark-extra: rgb(17 17 17);
-  --bf-black: rgb(0 0 0);
+:where(:root) {
+  /* Page */
+  --bf-color-bg: rgb(255 255 255);
+  --bf-color-text: rgb(34 34 34);
+  --bf-color-text-muted: rgb(118 118 118);
+  --bf-color-text-subtle: rgb(102 102 102);
+  --bf-color-text-shadow: rgb(34 34 34);
+  --bf-color-contrast: rgb(0 0 0);
+  --bf-color-surface: rgb(233 233 233);
+  --bf-color-border: rgb(204 204 204);
+  --bf-color-border-strong: rgb(102 102 102);
+  --bf-color-overlay-bg: rgb(255 255 255);
+  --bf-color-caption: rgb(118 118 118);
 
-  /* Highlight / mark */
-  --bf-yellow-light: rgb(255 255 153);
-  --bf-yellow: rgb(255 255 0);
-  --bf-orange: rgb(255 165 0);
+  /* Primary */
+  /* WCAG AA on white (links 4.5:1) and on-primary text (4.5:1). Links and
+   * focused fields fall back to these unless --bf-color-link,
+   * --bf-color-link-hover or --bf-color-field-border-focus is set. */
+  --bf-color-primary: rgb(0 86 179);
+  --bf-color-primary-hover: rgb(0 65 135);
+  --bf-color-primary-subtle: rgb(190 216 254);
+  --bf-color-primary-shadow-focus: rgb(0 65 135 / 35%);
+  --bf-color-on-primary: rgb(255 255 255);
 
-  /* Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1) */
-  --bf-blue: rgb(0 86 179);
-  --bf-blue-light: rgb(0 65 135);
-  --bf-blue-light-extra: rgb(190 216 254);
+  /* Neutral buttons */
+  --bf-color-neutral: rgb(204 204 204);
+  --bf-color-neutral-hover: rgb(184 184 184);
+  --bf-color-on-neutral: rgb(34 34 34);
+  --bf-color-button-shadow-focus: rgb(0 0 0 / 15%);
+
+  /* Form fields and controls */
+  --bf-color-field-bg: rgb(255 255 255);
+  --bf-color-field-border: rgb(138 138 138);
+  --bf-color-field-shadow-focus: rgb(0 86 179 / 25%);
+  --bf-color-placeholder: rgb(102 102 102);
+  --bf-color-control-bg: rgb(255 255 255);
+  --bf-color-control-border: rgb(138 138 138);
+  --bf-color-range-track: rgb(233 233 233);
+  --bf-color-progress-track: rgb(204 204 204);
+
+  /* Highlight (mark / ins) */
+  --bf-color-highlight: rgb(255 255 0);
+  --bf-color-highlight-subtle: rgb(255 255 153);
 
   /* Invalid / error */
-  --bf-red: rgb(255 0 0);
+  --bf-color-danger: rgb(255 0 0);
+
+  /* Tables */
+  --bf-color-table-border: rgb(138 138 138);
+  --bf-color-table-stripe: rgb(233 233 233);
 
   /* Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11) */
-  --bf-focus-ring-color: var(--bf-orange);
+  --bf-color-focus-ring: rgb(255 165 0);
   --bf-focus-ring-width: 0.2rem;
   --bf-focus-ring-offset: 0.3rem;
 
-  /* Dark-mode surfaces (used by utility-global-dark*.css) */
-  --bf-dark-bg: rgb(28 28 28);
-  --bf-dark-link: rgb(77 165 255);
-  --bf-dark-link-hover: rgb(77 165 255);
-  --bf-dark-border-focus: rgb(26 140 255);
-  --bf-dark-shadow-focus: rgb(3 102 214 / 50%);
-  --bf-dark-mark-bg: rgb(230 230 0);
-  --bf-dark-ins-bg: rgb(255 255 200);
-  --bf-dark-button-hover: rgb(184 184 184);
-  --bf-dark-button-shadow: rgb(255 255 255 / 45%);
-  --bf-dark-invalid: rgb(255 38 38);
-
   /* Spacing scale + grid gutter */
-  --bf-spacing-sm: 0.25rem;
-  --bf-spacing-md: 0.5rem;
-  --bf-spacing-lg: 1rem;
-  --bf-spacing-xl: 2rem;
-  --bf-spacing-xxl: 3rem;
-  --bf-spacing-grid-gutter: 1.5rem;
+  --bf-space-sm: 0.25rem;
+  --bf-space-md: 0.5rem;
+  --bf-space-lg: 1rem;
+  --bf-space-xl: 2rem;
+  --bf-space-xxl: 3rem;
+  --bf-space-gutter: 1.5rem;
 
   /* Type */
-  --bf-font-sans-serif:
+  --bf-font-sans:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-monospace:
+  --bf-font-mono:
     SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --bf-body-font-size-rem: 1.6rem;
-  --bf-body-line-height: 1.5;
+  --bf-font-size-body: 1.6rem;
+  --bf-line-height-body: 1.5;
 
   /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;
@@ -269,7 +284,7 @@ html {
   /* 62.5% root so 1rem ≈ 10px. */
   font-size: 62.5%;
 
-  color: var(--bf-dark);
+  color: var(--bf-color-text);
   font-family: system-ui, sans-serif;
   line-height: 1.15;
 
@@ -279,8 +294,8 @@ html {
 
 body {
   margin: 0;
-  font-size: var(--bf-body-font-size-rem);
-  line-height: var(--bf-body-line-height);
+  font-size: var(--bf-font-size-body);
+  line-height: var(--bf-line-height-body);
   font-weight: 400;
   text-align: left;
 
@@ -310,7 +325,7 @@ body {
   /* Long unbroken strings (e.g. headlines) wrap instead of overflowing. */
   word-wrap: break-word;
 
-  background-color: var(--bf-white);
+  background-color: var(--bf-color-bg);
 }
 /* Heading scale and rhythm. */
 
@@ -325,7 +340,7 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: var(--bf-spacing-lg);
+  margin-bottom: var(--bf-space-lg);
 }
 
 /* Balanced headings where supported; no-op elsewhere. */
@@ -368,7 +383,7 @@ h6 {
 /* Blockquote and citation. */
 
 blockquote {
-  margin: 0 0 var(--bf-spacing-xl);
+  margin: 0 0 var(--bf-space-xl);
   padding-left: 0;
   font-style: italic;
 }
@@ -378,7 +393,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: var(--bf-gray);
+  color: var(--bf-color-text-muted);
   display: block;
 }
 
@@ -392,7 +407,7 @@ q {
 /* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
-  margin: 0 0 var(--bf-spacing-xl) 0;
+  margin: 0 0 var(--bf-space-xl) 0;
 }
 
 /* abbr (Bootstrap 4): dotted underline + help cursor. */
@@ -406,13 +421,13 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: var(--bf-yellow);
-  color: var(--bf-black);
+  background-color: var(--bf-color-highlight);
+  color: var(--bf-color-contrast);
 }
 
 ins {
-  background-color: var(--bf-yellow-light);
-  color: var(--bf-black);
+  background-color: var(--bf-color-highlight-subtle);
+  color: var(--bf-color-contrast);
   text-decoration: none;
 }
 
@@ -468,14 +483,14 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: var(--bf-spacing-xl) 0;
+  margin: var(--bf-space-xl) 0;
   padding: 0;
   overflow: visible; /* Edge: show overflow. */
 }
 /* pre / code / kbd / samp. */
 
 pre {
-  margin: 0 0 var(--bf-spacing-xl) 0;
+  margin: 0 0 var(--bf-space-xl) 0;
 
   display: block;
   overflow: auto;
@@ -596,7 +611,7 @@ pre code {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -606,7 +621,7 @@ pre code {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
 }
 
 :where(label input, label select, label textarea) {
@@ -632,7 +647,7 @@ pre code {
 }
 
 :where([type='search']) {
-  outline-offset: calc(-1 * var(--bf-spacing-sm));
+  outline-offset: calc(-1 * var(--bf-space-sm));
 }
 
 :where(output) {
@@ -701,7 +716,7 @@ pre code {
 }
 
 :where(button, input, select, textarea) {
-  border-radius: var(--bf-spacing-sm);
+  border-radius: var(--bf-space-sm);
 }
 
 :where([type='radio']) {
@@ -709,12 +724,12 @@ pre code {
 }
 
 :where([type='checkbox']) {
-  border-radius: var(--bf-spacing-md);
+  border-radius: var(--bf-space-md);
 }
 
 :where([type='radio'], [type='checkbox']) {
   padding: 0;
-  background-color: var(--bf-white);
+  background-color: var(--bf-color-control-bg);
 }
 
 :where([type='range' i]) {
@@ -763,7 +778,7 @@ pre code {
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
 :where(button, [type='button'], [type='reset'], [type='submit']):focus {
   text-decoration: none;
-  color: var(--bf-dark);
+  color: var(--bf-color-on-neutral);
 }
 
 :where(
@@ -778,10 +793,10 @@ pre code {
 /* Firefox: input color must not override placeholder color.
  * https://github.com/necolas/normalize.css/issues/150 */
 :where(input::-moz-placeholder, textarea::-moz-placeholder) {
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-placeholder);
 }
 :where(input::placeholder, textarea::placeholder) {
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-placeholder);
 }
 
 /* Firefox: modern focus ring on all focusable elements. */
@@ -813,9 +828,9 @@ pre code {
   select,
   textarea
 ) {
-  background-color: var(--bf-white);
-  border: 1px solid var(--bf-gray);
-  padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
+  background-color: var(--bf-color-field-bg);
+  border: 1px solid var(--bf-color-field-border);
+  padding: var(--bf-space-md) calc(var(--bf-space-lg) * 0.75);
 }
 
 :where(
@@ -833,9 +848,7 @@ pre code {
   [type='url'],
   input[list],
   select,
-  textarea,
-  [type='radio'],
-  [type='checkbox']
+  textarea
 ):active,
 :where(
   [type='email'],
@@ -852,22 +865,31 @@ pre code {
   [type='url'],
   input[list],
   select,
-  textarea,
-  [type='radio'],
-  [type='checkbox']
+  textarea
 ):focus {
   transition:
     border 0.2s,
     background-color 0.2s,
     box-shadow 0.2s;
-  border-color: var(--bf-blue);
+  border-color: var(--bf-color-field-border-focus, var(--bf-color-primary));
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus);
+}
+
+/* Radio / checkbox keep the primary ring in every scheme. */
+:where([type='radio'], [type='checkbox']):active,
+:where([type='radio'], [type='checkbox']):focus {
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+  border-color: var(--bf-color-primary);
   box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']) {
-  color: var(--bf-dark);
-  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
-  background: var(--bf-gray-light);
+  color: var(--bf-color-on-neutral);
+  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
+  background: var(--bf-color-neutral);
   transition:
     color 0.2s,
     background 0.2s,
@@ -880,15 +902,15 @@ pre code {
     [aria-disabled='true']
   ) {
   text-decoration: none;
-  color: var(--bf-dark);
-  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral-hover);
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
 :where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
     [aria-disabled='true']
   ) {
-  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 /* Disabled / aria-disabled / fieldset[disabled]. */
@@ -933,7 +955,6 @@ pre code {
      -moz-user-select: none !important;
           user-select: none !important;
   box-shadow: none !important;
-  outline: none !important;
   opacity: 0.5 !important;
 }
 /* Select: custom arrow for single-value controls.
@@ -943,18 +964,18 @@ pre code {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: var(--bf-white)
+  background: var(--bf-color-field-bg)
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
-  padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
+  padding-right: calc(var(--bf-space-lg) + var(--bf-space-lg));
 }
 
 /* RTL: mirror arrow after appearance:none removes the native control. */
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
   background-position: left 0.85rem top 50%;
-  padding-right: calc(var(--bf-spacing-lg) * 0.75);
-  padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
+  padding-right: calc(var(--bf-space-lg) * 0.75);
+  padding-left: calc(var(--bf-space-lg) + var(--bf-space-lg));
 }
 /* Range: custom thumb/track when appearance:none is supported.
  * CodePen: https://codepen.io/marcop135/pen/JjGrNMx */
@@ -976,7 +997,7 @@ pre code {
     width: 1.5rem;
     height: 1.5rem;
     margin-top: -0.25rem;
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
     border-radius: 1.5rem;
     -webkit-transition:
       background-color 0.15s ease-in-out,
@@ -989,7 +1010,7 @@ pre code {
   }
 
   :where([type='range'])::-webkit-slider-thumb:active {
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
   }
 
   :where([type='range'])::-moz-range-thumb {
@@ -999,7 +1020,7 @@ pre code {
 
     width: 1.5rem;
     height: 1.5rem;
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
     border-radius: 1.5rem;
     -moz-transition:
       background-color 0.15s ease-in-out,
@@ -1012,7 +1033,7 @@ pre code {
   }
 
   :where([type='range'])::-moz-range-thumb:active {
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
   }
 
   :where([type='range'])::-webkit-slider-runnable-track {
@@ -1022,7 +1043,7 @@ pre code {
     width: 100%;
     height: 0.65rem;
     cursor: pointer;
-    background-color: var(--bf-gray-light-extra);
+    background-color: var(--bf-color-range-track);
   }
 
   :where([type='range'])::-moz-range-track {
@@ -1032,7 +1053,7 @@ pre code {
     width: 100%;
     height: 0.65rem;
     cursor: pointer;
-    background-color: var(--bf-gray-light-extra);
+    background-color: var(--bf-color-range-track);
   }
 
   :where([type='range']):focus {
@@ -1041,13 +1062,13 @@ pre code {
 
   :where([type='range']):focus::-webkit-slider-thumb {
     box-shadow:
-      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.1rem var(--bf-color-control-bg),
       0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 
   :where([type='range']):focus::-moz-range-thumb {
     box-shadow:
-      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.1rem var(--bf-color-control-bg),
       0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 
@@ -1060,19 +1081,19 @@ pre code {
   }
 
   :where([type='range']):disabled::-webkit-slider-thumb {
-    background-color: var(--bf-gray-light);
+    background-color: var(--bf-color-neutral);
   }
 
   :where([type='range']):disabled::-moz-range-thumb {
-    background-color: var(--bf-gray-light);
+    background-color: var(--bf-color-neutral);
   }
 }
 
 /* Miscellaneous */
-/* Link defaults. --bf-blue meets WCAG AA 4.5:1 on white. */
+/* Link defaults. --bf-color-primary meets WCAG AA 4.5:1 on --bf-color-bg. */
 
 a {
-  color: var(--bf-blue);
+  color: var(--bf-color-link, var(--bf-color-primary));
   text-decoration: none;
   background-color: transparent; /* Legacy Edge active background. */
 }
@@ -1080,7 +1101,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-  color: var(--bf-blue-light);
+  color: var(--bf-color-link-hover, var(--bf-color-primary-hover));
 }
 
 /* Non-href anchors inherit text (Bootstrap reboot pattern). */
@@ -1111,16 +1132,13 @@ a:not([href], [tabindex]):focus {
 }
 
 :focus-visible {
-  outline: var(--bf-focus-ring-width) solid var(--bf-focus-ring-color);
+  outline: var(--bf-focus-ring-width) solid var(--bf-color-focus-ring);
   outline-offset: var(--bf-focus-ring-offset);
 }
 
 /* Clear UA outline on text-like controls (styled fields keep their own chrome).
+ * Buttons, radios and checkboxes keep the :focus-visible ring.
  * Leave color / range / file alone; they often use custom widgets. */
-button:focus,
-[type='button']:focus,
-[type='reset']:focus,
-[type='submit']:focus,
 [type='email']:focus,
 [type='number']:focus,
 [type='password']:focus,
@@ -1133,12 +1151,16 @@ button:focus,
 [type='time']:focus,
 [type='week']:focus,
 [type='url']:focus,
-[type='radio']:focus,
-[type='checkbox']:focus,
 input[list]:focus,
 select:focus,
 textarea:focus {
   outline: 0;
+}
+
+/* aria-disabled controls stay focusable, so keep the ring (disabled rules drop box-shadow). */
+[aria-disabled='true']:focus-visible {
+  outline: var(--bf-focus-ring-width) solid var(--bf-color-focus-ring);
+  outline-offset: var(--bf-focus-ring-offset);
 }
 /* List spacing and nav list reset. */
 
@@ -1146,7 +1168,7 @@ menu,
 ol,
 ul,
 dl {
-  margin: 0 0 var(--bf-spacing-xl) 0;
+  margin: 0 0 var(--bf-space-xl) 0;
   padding: 0;
 }
 
@@ -1162,7 +1184,7 @@ dd {
 
 ul,
 ol {
-  margin-left: var(--bf-spacing-xl);
+  margin-left: var(--bf-space-xl);
 }
 
 nav ol,
@@ -1269,16 +1291,16 @@ progress[value] {
   height: 20px;
   height: 2rem;
 
-  background: var(--bf-gray-light);
-  color: var(--bf-blue); /* Progress fill in IE10+. */
+  background: var(--bf-color-progress-track);
+  color: var(--bf-color-primary); /* Progress fill in IE10+. */
 }
 
 progress[value]::-webkit-progress-bar {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-progress-track);
 }
 
 progress[value]::-webkit-progress-value {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }
 
 /* No default border (covers embeds that ignore frameborder="0"). */
@@ -1289,7 +1311,7 @@ iframe {
 
 address {
   font-style: normal;
-  margin-bottom: var(--bf-spacing-lg);
+  margin-bottom: var(--bf-space-lg);
   line-height: inherit;
 }
 
@@ -1304,15 +1326,15 @@ summary {
 }
 
 dialog {
-  background-color: var(--bf-white);
-  color: var(--bf-dark);
+  background-color: var(--bf-color-bg);
+  color: var(--bf-color-text);
   border: none;
-  border-radius: var(--bf-spacing-sm);
-  padding: var(--bf-spacing-xl);
+  border-radius: var(--bf-space-sm);
+  padding: var(--bf-space-xl);
   height: -moz-fit-content;
   height: fit-content;
   min-width: min(25rem, 100%);
-  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
+  max-width: calc(100vw - (var(--bf-space-gutter) * 2));
 }
 
 @media (min-width: 768px) {
@@ -1373,9 +1395,9 @@ th {
 }
 
 caption {
-  padding-top: var(--bf-spacing-md);
-  padding-bottom: var(--bf-spacing-md);
-  color: var(--bf-gray);
+  padding-top: var(--bf-space-md);
+  padding-bottom: var(--bf-space-md);
+  color: var(--bf-color-caption);
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;
@@ -1410,10 +1432,10 @@ caption {
     text-decoration: underline;
   }
 
-  /* Darker amber clears WCAG 1.4.11 (3:1) on white, --bf-light and --bf-dark-bg;
-   * the default --bf-orange ring is only ~2:1 on white. */
+  /* Darker amber clears WCAG 1.4.11 (3:1) on the light and dark --bf-color-bg;
+   * the default orange ring is only ~2:1 on white. */
   :root {
-    --bf-focus-ring-color: rgb(184 115 0);
+    --bf-color-focus-ring: rgb(184 115 0);
   }
 
   :focus-visible {
@@ -1444,6 +1466,11 @@ caption {
 @media (forced-colors: active) {
   :focus-visible {
     outline-color: Highlight;
+  }
+
+  /* Fields hide the ring for border + box-shadow, which forced colours drop. */
+  :is(input, select, textarea, [type]):focus {
+    outline: 2px solid Highlight;
   }
 
   a {
@@ -1495,10 +1522,10 @@ caption {
   top: 0;
   left: 0;
   z-index: 9999;
-  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
-  color: var(--bf-blue);
-  background-color: var(--bf-white);
-  border: 1px solid var(--bf-gray-light);
+  padding: var(--bf-space-md) var(--bf-space-lg);
+  color: var(--bf-color-primary);
+  background-color: var(--bf-color-overlay-bg);
+  border: 1px solid var(--bf-color-border);
   transform: translateY(-100%);
 }
 
@@ -1683,8 +1710,8 @@ caption {
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px var(--bf-dark) !important;
-  text-shadow: 0 0 0.2rem var(--bf-dark) !important;
+  text-shadow: 0 0 2px var(--bf-color-text-shadow) !important;
+  text-shadow: 0 0 0.2rem var(--bf-color-text-shadow) !important;
 }
 
 .bf-t-italic {
@@ -1759,7 +1786,7 @@ caption {
 }
 
 .bf-font-sans-serif {
-  font-family: var(--bf-font-sans-serif) !important;
+  font-family: var(--bf-font-sans) !important;
 }
 
 .bf-font-serif {
@@ -1767,7 +1794,7 @@ caption {
 }
 
 .bf-font-monospace {
-  font-family: var(--bf-font-monospace) !important;
+  font-family: var(--bf-font-mono) !important;
 }
 
 /* Opt-in stacks from Modern Font Stacks (https://modernfontstacks.com/). */
@@ -1849,7 +1876,7 @@ caption {
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: var(--bf-spacing-lg) !important;
+  margin-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-h1 {
@@ -1893,8 +1920,8 @@ body.bf-responsive-typography {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: var(--bf-spacing-grid-gutter);
-  padding-right: var(--bf-spacing-grid-gutter);
+  padding-left: var(--bf-space-gutter);
+  padding-right: var(--bf-space-gutter);
 }
 
 .bf-container {
@@ -1904,15 +1931,15 @@ body.bf-responsive-typography {
 .bf-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--bf-spacing-grid-gutter));
-  margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
+  margin-left: calc(-1 * var(--bf-space-gutter));
+  margin-right: calc(-1 * var(--bf-space-gutter));
 }
 
 [class^='bf-col-'] {
   position: relative;
   min-height: 1px;
-  padding-left: var(--bf-spacing-grid-gutter);
-  padding-right: var(--bf-spacing-grid-gutter);
+  padding-left: var(--bf-space-gutter);
+  padding-right: var(--bf-space-gutter);
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -2129,38 +2156,38 @@ table th[class^='bf-col'] {
 /* .bf-m-N is the historical short form of .bf-m-b-N; both set margin-bottom. */
 .bf-m-1,
 .bf-m-b-1 {
-  margin-bottom: var(--bf-spacing-md) !important;
+  margin-bottom: var(--bf-space-md) !important;
 }
 
 .bf-m-2,
 .bf-m-b-2 {
-  margin-bottom: var(--bf-spacing-lg) !important;
+  margin-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-m-3,
 .bf-m-b-3 {
-  margin-bottom: var(--bf-spacing-xl) !important;
+  margin-bottom: var(--bf-space-xl) !important;
 }
 
 .bf-m-4,
 .bf-m-b-4 {
-  margin-bottom: var(--bf-spacing-xxl) !important;
+  margin-bottom: var(--bf-space-xxl) !important;
 }
 
 .bf-m-t-1 {
-  margin-top: var(--bf-spacing-md) !important;
+  margin-top: var(--bf-space-md) !important;
 }
 
 .bf-m-t-2 {
-  margin-top: var(--bf-spacing-lg) !important;
+  margin-top: var(--bf-space-lg) !important;
 }
 
 .bf-m-t-3 {
-  margin-top: var(--bf-spacing-xl) !important;
+  margin-top: var(--bf-space-xl) !important;
 }
 
 .bf-m-t-4 {
-  margin-top: var(--bf-spacing-xxl) !important;
+  margin-top: var(--bf-space-xxl) !important;
 }
 
 .bf-p-0 {
@@ -2186,46 +2213,46 @@ table th[class^='bf-col'] {
 /* .bf-p-N is the historical short form of .bf-p-b-N; both set padding-bottom. */
 .bf-p-1,
 .bf-p-b-1 {
-  padding-bottom: var(--bf-spacing-md) !important;
+  padding-bottom: var(--bf-space-md) !important;
 }
 
 .bf-p-2,
 .bf-p-b-2 {
-  padding-bottom: var(--bf-spacing-lg) !important;
+  padding-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-p-3,
 .bf-p-b-3 {
-  padding-bottom: var(--bf-spacing-xl) !important;
+  padding-bottom: var(--bf-space-xl) !important;
 }
 
 .bf-p-4,
 .bf-p-b-4 {
-  padding-bottom: var(--bf-spacing-xxl) !important;
+  padding-bottom: var(--bf-space-xxl) !important;
 }
 
 .bf-p-t-1 {
-  padding-top: var(--bf-spacing-md) !important;
+  padding-top: var(--bf-space-md) !important;
 }
 
 .bf-p-t-2 {
-  padding-top: var(--bf-spacing-lg) !important;
+  padding-top: var(--bf-space-lg) !important;
 }
 
 .bf-p-t-3 {
-  padding-top: var(--bf-spacing-xl) !important;
+  padding-top: var(--bf-space-xl) !important;
 }
 
 .bf-p-t-4 {
-  padding-top: var(--bf-spacing-xxl) !important;
+  padding-top: var(--bf-space-xxl) !important;
 }
 /* .bf-btn and variants. */
 
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: var(--bf-dark);
-  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  color: var(--bf-color-on-neutral);
+  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -2236,15 +2263,15 @@ table th[class^='bf-col'] {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: var(--bf-spacing-sm);
+  border-radius: var(--bf-space-sm);
 
   border: 0;
   background-image: none;
-  background-color: var(--bf-gray-light);
+  background-color: var(--bf-color-neutral);
   transition: all 0.2s;
 }
 
-.bf-btn:focus {
+.bf-btn:focus:not(:focus-visible) {
   outline: 0;
 }
 
@@ -2252,31 +2279,31 @@ table th[class^='bf-col'] {
 .bf-btn:active,
 .bf-btn:focus {
   text-decoration: none;
-  color: var(--bf-dark);
-  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral-hover);
 }
 
 .bf-btn:active,
 .bf-btn:focus {
-  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
-/* Primary: white on --bf-blue (WCAG AA 4.5:1). */
+/* Primary: --bf-color-on-primary on --bf-color-primary (WCAG AA 4.5:1). */
 .bf-btn.bf-btn--primary {
-  color: var(--bf-white);
-  background: var(--bf-blue);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary);
 }
 
 .bf-btn.bf-btn--primary:hover,
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  color: var(--bf-white);
-  background: var(--bf-blue-light);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary-hover);
 }
 
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgb(0 65 135 / 35%);
+  box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 
 :where(
@@ -2293,8 +2320,7 @@ table th[class^='bf-col'] {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: var(--bf-gray-light);
-  outline: none !important;
+  background-color: var(--bf-color-neutral);
 }
 
 @media (forced-colors: active) {
@@ -2309,8 +2335,8 @@ table th[class^='bf-col'] {
     border 0.2s,
     background-color 0.2s,
     box-shadow 0.2s !important;
-  border-color: var(--bf-blue) !important;
-  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%) !important;
+  border-color: var(--bf-color-field-border-focus, var(--bf-color-primary)) !important;
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus) !important;
 }
 
 .bf-disabled,
@@ -2329,8 +2355,8 @@ table th[class^='bf-col'] {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: var(--bf-white);
-  border-color: var(--bf-gray);
+  background-color: var(--bf-color-control-bg);
+  border-color: var(--bf-color-control-border);
 }
 
 label.bf-disabled {
@@ -2351,8 +2377,8 @@ button.bf-disabled,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: var(--bf-dark);
-  background: var(--bf-gray-light);
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral);
 }
 
 button.bf-disabled:hover,
@@ -2371,8 +2397,8 @@ button.bf-disabled:focus,
 .bf-btn.bf-disabled:active,
 .bf-btn.bf-disabled:focus {
   box-shadow: none;
-  color: var(--bf-dark);
-  background: var(--bf-gray-light);
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral);
 }
 
 .bf-btn--primary.bf-disabled {
@@ -2384,22 +2410,22 @@ button.bf-disabled:focus,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: var(--bf-white);
-  background: var(--bf-blue);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary);
 }
 
 .bf-btn--primary.bf-disabled:hover,
 .bf-btn--primary.bf-disabled:active,
 .bf-btn--primary.bf-disabled:focus {
   box-shadow: none;
-  color: var(--bf-white);
-  background: var(--bf-blue);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary);
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: var(--bf-red) !important;
-  border-color: var(--bf-red) !important;
+  color: var(--bf-color-danger) !important;
+  border-color: var(--bf-color-danger) !important;
   box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }
 /* Custom radio / checkbox appearance. */
@@ -2412,19 +2438,19 @@ button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid var(--bf-gray);
+  border: 1px solid var(--bf-color-control-border);
 }
 
 .custom-checkbox-wrapper [type='checkbox'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-spacing-md);
+  margin-left: var(--bf-space-md);
 }
 
 *[dir='rtl'] .custom-checkbox-wrapper [type='checkbox'] + label,
 .custom-checkbox-wrapper [type='checkbox'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-spacing-md);
+  margin-right: var(--bf-space-md);
 }
 
 .custom-checkbox-wrapper [type='checkbox']::after {
@@ -2433,7 +2459,7 @@ button.bf-disabled:focus,
   position: absolute;
   width: 0.6rem;
   height: 0.8rem;
-  border: 2px solid var(--bf-white);
+  border: 2px solid var(--bf-color-on-primary);
   border-top: 0;
   border-left: 0;
   left: 35%;
@@ -2442,8 +2468,8 @@ button.bf-disabled:focus,
 }
 
 .custom-checkbox-wrapper [type='checkbox']:checked {
-  background-color: var(--bf-blue);
-  border-color: var(--bf-black);
+  background-color: var(--bf-color-primary);
+  border-color: var(--bf-color-contrast);
 }
 
 .custom-radio-wrapper [type='radio'] {
@@ -2454,19 +2480,19 @@ button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid var(--bf-gray);
+  border: 1px solid var(--bf-color-control-border);
 }
 
 .custom-radio-wrapper [type='radio'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-spacing-md);
+  margin-left: var(--bf-space-md);
 }
 
 *[dir='rtl'] .custom-radio-wrapper [type='radio'] + label,
 .custom-radio-wrapper [type='radio'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-spacing-md);
+  margin-right: var(--bf-space-md);
 }
 
 .custom-radio-wrapper [type='radio']::after {
@@ -2478,13 +2504,13 @@ button.bf-disabled:focus,
   left: -0.05rem;
   top: -0.05rem;
   border-radius: 50%;
-  background: var(--bf-white);
+  background: var(--bf-color-on-primary);
   transform: scale(0.35);
 }
 
 .custom-radio-wrapper [type='radio']:checked {
-  background-color: var(--bf-blue);
-  border-color: var(--bf-black);
+  background-color: var(--bf-color-primary);
+  border-color: var(--bf-color-contrast);
 }
 /* Unstyled and inline list helpers. */
 
@@ -2529,9 +2555,9 @@ dt {
 
 .bf-table th,
 .bf-table td {
-  padding: var(--bf-spacing-lg);
-  border-bottom: 1px solid var(--bf-gray);
-  margin-bottom: var(--bf-spacing-md);
+  padding: var(--bf-space-lg);
+  border-bottom: 1px solid var(--bf-color-table-border);
+  margin-bottom: var(--bf-space-md);
 }
 
 /* Horizontal scroll wrapper. */
@@ -2542,7 +2568,7 @@ dt {
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
 }
 
 /* Prefer always-visible scrollbars on WebKit. */
@@ -2553,7 +2579,7 @@ dt {
 /* Odd-row striping. */
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: var(--bf-gray-light-extra);
+  background-color: var(--bf-color-table-stripe);
 }
 /* Responsive embed box (Bootstrap-style aspect ratio). */
 
@@ -2659,10 +2685,10 @@ dt {
   min-inline-size: 0;
 }
 /* Opt-in accent-color: native checkbox, radio, range and progress follow
- * --bf-blue instead of the UA default. Put it on <html> or any container. */
+ * --bf-color-primary instead of the UA default. Put it on <html> or any container. */
 
 .bf-accent-native {
-  accent-color: var(--bf-blue);
+  accent-color: var(--bf-color-primary);
 }
 /* Print styles (adapted from h5bp main.css). */
 
@@ -2754,29 +2780,58 @@ dt {
  * they are. Class-based extras live in _utility-global-dark-shared.css.
  * Underscore prefix excludes this file from the buildAllCss glob. */
 
+/* Dark values for the --bf-color-* roles that change with the scheme. */
+:root {
+  --bf-color-bg: rgb(28 28 28);
+  --bf-color-text: rgb(240 240 240);
+  --bf-color-text-muted: rgb(153 153 153);
+  --bf-color-link: rgb(77 165 255); /* light: --bf-color-primary */
+  --bf-color-link-hover: rgb(77 165 255); /* light: --bf-color-primary-hover */
+  --bf-color-caption: rgb(204 204 204);
+  --bf-color-highlight: rgb(230 230 0);
+  --bf-color-highlight-subtle: rgb(255 255 200);
+  --bf-color-field-bg: rgb(17 17 17);
+  --bf-color-field-border: rgb(0 0 0);
+  --bf-color-control-border: rgb(153 153 153);
+  --bf-color-field-text: rgb(204 204 204); /* light: inherited text colour */
+  --bf-color-field-border-focus: rgb(26 140 255); /* light: --bf-color-primary */
+  --bf-color-field-shadow-focus: rgb(3 102 214 / 50%);
+  --bf-color-placeholder: rgb(153 153 153);
+  --bf-color-range-track: rgb(17 17 17);
+  --bf-color-progress-track: rgb(51 51 51);
+  --bf-color-button-shadow-focus: rgb(255 255 255 / 45%);
+  --bf-color-primary-shadow-focus: rgb(190 216 254 / 75%);
+  --bf-color-danger: rgb(255 38 38);
+  --bf-color-table-border: rgb(102 102 102);
+  --bf-color-table-stripe: rgb(51 51 51);
+  --bf-color-scrollbar-track: rgb(17 17 17);
+  --bf-color-scrollbar-thumb: rgb(97 97 97);
+  --bf-color-scrollbar-thumb-hover: rgb(115 115 115);
+}
+
 html {
-  color: var(--bf-light);
+  color: var(--bf-color-text);
 }
 
 body {
-  background-color: var(--bf-dark-bg);
+  background-color: var(--bf-color-bg);
 }
 
 a {
-  color: var(--bf-dark-link);
+  color: var(--bf-color-link);
 }
 
 a:hover,
 a:focus {
-  color: var(--bf-dark-link-hover);
+  color: var(--bf-color-link-hover);
 }
 
 mark {
-  background-color: var(--bf-dark-mark-bg);
+  background-color: var(--bf-color-highlight);
 }
 
 ins {
-  background-color: var(--bf-dark-ins-bg);
+  background-color: var(--bf-color-highlight-subtle);
 }
 
 [type='email'],
@@ -2796,9 +2851,9 @@ input[list],
 select,
 select:not([size], select[multiple]),
 textarea {
-  background-color: var(--bf-dark-extra);
-  border-color: var(--bf-black);
-  color: var(--bf-gray-light);
+  background-color: var(--bf-color-field-bg);
+  border-color: var(--bf-color-field-border);
+  color: var(--bf-color-field-text);
 }
 
 [type='email']:active,
@@ -2833,9 +2888,9 @@ select:not([size], select[multiple]):active,
 select:not([size], select[multiple]):focus,
 textarea:active,
 textarea:focus {
-  background-color: var(--bf-dark-extra);
-  border-color: var(--bf-dark-border-focus);
-  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus);
+  background-color: var(--bf-color-field-bg);
+  border-color: var(--bf-color-field-border-focus);
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus);
 }
 
 select:not([size], select[multiple]) {
@@ -2851,27 +2906,27 @@ select:not([size], select[multiple]) {
 }
 
 [type='range']::-webkit-slider-runnable-track {
-  background-color: var(--bf-dark-extra);
+  background-color: var(--bf-color-range-track);
 }
 
 [type='range']::-moz-range-track {
-  background-color: var(--bf-dark-extra);
+  background-color: var(--bf-color-range-track);
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: var(--bf-gray);
+  color: var(--bf-color-placeholder);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--bf-gray);
+  color: var(--bf-color-placeholder);
 }
 
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-neutral);
 }
 
 button:hover,
@@ -2886,7 +2941,7 @@ button:focus,
 [type='submit']:hover,
 [type='submit']:active,
 [type='submit']:focus {
-  background: var(--bf-dark-button-hover);
+  background: var(--bf-color-neutral-hover);
 }
 
 button:active,
@@ -2897,80 +2952,80 @@ button:focus,
 [type='reset']:focus,
 [type='submit']:active,
 [type='submit']:focus {
-  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 dialog {
-  color: var(--bf-light);
-  background-color: var(--bf-dark-bg);
+  color: var(--bf-color-text);
+  background-color: var(--bf-color-bg);
 }
 
 caption {
-  color: var(--bf-gray-light);
+  color: var(--bf-color-caption);
 }
 
 progress[value] {
-  background: var(--bf-gray-dark-extra);
-  color: var(--bf-blue);
+  background: var(--bf-color-progress-track);
+  color: var(--bf-color-primary);
 }
 
 progress[value]::-webkit-progress-bar {
-  background: var(--bf-gray-dark-extra);
+  background: var(--bf-color-progress-track);
 }
 
 progress[value]::-webkit-progress-value {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }
 
 .bf-focused {
-  border-color: var(--bf-dark-border-focus) !important;
-  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
+  border-color: var(--bf-color-field-border-focus) !important;
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus) !important;
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: var(--bf-dark-invalid) !important;
-  border-color: var(--bf-dark-invalid) !important;
+  color: var(--bf-color-danger) !important;
+  border-color: var(--bf-color-danger) !important;
 }
 
 .bf-btn {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-neutral);
 }
 
 .bf-btn:hover,
 .bf-btn:active,
 .bf-btn:focus {
-  background: var(--bf-dark-button-hover);
+  background: var(--bf-color-neutral-hover);
 }
 
 .bf-btn:active,
 .bf-btn:focus {
-  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 .bf-btn.bf-btn--primary {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }
 
 .bf-btn.bf-btn--primary:hover,
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  background: var(--bf-blue-light);
+  background: var(--bf-color-primary-hover);
 }
 
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
+  box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 
 .bf-table th,
 .bf-table td {
-  border-color: var(--bf-gray-dark);
+  border-color: var(--bf-color-table-border);
 }
 
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: var(--bf-gray-dark-extra);
+  background-color: var(--bf-color-table-stripe);
 }
 
 button.bf-disabled,
@@ -2978,16 +3033,16 @@ button.bf-disabled,
 [type='reset'].bf-disabled,
 [type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-neutral);
 }
 
 .bf-btn--primary.bf-disabled {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }
 /* Dark scrollbar colors (Firefox + WebKit). */
 
 html {
-  scrollbar-color: rgb(97 97 97) var(--bf-dark-extra); /* gray-dark -5% lightness */
+  scrollbar-color: var(--bf-color-scrollbar-thumb) var(--bf-color-scrollbar-track);
 }
 
 /* WebKit thumb / track. */
@@ -2998,13 +3053,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--bf-dark-extra);
+  background-color: var(--bf-color-scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(97 97 97); /* gray-dark -5% lightness */
+  background-color: var(--bf-color-scrollbar-thumb);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(115 115 115); /* gray-dark +10% lightness */
+  background-color: var(--bf-color-scrollbar-thumb-hover);
 }

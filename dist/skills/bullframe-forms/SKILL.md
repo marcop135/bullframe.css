@@ -1,7 +1,7 @@
 ---
 name: bullframe-forms
 description: Build accessible forms with Bullframe CSS. Use when creating a contact form, login, signup, checkout, search box, filter bar, or any page with input controls.
-bullframe: '>=6.1.0 <7.0.0'
+bullframe: '>=7.0.0 <8.0.0'
 builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css]
 requires: [bullframe-core]
 docs: ['/forms', '/components/forms', '/accessibility']
@@ -85,7 +85,7 @@ custom control CSS.
 
 ## Do not
 
-- Do not remove or restyle the focus ring; tune `--bf-focus-ring-color`,
+- Do not remove or restyle the focus ring; tune `--bf-color-focus-ring`,
   `--bf-focus-ring-width`, `--bf-focus-ring-offset`.
 - Do not use `.bf-invalid` as a permanent style; it is a state.
 - Do not nest a form inside another form.

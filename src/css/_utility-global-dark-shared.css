@@ -7,52 +7,52 @@
 @import './_utility-global-dark-elements.css';
 
 .bf-focused {
-  border-color: var(--bf-dark-border-focus) !important;
-  box-shadow: 0 0 0 3px var(--bf-dark-shadow-focus) !important;
+  border-color: var(--bf-color-field-border-focus) !important;
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus) !important;
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: var(--bf-dark-invalid) !important;
-  border-color: var(--bf-dark-invalid) !important;
+  color: var(--bf-color-danger) !important;
+  border-color: var(--bf-color-danger) !important;
 }
 
 .bf-btn {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-neutral);
 }
 
 .bf-btn:hover,
 .bf-btn:active,
 .bf-btn:focus {
-  background: var(--bf-dark-button-hover);
+  background: var(--bf-color-neutral-hover);
 }
 
 .bf-btn:active,
 .bf-btn:focus {
-  box-shadow: 0 0 0 3px var(--bf-dark-button-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 .bf-btn.bf-btn--primary {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }
 
 .bf-btn.bf-btn--primary:hover,
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  background: var(--bf-blue-light);
+  background: var(--bf-color-primary-hover);
 }
 
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgb(190 216 254 / 75%);
+  box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 
 .bf-table th,
 .bf-table td {
-  border-color: var(--bf-gray-dark);
+  border-color: var(--bf-color-table-border);
 }
 
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: var(--bf-gray-dark-extra);
+  background-color: var(--bf-color-table-stripe);
 }

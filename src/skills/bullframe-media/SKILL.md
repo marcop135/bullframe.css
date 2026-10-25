@@ -1,7 +1,7 @@
 ---
 name: bullframe-media
 description: Build galleries, responsive embeds and media grids with Bullframe CSS. Use when creating an album, photo grid, video or map embed, figure with caption, or mixed media cards.
-bullframe: '>=6.1.0 <7.0.0'
+bullframe: '>=7.0.0 <8.0.0'
 builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css]
 requires: [bullframe-core]
 docs: ['/utilities/embeds', '/utilities/filters', '/utilities/grid', '/components/cards']

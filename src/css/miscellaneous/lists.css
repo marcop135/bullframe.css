@@ -4,7 +4,7 @@ menu,
 ol,
 ul,
 dl {
-  margin: 0 0 var(--bf-spacing-xl) 0;
+  margin: 0 0 var(--bf-space-xl) 0;
   padding: 0;
 }
 
@@ -20,7 +20,7 @@ dd {
 
 ul,
 ol {
-  margin-left: var(--bf-spacing-xl);
+  margin-left: var(--bf-space-xl);
 }
 
 nav ol,

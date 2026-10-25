@@ -4,86 +4,102 @@ Generated from `src/css/`. Re-run `npm run docs:api-reference` after changing va
 
 ## CSS Custom Properties
 
-### Neutrals
+### Page
 
-| Variable                | Default            | Notes |
-| ----------------------- | ------------------ | ----- |
-| `--bf-white`            | `rgb(255 255 255)` |       |
-| `--bf-light`            | `rgb(240 240 240)` |       |
-| `--bf-gray-light-extra` | `rgb(233 233 233)` |       |
-| `--bf-gray-light`       | `rgb(204 204 204)` |       |
-| `--bf-gray`             | `rgb(153 153 153)` |       |
-| `--bf-gray-dark`        | `rgb(102 102 102)` |       |
-| `--bf-gray-dark-extra`  | `rgb(51 51 51)`    |       |
-| `--bf-dark`             | `rgb(34 34 34)`    |       |
-| `--bf-dark-extra`       | `rgb(17 17 17)`    |       |
-| `--bf-black`            | `rgb(0 0 0)`       |       |
+| Variable                   | Default            | Notes |
+| -------------------------- | ------------------ | ----- |
+| `--bf-color-bg`            | `rgb(255 255 255)` |       |
+| `--bf-color-text`          | `rgb(34 34 34)`    |       |
+| `--bf-color-text-muted`    | `rgb(118 118 118)` |       |
+| `--bf-color-text-subtle`   | `rgb(102 102 102)` |       |
+| `--bf-color-text-shadow`   | `rgb(34 34 34)`    |       |
+| `--bf-color-contrast`      | `rgb(0 0 0)`       |       |
+| `--bf-color-surface`       | `rgb(233 233 233)` |       |
+| `--bf-color-border`        | `rgb(204 204 204)` |       |
+| `--bf-color-border-strong` | `rgb(102 102 102)` |       |
+| `--bf-color-overlay-bg`    | `rgb(255 255 255)` |       |
+| `--bf-color-caption`       | `rgb(118 118 118)` |       |
 
-### Highlight / mark
+### Primary
 
-| Variable            | Default            | Notes |
-| ------------------- | ------------------ | ----- |
-| `--bf-yellow-light` | `rgb(255 255 153)` |       |
-| `--bf-yellow`       | `rgb(255 255 0)`   |       |
-| `--bf-orange`       | `rgb(255 165 0)`   |       |
+| Variable                          | Default               | Notes |
+| --------------------------------- | --------------------- | ----- |
+| `--bf-color-primary`              | `rgb(0 86 179)`       |       |
+| `--bf-color-primary-hover`        | `rgb(0 65 135)`       |       |
+| `--bf-color-primary-subtle`       | `rgb(190 216 254)`    |       |
+| `--bf-color-primary-shadow-focus` | `rgb(0 65 135 / 35%)` |       |
+| `--bf-color-on-primary`           | `rgb(255 255 255)`    |       |
 
-### Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1)
+### Neutral buttons
 
-| Variable                | Default            | Notes |
-| ----------------------- | ------------------ | ----- |
-| `--bf-blue`             | `rgb(0 86 179)`    |       |
-| `--bf-blue-light`       | `rgb(0 65 135)`    |       |
-| `--bf-blue-light-extra` | `rgb(190 216 254)` |       |
+| Variable                         | Default            | Notes |
+| -------------------------------- | ------------------ | ----- |
+| `--bf-color-neutral`             | `rgb(204 204 204)` |       |
+| `--bf-color-neutral-hover`       | `rgb(184 184 184)` |       |
+| `--bf-color-on-neutral`          | `rgb(34 34 34)`    |       |
+| `--bf-color-button-shadow-focus` | `rgb(0 0 0 / 15%)` |       |
+
+### Form fields and controls
+
+| Variable                        | Default               | Notes |
+| ------------------------------- | --------------------- | ----- |
+| `--bf-color-field-bg`           | `rgb(255 255 255)`    |       |
+| `--bf-color-field-border`       | `rgb(138 138 138)`    |       |
+| `--bf-color-field-shadow-focus` | `rgb(0 86 179 / 25%)` |       |
+| `--bf-color-placeholder`        | `rgb(102 102 102)`    |       |
+| `--bf-color-control-bg`         | `rgb(255 255 255)`    |       |
+| `--bf-color-control-border`     | `rgb(138 138 138)`    |       |
+| `--bf-color-range-track`        | `rgb(233 233 233)`    |       |
+| `--bf-color-progress-track`     | `rgb(204 204 204)`    |       |
+
+### Highlight (mark / ins)
+
+| Variable                      | Default            | Notes |
+| ----------------------------- | ------------------ | ----- |
+| `--bf-color-highlight`        | `rgb(255 255 0)`   |       |
+| `--bf-color-highlight-subtle` | `rgb(255 255 153)` |       |
 
 ### Invalid / error
 
-| Variable   | Default        | Notes |
-| ---------- | -------------- | ----- |
-| `--bf-red` | `rgb(255 0 0)` |       |
+| Variable            | Default        | Notes |
+| ------------------- | -------------- | ----- |
+| `--bf-color-danger` | `rgb(255 0 0)` |       |
+
+### Tables
+
+| Variable                  | Default            | Notes |
+| ------------------------- | ------------------ | ----- |
+| `--bf-color-table-border` | `rgb(138 138 138)` |       |
+| `--bf-color-table-stripe` | `rgb(233 233 233)` |       |
 
 ### Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11)
 
-| Variable                 | Default            | Notes |
-| ------------------------ | ------------------ | ----- |
-| `--bf-focus-ring-color`  | `var(--bf-orange)` |       |
-| `--bf-focus-ring-width`  | `0.2rem`           |       |
-| `--bf-focus-ring-offset` | `0.3rem`           |       |
-
-### Dark-mode surfaces (used by utility-global-dark*.css)
-
-| Variable                  | Default                  | Notes |
-| ------------------------- | ------------------------ | ----- |
-| `--bf-dark-bg`            | `rgb(28 28 28)`          |       |
-| `--bf-dark-link`          | `rgb(77 165 255)`        |       |
-| `--bf-dark-link-hover`    | `rgb(77 165 255)`        |       |
-| `--bf-dark-border-focus`  | `rgb(26 140 255)`        |       |
-| `--bf-dark-shadow-focus`  | `rgb(3 102 214 / 50%)`   |       |
-| `--bf-dark-mark-bg`       | `rgb(230 230 0)`         |       |
-| `--bf-dark-ins-bg`        | `rgb(255 255 200)`       |       |
-| `--bf-dark-button-hover`  | `rgb(184 184 184)`       |       |
-| `--bf-dark-button-shadow` | `rgb(255 255 255 / 45%)` |       |
-| `--bf-dark-invalid`       | `rgb(255 38 38)`         |       |
+| Variable                 | Default          | Notes |
+| ------------------------ | ---------------- | ----- |
+| `--bf-color-focus-ring`  | `rgb(255 165 0)` |       |
+| `--bf-focus-ring-width`  | `0.2rem`         |       |
+| `--bf-focus-ring-offset` | `0.3rem`         |       |
 
 ### Spacing scale + grid gutter
 
-| Variable                   | Default   | Notes |
-| -------------------------- | --------- | ----- |
-| `--bf-spacing-sm`          | `0.25rem` |       |
-| `--bf-spacing-md`          | `0.5rem`  |       |
-| `--bf-spacing-lg`          | `1rem`    |       |
-| `--bf-spacing-xl`          | `2rem`    |       |
-| `--bf-spacing-xxl`         | `3rem`    |       |
-| `--bf-spacing-grid-gutter` | `1.5rem`  |       |
+| Variable            | Default   | Notes |
+| ------------------- | --------- | ----- |
+| `--bf-space-sm`     | `0.25rem` |       |
+| `--bf-space-md`     | `0.5rem`  |       |
+| `--bf-space-lg`     | `1rem`    |       |
+| `--bf-space-xl`     | `2rem`    |       |
+| `--bf-space-xxl`    | `3rem`    |       |
+| `--bf-space-gutter` | `1.5rem`  |       |
 
 ### Type
 
-| Variable                  | Default                                                                                                                                                                                                               | Notes |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| `--bf-font-sans-serif`    | `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'` |       |
-| `--bf-font-serif`         | `Georgia, Times, 'Times New Roman', serif`                                                                                                                                                                            |       |
-| `--bf-font-monospace`     | `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`                                                                                                                                |       |
-| `--bf-body-font-size-rem` | `1.6rem`                                                                                                                                                                                                              |       |
-| `--bf-body-line-height`   | `1.5`                                                                                                                                                                                                                 |       |
+| Variable                | Default                                                                                                                                                                                                               | Notes |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| `--bf-font-sans`        | `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'` |       |
+| `--bf-font-serif`       | `Georgia, Times, 'Times New Roman', serif`                                                                                                                                                                            |       |
+| `--bf-font-mono`        | `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`                                                                                                                                |       |
+| `--bf-font-size-body`   | `1.6rem`                                                                                                                                                                                                              |       |
+| `--bf-line-height-body` | `1.5`                                                                                                                                                                                                                 |       |
 
 ### Breakpoint tokens (documentation / tooling; media queries use literal px below)
 
@@ -95,6 +111,18 @@ Generated from `src/css/`. Re-run `npm run docs:api-reference` after changing va
 | `--bf-breakpoint-lg`  | `992px`  |       |
 | `--bf-breakpoint-xl`  | `1200px` |       |
 | `--bf-breakpoint-xxl` | `1400px` |       |
+
+### Dark scheme hooks
+
+| Variable                           | Default            | Notes                           |
+| ---------------------------------- | ------------------ | ------------------------------- |
+| `--bf-color-link`                  | `rgb(77 165 255)`  | light: --bf-color-primary       |
+| `--bf-color-link-hover`            | `rgb(77 165 255)`  | light: --bf-color-primary-hover |
+| `--bf-color-field-text`            | `rgb(204 204 204)` | light: inherited text colour    |
+| `--bf-color-field-border-focus`    | `rgb(26 140 255)`  | light: --bf-color-primary       |
+| `--bf-color-scrollbar-track`       | `rgb(17 17 17)`    |                                 |
+| `--bf-color-scrollbar-thumb`       | `rgb(97 97 97)`    |                                 |
+| `--bf-color-scrollbar-thumb-hover` | `rgb(115 115 115)` |                                 |
 
 ## Classes
 
@@ -110,4 +138,4 @@ Grouped by source directory under `src/css/`. Click a directory to see the full 
 
 ---
 
-_179 classes, 47 CSS custom properties._
+_179 classes, 60 CSS custom properties._

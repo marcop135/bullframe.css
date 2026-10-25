@@ -7,9 +7,9 @@
 .ex-signin__card {
   width: 100%;
   max-width: 28rem;
-  border: 1px solid var(--bf-gray-light);
+  border: 1px solid var(--bf-color-border);
   border-radius: 0.75rem;
   padding: 2rem;
   box-sizing: border-box;
-  background: var(--bf-white, #fff);
+  background: var(--bf-color-bg);
 }

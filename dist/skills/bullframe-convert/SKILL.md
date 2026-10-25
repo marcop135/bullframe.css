@@ -1,7 +1,7 @@
 ---
 name: bullframe-convert
 description: Convert existing HTML and CSS to Bullframe CSS. Use when migrating a page off Bootstrap, Tailwind, a hand-rolled stylesheet, or an older Bullframe version, and when asked to remove custom CSS in favour of the framework.
-bullframe: '>=6.1.0 <7.0.0'
+bullframe: '>=7.0.0 <8.0.0'
 builds: [bullframe.css, bullframe-classless.css, bullframe-utilities.css]
 requires: [bullframe-core]
 docs: ['/migration', '/utilities', '/api-reference']

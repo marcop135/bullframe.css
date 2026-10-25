@@ -23,12 +23,12 @@ Follow these rules when writing or editing markup.
    that id.
 8. **Label every control.** A `<label for>` bound to the control's `id`. A placeholder is
    never a label.
-9. **Never remove focus rings.** No `outline: none`. Tune `--bf-focus-ring-color`,
+9. **Never remove focus rings.** No `outline: none`. Tune `--bf-color-focus-ring`,
    `--bf-focus-ring-width`, `--bf-focus-ring-offset`.
 10. **Dark mode needs no JavaScript.** Use a `-dark` or `-system-default` build.
 11. **`.bf-btn--primary` is a modifier.** It only works alongside `.bf-btn`.
 12. **The root font-size is 62.5%,** so `1rem` is about `10px`. Custom CSS must size
-    against that, or use the `--bf-spacing-*` tokens.
+    against that, or use the `--bf-space-*` tokens.
 
 Machine-readable class and token list: `node_modules/bullframe.css/dist/skills/api.json`
 or <https://bullframecss.marcopontili.com/api.json>.

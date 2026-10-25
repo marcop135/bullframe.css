@@ -52,7 +52,7 @@ scripts = scripts.replace(
         }
 
         function switchBuild(buildName) {
-          cssLink.href = '/css/' + buildName + '?v=621';
+          cssLink.href = '/css/' + buildName + '?v=700';
 
           const root = document.documentElement;
           if (/dark/.test(buildName) && !/system-default/.test(buildName)) {
@@ -213,7 +213,7 @@ function cleanSpecimens(inner) {
   s = s.replace(/ class="bf-m-b-4" style="max-width: 400px"/g, ' class="bf-m-b-4 bf-width-50"');
 
   s = s.replace(
-    /<div style="border: 1px solid var\(--bf-gray-light\); border-radius: 0\.5rem; padding: 1\.5rem; margin-bottom: 1rem">\s*<h4>Card Title<\/h4>\s*<p>This is a simple card component with border and padding\.<\/p>\s*<button class="bf-btn bf-btn--primary">Action<\/button>\s*<\/div>/,
+    /<div style="border: 1px solid var\(--bf-color-border\); border-radius: 0\.5rem; padding: 1\.5rem; margin-bottom: 1rem">\s*<h4>Card Title<\/h4>\s*<p>This is a simple card component with border and padding\.<\/p>\s*<button class="bf-btn bf-btn--primary">Action<\/button>\s*<\/div>/,
     `<article class="bf-m-b-3 bf-p-3">
               <h4 class="bf-m-t-0">Card Title</h4>
               <p>Simple card composed from spacing utilities and a button. No card class required.</p>
@@ -221,7 +221,7 @@ function cleanSpecimens(inner) {
             </article>`
   );
   s = s.replace(
-    /<div style="border: 1px solid var\(--bf-gray-light\); border-radius: 0\.5rem; padding: 1\.5rem; margin-bottom: 1rem">\s*<h4>Card with Image<\/h4>\s*<img src="\/docs\/demo\/images\/placeholder-img-800x400\.jpg" alt="Card image" style="width: 100%; height: auto; margin-bottom: 1rem; border-radius: 0\.25rem" \/>\s*<p>Card content with an image\.<\/p>\s*<a href="#" class="bf-btn">Learn More<\/a>\s*<\/div>/,
+    /<div style="border: 1px solid var\(--bf-color-border\); border-radius: 0\.5rem; padding: 1\.5rem; margin-bottom: 1rem">\s*<h4>Card with Image<\/h4>\s*<img src="\/docs\/demo\/images\/placeholder-img-800x400\.jpg" alt="Card image" style="width: 100%; height: auto; margin-bottom: 1rem; border-radius: 0\.25rem" \/>\s*<p>Card content with an image\.<\/p>\s*<a href="#" class="bf-btn">Learn More<\/a>\s*<\/div>/,
     `<article class="bf-m-b-3">
               <img class="bf-width-100 bf-m-b-2" src="/kitchen-sink/images/placeholder-img-800x400.jpg" alt="Card image" loading="lazy" />
               <div class="bf-p-3">
@@ -233,7 +233,7 @@ function cleanSpecimens(inner) {
   );
 
   s = s.replace(
-    /&lt;div style="border: 1px solid var\(--bf-gray-light\); border-radius: 0\.5rem; padding: 1\.5rem;"&gt;\s*&lt;h4&gt;Card Title&lt;\/h4&gt;\s*&lt;p&gt;Card content goes here\.&lt;\/p&gt;\s*&lt;button class="bf-btn bf-btn--primary"&gt;Action&lt;\/button&gt;\s*&lt;\/div&gt;/,
+    /&lt;div style="border: 1px solid var\(--bf-color-border\); border-radius: 0\.5rem; padding: 1\.5rem;"&gt;\s*&lt;h4&gt;Card Title&lt;\/h4&gt;\s*&lt;p&gt;Card content goes here\.&lt;\/p&gt;\s*&lt;button class="bf-btn bf-btn--primary"&gt;Action&lt;\/button&gt;\s*&lt;\/div&gt;/,
     `&lt;article class="bf-m-b-3 bf-p-3"&gt;
   &lt;h4 class="bf-m-t-0"&gt;Card Title&lt;/h4&gt;
   &lt;p&gt;Card content goes here.&lt;/p&gt;
@@ -408,7 +408,7 @@ const gridCellStyle = `    <style>
       }
       .demo-hero,
       .demo-panel {
-        border: 1px solid var(--bf-gray-light);
+        border: 1px solid var(--bf-color-border);
         border-radius: 1rem;
         box-shadow: 0 1rem 2.5rem -2rem rgb(0 0 0 / 0.45);
         padding: 1.5rem;
@@ -422,7 +422,7 @@ const gridCellStyle = `    <style>
         text-transform: uppercase;
       }
       .demo-meta {
-        border-top: 1px solid var(--bf-gray-light);
+        border-top: 1px solid var(--bf-color-border);
         margin-top: 1.5rem;
         padding-top: 1.25rem;
       }
@@ -435,7 +435,7 @@ const gridCellStyle = `    <style>
       .demo-meta dd {
         margin-left: 0;
         margin-bottom: 0.75rem;
-        color: var(--bf-gray-dark);
+        color: var(--bf-color-text-subtle);
       }
       .demo-meta code {
         white-space: nowrap;
@@ -444,11 +444,11 @@ const gridCellStyle = `    <style>
         margin-bottom: 0;
       }
       .demo-footer {
-        margin-top: calc(var(--bf-spacing-xxl) * 2);
+        margin-top: calc(var(--bf-space-xxl) * 2);
       }
       .demo-build {
         padding-bottom: 1rem;
-        border-bottom: 1px solid var(--bf-gray-light);
+        border-bottom: 1px solid var(--bf-color-border);
       }
       .demo-build label {
         letter-spacing: 0.04em;
@@ -456,7 +456,7 @@ const gridCellStyle = `    <style>
         font-size: 1.2rem;
       }
       .demo-build-file {
-        color: var(--bf-gray-dark);
+        color: var(--bf-color-text-subtle);
       }
       .demo-build-file code {
         font-size: 1.1rem;
@@ -478,30 +478,30 @@ const gridCellStyle = `    <style>
       #main-content > .bf-row + .bf-row,
       #main-content > h2 + .bf-row,
       #main-content > .bf-row + h2 {
-        margin-top: var(--bf-spacing-xxl);
+        margin-top: var(--bf-space-xxl);
       }
       #main-content h2 {
-        margin-top: var(--bf-spacing-xxl);
-        margin-bottom: var(--bf-spacing-lg);
+        margin-top: var(--bf-space-xxl);
+        margin-bottom: var(--bf-space-lg);
       }
       #main-content h2:first-child {
         margin-top: 0;
       }
       #main-content h3 {
-        margin-top: var(--bf-spacing-xl);
-        margin-bottom: var(--bf-spacing-md);
+        margin-top: var(--bf-space-xl);
+        margin-bottom: var(--bf-space-md);
       }
       #main-content h4 {
-        margin-top: var(--bf-spacing-lg);
-        margin-bottom: var(--bf-spacing-md);
+        margin-top: var(--bf-space-lg);
+        margin-bottom: var(--bf-space-md);
       }
       #main-content fieldset {
-        margin-bottom: var(--bf-spacing-xl);
+        margin-bottom: var(--bf-space-xl);
       }
       #main-content form label {
         display: block;
-        margin-top: var(--bf-spacing-xl);
-        margin-bottom: var(--bf-spacing-md);
+        margin-top: var(--bf-space-xl);
+        margin-bottom: var(--bf-space-md);
       }
       #main-content form label:first-child,
       #main-content form legend + label,
@@ -517,21 +517,21 @@ const gridCellStyle = `    <style>
       #main-content form input:not([type="radio"]):not([type="checkbox"]):not([type="image"]):not([type="submit"]):not([type="reset"]):not([type="button"]),
       #main-content form select,
       #main-content form textarea {
-        margin-bottom: var(--bf-spacing-lg);
+        margin-bottom: var(--bf-space-lg);
       }
       #main-content form fieldset > div > div {
-        margin-bottom: var(--bf-spacing-md);
+        margin-bottom: var(--bf-space-md);
       }
       html[data-demo-theme='dark'] .demo-hero,
       html[data-demo-theme='dark'] .demo-panel {
         background-color: rgb(34 34 34 / 0.72);
-        border-color: var(--bf-gray-dark);
+        border-color: var(--bf-color-border-strong);
       }
       @media (prefers-color-scheme: dark) {
         html:not([data-demo-theme='light']) .demo-hero,
         html:not([data-demo-theme='light']) .demo-panel {
           background-color: rgb(34 34 34 / 0.72);
-          border-color: var(--bf-gray-dark);
+          border-color: var(--bf-color-border-strong);
         }
       }
       .demo-nav-mobile {
@@ -566,7 +566,7 @@ function headCommon(title, { gridBorders = false } = {}) {
     <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/kitchen-sink/icons/apple-touch-icon.png">
     <link rel="shortcut icon" href="/kitchen-sink/icons/favicon.ico">
-    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v=621">
+    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v=700">
 ${extras ? extras + '\n' : ''}  </head>`;
 }
 
@@ -924,7 +924,8 @@ for (const [name, body] of Object.entries(files)) {
   if (out.includes('h2--section')) issues.push('h2--section remains');
   if (out.includes('col-wrapper')) issues.push('col-wrapper remains');
   if (/style="[^"]+"/.test(withoutBrandStyle)) issues.push('inline style remains');
-  if (out.includes('--bf-blue: #f95c1f')) issues.push('orange brand override still present');
+  if (out.includes('--bf-color-primary: #f95c1f'))
+    issues.push('orange brand override still present');
   if (!out.includes('id="build-selector"')) issues.push('missing build selector');
   if (name === 'b-sidebar.html') {
     if (/class="bf-container bf-container--fluid/.test(out) || out.includes('demo-shell')) {

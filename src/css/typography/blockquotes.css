@@ -1,7 +1,7 @@
 /* Blockquote and citation. */
 
 blockquote {
-  margin: 0 0 var(--bf-spacing-xl);
+  margin: 0 0 var(--bf-space-xl);
   padding-left: 0;
   font-style: italic;
 }
@@ -11,7 +11,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: var(--bf-gray);
+  color: var(--bf-color-text-muted);
   display: block;
 }
 

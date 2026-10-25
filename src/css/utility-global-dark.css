@@ -8,9 +8,9 @@ button.bf-disabled,
 [type='reset'].bf-disabled,
 [type='submit'].bf-disabled,
 .bf-btn.bf-disabled {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-neutral);
 }
 
 .bf-btn--primary.bf-disabled {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }

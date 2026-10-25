@@ -6,8 +6,8 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: var(--bf-spacing-grid-gutter);
-  padding-right: var(--bf-spacing-grid-gutter);
+  padding-left: var(--bf-space-gutter);
+  padding-right: var(--bf-space-gutter);
 }
 
 .bf-container {
@@ -17,15 +17,15 @@
 .bf-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--bf-spacing-grid-gutter));
-  margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
+  margin-left: calc(-1 * var(--bf-space-gutter));
+  margin-right: calc(-1 * var(--bf-space-gutter));
 }
 
 [class^='bf-col-'] {
   position: relative;
   min-height: 1px;
-  padding-left: var(--bf-spacing-grid-gutter);
-  padding-right: var(--bf-spacing-grid-gutter);
+  padding-left: var(--bf-space-gutter);
+  padding-right: var(--bf-space-gutter);
   flex-grow: 0;
   flex-shrink: 0;
 }

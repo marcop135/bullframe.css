@@ -21,8 +21,8 @@
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px var(--bf-dark) !important;
-  text-shadow: 0 0 0.2rem var(--bf-dark) !important;
+  text-shadow: 0 0 2px var(--bf-color-text-shadow) !important;
+  text-shadow: 0 0 0.2rem var(--bf-color-text-shadow) !important;
 }
 
 .bf-t-italic {
@@ -95,7 +95,7 @@
 }
 
 .bf-font-sans-serif {
-  font-family: var(--bf-font-sans-serif) !important;
+  font-family: var(--bf-font-sans) !important;
 }
 
 .bf-font-serif {
@@ -103,7 +103,7 @@
 }
 
 .bf-font-monospace {
-  font-family: var(--bf-font-monospace) !important;
+  font-family: var(--bf-font-mono) !important;
 }
 
 /* Opt-in stacks from Modern Font Stacks (https://modernfontstacks.com/). */
@@ -185,7 +185,7 @@
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: var(--bf-spacing-lg) !important;
+  margin-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-h1 {

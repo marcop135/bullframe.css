@@ -92,7 +92,7 @@ Only the `0` step clears every side.
 The spacing utilities use the following scale:
 
 - `0` = `0`
-- `1` = `--bf-spacing-md` (0.5rem)
-- `2` = `--bf-spacing-lg` (1rem)
-- `3` = `--bf-spacing-xl` (2rem)
-- `4` = `--bf-spacing-xxl` (3rem)
+- `1` = `--bf-space-md` (0.5rem)
+- `2` = `--bf-space-lg` (1rem)
+- `3` = `--bf-space-xl` (2rem)
+- `4` = `--bf-space-xxl` (3rem)

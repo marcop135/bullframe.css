@@ -1,6 +1,6 @@
 {
   "name": "bullframe.css",
-  "version": "6.4.2",
+  "version": "7.0.0",
   "docs": "https://bullframecss.marcopontili.com",
   "builds": [
     {
@@ -62,93 +62,173 @@
   ],
   "tokens": [
     {
-      "name": "--bf-white",
+      "name": "--bf-color-bg",
       "value": "rgb(255 255 255)",
-      "section": "Neutrals"
+      "section": "Page"
     },
     {
-      "name": "--bf-light",
-      "value": "rgb(240 240 240)",
-      "section": "Neutrals"
-    },
-    {
-      "name": "--bf-gray-light-extra",
-      "value": "rgb(233 233 233)",
-      "section": "Neutrals"
-    },
-    {
-      "name": "--bf-gray-light",
-      "value": "rgb(204 204 204)",
-      "section": "Neutrals"
-    },
-    {
-      "name": "--bf-gray",
-      "value": "rgb(153 153 153)",
-      "section": "Neutrals"
-    },
-    {
-      "name": "--bf-gray-dark",
-      "value": "rgb(102 102 102)",
-      "section": "Neutrals"
-    },
-    {
-      "name": "--bf-gray-dark-extra",
-      "value": "rgb(51 51 51)",
-      "section": "Neutrals"
-    },
-    {
-      "name": "--bf-dark",
+      "name": "--bf-color-text",
       "value": "rgb(34 34 34)",
-      "section": "Neutrals"
+      "section": "Page"
     },
     {
-      "name": "--bf-dark-extra",
-      "value": "rgb(17 17 17)",
-      "section": "Neutrals"
+      "name": "--bf-color-text-muted",
+      "value": "rgb(118 118 118)",
+      "section": "Page"
     },
     {
-      "name": "--bf-black",
+      "name": "--bf-color-text-subtle",
+      "value": "rgb(102 102 102)",
+      "section": "Page"
+    },
+    {
+      "name": "--bf-color-text-shadow",
+      "value": "rgb(34 34 34)",
+      "section": "Page"
+    },
+    {
+      "name": "--bf-color-contrast",
       "value": "rgb(0 0 0)",
-      "section": "Neutrals"
+      "section": "Page"
     },
     {
-      "name": "--bf-yellow-light",
-      "value": "rgb(255 255 153)",
-      "section": "Highlight / mark"
+      "name": "--bf-color-surface",
+      "value": "rgb(233 233 233)",
+      "section": "Page"
     },
     {
-      "name": "--bf-yellow",
-      "value": "rgb(255 255 0)",
-      "section": "Highlight / mark"
+      "name": "--bf-color-border",
+      "value": "rgb(204 204 204)",
+      "section": "Page"
     },
     {
-      "name": "--bf-orange",
-      "value": "rgb(255 165 0)",
-      "section": "Highlight / mark"
+      "name": "--bf-color-border-strong",
+      "value": "rgb(102 102 102)",
+      "section": "Page"
     },
     {
-      "name": "--bf-blue",
+      "name": "--bf-color-overlay-bg",
+      "value": "rgb(255 255 255)",
+      "section": "Page"
+    },
+    {
+      "name": "--bf-color-caption",
+      "value": "rgb(118 118 118)",
+      "section": "Page"
+    },
+    {
+      "name": "--bf-color-primary",
       "value": "rgb(0 86 179)",
-      "section": "Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1)"
+      "section": "Primary"
     },
     {
-      "name": "--bf-blue-light",
+      "name": "--bf-color-primary-hover",
       "value": "rgb(0 65 135)",
-      "section": "Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1)"
+      "section": "Primary"
     },
     {
-      "name": "--bf-blue-light-extra",
+      "name": "--bf-color-primary-subtle",
       "value": "rgb(190 216 254)",
-      "section": "Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1)"
+      "section": "Primary"
     },
     {
-      "name": "--bf-red",
+      "name": "--bf-color-primary-shadow-focus",
+      "value": "rgb(0 65 135 / 35%)",
+      "section": "Primary"
+    },
+    {
+      "name": "--bf-color-on-primary",
+      "value": "rgb(255 255 255)",
+      "section": "Primary"
+    },
+    {
+      "name": "--bf-color-neutral",
+      "value": "rgb(204 204 204)",
+      "section": "Neutral buttons"
+    },
+    {
+      "name": "--bf-color-neutral-hover",
+      "value": "rgb(184 184 184)",
+      "section": "Neutral buttons"
+    },
+    {
+      "name": "--bf-color-on-neutral",
+      "value": "rgb(34 34 34)",
+      "section": "Neutral buttons"
+    },
+    {
+      "name": "--bf-color-button-shadow-focus",
+      "value": "rgb(0 0 0 / 15%)",
+      "section": "Neutral buttons"
+    },
+    {
+      "name": "--bf-color-field-bg",
+      "value": "rgb(255 255 255)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-field-border",
+      "value": "rgb(138 138 138)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-field-shadow-focus",
+      "value": "rgb(0 86 179 / 25%)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-placeholder",
+      "value": "rgb(102 102 102)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-control-bg",
+      "value": "rgb(255 255 255)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-control-border",
+      "value": "rgb(138 138 138)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-range-track",
+      "value": "rgb(233 233 233)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-progress-track",
+      "value": "rgb(204 204 204)",
+      "section": "Form fields and controls"
+    },
+    {
+      "name": "--bf-color-highlight",
+      "value": "rgb(255 255 0)",
+      "section": "Highlight (mark / ins)"
+    },
+    {
+      "name": "--bf-color-highlight-subtle",
+      "value": "rgb(255 255 153)",
+      "section": "Highlight (mark / ins)"
+    },
+    {
+      "name": "--bf-color-danger",
       "value": "rgb(255 0 0)",
       "section": "Invalid / error"
     },
     {
-      "name": "--bf-focus-ring-color",
-      "value": "var(--bf-orange)",
+      "name": "--bf-color-table-border",
+      "value": "rgb(138 138 138)",
+      "section": "Tables"
+    },
+    {
+      "name": "--bf-color-table-stripe",
+      "value": "rgb(233 233 233)",
+      "section": "Tables"
+    },
+    {
+      "name": "--bf-color-focus-ring",
+      "value": "rgb(255 165 0)",
       "section": "Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11)"
     },
     {
@@ -162,87 +242,37 @@
       "section": "Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11)"
     },
     {
-      "name": "--bf-dark-bg",
-      "value": "rgb(28 28 28)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-link",
-      "value": "rgb(77 165 255)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-link-hover",
-      "value": "rgb(77 165 255)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-border-focus",
-      "value": "rgb(26 140 255)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-shadow-focus",
-      "value": "rgb(3 102 214 / 50%)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-mark-bg",
-      "value": "rgb(230 230 0)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-ins-bg",
-      "value": "rgb(255 255 200)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-button-hover",
-      "value": "rgb(184 184 184)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-button-shadow",
-      "value": "rgb(255 255 255 / 45%)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-dark-invalid",
-      "value": "rgb(255 38 38)",
-      "section": "Dark-mode surfaces (used by utility-global-dark*.css)"
-    },
-    {
-      "name": "--bf-spacing-sm",
+      "name": "--bf-space-sm",
       "value": "0.25rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-spacing-md",
+      "name": "--bf-space-md",
       "value": "0.5rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-spacing-lg",
+      "name": "--bf-space-lg",
       "value": "1rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-spacing-xl",
+      "name": "--bf-space-xl",
       "value": "2rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-spacing-xxl",
+      "name": "--bf-space-xxl",
       "value": "3rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-spacing-grid-gutter",
+      "name": "--bf-space-gutter",
       "value": "1.5rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-font-sans-serif",
+      "name": "--bf-font-sans",
       "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
       "section": "Type"
     },
@@ -252,17 +282,17 @@
       "section": "Type"
     },
     {
-      "name": "--bf-font-monospace",
+      "name": "--bf-font-mono",
       "value": "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
       "section": "Type"
     },
     {
-      "name": "--bf-body-font-size-rem",
+      "name": "--bf-font-size-body",
       "value": "1.6rem",
       "section": "Type"
     },
     {
-      "name": "--bf-body-line-height",
+      "name": "--bf-line-height-body",
       "value": "1.5",
       "section": "Type"
     },
@@ -295,6 +325,45 @@
       "name": "--bf-breakpoint-xxl",
       "value": "1400px",
       "section": "Breakpoint tokens (documentation / tooling; media queries use literal px below)"
+    },
+    {
+      "name": "--bf-color-link",
+      "value": "rgb(77 165 255)",
+      "section": "Dark scheme hooks",
+      "note": "light: --bf-color-primary"
+    },
+    {
+      "name": "--bf-color-link-hover",
+      "value": "rgb(77 165 255)",
+      "section": "Dark scheme hooks",
+      "note": "light: --bf-color-primary-hover"
+    },
+    {
+      "name": "--bf-color-field-text",
+      "value": "rgb(204 204 204)",
+      "section": "Dark scheme hooks",
+      "note": "light: inherited text colour"
+    },
+    {
+      "name": "--bf-color-field-border-focus",
+      "value": "rgb(26 140 255)",
+      "section": "Dark scheme hooks",
+      "note": "light: --bf-color-primary"
+    },
+    {
+      "name": "--bf-color-scrollbar-track",
+      "value": "rgb(17 17 17)",
+      "section": "Dark scheme hooks"
+    },
+    {
+      "name": "--bf-color-scrollbar-thumb",
+      "value": "rgb(97 97 97)",
+      "section": "Dark scheme hooks"
+    },
+    {
+      "name": "--bf-color-scrollbar-thumb-hover",
+      "value": "rgb(115 115 115)",
+      "section": "Dark scheme hooks"
     }
   ],
   "classes": [
@@ -1017,7 +1086,7 @@
   ],
   "counts": {
     "builds": 7,
-    "tokens": 47,
+    "tokens": 60,
     "classes": 179
   }
 }

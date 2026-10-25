@@ -1,7 +1,7 @@
 ---
 name: bullframe-landing-page
 description: Build a marketing or product landing page with Bullframe CSS. Use for a hero, feature row, pricing block, call to action, or any multi-section marketing page.
-bullframe: '>=6.1.0 <7.0.0'
+bullframe: '>=7.0.0 <8.0.0'
 builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css]
 requires: [bullframe-core]
 docs: ['/layout', '/utilities/grid', '/buttons', '/components/cards']
@@ -41,7 +41,7 @@ Assume a class-based light build when nothing is said, and state that in one lin
    table, not a grid of divs.
 7. Decorative images take `alt=""`. Meaningful ones take real alt text.
 8. Keep custom CSS out of the page. If the design needs brand colour, override
-   `--bf-blue` and `--bf-blue-light` in a `<style>` block or project stylesheet.
+   `--bf-color-primary` and `--bf-color-primary-hover` in a `<style>` block or project stylesheet.
 
 ## Recipe
 

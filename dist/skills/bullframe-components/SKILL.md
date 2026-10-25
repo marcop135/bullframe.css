@@ -1,7 +1,7 @@
 ---
 name: bullframe-components
 description: Compose navigation, cards and native dialog modals with Bullframe CSS. Use when building a header nav, breadcrumb, pagination, content or media cards, or a confirm dialog without a component library.
-bullframe: '>=6.1.0 <7.0.0'
+bullframe: '>=7.0.0 <8.0.0'
 builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css]
 requires: [bullframe-core]
 docs: ['/components/navigation', '/components/cards', '/components/modals', '/components/button-patterns']

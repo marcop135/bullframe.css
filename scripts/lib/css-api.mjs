@@ -64,9 +64,18 @@ export function extractVariables(cssText) {
   // Join continuation lines so multi-line declarations become single logical lines.
   const logicalLines = [];
   let buffer = '';
+  let comment = '';
   for (const rawLine of lines) {
-    const line = rawLine.trim();
+    let line = rawLine.trim();
     if (!line) continue;
+
+    // Fold a multi-line comment into one line so it cannot swallow the next declaration.
+    if (comment || (line.startsWith('/*') && !line.includes('*/'))) {
+      comment = comment ? `${comment} ${line.replace(/^\*\s?/, '')}` : line;
+      if (!line.includes('*/')) continue;
+      line = comment;
+      comment = '';
+    }
 
     if (line.startsWith('/*') && line.endsWith('*/')) {
       if (buffer) {
@@ -288,7 +297,16 @@ export function readCssApi({ root = cssRoot } = {}) {
   }
 
   const classGroups = assignClassesToDirs(fileScores, root);
-  const varGroups = groupVars(extractVariables(variablesCss));
+  // Tokens the dark sheets declare that light leaves undeclared (hooks read
+  // with a light fallback, scrollbar colours) are public too.
+  const lightVars = extractVariables(variablesCss);
+  const lightNames = new Set(lightVars.map((v) => v.name));
+  const darkOnly = extractVariables(
+    readFileSync(path.join(root, '_utility-global-dark-elements.css'), 'utf8')
+  )
+    .filter((v) => !lightNames.has(v.name))
+    .map((v) => ({ ...v, section: 'Dark scheme hooks' }));
+  const varGroups = groupVars([...lightVars, ...darkOnly]);
 
   return {
     version: pkg.version,

@@ -1,7 +1,7 @@
 <div align="center">
 
-![Bullframe CSS: semantic by default, any stack. The bull mascot inside nested body, main and article frames](.github/brand/readme.png#gh-light-mode-only)
-![Bullframe CSS: semantic by default, any stack. The bull mascot inside nested body, main and article frames](.github/brand/readme-dark.png#gh-dark-mode-only)
+[![Bullframe CSS: semantic by default, any stack. The bull mascot inside nested body, main and article frames](.github/brand/readme.png#gh-light-mode-only)](https://bullframecss.marcopontili.com)
+[![Bullframe CSS: semantic by default, any stack. The bull mascot inside nested body, main and article frames](.github/brand/readme-dark.png#gh-dark-mode-only)](https://bullframecss.marcopontili.com)
 
 # Bullframe CSS
 
@@ -10,9 +10,11 @@ Semantic by default. Any stack.
 </div>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="npm version"></a>
-  <a href="https://github.com/marcop135/bullframe.css/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=main&style=flat-square" alt="CI status"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://www.npmjs.com/package/bullframe.css"><img src="https://img.shields.io/npm/v/bullframe.css.svg?style=flat-square" alt="Latest version on npm"></a>
+  <a href="https://github.com/marcop135/bullframe.css/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/marcop135/bullframe.css/ci.yml?branch=main&style=flat-square" alt="CI build status on main"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/marcop135/bullframe.css.svg?style=flat-square" alt="License: MIT"></a>
+  <a href="https://www.jsdelivr.com/package/npm/bullframe.css"><img src="https://img.shields.io/jsdelivr/npm/hm/bullframe.css?style=flat-square" alt="Monthly requests on jsDelivr"></a>
+  <a href="https://bullframecss.marcopontili.com"><img src="https://img.shields.io/badge/docs-bullframecss.marcopontili.com-blue?style=flat-square" alt="Documentation site"></a>
 </p>
 
 ---
@@ -134,10 +136,10 @@ See [CONTRIBUTING.md](./.github/CONTRIBUTING.md).
 
 Bugs → [issues](https://github.com/marcop135/bullframe.css/issues).
 
-## License
-
-[MIT](./LICENSE)
-
 ## Author
 
 [Marco Pontili](https://marcopontili.com)
+
+## License
+
+[MIT](./LICENSE)

@@ -2,7 +2,11 @@
 title: Migration Guide (v5 to v6)
 ---
 
+<!-- bf-absent: --bf-blue, --bf-font-sans-serif, --bf-blue-light, --bf-spacing-sm, --bf-spacing-md, --bf-spacing-lg, --bf-body-font-size-rem, --bf-body-line-height, --bf-spacing-grid-gutter, --bf-focus-ring-color -->
+
 # Migration Guide: v5 to v6
+
+Coding against v7? Finish this guide, then follow [v6 to v7](/migration-v7): v7 renames the tokens below.
 
 Bullframe CSS v6 is a major rewrite. The framework has been migrated from **Sass/SCSS to native CSS with PostCSS**. This guide covers everything you need to update.
 

@@ -52,7 +52,7 @@ scripts = scripts.replace(
         }
 
         function switchBuild(buildName) {
-          cssLink.href = '/css/' + buildName + '?v=621';
+          cssLink.href = '/css/' + buildName + '?v=700';
 
           const root = document.documentElement;
           if (/dark/.test(buildName) && !/system-default/.test(buildName)) {
@@ -444,7 +444,7 @@ const gridCellStyle = `    <style>
         margin-bottom: 0;
       }
       .demo-footer {
-        margin-top: calc(var(--bf-spacing-xxl) * 2);
+        margin-top: calc(var(--bf-space-xxl) * 2);
       }
       .demo-build {
         padding-bottom: 1rem;
@@ -478,30 +478,30 @@ const gridCellStyle = `    <style>
       #main-content > .bf-row + .bf-row,
       #main-content > h2 + .bf-row,
       #main-content > .bf-row + h2 {
-        margin-top: var(--bf-spacing-xxl);
+        margin-top: var(--bf-space-xxl);
       }
       #main-content h2 {
-        margin-top: var(--bf-spacing-xxl);
-        margin-bottom: var(--bf-spacing-lg);
+        margin-top: var(--bf-space-xxl);
+        margin-bottom: var(--bf-space-lg);
       }
       #main-content h2:first-child {
         margin-top: 0;
       }
       #main-content h3 {
-        margin-top: var(--bf-spacing-xl);
-        margin-bottom: var(--bf-spacing-md);
+        margin-top: var(--bf-space-xl);
+        margin-bottom: var(--bf-space-md);
       }
       #main-content h4 {
-        margin-top: var(--bf-spacing-lg);
-        margin-bottom: var(--bf-spacing-md);
+        margin-top: var(--bf-space-lg);
+        margin-bottom: var(--bf-space-md);
       }
       #main-content fieldset {
-        margin-bottom: var(--bf-spacing-xl);
+        margin-bottom: var(--bf-space-xl);
       }
       #main-content form label {
         display: block;
-        margin-top: var(--bf-spacing-xl);
-        margin-bottom: var(--bf-spacing-md);
+        margin-top: var(--bf-space-xl);
+        margin-bottom: var(--bf-space-md);
       }
       #main-content form label:first-child,
       #main-content form legend + label,
@@ -517,10 +517,10 @@ const gridCellStyle = `    <style>
       #main-content form input:not([type="radio"]):not([type="checkbox"]):not([type="image"]):not([type="submit"]):not([type="reset"]):not([type="button"]),
       #main-content form select,
       #main-content form textarea {
-        margin-bottom: var(--bf-spacing-lg);
+        margin-bottom: var(--bf-space-lg);
       }
       #main-content form fieldset > div > div {
-        margin-bottom: var(--bf-spacing-md);
+        margin-bottom: var(--bf-space-md);
       }
       html[data-demo-theme='dark'] .demo-hero,
       html[data-demo-theme='dark'] .demo-panel {
@@ -566,7 +566,7 @@ function headCommon(title, { gridBorders = false } = {}) {
     <link rel="icon" type="image/png" sizes="32x32" href="/kitchen-sink/icons/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/kitchen-sink/icons/apple-touch-icon.png">
     <link rel="shortcut icon" href="/kitchen-sink/icons/favicon.ico">
-    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v=621">
+    <link id="bullframe-css" rel="stylesheet" href="/css/bullframe-system-default.min.css?v=700">
 ${extras ? extras + '\n' : ''}  </head>`;
 }
 

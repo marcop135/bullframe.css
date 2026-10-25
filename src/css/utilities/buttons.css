@@ -4,7 +4,7 @@
   display: inline-block;
   cursor: pointer;
   color: var(--bf-color-on-neutral);
-  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -13,7 +13,7 @@
   overflow: visible;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
-  border-radius: var(--bf-spacing-sm);
+  border-radius: var(--bf-space-sm);
 
   border: 0;
   background-image: none;
@@ -21,7 +21,7 @@
   transition: all 0.2s;
 }
 
-.bf-btn:focus {
+.bf-btn:focus:not(:focus-visible) {
   outline: 0;
 }
 
@@ -35,7 +35,7 @@
 
 .bf-btn:active,
 .bf-btn:focus {
-  box-shadow: 0 0 0 3px var(--bf-color-button-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 /* Primary: --bf-color-on-primary on --bf-color-primary (WCAG AA 4.5:1). */
@@ -53,7 +53,7 @@
 
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px var(--bf-color-primary-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 
 :where(
@@ -69,7 +69,6 @@
   box-shadow: none !important;
   opacity: 0.5 !important;
   background-color: var(--bf-color-neutral);
-  outline: none !important;
 }
 
 @media (forced-colors: active) {

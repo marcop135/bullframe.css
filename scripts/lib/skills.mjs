@@ -141,7 +141,7 @@ export function collectBfRefs(text) {
   const classes = new Set();
   const tokens = new Set();
 
-  // A trailing hyphen means a prose wildcard (`.bf-m-*`, `--bf-spacing-*`), not a name.
+  // A trailing hyphen means a prose wildcard (`.bf-m-*`, `--bf-space-*`), not a name.
   const isWildcard = (name) => name.endsWith('-');
 
   for (const match of withoutDirectives.matchAll(/--bf-[a-z0-9-]+/g)) {

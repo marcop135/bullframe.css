@@ -19,7 +19,7 @@
 ) {
   background-color: var(--bf-color-field-bg);
   border: 1px solid var(--bf-color-field-border);
-  padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
+  padding: var(--bf-space-md) calc(var(--bf-space-lg) * 0.75);
 }
 
 :where(
@@ -61,7 +61,7 @@
     background-color 0.2s,
     box-shadow 0.2s;
   border-color: var(--bf-color-field-border-focus, var(--bf-color-primary));
-  box-shadow: 0 0 0 3px var(--bf-color-field-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus);
 }
 
 /* Radio / checkbox keep the primary ring in every scheme. */
@@ -77,7 +77,7 @@
 
 :where(button, [type='button'], [type='reset'], [type='submit']) {
   color: var(--bf-color-on-neutral);
-  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
   background: var(--bf-color-neutral);
   transition:
     color 0.2s,
@@ -99,7 +99,7 @@
 :where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
     [aria-disabled='true']
   ) {
-  box-shadow: 0 0 0 3px var(--bf-color-button-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 /* Disabled / aria-disabled / fieldset[disabled]. */
@@ -142,6 +142,5 @@
   pointer-events: none !important;
   user-select: none !important;
   box-shadow: none !important;
-  outline: none !important;
   opacity: 0.5 !important;
 }

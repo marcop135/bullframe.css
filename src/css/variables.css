@@ -1,11 +1,13 @@
 /* Design tokens (--bf-*). Shared by every build variant.
- * Override on :root (or a scope) to theme without rebuilding. */
+ * Override on :root (or a scope) to theme without rebuilding. :where() keeps
+ * these at zero specificity, so the dark :root block and your overrides win
+ * whatever the load order (e.g. bullframe-utilities.css after a dark build). */
 
-:root {
+:where(:root) {
   /* Page */
   --bf-color-bg: rgb(255 255 255);
   --bf-color-text: rgb(34 34 34);
-  --bf-color-text-muted: rgb(153 153 153);
+  --bf-color-text-muted: rgb(118 118 118);
   --bf-color-text-subtle: rgb(102 102 102);
   --bf-color-text-shadow: rgb(34 34 34);
   --bf-color-contrast: rgb(0 0 0);
@@ -13,30 +15,31 @@
   --bf-color-border: rgb(204 204 204);
   --bf-color-border-strong: rgb(102 102 102);
   --bf-color-overlay-bg: rgb(255 255 255);
-  --bf-color-caption: rgb(153 153 153);
+  --bf-color-caption: rgb(118 118 118);
 
-  /* Primary: WCAG AA on white (links 4.5:1) and on-primary text (4.5:1).
-   * Links and focused fields fall back to these unless --bf-color-link,
+  /* Primary */
+  /* WCAG AA on white (links 4.5:1) and on-primary text (4.5:1). Links and
+   * focused fields fall back to these unless --bf-color-link,
    * --bf-color-link-hover or --bf-color-field-border-focus is set. */
   --bf-color-primary: rgb(0 86 179);
   --bf-color-primary-hover: rgb(0 65 135);
   --bf-color-primary-subtle: rgb(190 216 254);
-  --bf-color-primary-focus-shadow: rgb(0 65 135 / 35%);
+  --bf-color-primary-shadow-focus: rgb(0 65 135 / 35%);
   --bf-color-on-primary: rgb(255 255 255);
 
   /* Neutral buttons */
   --bf-color-neutral: rgb(204 204 204);
   --bf-color-neutral-hover: rgb(184 184 184);
   --bf-color-on-neutral: rgb(34 34 34);
-  --bf-color-button-focus-shadow: rgb(0 0 0 / 15%);
+  --bf-color-button-shadow-focus: rgb(0 0 0 / 15%);
 
   /* Form fields and controls */
   --bf-color-field-bg: rgb(255 255 255);
-  --bf-color-field-border: rgb(153 153 153);
-  --bf-color-field-focus-shadow: rgb(0 86 179 / 25%);
+  --bf-color-field-border: rgb(138 138 138);
+  --bf-color-field-shadow-focus: rgb(0 86 179 / 25%);
   --bf-color-placeholder: rgb(102 102 102);
   --bf-color-control-bg: rgb(255 255 255);
-  --bf-color-control-border: rgb(153 153 153);
+  --bf-color-control-border: rgb(138 138 138);
   --bf-color-range-track: rgb(233 233 233);
   --bf-color-progress-track: rgb(204 204 204);
 
@@ -48,32 +51,32 @@
   --bf-color-danger: rgb(255 0 0);
 
   /* Tables */
-  --bf-color-table-border: rgb(153 153 153);
+  --bf-color-table-border: rgb(138 138 138);
   --bf-color-table-stripe: rgb(233 233 233);
 
   /* Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11) */
-  --bf-focus-ring-color: rgb(255 165 0);
+  --bf-color-focus-ring: rgb(255 165 0);
   --bf-focus-ring-width: 0.2rem;
   --bf-focus-ring-offset: 0.3rem;
 
   /* Spacing scale + grid gutter */
-  --bf-spacing-sm: 0.25rem;
-  --bf-spacing-md: 0.5rem;
-  --bf-spacing-lg: 1rem;
-  --bf-spacing-xl: 2rem;
-  --bf-spacing-xxl: 3rem;
-  --bf-spacing-grid-gutter: 1.5rem;
+  --bf-space-sm: 0.25rem;
+  --bf-space-md: 0.5rem;
+  --bf-space-lg: 1rem;
+  --bf-space-xl: 2rem;
+  --bf-space-xxl: 3rem;
+  --bf-space-gutter: 1.5rem;
 
   /* Type */
-  --bf-font-sans-serif:
+  --bf-font-sans:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-monospace:
+  --bf-font-mono:
     SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --bf-body-font-size-rem: 1.6rem;
-  --bf-body-line-height: 1.5;
+  --bf-font-size-body: 1.6rem;
+  --bf-line-height-body: 1.5;
 
   /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;

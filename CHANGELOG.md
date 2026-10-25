@@ -5,11 +5,32 @@
 - **Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
 - **Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
-## [Unreleased]
+## [7.0.0] - 2026-10-25 - BREAKING CHANGES
+
+### Added
+
+- Docs: [Migration v6 to v7](docs/migration-v7.md) with the full old-to-new token table.
 
 ### Changed
 
-- npm: add `semantic-html`, `wcag`, `html`, and `prefers-color-scheme` keywords to match the GitHub topics.
+- **BREAKING:** use token names following `--bf-<category>-<role>`; see [Migration v6 to v7](docs/migration-v7.md).
+- **BREAKING:** the unversioned jsDelivr URL upgrades to v7; pin `bullframe.css@6` to retain v6 overrides.
+- **BREAKING:** colours are role tokens (`--bf-color-primary`, `--bf-color-border`); dark sheets reuse them.
+- **BREAKING:** rename spacing and typography tokens; see the migration table.
+- Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later.
+- Docs: rewrite [CSS Variables](docs/variables.md) as role tables; list dark hooks in the API reference.
+
+### Removed
+
+- **BREAKING:** hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color`.
+
+### Fixed
+
+- Show the keyboard focus ring on buttons, radios, checkboxes and `.bf-btn`; it was suppressed.
+- Keep a focus ring on `aria-disabled="true"` controls.
+- Forced-colours mode: outline focused fields in `Highlight`, since their border and shadow are dropped.
+- Classless dark: drive the ring colour from `--bf-color-focus-ring` so `prefers-contrast: more` applies.
+- Contrast: muted text and captions to `rgb(118 118 118)` (4.5:1), field, control and table borders to 138 (3:1).
 
 ## [6.4.2] - 2026-10-22
 
@@ -613,7 +634,11 @@
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
-  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.3.1...HEAD
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/marcop135/bullframe.css/compare/v6.4.2...v7.0.0
+[6.4.2]: https://github.com/marcop135/bullframe.css/compare/v6.4.1...v6.4.2
+[6.4.1]: https://github.com/marcop135/bullframe.css/compare/v6.4.0...v6.4.1
+[6.4.0]: https://github.com/marcop135/bullframe.css/compare/v6.3.1...v6.4.0
   [6.3.1]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...v6.3.1
   [6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
   [6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2

@@ -3,7 +3,7 @@
 ## Header nav
 
 ```html
-<header style="border-bottom: 1px solid var(--bf-gray-light);">
+<header style="border-bottom: 1px solid var(--bf-color-border);">
   <nav class="bf-container" style="display: flex; align-items: center; gap: 2rem; padding-block: 1rem;">
     <a href="/" style="font-weight: 700; font-size: 1.25rem; text-decoration: none;">Bullframe</a>
     <ul class="bf-list-unstyled" style="display: flex; gap: 1.5rem; margin: 0;">

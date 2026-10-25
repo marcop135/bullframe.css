@@ -33,12 +33,12 @@ Follow these rules when writing or editing markup.
    that id.
 8. **Label every control.** A `<label for>` bound to the control's `id`. A placeholder is
    never a label.
-9. **Never remove focus rings.** No `outline: none`. Tune `--bf-focus-ring-color`,
+9. **Never remove focus rings.** No `outline: none`. Tune `--bf-color-focus-ring`,
    `--bf-focus-ring-width`, `--bf-focus-ring-offset`.
 10. **Dark mode needs no JavaScript.** Use a `-dark` or `-system-default` build.
 11. **`.bf-btn--primary` is a modifier.** It only works alongside `.bf-btn`.
 12. **The root font-size is 62.5%,** so `1rem` is about `10px`. Custom CSS must size
-    against that, or use the `--bf-spacing-*` tokens.
+    against that, or use the `--bf-space-*` tokens.
 
 Machine-readable class and token list: `node_modules/bullframe.css/dist/skills/api.json`
 or <https://bullframecss.marcopontili.com/api.json>.
@@ -80,14 +80,14 @@ The full list is `api.json`. This table is a shortcut, not the source of truth.
 The numbered scale is bottom-only. `.bf-m-1` is the historical short form of `.bf-m-b-1`
 and both set `margin-bottom`; prefer the explicit `.bf-m-b-*` form in generated markup.
 
-| Step | Token              | Value    |
-| ---- | ------------------ | -------- |
-| 1    | `--bf-spacing-md`  | `0.5rem` |
-| 2    | `--bf-spacing-lg`  | `1rem`   |
-| 3    | `--bf-spacing-xl`  | `2rem`   |
-| 4    | `--bf-spacing-xxl` | `3rem`   |
+| Step | Token            | Value    |
+| ---- | ---------------- | -------- |
+| 1    | `--bf-space-md`  | `0.5rem` |
+| 2    | `--bf-space-lg`  | `1rem`   |
+| 3    | `--bf-space-xl`  | `2rem`   |
+| 4    | `--bf-space-xxl` | `3rem`   |
 
 `.bf-m-0` zeroes every side; `.bf-m-t-0`, `.bf-m-b-0`, `.bf-m-l-0`, `.bf-m-r-0` zero one.
 `.bf-p-1` … `.bf-p-4` and `.bf-p-t-*` / `.bf-p-b-*` follow the same steps for padding.
-The grid gutter is `--bf-spacing-grid-gutter`, `1.5rem`. `--bf-spacing-sm` (`0.25rem`)
+The grid gutter is `--bf-space-gutter`, `1.5rem`. `--bf-space-sm` (`0.25rem`)
 exists as a token but has no numbered utility.

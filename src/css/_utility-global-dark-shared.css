@@ -8,7 +8,7 @@
 
 .bf-focused {
   border-color: var(--bf-color-field-border-focus) !important;
-  box-shadow: 0 0 0 3px var(--bf-color-field-focus-shadow) !important;
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus) !important;
 }
 
 .bf-invalid,
@@ -29,7 +29,7 @@
 
 .bf-btn:active,
 .bf-btn:focus {
-  box-shadow: 0 0 0 3px var(--bf-color-button-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 .bf-btn.bf-btn--primary {
@@ -44,7 +44,7 @@
 
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px var(--bf-color-primary-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 
 .bf-table th,

@@ -35,7 +35,7 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
+  padding: var(--bf-space-md) var(--bf-space-lg);
   color: var(--bf-color-primary);
   background-color: var(--bf-color-overlay-bg);
   border: 1px solid var(--bf-color-border);

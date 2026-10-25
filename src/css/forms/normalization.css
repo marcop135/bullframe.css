@@ -76,7 +76,7 @@
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -86,7 +86,7 @@
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
 }
 
 :where(label input, label select, label textarea) {
@@ -112,7 +112,7 @@
 }
 
 :where([type='search']) {
-  outline-offset: calc(-1 * var(--bf-spacing-sm));
+  outline-offset: calc(-1 * var(--bf-space-sm));
 }
 
 :where(output) {
@@ -183,7 +183,7 @@
 }
 
 :where(button, input, select, textarea) {
-  border-radius: var(--bf-spacing-sm);
+  border-radius: var(--bf-space-sm);
 }
 
 :where([type='radio']) {
@@ -191,7 +191,7 @@
 }
 
 :where([type='checkbox']) {
-  border-radius: var(--bf-spacing-md);
+  border-radius: var(--bf-space-md);
 }
 
 :where([type='radio'], [type='checkbox']) {

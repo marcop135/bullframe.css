@@ -2,7 +2,7 @@
 
 address {
   font-style: normal;
-  margin-bottom: var(--bf-spacing-lg);
+  margin-bottom: var(--bf-space-lg);
   line-height: inherit;
 }
 
@@ -20,11 +20,11 @@ dialog {
   background-color: var(--bf-color-bg);
   color: var(--bf-color-text);
   border: none;
-  border-radius: var(--bf-spacing-sm);
-  padding: var(--bf-spacing-xl);
+  border-radius: var(--bf-space-sm);
+  padding: var(--bf-space-xl);
   height: fit-content;
   min-width: min(25rem, 100%);
-  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
+  max-width: calc(100vw - (var(--bf-space-gutter) * 2));
 }
 
 @media (min-width: 768px) {

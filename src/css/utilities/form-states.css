@@ -6,7 +6,7 @@
     background-color 0.2s,
     box-shadow 0.2s !important;
   border-color: var(--bf-color-field-border-focus, var(--bf-color-primary)) !important;
-  box-shadow: 0 0 0 3px var(--bf-color-field-focus-shadow) !important;
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus) !important;
 }
 
 .bf-disabled,

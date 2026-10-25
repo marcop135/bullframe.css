@@ -16,8 +16,8 @@ html {
 
 body {
   margin: 0;
-  font-size: var(--bf-body-font-size-rem);
-  line-height: var(--bf-body-line-height);
+  font-size: var(--bf-font-size-body);
+  line-height: var(--bf-line-height-body);
   font-weight: 400;
   text-align: left;
 

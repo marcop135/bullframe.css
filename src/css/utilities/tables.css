@@ -2,9 +2,9 @@
 
 .bf-table th,
 .bf-table td {
-  padding: var(--bf-spacing-lg);
+  padding: var(--bf-space-lg);
   border-bottom: 1px solid var(--bf-color-table-border);
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
 }
 
 /* Horizontal scroll wrapper. */
@@ -15,7 +15,7 @@
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
 }
 
 /* Prefer always-visible scrollbars on WebKit. */

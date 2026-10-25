@@ -7,21 +7,23 @@
 :root {
   --bf-color-bg: rgb(28 28 28);
   --bf-color-text: rgb(240 240 240);
-  --bf-color-link: rgb(77 165 255);
-  --bf-color-link-hover: rgb(77 165 255);
+  --bf-color-text-muted: rgb(153 153 153);
+  --bf-color-link: rgb(77 165 255); /* light: --bf-color-primary */
+  --bf-color-link-hover: rgb(77 165 255); /* light: --bf-color-primary-hover */
   --bf-color-caption: rgb(204 204 204);
   --bf-color-highlight: rgb(230 230 0);
   --bf-color-highlight-subtle: rgb(255 255 200);
   --bf-color-field-bg: rgb(17 17 17);
   --bf-color-field-border: rgb(0 0 0);
-  --bf-color-field-text: rgb(204 204 204);
-  --bf-color-field-border-focus: rgb(26 140 255);
-  --bf-color-field-focus-shadow: rgb(3 102 214 / 50%);
+  --bf-color-control-border: rgb(153 153 153);
+  --bf-color-field-text: rgb(204 204 204); /* light: inherited text colour */
+  --bf-color-field-border-focus: rgb(26 140 255); /* light: --bf-color-primary */
+  --bf-color-field-shadow-focus: rgb(3 102 214 / 50%);
   --bf-color-placeholder: rgb(153 153 153);
   --bf-color-range-track: rgb(17 17 17);
   --bf-color-progress-track: rgb(51 51 51);
-  --bf-color-button-focus-shadow: rgb(255 255 255 / 45%);
-  --bf-color-primary-focus-shadow: rgb(190 216 254 / 75%);
+  --bf-color-button-shadow-focus: rgb(255 255 255 / 45%);
+  --bf-color-primary-shadow-focus: rgb(190 216 254 / 75%);
   --bf-color-danger: rgb(255 38 38);
   --bf-color-table-border: rgb(102 102 102);
   --bf-color-table-stripe: rgb(51 51 51);
@@ -111,7 +113,7 @@ textarea:active,
 textarea:focus {
   background-color: var(--bf-color-field-bg);
   border-color: var(--bf-color-field-border-focus);
-  box-shadow: 0 0 0 3px var(--bf-color-field-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus);
 }
 
 select:not([size], select[multiple]) {
@@ -169,7 +171,7 @@ button:focus,
 [type='reset']:focus,
 [type='submit']:active,
 [type='submit']:focus {
-  box-shadow: 0 0 0 3px var(--bf-color-button-focus-shadow);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
 dialog {

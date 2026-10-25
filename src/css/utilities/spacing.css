@@ -23,38 +23,38 @@
 /* .bf-m-N is the historical short form of .bf-m-b-N; both set margin-bottom. */
 .bf-m-1,
 .bf-m-b-1 {
-  margin-bottom: var(--bf-spacing-md) !important;
+  margin-bottom: var(--bf-space-md) !important;
 }
 
 .bf-m-2,
 .bf-m-b-2 {
-  margin-bottom: var(--bf-spacing-lg) !important;
+  margin-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-m-3,
 .bf-m-b-3 {
-  margin-bottom: var(--bf-spacing-xl) !important;
+  margin-bottom: var(--bf-space-xl) !important;
 }
 
 .bf-m-4,
 .bf-m-b-4 {
-  margin-bottom: var(--bf-spacing-xxl) !important;
+  margin-bottom: var(--bf-space-xxl) !important;
 }
 
 .bf-m-t-1 {
-  margin-top: var(--bf-spacing-md) !important;
+  margin-top: var(--bf-space-md) !important;
 }
 
 .bf-m-t-2 {
-  margin-top: var(--bf-spacing-lg) !important;
+  margin-top: var(--bf-space-lg) !important;
 }
 
 .bf-m-t-3 {
-  margin-top: var(--bf-spacing-xl) !important;
+  margin-top: var(--bf-space-xl) !important;
 }
 
 .bf-m-t-4 {
-  margin-top: var(--bf-spacing-xxl) !important;
+  margin-top: var(--bf-space-xxl) !important;
 }
 
 .bf-p-0 {
@@ -80,36 +80,36 @@
 /* .bf-p-N is the historical short form of .bf-p-b-N; both set padding-bottom. */
 .bf-p-1,
 .bf-p-b-1 {
-  padding-bottom: var(--bf-spacing-md) !important;
+  padding-bottom: var(--bf-space-md) !important;
 }
 
 .bf-p-2,
 .bf-p-b-2 {
-  padding-bottom: var(--bf-spacing-lg) !important;
+  padding-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-p-3,
 .bf-p-b-3 {
-  padding-bottom: var(--bf-spacing-xl) !important;
+  padding-bottom: var(--bf-space-xl) !important;
 }
 
 .bf-p-4,
 .bf-p-b-4 {
-  padding-bottom: var(--bf-spacing-xxl) !important;
+  padding-bottom: var(--bf-space-xxl) !important;
 }
 
 .bf-p-t-1 {
-  padding-top: var(--bf-spacing-md) !important;
+  padding-top: var(--bf-space-md) !important;
 }
 
 .bf-p-t-2 {
-  padding-top: var(--bf-spacing-lg) !important;
+  padding-top: var(--bf-space-lg) !important;
 }
 
 .bf-p-t-3 {
-  padding-top: var(--bf-spacing-xl) !important;
+  padding-top: var(--bf-space-xl) !important;
 }
 
 .bf-p-t-4 {
-  padding-top: var(--bf-spacing-xxl) !important;
+  padding-top: var(--bf-space-xxl) !important;
 }

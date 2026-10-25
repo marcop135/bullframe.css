@@ -1,7 +1,7 @@
 /* pre / code / kbd / samp. */
 
 pre {
-  margin: 0 0 var(--bf-spacing-xl) 0;
+  margin: 0 0 var(--bf-space-xl) 0;
 
   display: block;
   overflow: auto;

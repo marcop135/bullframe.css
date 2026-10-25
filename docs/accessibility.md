@@ -10,8 +10,8 @@ Bullframe ships WCAG AA contrast defaults (4.5:1 for normal text), visible `:foc
 
 Default tokens meet **WCAG AA** contrast (4.5:1 for normal text) on light and dark surfaces:
 
-- **Links**: `--bf-blue` on white passes AA
-- **Primary buttons**: white text on `--bf-blue` passes AA
+- **Links**: `--bf-color-primary` on white passes AA
+- **Primary buttons**: white text on `--bf-color-primary` passes AA
 - **Dark builds**: default foreground/background pairs meet AA
 - **Form focus rings**: visible on light and dark backgrounds
 
@@ -23,12 +23,12 @@ Bullframe uses `:focus-visible` to show focus rings **only for keyboard navigati
 
 ```css
 :focus-visible {
-  outline: var(--bf-focus-ring-width) solid var(--bf-focus-ring-color);
+  outline: var(--bf-focus-ring-width) solid var(--bf-color-focus-ring);
   outline-offset: var(--bf-focus-ring-offset);
 }
 ```
 
-Defaults match the previous orange ring. Under `prefers-contrast: more`, `--bf-focus-ring-color` rises to a darker amber so the ring meets WCAG 1.4.11 (3:1) on white, `--bf-light`, and `--bf-dark-bg`. Override the tokens on `:root` if you need a custom ring.
+Defaults match the previous orange ring. Under `prefers-contrast: more`, `--bf-color-focus-ring` rises to a darker amber so the ring meets WCAG 1.4.11 (3:1) on the light (`--bf-color-bg` white) and dark (`rgb(28 28 28)`) page backgrounds. Override the tokens on `:root` if you need a custom ring.
 
 ## Screen Reader Utilities
 
@@ -63,7 +63,7 @@ Class-based and utilities builds. Put these on `<html>` or a container when you 
 | Class                                                      | Purpose                                                                                     |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `.bf-scheme-light` / `.bf-scheme-dark` / `.bf-scheme-auto` | Sets `color-scheme` so native widgets match the page                                        |
-| `.bf-accent-native`                                        | Sets `accent-color` to `--bf-blue` on checkboxes, radios, range, and progress               |
+| `.bf-accent-native`                                        | Sets `accent-color` to `--bf-color-primary` on checkboxes, radios, range, and progress      |
 | `.bf-target-size`                                          | Minimum 24×24px hit boxes (WCAG 2.5.8); inline links in `p` / `li` / `td` / `dd` are exempt |
 
 ## ARIA Attribute Styling

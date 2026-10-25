@@ -12,13 +12,13 @@
 .custom-checkbox-wrapper [type='checkbox'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-spacing-md);
+  margin-left: var(--bf-space-md);
 }
 
 *[dir='rtl'] .custom-checkbox-wrapper [type='checkbox'] + label,
 .custom-checkbox-wrapper [type='checkbox'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-spacing-md);
+  margin-right: var(--bf-space-md);
 }
 
 .custom-checkbox-wrapper [type='checkbox']::after {
@@ -52,13 +52,13 @@
 .custom-radio-wrapper [type='radio'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-spacing-md);
+  margin-left: var(--bf-space-md);
 }
 
 *[dir='rtl'] .custom-radio-wrapper [type='radio'] + label,
 .custom-radio-wrapper [type='radio'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-spacing-md);
+  margin-right: var(--bf-space-md);
 }
 
 .custom-radio-wrapper [type='radio']::after {

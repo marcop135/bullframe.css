@@ -1,7 +1,7 @@
 ---
 name: bullframe-theming
 description: Theme Bullframe CSS with token overrides, dark or system builds, and a short project stylesheet. Use when branding colours or fonts, picking a dark or prefers-color-scheme build, or adding custom.css on top of one base build.
-bullframe: '>=6.1.0 <7.0.0'
+bullframe: '>=7.0.0 <8.0.0'
 builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css, bullframe-classless-dark.css, bullframe-classless-system-default.css, bullframe-utilities.css]
 requires: [bullframe-core]
 docs: ['/theming', '/theming/dark-mode', '/theming/customization', '/variables']
@@ -28,9 +28,11 @@ system preference, and whether overrides are global (`:root`) or scoped to a cla
 
 1. Link exactly one base build. Dark is `bullframe-dark.css`; OS-follows is
    `bullframe-system-default.css` (or the classless equivalents). Do not stack two bases.
-2. Override tokens, not selectors. Set `--bf-blue`, `--bf-blue-light`,
-   `--bf-focus-ring-color`, grays, and font stacks. Links, primary buttons and focus rings
+2. Override tokens, not selectors. Set `--bf-color-primary`, `--bf-color-primary-hover`,
+   `--bf-color-focus-ring`, grays, and font stacks. Links, primary buttons and focus rings
    follow those tokens.
+   With a dark or system build, a `:root` override covers both schemes; wrap it in
+   `@media (prefers-color-scheme: light)` or `dark` to change one.
 3. Load project CSS after Bullframe. Prefer a `<style>` block or one `custom.css` link.
    Keep it to token overrides plus a few layout or type rules.
 4. Scope when the brand is not site-wide: put the overrides on a class such as
@@ -66,7 +68,7 @@ tokens from `api.json`, and needs no JavaScript for theming.
 
 - Linking `bullframe.css` and `bullframe-dark.css` together.
 - Inventing `.bf-theme`, `.bf-theme-toggle` or `.bf-dark-mode`.
-- Hard-coding `#0f766e` on buttons instead of setting `--bf-blue`.
+- Hard-coding `#0f766e` on buttons instead of setting `--bf-color-primary`.
 - Dropping contrast below AA when swapping the primary colour.
 - A large custom stylesheet that reimplements grid, spacing or type scales.
 

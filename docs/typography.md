@@ -17,7 +17,7 @@ All heading levels (`h1` through `h6`) are styled with appropriate font sizes an
 
 ## Body Text
 
-Body text uses the `--bf-body-font-size-rem` and `--bf-body-line-height` variables:
+Body text uses the `--bf-font-size-body` and `--bf-line-height-body` variables:
 
 ```html
 <p>This is a paragraph of body text. It uses the default font size and line height.</p>
@@ -61,7 +61,7 @@ Use utility classes for text alignment:
 Inline code uses `<code>`:
 
 ```html
-<p>Use the <code>--bf-blue</code> variable for primary colors.</p>
+<p>Use the <code>--bf-color-primary</code> variable for primary colors.</p>
 ```
 
 Code blocks use `<pre><code>`:

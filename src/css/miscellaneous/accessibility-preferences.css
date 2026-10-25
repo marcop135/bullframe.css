@@ -9,7 +9,7 @@
   /* Darker amber clears WCAG 1.4.11 (3:1) on the light and dark --bf-color-bg;
    * the default orange ring is only ~2:1 on white. */
   :root {
-    --bf-focus-ring-color: rgb(184 115 0);
+    --bf-color-focus-ring: rgb(184 115 0);
   }
 
   :focus-visible {
@@ -40,6 +40,11 @@
 @media (forced-colors: active) {
   :focus-visible {
     outline-color: Highlight;
+  }
+
+  /* Fields hide the ring for border + box-shadow, which forced colours drop. */
+  :is(input, select, textarea, [type]):focus {
+    outline: 2px solid Highlight;
   }
 
   a {

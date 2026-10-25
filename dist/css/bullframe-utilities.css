@@ -1,72 +1,87 @@
-/* ! Bullframe CSS v6.4.2 | MIT License | https://github.com/marcop135/bullframe.css  */
+/* ! Bullframe CSS v7.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
 
 /* Utilities-only build: tokens + .bf-* helpers (no base element styles). */
 
 /* Variables */
 /* Design tokens (--bf-*). Shared by every build variant.
- * Override on :root (or a scope) to theme without rebuilding. */
+ * Override on :root (or a scope) to theme without rebuilding. :where() keeps
+ * these at zero specificity, so the dark :root block and your overrides win
+ * whatever the load order (e.g. bullframe-utilities.css after a dark build). */
 
-:root {
-  /* Neutrals */
-  --bf-white: rgb(255 255 255);
-  --bf-light: rgb(240 240 240);
-  --bf-gray-light-extra: rgb(233 233 233);
-  --bf-gray-light: rgb(204 204 204);
-  --bf-gray: rgb(153 153 153);
-  --bf-gray-dark: rgb(102 102 102);
-  --bf-gray-dark-extra: rgb(51 51 51);
-  --bf-dark: rgb(34 34 34);
-  --bf-dark-extra: rgb(17 17 17);
-  --bf-black: rgb(0 0 0);
+:where(:root) {
+  /* Page */
+  --bf-color-bg: rgb(255 255 255);
+  --bf-color-text: rgb(34 34 34);
+  --bf-color-text-muted: rgb(118 118 118);
+  --bf-color-text-subtle: rgb(102 102 102);
+  --bf-color-text-shadow: rgb(34 34 34);
+  --bf-color-contrast: rgb(0 0 0);
+  --bf-color-surface: rgb(233 233 233);
+  --bf-color-border: rgb(204 204 204);
+  --bf-color-border-strong: rgb(102 102 102);
+  --bf-color-overlay-bg: rgb(255 255 255);
+  --bf-color-caption: rgb(118 118 118);
 
-  /* Highlight / mark */
-  --bf-yellow-light: rgb(255 255 153);
-  --bf-yellow: rgb(255 255 0);
-  --bf-orange: rgb(255 165 0);
+  /* Primary */
+  /* WCAG AA on white (links 4.5:1) and on-primary text (4.5:1). Links and
+   * focused fields fall back to these unless --bf-color-link,
+   * --bf-color-link-hover or --bf-color-field-border-focus is set. */
+  --bf-color-primary: rgb(0 86 179);
+  --bf-color-primary-hover: rgb(0 65 135);
+  --bf-color-primary-subtle: rgb(190 216 254);
+  --bf-color-primary-shadow-focus: rgb(0 65 135 / 35%);
+  --bf-color-on-primary: rgb(255 255 255);
 
-  /* Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1) */
-  --bf-blue: rgb(0 86 179);
-  --bf-blue-light: rgb(0 65 135);
-  --bf-blue-light-extra: rgb(190 216 254);
+  /* Neutral buttons */
+  --bf-color-neutral: rgb(204 204 204);
+  --bf-color-neutral-hover: rgb(184 184 184);
+  --bf-color-on-neutral: rgb(34 34 34);
+  --bf-color-button-shadow-focus: rgb(0 0 0 / 15%);
+
+  /* Form fields and controls */
+  --bf-color-field-bg: rgb(255 255 255);
+  --bf-color-field-border: rgb(138 138 138);
+  --bf-color-field-shadow-focus: rgb(0 86 179 / 25%);
+  --bf-color-placeholder: rgb(102 102 102);
+  --bf-color-control-bg: rgb(255 255 255);
+  --bf-color-control-border: rgb(138 138 138);
+  --bf-color-range-track: rgb(233 233 233);
+  --bf-color-progress-track: rgb(204 204 204);
+
+  /* Highlight (mark / ins) */
+  --bf-color-highlight: rgb(255 255 0);
+  --bf-color-highlight-subtle: rgb(255 255 153);
 
   /* Invalid / error */
-  --bf-red: rgb(255 0 0);
+  --bf-color-danger: rgb(255 0 0);
+
+  /* Tables */
+  --bf-color-table-border: rgb(138 138 138);
+  --bf-color-table-stripe: rgb(233 233 233);
 
   /* Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11) */
-  --bf-focus-ring-color: var(--bf-orange);
+  --bf-color-focus-ring: rgb(255 165 0);
   --bf-focus-ring-width: 0.2rem;
   --bf-focus-ring-offset: 0.3rem;
 
-  /* Dark-mode surfaces (used by utility-global-dark*.css) */
-  --bf-dark-bg: rgb(28 28 28);
-  --bf-dark-link: rgb(77 165 255);
-  --bf-dark-link-hover: rgb(77 165 255);
-  --bf-dark-border-focus: rgb(26 140 255);
-  --bf-dark-shadow-focus: rgb(3 102 214 / 50%);
-  --bf-dark-mark-bg: rgb(230 230 0);
-  --bf-dark-ins-bg: rgb(255 255 200);
-  --bf-dark-button-hover: rgb(184 184 184);
-  --bf-dark-button-shadow: rgb(255 255 255 / 45%);
-  --bf-dark-invalid: rgb(255 38 38);
-
   /* Spacing scale + grid gutter */
-  --bf-spacing-sm: 0.25rem;
-  --bf-spacing-md: 0.5rem;
-  --bf-spacing-lg: 1rem;
-  --bf-spacing-xl: 2rem;
-  --bf-spacing-xxl: 3rem;
-  --bf-spacing-grid-gutter: 1.5rem;
+  --bf-space-sm: 0.25rem;
+  --bf-space-md: 0.5rem;
+  --bf-space-lg: 1rem;
+  --bf-space-xl: 2rem;
+  --bf-space-xxl: 3rem;
+  --bf-space-gutter: 1.5rem;
 
   /* Type */
-  --bf-font-sans-serif:
+  --bf-font-sans:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-monospace:
+  --bf-font-mono:
     SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --bf-body-font-size-rem: 1.6rem;
-  --bf-body-line-height: 1.5;
+  --bf-font-size-body: 1.6rem;
+  --bf-line-height-body: 1.5;
 
   /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;
@@ -115,10 +130,10 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
-  color: var(--bf-blue);
-  background-color: var(--bf-white);
-  border: 1px solid var(--bf-gray-light);
+  padding: var(--bf-space-md) var(--bf-space-lg);
+  color: var(--bf-color-primary);
+  background-color: var(--bf-color-overlay-bg);
+  border: 1px solid var(--bf-color-border);
   transform: translateY(-100%);
 }
 
@@ -303,8 +318,8 @@
 }
 
 .bf-t-shadow {
-  text-shadow: 0 0 2px var(--bf-dark) !important;
-  text-shadow: 0 0 0.2rem var(--bf-dark) !important;
+  text-shadow: 0 0 2px var(--bf-color-text-shadow) !important;
+  text-shadow: 0 0 0.2rem var(--bf-color-text-shadow) !important;
 }
 
 .bf-t-italic {
@@ -379,7 +394,7 @@
 }
 
 .bf-font-sans-serif {
-  font-family: var(--bf-font-sans-serif) !important;
+  font-family: var(--bf-font-sans) !important;
 }
 
 .bf-font-serif {
@@ -387,7 +402,7 @@
 }
 
 .bf-font-monospace {
-  font-family: var(--bf-font-monospace) !important;
+  font-family: var(--bf-font-mono) !important;
 }
 
 /* Opt-in stacks from Modern Font Stacks (https://modernfontstacks.com/). */
@@ -469,7 +484,7 @@
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: var(--bf-spacing-lg) !important;
+  margin-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-h1 {
@@ -513,8 +528,8 @@ body.bf-responsive-typography {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: var(--bf-spacing-grid-gutter);
-  padding-right: var(--bf-spacing-grid-gutter);
+  padding-left: var(--bf-space-gutter);
+  padding-right: var(--bf-space-gutter);
 }
 
 .bf-container {
@@ -524,15 +539,15 @@ body.bf-responsive-typography {
 .bf-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--bf-spacing-grid-gutter));
-  margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
+  margin-left: calc(-1 * var(--bf-space-gutter));
+  margin-right: calc(-1 * var(--bf-space-gutter));
 }
 
 [class^='bf-col-'] {
   position: relative;
   min-height: 1px;
-  padding-left: var(--bf-spacing-grid-gutter);
-  padding-right: var(--bf-spacing-grid-gutter);
+  padding-left: var(--bf-space-gutter);
+  padding-right: var(--bf-space-gutter);
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -749,38 +764,38 @@ table th[class^='bf-col'] {
 /* .bf-m-N is the historical short form of .bf-m-b-N; both set margin-bottom. */
 .bf-m-1,
 .bf-m-b-1 {
-  margin-bottom: var(--bf-spacing-md) !important;
+  margin-bottom: var(--bf-space-md) !important;
 }
 
 .bf-m-2,
 .bf-m-b-2 {
-  margin-bottom: var(--bf-spacing-lg) !important;
+  margin-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-m-3,
 .bf-m-b-3 {
-  margin-bottom: var(--bf-spacing-xl) !important;
+  margin-bottom: var(--bf-space-xl) !important;
 }
 
 .bf-m-4,
 .bf-m-b-4 {
-  margin-bottom: var(--bf-spacing-xxl) !important;
+  margin-bottom: var(--bf-space-xxl) !important;
 }
 
 .bf-m-t-1 {
-  margin-top: var(--bf-spacing-md) !important;
+  margin-top: var(--bf-space-md) !important;
 }
 
 .bf-m-t-2 {
-  margin-top: var(--bf-spacing-lg) !important;
+  margin-top: var(--bf-space-lg) !important;
 }
 
 .bf-m-t-3 {
-  margin-top: var(--bf-spacing-xl) !important;
+  margin-top: var(--bf-space-xl) !important;
 }
 
 .bf-m-t-4 {
-  margin-top: var(--bf-spacing-xxl) !important;
+  margin-top: var(--bf-space-xxl) !important;
 }
 
 .bf-p-0 {
@@ -806,46 +821,46 @@ table th[class^='bf-col'] {
 /* .bf-p-N is the historical short form of .bf-p-b-N; both set padding-bottom. */
 .bf-p-1,
 .bf-p-b-1 {
-  padding-bottom: var(--bf-spacing-md) !important;
+  padding-bottom: var(--bf-space-md) !important;
 }
 
 .bf-p-2,
 .bf-p-b-2 {
-  padding-bottom: var(--bf-spacing-lg) !important;
+  padding-bottom: var(--bf-space-lg) !important;
 }
 
 .bf-p-3,
 .bf-p-b-3 {
-  padding-bottom: var(--bf-spacing-xl) !important;
+  padding-bottom: var(--bf-space-xl) !important;
 }
 
 .bf-p-4,
 .bf-p-b-4 {
-  padding-bottom: var(--bf-spacing-xxl) !important;
+  padding-bottom: var(--bf-space-xxl) !important;
 }
 
 .bf-p-t-1 {
-  padding-top: var(--bf-spacing-md) !important;
+  padding-top: var(--bf-space-md) !important;
 }
 
 .bf-p-t-2 {
-  padding-top: var(--bf-spacing-lg) !important;
+  padding-top: var(--bf-space-lg) !important;
 }
 
 .bf-p-t-3 {
-  padding-top: var(--bf-spacing-xl) !important;
+  padding-top: var(--bf-space-xl) !important;
 }
 
 .bf-p-t-4 {
-  padding-top: var(--bf-spacing-xxl) !important;
+  padding-top: var(--bf-space-xxl) !important;
 }
 /* .bf-btn and variants. */
 
 .bf-btn {
   display: inline-block;
   cursor: pointer;
-  color: var(--bf-dark);
-  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  color: var(--bf-color-on-neutral);
+  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -856,15 +871,15 @@ table th[class^='bf-col'] {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: var(--bf-spacing-sm);
+  border-radius: var(--bf-space-sm);
 
   border: 0;
   background-image: none;
-  background-color: var(--bf-gray-light);
+  background-color: var(--bf-color-neutral);
   transition: all 0.2s;
 }
 
-.bf-btn:focus {
+.bf-btn:focus:not(:focus-visible) {
   outline: 0;
 }
 
@@ -872,31 +887,31 @@ table th[class^='bf-col'] {
 .bf-btn:active,
 .bf-btn:focus {
   text-decoration: none;
-  color: var(--bf-dark);
-  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral-hover);
 }
 
 .bf-btn:active,
 .bf-btn:focus {
-  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+  box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
 }
 
-/* Primary: white on --bf-blue (WCAG AA 4.5:1). */
+/* Primary: --bf-color-on-primary on --bf-color-primary (WCAG AA 4.5:1). */
 .bf-btn.bf-btn--primary {
-  color: var(--bf-white);
-  background: var(--bf-blue);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary);
 }
 
 .bf-btn.bf-btn--primary:hover,
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  color: var(--bf-white);
-  background: var(--bf-blue-light);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary-hover);
 }
 
 .bf-btn.bf-btn--primary:active,
 .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgb(0 65 135 / 35%);
+  box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 
 :where(
@@ -913,8 +928,7 @@ table th[class^='bf-col'] {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: var(--bf-gray-light);
-  outline: none !important;
+  background-color: var(--bf-color-neutral);
 }
 
 @media (forced-colors: active) {
@@ -929,8 +943,8 @@ table th[class^='bf-col'] {
     border 0.2s,
     background-color 0.2s,
     box-shadow 0.2s !important;
-  border-color: var(--bf-blue) !important;
-  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%) !important;
+  border-color: var(--bf-color-field-border-focus, var(--bf-color-primary)) !important;
+  box-shadow: 0 0 0 3px var(--bf-color-field-shadow-focus) !important;
 }
 
 .bf-disabled,
@@ -949,8 +963,8 @@ table th[class^='bf-col'] {
           user-select: none !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
-  background-color: var(--bf-white);
-  border-color: var(--bf-gray);
+  background-color: var(--bf-color-control-bg);
+  border-color: var(--bf-color-control-border);
 }
 
 label.bf-disabled {
@@ -971,8 +985,8 @@ button.bf-disabled,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: var(--bf-dark);
-  background: var(--bf-gray-light);
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral);
 }
 
 button.bf-disabled:hover,
@@ -991,8 +1005,8 @@ button.bf-disabled:focus,
 .bf-btn.bf-disabled:active,
 .bf-btn.bf-disabled:focus {
   box-shadow: none;
-  color: var(--bf-dark);
-  background: var(--bf-gray-light);
+  color: var(--bf-color-on-neutral);
+  background: var(--bf-color-neutral);
 }
 
 .bf-btn--primary.bf-disabled {
@@ -1004,22 +1018,22 @@ button.bf-disabled:focus,
           user-select: none;
   box-shadow: none;
   opacity: 0.5;
-  color: var(--bf-white);
-  background: var(--bf-blue);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary);
 }
 
 .bf-btn--primary.bf-disabled:hover,
 .bf-btn--primary.bf-disabled:active,
 .bf-btn--primary.bf-disabled:focus {
   box-shadow: none;
-  color: var(--bf-white);
-  background: var(--bf-blue);
+  color: var(--bf-color-on-primary);
+  background: var(--bf-color-primary);
 }
 
 .bf-invalid,
 .bf-invalid:focus {
-  color: var(--bf-red) !important;
-  border-color: var(--bf-red) !important;
+  color: var(--bf-color-danger) !important;
+  border-color: var(--bf-color-danger) !important;
   box-shadow: 0 0 0 3px rgb(255 0 0 / 25%) !important;
 }
 /* Custom radio / checkbox appearance. */
@@ -1032,19 +1046,19 @@ button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid var(--bf-gray);
+  border: 1px solid var(--bf-color-control-border);
 }
 
 .custom-checkbox-wrapper [type='checkbox'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-spacing-md);
+  margin-left: var(--bf-space-md);
 }
 
 *[dir='rtl'] .custom-checkbox-wrapper [type='checkbox'] + label,
 .custom-checkbox-wrapper [type='checkbox'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-spacing-md);
+  margin-right: var(--bf-space-md);
 }
 
 .custom-checkbox-wrapper [type='checkbox']::after {
@@ -1053,7 +1067,7 @@ button.bf-disabled:focus,
   position: absolute;
   width: 0.6rem;
   height: 0.8rem;
-  border: 2px solid var(--bf-white);
+  border: 2px solid var(--bf-color-on-primary);
   border-top: 0;
   border-left: 0;
   left: 35%;
@@ -1062,8 +1076,8 @@ button.bf-disabled:focus,
 }
 
 .custom-checkbox-wrapper [type='checkbox']:checked {
-  background-color: var(--bf-blue);
-  border-color: var(--bf-black);
+  background-color: var(--bf-color-primary);
+  border-color: var(--bf-color-contrast);
 }
 
 .custom-radio-wrapper [type='radio'] {
@@ -1074,19 +1088,19 @@ button.bf-disabled:focus,
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid var(--bf-gray);
+  border: 1px solid var(--bf-color-control-border);
 }
 
 .custom-radio-wrapper [type='radio'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-spacing-md);
+  margin-left: var(--bf-space-md);
 }
 
 *[dir='rtl'] .custom-radio-wrapper [type='radio'] + label,
 .custom-radio-wrapper [type='radio'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-spacing-md);
+  margin-right: var(--bf-space-md);
 }
 
 .custom-radio-wrapper [type='radio']::after {
@@ -1098,13 +1112,13 @@ button.bf-disabled:focus,
   left: -0.05rem;
   top: -0.05rem;
   border-radius: 50%;
-  background: var(--bf-white);
+  background: var(--bf-color-on-primary);
   transform: scale(0.35);
 }
 
 .custom-radio-wrapper [type='radio']:checked {
-  background-color: var(--bf-blue);
-  border-color: var(--bf-black);
+  background-color: var(--bf-color-primary);
+  border-color: var(--bf-color-contrast);
 }
 /* Unstyled and inline list helpers. */
 
@@ -1128,9 +1142,9 @@ dt {
 
 .bf-table th,
 .bf-table td {
-  padding: var(--bf-spacing-lg);
-  border-bottom: 1px solid var(--bf-gray);
-  margin-bottom: var(--bf-spacing-md);
+  padding: var(--bf-space-lg);
+  border-bottom: 1px solid var(--bf-color-table-border);
+  margin-bottom: var(--bf-space-md);
 }
 
 /* Horizontal scroll wrapper. */
@@ -1141,7 +1155,7 @@ dt {
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: var(--bf-spacing-md);
+  margin-bottom: var(--bf-space-md);
 }
 
 /* Prefer always-visible scrollbars on WebKit. */
@@ -1152,7 +1166,7 @@ dt {
 /* Odd-row striping. */
 .bf-table--zebra tbody tr:nth-child(odd),
 .bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: var(--bf-gray-light-extra);
+  background-color: var(--bf-color-table-stripe);
 }
 /* Responsive embed box (Bootstrap-style aspect ratio). */
 
@@ -1258,10 +1272,10 @@ dt {
   min-inline-size: 0;
 }
 /* Opt-in accent-color: native checkbox, radio, range and progress follow
- * --bf-blue instead of the UA default. Put it on <html> or any container. */
+ * --bf-color-primary instead of the UA default. Put it on <html> or any container. */
 
 .bf-accent-native {
-  accent-color: var(--bf-blue);
+  accent-color: var(--bf-color-primary);
 }
 /* Print styles (adapted from h5bp main.css). */
 

@@ -15,14 +15,14 @@
   --bf-color-progress-track: #c7e0db;
   --ex-branded-tint: #f0fdfa;
   --bf-font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
-  --bf-font-sans-serif:
+  --bf-font-sans:
     'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial,
     sans-serif;
   background:
     radial-gradient(circle at top right, rgb(15 118 110 / 0.12), transparent 28rem),
     var(--ex-branded-tint);
   color: var(--bf-color-text);
-  font-family: var(--bf-font-sans-serif);
+  font-family: var(--bf-font-sans);
 }
 
 .ex-branded__bar {

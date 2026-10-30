@@ -1,10 +1,11 @@
 ---
 name: bullframe-core
 description: Core conventions for writing HTML styled with Bullframe CSS. Use before any other Bullframe skill, and whenever choosing a build, scaffolding a page, theming with tokens, or deciding whether to write custom CSS.
-bullframe: '>=6.1.0 <7.0.0'
-builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css, bullframe-classless-dark.css, bullframe-classless-system-default.css, bullframe-utilities.css]
-requires: []
-docs: ['/getting-started', '/variables', '/theming', '/api-reference']
+metadata:
+  bullframe: '>=6.1.0 <7.0.0'
+  builds: 'bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css, bullframe-classless-dark.css, bullframe-classless-system-default.css, bullframe-utilities.css'
+  requires: ''
+  docs: '/getting-started, /variables, /theming, /api-reference'
 ---
 
 # Bullframe core conventions

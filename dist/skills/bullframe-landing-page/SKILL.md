@@ -1,10 +1,11 @@
 ---
 name: bullframe-landing-page
 description: Build a marketing or product landing page with Bullframe CSS. Use for a hero, feature row, pricing block, call to action, or any multi-section marketing page.
-bullframe: '>=6.1.0 <7.0.0'
-builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css]
-requires: [bullframe-core]
-docs: ['/layout', '/utilities/grid', '/buttons', '/components/cards']
+metadata:
+  bullframe: '>=6.1.0 <7.0.0'
+  builds: 'bullframe.css, bullframe-dark.css, bullframe-system-default.css'
+  requires: 'bullframe-core'
+  docs: '/layout, /utilities/grid, /buttons, /components/cards'
 ---
 
 # Landing page

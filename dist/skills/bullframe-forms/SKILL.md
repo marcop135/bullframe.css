@@ -1,10 +1,11 @@
 ---
 name: bullframe-forms
 description: Build accessible forms with Bullframe CSS. Use when creating a contact form, login, signup, checkout, search box, filter bar, or any page with input controls.
-bullframe: '>=6.1.0 <7.0.0'
-builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css]
-requires: [bullframe-core]
-docs: ['/forms', '/components/forms', '/accessibility']
+metadata:
+  bullframe: '>=6.1.0 <7.0.0'
+  builds: 'bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css'
+  requires: 'bullframe-core'
+  docs: '/forms, /components/forms, /accessibility'
 ---
 
 # Forms

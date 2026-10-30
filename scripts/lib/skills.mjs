@@ -23,6 +23,12 @@ export const FRONTMATTER_SCHEMA = {
   docs: 'list',
 };
 
+/**
+ * Keys the Agent Skills spec does not allow at the top level. They live under
+ * `metadata:` as strings (lists comma separated) and are hoisted on read.
+ */
+export const METADATA_KEYS = ['bullframe', 'builds', 'requires', 'docs'];
+
 const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
 
 function stripQuotes(value) {
@@ -37,27 +43,56 @@ function stripQuotes(value) {
 }
 
 /**
- * Deliberately tiny YAML subset: `key: scalar` and `key: [a, b]` on one line.
+ * Deliberately tiny YAML subset: `key: scalar` and `key: [a, b]` on one line, plus
+ * one indented `metadata:` block of string values. Metadata keys are hoisted to the
+ * top level, and the `list` ones split on commas, so readers see one shape.
+ * `topKeys` lists the keys written at the top level, for validation.
  * Anything richer is a validation error rather than a silent reinterpretation.
  */
 export function parseFrontmatter(text) {
   const match = text.match(FRONTMATTER_RE);
-  if (!match) return { data: null, body: text, raw: '' };
+  if (!match) return { data: null, body: text, raw: '', topKeys: [] };
 
   const data = {};
+  const topKeys = [];
+  const invalid = (line) => {
+    data.__invalid = data.__invalid || [];
+    data.__invalid.push(line);
+  };
+  let inMetadata = false;
+
   for (const rawLine of match[1].split(/\r?\n/)) {
     const line = rawLine.trim();
     if (!line || line.startsWith('#')) continue;
 
     const sep = line.indexOf(':');
     if (sep === -1) {
-      data.__invalid = data.__invalid || [];
-      data.__invalid.push(line);
+      invalid(line);
       continue;
     }
 
     const key = line.slice(0, sep).trim();
     const value = line.slice(sep + 1).trim();
+
+    if (/^\s/.test(rawLine)) {
+      if (!inMetadata || value.startsWith('[')) {
+        invalid(line);
+        continue;
+      }
+      const scalar = stripQuotes(value);
+      data[key] =
+        FRONTMATTER_SCHEMA[key] === 'list'
+          ? scalar
+              .split(',')
+              .map((v) => v.trim())
+              .filter(Boolean)
+          : scalar;
+      continue;
+    }
+
+    topKeys.push(key);
+    inMetadata = key === 'metadata' && value === '';
+    if (inMetadata) continue;
 
     if (value.startsWith('[') && value.endsWith(']')) {
       const inner = value.slice(1, -1).trim();
@@ -67,7 +102,7 @@ export function parseFrontmatter(text) {
     }
   }
 
-  return { data, body: text.slice(match[0].length), raw: match[1] };
+  return { data, body: text.slice(match[0].length), raw: match[1], topKeys };
 }
 
 function listFiles(dir, base = dir) {
@@ -93,11 +128,12 @@ export function readSkills({ root = skillsRoot } = {}) {
       return { dir, error: 'missing SKILL.md', files: [] };
     }
     const text = readFileSync(skillFile, 'utf8');
-    const { data, body } = parseFrontmatter(text);
+    const { data, body, topKeys } = parseFrontmatter(text);
     return {
       dir,
       path: path.join(root, dir),
       data: data ?? {},
+      topKeys,
       body,
       text,
       files: listFiles(path.join(root, dir)),
@@ -274,6 +310,12 @@ export function validateSkill(skill, { version, slugs, skillNames }) {
     errors.push(`${where}: unparseable frontmatter line "${data.__invalid[0]}"`);
   }
 
+  for (const key of skill.topKeys ?? []) {
+    if (METADATA_KEYS.includes(key)) {
+      errors.push(`${where}: "${key}" belongs under metadata, not at the top level`);
+    }
+  }
+
   for (const [key, kind] of Object.entries(FRONTMATTER_SCHEMA)) {
     const value = data[key];
     if (value === undefined) {
@@ -281,7 +323,7 @@ export function validateSkill(skill, { version, slugs, skillNames }) {
       continue;
     }
     if (kind === 'list' && !Array.isArray(value)) {
-      errors.push(`${where}: "${key}" must be an inline list, for example [a, b]`);
+      errors.push(`${where}: "${key}" must be a comma-separated string under metadata`);
     }
     if (kind === 'string' && typeof value !== 'string') {
       errors.push(`${where}: "${key}" must be a scalar`);

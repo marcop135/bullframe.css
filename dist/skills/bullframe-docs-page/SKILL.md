@@ -1,10 +1,11 @@
 ---
 name: bullframe-docs-page
 description: Build a documentation, article or reference page with Bullframe CSS. Use for docs, guides, changelogs, help center articles, blog posts, or any prose-first page.
-bullframe: '>=6.1.0 <7.0.0'
-builds: [bullframe-classless.css, bullframe-classless-dark.css, bullframe-classless-system-default.css, bullframe.css]
-requires: [bullframe-core]
-docs: ['/typography', '/getting-started', '/examples']
+metadata:
+  bullframe: '>=6.1.0 <7.0.0'
+  builds: 'bullframe-classless.css, bullframe-classless-dark.css, bullframe-classless-system-default.css, bullframe.css'
+  requires: 'bullframe-core'
+  docs: '/typography, /getting-started, /examples'
 ---
 
 # Documentation page

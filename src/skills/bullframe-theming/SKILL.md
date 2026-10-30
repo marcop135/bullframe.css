@@ -1,10 +1,11 @@
 ---
 name: bullframe-theming
 description: Theme Bullframe CSS with token overrides, dark or system builds, and a short project stylesheet. Use when branding colours or fonts, picking a dark or prefers-color-scheme build, or adding custom.css on top of one base build.
-bullframe: '>=6.1.0 <7.0.0'
-builds: [bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css, bullframe-classless-dark.css, bullframe-classless-system-default.css, bullframe-utilities.css]
-requires: [bullframe-core]
-docs: ['/theming', '/theming/dark-mode', '/theming/customization', '/variables']
+metadata:
+  bullframe: '>=6.1.0 <7.0.0'
+  builds: 'bullframe.css, bullframe-dark.css, bullframe-system-default.css, bullframe-classless.css, bullframe-classless-dark.css, bullframe-classless-system-default.css, bullframe-utilities.css'
+  requires: 'bullframe-core'
+  docs: '/theming, /theming/dark-mode, /theming/customization, /variables'
 ---
 
 # Theming

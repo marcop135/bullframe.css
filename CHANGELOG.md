@@ -10,6 +10,7 @@
 ### Changed
 
 - npm: add `semantic-html`, `wcag`, `html`, and `prefers-color-scheme` keywords to match the GitHub topics.
+- Skills: load in Claude, Cursor, and Codex from one copy; move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
 
 ## [6.4.2] - 2026-10-22
 

@@ -99,11 +99,12 @@ test('a .claude project also gets the Claude layout', async () => {
   await assertToolLayout(dir, path.join('.claude', 'skills'));
 });
 
-test('a .cursor project also gets the Cursor layout', async () => {
+test('a .cursor project gets the .agents layout, never .cursor/skills', async () => {
   const dir = await project();
   await mkdir(path.join(dir, '.cursor'), { recursive: true });
   await cli(dir, ['skills', 'install']);
-  await assertToolLayout(dir, path.join('.cursor', 'skills'));
+  await assertToolLayout(dir, path.join('.agents', 'skills'));
+  assert.ok(!existsSync(path.join(dir, '.cursor', 'skills')));
 });
 
 test('an .agents project also gets the Codex layout', async () => {
@@ -113,10 +114,11 @@ test('an .agents project also gets the Codex layout', async () => {
   await assertToolLayout(dir, path.join('.agents', 'skills'));
 });
 
-test('--target cursor writes the Cursor layout without AGENTS.md', async () => {
+test('--target cursor writes the .agents layout without AGENTS.md', async () => {
   const dir = await project();
   await cli(dir, ['skills', 'install', '--target', 'cursor']);
-  await assertToolLayout(dir, path.join('.cursor', 'skills'));
+  await assertToolLayout(dir, path.join('.agents', 'skills'));
+  assert.ok(!existsSync(path.join(dir, '.cursor')));
   assert.ok(!existsSync(path.join(dir, 'AGENTS.md')));
   assert.ok(!existsSync(path.join(dir, 'bullframe-skills')));
 });

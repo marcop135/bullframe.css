@@ -25,11 +25,16 @@ const LOCAL_DIR = 'bullframe-skills';
 /** Tool targets that write into `$parent/skills/` with the same SKILL.md layout. */
 const TOOL_TARGETS = {
   claude: { parent: '.claude', label: '.claude/skills' },
-  cursor: { parent: '.cursor', label: '.cursor/skills' },
   codex: { parent: '.agents', label: '.agents/skills' },
 };
 
-const KNOWN_TARGETS = [...Object.keys(TOOL_TARGETS), 'agents', 'dir'];
+/** Cursor reads .claude/skills and .agents/skills, so it gets the Codex layout. */
+const ALIASES = { cursor: 'codex' };
+
+/** Project directories that switch a tool layout on when no --target is given. */
+const DETECT = { '.claude': 'claude', '.agents': 'codex', '.cursor': 'codex' };
+
+const KNOWN_TARGETS = [...Object.keys(TOOL_TARGETS), ...Object.keys(ALIASES), 'agents', 'dir'];
 
 const USAGE = `bullframe.css - agent skills for the Bullframe CSS framework
 
@@ -40,8 +45,9 @@ Usage
 
 Install options
   --target <list>   Comma separated: claude, cursor, codex, agents, dir.
-                    Default: agents, plus claude / cursor / codex when a
-                    .claude, .cursor, or .agents directory exists.
+                    Default: agents, plus claude when .claude exists and
+                    codex (.agents/skills) when .agents or .cursor exists.
+                    cursor installs the codex layout; Cursor reads both.
   --dir <path>      Where the "dir" and "agents" targets copy the skills.
                     Default: ./${LOCAL_DIR}
   --dry-run         Print what would be written and exit without writing.
@@ -181,8 +187,8 @@ async function installSkills(options) {
   let targets = options.targets;
   if (!targets) {
     targets = ['agents'];
-    for (const [name, { parent }] of Object.entries(TOOL_TARGETS)) {
-      if (await exists(path.join(cwd, parent))) targets.push(name);
+    for (const [dir, name] of Object.entries(DETECT)) {
+      if (await exists(path.join(cwd, dir))) targets.push(name);
     }
   }
 
@@ -190,6 +196,7 @@ async function installSkills(options) {
   if (unknown.length) {
     fail(`unknown target "${unknown[0]}". Use ${KNOWN_TARGETS.join(', ')}.`);
   }
+  targets = [...new Set(targets.map((t) => ALIASES[t] ?? t))];
 
   const written = [];
 

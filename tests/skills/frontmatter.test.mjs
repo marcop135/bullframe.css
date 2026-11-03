@@ -6,7 +6,13 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { repoRoot } from '../../scripts/lib/css-api.mjs';
-import { readSkills, docsSlugs, validateSkill, satisfies } from '../../scripts/lib/skills.mjs';
+import {
+  readSkills,
+  docsSlugs,
+  validateSkill,
+  satisfies,
+  parseFrontmatter,
+} from '../../scripts/lib/skills.mjs';
 
 const { version } = JSON.parse(readFileSync(path.join(repoRoot, 'package.json'), 'utf8'));
 const skills = readSkills();
@@ -36,6 +42,21 @@ test('prerequisites load before dependants', () => {
     }
     seen.add(skill.data.name);
   }
+});
+
+test('metadata keys hoist to the top level and are rejected there', () => {
+  const nested = parseFrontmatter(
+    "---\nname: x\nmetadata:\n  builds: 'a.css, b.css'\n  requires: ''\n---\n"
+  );
+  assert.deepEqual(nested.data.builds, ['a.css', 'b.css']);
+  assert.deepEqual(nested.data.requires, []);
+
+  const flat = parseFrontmatter('---\nname: x\nbuilds: [a.css]\n---\n');
+  const errors = validateSkill(
+    { dir: 'x', data: flat.data, topKeys: flat.topKeys, body: '' },
+    { version, slugs, skillNames }
+  );
+  assert.ok(errors.some((e) => e.includes('"builds" belongs under metadata')));
 });
 
 test('version ranges are comparator pairs', () => {

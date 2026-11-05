@@ -28,7 +28,7 @@ function syncColorSchemeMeta() {
   if (!preference || preference === 'auto') {
     meta.setAttribute('content', 'light dark');
   } else {
-    meta.setAttribute('content', preference === 'dark' ? 'dark' : 'light');
+    meta.setAttribute('content', preference === 'dark' ? 'dark' : 'light only');
   }
 }
 

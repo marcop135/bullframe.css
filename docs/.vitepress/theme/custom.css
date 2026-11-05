@@ -8,7 +8,8 @@
  * Meta color-scheme stays "light dark" for the pre-CSS canvas; after CSS,
  * these pins keep forced light/dark honest for UA widgets and scrollbars. */
 html {
-  color-scheme: light;
+  /* "only" opts forced light out of Safari Adaptive Dark Mode. */
+  color-scheme: light only;
 }
 
 html.dark {

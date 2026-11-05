@@ -13,6 +13,10 @@
 - Skills: load in Claude, Cursor, and Codex from one copy; move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
 - Dependabot: check npm and GitHub Actions monthly in groups; npm major updates stay separate.
 
+### Fixed
+
+- Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#116](https://github.com/marcop135/bullframe.css/pull/116)) ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
+
 ## [7.0.0] - 2026-10-25 - BREAKING CHANGES
 
 ### Added

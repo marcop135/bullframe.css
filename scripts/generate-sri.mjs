@@ -37,9 +37,14 @@ function cdnUrl(file) {
   return `https://cdn.jsdelivr.net/npm/bullframe.css@${version}/dist/css/${file}`;
 }
 
-function linkTag(file, integrity, { selfClosing = true } = {}) {
+// cdnjs autoupdates from npm (dist/css flattened), so files and hashes match jsDelivr.
+function cdnjsUrl(file) {
+  return `https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/${version}/${file}`;
+}
+
+function linkTag(file, integrity, { selfClosing = true, href = cdnUrl(file) } = {}) {
   const close = selfClosing ? ' />' : '>';
-  return `<link rel="stylesheet" href="${cdnUrl(file)}" integrity="${integrity}" crossorigin="anonymous"${close}`;
+  return `<link rel="stylesheet" href="${href}" integrity="${integrity}" crossorigin="anonymous"${close}`;
 }
 
 const hashes = {};
@@ -61,6 +66,7 @@ const out = {
       file,
       {
         href: cdnUrl(file),
+        cdnjs: cdnjsUrl(file),
         integrity: hashes[file],
         crossorigin: 'anonymous',
       },
@@ -111,6 +117,12 @@ const cdnSectionMd = `Quick drop-in (latest published package entry):
 
 \`\`\`html
 ${defaultLinkSlash}
+\`\`\`
+
+[cdnjs](https://cdnjs.com/libraries/bullframe.css) mirrors the same npm files, so the same hash works:
+
+\`\`\`html
+${linkTag(defaultFile, defaultIntegrity, { href: cdnjsUrl(defaultFile) })}
 \`\`\`
 
 Swap the filename for another build (\`bullframe-classless.min.css\`, \`bullframe-dark.min.css\`, …). Hashes for all seven builds: [sri.json](/sri.json).`;

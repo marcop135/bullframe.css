@@ -71,6 +71,12 @@ Quick drop-in (latest published package entry):
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-WVY8Gu/C2kVRU6YJKrtHGByv6SBjpMBvm3PvweHTvruYBFBsivROgdb9+5uDkVt5" crossorigin="anonymous" />
 ```
 
+[cdnjs](https://cdnjs.com/libraries/bullframe.css) mirrors the same npm files, so the same hash works:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" integrity="sha384-WVY8Gu/C2kVRU6YJKrtHGByv6SBjpMBvm3PvweHTvruYBFBsivROgdb9+5uDkVt5" crossorigin="anonymous" />
+```
+
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
 <!-- sri:cdn:end -->
 

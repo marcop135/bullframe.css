@@ -15,7 +15,7 @@
 
 ### Fixed
 
-- Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
+- Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#116](https://github.com/marcop135/bullframe.css/pull/116)) ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
 
 ## [6.4.2] - 2026-10-22
 

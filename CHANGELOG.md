@@ -11,6 +11,7 @@
 
 - npm: add `semantic-html`, `wcag`, `html`, and `prefers-color-scheme` keywords to match the GitHub topics.
 - Skills: load in Claude, Cursor, and Codex from one copy; move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
+- Dependabot: check npm and GitHub Actions monthly in groups; npm major updates stay separate.
 
 ## [7.0.0] - 2026-10-25 - BREAKING CHANGES
 

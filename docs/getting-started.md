@@ -59,23 +59,35 @@ Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
 
 <!-- sri:cdn:start -->
 
-Quick drop-in (latest published package entry):
+Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullframe.css) and [cdnjs](https://cdnjs.com/libraries/bullframe.css). Both serve the same files from npm, so use either one with the same integrity hash.
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
-```
+**Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`.
 
-**Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
+::: code-group
 
-```html
+```html [jsDelivr]
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-WVY8Gu/C2kVRU6YJKrtHGByv6SBjpMBvm3PvweHTvruYBFBsivROgdb9+5uDkVt5" crossorigin="anonymous" />
 ```
 
-[cdnjs](https://cdnjs.com/libraries/bullframe.css) mirrors the same npm files, so the same hash works:
-
-```html
+```html [cdnjs]
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" integrity="sha384-WVY8Gu/C2kVRU6YJKrtHGByv6SBjpMBvm3PvweHTvruYBFBsivROgdb9+5uDkVt5" crossorigin="anonymous" />
 ```
+
+:::
+
+**Quick drop-in:** no integrity hash. jsDelivr serves the latest release; cdnjs has no "latest" URL, so its link names a version.
+
+::: code-group
+
+```html [jsDelivr]
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
+```
+
+```html [cdnjs]
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" />
+```
+
+:::
 
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
 <!-- sri:cdn:end -->

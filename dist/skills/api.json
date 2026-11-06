@@ -242,37 +242,37 @@
       "section": "Focus ring (prefers-contrast: more raises colour for WCAG 1.4.11)"
     },
     {
-      "name": "--bf-space-sm",
+      "name": "--bf-spacing-sm",
       "value": "0.25rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-space-md",
+      "name": "--bf-spacing-md",
       "value": "0.5rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-space-lg",
+      "name": "--bf-spacing-lg",
       "value": "1rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-space-xl",
+      "name": "--bf-spacing-xl",
       "value": "2rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-space-xxl",
+      "name": "--bf-spacing-xxl",
       "value": "3rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-space-gutter",
+      "name": "--bf-spacing-grid-gutter",
       "value": "1.5rem",
       "section": "Spacing scale + grid gutter"
     },
     {
-      "name": "--bf-font-sans",
+      "name": "--bf-font-sans-serif",
       "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
       "section": "Type"
     },
@@ -282,17 +282,17 @@
       "section": "Type"
     },
     {
-      "name": "--bf-font-mono",
+      "name": "--bf-font-monospace",
       "value": "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
       "section": "Type"
     },
     {
-      "name": "--bf-font-size-body",
+      "name": "--bf-body-font-size-rem",
       "value": "1.6rem",
       "section": "Type"
     },
     {
-      "name": "--bf-line-height-body",
+      "name": "--bf-body-line-height",
       "value": "1.5",
       "section": "Type"
     },

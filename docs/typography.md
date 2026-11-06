@@ -1,6 +1,6 @@
 # Typography
 
-Bullframe CSS provides semantic typography styles for all HTML elements out of the box.
+Bullframe CSS styles headings, body text, blockquotes, code and lists from plain HTML. Classes add lead paragraphs, text alignment and text transforms.
 
 ## Headings
 
@@ -17,7 +17,7 @@ All heading levels (`h1` through `h6`) are styled with appropriate font sizes an
 
 ## Body Text
 
-Body text uses the `--bf-font-size-body` and `--bf-line-height-body` variables:
+Body text uses the `--bf-body-font-size-rem` and `--bf-body-line-height` variables:
 
 ```html
 <p>This is a paragraph of body text. It uses the default font size and line height.</p>

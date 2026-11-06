@@ -15,14 +15,11 @@
 
 ### Changed
 
-- **BREAKING:** use token names following `--bf-<category>-<role>`; see [Migration v6 to v7](docs/migration-v7.md).
-- **BREAKING:** the unversioned jsDelivr URL upgrades to v7; pin `bullframe.css@6` to retain v6 overrides.
-- **BREAKING:** colours are role tokens (`--bf-color-primary`, `--bf-color-border`); dark sheets reuse them.
-- **BREAKING:** rename spacing and typography tokens; see the migration table.
+- **BREAKING:** name colours by role (`--bf-color-primary`), not hue, and reuse them in dark sheets. See [Migration v6 to v7](docs/migration-v7.md).
 - Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later.
-- Docs: rewrite [CSS Variables](docs/variables.md) as role tables; list dark hooks in the API reference.
-- Skills: load in Claude, Cursor, and Codex from one copy; move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
-- Dependabot: check npm and GitHub Actions monthly in groups; npm major updates stay separate.
+- Docs: rewrite [CSS Variables](docs/variables.md) as role tables and list dark hooks in the API reference.
+- Skills: load in Claude, Cursor, and Codex from one copy and move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
+- Dependabot: check npm and GitHub Actions monthly in groups, with npm major updates kept separate.
 
 ### Removed
 
@@ -30,7 +27,7 @@
 
 ### Fixed
 
-- Show the keyboard focus ring on buttons, radios, checkboxes and `.bf-btn`; it was suppressed.
+- Restore the keyboard focus ring on buttons, radios, checkboxes and `.bf-btn`.
 - Keep a focus ring on `aria-disabled="true"` controls.
 - Forced-colours mode: outline focused fields in `Highlight`, since their border and shadow are dropped.
 - Classless dark: drive the ring colour from `--bf-color-focus-ring` so `prefers-contrast: more` applies.

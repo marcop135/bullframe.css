@@ -65,23 +65,23 @@
   --bf-focus-ring-offset: 0.3rem;
 
   /* Spacing scale + grid gutter */
-  --bf-space-sm: 0.25rem;
-  --bf-space-md: 0.5rem;
-  --bf-space-lg: 1rem;
-  --bf-space-xl: 2rem;
-  --bf-space-xxl: 3rem;
-  --bf-space-gutter: 1.5rem;
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
 
   /* Type */
-  --bf-font-sans:
+  --bf-font-sans-serif:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-mono:
+  --bf-font-monospace:
     SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --bf-font-size-body: 1.6rem;
-  --bf-line-height-body: 1.5;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
 
   /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;
@@ -130,7 +130,7 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  padding: var(--bf-space-md) var(--bf-space-lg);
+  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
   color: var(--bf-color-primary);
   background-color: var(--bf-color-overlay-bg);
   border: 1px solid var(--bf-color-border);
@@ -394,7 +394,7 @@
 }
 
 .bf-font-sans-serif {
-  font-family: var(--bf-font-sans) !important;
+  font-family: var(--bf-font-sans-serif) !important;
 }
 
 .bf-font-serif {
@@ -402,7 +402,7 @@
 }
 
 .bf-font-monospace {
-  font-family: var(--bf-font-mono) !important;
+  font-family: var(--bf-font-monospace) !important;
 }
 
 /* Opt-in stacks from Modern Font Stacks (https://modernfontstacks.com/). */
@@ -484,7 +484,7 @@
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: var(--bf-space-lg) !important;
+  margin-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-h1 {
@@ -528,8 +528,8 @@ body.bf-responsive-typography {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: var(--bf-space-gutter);
-  padding-right: var(--bf-space-gutter);
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
 }
 
 .bf-container {
@@ -539,15 +539,15 @@ body.bf-responsive-typography {
 .bf-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--bf-space-gutter));
-  margin-right: calc(-1 * var(--bf-space-gutter));
+  margin-left: calc(-1 * var(--bf-spacing-grid-gutter));
+  margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
 }
 
 [class^='bf-col-'] {
   position: relative;
   min-height: 1px;
-  padding-left: var(--bf-space-gutter);
-  padding-right: var(--bf-space-gutter);
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -764,38 +764,38 @@ table th[class^='bf-col'] {
 /* .bf-m-N is the historical short form of .bf-m-b-N; both set margin-bottom. */
 .bf-m-1,
 .bf-m-b-1 {
-  margin-bottom: var(--bf-space-md) !important;
+  margin-bottom: var(--bf-spacing-md) !important;
 }
 
 .bf-m-2,
 .bf-m-b-2 {
-  margin-bottom: var(--bf-space-lg) !important;
+  margin-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-m-3,
 .bf-m-b-3 {
-  margin-bottom: var(--bf-space-xl) !important;
+  margin-bottom: var(--bf-spacing-xl) !important;
 }
 
 .bf-m-4,
 .bf-m-b-4 {
-  margin-bottom: var(--bf-space-xxl) !important;
+  margin-bottom: var(--bf-spacing-xxl) !important;
 }
 
 .bf-m-t-1 {
-  margin-top: var(--bf-space-md) !important;
+  margin-top: var(--bf-spacing-md) !important;
 }
 
 .bf-m-t-2 {
-  margin-top: var(--bf-space-lg) !important;
+  margin-top: var(--bf-spacing-lg) !important;
 }
 
 .bf-m-t-3 {
-  margin-top: var(--bf-space-xl) !important;
+  margin-top: var(--bf-spacing-xl) !important;
 }
 
 .bf-m-t-4 {
-  margin-top: var(--bf-space-xxl) !important;
+  margin-top: var(--bf-spacing-xxl) !important;
 }
 
 .bf-p-0 {
@@ -821,38 +821,38 @@ table th[class^='bf-col'] {
 /* .bf-p-N is the historical short form of .bf-p-b-N; both set padding-bottom. */
 .bf-p-1,
 .bf-p-b-1 {
-  padding-bottom: var(--bf-space-md) !important;
+  padding-bottom: var(--bf-spacing-md) !important;
 }
 
 .bf-p-2,
 .bf-p-b-2 {
-  padding-bottom: var(--bf-space-lg) !important;
+  padding-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-p-3,
 .bf-p-b-3 {
-  padding-bottom: var(--bf-space-xl) !important;
+  padding-bottom: var(--bf-spacing-xl) !important;
 }
 
 .bf-p-4,
 .bf-p-b-4 {
-  padding-bottom: var(--bf-space-xxl) !important;
+  padding-bottom: var(--bf-spacing-xxl) !important;
 }
 
 .bf-p-t-1 {
-  padding-top: var(--bf-space-md) !important;
+  padding-top: var(--bf-spacing-md) !important;
 }
 
 .bf-p-t-2 {
-  padding-top: var(--bf-space-lg) !important;
+  padding-top: var(--bf-spacing-lg) !important;
 }
 
 .bf-p-t-3 {
-  padding-top: var(--bf-space-xl) !important;
+  padding-top: var(--bf-spacing-xl) !important;
 }
 
 .bf-p-t-4 {
-  padding-top: var(--bf-space-xxl) !important;
+  padding-top: var(--bf-spacing-xxl) !important;
 }
 /* .bf-btn and variants. */
 
@@ -860,7 +860,7 @@ table th[class^='bf-col'] {
   display: inline-block;
   cursor: pointer;
   color: var(--bf-color-on-neutral);
-  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -871,7 +871,7 @@ table th[class^='bf-col'] {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: var(--bf-space-sm);
+  border-radius: var(--bf-spacing-sm);
 
   border: 0;
   background-image: none;
@@ -1052,13 +1052,13 @@ button.bf-disabled:focus,
 .custom-checkbox-wrapper [type='checkbox'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-space-md);
+  margin-left: var(--bf-spacing-md);
 }
 
 *[dir='rtl'] .custom-checkbox-wrapper [type='checkbox'] + label,
 .custom-checkbox-wrapper [type='checkbox'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-space-md);
+  margin-right: var(--bf-spacing-md);
 }
 
 .custom-checkbox-wrapper [type='checkbox']::after {
@@ -1094,13 +1094,13 @@ button.bf-disabled:focus,
 .custom-radio-wrapper [type='radio'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-space-md);
+  margin-left: var(--bf-spacing-md);
 }
 
 *[dir='rtl'] .custom-radio-wrapper [type='radio'] + label,
 .custom-radio-wrapper [type='radio'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-space-md);
+  margin-right: var(--bf-spacing-md);
 }
 
 .custom-radio-wrapper [type='radio']::after {
@@ -1142,9 +1142,9 @@ dt {
 
 .bf-table th,
 .bf-table td {
-  padding: var(--bf-space-lg);
+  padding: var(--bf-spacing-lg);
   border-bottom: 1px solid var(--bf-color-table-border);
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
 }
 
 /* Horizontal scroll wrapper. */
@@ -1155,7 +1155,7 @@ dt {
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
 }
 
 /* Prefer always-visible scrollbars on WebKit. */

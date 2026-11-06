@@ -66,11 +66,11 @@ Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullfr
 ::: code-group
 
 ```html [jsDelivr]
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-WVY8Gu/C2kVRU6YJKrtHGByv6SBjpMBvm3PvweHTvruYBFBsivROgdb9+5uDkVt5" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-78fHHaDJemP0DVVlyVidsV2lUco1MLfFIZAbOB/sYostqSCgUA7NCpjlsUpOCBdl" crossorigin="anonymous" />
 ```
 
 ```html [cdnjs]
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" integrity="sha384-WVY8Gu/C2kVRU6YJKrtHGByv6SBjpMBvm3PvweHTvruYBFBsivROgdb9+5uDkVt5" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" integrity="sha384-78fHHaDJemP0DVVlyVidsV2lUco1MLfFIZAbOB/sYostqSCgUA7NCpjlsUpOCBdl" crossorigin="anonymous" />
 ```
 
 :::
@@ -135,7 +135,7 @@ Self-host from the [v7.0.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-WVY8Gu/C2kVRU6YJKrtHGByv6SBjpMBvm3PvweHTvruYBFBsivROgdb9+5uDkVt5" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-78fHHaDJemP0DVVlyVidsV2lUco1MLfFIZAbOB/sYostqSCgUA7NCpjlsUpOCBdl" crossorigin="anonymous" />
   </head>
   <body>
     <a class="bf-skip-link" href="#main">Skip to content</a>
@@ -156,7 +156,7 @@ Self-host from the [v7.0.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-3FdzUGC7caVLPa9PtWXEBpzakZePRUc/4uMxKPTejLA2CjShc94y/HL2hjdyfvO7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-9DC0hKUNur+7IIvhJYo2V+DdoTD0TlEjEQ4kVBQGu1Sd8KuboWOvGHBj54w6USM7" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;

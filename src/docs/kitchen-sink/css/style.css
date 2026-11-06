@@ -112,7 +112,7 @@
 }
 
 .demo #components pre code {
-  font-family: var(--bf-font-mono);
+  font-family: var(--bf-font-monospace);
   color: var(--bf-color-on-neutral);
 }
 

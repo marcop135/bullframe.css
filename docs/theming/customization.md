@@ -12,10 +12,10 @@ The easiest way to customize Bullframe CSS is to override CSS variables:
   --bf-color-primary: rgb(100 200 255);
 
   /* Override spacing */
-  --bf-space-lg: 1.5rem;
+  --bf-spacing-lg: 1.5rem;
 
   /* Override typography */
-  --bf-font-size-body: 1.8rem;
+  --bf-body-font-size-rem: 1.8rem;
 }
 ```
 

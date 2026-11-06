@@ -65,23 +65,23 @@
   --bf-focus-ring-offset: 0.3rem;
 
   /* Spacing scale + grid gutter */
-  --bf-space-sm: 0.25rem;
-  --bf-space-md: 0.5rem;
-  --bf-space-lg: 1rem;
-  --bf-space-xl: 2rem;
-  --bf-space-xxl: 3rem;
-  --bf-space-gutter: 1.5rem;
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
 
   /* Type */
-  --bf-font-sans:
+  --bf-font-sans-serif:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-mono:
+  --bf-font-monospace:
     SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --bf-font-size-body: 1.6rem;
-  --bf-line-height-body: 1.5;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
 
   /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;
@@ -292,8 +292,8 @@ html {
 
 body {
   margin: 0;
-  font-size: var(--bf-font-size-body);
-  line-height: var(--bf-line-height-body);
+  font-size: var(--bf-body-font-size-rem);
+  line-height: var(--bf-body-line-height);
   font-weight: 400;
   text-align: left;
 
@@ -338,7 +338,7 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: var(--bf-space-lg);
+  margin-bottom: var(--bf-spacing-lg);
 }
 
 /* Balanced headings where supported; no-op elsewhere. */
@@ -381,7 +381,7 @@ h6 {
 /* Blockquote and citation. */
 
 blockquote {
-  margin: 0 0 var(--bf-space-xl);
+  margin: 0 0 var(--bf-spacing-xl);
   padding-left: 0;
   font-style: italic;
 }
@@ -405,7 +405,7 @@ q {
 /* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
-  margin: 0 0 var(--bf-space-xl) 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
 }
 
 /* abbr (Bootstrap 4): dotted underline + help cursor. */
@@ -481,14 +481,14 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: var(--bf-space-xl) 0;
+  margin: var(--bf-spacing-xl) 0;
   padding: 0;
   overflow: visible; /* Edge: show overflow. */
 }
 /* pre / code / kbd / samp. */
 
 pre {
-  margin: 0 0 var(--bf-space-xl) 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
 
   display: block;
   overflow: auto;
@@ -609,7 +609,7 @@ pre code {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -619,7 +619,7 @@ pre code {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
 }
 
 :where(label input, label select, label textarea) {
@@ -645,7 +645,7 @@ pre code {
 }
 
 :where([type='search']) {
-  outline-offset: calc(-1 * var(--bf-space-sm));
+  outline-offset: calc(-1 * var(--bf-spacing-sm));
 }
 
 :where(output) {
@@ -714,7 +714,7 @@ pre code {
 }
 
 :where(button, input, select, textarea) {
-  border-radius: var(--bf-space-sm);
+  border-radius: var(--bf-spacing-sm);
 }
 
 :where([type='radio']) {
@@ -722,7 +722,7 @@ pre code {
 }
 
 :where([type='checkbox']) {
-  border-radius: var(--bf-space-md);
+  border-radius: var(--bf-spacing-md);
 }
 
 :where([type='radio'], [type='checkbox']) {
@@ -828,7 +828,7 @@ pre code {
 ) {
   background-color: var(--bf-color-field-bg);
   border: 1px solid var(--bf-color-field-border);
-  padding: var(--bf-space-md) calc(var(--bf-space-lg) * 0.75);
+  padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
 }
 
 :where(
@@ -886,7 +886,7 @@ pre code {
 
 :where(button, [type='button'], [type='reset'], [type='submit']) {
   color: var(--bf-color-on-neutral);
-  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   background: var(--bf-color-neutral);
   transition:
     color 0.2s,
@@ -965,15 +965,15 @@ pre code {
   background: var(--bf-color-field-bg)
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
-  padding-right: calc(var(--bf-space-lg) + var(--bf-space-lg));
+  padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 
 /* RTL: mirror arrow after appearance:none removes the native control. */
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
   background-position: left 0.85rem top 50%;
-  padding-right: calc(var(--bf-space-lg) * 0.75);
-  padding-left: calc(var(--bf-space-lg) + var(--bf-space-lg));
+  padding-right: calc(var(--bf-spacing-lg) * 0.75);
+  padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 /* Range: custom thumb/track when appearance:none is supported.
  * CodePen: https://codepen.io/marcop135/pen/JjGrNMx */
@@ -1166,7 +1166,7 @@ menu,
 ol,
 ul,
 dl {
-  margin: 0 0 var(--bf-space-xl) 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
   padding: 0;
 }
 
@@ -1182,7 +1182,7 @@ dd {
 
 ul,
 ol {
-  margin-left: var(--bf-space-xl);
+  margin-left: var(--bf-spacing-xl);
 }
 
 nav ol,
@@ -1309,7 +1309,7 @@ iframe {
 
 address {
   font-style: normal;
-  margin-bottom: var(--bf-space-lg);
+  margin-bottom: var(--bf-spacing-lg);
   line-height: inherit;
 }
 
@@ -1327,12 +1327,12 @@ dialog {
   background-color: var(--bf-color-bg);
   color: var(--bf-color-text);
   border: none;
-  border-radius: var(--bf-space-sm);
-  padding: var(--bf-space-xl);
+  border-radius: var(--bf-spacing-sm);
+  padding: var(--bf-spacing-xl);
   height: -moz-fit-content;
   height: fit-content;
   min-width: min(25rem, 100%);
-  max-width: calc(100vw - (var(--bf-space-gutter) * 2));
+  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
 
 @media (min-width: 768px) {
@@ -1393,8 +1393,8 @@ th {
 }
 
 caption {
-  padding-top: var(--bf-space-md);
-  padding-bottom: var(--bf-space-md);
+  padding-top: var(--bf-spacing-md);
+  padding-bottom: var(--bf-spacing-md);
   color: var(--bf-color-caption);
   text-align: left;
   caption-side: bottom;

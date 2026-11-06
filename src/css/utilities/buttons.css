@@ -4,7 +4,7 @@
   display: inline-block;
   cursor: pointer;
   color: var(--bf-color-on-neutral);
-  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -13,7 +13,7 @@
   overflow: visible;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   user-select: none;
-  border-radius: var(--bf-space-sm);
+  border-radius: var(--bf-spacing-sm);
 
   border: 0;
   background-image: none;

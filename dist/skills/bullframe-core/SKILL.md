@@ -40,7 +40,7 @@ Bullframe skill assumes these rules.
    rebind those tokens, a literal does not follow.
 6. Keep custom CSS in one project stylesheet, loaded after Bullframe, and confine it to
    `:root` token overrides plus genuinely project-specific rules.
-7. The root font-size is `62.5%`, so `1rem` is about `10px`. `--bf-font-size-body` is
+7. The root font-size is `62.5%`, so `1rem` is about `10px`. `--bf-body-font-size-rem` is
    `1.6rem`, which renders as 16px.
 
 ## Page scaffold

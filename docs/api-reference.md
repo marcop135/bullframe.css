@@ -82,24 +82,24 @@ Generated from `src/css/`. Re-run `npm run docs:api-reference` after changing va
 
 ### Spacing scale + grid gutter
 
-| Variable            | Default   | Notes |
-| ------------------- | --------- | ----- |
-| `--bf-space-sm`     | `0.25rem` |       |
-| `--bf-space-md`     | `0.5rem`  |       |
-| `--bf-space-lg`     | `1rem`    |       |
-| `--bf-space-xl`     | `2rem`    |       |
-| `--bf-space-xxl`    | `3rem`    |       |
-| `--bf-space-gutter` | `1.5rem`  |       |
+| Variable                   | Default   | Notes |
+| -------------------------- | --------- | ----- |
+| `--bf-spacing-sm`          | `0.25rem` |       |
+| `--bf-spacing-md`          | `0.5rem`  |       |
+| `--bf-spacing-lg`          | `1rem`    |       |
+| `--bf-spacing-xl`          | `2rem`    |       |
+| `--bf-spacing-xxl`         | `3rem`    |       |
+| `--bf-spacing-grid-gutter` | `1.5rem`  |       |
 
 ### Type
 
-| Variable                | Default                                                                                                                                                                                                               | Notes |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| `--bf-font-sans`        | `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'` |       |
-| `--bf-font-serif`       | `Georgia, Times, 'Times New Roman', serif`                                                                                                                                                                            |       |
-| `--bf-font-mono`        | `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`                                                                                                                                |       |
-| `--bf-font-size-body`   | `1.6rem`                                                                                                                                                                                                              |       |
-| `--bf-line-height-body` | `1.5`                                                                                                                                                                                                                 |       |
+| Variable                  | Default                                                                                                                                                                                                               | Notes |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| `--bf-font-sans-serif`    | `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'` |       |
+| `--bf-font-serif`         | `Georgia, Times, 'Times New Roman', serif`                                                                                                                                                                            |       |
+| `--bf-font-monospace`     | `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`                                                                                                                                |       |
+| `--bf-body-font-size-rem` | `1.6rem`                                                                                                                                                                                                              |       |
+| `--bf-body-line-height`   | `1.5`                                                                                                                                                                                                                 |       |
 
 ### Breakpoint tokens (documentation / tooling; media queries use literal px below)
 

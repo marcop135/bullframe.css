@@ -65,23 +65,23 @@
   --bf-focus-ring-offset: 0.3rem;
 
   /* Spacing scale + grid gutter */
-  --bf-space-sm: 0.25rem;
-  --bf-space-md: 0.5rem;
-  --bf-space-lg: 1rem;
-  --bf-space-xl: 2rem;
-  --bf-space-xxl: 3rem;
-  --bf-space-gutter: 1.5rem;
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
 
   /* Type */
-  --bf-font-sans:
+  --bf-font-sans-serif:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
   --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
-  --bf-font-mono:
+  --bf-font-monospace:
     SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --bf-font-size-body: 1.6rem;
-  --bf-line-height-body: 1.5;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
 
   /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
   --bf-breakpoint-xs: 0;
@@ -292,8 +292,8 @@ html {
 
 body {
   margin: 0;
-  font-size: var(--bf-font-size-body);
-  line-height: var(--bf-line-height-body);
+  font-size: var(--bf-body-font-size-rem);
+  line-height: var(--bf-body-line-height);
   font-weight: 400;
   text-align: left;
 
@@ -338,7 +338,7 @@ h6 {
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: var(--bf-space-lg);
+  margin-bottom: var(--bf-spacing-lg);
 }
 
 /* Balanced headings where supported; no-op elsewhere. */
@@ -381,7 +381,7 @@ h6 {
 /* Blockquote and citation. */
 
 blockquote {
-  margin: 0 0 var(--bf-space-xl);
+  margin: 0 0 var(--bf-spacing-xl);
   padding-left: 0;
   font-style: italic;
 }
@@ -405,7 +405,7 @@ q {
 /* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
-  margin: 0 0 var(--bf-space-xl) 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
 }
 
 /* abbr (Bootstrap 4): dotted underline + help cursor. */
@@ -481,14 +481,14 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: var(--bf-space-xl) 0;
+  margin: var(--bf-spacing-xl) 0;
   padding: 0;
   overflow: visible; /* Edge: show overflow. */
 }
 /* pre / code / kbd / samp. */
 
 pre {
-  margin: 0 0 var(--bf-space-xl) 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
 
   display: block;
   overflow: auto;
@@ -609,7 +609,7 @@ pre code {
   border: 0;
   padding: 0;
   font-weight: 400;
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
   font-size: inherit;
   line-height: 1.375;
   color: inherit;
@@ -619,7 +619,7 @@ pre code {
   font-weight: 400;
   font-size: 90%;
   line-height: 1.375;
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
 }
 
 :where(label input, label select, label textarea) {
@@ -645,7 +645,7 @@ pre code {
 }
 
 :where([type='search']) {
-  outline-offset: calc(-1 * var(--bf-space-sm));
+  outline-offset: calc(-1 * var(--bf-spacing-sm));
 }
 
 :where(output) {
@@ -714,7 +714,7 @@ pre code {
 }
 
 :where(button, input, select, textarea) {
-  border-radius: var(--bf-space-sm);
+  border-radius: var(--bf-spacing-sm);
 }
 
 :where([type='radio']) {
@@ -722,7 +722,7 @@ pre code {
 }
 
 :where([type='checkbox']) {
-  border-radius: var(--bf-space-md);
+  border-radius: var(--bf-spacing-md);
 }
 
 :where([type='radio'], [type='checkbox']) {
@@ -828,7 +828,7 @@ pre code {
 ) {
   background-color: var(--bf-color-field-bg);
   border: 1px solid var(--bf-color-field-border);
-  padding: var(--bf-space-md) calc(var(--bf-space-lg) * 0.75);
+  padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
 }
 
 :where(
@@ -886,7 +886,7 @@ pre code {
 
 :where(button, [type='button'], [type='reset'], [type='submit']) {
   color: var(--bf-color-on-neutral);
-  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   background: var(--bf-color-neutral);
   transition:
     color 0.2s,
@@ -965,15 +965,15 @@ pre code {
   background: var(--bf-color-field-bg)
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.85rem center/8px 10px;
-  padding-right: calc(var(--bf-space-lg) + var(--bf-space-lg));
+  padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 
 /* RTL: mirror arrow after appearance:none removes the native control. */
 :where(*[dir='rtl']) :where(select):not([size], select[multiple]),
 :where(select[dir='rtl']):not([size], select[multiple]) {
   background-position: left 0.85rem top 50%;
-  padding-right: calc(var(--bf-space-lg) * 0.75);
-  padding-left: calc(var(--bf-space-lg) + var(--bf-space-lg));
+  padding-right: calc(var(--bf-spacing-lg) * 0.75);
+  padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
 }
 /* Range: custom thumb/track when appearance:none is supported.
  * CodePen: https://codepen.io/marcop135/pen/JjGrNMx */
@@ -1166,7 +1166,7 @@ menu,
 ol,
 ul,
 dl {
-  margin: 0 0 var(--bf-space-xl) 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
   padding: 0;
 }
 
@@ -1182,7 +1182,7 @@ dd {
 
 ul,
 ol {
-  margin-left: var(--bf-space-xl);
+  margin-left: var(--bf-spacing-xl);
 }
 
 nav ol,
@@ -1309,7 +1309,7 @@ iframe {
 
 address {
   font-style: normal;
-  margin-bottom: var(--bf-space-lg);
+  margin-bottom: var(--bf-spacing-lg);
   line-height: inherit;
 }
 
@@ -1327,12 +1327,12 @@ dialog {
   background-color: var(--bf-color-bg);
   color: var(--bf-color-text);
   border: none;
-  border-radius: var(--bf-space-sm);
-  padding: var(--bf-space-xl);
+  border-radius: var(--bf-spacing-sm);
+  padding: var(--bf-spacing-xl);
   height: -moz-fit-content;
   height: fit-content;
   min-width: min(25rem, 100%);
-  max-width: calc(100vw - (var(--bf-space-gutter) * 2));
+  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
 
 @media (min-width: 768px) {
@@ -1393,8 +1393,8 @@ th {
 }
 
 caption {
-  padding-top: var(--bf-space-md);
-  padding-bottom: var(--bf-space-md);
+  padding-top: var(--bf-spacing-md);
+  padding-bottom: var(--bf-spacing-md);
   color: var(--bf-color-caption);
   text-align: left;
   caption-side: bottom;
@@ -1520,7 +1520,7 @@ caption {
   top: 0;
   left: 0;
   z-index: 9999;
-  padding: var(--bf-space-md) var(--bf-space-lg);
+  padding: var(--bf-spacing-md) var(--bf-spacing-lg);
   color: var(--bf-color-primary);
   background-color: var(--bf-color-overlay-bg);
   border: 1px solid var(--bf-color-border);
@@ -1784,7 +1784,7 @@ caption {
 }
 
 .bf-font-sans-serif {
-  font-family: var(--bf-font-sans) !important;
+  font-family: var(--bf-font-sans-serif) !important;
 }
 
 .bf-font-serif {
@@ -1792,7 +1792,7 @@ caption {
 }
 
 .bf-font-monospace {
-  font-family: var(--bf-font-mono) !important;
+  font-family: var(--bf-font-monospace) !important;
 }
 
 /* Opt-in stacks from Modern Font Stacks (https://modernfontstacks.com/). */
@@ -1874,7 +1874,7 @@ caption {
   font-weight: 600 !important;
   margin-top: 0 !important;
   line-height: 1.2 !important;
-  margin-bottom: var(--bf-space-lg) !important;
+  margin-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-h1 {
@@ -1918,8 +1918,8 @@ body.bf-responsive-typography {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: var(--bf-space-gutter);
-  padding-right: var(--bf-space-gutter);
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
 }
 
 .bf-container {
@@ -1929,15 +1929,15 @@ body.bf-responsive-typography {
 .bf-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--bf-space-gutter));
-  margin-right: calc(-1 * var(--bf-space-gutter));
+  margin-left: calc(-1 * var(--bf-spacing-grid-gutter));
+  margin-right: calc(-1 * var(--bf-spacing-grid-gutter));
 }
 
 [class^='bf-col-'] {
   position: relative;
   min-height: 1px;
-  padding-left: var(--bf-space-gutter);
-  padding-right: var(--bf-space-gutter);
+  padding-left: var(--bf-spacing-grid-gutter);
+  padding-right: var(--bf-spacing-grid-gutter);
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -2154,38 +2154,38 @@ table th[class^='bf-col'] {
 /* .bf-m-N is the historical short form of .bf-m-b-N; both set margin-bottom. */
 .bf-m-1,
 .bf-m-b-1 {
-  margin-bottom: var(--bf-space-md) !important;
+  margin-bottom: var(--bf-spacing-md) !important;
 }
 
 .bf-m-2,
 .bf-m-b-2 {
-  margin-bottom: var(--bf-space-lg) !important;
+  margin-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-m-3,
 .bf-m-b-3 {
-  margin-bottom: var(--bf-space-xl) !important;
+  margin-bottom: var(--bf-spacing-xl) !important;
 }
 
 .bf-m-4,
 .bf-m-b-4 {
-  margin-bottom: var(--bf-space-xxl) !important;
+  margin-bottom: var(--bf-spacing-xxl) !important;
 }
 
 .bf-m-t-1 {
-  margin-top: var(--bf-space-md) !important;
+  margin-top: var(--bf-spacing-md) !important;
 }
 
 .bf-m-t-2 {
-  margin-top: var(--bf-space-lg) !important;
+  margin-top: var(--bf-spacing-lg) !important;
 }
 
 .bf-m-t-3 {
-  margin-top: var(--bf-space-xl) !important;
+  margin-top: var(--bf-spacing-xl) !important;
 }
 
 .bf-m-t-4 {
-  margin-top: var(--bf-space-xxl) !important;
+  margin-top: var(--bf-spacing-xxl) !important;
 }
 
 .bf-p-0 {
@@ -2211,38 +2211,38 @@ table th[class^='bf-col'] {
 /* .bf-p-N is the historical short form of .bf-p-b-N; both set padding-bottom. */
 .bf-p-1,
 .bf-p-b-1 {
-  padding-bottom: var(--bf-space-md) !important;
+  padding-bottom: var(--bf-spacing-md) !important;
 }
 
 .bf-p-2,
 .bf-p-b-2 {
-  padding-bottom: var(--bf-space-lg) !important;
+  padding-bottom: var(--bf-spacing-lg) !important;
 }
 
 .bf-p-3,
 .bf-p-b-3 {
-  padding-bottom: var(--bf-space-xl) !important;
+  padding-bottom: var(--bf-spacing-xl) !important;
 }
 
 .bf-p-4,
 .bf-p-b-4 {
-  padding-bottom: var(--bf-space-xxl) !important;
+  padding-bottom: var(--bf-spacing-xxl) !important;
 }
 
 .bf-p-t-1 {
-  padding-top: var(--bf-space-md) !important;
+  padding-top: var(--bf-spacing-md) !important;
 }
 
 .bf-p-t-2 {
-  padding-top: var(--bf-space-lg) !important;
+  padding-top: var(--bf-spacing-lg) !important;
 }
 
 .bf-p-t-3 {
-  padding-top: var(--bf-space-xl) !important;
+  padding-top: var(--bf-spacing-xl) !important;
 }
 
 .bf-p-t-4 {
-  padding-top: var(--bf-space-xxl) !important;
+  padding-top: var(--bf-spacing-xxl) !important;
 }
 /* .bf-btn and variants. */
 
@@ -2250,7 +2250,7 @@ table th[class^='bf-col'] {
   display: inline-block;
   cursor: pointer;
   color: var(--bf-color-on-neutral);
-  padding: calc(var(--bf-space-xl) / 3) calc(calc(var(--bf-space-xl) / 3) * 2);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
   line-height: normal;
   text-align: center;
   margin: 0;
@@ -2261,7 +2261,7 @@ table th[class^='bf-col'] {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: var(--bf-space-sm);
+  border-radius: var(--bf-spacing-sm);
 
   border: 0;
   background-image: none;
@@ -2442,13 +2442,13 @@ button.bf-disabled:focus,
 .custom-checkbox-wrapper [type='checkbox'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-space-md);
+  margin-left: var(--bf-spacing-md);
 }
 
 *[dir='rtl'] .custom-checkbox-wrapper [type='checkbox'] + label,
 .custom-checkbox-wrapper [type='checkbox'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-space-md);
+  margin-right: var(--bf-spacing-md);
 }
 
 .custom-checkbox-wrapper [type='checkbox']::after {
@@ -2484,13 +2484,13 @@ button.bf-disabled:focus,
 .custom-radio-wrapper [type='radio'] + label {
   line-height: 1.8rem;
   vertical-align: top;
-  margin-left: var(--bf-space-md);
+  margin-left: var(--bf-spacing-md);
 }
 
 *[dir='rtl'] .custom-radio-wrapper [type='radio'] + label,
 .custom-radio-wrapper [type='radio'][dir='rtl'] + label {
   margin-left: 0;
-  margin-right: var(--bf-space-md);
+  margin-right: var(--bf-spacing-md);
 }
 
 .custom-radio-wrapper [type='radio']::after {
@@ -2553,9 +2553,9 @@ dt {
 
 .bf-table th,
 .bf-table td {
-  padding: var(--bf-space-lg);
+  padding: var(--bf-spacing-lg);
   border-bottom: 1px solid var(--bf-color-table-border);
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
 }
 
 /* Horizontal scroll wrapper. */
@@ -2566,7 +2566,7 @@ dt {
 
 .bf-table-responsive table {
   width: 100%;
-  margin-bottom: var(--bf-space-md);
+  margin-bottom: var(--bf-spacing-md);
 }
 
 /* Prefer always-visible scrollbars on WebKit. */

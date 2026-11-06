@@ -28,9 +28,9 @@
 
 - Restore the keyboard focus ring on buttons, radios, checkboxes and `.bf-btn` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Keep a focus ring on `aria-disabled="true"` controls ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
-- Forced-colours mode: outline focused fields in `Highlight`, since their border and shadow are dropped ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Forced-colours mode: outline focused text fields in `Highlight`, since forced colours drop their border and shadow ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Classless dark: drive the ring colour from `--bf-color-focus-ring` so `prefers-contrast: more` applies ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
-- Contrast: muted text and captions to `rgb(118 118 118)` (4.5:1), field, control and table borders to 138 (3:1) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Contrast: darken muted text and captions to 4.5:1 and field, control and table borders to 3:1 on white ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#116](https://github.com/marcop135/bullframe.css/pull/116)) ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
 
 ## [6.4.2] - 2026-10-22

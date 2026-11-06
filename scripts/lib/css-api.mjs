@@ -71,7 +71,7 @@ export function extractVariables(cssText) {
 
     // Fold a multi-line comment into one line so it cannot swallow the next declaration.
     if (comment || (line.startsWith('/*') && !line.includes('*/'))) {
-      comment = comment ? `${comment} ${line.replace(/^\*\s?/, '')}` : line;
+      comment = comment ? `${comment} ${line.replace(/^\*(?!\/)\s?/, '')}` : line;
       if (!line.includes('*/')) continue;
       line = comment;
       comment = '';

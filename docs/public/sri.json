@@ -1,48 +1,48 @@
 {
-  "version": "7.0.0",
+  "version": "7.0.1",
   "algorithm": "sha384",
-  "generatedAt": "2026-11-06T21:50:14.012Z",
+  "generatedAt": "2026-11-06T22:59:47.265Z",
   "files": {
     "bullframe.min.css": {
-      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css",
-      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css",
-      "integrity": "sha384-jnryRG7s0dO9zv1Yx/CyInrj1muB1+7jRCL3csHukGIgI+mjtv4F2n97DJMkN/lZ",
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe.min.css",
+      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe.min.css",
+      "integrity": "sha384-2vhgKQiG2CRRhZdqNr6Co/Ht0Qw0xjmknOO3t4Y8spYV7BcN0tuC5CdWoAGLAl2r",
       "crossorigin": "anonymous"
     },
     "bullframe-dark.min.css": {
-      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-dark.min.css",
-      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe-dark.min.css",
-      "integrity": "sha384-3aEaZ9ctFnS3eobMc/yCx0wbm+T4NQ312YqCyw3xovEBDRpK1ZfUZU9Z6OJQ7t2M",
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-dark.min.css",
+      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe-dark.min.css",
+      "integrity": "sha384-UYVp0OJ9catRvo8ErMkV3SYJGgEiZm5gh1HpOEPUPulPyPmtIwG+6VS7LBNKU02W",
       "crossorigin": "anonymous"
     },
     "bullframe-system-default.min.css": {
-      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-system-default.min.css",
-      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe-system-default.min.css",
-      "integrity": "sha384-91qriDZ6oLhp47Q31STJ6m3yhrVdqzIWCvOoCfnhqIjjHCD4hSklokhTtKjAM1Q1",
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-system-default.min.css",
+      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe-system-default.min.css",
+      "integrity": "sha384-nHMJWYY0/ALF1uirH1gxfA6vJqhyn/el9nw61zI04dnv4eGFOwdF5G2pTFZChJj/",
       "crossorigin": "anonymous"
     },
     "bullframe-classless.min.css": {
-      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-classless.min.css",
-      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe-classless.min.css",
-      "integrity": "sha384-Ju63EblgFDNDyqGsPFn4kpD7BH6VkBGBFxnifBtB9FtGC49djZd786cnt4/mk5jz",
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-classless.min.css",
+      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe-classless.min.css",
+      "integrity": "sha384-kTXTr8P+/5Nud69c7V43cZA/H+Eu/OBVbNyNg6Q/ExFeZezL8624NPL+QEqnEb+D",
       "crossorigin": "anonymous"
     },
     "bullframe-classless-dark.min.css": {
-      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-classless-dark.min.css",
-      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe-classless-dark.min.css",
-      "integrity": "sha384-tTkfBovyMW4Aq+burDTSAPkbg14vG2t71gHZ8eP1IZDcgoi2tgDF9i1CBwM+gVma",
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-classless-dark.min.css",
+      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe-classless-dark.min.css",
+      "integrity": "sha384-a2xB6pBKTYPc6yFNh9ONCvXFKqB7Teev4zsswV8j+Htv+W10fzUKAWvaEG5eqEQw",
       "crossorigin": "anonymous"
     },
     "bullframe-classless-system-default.min.css": {
-      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-classless-system-default.min.css",
-      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe-classless-system-default.min.css",
-      "integrity": "sha384-b3uoLawTye4/dDArQoD9mjo36TtUMPfs5Y1lKHURI0LecsYw3XXcih2a712kPY37",
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-classless-system-default.min.css",
+      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe-classless-system-default.min.css",
+      "integrity": "sha384-0lU0AUGGLIyUGrtbtZFvv2qrw+DIggK6YMjgLgOgLeAgMB138aAmFsmE6rNLtq3Y",
       "crossorigin": "anonymous"
     },
     "bullframe-utilities.min.css": {
-      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-utilities.min.css",
-      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe-utilities.min.css",
-      "integrity": "sha384-QY1hjmMJza7rVOYpAHUqmY4i9DuT2JKl8e6s9ZEKBMT44I06J+AX6pIK1fxtCiz2",
+      "href": "https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-utilities.min.css",
+      "cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe-utilities.min.css",
+      "integrity": "sha384-axggYGbaz3O0boZjYsMrFxS5i1PvbOGpMa7ax5V3eo4pt8itWYpbNFsg//SggiYP",
       "crossorigin": "anonymous"
     }
   }

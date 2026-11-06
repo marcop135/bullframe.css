@@ -7,17 +7,7 @@
 
 ## [Unreleased]
 
-### Changed
-
-- npm: add `semantic-html`, `wcag`, `html`, and `prefers-color-scheme` keywords to match the GitHub topics.
-- Skills: load in Claude, Cursor, and Codex from one copy; move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
-- Dependabot: check npm and GitHub Actions monthly in groups; npm major updates stay separate.
-
-### Fixed
-
-- Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#116](https://github.com/marcop135/bullframe.css/pull/116)) ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
-
-## [7.0.0] - 2026-10-25 - BREAKING CHANGES
+## [7.0.0] - 2026-11-06 - BREAKING CHANGES
 
 ### Added
 
@@ -31,6 +21,8 @@
 - **BREAKING:** rename spacing and typography tokens; see the migration table.
 - Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later.
 - Docs: rewrite [CSS Variables](docs/variables.md) as role tables; list dark hooks in the API reference.
+- Skills: load in Claude, Cursor, and Codex from one copy; move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
+- Dependabot: check npm and GitHub Actions monthly in groups; npm major updates stay separate.
 
 ### Removed
 
@@ -43,6 +35,7 @@
 - Forced-colours mode: outline focused fields in `Highlight`, since their border and shadow are dropped.
 - Classless dark: drive the ring colour from `--bf-color-focus-ring` so `prefers-contrast: more` applies.
 - Contrast: muted text and captions to `rgb(118 118 118)` (4.5:1), field, control and table borders to 138 (3:1).
+- Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#116](https://github.com/marcop135/bullframe.css/pull/116)) ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
 
 ## [6.4.2] - 2026-10-22
 
@@ -652,10 +645,10 @@
 [6.4.2]: https://github.com/marcop135/bullframe.css/compare/v6.4.1...v6.4.2
 [6.4.1]: https://github.com/marcop135/bullframe.css/compare/v6.4.0...v6.4.1
 [6.4.0]: https://github.com/marcop135/bullframe.css/compare/v6.3.1...v6.4.0
-  [6.3.1]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...v6.3.1
-  [6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
-  [6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
-  [6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
-  [6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
-  [6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
-  [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0
+[6.3.1]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...v6.3.1
+[6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
+[6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
+[6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
+[6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
+[6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
+[6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

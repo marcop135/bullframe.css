@@ -1,6 +1,6 @@
 # Docs
 
-Reference for Bullframe CSS v6: native CSS + PostCSS, seven builds, ~8 KB gzip default, MIT.
+Reference for Bullframe CSS v7: native CSS + PostCSS, seven builds, ~8 KB gzip default, MIT.
 
 Start with [Getting started](getting-started.md). Browse [Examples](examples.md) or the [Kitchen sink](https://bullframecss.marcopontili.com/kitchen-sink/). Every page is also available as Markdown (append `.md`, or send `Accept: text/markdown`).
 
@@ -11,7 +11,8 @@ Start with [Getting started](getting-started.md). Browse [Examples](examples.md)
 | [Getting started](getting-started.md) | Install, modes, themes, starters |
 | [Examples](examples.md) | Standalone HTML templates |
 | [Agent skills](agent-skills.md) | Skills for coding agents |
-| [Migration](migration.md) | v5 → v6 |
+| [Migration v7](migration-v7.md) | v6 → v7 |
+| [Migration v6](migration.md) | v5 → v6 |
 
 ## Core
 

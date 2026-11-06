@@ -59,17 +59,35 @@ Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
 
 <!-- sri:cdn:start -->
 
-Quick drop-in (latest published package entry):
+Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullframe.css) and [cdnjs](https://cdnjs.com/libraries/bullframe.css). Both serve the same files from npm, so use either one with the same integrity hash.
 
-```html
+**Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`.
+
+::: code-group
+
+```html [jsDelivr]
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-jnryRG7s0dO9zv1Yx/CyInrj1muB1+7jRCL3csHukGIgI+mjtv4F2n97DJMkN/lZ" crossorigin="anonymous" />
+```
+
+```html [cdnjs]
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" integrity="sha384-jnryRG7s0dO9zv1Yx/CyInrj1muB1+7jRCL3csHukGIgI+mjtv4F2n97DJMkN/lZ" crossorigin="anonymous" />
+```
+
+:::
+
+**Quick drop-in:** no integrity hash. jsDelivr serves the latest release; cdnjs has no "latest" URL, so its link names a version.
+
+::: code-group
+
+```html [jsDelivr]
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
 ```
 
-**Recommended for production:** pin an exact version, point at a published `.min.css` file, and add Subresource Integrity plus `crossorigin`. Package-root / unversioned CDN URLs are not SRI-safe.
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.2/dist/css/bullframe.min.css" integrity="sha384-a95D+zT/9Sb4nr2SxVPlUwJ0Yq8IJXsOtthfFQ5BWB2Hk3qBXlzOkwTuiIUyL5n0" crossorigin="anonymous" />
+```html [cdnjs]
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" />
 ```
+
+:::
 
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
 <!-- sri:cdn:end -->
@@ -104,7 +122,7 @@ import 'bullframe.css/utilities';
 
 ## Download
 
-Self-host from the [v6.4.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v6.4.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
+Self-host from the [v7.0.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v7.0.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
 
 ## Starter HTML
 
@@ -117,7 +135,7 @@ Self-host from the [v6.4.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.2/dist/css/bullframe.min.css" integrity="sha384-a95D+zT/9Sb4nr2SxVPlUwJ0Yq8IJXsOtthfFQ5BWB2Hk3qBXlzOkwTuiIUyL5n0" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-jnryRG7s0dO9zv1Yx/CyInrj1muB1+7jRCL3csHukGIgI+mjtv4F2n97DJMkN/lZ" crossorigin="anonymous" />
   </head>
   <body>
     <a class="bf-skip-link" href="#main">Skip to content</a>
@@ -138,7 +156,7 @@ Self-host from the [v6.4.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.2/dist/css/bullframe-classless.min.css" integrity="sha384-Ticlxp2ESFCQeFf0Go9TWz11IagrPbxkZmiVkJ/y0ZmzeRGj0n3QVNBdWkEl5Pnx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-Ju63EblgFDNDyqGsPFn4kpD7BH6VkBGBFxnifBtB9FtGC49djZd786cnt4/mk5jz" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;
@@ -171,7 +189,7 @@ Seven builds. Default build is about **8 KB gzipped**. No JavaScript runtime.
 | `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`    |
 | `bullframe-utilities.css`                | `.bf-*` helpers only, no base styles |
 
-Upgrading from v5: [Migration](/migration).
+Upgrading from v6: [Migration v6 to v7](/migration-v7). From v5: [v5 to v6](/migration) first.
 
 ## Next
 

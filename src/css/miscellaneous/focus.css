@@ -11,16 +11,13 @@
 }
 
 :focus-visible {
-  outline: var(--bf-focus-ring-width) solid var(--bf-focus-ring-color);
+  outline: var(--bf-focus-ring-width) solid var(--bf-color-focus-ring);
   outline-offset: var(--bf-focus-ring-offset);
 }
 
 /* Clear UA outline on text-like controls (styled fields keep their own chrome).
+ * Buttons, radios and checkboxes keep the :focus-visible ring.
  * Leave color / range / file alone; they often use custom widgets. */
-button:focus,
-[type='button']:focus,
-[type='reset']:focus,
-[type='submit']:focus,
 [type='email']:focus,
 [type='number']:focus,
 [type='password']:focus,
@@ -33,10 +30,14 @@ button:focus,
 [type='time']:focus,
 [type='week']:focus,
 [type='url']:focus,
-[type='radio']:focus,
-[type='checkbox']:focus,
 input[list]:focus,
 select:focus,
 textarea:focus {
   outline: 0;
+}
+
+/* aria-disabled controls stay focusable, so keep the ring (disabled rules drop box-shadow). */
+[aria-disabled='true']:focus-visible {
+  outline: var(--bf-focus-ring-width) solid var(--bf-color-focus-ring);
+  outline-offset: var(--bf-focus-ring-offset);
 }

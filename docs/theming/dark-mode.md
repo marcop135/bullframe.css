@@ -9,7 +9,7 @@ The `bullframe-system-default.css` build automatically switches between light an
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.2/dist/css/bullframe-system-default.min.css" integrity="sha384-7mCAEXtZXsSYzB48z32FWG55SIFKSXygeBiByrcZHB/fD0CicPQQuW80G7M5maCt" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-system-default.min.css" integrity="sha384-91qriDZ6oLhp47Q31STJ6m3yhrVdqzIWCvOoCfnhqIjjHCD4hSklokhTtKjAM1Q1" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->
@@ -23,7 +23,7 @@ Use `bullframe-dark.css` for a permanent dark theme:
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.4.2/dist/css/bullframe-dark.min.css" integrity="sha384-VGDE3VGuw05IqfggycQuJLTvehLg86l2El88vQ2dtoKKXP0Hf65sHvbe4uRGQ/64" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-dark.min.css" integrity="sha384-3aEaZ9ctFnS3eobMc/yCx0wbm+T4NQ312YqCyw3xovEBDRpK1ZfUZU9Z6OJQ7t2M" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->
@@ -36,8 +36,10 @@ If you need a runtime toggle on top of the light build, override tokens and set 
 
 ```css
 [data-theme='dark'] {
-  --bf-white: rgb(34 34 34);
-  --bf-dark: rgb(255 255 255);
+  --bf-color-bg: rgb(28 28 28);
+  --bf-color-text: rgb(240 240 240);
+  --bf-color-link: rgb(77 165 255);
+  --bf-color-link-hover: rgb(77 165 255);
   /* Override other variables as needed */
 }
 ```

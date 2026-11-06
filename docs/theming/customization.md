@@ -9,7 +9,7 @@ The easiest way to customize Bullframe CSS is to override CSS variables:
 ```css
 :root {
   /* Override primary color */
-  --bf-blue: rgb(100 200 255);
+  --bf-color-primary: rgb(100 200 255);
 
   /* Override spacing */
   --bf-spacing-lg: 1.5rem;
@@ -25,7 +25,7 @@ You can also scope variables to specific components:
 
 ```css
 .my-component {
-  --bf-blue: rgb(255 0 0);
+  --bf-color-primary: rgb(255 0 0);
   /* This component will use red instead of blue */
 }
 ```

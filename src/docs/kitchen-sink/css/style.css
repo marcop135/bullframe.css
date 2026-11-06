@@ -83,7 +83,7 @@
   max-width: 500px;
   padding: 2rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--bf-gray-light);
+  border: 1px solid var(--bf-color-border);
 }
 
 .demo dialog h2 {
@@ -103,7 +103,7 @@
 
 /* Code examples in components */
 .demo #components pre {
-  background: var(--bf-gray-light-extra);
+  background: var(--bf-color-surface);
   padding: 1rem;
   border-radius: 0.25rem;
   overflow-x: auto;
@@ -113,7 +113,7 @@
 
 .demo #components pre code {
   font-family: var(--bf-font-monospace);
-  color: var(--bf-dark);
+  color: var(--bf-color-on-neutral);
 }
 
 /* Component cards */

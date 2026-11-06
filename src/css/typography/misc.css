@@ -14,13 +14,13 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: var(--bf-yellow);
-  color: var(--bf-black);
+  background-color: var(--bf-color-highlight);
+  color: var(--bf-color-contrast);
 }
 
 ins {
-  background-color: var(--bf-yellow-light);
-  color: var(--bf-black);
+  background-color: var(--bf-color-highlight-subtle);
+  color: var(--bf-color-contrast);
   text-decoration: none;
 }
 

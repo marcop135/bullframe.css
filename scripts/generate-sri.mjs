@@ -37,9 +37,14 @@ function cdnUrl(file) {
   return `https://cdn.jsdelivr.net/npm/bullframe.css@${version}/dist/css/${file}`;
 }
 
-function linkTag(file, integrity, { selfClosing = true } = {}) {
+// cdnjs autoupdates from npm (dist/css flattened), so files and hashes match jsDelivr.
+function cdnjsUrl(file) {
+  return `https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/${version}/${file}`;
+}
+
+function linkTag(file, integrity, { selfClosing = true, href = cdnUrl(file) } = {}) {
   const close = selfClosing ? ' />' : '>';
-  return `<link rel="stylesheet" href="${cdnUrl(file)}" integrity="${integrity}" crossorigin="anonymous"${close}`;
+  return `<link rel="stylesheet" href="${href}" integrity="${integrity}" crossorigin="anonymous"${close}`;
 }
 
 const hashes = {};
@@ -61,6 +66,7 @@ const out = {
       file,
       {
         href: cdnUrl(file),
+        cdnjs: cdnjsUrl(file),
         integrity: hashes[file],
         crossorigin: 'anonymous',
       },
@@ -101,17 +107,35 @@ function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-const cdnSectionMd = `Quick drop-in (latest published package entry):
+const cdnSectionMd = `Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullframe.css) and [cdnjs](https://cdnjs.com/libraries/bullframe.css). Both serve the same files from npm, so use either one with the same integrity hash.
 
-\`\`\`html
+**Recommended for production:** pin an exact version, point at a published \`.min.css\` file, and add Subresource Integrity plus \`crossorigin\`.
+
+::: code-group
+
+\`\`\`html [jsDelivr]
+${defaultLinkSlash}
+\`\`\`
+
+\`\`\`html [cdnjs]
+${linkTag(defaultFile, defaultIntegrity, { href: cdnjsUrl(defaultFile) })}
+\`\`\`
+
+:::
+
+**Quick drop-in:** no integrity hash. jsDelivr serves the latest release; cdnjs has no "latest" URL, so its link names a version.
+
+::: code-group
+
+\`\`\`html [jsDelivr]
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css" />
 \`\`\`
 
-**Recommended for production:** pin an exact version, point at a published \`.min.css\` file, and add Subresource Integrity plus \`crossorigin\`. Package-root / unversioned CDN URLs are not SRI-safe.
-
-\`\`\`html
-${defaultLinkSlash}
+\`\`\`html [cdnjs]
+<link rel="stylesheet" href="${cdnjsUrl(defaultFile)}" />
 \`\`\`
+
+:::
 
 Swap the filename for another build (\`bullframe-classless.min.css\`, \`bullframe-dark.min.css\`, …). Hashes for all seven builds: [sri.json](/sri.json).`;
 

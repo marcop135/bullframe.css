@@ -23,7 +23,7 @@
   height: 1rem;
   border-radius: 50% 50% 50% 0;
   transform: rotate(-45deg);
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
   box-shadow: 0 0 0 0.35rem rgb(0 86 179 / 0.2);
 }
 

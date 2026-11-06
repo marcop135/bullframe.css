@@ -1,6 +1,6 @@
 /**
- * Pack-time README transform: GitHub keeps light/dark `#gh-*-mode-only` images;
- * the npm tarball ships the light hero only so marky-markdown does not double it.
+ * Pack-time README transform: GitHub picks the hero by `prefers-color-scheme`
+ * from a <picture>; the npm tarball drops the dark <source> and keeps the light image.
  *
  * Stash must NOT be named README* — npm always packs those into the tarball.
  *
@@ -36,10 +36,10 @@ if (mode === 'prepack') {
   copyFileSync(readmePath, stashPath);
   const lightOnly = original
     .split('\n')
-    .filter((line) => !line.includes('#gh-dark-mode-only'))
+    .filter((line) => !line.includes('media="(prefers-color-scheme: dark)"'))
     .join('\n');
   if (lightOnly === original) {
-    console.error('prepack: no #gh-dark-mode-only line found in README.md');
+    console.error('prepack: no dark <source> line found in README.md');
     process.exit(1);
   }
   writeFileSync(readmePath, lightOnly);

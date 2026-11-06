@@ -66,11 +66,11 @@ Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullfr
 ::: code-group
 
 ```html [jsDelivr]
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-jnryRG7s0dO9zv1Yx/CyInrj1muB1+7jRCL3csHukGIgI+mjtv4F2n97DJMkN/lZ" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe.min.css" integrity="sha384-2vhgKQiG2CRRhZdqNr6Co/Ht0Qw0xjmknOO3t4Y8spYV7BcN0tuC5CdWoAGLAl2r" crossorigin="anonymous" />
 ```
 
 ```html [cdnjs]
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" integrity="sha384-jnryRG7s0dO9zv1Yx/CyInrj1muB1+7jRCL3csHukGIgI+mjtv4F2n97DJMkN/lZ" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe.min.css" integrity="sha384-2vhgKQiG2CRRhZdqNr6Co/Ht0Qw0xjmknOO3t4Y8spYV7BcN0tuC5CdWoAGLAl2r" crossorigin="anonymous" />
 ```
 
 :::
@@ -84,7 +84,7 @@ Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullfr
 ```
 
 ```html [cdnjs]
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.0/bullframe.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.1/bullframe.min.css" />
 ```
 
 :::
@@ -122,7 +122,7 @@ import 'bullframe.css/utilities';
 
 ## Download
 
-Self-host from the [v7.0.0 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v7.0.0.zip). Source maps ship beside the minified CSS in `dist/css/`.
+Self-host from the [v7.0.1 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v7.0.1.zip). Source maps ship beside the minified CSS in `dist/css/`.
 
 ## Starter HTML
 
@@ -135,7 +135,7 @@ Self-host from the [v7.0.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe.min.css" integrity="sha384-jnryRG7s0dO9zv1Yx/CyInrj1muB1+7jRCL3csHukGIgI+mjtv4F2n97DJMkN/lZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe.min.css" integrity="sha384-2vhgKQiG2CRRhZdqNr6Co/Ht0Qw0xjmknOO3t4Y8spYV7BcN0tuC5CdWoAGLAl2r" crossorigin="anonymous" />
   </head>
   <body>
     <a class="bf-skip-link" href="#main">Skip to content</a>
@@ -156,7 +156,7 @@ Self-host from the [v7.0.0 archive](https://github.com/marcop135/bullframe.css/a
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.0/dist/css/bullframe-classless.min.css" integrity="sha384-Ju63EblgFDNDyqGsPFn4kpD7BH6VkBGBFxnifBtB9FtGC49djZd786cnt4/mk5jz" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-classless.min.css" integrity="sha384-kTXTr8P+/5Nud69c7V43cZA/H+Eu/OBVbNyNg6Q/ExFeZezL8624NPL+QEqnEb+D" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;

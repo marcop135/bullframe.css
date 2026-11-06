@@ -7,6 +7,12 @@
 
 ## [Unreleased]
 
+## [7.0.1] - 2026-11-07
+
+### Security
+
+- Update dev dependencies (Playwright, sharp, Vite, glob) and clear 12 of 19 npm audit advisories ([#128](https://github.com/marcop135/bullframe.css/pull/128)).
+
 ## [7.0.0] - 2026-11-06 - BREAKING CHANGES
 
 ### Added
@@ -636,7 +642,8 @@
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
 
-[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v7.0.0...HEAD
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v7.0.1...HEAD
+[7.0.1]: https://github.com/marcop135/bullframe.css/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/marcop135/bullframe.css/compare/v6.4.2...v7.0.0
 [6.4.2]: https://github.com/marcop135/bullframe.css/compare/v6.4.1...v6.4.2
 [6.4.1]: https://github.com/marcop135/bullframe.css/compare/v6.4.0...v6.4.1

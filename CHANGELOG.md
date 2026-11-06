@@ -11,27 +11,26 @@
 
 ### Added
 
-- Docs: [Migration v6 to v7](docs/migration-v7.md) with the full old-to-new token table.
+- Docs: [Migration v6 to v7](docs/migration-v7.md) with the full old-to-new token table ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 
 ### Changed
 
-- **BREAKING:** name colours by role (`--bf-color-primary`), not hue, and reuse them in dark sheets. See [Migration v6 to v7](docs/migration-v7.md).
-- Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later.
-- Docs: rewrite [CSS Variables](docs/variables.md) as role tables and list dark hooks in the API reference.
+- **BREAKING:** name colours by role (`--bf-color-primary`), not hue, in light and dark builds. See [Migration v6 to v7](docs/migration-v7.md) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Docs: rewrite [CSS Variables](docs/variables.md) as role tables and list dark hooks in the API reference ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Skills: load in Claude, Cursor, and Codex from one copy and move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
-- Dependabot: check npm and GitHub Actions monthly in groups, with npm major updates kept separate.
 
 ### Removed
 
-- **BREAKING:** hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color`.
+- **BREAKING:** hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 
 ### Fixed
 
-- Restore the keyboard focus ring on buttons, radios, checkboxes and `.bf-btn`.
-- Keep a focus ring on `aria-disabled="true"` controls.
-- Forced-colours mode: outline focused fields in `Highlight`, since their border and shadow are dropped.
-- Classless dark: drive the ring colour from `--bf-color-focus-ring` so `prefers-contrast: more` applies.
-- Contrast: muted text and captions to `rgb(118 118 118)` (4.5:1), field, control and table borders to 138 (3:1).
+- Restore the keyboard focus ring on buttons, radios, checkboxes and `.bf-btn` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Keep a focus ring on `aria-disabled="true"` controls ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Forced-colours mode: outline focused fields in `Highlight`, since their border and shadow are dropped ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Classless dark: drive the ring colour from `--bf-color-focus-ring` so `prefers-contrast: more` applies ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Contrast: muted text and captions to `rgb(118 118 118)` (4.5:1), field, control and table borders to 138 (3:1) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#116](https://github.com/marcop135/bullframe.css/pull/116)) ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
 
 ## [6.4.2] - 2026-10-22

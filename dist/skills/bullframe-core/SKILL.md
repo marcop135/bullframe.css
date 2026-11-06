@@ -36,8 +36,9 @@ Bullframe skill assumes these rules.
    links that must look like buttons and for buttons that need the framework's chrome.
 4. Prefer a utility over a declaration. Before writing `style="margin-bottom: 2rem"`,
    use `.bf-m-b-3`.
-5. Prefer a token over a literal. `var(--bf-color-border)`, not `#ccc`; the dark builds
-   rebind those tokens, a literal does not follow.
+5. Prefer a token over a literal. `var(--bf-color-border)`, not `#ccc`. A token follows
+   your overrides and a literal does not. Some tokens keep their light value in dark builds,
+   so check the dark column in CSS Variables before using one for a dark-mode colour.
 6. Keep custom CSS in one project stylesheet, loaded after Bullframe, and confine it to
    `:root` token overrides plus genuinely project-specific rules.
 7. The root font-size is `62.5%`, so `1rem` is about `10px`. `--bf-body-font-size-rem` is

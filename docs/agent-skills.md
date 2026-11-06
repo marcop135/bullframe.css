@@ -21,15 +21,15 @@ That writes two things into your project:
 
 When a tool directory already exists, the same command also writes that tool's layout:
 
-| Directory | Layout written    | Tool        |
-| --------- | ----------------- | ----------- |
-| `.claude` | `.claude/skills/` | Claude Code |
-| `.cursor` | `.cursor/skills/` | Cursor      |
-| `.agents` | `.agents/skills/` | Codex       |
+| Directory | Layout written    | Read by             |
+| --------- | ----------------- | ------------------- |
+| `.claude` | `.claude/skills/` | Claude Code, Cursor |
+| `.agents` | `.agents/skills/` | Codex, Cursor       |
+| `.cursor` | `.agents/skills/` | Codex, Cursor       |
 
 ```bash
 npx bullframe.css skills install --target claude   # Claude layout only
-npx bullframe.css skills install --target cursor   # Cursor layout only
+npx bullframe.css skills install --target cursor   # same as codex; no .cursor/skills
 npx bullframe.css skills install --target codex    # Codex layout only (.agents/skills)
 npx bullframe.css skills install --target agents   # AGENTS.md + local copy only
 npx bullframe.css skills install --target dir --dir vendor/bf

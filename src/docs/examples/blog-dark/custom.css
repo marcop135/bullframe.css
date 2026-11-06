@@ -28,7 +28,7 @@
 
 .ex-blog-hero {
   padding: 0.5rem 0 2rem;
-  border-bottom: 1px solid var(--bf-gray-dark-extra, #333);
+  border-bottom: 1px solid rgb(51 51 51);
   margin-bottom: 2rem;
 }
 
@@ -36,7 +36,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06rem;
   font-size: 1.3rem;
-  color: var(--bf-gray);
+  color: var(--bf-color-text-muted);
   margin: 0 0 1rem;
 }
 
@@ -49,14 +49,14 @@
 .ex-blog__lead {
   font-size: 120%;
   max-width: 54rem;
-  color: var(--bf-gray-light);
+  color: rgb(204 204 204);
   margin-bottom: 1.25rem;
 }
 
 .ex-blog__byline {
   margin: 0;
   font-size: 1.45rem;
-  color: var(--bf-gray);
+  color: var(--bf-color-text-muted);
 }
 
 .ex-blog-layout figure {
@@ -73,7 +73,7 @@
 .ex-blog-layout figcaption {
   margin-top: 0.75rem;
   font-size: 1.4rem;
-  color: var(--bf-gray);
+  color: var(--bf-color-text-muted);
 }
 
 .ex-blog-sidebar {
@@ -86,7 +86,7 @@
 
 .ex-blog-panel {
   padding: 1.5rem;
-  border: 1px solid var(--bf-gray-dark-extra, #333);
+  border: 1px solid rgb(51 51 51);
   border-radius: 0.75rem;
   background: rgb(255 255 255 / 0.03);
 }
@@ -123,10 +123,10 @@
 .ex-blog-tags li {
   margin: 0;
   padding: 0.35rem 0.8rem;
-  border: 1px solid var(--bf-gray-dark-extra, #333);
+  border: 1px solid rgb(51 51 51);
   border-radius: 999rem;
   font-size: 1.3rem;
-  color: var(--bf-gray-light);
+  color: rgb(204 204 204);
 }
 
 @media (max-width: 799px) {

@@ -81,16 +81,16 @@ progress[value] {
   height: 20px;
   height: 2rem;
 
-  background: var(--bf-gray-light);
-  color: var(--bf-blue); /* Progress fill in IE10+. */
+  background: var(--bf-color-progress-track);
+  color: var(--bf-color-primary); /* Progress fill in IE10+. */
 }
 
 progress[value]::-webkit-progress-bar {
-  background: var(--bf-gray-light);
+  background: var(--bf-color-progress-track);
 }
 
 progress[value]::-webkit-progress-value {
-  background: var(--bf-blue);
+  background: var(--bf-color-primary);
 }
 
 /* No default border (covers embeds that ignore frameborder="0"). */

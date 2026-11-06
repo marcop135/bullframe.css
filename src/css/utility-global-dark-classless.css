@@ -2,11 +2,9 @@
 
 @import './_utility-global-dark-elements.css';
 
-a:focus,
-input:focus {
-  outline-color: rgb(214 140 0); /* orange -15% */
-}
-
-:focus-visible {
-  outline-color: rgb(214 140 0); /* orange -15% */
+/* Preserve the dark ring when utilities load later; contrast-more uses its amber. */
+@media not (prefers-contrast: more) {
+  :root {
+    --bf-color-focus-ring: rgb(214 140 0);
+  }
 }

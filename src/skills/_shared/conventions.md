@@ -33,7 +33,7 @@ Follow these rules when writing or editing markup.
    that id.
 8. **Label every control.** A `<label for>` bound to the control's `id`. A placeholder is
    never a label.
-9. **Never remove focus rings.** No `outline: none`. Tune `--bf-focus-ring-color`,
+9. **Never remove focus rings.** No `outline: none`. Tune `--bf-color-focus-ring`,
    `--bf-focus-ring-width`, `--bf-focus-ring-offset`.
 10. **Dark mode needs no JavaScript.** Use a `-dark` or `-system-default` build.
 11. **`.bf-btn--primary` is a modifier.** It only works alongside `.bf-btn`.

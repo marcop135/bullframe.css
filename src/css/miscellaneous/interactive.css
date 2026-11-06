@@ -17,8 +17,8 @@ summary {
 }
 
 dialog {
-  background-color: var(--bf-white);
-  color: var(--bf-dark);
+  background-color: var(--bf-color-bg);
+  color: var(--bf-color-text);
   border: none;
   border-radius: var(--bf-spacing-sm);
   padding: var(--bf-spacing-xl);

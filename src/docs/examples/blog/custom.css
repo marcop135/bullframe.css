@@ -28,7 +28,7 @@
 
 .ex-blog-hero {
   padding: 0.5rem 0 2rem;
-  border-bottom: 1px solid var(--bf-gray-light);
+  border-bottom: 1px solid var(--bf-color-border);
   margin-bottom: 2rem;
 }
 
@@ -36,7 +36,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06rem;
   font-size: 1.3rem;
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-text-subtle);
   margin: 0 0 1rem;
 }
 
@@ -49,14 +49,14 @@
 .ex-blog__lead {
   font-size: 120%;
   max-width: 54rem;
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-text-subtle);
   margin-bottom: 1.25rem;
 }
 
 .ex-blog__byline {
   margin: 0;
   font-size: 1.45rem;
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-text-subtle);
 }
 
 .ex-blog-layout figure {
@@ -73,7 +73,7 @@
 .ex-blog-layout figcaption {
   margin-top: 0.75rem;
   font-size: 1.4rem;
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-text-subtle);
 }
 
 .ex-blog-sidebar {
@@ -86,9 +86,9 @@
 
 .ex-blog-panel {
   padding: 1.5rem;
-  border: 1px solid var(--bf-gray-light);
+  border: 1px solid var(--bf-color-border);
   border-radius: 0.75rem;
-  background: var(--bf-white, #fff);
+  background: var(--bf-color-bg);
 }
 
 .ex-blog-panel h2 {
@@ -123,10 +123,10 @@
 .ex-blog-tags li {
   margin: 0;
   padding: 0.35rem 0.8rem;
-  border: 1px solid var(--bf-gray-light);
+  border: 1px solid var(--bf-color-border);
   border-radius: 999rem;
   font-size: 1.3rem;
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-text-subtle);
 }
 
 @media (max-width: 799px) {

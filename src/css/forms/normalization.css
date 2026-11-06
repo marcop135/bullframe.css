@@ -196,7 +196,7 @@
 
 :where([type='radio'], [type='checkbox']) {
   padding: 0;
-  background-color: var(--bf-white);
+  background-color: var(--bf-color-control-bg);
 }
 
 :where([type='range' i]) {
@@ -243,7 +243,7 @@
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
 :where(button, [type='button'], [type='reset'], [type='submit']):focus {
   text-decoration: none;
-  color: var(--bf-dark);
+  color: var(--bf-color-on-neutral);
 }
 
 :where(
@@ -258,7 +258,7 @@
 /* Firefox: input color must not override placeholder color.
  * https://github.com/necolas/normalize.css/issues/150 */
 :where(input::placeholder, textarea::placeholder) {
-  color: var(--bf-gray-dark);
+  color: var(--bf-color-placeholder);
 }
 
 /* Firefox: modern focus ring on all focusable elements. */

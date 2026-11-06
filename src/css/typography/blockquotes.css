@@ -11,7 +11,7 @@ blockquote p {
 }
 
 blockquote small {
-  color: var(--bf-gray);
+  color: var(--bf-color-text-muted);
   display: block;
 }
 

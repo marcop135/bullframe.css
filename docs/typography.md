@@ -1,6 +1,6 @@
 # Typography
 
-Bullframe CSS provides semantic typography styles for all HTML elements out of the box.
+Bullframe CSS styles headings, body text, blockquotes, code and lists from plain HTML. Classes add lead paragraphs, text alignment and text transforms.
 
 ## Headings
 
@@ -61,7 +61,7 @@ Use utility classes for text alignment:
 Inline code uses `<code>`:
 
 ```html
-<p>Use the <code>--bf-blue</code> variable for primary colors.</p>
+<p>Use the <code>--bf-color-primary</code> variable for primary colors.</p>
 ```
 
 Code blocks use `<pre><code>`:

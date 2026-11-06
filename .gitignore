@@ -41,7 +41,8 @@ docs/public/api.json
 .netlify/
 
 # Claude Code / Cursor local settings and scratch worktrees
-.claude/
+.claude/*
+!.claude/skills/
 .cursor/
 
 # Playwright artifacts (keep tests/e2e/__screenshots__ baselines tracked)

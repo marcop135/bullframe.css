@@ -37,7 +37,7 @@ th {
 caption {
   padding-top: var(--bf-spacing-md);
   padding-bottom: var(--bf-spacing-md);
-  color: var(--bf-gray);
+  color: var(--bf-color-caption);
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;

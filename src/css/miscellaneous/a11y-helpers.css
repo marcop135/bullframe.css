@@ -36,9 +36,9 @@
   left: 0;
   z-index: 9999;
   padding: var(--bf-spacing-md) var(--bf-spacing-lg);
-  color: var(--bf-blue);
-  background-color: var(--bf-white);
-  border: 1px solid var(--bf-gray-light);
+  color: var(--bf-color-primary);
+  background-color: var(--bf-color-overlay-bg);
+  border: 1px solid var(--bf-color-border);
   transform: translateY(-100%);
 }
 

@@ -6,7 +6,7 @@
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid var(--bf-gray);
+  border: 1px solid var(--bf-color-control-border);
 }
 
 .custom-checkbox-wrapper [type='checkbox'] + label {
@@ -27,7 +27,7 @@
   position: absolute;
   width: 0.6rem;
   height: 0.8rem;
-  border: 2px solid var(--bf-white);
+  border: 2px solid var(--bf-color-on-primary);
   border-top: 0;
   border-left: 0;
   left: 35%;
@@ -36,8 +36,8 @@
 }
 
 .custom-checkbox-wrapper [type='checkbox']:checked {
-  background-color: var(--bf-blue);
-  border-color: var(--bf-black);
+  background-color: var(--bf-color-primary);
+  border-color: var(--bf-color-contrast);
 }
 
 .custom-radio-wrapper [type='radio'] {
@@ -46,7 +46,7 @@
   width: 1.8rem;
   vertical-align: top;
   position: relative;
-  border: 1px solid var(--bf-gray);
+  border: 1px solid var(--bf-color-control-border);
 }
 
 .custom-radio-wrapper [type='radio'] + label {
@@ -70,11 +70,11 @@
   left: -0.05rem;
   top: -0.05rem;
   border-radius: 50%;
-  background: var(--bf-white);
+  background: var(--bf-color-on-primary);
   transform: scale(0.35);
 }
 
 .custom-radio-wrapper [type='radio']:checked {
-  background-color: var(--bf-blue);
-  border-color: var(--bf-black);
+  background-color: var(--bf-color-primary);
+  border-color: var(--bf-color-contrast);
 }

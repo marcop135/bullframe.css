@@ -7,7 +7,7 @@ Bullframe doesn't ship a `.bf-card` class. Cards are usually one box with paddin
 ## Content card
 
 ```html
-<article class="bf-m-b-3" style="border: 1px solid var(--bf-gray-light); border-radius: 4px; padding: 1.5rem;">
+<article class="bf-m-b-3" style="border: 1px solid var(--bf-color-border); border-radius: 4px; padding: 1.5rem;">
   <h3 class="bf-m-t-0">Article title</h3>
   <p>One- or two-line summary of the article. Just enough to entice without giving away the lede.</p>
   <a class="bf-btn" href="#">Read more</a>
@@ -21,7 +21,7 @@ Why no `.bf-card` class? Because every team's card looks different. Different bo
 Image on top, content below.
 
 ```html
-<article style="border: 1px solid var(--bf-gray-light); border-radius: 4px; overflow: hidden;">
+<article style="border: 1px solid var(--bf-color-border); border-radius: 4px; overflow: hidden;">
   <img src="hero.jpg" alt="" style="display: block; width: 100%; height: auto;" />
   <div style="padding: 1.5rem;">
     <h3 class="bf-m-t-0">Card with image</h3>
@@ -57,11 +57,11 @@ columns: there are no per-breakpoint column classes.
 ## Pricing card
 
 ```html
-<article class="bf-t-center" style="border: 2px solid var(--bf-blue); border-radius: 8px; padding: 2rem;">
+<article class="bf-t-center" style="border: 2px solid var(--bf-color-primary); border-radius: 8px; padding: 2rem;">
   <h3 class="bf-m-t-0">Pro</h3>
   <p style="font-size: 3rem; margin: 0;">
     <strong>$12</strong>
-    <small style="font-size: 1rem; color: var(--bf-gray-dark);">/month</small>
+    <small style="font-size: 1rem; color: var(--bf-color-text-subtle);">/month</small>
   </p>
   <ul class="bf-list-unstyled bf-m-b-2">
     <li>Unlimited projects</li>
@@ -78,7 +78,7 @@ Wrap in `<a>` and reset its appearance. Avoid nested interactive elements inside
 
 ```html
 <a href="/article/42" style="display: block; text-decoration: none; color: inherit;">
-  <article style="border: 1px solid var(--bf-gray-light); border-radius: 4px; padding: 1.5rem;">
+  <article style="border: 1px solid var(--bf-color-border); border-radius: 4px; padding: 1.5rem;">
     <h3 class="bf-m-t-0">Title</h3>
     <p>Whole card is the link target. No nested buttons or links inside.</p>
   </article>

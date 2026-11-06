@@ -15,7 +15,7 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-top: -0.25rem;
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
     border-radius: 1.5rem;
     transition:
       background-color 0.15s ease-in-out,
@@ -24,7 +24,7 @@
   }
 
   :where([type='range'])::-webkit-slider-thumb:active {
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
   }
 
   :where([type='range'])::-moz-range-thumb {
@@ -33,7 +33,7 @@
 
     width: 1.5rem;
     height: 1.5rem;
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
     border-radius: 1.5rem;
     transition:
       background-color 0.15s ease-in-out,
@@ -42,7 +42,7 @@
   }
 
   :where([type='range'])::-moz-range-thumb:active {
-    background-color: var(--bf-blue);
+    background-color: var(--bf-color-primary);
   }
 
   :where([type='range'])::-webkit-slider-runnable-track {
@@ -52,7 +52,7 @@
     width: 100%;
     height: 0.65rem;
     cursor: pointer;
-    background-color: var(--bf-gray-light-extra);
+    background-color: var(--bf-color-range-track);
   }
 
   :where([type='range'])::-moz-range-track {
@@ -62,7 +62,7 @@
     width: 100%;
     height: 0.65rem;
     cursor: pointer;
-    background-color: var(--bf-gray-light-extra);
+    background-color: var(--bf-color-range-track);
   }
 
   :where([type='range']):focus {
@@ -71,13 +71,13 @@
 
   :where([type='range']):focus::-webkit-slider-thumb {
     box-shadow:
-      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.1rem var(--bf-color-control-bg),
       0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 
   :where([type='range']):focus::-moz-range-thumb {
     box-shadow:
-      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.1rem var(--bf-color-control-bg),
       0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 
@@ -90,10 +90,10 @@
   }
 
   :where([type='range']):disabled::-webkit-slider-thumb {
-    background-color: var(--bf-gray-light);
+    background-color: var(--bf-color-neutral);
   }
 
   :where([type='range']):disabled::-moz-range-thumb {
-    background-color: var(--bf-gray-light);
+    background-color: var(--bf-color-neutral);
   }
 }

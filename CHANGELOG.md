@@ -7,9 +7,31 @@
 
 ## [Unreleased]
 
+## [7.0.0] - 2026-11-06 - BREAKING CHANGES
+
+### Added
+
+- Docs: [Migration v6 to v7](docs/migration-v7.md) with the full old-to-new token table ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+
 ### Changed
 
-- npm: add `semantic-html`, `wcag`, `html`, and `prefers-color-scheme` keywords to match the GitHub topics.
+- **BREAKING:** name colours by role (`--bf-color-primary`), not hue, in light and dark builds. See [Migration v6 to v7](docs/migration-v7.md) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Docs: rewrite [CSS Variables](docs/variables.md) as role tables and list dark hooks in the API reference ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Skills: load in Claude, Cursor, and Codex from one copy and move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
+
+### Removed
+
+- **BREAKING:** hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+
+### Fixed
+
+- Restore the keyboard focus ring on buttons, radios, checkboxes and `.bf-btn` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Keep a focus ring on `aria-disabled="true"` controls ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Forced-colours mode: outline focused text fields in `Highlight`, since forced colours drop their border and shadow ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Classless dark: drive the ring colour from `--bf-color-focus-ring` so `prefers-contrast: more` applies ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Contrast: darken muted text and captions to 4.5:1 and field, control and table borders to 3:1 on white ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- Docs: keep Safari's Adaptive Dark Mode from darkening the docs when the light theme is chosen ([#116](https://github.com/marcop135/bullframe.css/pull/116)) ([#115](https://github.com/marcop135/bullframe.css/issues/115)).
 
 ## [6.4.2] - 2026-10-22
 
@@ -19,145 +41,145 @@
 
 ### Fixed
 
-- Docs: let search engines crawl `/kitchen-sink/` so its `noindex` applies ([#98](https://github.com/marcop135/bullframe.css/pull/98)).
+- Docs: let search engines crawl `/kitchen-sink/` so its `noindex` applies ([#98](https://github.com/marcop135/bullframe.css/pull/98)) ([#110](https://github.com/marcop135/bullframe.css/issues/110)).
 
 ## [6.4.1] - 2026-10-16
 
 ### Fixed
 
-- Docs: report self-hosted Matomo page views to the docs site's own property.
+- Docs: report self-hosted Matomo page views to the docs site's own property ([#94](https://github.com/marcop135/bullframe.css/pull/94), [#109](https://github.com/marcop135/bullframe.css/issues/109)).
 
 ## [6.4.0] - 2026-10-16
 
 ### Added
 
-- Docs: cookieless, self-hosted Matomo as `/matomo.js`, counting client-side navigations too.
-- Docs: [`/privacy`](https://bullframecss.marcopontili.com/privacy) notice, linked from the footer, every doc page, and `llms.txt`.
-- Docs: per-page `canonical` and `og:url`, and `/.well-known/security.txt`.
+- Docs: cookieless, self-hosted Matomo as `/matomo.js`, counting client-side navigations too ([#91](https://github.com/marcop135/bullframe.css/pull/91), [#109](https://github.com/marcop135/bullframe.css/issues/109)).
+- Docs: [`/privacy`](https://bullframecss.marcopontili.com/privacy) notice, linked from the footer, every doc page, and `llms.txt` ([#91](https://github.com/marcop135/bullframe.css/pull/91), [#109](https://github.com/marcop135/bullframe.css/issues/109)).
+- Docs: per-page `canonical` and `og:url`, and `/.well-known/security.txt` ([#91](https://github.com/marcop135/bullframe.css/pull/91)).
 
 ### Security
 
-- Docs CSP allows self-hosted Matomo in `script-src`, `connect-src`, and `img-src`.
+- Docs CSP allows self-hosted Matomo in `script-src`, `connect-src`, and `img-src` ([#91](https://github.com/marcop135/bullframe.css/pull/91), [#109](https://github.com/marcop135/bullframe.css/issues/109)).
 
 ## [6.3.1] - 2026-10-13
 
 ### Fixed
 
-- Keep the pack-time README stash out of the npm tarball.
+- Keep the pack-time README stash out of the npm tarball ([#87](https://github.com/marcop135/bullframe.css/pull/87)).
 
 ## [6.3.0] - 2026-10-13
 
 ### Added
 
-- Agent skills: [`bullframe-theming`](docs/agent-skills.md), [`bullframe-media`](docs/agent-skills.md), [`bullframe-components`](docs/agent-skills.md).
+- Agent skills: [`bullframe-theming`](docs/agent-skills.md), [`bullframe-media`](docs/agent-skills.md), [`bullframe-components`](docs/agent-skills.md) ([#84](https://github.com/marcop135/bullframe.css/pull/84), [#107](https://github.com/marcop135/bullframe.css/issues/107)).
 
 ### Fixed
 
-- npm README ships the light hero only; GitHub keeps light/dark theme images.
+- npm README ships the light hero only; GitHub keeps light/dark theme images ([#85](https://github.com/marcop135/bullframe.css/pull/85)).
 
 ## [6.2.2] - 2026-10-02
 
 ### Changed
 
-- README, OG, and social images use the shared repo-brand kit.
+- README, OG, and social images use the shared repo-brand kit ([#74](https://github.com/marcop135/bullframe.css/pull/74)).
 
 ### Removed
 
-- HTML-scene brand image generator.
+- HTML-scene brand image generator ([#74](https://github.com/marcop135/bullframe.css/pull/74)).
 
 ### Fixed
 
-- Built CSS banners, the skills index, and docs CDN + SRI snippets report 6.2.2.
+- Built CSS banners, the skills index, and docs CDN + SRI snippets report 6.2.2 ([#76](https://github.com/marcop135/bullframe.css/pull/76)).
 
 ### Security
 
-- Docs site: CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, COOP.
+- Docs site: CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, COOP ([#73](https://github.com/marcop135/bullframe.css/pull/73), [#108](https://github.com/marcop135/bullframe.css/issues/108)).
 
 ## [6.2.1] - 2026-09-29
 
 ### Changed
 
-- Shorter README install, CDN, and agent skills sections.
-- Renamed docs "AI skills" to "agent skills" (`/agent-skills`; `/ai-skills` redirects).
-- Docs `color-scheme` (meta + CSS pins on `html` / `html.dark`, synced with the appearance toggle) and light/dark `theme-color`.
+- Shorter README install, CDN, and agent skills sections ([#70](https://github.com/marcop135/bullframe.css/pull/70)).
+- Renamed docs "AI skills" to "agent skills" (`/agent-skills`; `/ai-skills` redirects) ([#70](https://github.com/marcop135/bullframe.css/pull/70)).
+- Docs `color-scheme` (meta + CSS pins on `html` / `html.dark`, synced with the appearance toggle) and light/dark `theme-color` ([#70](https://github.com/marcop135/bullframe.css/pull/70)).
 
 ### Fixed
 
-- Docs deploys reach returning visitors without a hard refresh.
-- Docs edit links and API source links pointed at a deleted `v6` branch.
-- Leftover legacy CSS files no longer linger in the docs public tree.
+- Docs deploys reach returning visitors without a hard refresh ([#70](https://github.com/marcop135/bullframe.css/pull/70), [#106](https://github.com/marcop135/bullframe.css/issues/106)).
+- Docs edit links and API source links pointed at a deleted `v6` branch ([#70](https://github.com/marcop135/bullframe.css/pull/70), [#106](https://github.com/marcop135/bullframe.css/issues/106)).
+- Leftover legacy CSS files no longer linger in the docs public tree ([#70](https://github.com/marcop135/bullframe.css/pull/70)).
 
 ## [6.2.0] - 2026-09-29
 
 ### Added
 
-- AI agent skills: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`; `npx bullframe.css skills install` (Claude, Cursor, Codex).
-- Generated `api.json` (`.bf-*` classes, `--bf-*` tokens) in the package and at `/api.json`.
-- AI skills docs page; docs site 404 page.
-- `npm run test:e2e:sync-from-ci` to copy Playwright linux baselines from a CI run artifact.
+- AI agent skills: `bullframe-core`, `bullframe-landing-page`, `bullframe-forms`, `bullframe-docs-page`, `bullframe-convert`; `npx bullframe.css skills install` (Claude, Cursor, Codex) ([#65](https://github.com/marcop135/bullframe.css/pull/65), [#107](https://github.com/marcop135/bullframe.css/issues/107)).
+- Generated `api.json` (`.bf-*` classes, `--bf-*` tokens) in the package and at `/api.json` ([#65](https://github.com/marcop135/bullframe.css/pull/65), [#107](https://github.com/marcop135/bullframe.css/issues/107)).
+- AI skills docs page; docs site 404 page ([#65](https://github.com/marcop135/bullframe.css/pull/65), [#107](https://github.com/marcop135/bullframe.css/issues/107)).
+- `npm run test:e2e:sync-from-ci` to copy Playwright linux baselines from a CI run artifact ([#65](https://github.com/marcop135/bullframe.css/pull/65)).
 
 ### Changed
 
-- npm publish is manual from the release tag; **Publish to npm** is `workflow_dispatch` only (no `release: published` trigger).
+- npm publish is manual from the release tag; **Publish to npm** is `workflow_dispatch` only (no `release: published` trigger) ([#65](https://github.com/marcop135/bullframe.css/pull/65)).
 
 ### Fixed
 
-- Non-existent classes in Grid, Cards, Spacing, and Text docs.
-- Wrong v6 token names in the migration guide.
+- Non-existent classes in Grid, Cards, Spacing, and Text docs ([#65](https://github.com/marcop135/bullframe.css/pull/65), [#107](https://github.com/marcop135/bullframe.css/issues/107)).
+- Wrong v6 token names in the migration guide ([#65](https://github.com/marcop135/bullframe.css/pull/65), [#107](https://github.com/marcop135/bullframe.css/issues/107)).
 
 ### Security
 
-- Explicit `permissions: contents: read` on CI, Deploy docs, and Skills eval workflows.
+- Explicit `permissions: contents: read` on CI, Deploy docs, and Skills eval workflows ([#65](https://github.com/marcop135/bullframe.css/pull/65), [#107](https://github.com/marcop135/bullframe.css/issues/107)).
 
 ## [6.1.0] - 2026-09-14
 
 ### Added
 
-- CSS variables `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset`.
-- `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native`.
-- `@supports` for `text-wrap: balance` and `scrollbar-gutter: stable`.
+- CSS variables `--bf-focus-ring-color`, `--bf-focus-ring-width`, `--bf-focus-ring-offset` ([#61](https://github.com/marcop135/bullframe.css/pull/61), [#104](https://github.com/marcop135/bullframe.css/issues/104)).
+- `.bf-skip-link`, `.bf-focusable`, `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native` ([#61](https://github.com/marcop135/bullframe.css/pull/61), [#104](https://github.com/marcop135/bullframe.css/issues/104)).
+- `@supports` for `text-wrap: balance` and `scrollbar-gutter: stable` ([#61](https://github.com/marcop135/bullframe.css/pull/61)).
 
 ### Changed
 
-- README: install, CDN, examples; unversioned CDN (docs stay pinned + SRI).
-- README, hero, OG, and social preview images regenerated from one source (`npm run brand:images`).
+- README: install, CDN, examples; unversioned CDN (docs stay pinned + SRI) ([#61](https://github.com/marcop135/bullframe.css/pull/61)).
+- README, hero, OG, and social preview images regenerated from one source (`npm run brand:images`) ([#62](https://github.com/marcop135/bullframe.css/pull/62)).
 
 ### Removed
 
-- Dead UA+ rules that never applied inside `@layer`.
+- Dead UA+ rules that never applied inside `@layer` ([#61](https://github.com/marcop135/bullframe.css/pull/61)).
 
 ### Fixed
 
-- `caption` and `progress` in classless always-dark.
-- Accessibility markup in the kitchen sink and examples.
-- Docs site cache headers, so a new release reaches returning visitors.
+- `caption` and `progress` in classless always-dark ([#61](https://github.com/marcop135/bullframe.css/pull/61)).
+- Accessibility markup in the kitchen sink and examples ([#61](https://github.com/marcop135/bullframe.css/pull/61)).
+- Docs site cache headers, so a new release reaches returning visitors ([#63](https://github.com/marcop135/bullframe.css/pull/63), [#106](https://github.com/marcop135/bullframe.css/issues/106)).
 
 ## [6.0.0] - 2026-07-31 - BREAKING CHANGES
 
 ### Added
 
-- Brand identity for docs and README: mascot and logo mark, favicon variants, hero illustrations, and OG/social imagery.
-- Opt-in font-smoothing, reduced-motion utilities, stronger focus / ARIA defaults.
-- Progressive `@supports` gates for range, `:has()` label layout, and dialog enter.
+- Brand identity for docs and README: mascot, logo, favicons, hero illustrations and OG/social imagery ([#58](https://github.com/marcop135/bullframe.css/pull/58)).
+- Opt-in font-smoothing, reduced-motion utilities, stronger focus / ARIA defaults ([#58](https://github.com/marcop135/bullframe.css/pull/58)).
+- Progressive `@supports` gates for range, `:has()` label layout, and dialog enter ([#56](https://github.com/marcop135/bullframe.css/pull/56), [#105](https://github.com/marcop135/bullframe.css/issues/105)).
 
 ### Changed
 
-- Replaced Sass with native CSS and PostCSS (`--bf-*` tokens). See [Migration](docs/migration.md).
-- Unified class-based, classless, dark, and system-default builds on one token set.
-- Darkened link and button blues for WCAG AA contrast.
-- Replaced the [docs site](https://bullframecss.marcopontili.com/) with VitePress; kitchen sink at `/kitchen-sink/`.
-- Documented browser support against Browserslist `defaults`.
+- Replaced Sass with native CSS and PostCSS (`--bf-*` tokens). See [Migration](docs/migration.md) ([#58](https://github.com/marcop135/bullframe.css/pull/58), [#103](https://github.com/marcop135/bullframe.css/issues/103)).
+- Unified class-based, classless, dark, and system-default builds on one token set ([#58](https://github.com/marcop135/bullframe.css/pull/58), [#103](https://github.com/marcop135/bullframe.css/issues/103)).
+- Darkened link and button blues for WCAG AA contrast ([#58](https://github.com/marcop135/bullframe.css/pull/58), [#103](https://github.com/marcop135/bullframe.css/issues/103)).
+- Replaced the [docs site](https://bullframecss.marcopontili.com/) with VitePress; kitchen sink at `/kitchen-sink/` ([#58](https://github.com/marcop135/bullframe.css/pull/58)).
+- Documented browser support against Browserslist `defaults` ([#58](https://github.com/marcop135/bullframe.css/pull/58)).
 
 ### Removed
 
-- Sass sources and the Sass build path.
-- Standalone `*-dark-prefers` and helper dist entries (`variables*`, `utility-global-dark*`); dark/system behavior lives in the seven builds.
-- `bullframe-modern.css` and the `bullframe.css/modern` export.
-- Legacy IE / Edge hacks.
+- Sass sources and the Sass build path ([#58](https://github.com/marcop135/bullframe.css/pull/58), [#103](https://github.com/marcop135/bullframe.css/issues/103)).
+- Standalone `*-dark-prefers` and helper dist entries (`variables*`, `utility-global-dark*`); dark/system behavior lives in the seven builds ([#58](https://github.com/marcop135/bullframe.css/pull/58), [#103](https://github.com/marcop135/bullframe.css/issues/103)).
+- `bullframe-modern.css` and the `bullframe.css/modern` export ([#58](https://github.com/marcop135/bullframe.css/pull/58)).
+- Legacy IE / Edge hacks ([#58](https://github.com/marcop135/bullframe.css/pull/58)).
 
 ### Fixed
 
-- Dialog min-width on narrow viewports, reduced-motion fades, backdrop color, gated transition APIs.
+- Dialog min-width on narrow viewports, reduced-motion fades, backdrop color, gated transition APIs ([#58](https://github.com/marcop135/bullframe.css/pull/58)).
 
 ## 5.1.0 - (July 08, 2025)
 
@@ -171,9 +193,9 @@
 
 ## 5.0.0 (July 07, 2025) - BREAKING CHANGES
 
-- Dropped IE support
-- Removed Sass 1.45+ deprecated features ([details](https://sass-lang.com/documentation/breaking-changes/import/))
-- Switched build tool from Gulp to [Vite](https://vite.dev)
+- Dropped IE support ([#45](https://github.com/marcop135/bullframe.css/issues/45))
+- Removed Sass 1.45+ deprecated features ([details](https://sass-lang.com/documentation/breaking-changes/import/)) ([#44](https://github.com/marcop135/bullframe.css/issues/44))
+- Switched build tool from Gulp to [Vite](https://vite.dev) ([#39](https://github.com/marcop135/bullframe.css/issues/39))
 - Reorganized Sass architecture for better clarity
 - Added `<dialog>` normalization with basic styling
 - Refreshed HTML demo page with new examples
@@ -194,8 +216,8 @@
 
 ## 4.2.1 (April 26, 2025)
 
-- Fixed and simplified `/docs` directory structure [#42](https://github.com/marcop135/bullframe.css/issues/42)
-- Removed screenshots and screencasts from repository to speed npm installation
+- Fixed and simplified `/docs` directory structure
+- Removed screenshots and screencasts from repository to speed npm installation ([#43](https://github.com/marcop135/bullframe.css/issues/43))
 - Started support for GitHub Packages registry
 
 ## 4.2.0 (April 14, 2025)
@@ -292,7 +314,7 @@
 ## 3.4.0 (January 24, 2021)
 
 - Added `input range` styling in modern browsers only
-- Updated video source paths per MDN [#22](https://github.com/marcop135/bullframe.css/issues/12)
+- Updated video source paths per MDN [#22](https://github.com/marcop135/bullframe.css/issues/22)
 
 ## 3.3.9 (November 29, 2020)
 
@@ -342,15 +364,15 @@
 
 ## 3.3.0 (July 09, 2020)
 
-- Changed grid container max-width to 1140px + gutters
-- Changed margin/padding utilities naming
-- Added refinements to `.bf-table` and `.bf-table-responsive` utilities
+- Changed grid container max-width to 1140px + gutters ([#18](https://github.com/marcop135/bullframe.css/pull/18))
+- Changed margin/padding utilities naming ([#18](https://github.com/marcop135/bullframe.css/pull/18))
+- Added refinements to `.bf-table` and `.bf-table-responsive` utilities ([#18](https://github.com/marcop135/bullframe.css/pull/18))
   - Added zebra striping utility
-- Added more `font-weight` utilities
-- Added more width-related utilities
-- Changed JSDelivr CDN paths from GitHub to npm
-- Updated screenshots and screencasts files
-- Added GitHub, Gulp, npm and Sass minor improvements
+- Added more `font-weight` utilities ([#18](https://github.com/marcop135/bullframe.css/pull/18))
+- Added more width-related utilities ([#18](https://github.com/marcop135/bullframe.css/pull/18))
+- Changed JSDelivr CDN paths from GitHub to npm ([#18](https://github.com/marcop135/bullframe.css/pull/18))
+- Updated screenshots and screencasts files ([#18](https://github.com/marcop135/bullframe.css/pull/18))
+- Added GitHub, Gulp, npm and Sass minor improvements ([#18](https://github.com/marcop135/bullframe.css/pull/18))
 
 ## 3.2.0 (June 16, 2020)
 
@@ -364,7 +386,7 @@
 - Added more examples in `index.html`
 - Added SCSS file structure improvements
 - Added responsive typography improvements
-- Added form states (e.g. `:invalid`) improvements [#15](https://github.com/marcop135/bullframe.css/issues/15)
+- Added form states (e.g. `:invalid`) improvements [#14](https://github.com/marcop135/bullframe.css/issues/14)
 
 ## 3.1.0 (May 06, 2020)
 
@@ -613,11 +635,16 @@
 - First public release
 - Initial commit on 19 November 2012
 - Framework aimed to kickstart cross-browser responsive HTML/CSS development
-  [Unreleased]: https://github.com/marcop135/bullframe.css/compare/v6.3.1...HEAD
-  [6.3.1]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...v6.3.1
-  [6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
-  [6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
-  [6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
-  [6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
-  [6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
-  [6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0
+
+[Unreleased]: https://github.com/marcop135/bullframe.css/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/marcop135/bullframe.css/compare/v6.4.2...v7.0.0
+[6.4.2]: https://github.com/marcop135/bullframe.css/compare/v6.4.1...v6.4.2
+[6.4.1]: https://github.com/marcop135/bullframe.css/compare/v6.4.0...v6.4.1
+[6.4.0]: https://github.com/marcop135/bullframe.css/compare/v6.3.1...v6.4.0
+[6.3.1]: https://github.com/marcop135/bullframe.css/compare/v6.3.0...v6.3.1
+[6.3.0]: https://github.com/marcop135/bullframe.css/compare/v6.2.2...v6.3.0
+[6.2.2]: https://github.com/marcop135/bullframe.css/compare/v6.2.1...v6.2.2
+[6.2.1]: https://github.com/marcop135/bullframe.css/compare/v6.2.0...v6.2.1
+[6.2.0]: https://github.com/marcop135/bullframe.css/compare/v6.1.0...v6.2.0
+[6.1.0]: https://github.com/marcop135/bullframe.css/compare/v6.0.0...v6.1.0
+[6.0.0]: https://github.com/marcop135/bullframe.css/compare/v5.1.0...v6.0.0

@@ -1,6 +1,6 @@
 /*
  * Bullframe CSS brand skin for VitePress.
- * Product blues (--bf-blue / --bf-blue-light) for WCAG AA 4.5:1
+ * Product blues (--bf-color-primary / --bf-color-primary-hover) for WCAG AA 4.5:1
  * (text on light, white on solid buttons). Matches framework link/button accent.
  */
 
@@ -8,7 +8,8 @@
  * Meta color-scheme stays "light dark" for the pre-CSS canvas; after CSS,
  * these pins keep forced light/dark honest for UA widgets and scrollbars. */
 html {
-  color-scheme: light;
+  /* "only" opts forced light out of Safari Adaptive Dark Mode. */
+  color-scheme: light only;
 }
 
 html.dark {

@@ -1,31 +1,34 @@
-# Browser Support
+# Browser support
 
-Bullframe CSS targets browsers covered by the Browserslist query in [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/main/.browserslistrc): **`defaults`**. Autoprefixer uses that same query when building CSS. Prefixes are added where needed; there are no polyfills for unsupported CSS APIs.
+All seven builds target the Browserslist query **`defaults`**, set in [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/main/.browserslistrc). Autoprefixer adds vendor prefixes for that query at build time. There are no polyfills. See the live coverage of `defaults` on [browsersl.ist](https://browsersl.ist/#q=defaults).
 
-## Builds
+## Required CSS features
 
-All seven builds (default / classless / utilities / dark / system-default) are intended for that `defaults` audience. They rely on:
-
-- CSS custom properties (`--bf-*`)
-- Flexbox and CSS Grid
+- Custom properties (`--bf-*`)
+- Flexbox and Grid
+- Space-separated `rgb()` colour syntax
 - `prefers-color-scheme` (system-default builds)
-- Modern `rgb()` color syntax
-- Progressive enhancements gated with `@supports` where needed (for example range styling and some form/dialog polish)
 
-Optional enhancements in the default pipeline (UA+ layer) use `@supports` / `prefers-reduced-motion` so older engines keep usable native UI.
+## Progressive enhancements
 
-## Mobile
+Engines without these features skip them and keep native UI. All are gated with `@supports` or a media query.
 
-Tested against current Chromium and WebKit mobile. Forms (`select`, `range`) and `<dialog>` are the most engine-specific surfaces; spot-check iOS Safari when shipping custom form chrome.
+| Feature                                      | Gate                                    | Builds                 |
+| -------------------------------------------- | --------------------------------------- | ---------------------- |
+| Balanced heading wrap (`text-wrap: balance`) | `@supports (text-wrap: balance)`        | Class-based, classless |
+| Stable scrollbar gutter                      | `@supports (scrollbar-gutter: stable)`  | Class-based, classless |
+| Custom range input styling                   | `@supports (appearance: none)`          | Class-based, classless |
+| Dialog and popover enter transitions         | `@supports (overlay: auto)`             | Class-based, classless |
+| Smooth scrolling and dialog transitions      | `prefers-reduced-motion: no-preference` | Class-based, classless |
 
 ## Accessibility preferences
 
-- `prefers-reduced-motion`: dialog enter transitions are skipped when reduced motion is requested; `.bf-reduced-motion` (class-based / utilities) opt-in disables motion inside a subtree
-- `prefers-contrast: more`: stronger focus ring via `--bf-color-focus-ring`
-- `forced-colors` / high contrast: marked text and related rules adapt under Windows forced colors where implemented
+| Preference                       | Effect                                                                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prefers-reduced-motion: reduce` | No smooth scrolling or dialog transitions. `.bf-reduced-motion` (class-based, utilities) stops all animation and transitions in its subtree |
+| `prefers-contrast: more`         | Underlined links, darker `--bf-color-focus-ring`, thicker focus outline, 2px field borders                                                  |
+| `forced-colors: active`          | `Highlight` focus outlines (fields included), underlined links, `mark` in system colours, button borders                                    |
 
-Progressive CSS such as `text-wrap: balance` and `scrollbar-gutter: stable` is gated with `@supports` so unsupported engines skip those declarations.
+## Testing
 
-## Checking support
-
-Inspect [`.browserslistrc`](https://github.com/marcop135/bullframe.css/blob/main/.browserslistrc) and [browsersl.ist](https://browsersl.ist/) for the live coverage of `defaults`.
+Playwright visual tests run in desktop Chromium, Firefox and WebKit. Form controls (`select`, `range`) and `<dialog>` vary most between engines: check them in iOS Safari when you restyle them.

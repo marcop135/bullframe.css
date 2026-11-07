@@ -2,49 +2,21 @@
 title: Print
 ---
 
-# Print Styles
+# Print styles
 
-Bullframe includes built-in print styles based on [HTML5 Boilerplate](https://github.com/h5bp/main.css). These are applied automatically via `@media print`; no extra classes needed.
+Under `@media print`, the class-based builds and `bullframe-utilities.css` apply print styles adapted from [HTML5 Boilerplate `main.css`](https://github.com/h5bp/main.css). They need no class. Classless builds ship no print styles.
 
-## What the Print Styles Do
+| Rule                                              | Applies to                                    |
+| ------------------------------------------------- | --------------------------------------------- |
+| Black text on white, no box or text shadows       | Every element                                 |
+| Underline, then the URL in parentheses            | `a[href]`, except `#` and `javascript:` links |
+| Title in parentheses after the text               | `abbr[title]`                                 |
+| Wrapped lines and a 1px border                    | `pre`, plus the border on `blockquote`        |
+| No page break inside                              | `pre`, `blockquote`, `tr`, `img`              |
+| No page break after                               | `h2`, `h3`                                    |
+| At least three lines on each side of a page break | `p`, `h2`, `h3`                               |
+| Minimum width of 992px                            | `body`, `.bf-container`                       |
+| Auto-width inner table                            | `.bf-table-responsive`                        |
+| Collapsed borders                                 | `.bf-table`, `.bf-table-responsive table`     |
 
-- Forces black text on white background for readability
-- Removes box shadows and text shadows
-- Underlines all links and appends the URL after link text
-- Prevents page breaks inside tables, images, and paragraphs
-- Expands `.bf-container` to a minimum width of 992px
-- Makes responsive tables scrollable and auto-width
-
-## Included Automatically
-
-Print styles are bundled into all main Bullframe builds (`bullframe.css`, `bullframe-dark.css`, etc.). No additional stylesheet or class is required.
-
-## How It Works
-
-```css
-@media print {
-  /* Forces readable black-on-white output */
-  * {
-    background: #fff !important;
-    color: #000 !important;
-    box-shadow: none !important;
-  }
-
-  /* Shows link URLs in parentheses */
-  a[href]::after {
-    content: ' (' attr(href) ')';
-  }
-
-  /* Prevents awkward page breaks */
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-}
-```
-
-## Tips
-
-- Test print output with your browser's Print Preview (Ctrl+P / Cmd+P)
-- Use semantic HTML for the best print results
-- Avoid relying on background colors for conveying information
+Check the result with the browser's print preview: Cmd+P on macOS, Ctrl+P on Windows and Linux.

@@ -1,64 +1,20 @@
-# Utilities Overview
+# Utilities overview
 
-Utility classes for layout, spacing, typography, tables, embeds, filters, print, and a11y helpers. These ship in class-based builds and in `bullframe-utilities.css`. Classless builds have no `.bf-*` classes.
+Utility classes ship in the class-based builds and in `bullframe-utilities.css`, which carries the helpers without base styles. Classless builds ship no `.bf-*` classes.
 
-## Categories
+| Page                            | Covers                                                        |
+| ------------------------------- | ------------------------------------------------------------- |
+| [Layout](/layout)               | Containers, display, flex, float, position, width, visibility |
+| [Grid system](/utilities/grid)  | 12-column rows and columns, responsive stacking               |
+| [Spacing](/utilities/spacing)   | Margin and padding scale                                      |
+| [Text](/utilities/text)         | Alignment, weight, style, transform, truncation, font stacks  |
+| [Tables](/utilities/tables)     | Cell padding, horizontal scroll, zebra rows                   |
+| [Lists](/utilities/lists)       | Unstyled lists                                                |
+| [Embeds](/utilities/embeds)     | Aspect-ratio boxes for iframes and video                      |
+| [Filters](/utilities/filters)   | Invert, dim, grayscale, blur                                  |
+| [Print](/utilities/print)       | Built-in print styles                                         |
+| [Forms](/forms)                 | `.bf-focused`, `.bf-disabled`, `.bf-invalid`                  |
+| [Buttons](/buttons)             | `.bf-btn`, `.bf-btn--primary`                                 |
+| [Accessibility](/accessibility) | Screen reader text, skip link, reduced motion, target size    |
 
-- [Grid System](/utilities/grid) - 12-column responsive grid
-- [Spacing](/utilities/spacing) - Margin and padding
-- [Text](/utilities/text) - Typography helpers (includes `.bf-sr-only`)
-- [Tables](/utilities/tables) - Table and responsive table helpers
-- [Lists](/utilities/lists) - Unstyled and utility list classes
-- [Embeds](/utilities/embeds) - Responsive media embeds
-- [Filters](/utilities/filters) - Visual filter utilities
-- [Print](/utilities/print) - Print stylesheet helpers
-
-Skip link, reduced motion, colour-scheme, target size, and native accent helpers are documented under [Accessibility](/accessibility).
-
-## Quick Reference
-
-### Display Utilities
-
-```html
-<div class="bf-display-block">Block</div>
-<div class="bf-display-inline">Inline</div>
-<div class="bf-display-inline-block">Inline block</div>
-<div class="bf-display-flex">Flex</div>
-<div class="bf-display-inline-flex">Inline flex</div>
-```
-
-### Visibility Utilities
-
-```html
-<div class="bf-visible">Visible</div>
-<div class="bf-invisible">Invisible</div>
-<div class="bf-hidden">Hidden</div>
-<div class="bf-sr-only">Screen reader only</div>
-```
-
-### Float Utilities
-
-```html
-<div class="bf-float-left">Float left</div>
-<div class="bf-float-right">Float right</div>
-<div class="bf-clearfix">Clear floats</div>
-```
-
-### Position Utilities
-
-```html
-<div class="bf-position-relative">Relative</div>
-<div class="bf-position-fixed">Fixed</div>
-<div class="bf-position-sticky">Sticky</div>
-```
-
-### Width Utilities
-
-```html
-<div class="bf-width-25">25% width</div>
-<div class="bf-width-33">33% width</div>
-<div class="bf-width-50">50% width</div>
-<div class="bf-width-75">75% width</div>
-<div class="bf-width-100">100% width</div>
-<div class="bf-width-auto">Auto width</div>
-```
+[API reference](/api-reference) lists every class and token, generated from the source.

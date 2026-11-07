@@ -1,10 +1,10 @@
 # Theming
 
-Bullframe CSS provides multiple theme variants and easy customization options. Override `--bf-*` custom properties to theme without rebuilding.
+Pick a theme by loading one build, then adjust it by overriding `--bf-*` tokens. No rebuild is needed.
 
-## Theme variants
+## Theme builds
 
-### Light theme (default)
+### Light (default)
 
 <!-- sri:cdn-light:start -->
 
@@ -14,7 +14,7 @@ Bullframe CSS provides multiple theme variants and easy customization options. O
 
 <!-- sri:cdn-light:end -->
 
-### Dark theme
+### Always dark
 
 <!-- sri:cdn-dark:start -->
 
@@ -24,9 +24,9 @@ Bullframe CSS provides multiple theme variants and easy customization options. O
 
 <!-- sri:cdn-dark:end -->
 
-### System default theme
+### System default
 
-Switches between light and dark from `prefers-color-scheme`:
+Follows the operating system setting through `prefers-color-scheme`:
 
 <!-- sri:cdn-system:start -->
 
@@ -36,18 +36,18 @@ Switches between light and dark from `prefers-color-scheme`:
 
 <!-- sri:cdn-system:end -->
 
-More on dark mode: [Dark Mode](/theming/dark-mode).
+See [Dark mode](/theming/dark-mode) for a manual toggle.
 
-## Classless variants
+## Classless builds
 
-The same light / dark / system themes as element styles only (no `.bf-*` classes):
+The same three themes as element styles only, with no `.bf-*` classes:
 
 - `bullframe-classless.css`
 - `bullframe-classless-dark.css`
 - `bullframe-classless-system-default.css`
 
-For skip links and other `.bf-*` helpers, use a class-based build or add `bullframe-utilities.css`.
+For skip links and other `.bf-*` helpers, use a class-based build or add `bullframe-utilities.css` after the classless file.
 
-## Customization
+## Tokens
 
-See the [Customization](/theming/customization) guide for overriding tokens and building on top of Bullframe.
+To change colors, spacing, or type, see [Customization](/theming/customization). The full token list is in [CSS variables](/variables).

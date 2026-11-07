@@ -1,105 +1,65 @@
 # Forms
 
-Bullframe CSS provides consistent, accessible form styling across all browsers.
+Every build styles native form controls with no classes: text fields, `textarea`, `select`, checkboxes, radios and range. Class-based and utilities builds add state classes and custom radio and checkbox wrappers. For complete forms, see [Form patterns](/components/forms).
 
-## Basic Form Elements
-
-### Text Inputs
+## Controls
 
 ```html
 <input type="text" placeholder="Enter text" />
 <input type="email" placeholder="Enter email" />
 <input type="password" placeholder="Enter password" />
 <input type="number" placeholder="Enter number" />
-```
 
-### Textarea
-
-```html
 <textarea placeholder="Enter your message"></textarea>
-```
 
-### Select
-
-```html
 <select>
   <option>Choose an option</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
-```
 
-### Checkboxes
+<input type="checkbox" id="checkbox1" />
+<label for="checkbox1">Checkbox label</label>
 
-```html
-<input type="checkbox" id="checkbox1" /> <label for="checkbox1">Checkbox label</label>
-```
-
-### Radio Buttons
-
-```html
 <input type="radio" id="radio1" name="radio" />
 <label for="radio1">Radio option 1</label>
-
 <input type="radio" id="radio2" name="radio" />
 <label for="radio2">Radio option 2</label>
-```
 
-### Range Input
-
-```html
 <input type="range" min="0" max="100" value="50" />
 ```
 
-## Form States
+A focused text field, `select` or `textarea` gets a `--bf-color-field-border-focus` border and a `--bf-color-field-shadow-focus` shadow; see [CSS variables](/variables#forms).
 
-### Disabled State
+## Disabled
+
+`disabled`, `aria-disabled="true"` and `fieldset[disabled]` render controls at 50% opacity with a `not-allowed` cursor and no pointer events:
 
 ```html
 <input type="text" disabled placeholder="Disabled input" /> <button disabled>Disabled button</button>
 ```
 
-### Readonly State
+## State classes
 
-```html
-<input type="text" readonly value="Readonly value" />
-```
+These ship in class-based and utilities builds only.
 
-### Invalid State
-
-```html
-<input type="email" required aria-invalid="true" placeholder="Invalid email" />
-```
-
-## Form Utilities
-
-### Focus State
-
-Apply the `.bf-focused` class to simulate a focused appearance:
+| Class          | Effect                                                  |
+| -------------- | ------------------------------------------------------- |
+| `.bf-focused`  | Shows the focus border and shadow without focus         |
+| `.bf-disabled` | Disabled look and no pointer events, without `disabled` |
+| `.bf-invalid`  | `--bf-color-danger` text and border, with a red shadow  |
 
 ```html
 <input class="bf-focused" type="text" value="Focused input" />
-```
-
-### Disabled State
-
-Apply the `.bf-disabled` class to disable form elements via CSS:
-
-```html
 <input class="bf-disabled" type="text" value="Disabled input" />
+<input class="bf-invalid" type="email" aria-invalid="true" value="not-an-email" />
 ```
 
-### Invalid State
+No build styles `:invalid` or `aria-invalid`. Add `.bf-invalid` from your validation script, and set `aria-invalid="true"` on the same field for assistive technology.
 
-Apply the `.bf-invalid` class to mark form elements as invalid:
+## Custom radio and checkbox
 
-```html
-<input class="bf-invalid" type="text" value="Invalid input" />
-```
-
-### Custom Radio and Checkbox
-
-Use wrapper classes for custom-styled radio buttons and checkboxes:
+Wrap a control and its label in `.custom-checkbox-wrapper` or `.custom-radio-wrapper` to replace the native look with a primary-coloured box or dot. Class-based and utilities builds only.
 
 ```html
 <div class="custom-checkbox-wrapper">

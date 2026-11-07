@@ -1,42 +1,39 @@
-# Card Patterns
+# Card patterns
 
 <!-- bf-absent: bf-card -->
 
-Bullframe doesn't ship a `.bf-card` class. Cards are usually one box with padding, a border or shadow, and consistent spacing. Easy enough to compose from existing utilities.
+Bullframe has no `.bf-card` class: card styling varies too much between projects for one class to fit. Compose cards from spacing and text utilities, tokens, and a few inline styles.
 
 ## Content card
 
 ```html
 <article class="bf-m-b-3" style="border: 1px solid var(--bf-color-border); border-radius: 4px; padding: 1.5rem;">
   <h3 class="bf-m-t-0">Article title</h3>
-  <p>One- or two-line summary of the article. Just enough to entice without giving away the lede.</p>
+  <p>One- or two-line summary of the article.</p>
   <a class="bf-btn" href="#">Read more</a>
 </article>
 ```
 
-Why no `.bf-card` class? Because every team's card looks different. Different border radius, padding, shadow, spacing. Forcing a single class makes overrides ugly. Compose from utilities and a few inline custom properties.
-
 ## Media card
 
-Image on top, content below.
+Image on top, content below. `overflow: hidden` clips the image to the rounded corners.
 
 ```html
 <article style="border: 1px solid var(--bf-color-border); border-radius: 4px; overflow: hidden;">
   <img src="hero.jpg" alt="" style="display: block; width: 100%; height: auto;" />
   <div style="padding: 1.5rem;">
     <h3 class="bf-m-t-0">Card with image</h3>
-    <p>Content sits below the image. The <code>overflow: hidden</code> on the parent clips the image to the rounded corner.</p>
+    <p>Content sits below the image.</p>
     <a class="bf-btn bf-btn--primary" href="#">View</a>
   </div>
 </article>
 ```
 
-Note `alt=""` on decorative images; keeps the link list clean for screen readers. If the image is meaningful (a chart, a screenshot), give it a real alt.
+`alt=""` marks the image as decorative. Give a meaningful image, such as a chart or screenshot, real alt text.
 
-## Card grid (responsive)
+## Responsive card grid
 
-3-up on desktop, stacked below 768px. The breakpoint lives on the container, not on the
-columns: there are no per-breakpoint column classes.
+Three columns from 768px up, stacked below. The breakpoint is set on the container with `.bf-container--break-md`; there are no per-breakpoint column classes.
 
 ```html
 <div class="bf-container bf-container--break-md">
@@ -72,15 +69,15 @@ columns: there are no per-breakpoint column classes.
 </article>
 ```
 
-## Linked card (whole card clickable)
+## Linked card
 
-Wrap in `<a>` and reset its appearance. Avoid nested interactive elements inside the link.
+Wrap the card in `<a>` to make the whole card the link target. Do not nest buttons or links inside it.
 
 ```html
 <a href="/article/42" style="display: block; text-decoration: none; color: inherit;">
   <article style="border: 1px solid var(--bf-color-border); border-radius: 4px; padding: 1.5rem;">
     <h3 class="bf-m-t-0">Title</h3>
-    <p>Whole card is the link target. No nested buttons or links inside.</p>
+    <p>The whole card is the link target.</p>
   </article>
 </a>
 ```

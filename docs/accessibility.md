@@ -4,22 +4,21 @@ title: Accessibility
 
 # Accessibility
 
-Bullframe ships WCAG AA contrast defaults (4.5:1 for normal text), visible `:focus-visible` rings, and ARIA attribute styling on every build. Class-based and utilities builds also include screen-reader and opt-in helpers. Guidance follows [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and common [MDN accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) patterns.
+What Bullframe does for accessibility on each build, and the classes you add yourself. Every build ships WCAG AA contrast defaults, `:focus-visible` rings, preference queries, and ARIA attribute styling; class-based and utilities builds add screen-reader and opt-in helpers. References: [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and [MDN accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility).
 
-## Color Contrast (WCAG AA)
+## Color contrast
 
-Default tokens meet **WCAG AA** contrast (4.5:1 for normal text) on light and dark surfaces:
+Default tokens meet WCAG AA (4.5:1 for normal text):
 
-- **Links**: `--bf-color-primary` on white passes AA
-- **Primary buttons**: white text on `--bf-color-primary` passes AA
-- **Dark builds**: default foreground/background pairs meet AA
-- **Form focus rings**: visible on light and dark backgrounds
+- Links: `--bf-color-primary` on white.
+- Primary buttons: `--bf-color-on-primary` (white) on `--bf-color-primary`.
+- Dark builds: the default text and link colors on `--bf-color-bg`.
 
-To check your own color overrides, use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
+Overrides are yours to check, for example with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
 
-## Focus Indicators
+## Focus indicators
 
-Bullframe uses `:focus-visible` to show focus rings **only for keyboard navigation**, not mouse clicks. Ring appearance comes from tokens:
+`:focus-visible` shows the ring for keyboard focus, not mouse clicks. The ring comes from tokens:
 
 ```css
 :focus-visible {
@@ -28,11 +27,15 @@ Bullframe uses `:focus-visible` to show focus rings **only for keyboard navigati
 }
 ```
 
-Defaults match the previous orange ring. Under `prefers-contrast: more`, `--bf-color-focus-ring` rises to a darker amber so the ring meets WCAG 1.4.11 (3:1) on the light (`--bf-color-bg` white) and dark (`rgb(28 28 28)`) page backgrounds. Override the tokens on `:root` if you need a custom ring.
+Override `--bf-color-focus-ring`, `--bf-focus-ring-width`, and `--bf-focus-ring-offset` on `:root` for a custom ring.
 
-## Screen Reader Utilities
+## Contrast and color preferences
 
-Class-based and utilities builds only. Classless ships element styles and has no `.bf-*` classes.
+Every build responds to `prefers-contrast: more`: links are underlined, the focus ring turns a darker amber that meets WCAG 1.4.11 (3:1) on the light and dark `--bf-color-bg`, the ring grows thicker, and text fields and tables get a solid border. Under `forced-colors: active`, focus rings use the system `Highlight` color, text fields regain a focus outline, links are underlined, and buttons keep a `ButtonText` border.
+
+## Screen reader utilities
+
+Class-based and utilities builds only.
 
 ```html
 <span class="bf-sr-only">This text is only visible to screen readers</span>
@@ -44,19 +47,19 @@ Class-based and utilities builds only. Classless ships element styles and has no
 <a class="bf-sr-only bf-focusable" href="#main">Skip to main content</a>
 ```
 
-`.bf-focusable` is the prefixed alias for the older `.focusable` class; both work with `.bf-sr-only`.
+`.bf-skip-link` stays out of the layout when revealed; `.bf-sr-only.bf-focusable` returns to the flow and shifts content. `.focusable` is the legacy name for `.bf-focusable`. For a complete skip-link snippet, see [Navigation patterns: skip link](./components/navigation#skip-link).
 
-## Reduced Motion
+## Reduced motion
 
-Class-based and utilities builds. Apply `.bf-reduced-motion` to `<body>` or a container:
+Class-based and utilities builds. Add `.bf-reduced-motion` to `<body>` or a container:
 
 ```html
 <body class="bf-reduced-motion"></body>
 ```
 
-When the user has `prefers-reduced-motion: reduce`, animations and transitions inside that tree are effectively disabled. Dialog enter transitions also respect reduced motion on every build without a class.
+When the user has `prefers-reduced-motion: reduce`, animations and transitions inside that tree are cut to near zero. The dialog fade-in skips reduced-motion users on every build, without the class.
 
-## Opt-in Helpers
+## Opt-in helpers
 
 Class-based and utilities builds. Put these on `<html>` or a container when you need them:
 
@@ -66,7 +69,7 @@ Class-based and utilities builds. Put these on `<html>` or a container when you 
 | `.bf-accent-native`                                        | Sets `accent-color` to `--bf-color-primary` on checkboxes, radios, range, and progress      |
 | `.bf-target-size`                                          | Minimum 24×24px hit boxes (WCAG 2.5.8); inline links in `p` / `li` / `td` / `dd` are exempt |
 
-## ARIA Attribute Styling
+## ARIA attribute styling
 
 Every build styles elements based on ARIA attributes:
 
@@ -76,11 +79,11 @@ Every build styles elements based on ARIA attributes:
 | `aria-disabled="true"`             | Shows a `not-allowed` cursor                                       |
 | `aria-hidden="false"` + `[hidden]` | Visually hidden but accessible; removed from layout unless focused |
 
-These styles use `:where()` for zero specificity, so they're easy to override.
+These rules use `:where()`, so any selector overrides them.
 
 ## Semantic HTML
 
-Classless builds (`bullframe-classless*.css`) style semantic HTML elements only. No `.bf-*` classes ship in those files. Write proper HTML and you get accessible base styling:
+Classless builds (`bullframe-classless*.css`) style elements only, so semantic markup gets the accessible base styling with no classes:
 
 ```html
 <nav>
@@ -100,10 +103,9 @@ Classless builds (`bullframe-classless*.css`) style semantic HTML elements only.
 
 For skip links, screen-reader-only text, or the opt-in helpers above, use a class-based or utilities build.
 
-## Tips
+## Checklist
 
-- Always use semantic HTML elements (`<nav>`, `<main>`, `<article>`, `<button>`, etc.)
-- Use `<button>` for actions, `<a>` for navigation
-- Provide `alt` text for images
-- Test with keyboard navigation (Tab, Enter, Escape)
-- Test with a screen reader (VoiceOver, NVDA, JAWS)
+- Use `<button>` for actions and `<a>` for navigation.
+- Give every meaningful image `alt` text; use `alt=""` for decorative ones.
+- Test with the keyboard alone (`Tab`, `Enter`, `Esc`).
+- Test with a screen reader such as VoiceOver, NVDA, or JAWS.

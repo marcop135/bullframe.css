@@ -1,5 +1,5 @@
 # Changelog
 
-Release notes live in the repository root [`CHANGELOG.md`](https://github.com/marcop135/bullframe.css/blob/main/CHANGELOG.md).
+Release notes for every version are in [`CHANGELOG.md`](https://github.com/marcop135/bullframe.css/blob/main/CHANGELOG.md) at the repository root.
 
-Upgrading from v6: [Migration v6 to v7](/migration-v7). From v5: [v5 to v6](/migration).
+To upgrade across a major version, follow [Migration v6 to v7](/migration-v7), or [Migration v5 to v6](/migration) first when coming from v5.

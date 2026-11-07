@@ -1,4 +1,6 @@
-# Navigation Patterns
+# Navigation patterns
+
+Header, breadcrumb, pagination, skip link, and sidebar navigation from `.bf-*` classes and semantic HTML.
 
 ## Header nav
 
@@ -16,7 +18,7 @@
 </header>
 ```
 
-`margin-left: auto` pushes the signup button to the right edge; a flexbox idiom that beats `justify-content: space-between` when you have an asymmetric layout.
+`margin-left: auto` pushes the signup button to the right edge.
 
 ## Breadcrumb
 
@@ -32,7 +34,7 @@
 </nav>
 ```
 
-`aria-current="page"` marks the current item without adding visual noise. The `aria-hidden="true"` on separators keeps screen readers from announcing slashes.
+`aria-current="page"` marks the current item; `aria-hidden="true"` keeps screen readers from announcing the separators.
 
 ## Pagination
 
@@ -50,7 +52,7 @@
 
 ## Skip link
 
-Class-based and utilities builds. The first focusable element on the page. Hidden by default; visible when keyboard-focused. Sends keyboard users past the nav to the main content.
+Make `.bf-skip-link` the first focusable element on the page. It stays off-screen until keyboard focus reaches it, then appears at the top left without reflowing the page.
 
 ```html
 <a class="bf-skip-link" href="#main">Skip to content</a>
@@ -60,11 +62,11 @@ Class-based and utilities builds. The first focusable element on the page. Hidde
 </main>
 ```
 
-`tabindex="-1"` on `<main>` makes it focusable when the skip link activates. Without it, the browser jumps to the anchor visually but doesn't move focus. Legacy `.bf-sr-only.bf-focusable` still works; `.bf-skip-link` is preferred because it does not reflow the page when revealed.
+`tabindex="-1"` on `<main>` lets it receive focus when the link activates. See [Accessibility: screen reader utilities](../accessibility#screen-reader-utilities) for the related classes.
 
 ## Sidebar nav
 
-Collapsible on mobile via the native `<details>` element; no JavaScript.
+The native `<details>` element makes the list collapsible without JavaScript.
 
 ```html
 <aside>
@@ -79,18 +81,4 @@ Collapsible on mobile via the native `<details>` element; no JavaScript.
 </aside>
 ```
 
-`<details open>` keeps it expanded by default on desktop; users can toggle on smaller screens.
-
-## Tab-style nav (using radio inputs, no JS)
-
-```html
-<div role="tablist">
-  <input type="radio" name="tabs" id="tab-1" checked />
-  <label for="tab-1" class="bf-btn" role="tab">Tab 1</label>
-
-  <input type="radio" name="tabs" id="tab-2" />
-  <label for="tab-2" class="bf-btn" role="tab">Tab 2</label>
-</div>
-```
-
-For full tab semantics (panels, keyboard arrow-key navigation), reach for a small JS component. The radio-input trick covers ~80% of cases.
+`open` renders the list expanded; users can collapse it.

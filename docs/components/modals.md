@@ -1,8 +1,8 @@
-# Modal Patterns
+# Modal patterns
 
-Bullframe styles the native `<dialog>` element. No JS framework, no overlay div, no focus-trapping library. The browser handles all of it.
+Bullframe styles the native `<dialog>` element, so a modal needs no overlay markup and no focus-management library. Every build includes the dialog styles.
 
-## Basic dialog
+## Confirm dialog
 
 ```html
 <button class="bf-btn bf-btn--primary" onclick="document.getElementById('confirm').showModal()">Delete account</button>
@@ -17,13 +17,10 @@ Bullframe styles the native `<dialog>` element. No JS framework, no overlay div,
 </dialog>
 ```
 
-Why this works:
+- `showModal()` opens the dialog on the top layer, makes the rest of the page inert, shows a `::backdrop`, and closes on `Esc`.
+- `<form method="dialog">` closes the dialog on submit and stores the clicked button's `value` in `dialog.returnValue`.
 
-- `showModal()` opens the dialog, traps focus, dims the background, and adds `Esc` to close; built into the browser.
-- `<form method="dialog">` closes the dialog on submit and exposes the clicked button's `value` via `dialog.returnValue`.
-- The `Esc` key always closes a modal dialog. No custom keydown handler needed.
-
-## Reading the result
+## Read the result
 
 ```html
 <script>
@@ -36,9 +33,9 @@ Why this works:
 </script>
 ```
 
-## Non-modal dialog (popover-style)
+## Non-modal dialog
 
-Use `dialog.show()` instead of `showModal()` when the dialog should not block the rest of the page (e.g. a contextual help panel).
+Open with `dialog.show()` instead of `showModal()` when the rest of the page must stay usable, for example a contextual help panel.
 
 ```html
 <dialog id="help">
@@ -49,20 +46,20 @@ Use `dialog.show()` instead of `showModal()` when the dialog should not block th
 </dialog>
 ```
 
-## Focus on open
+## Safe default focus
 
-By default the browser focuses the first focusable element. Override with `autofocus`:
+The browser focuses the first focusable element on open. Put `autofocus` on the non-destructive action so a stray `Enter` does not confirm:
 
 ```html
 <dialog id="confirm">
   <h2>Are you sure?</h2>
-  <button class="bf-btn" autofocus>Cancel</button>
-  <button class="bf-btn bf-btn--primary">Delete</button>
+  <form method="dialog">
+    <button class="bf-btn" value="cancel" autofocus>Cancel</button>
+    <button class="bf-btn bf-btn--primary" value="confirm">Delete</button>
+  </form>
 </dialog>
 ```
 
-This is the "safe default focus" pattern; Cancel gets focus, so a stray Enter doesn't delete anything.
+## Motion
 
-## Browser support
-
-`<dialog>` ships in all modern browsers (Chrome 37+, Safari 15.4+, Firefox 98+). For older browsers, use the [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill).
+Where the browser supports `overlay` transitions, the dialog and backdrop fade in. Users with `prefers-reduced-motion: reduce` get no transition, on every build.

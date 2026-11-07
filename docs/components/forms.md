@@ -1,6 +1,6 @@
-# Form Patterns
+# Form patterns
 
-Full-form snippets. For individual form-element styling, see [Forms](../forms).
+Complete form snippets. For individual form elements, see [Forms](../forms).
 
 ## Login form
 
@@ -23,7 +23,7 @@ Full-form snippets. For individual form-element styling, see [Forms](../forms).
 </form>
 ```
 
-Why these autocomplete tokens matter: password managers and `<input>` fill behavior depend on them. Skipping `autocomplete="current-password"` breaks 1Password and the OS keychain.
+Keep the `autocomplete` values: password managers and browser autofill use `email` and `current-password` to recognise the fields.
 
 ## Contact form
 
@@ -52,7 +52,9 @@ Why these autocomplete tokens matter: password managers and `<input>` fill behav
 </form>
 ```
 
-## Search bar (inline)
+## Inline search bar
+
+`role="search"` makes the form a landmark that screen readers list in their navigation menus.
 
 ```html
 <form role="search" style="display: flex; gap: 0.5rem;">
@@ -61,8 +63,6 @@ Why these autocomplete tokens matter: password managers and `<input>` fill behav
   <button type="submit" class="bf-btn">Search</button>
 </form>
 ```
-
-`role="search"` is a landmark; screen readers list it in their navigation menu.
 
 ## Newsletter signup
 

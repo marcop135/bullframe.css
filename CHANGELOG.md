@@ -9,15 +9,15 @@
 
 ### Changed
 
-- Rewrite the docs against the v7 CSS: correct breakpoints, form states, print scope, ARIA patterns and missing classes.
-- Link the author name in the docs footer to [marcopontili.com](https://marcopontili.com).
+- Rewrite the docs against the v7 CSS: correct breakpoints, form states, print scope, ARIA patterns and missing classes ([#132](https://github.com/marcop135/bullframe.css/pull/132)).
+- Link the author name in the docs footer to [marcopontili.com](https://marcopontili.com) ([#132](https://github.com/marcop135/bullframe.css/pull/132)).
 
 ### Fixed
 
-- Remove the last `.bf-*` selector (`:not(.bf-disabled)`) from the classless builds.
-- Keep `.bf-disabled` text fields dark and readable when utilities load after a dark build.
-- Keep focused `.bf-disabled` primary buttons at the primary colour in dark builds.
-- Keep kitchen sink build notes readable in dark mode ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
+- Remove the last `.bf-*` selector (`:not(.bf-disabled)`) from the classless builds ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
+- Keep `.bf-disabled` text fields dark and readable when utilities load after a dark build ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
+- Keep focused `.bf-disabled` primary buttons at the primary colour in dark builds ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
+- Keep kitchen sink build notes readable in dark mode ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
 
 ## [7.0.1] - 2026-11-07
 

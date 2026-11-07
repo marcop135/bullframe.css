@@ -7,6 +7,18 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Rewrite the docs against the v7 CSS: correct breakpoints, form states, print scope, ARIA patterns and missing classes.
+- Link the author name in the docs footer to [marcopontili.com](https://marcopontili.com).
+
+### Fixed
+
+- Remove the last `.bf-*` selector (`:not(.bf-disabled)`) from the classless builds.
+- Keep `.bf-disabled` text fields dark and readable when utilities load after a dark build.
+- Keep focused `.bf-disabled` primary buttons at the primary colour in dark builds.
+- Keep kitchen sink build notes readable in dark mode ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
+
 ## [7.0.1] - 2026-11-07
 
 ### Security
@@ -21,14 +33,14 @@
 
 ### Changed
 
-- **BREAKING:** name colours by role (`--bf-color-primary`), not hue, in light and dark builds. See [Migration v6 to v7](docs/migration-v7.md) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- BREAKING: name colours by role (`--bf-color-primary`), not hue, in light and dark builds. See [Migration v6 to v7](docs/migration-v7.md) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Docs: rewrite [CSS Variables](docs/variables.md) as role tables and list dark hooks in the API reference ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Skills: load in Claude, Cursor, and Codex from one copy and move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
 
 ### Removed
 
-- **BREAKING:** hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- BREAKING: hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 
 ### Fixed
 

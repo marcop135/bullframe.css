@@ -87,7 +87,7 @@
 
 :where(button, [type='button'], [type='reset'], [type='submit']):hover,
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
-:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
     [aria-disabled='true']
   ) {
   text-decoration: none;
@@ -96,7 +96,7 @@
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
-:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
     [aria-disabled='true']
   ) {
   box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);

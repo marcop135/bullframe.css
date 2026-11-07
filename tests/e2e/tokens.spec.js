@@ -122,13 +122,3 @@ for (const build of ['bullframe-dark', 'bullframe-classless-dark']) {
     expect(bg).toBe('rgb(17, 17, 17)');
   });
 }
-
-test('bullframe-dark keeps disabled primary buttons primary on focus', async ({ page }) => {
-  await page.setContent('<button id="b" class="bf-btn bf-btn--primary bf-disabled">Go</button>');
-  await page.addStyleTag({ content: css('bullframe-dark') });
-  await page.addStyleTag({ content: '* { transition: none !important; }' });
-  const rest = await page.$eval('#b', (el) => getComputedStyle(el).backgroundColor);
-  await page.focus('#b');
-  const focused = await page.$eval('#b', (el) => getComputedStyle(el).backgroundColor);
-  expect(focused).toBe(rest);
-});

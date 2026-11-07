@@ -898,7 +898,7 @@ pre code {
 
 :where(button, [type='button'], [type='reset'], [type='submit']):hover,
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
-:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
     [aria-disabled='true']
   ) {
   text-decoration: none;
@@ -907,7 +907,7 @@ pre code {
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
-:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
     [aria-disabled='true']
   ) {
   box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
@@ -3063,14 +3063,14 @@ progress[value]::-webkit-progress-value {
   background: var(--bf-color-primary);
 }
 
-.bf-btn.bf-btn--primary:not(.bf-disabled):hover,
-.bf-btn.bf-btn--primary:not(.bf-disabled):active,
-.bf-btn.bf-btn--primary:not(.bf-disabled):focus {
+.bf-btn.bf-btn--primary:hover,
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
   background: var(--bf-color-primary-hover);
 }
 
-.bf-btn.bf-btn--primary:not(.bf-disabled):active,
-.bf-btn.bf-btn--primary:not(.bf-disabled):focus {
+.bf-btn.bf-btn--primary:active,
+.bf-btn.bf-btn--primary:focus {
   box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 

@@ -13,9 +13,7 @@
 
 ### Fixed
 
-- Remove the last `.bf-*` selector (`:not(.bf-disabled)`) from the classless builds ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
 - Keep `.bf-disabled` text fields dark and readable when utilities load after a dark build ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
-- Keep focused `.bf-disabled` primary buttons at the primary colour in dark builds ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
 - Keep kitchen sink build notes readable in dark mode ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
 
 ## [7.0.1] - 2026-11-07

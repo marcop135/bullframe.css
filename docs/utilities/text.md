@@ -1,28 +1,20 @@
-# Text Utilities
+# Text utilities
 
-Bullframe CSS provides utilities for controlling text appearance and behavior.
+Classes for alignment, transform, weight, style, truncation and font family. Unless noted, each uses `!important`. Element typography is on the [Typography](/typography) page.
 
-## Text Alignment
+## Alignment and transform
 
 ```html
 <p class="bf-t-left">Left aligned</p>
 <p class="bf-t-center">Center aligned</p>
 <p class="bf-t-right">Right aligned</p>
-```
-
-There is no justify utility. Set `text-align: justify` yourself where a design calls for it.
-
-## Text Transform
-
-```html
-<p class="bf-t-transform-uppercase">UPPERCASE TEXT</p>
+<p class="bf-t-transform-uppercase">Uppercase text</p>
 <p class="bf-t-transform-none">No transform</p>
 ```
 
-Lowercase and capitalize have no utility; use `<span>` with your own rule when you need
-them.
+There are no justify, lowercase or capitalize classes; write the rule yourself.
 
-## Font Weight
+## Weight and style
 
 ```html
 <p class="bf-t-weight-300">Light</p>
@@ -31,16 +23,11 @@ them.
 <p class="bf-t-weight-600">Semibold</p>
 <p class="bf-t-weight-700">Bold</p>
 <p class="bf-t-weight-800">Extra bold</p>
-```
-
-## Font Style
-
-```html
-<p class="bf-t-style-normal">Normal</p>
 <p class="bf-t-italic">Italic</p>
+<p class="bf-t-style-normal">Normal style, for resetting inherited italics</p>
 ```
 
-## Truncation
+## Truncation and wrapping
 
 ```html
 <p class="bf-t-truncate">One line, clipped with an ellipsis</p>
@@ -49,20 +36,27 @@ them.
 <p class="bf-text-break">Breaks a long unbroken string instead of overflowing</p>
 ```
 
-## Text Hide
+## Font family
 
-Hide text visually while keeping it accessible to screen readers:
+`.bf-font-sans-serif`, `.bf-font-serif` and `.bf-font-monospace` apply the `--bf-font-*` token stacks; see [CSS variables](/variables#typography-tokens).
 
-```html
-<span class="bf-text-hide">Hidden text</span>
-```
+These system font stacks, from [Modern Font Stacks](https://modernfontstacks.com/), load no web fonts and do not use `!important`:
 
-## Screen Reader Only
+| Family     | Classes                                                                                                                                                                                                  |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sans-serif | `.bf-sans-serif--system`, `.bf-sans-serif--humanist`, `.bf-sans-serif--geometric`, `.bf-sans-serif--classical`, `.bf-sans-serif--neo-grotesque`, `.bf-sans-serif--industrial`, `.bf-sans-serif--rounded` |
+| Serif      | `.bf-serif--transitional`, `.bf-serif--oldstyle`, `.bf-serif--slab`, `.bf-serif--antique`, `.bf-serif--didone`                                                                                           |
+| Monospace  | `.bf-monospace--slab`, `.bf-monospace--code`                                                                                                                                                             |
+| Cursive    | `.bf-cursive--handwritten`                                                                                                                                                                               |
 
-Show text only to screen readers (class-based and utilities builds):
+## Other text classes
 
-```html
-<span class="bf-sr-only">Screen reader only</span> <span class="bf-sr-only bf-focusable">Focusable screen reader text</span>
-```
+| Class                      | Effect                                                                        |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| `.bf-t-shadow`             | Soft text shadow in `--bf-color-text-shadow`                                  |
+| `.bf-no-select`            | `user-select: none`                                                           |
+| `.bf-antialiased`          | Grayscale font smoothing on macOS; no `!important`                            |
+| `.bf-subpixel-antialiased` | Resets font smoothing to `auto`; no `!important`                              |
+| `.bf-text-hide`            | Collapses text to zero size (image replacement); screen readers still read it |
 
-For a skip link that stays out of document flow until focused, prefer `.bf-skip-link`. See [Accessibility](/accessibility).
+For text that only screen readers announce, use `.bf-sr-only`; see [Accessibility](/accessibility).

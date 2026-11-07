@@ -1,9 +1,6 @@
 # Agent skills
 
-Bullframe ships a set of agent skills: plain Markdown files that teach an AI coding agent
-how to build with this framework. They are part of the npm package, they need no server
-and no API key, and they work in any environment that can read a file. Install is local
-files only; no network call and no Anthropic (or other) key.
+Bullframe ships agent skills: Markdown files that teach an AI coding agent to build with the framework. They come with the npm package and install as local files, with no server, network call or API key.
 
 ## Install
 
@@ -12,32 +9,41 @@ npm install bullframe.css
 npx bullframe.css skills install
 ```
 
-That writes two things into your project:
+The default install writes:
 
-- `bullframe-skills/`, the skill files plus `api.json`.
-- A managed block in `AGENTS.md`, between `<!-- bullframe:skills:start -->` and
-  `<!-- bullframe:skills:end -->`, holding the framework's rules and an index of the
-  skills. Re-running replaces that block and leaves the rest of the file untouched.
+- `bullframe-skills/`: every skill, plus `_shared/`, `api.json` and `index.json`.
+- A managed block in `AGENTS.md`, between `<!-- bullframe:skills:start -->` and `<!-- bullframe:skills:end -->`, with the framework rules and a skill index. Re-running replaces that block and overwrites the copied skill files.
 
-When a tool directory already exists, the same command also writes that tool's layout:
+When a tool directory already exists in the project, the install also writes that tool's layout:
 
-| Directory | Layout written    | Read by             |
-| --------- | ----------------- | ------------------- |
-| `.claude` | `.claude/skills/` | Claude Code, Cursor |
-| `.agents` | `.agents/skills/` | Codex, Cursor       |
-| `.cursor` | `.agents/skills/` | Codex, Cursor       |
+| Directory found | Layout written    | Read by             |
+| --------------- | ----------------- | ------------------- |
+| `.claude`       | `.claude/skills/` | Claude Code, Cursor |
+| `.agents`       | `.agents/skills/` | Codex, Cursor       |
+| `.cursor`       | `.agents/skills/` | Codex, Cursor       |
+
+## Options
 
 ```bash
-npx bullframe.css skills install --target claude   # Claude layout only
-npx bullframe.css skills install --target cursor   # same as codex; no .cursor/skills
-npx bullframe.css skills install --target codex    # Codex layout only (.agents/skills)
-npx bullframe.css skills install --target agents   # AGENTS.md + local copy only
-npx bullframe.css skills install --target dir --dir vendor/bf
-npx bullframe.css skills install --dry-run         # show the plan, write nothing
+npx bullframe.css skills install --target claude
+npx bullframe.css skills install --target codex
+npx bullframe.css skills install --target cursor
+npx bullframe.css skills install --target agents
+npx bullframe.css skills install --target dir --dir <path>
+npx bullframe.css skills install --dry-run
 npx bullframe.css skills list
+npx bullframe.css skills path
 ```
 
-Explicit `--target` creates the path even if the parent directory was missing.
+| Option or command | Effect                                                                         |
+| ----------------- | ------------------------------------------------------------------------------ |
+| `--target <list>` | Comma-separated: `claude`, `codex`, `cursor`, `agents`, `dir`. Skips detection |
+| `--target cursor` | Same as `codex`: writes `.agents/skills/`                                      |
+| `--target agents` | `AGENTS.md` block plus the local copy only                                     |
+| `--dir <path>`    | Folder for the `dir` and `agents` copies. Default: `bullframe-skills`          |
+| `--dry-run`       | Prints the plan and writes nothing                                             |
+| `skills list`     | Lists the packaged skills                                                      |
+| `skills path`     | Prints the packaged skills folder                                              |
 
 ## The skills
 
@@ -52,27 +58,17 @@ Explicit `--target` creates the path even if the parent directory was missing.
 | `bullframe-media`        | Albums, embeds, figures, media grids and filters               |
 | `bullframe-components`   | Nav, breadcrumbs, pagination, cards, native `<dialog>` modals  |
 
-Every skill declares the framework range it was validated against, the builds it applies
-to, and the docs pages it draws on.
+Each skill declares the framework range it was validated against, the builds it applies to, and the docs pages it draws on.
 
 ## Without npm
 
 The same files are published on this site:
 
-- <https://bullframecss.marcopontili.com/skills/index.json>
-- <https://bullframecss.marcopontili.com/api.json>
+- [skills/index.json](https://bullframecss.marcopontili.com/skills/index.json)
+- [api.json](https://bullframecss.marcopontili.com/api.json): every `.bf-*` class, every `--bf-*` token with its default, and the seven builds, generated from `src/css/`
 
-`api.json` is the machine-readable surface: every `.bf-*` class, every `--bf-*` token with
-its default, and the seven builds. It is generated from `src/css/`, so it cannot describe
-a class the framework does not have.
-
-Any docs page is also Markdown: append `.md` to the path, or send
-`Accept: text/markdown`. See [llms.txt](https://bullframecss.marcopontili.com/llms.txt).
+Any docs page is also Markdown: append `.md` to the path, or send `Accept: text/markdown`. See [llms.txt](https://bullframecss.marcopontili.com/llms.txt).
 
 ## How they stay correct
 
-The skills are generated and tested alongside the CSS. Continuous integration fails if a
-skill, a shared reference or a docs code block names a class or token that no longer
-exists in `src/css/`, and every HTML example in a skill is validated with the project's
-own accessibility rules. Skills version with the framework: one tag, one changelog, one
-`npm install`.
+Skills are generated and tested with the CSS. CI fails if a skill, a shared reference or a docs code block names a class or token missing from `src/css/`, and every HTML example in a skill is validated with the project's accessibility rules. Skills version with the framework: one tag, one changelog, one package.

@@ -1,24 +1,20 @@
 # Components
 
-Copy-paste HTML patterns built with Bullframe's existing classes. No JavaScript, no extra CSS, no dependencies; just markup.
+Copy-paste HTML patterns composed from Bullframe classes and standard HTML. For single elements and classes, see [Buttons](../buttons), [Forms](../forms), and the rest of Core Concepts.
 
-These pages complement the [Buttons](../buttons) reference (and the rest of Core Concepts). Use these when you need a complete pattern: a login form, a header nav, a card grid.
+## Patterns
 
-## Available patterns
-
-- **[Button Patterns](./button-patterns)** - groups, icon buttons, full-width, segmented controls.
-- **[Forms](./forms)** - login, contact, search, inline forms.
-- **[Modals](./modals)** - native `<dialog>` with no JavaScript.
-- **[Cards](./cards)** - content, media, pricing.
-- **[Navigation](./navigation)** - header nav, breadcrumb, pagination.
+- [Button patterns](./button-patterns): groups, icon buttons, full-width, submit and reset, disabled with a reason.
+- [Form patterns](./forms): login, contact, search, newsletter.
+- [Modal patterns](./modals): native `<dialog>`.
+- [Card patterns](./cards): content, media, grid, pricing, linked.
+- [Navigation patterns](./navigation): header nav, breadcrumb, pagination, skip link, sidebar.
 
 ## Conventions
 
 Every snippet on these pages:
 
-- Uses only Bullframe classes (`.bf-*`) and standard HTML.
-- Works in the default `bullframe.css` build (and the other shipped variants unless noted).
-- Is keyboard-accessible and meets WCAG AA contrast.
-- Has zero JavaScript unless the pattern fundamentally requires it (e.g. dialog open/close, where one-line JS is shown).
-
-If a pattern doesn't fit your case, treat it as a starting point. Bullframe's classes are composable.
+- Uses only `.bf-*` classes, standard HTML, and inline styles where no class exists.
+- Needs a class-based build (`bullframe.css`, `bullframe-dark.css`, `bullframe-system-default.css`) or a classless build plus `bullframe-utilities.css`. Classless builds alone ship no `.bf-*` classes.
+- Is keyboard-accessible and meets WCAG AA contrast with the default tokens.
+- Uses no JavaScript, except the dialog open and close calls on [Modal patterns](./modals).

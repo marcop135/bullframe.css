@@ -1,14 +1,14 @@
-# CSS Variables
+# CSS variables
 
-Bullframe CSS uses CSS custom properties (variables) for easy customization. All variables use the `--bf-*` prefix and are defined on `:root`.
+Every Bullframe design token is a `--bf-*` custom property on `:root`. Override one to theme every build without rebuilding.
 
 ## Naming
 
 Colour tokens follow `--bf-color-<role>[-<property>][-<state>]`: `--bf-color-primary-hover`, `--bf-color-field-shadow-focus`. Colours are named for the job they do, not the hue, so one override changes one role. v6 colour names are listed in the [v6 to v7 migration guide](/migration-v7).
 
-## Color Variables
+## Colour tokens
 
-Values are `rgb()`; any CSS colour works as an override.
+Table values are the `rgb()` arguments from `src/css/variables.css` (light) and `src/css/_utility-global-dark-elements.css` (dark). Any CSS colour works as an override.
 
 ### Page
 
@@ -19,19 +19,19 @@ Values are `rgb()`; any CSS colour works as an override.
 | `--bf-color-text-muted`                | `118 118 118`                 | `153 153 153` | `blockquote small`                         |
 | `--bf-color-text-subtle`               | `102 102 102`                 | same          | Secondary text (for your own CSS)          |
 | `--bf-color-text-shadow`               | `34 34 34`                    | same          | `.bf-t-shadow`                             |
-| `--bf-color-contrast`                  | `0 0 0`                       | same          | Maximum-contrast black                     |
+| `--bf-color-contrast`                  | `0 0 0`                       | same          | `mark` and `ins` text                      |
 | `--bf-color-surface`                   | `233 233 233`                 | same          | Panels and placeholders (for your own CSS) |
-| `--bf-color-border` / `-border-strong` | `204 204 204` / `102 102 102` | same          | Borders                                    |
+| `--bf-color-border` / `-border-strong` | `204 204 204` / `102 102 102` | same          | Skip link border / for your own CSS        |
 | `--bf-color-overlay-bg`                | `255 255 255`                 | same          | Skip link background                       |
 | `--bf-color-caption`                   | `118 118 118`                 | `204 204 204` | Table `caption`                            |
 
-### Primary and Neutral
+### Primary and neutral
 
 | Token                                   | Light                         | Dark                | Role                                                              |
 | --------------------------------------- | ----------------------------- | ------------------- | ----------------------------------------------------------------- |
 | `--bf-color-primary`                    | `0 86 179`                    | same                | Links, primary buttons, focused fields, accent (WCAG AA on white) |
 | `--bf-color-primary-hover`              | `0 65 135`                    | same                | Hover of the above                                                |
-| `--bf-color-primary-subtle`             | `190 216 254`                 | same                | Light primary tint                                                |
+| `--bf-color-primary-subtle`             | `190 216 254`                 | same                | Light primary tint (for your own CSS)                             |
 | `--bf-color-primary-shadow-focus`       | `0 65 135 / 35%`              | `190 216 254 / 75%` | Primary button focus shadow                                       |
 | `--bf-color-on-primary`                 | `255 255 255`                 | same                | Text on primary                                                   |
 | `--bf-color-neutral` / `-neutral-hover` | `204 204 204` / `184 184 184` | same                | Default button fill                                               |
@@ -51,7 +51,7 @@ Values are `rgb()`; any CSS colour works as an override.
 | `--bf-color-progress-track`                 | `204 204 204`                 | `51 51 51`                    | Progress track                               |
 | `--bf-color-danger`                         | `255 0 0`                     | `255 38 38`                   | `.bf-invalid` and invalid-state helpers      |
 
-### Highlight and Tables
+### Highlight and tables
 
 | Token                         | Light         | Dark          | Role                    |
 | ----------------------------- | ------------- | ------------- | ----------------------- |
@@ -72,7 +72,7 @@ Undeclared in light builds, so they follow `--bf-color-primary` (also when you s
 | `--bf-color-field-text`                                  | inherited text             | `204 204 204`            |
 | `--bf-color-scrollbar-track` / `-thumb` / `-thumb-hover` | browser default            | `17` / `97` / `115` grey |
 
-### Focus Ring
+### Focus ring
 
 ```css
 :root {
@@ -82,9 +82,11 @@ Undeclared in light builds, so they follow `--bf-color-primary` (also when you s
 }
 ```
 
-Under `prefers-contrast: more`, `--bf-color-focus-ring` is raised automatically for WCAG 1.4.11. Override these tokens to restyle keyboard focus globally. See [Accessibility](/accessibility).
+Under `prefers-contrast: more`, the builds raise `--bf-color-focus-ring` for WCAG 1.4.11. Override these tokens to restyle keyboard focus everywhere; see [Accessibility](/accessibility).
 
-## Spacing Variables
+## Spacing tokens
+
+The margin and padding utilities map to this scale; see [Spacing utilities](/utilities/spacing). `--bf-spacing-grid-gutter` sets container padding and column gutters.
 
 ```css
 :root {
@@ -97,7 +99,7 @@ Under `prefers-contrast: more`, `--bf-color-focus-ring` is raised automatically 
 }
 ```
 
-## Typography Variables
+## Typography tokens
 
 ```css
 :root {
@@ -109,7 +111,9 @@ Under `prefers-contrast: more`, `--bf-color-focus-ring` is raised automatically 
 }
 ```
 
-## Breakpoint Variables
+## Breakpoint tokens
+
+These exist for your own media queries. The framework's media queries use literal pixel values, so changing a token does not move a framework breakpoint.
 
 ```css
 :root {
@@ -122,9 +126,9 @@ Under `prefers-contrast: more`, `--bf-color-focus-ring` is raised automatically 
 }
 ```
 
-## Customizing Variables
+## Override a token
 
-Override any token after Bullframe loads. Light tokens sit at zero specificity (`:where(:root)`), so a plain `:root` rule always wins:
+Light tokens sit at zero specificity (`:where(:root)`), so a plain `:root` rule wins over them:
 
 ```css
 :root {

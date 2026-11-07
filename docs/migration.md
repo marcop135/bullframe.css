@@ -1,16 +1,14 @@
 ---
-title: Migration Guide (v5 to v6)
+title: Migration guide (v5 to v6)
 ---
 
 <!-- bf-absent: --bf-blue, --bf-blue-light, --bf-focus-ring-color -->
 
-# Migration Guide: v5 to v6
+# Migration guide: v5 to v6
 
-Coding against v7? Finish this guide, then follow [v6 to v7](/migration-v7): v7 renames the colour tokens below.
+v6 replaces Sass/SCSS with native CSS and PostCSS. Upgrading to v7? Finish this guide, then follow [v6 to v7](/migration-v7), which renames the colour tokens used below.
 
-Bullframe CSS v6 is a major rewrite. The framework has been migrated from **Sass/SCSS to native CSS with PostCSS**. This guide covers everything you need to update.
-
-## Breaking Changes at a Glance
+## What changed
 
 | What changed     | v5                         | v6                               |
 | ---------------- | -------------------------- | -------------------------------- |
@@ -21,10 +19,10 @@ Bullframe CSS v6 is a major rewrite. The framework has been migrated from **Sass
 | Source directory | `src/scss/`                | `src/css/`                       |
 | IE support       | Dropped in v5              | Not supported                    |
 
-## 1. Update Your Install
+## 1. Install v6
 
 ```bash
-npm install bullframe.css@latest
+npm install bullframe.css@6
 ```
 
 The CDN link also changes:
@@ -37,9 +35,9 @@ The CDN link also changes:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@6.1.0/dist/css/bullframe.min.css" />
 ```
 
-## 2. Replace Sass Variables with CSS Custom Properties
+## 2. Replace Sass variables with custom properties
 
-All Sass variables (`$bf-*`) are now CSS custom properties (`--bf-*`).
+Every Sass variable (`$bf-*`) is now a CSS custom property (`--bf-*`).
 
 ```scss
 /* v5 (Sass) */
@@ -53,9 +51,9 @@ $bf-font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-
 }
 ```
 
-### Common Variable Renames
+### Common variable renames
 
-| v5 Sass Variable             | v6 CSS Custom Property     |
+| v5 Sass variable             | v6 custom property         |
 | ---------------------------- | -------------------------- |
 | `$bf-blue`                   | `--bf-blue`                |
 | `$bf-blue-light`             | `--bf-blue-light`          |
@@ -67,16 +65,13 @@ $bf-font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-
 | `$bf-body-line-height`       | `--bf-body-line-height`    |
 | `$bf-grid-gutter`            | `--bf-spacing-grid-gutter` |
 
-## 3. Remove Sass Mixins
+## 3. Remove Sass mixins
 
-Sass mixins no longer exist. Replace them with:
+v6 has no mixins. Replace each `@include` with a utility class (`.bf-clearfix`, `.bf-sr-only`, `.bf-reduced-motion`) or with plain CSS that reads the custom properties.
 
-- **Utility classes** (e.g., `.bf-clearfix`, `.bf-sr-only`, `.bf-reduced-motion`)
-- **Direct CSS** using the custom properties
+## 4. Update your build
 
-## 4. Update Your Build
-
-If you were importing Sass files directly:
+Imports of the Sass sources break:
 
 ```scss
 /* v5: no longer works */
@@ -84,17 +79,15 @@ If you were importing Sass files directly:
 ```
 
 ```css
-/* v6: use CSS imports or just link the built file */
+/* v6: import or link the built file */
 @import 'bullframe.css/dist/css/bullframe.css';
 ```
 
-If you had a custom Sass build, replace it with PostCSS. See [Customization](/theming/customization) for details.
+Replace a custom Sass build with PostCSS, as described in [Customization](/theming/customization).
 
-## 5. Color Contrast Changes
+## 5. Check colour contrast
 
-v6 darkened `--bf-blue` and `--bf-blue-light` to meet **WCAG AA** contrast requirements (4.5:1 ratio). Links and primary buttons are slightly darker blue.
-
-To restore the brighter v5 colors:
+v6 darkened `--bf-blue` and `--bf-blue-light` to meet WCAG AA contrast (4.5:1), so links and primary buttons are a darker blue. To restore the v5 colours:
 
 ```css
 :root {
@@ -103,9 +96,9 @@ To restore the brighter v5 colors:
 }
 ```
 
-## 6. New Dark Mode Variants
+## 6. Pick a dark mode build
 
-v6 ships dark and system themes for both markup modes:
+v6 adds dark and system builds for both markup modes:
 
 | File                                     | Behavior                       |
 | ---------------------------------------- | ------------------------------ |
@@ -114,11 +107,11 @@ v6 ships dark and system themes for both markup modes:
 | `bullframe-classless-dark.css`           | Always dark (classless)        |
 | `bullframe-classless-system-default.css` | Classless + system preference  |
 
-See [Dark Mode](/theming/dark-mode) for implementation details.
+See [Dark mode](/theming/dark-mode).
 
-## 7. New Accessibility Features
+## 7. Review accessibility additions
 
-v6 adds built-in support for:
+v6 adds:
 
 - `:focus-visible` keyboard-only focus indicators (every build)
 - ARIA attribute styling (`aria-busy`, `aria-disabled`, `aria-hidden`) on every build
@@ -130,8 +123,4 @@ v6 adds built-in support for:
 - `.bf-skip-link`, `.bf-focusable`, and opt-in `.bf-scheme-*`, `.bf-target-size`, `.bf-accent-native` on class-based and utilities builds
 - Classless builds stay element styles only (no `.bf-*` classes)
 
-See [Accessibility](/accessibility).
-
-## Need Help?
-
-If you run into issues migrating, [open an issue on GitHub](https://github.com/marcop135/bullframe.css/issues).
+See [Accessibility](/accessibility). For a migration problem this guide does not cover, [open a GitHub issue](https://github.com/marcop135/bullframe.css/issues).

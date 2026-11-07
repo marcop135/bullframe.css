@@ -1,14 +1,12 @@
 # Getting started
 
-Install Bullframe, pick a markup mode and a theme, link one CSS file. Default build is ~8 KB gzipped. No runtime JS.
+Pick a markup mode and a theme, link one stylesheet, and write HTML. The default build is about 8 KB gzipped and needs no JavaScript.
 
-## Markup modes
+## Choose a markup mode
 
-Two ways to write HTML. Element-level a11y (focus rings, ARIA cursors, contrast preferences) ships in both. `.bf-*` helpers are class-based and utilities only.
+Both modes ship the same element styles, including focus rings, ARIA attribute styling and contrast preferences.
 
-### Class-based
-
-Use `.bf-*` for layout, buttons, forms, skip links, and other helpers.
+**Class-based** adds `.bf-*` classes for layout, buttons, forms, skip links and other helpers.
 
 ```html
 <link rel="stylesheet" href="…/bullframe.min.css" />
@@ -19,9 +17,7 @@ Use `.bf-*` for layout, buttons, forms, skip links, and other helpers.
 </div>
 ```
 
-### Classless
-
-Element selectors only. No `.bf-*` classes in the stylesheet.
+**Classless** styles elements only. The stylesheet has no `.bf-*` classes.
 
 ```html
 <link rel="stylesheet" href="…/bullframe-classless.min.css" />
@@ -31,21 +27,21 @@ Element selectors only. No `.bf-*` classes in the stylesheet.
 <form>…</form>
 ```
 
-## Themes
+## Choose a build
 
-Each markup mode has three theme files:
+Each markup mode comes in light, always-dark (`-dark`) and system (`-system-default`, follows `prefers-color-scheme`) builds. Every file has a `.min.css` twin and a source map in `dist/css/`.
 
-| Theme  | Suffix            | Behavior               |
-| ------ | ----------------- | ---------------------- |
-| Light  | (none)            | Always light           |
-| Dark   | `-dark`           | Always dark            |
-| System | `-system-default` | `prefers-color-scheme` |
+| File                                     | Use when                             |
+| ---------------------------------------- | ------------------------------------ |
+| `bullframe.css`                          | Class-based, light                   |
+| `bullframe-dark.css`                     | Class-based, always dark             |
+| `bullframe-system-default.css`           | Class-based, `prefers-color-scheme`  |
+| `bullframe-classless.css`                | Classless, light (elements only)     |
+| `bullframe-classless-dark.css`           | Classless, always dark               |
+| `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`    |
+| `bullframe-utilities.css`                | `.bf-*` helpers only, no base styles |
 
-Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
-
-## Utilities companion
-
-`bullframe-utilities.css` is not a markup mode. Add it when you already have a reset and only need `.bf-*` helpers.
+`bullframe-utilities.css` is not a markup mode. Use it on top of your own reset when you only need the helpers.
 
 ```html
 <link rel="stylesheet" href="…/bullframe-utilities.min.css" />
@@ -55,7 +51,7 @@ Examples: `bullframe-dark.css`, `bullframe-classless-system-default.css`.
 </div>
 ```
 
-## CDN
+## Load from a CDN
 
 <!-- sri:cdn:start -->
 
@@ -92,37 +88,42 @@ Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullfr
 Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-dark.min.css`, …). Hashes for all seven builds: [sri.json](/sri.json).
 <!-- sri:cdn:end -->
 
-## npm
-
-Subpath exports for every variant:
+## Install with npm
 
 ```bash
 npm install bullframe.css
 ```
 
+Import one build by its subpath, from CSS or from a bundler entry such as a Vite or React `main.js`:
+
+| Subpath                          | File                                              |
+| -------------------------------- | ------------------------------------------------- |
+| `bullframe.css`                  | `dist/css/bullframe.css`                          |
+| `bullframe.css/dark`             | `dist/css/bullframe-dark.css`                     |
+| `bullframe.css/system`           | `dist/css/bullframe-system-default.css`           |
+| `bullframe.css/classless`        | `dist/css/bullframe-classless.css`                |
+| `bullframe.css/classless/dark`   | `dist/css/bullframe-classless-dark.css`           |
+| `bullframe.css/classless/system` | `dist/css/bullframe-classless-system-default.css` |
+| `bullframe.css/utilities`        | `dist/css/bullframe-utilities.css`                |
+
 ```css
-@import 'bullframe.css';
-@import 'bullframe.css/dark';
 @import 'bullframe.css/system';
-@import 'bullframe.css/classless';
-@import 'bullframe.css/classless/dark';
-@import 'bullframe.css/classless/system';
-@import 'bullframe.css/utilities';
 ```
 
 ```javascript
-import 'bullframe.css';
-import 'bullframe.css/dark';
 import 'bullframe.css/system';
-import 'bullframe.css/classless';
-import 'bullframe.css/classless/dark';
+```
+
+Load one base build per page. To add `.bf-*` helpers to a classless build, load `bullframe.css/utilities` after it:
+
+```javascript
 import 'bullframe.css/classless/system';
 import 'bullframe.css/utilities';
 ```
 
-## Download
+## Self-host
 
-Self-host from the [v7.0.1 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v7.0.1.zip). Source maps ship beside the minified CSS in `dist/css/`.
+Download the [v7.0.1 archive](https://github.com/marcop135/bullframe.css/archive/refs/tags/v7.0.1.zip) and serve the files in `dist/css/`.
 
 ## Starter HTML
 
@@ -175,25 +176,10 @@ Self-host from the [v7.0.1 archive](https://github.com/marcop135/bullframe.css/a
 </html>
 ```
 
-## Builds
-
-Seven builds. Default build is about **8 KB gzipped**. No JavaScript runtime.
-
-| File                                     | Use when                             |
-| ---------------------------------------- | ------------------------------------ |
-| `bullframe.css`                          | Class-based, light                   |
-| `bullframe-dark.css`                     | Class-based, always dark             |
-| `bullframe-system-default.css`           | Class-based, `prefers-color-scheme`  |
-| `bullframe-classless.css`                | Classless, light (elements only)     |
-| `bullframe-classless-dark.css`           | Classless, always dark               |
-| `bullframe-classless-system-default.css` | Classless, `prefers-color-scheme`    |
-| `bullframe-utilities.css`                | `.bf-*` helpers only, no base styles |
-
-Upgrading from v6: [Migration v6 to v7](/migration-v7). From v5: [v5 to v6](/migration) first.
-
 ## Next
 
-- [CSS Variables](/variables)
+- [CSS variables](/variables)
 - [Utilities](/utilities)
 - [Examples](/examples)
 - [Kitchen sink](/kitchen-sink/)
+- Upgrading: [v6 to v7](/migration-v7), or [v5 to v6](/migration) first from v5

@@ -2,13 +2,9 @@
 title: Lists
 ---
 
-# List Utilities
+# List utilities
 
-Utility classes for styling HTML lists.
-
-## Unstyled List
-
-Remove all default list styling (bullets, numbers, margins, padding):
+`.bf-list-unstyled` removes margins, padding and markers from a `ul`, `ol` or `dd`, and from lists nested inside it.
 
 ```html
 <ul class="bf-list-unstyled">
@@ -18,10 +14,4 @@ Remove all default list styling (bullets, numbers, margins, padding):
 </ul>
 ```
 
-This also works on nested lists and description lists (`<dd>`).
-
-## Class Reference
-
-| Class               | Description                                                                   |
-| ------------------- | ----------------------------------------------------------------------------- |
-| `.bf-list-unstyled` | Removes margins, padding, and `list-style` from `ul`, `ol`, and `dd` elements |
+Element list styles are on the [Typography](/typography#lists) page.

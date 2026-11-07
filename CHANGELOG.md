@@ -10,7 +10,6 @@
 ### Changed
 
 - Rewrite the docs against the v7 CSS: correct breakpoints, form states, print scope, ARIA patterns and missing classes ([#132](https://github.com/marcop135/bullframe.css/pull/132)).
-- Link the author name in the docs footer to [marcopontili.com](https://marcopontili.com) ([#132](https://github.com/marcop135/bullframe.css/pull/132)).
 
 ### Fixed
 

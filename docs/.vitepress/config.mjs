@@ -256,7 +256,7 @@ export default defineConfig({
     ],
     footer: {
       message:
-        '<span class="bf-footer-brand"><img class="bf-footer-logo bf-footer-logo--light" src="/logo.svg" width="36" height="36" alt="" /><img class="bf-footer-logo bf-footer-logo--dark" src="/logo-dark.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 <a href="https://marcopontili.com" title="Marco Pontili">Marco Pontili</a> · <a href="/privacy">Privacy</a></span></span></span>',
+        '<span class="bf-footer-brand"><img class="bf-footer-logo bf-footer-logo--light" src="/logo.svg" width="36" height="36" alt="" /><img class="bf-footer-logo bf-footer-logo--dark" src="/logo-dark.svg" width="36" height="36" alt="" /><span class="bf-footer-text"><span class="bf-footer-name">Bullframe CSS</span><span class="bf-footer-legal">Copyright © 2026 <a href="https://marcopontili.com" title="Marco Pontili" target="_blank" rel="noopener">Marco Pontili</a> · <a href="/privacy">Privacy</a></span></span></span>',
     },
     notFound: {
       code: '404',

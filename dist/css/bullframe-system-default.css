@@ -898,7 +898,7 @@ pre code {
 
 :where(button, [type='button'], [type='reset'], [type='submit']):hover,
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
-:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(
     [aria-disabled='true']
   ) {
   text-decoration: none;
@@ -907,7 +907,7 @@ pre code {
 }
 
 :where(button, [type='button'], [type='reset'], [type='submit']):active,
-:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(
     [aria-disabled='true']
   ) {
   box-shadow: 0 0 0 3px var(--bf-color-button-shadow-focus);
@@ -2381,6 +2381,45 @@ label.bf-disabled {
   border-color: transparent;
 }
 
+/* Text fields keep field colours, so dark text stays readable when utilities load last. */
+:where(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea
+).bf-disabled,
+:where(
+    [type='email'],
+    [type='number'],
+    [type='password'],
+    [type='tel'],
+    [type='search'],
+    [type='text'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='time'],
+    [type='url'],
+    input[list],
+    select,
+    textarea
+  ).bf-disabled:focus {
+  background-color: var(--bf-color-field-bg);
+  border-color: var(--bf-color-field-border);
+}
+
 button.bf-disabled,
 [type='button'].bf-disabled,
 [type='reset'].bf-disabled,
@@ -3030,14 +3069,14 @@ progress[value]::-webkit-progress-value {
   background: var(--bf-color-primary);
 }
 
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:not(.bf-disabled):hover,
+.bf-btn.bf-btn--primary:not(.bf-disabled):active,
+.bf-btn.bf-btn--primary:not(.bf-disabled):focus {
   background: var(--bf-color-primary-hover);
 }
 
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:not(.bf-disabled):active,
+.bf-btn.bf-btn--primary:not(.bf-disabled):focus {
   box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 

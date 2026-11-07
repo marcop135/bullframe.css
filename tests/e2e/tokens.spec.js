@@ -109,3 +109,26 @@ for (const build of ['bullframe-classless-dark', 'bullframe-classless-system-def
     }
   });
 }
+
+for (const build of ['bullframe-dark', 'bullframe-classless-dark']) {
+  test(`${build} keeps disabled text fields dark when utilities load last`, async ({ page }) => {
+    await page.setContent(
+      '<input id="f" type="text" class="bf-disabled" value="x" aria-label="x">'
+    );
+    await page.addStyleTag({ content: css(build) });
+    await page.addStyleTag({ content: css('bullframe-utilities') });
+    await page.focus('#f');
+    const bg = await page.$eval('#f', (el) => getComputedStyle(el).backgroundColor);
+    expect(bg).toBe('rgb(17, 17, 17)');
+  });
+}
+
+test('bullframe-dark keeps disabled primary buttons primary on focus', async ({ page }) => {
+  await page.setContent('<button id="b" class="bf-btn bf-btn--primary bf-disabled">Go</button>');
+  await page.addStyleTag({ content: css('bullframe-dark') });
+  await page.addStyleTag({ content: '* { transition: none !important; }' });
+  const rest = await page.$eval('#b', (el) => getComputedStyle(el).backgroundColor);
+  await page.focus('#b');
+  const focused = await page.$eval('#b', (el) => getComputedStyle(el).backgroundColor);
+  expect(focused).toBe(rest);
+});

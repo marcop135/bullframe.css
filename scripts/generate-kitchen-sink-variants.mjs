@@ -435,7 +435,7 @@ const gridCellStyle = `    <style>
       .demo-meta dd {
         margin-left: 0;
         margin-bottom: 0.75rem;
-        color: var(--bf-color-text-subtle);
+        color: var(--bf-color-text-muted);
       }
       .demo-meta code {
         white-space: nowrap;
@@ -456,7 +456,7 @@ const gridCellStyle = `    <style>
         font-size: 1.2rem;
       }
       .demo-build-file {
-        color: var(--bf-color-text-subtle);
+        color: var(--bf-color-text-muted);
       }
       .demo-build-file code {
         font-size: 1.1rem;

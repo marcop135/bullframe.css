@@ -36,14 +36,14 @@
   background: var(--bf-color-primary);
 }
 
-.bf-btn.bf-btn--primary:hover,
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:not(.bf-disabled):hover,
+.bf-btn.bf-btn--primary:not(.bf-disabled):active,
+.bf-btn.bf-btn--primary:not(.bf-disabled):focus {
   background: var(--bf-color-primary-hover);
 }
 
-.bf-btn.bf-btn--primary:active,
-.bf-btn.bf-btn--primary:focus {
+.bf-btn.bf-btn--primary:not(.bf-disabled):active,
+.bf-btn.bf-btn--primary:not(.bf-disabled):focus {
   box-shadow: 0 0 0 3px var(--bf-color-primary-shadow-focus);
 }
 

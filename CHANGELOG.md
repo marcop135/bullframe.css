@@ -9,7 +9,7 @@
 
 ### Changed
 
-- Rewrite the docs against the v7 CSS: correct breakpoints, form states, print scope, ARIA patterns and missing classes ([#132](https://github.com/marcop135/bullframe.css/pull/132)).
+- Improve the docs: correct breakpoints, form states, print scope and ARIA patterns, and document missing classes ([#132](https://github.com/marcop135/bullframe.css/pull/132)).
 
 ### Fixed
 

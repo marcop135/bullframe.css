@@ -94,21 +94,31 @@ Swap the filename for another build (`bullframe-classless.min.css`, `bullframe-d
 npm install bullframe.css
 ```
 
-Each build has a subpath export. Import one from CSS or from a bundler entry:
+Import one build by its subpath, from CSS or from a bundler entry such as a Vite or React `main.js`:
+
+| Subpath                          | File                                              |
+| -------------------------------- | ------------------------------------------------- |
+| `bullframe.css`                  | `dist/css/bullframe.css`                          |
+| `bullframe.css/dark`             | `dist/css/bullframe-dark.css`                     |
+| `bullframe.css/system`           | `dist/css/bullframe-system-default.css`           |
+| `bullframe.css/classless`        | `dist/css/bullframe-classless.css`                |
+| `bullframe.css/classless/dark`   | `dist/css/bullframe-classless-dark.css`           |
+| `bullframe.css/classless/system` | `dist/css/bullframe-classless-system-default.css` |
+| `bullframe.css/utilities`        | `dist/css/bullframe-utilities.css`                |
 
 ```css
-@import 'bullframe.css';
-@import 'bullframe.css/dark';
 @import 'bullframe.css/system';
-@import 'bullframe.css/classless';
-@import 'bullframe.css/classless/dark';
-@import 'bullframe.css/classless/system';
-@import 'bullframe.css/utilities';
 ```
 
 ```javascript
-import 'bullframe.css';
+import 'bullframe.css/system';
+```
+
+Load one base build per page. To add `.bf-*` helpers to a classless build, load `bullframe.css/utilities` after it:
+
+```javascript
 import 'bullframe.css/classless/system';
+import 'bullframe.css/utilities';
 ```
 
 ## Self-host

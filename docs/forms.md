@@ -1,6 +1,6 @@
 # Forms
 
-Every build styles native form controls with no classes: text fields, `textarea`, `select`, checkboxes, radios and range. Class-based and utilities builds add state classes and custom radio and checkbox wrappers. For complete forms, see [Form patterns](/components/forms).
+Class-based and classless builds style native form controls with no classes: text fields, `textarea`, `select`, checkboxes, radios and range. Class-based and utilities builds add state classes and custom radio and checkbox wrappers. For complete forms, see [Form patterns](/components/forms).
 
 ## Controls
 

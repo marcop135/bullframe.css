@@ -1,12 +1,12 @@
-# Button Patterns
+# Button patterns
 
 <!-- bf-absent: bf-btn--block -->
 
-Composite button patterns. For individual button classes (`.bf-btn`, `.bf-btn--primary`, `.bf-disabled`), see [Buttons](../buttons).
+Composite button patterns. For the button classes themselves (`.bf-btn`, `.bf-btn--primary`, `.bf-disabled`), see [Buttons](../buttons).
 
 ## Button group
 
-Inline buttons that share a horizontal axis. Wrap in any block element.
+Buttons inline in any block element.
 
 ```html
 <div>
@@ -17,13 +17,13 @@ Inline buttons that share a horizontal axis. Wrap in any block element.
 
 ## Full-width button
 
-Stretches to the container's width. Useful in mobile forms and cards.
+Bullframe has no block-button class. Set the width inline:
 
 ```html
 <button class="bf-btn bf-btn--primary" style="width: 100%;">Continue</button>
 ```
 
-For wider use, declare a utility once:
+For repeated use, declare your own class once:
 
 ```css
 .bf-btn--block {
@@ -32,9 +32,9 @@ For wider use, declare a utility once:
 }
 ```
 
-## Icon + text button
+## Icon and text button
 
-Use `<svg>` inline. Bullframe doesn't ship icons; bring your own (Heroicons, Lucide, Phosphor, etc.).
+Bullframe ships no icons; inline your own `<svg>`.
 
 ```html
 <button class="bf-btn bf-btn--primary">
@@ -45,19 +45,17 @@ Use `<svg>` inline. Bullframe doesn't ship icons; bring your own (Heroicons, Luc
 </button>
 ```
 
-`currentColor` makes the icon inherit the button's text color, including hover and disabled states.
+`fill="currentColor"` makes the icon follow the button's text color in every state.
 
-## Anchor styled as button
+## Link styled as a button
+
+`.bf-btn` works on `<a>`; use it for navigation that should look like a button.
 
 ```html
 <a class="bf-btn bf-btn--primary" href="/signup">Sign up</a>
 ```
 
-The button styles apply to `<a>` elements via attribute selectors; no extra class needed beyond `.bf-btn`.
-
-## Submit + reset pair
-
-Standard form footer pattern. The `<button type="reset">` styles match `.bf-btn` automatically.
+## Submit and reset pair
 
 ```html
 <form>
@@ -67,9 +65,9 @@ Standard form footer pattern. The `<button type="reset">` styles match `.bf-btn`
 </form>
 ```
 
-## Disabled with reason
+## Disabled with a reason
 
-Combine `disabled` with `aria-describedby` so screen readers announce why the button is unavailable.
+Pair `disabled` with `aria-describedby` so screen readers announce why the button is unavailable.
 
 ```html
 <button class="bf-btn bf-btn--primary" disabled aria-describedby="why-disabled">Publish</button> <small id="why-disabled" class="bf-t-italic">Add a title before publishing.</small>

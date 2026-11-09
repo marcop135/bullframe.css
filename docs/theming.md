@@ -1,53 +1,53 @@
 # Theming
 
-Bullframe CSS provides multiple theme variants and easy customization options. Override `--bf-*` custom properties to theme without rebuilding.
+Pick a theme by loading one build, then adjust it by overriding `--bf-*` tokens. No rebuild is needed.
 
-## Theme variants
+## Theme builds
 
-### Light theme (default)
+### Light (default)
 
 <!-- sri:cdn-light:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe.min.css" integrity="sha384-2vhgKQiG2CRRhZdqNr6Co/Ht0Qw0xjmknOO3t4Y8spYV7BcN0tuC5CdWoAGLAl2r" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe.min.css" integrity="sha384-xFByrRCjhEUwOP1zcoRX/5wbEVVNaIRjPVaOmhO7C2emm8zmdpGHM2+QBrpYVsth" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-light:end -->
 
-### Dark theme
+### Always dark
 
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-dark.min.css" integrity="sha384-UYVp0OJ9catRvo8ErMkV3SYJGgEiZm5gh1HpOEPUPulPyPmtIwG+6VS7LBNKU02W" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-dark.min.css" integrity="sha384-+8zF6aijwtQLATKB0QLwIoCmiFvf5gr7BIds+eW1kAOs++7fzQZu194rruVXCIZR" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->
 
-### System default theme
+### System default
 
-Switches between light and dark from `prefers-color-scheme`:
+Follows the operating system setting through `prefers-color-scheme`:
 
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-system-default.min.css" integrity="sha384-nHMJWYY0/ALF1uirH1gxfA6vJqhyn/el9nw61zI04dnv4eGFOwdF5G2pTFZChJj/" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-system-default.min.css" integrity="sha384-/xCvTDyTMIPTf/BHIIh20CB4RZeWP5S7BtfVYJZTs4oXo4Sfg1dGmim9KDDFwoxN" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->
 
-More on dark mode: [Dark Mode](/theming/dark-mode).
+See [Dark mode](/theming/dark-mode) for a manual toggle.
 
-## Classless variants
+## Classless builds
 
-The same light / dark / system themes as element styles only (no `.bf-*` classes):
+The same three themes as element styles only, with no `.bf-*` classes:
 
 - `bullframe-classless.css`
 - `bullframe-classless-dark.css`
 - `bullframe-classless-system-default.css`
 
-For skip links and other `.bf-*` helpers, use a class-based build or add `bullframe-utilities.css`.
+For skip links and other `.bf-*` helpers, use a class-based build or add `bullframe-utilities.css` after the classless file.
 
-## Customization
+## Tokens
 
-See the [Customization](/theming/customization) guide for overriding tokens and building on top of Bullframe.
+To change colors, spacing, or type, see [Customization](/theming/customization). The full token list is in [CSS variables](/variables).

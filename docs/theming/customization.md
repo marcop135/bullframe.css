@@ -1,67 +1,45 @@
 # Customization
 
-Customize Bullframe CSS by overriding CSS variables or rebuilding the framework.
+Change Bullframe's colors, spacing, and type by overriding `--bf-*` tokens in your own stylesheet. Rebuild from source only when you need to change the framework rules themselves.
 
-## Overriding CSS Variables
+## Override tokens
 
-The easiest way to customize Bullframe CSS is to override CSS variables:
+Set tokens on `:root` in a stylesheet loaded after the Bullframe build. Defaults sit in `:where(:root)` at zero specificity, but dark builds set their dark values on `:root`, so load order decides between those and yours.
 
 ```css
 :root {
-  /* Override primary color */
   --bf-color-primary: rgb(100 200 255);
-
-  /* Override spacing */
   --bf-spacing-lg: 1.5rem;
-
-  /* Override typography */
   --bf-body-font-size-rem: 1.8rem;
 }
 ```
 
-## Scoped Customization
+The root font size is `62.5%`, so `1.8rem` is about 18px. Every token and its default is listed in [CSS variables](/variables).
 
-You can also scope variables to specific components:
+## Scope overrides to a component
+
+Set tokens on any selector to change only that subtree:
 
 ```css
 .my-component {
-  --bf-color-primary: rgb(255 0 0);
-  /* This component will use red instead of blue */
+  --bf-color-primary: rgb(200 0 0);
 }
 ```
 
-## Rebuilding from Source
+## Rebuild from source
 
-For more advanced customization, you can rebuild Bullframe CSS from source:
+1. Clone the repository and install its dependencies:
 
-1. Clone the repository:
+   ```bash
+   git clone https://github.com/marcop135/bullframe.css.git
+   cd bullframe.css
+   npm ci
+   ```
 
-```bash
-git clone https://github.com/marcop135/bullframe.css.git
-cd bullframe.css
-```
+2. Edit token defaults in `src/css/variables.css`, or add a partial under `src/css/` and `@import` it from the entry file you use, such as `src/css/bullframe.css`.
 
-2. Install dependencies:
+3. Build all seven files into `dist/css/`:
 
-```bash
-npm install
-```
-
-3. Modify variables in `src/css/variables.css`
-
-4. Build:
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist/css/` directory.
-
-## Custom Builds
-
-You can create custom builds by:
-
-1. Modifying `src/css/variables.css`
-2. Adding custom CSS files
-3. Importing them in `src/css/bullframe.css`
-4. Running `npm run build`
+   ```bash
+   npm run build
+   ```

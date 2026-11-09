@@ -1,11 +1,11 @@
 ---
-title: Migration Guide (v6 to v7)
+title: Migration guide (v6 to v7)
 description: Upgrade Bullframe CSS from v6 to v7. Colour token renames, dark-mode overrides and the accessibility fixes in 7.0.
 ---
 
 <!-- bf-absent: --bf-white, --bf-light, --bf-gray-light-extra, --bf-gray-light, --bf-gray, --bf-gray-dark, --bf-gray-dark-extra, --bf-dark, --bf-dark-extra, --bf-black, --bf-yellow-light, --bf-yellow, --bf-orange, --bf-blue, --bf-blue-light, --bf-blue-light-extra, --bf-red, --bf-focus-ring-color, --bf-dark-bg, --bf-dark-link, --bf-dark-link-hover, --bf-dark-border-focus, --bf-dark-shadow-focus, --bf-dark-mark-bg, --bf-dark-ins-bg, --bf-dark-button-hover, --bf-dark-button-shadow, --bf-dark-invalid -->
 
-# Migration Guide: v6 to v7
+# Migration guide: v6 to v7
 
 v7 renames the colour tokens from hue to role, for example `--bf-blue` to `--bf-color-primary`. Builds, file names, classes, HTML and all other tokens stay the same. If you never set a `--bf-*` colour token, install v7 and read [Rendering fixes](#rendering-fixes).
 
@@ -29,7 +29,7 @@ With light tokens at zero specificity, `bullframe-utilities.css` loaded after yo
 npm install bullframe.css@7
 ```
 
-For the CDN, copy the pinned v7 link with SRI from [Getting Started](/getting-started).
+For the CDN, copy the pinned v7 link with SRI from [Getting started: load from a CDN](/getting-started#load-from-a-cdn).
 
 To stay on v6 while you migrate, pin the major version. The unversioned jsDelivr URL serves the latest release, so it now loads v7.
 

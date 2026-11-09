@@ -1,10 +1,10 @@
 # Typography
 
-Bullframe CSS styles headings, body text, blockquotes, code and lists from plain HTML. Classes add lead paragraphs, text alignment and text transforms.
+Every build styles headings, body text, blockquotes, code and lists from plain HTML. Class-based and utilities builds add the classes on this page; alignment, weight, transform and truncation classes are in [Text utilities](/utilities/text).
 
 ## Headings
 
-All heading levels (`h1` through `h6`) are styled with appropriate font sizes and spacing:
+`h1` to `h6` get weight 600, line height 1.25 and balanced wrapping where `text-wrap: balance` is supported. Sizes: `h1` 3.6rem, `h2` 3rem, `h3` 2.4rem, `h4` 2rem, `h5` and `h6` 1.6rem.
 
 ```html
 <h1>Heading 1</h1>
@@ -15,98 +15,75 @@ All heading levels (`h1` through `h6`) are styled with appropriate font sizes an
 <h6>Heading 6</h6>
 ```
 
-## Body Text
-
-Body text uses the `--bf-body-font-size-rem` and `--bf-body-line-height` variables:
+To give another element a heading size, use `.bf-h1` to `.bf-h6`:
 
 ```html
-<p>This is a paragraph of body text. It uses the default font size and line height.</p>
+<p class="bf-h2">Styled like an h2</p>
 ```
 
-## Lead Paragraphs
+## Body text
 
-Use the `.bf-lead` class for emphasized introductory text:
+Body text reads `--bf-body-font-size-rem` and `--bf-body-line-height`; see [CSS variables](/variables#typography-tokens).
 
 ```html
-<p class="bf-lead">This is a lead paragraph that stands out from regular body text.</p>
+<p>A paragraph at the default size and line height.</p>
 ```
 
-## Text Alignment
+## Lead paragraph
 
-Use utility classes for text alignment:
+`.bf-lead` on a `p` sets the font size to 120%:
 
 ```html
-<p class="bf-t-center">Centered text</p>
-<p class="bf-t-left">Left-aligned text</p>
-<p class="bf-t-right">Right-aligned text</p>
+<p class="bf-lead">A lead paragraph that stands out from body text.</p>
 ```
 
-## Text Transform
+## Responsive font size
 
-```html
-<p class="bf-t-transform-uppercase">UPPERCASE TEXT</p>
-<p class="bf-t-transform-none">Reset text transform</p>
-```
-
-## Blockquotes
-
-```html
-<blockquote>
-  <p>This is a blockquote. It's styled to stand out from regular paragraphs.</p>
-</blockquote>
-```
-
-## Code
-
-Inline code uses `<code>`:
-
-```html
-<p>Use the <code>--bf-color-primary</code> variable for primary colors.</p>
-```
-
-Code blocks use `<pre><code>`:
-
-```html
-<pre><code>const example = 'code block';</code></pre>
-```
-
-## Lists
-
-### Unordered Lists
-
-```html
-<ul>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-</ul>
-```
-
-### Ordered Lists
-
-```html
-<ol>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-</ol>
-```
-
-### Description Lists
-
-```html
-<dl>
-  <dt>Term</dt>
-  <dd>Description of the term</dd>
-</dl>
-```
-
-## Responsive Typography
-
-Add the `.bf-responsive-typography` class to the `<body>` tag for responsive font sizing:
+`.bf-responsive-typography` on `body` scales the base size with `clamp(1.5rem, 2vw, 1.8rem)`:
 
 ```html
 <body class="bf-responsive-typography">
   <!-- Your content -->
 </body>
+```
+
+## Blockquotes
+
+A `small` inside a `blockquote` renders as a muted attribution line.
+
+```html
+<blockquote>
+  <p>A quoted passage.</p>
+  <small>Author name</small>
+</blockquote>
+```
+
+## Code
+
+Inline code uses `code`; blocks use `pre code`:
+
+```html
+<p>Set <code>--bf-color-primary</code> to change the brand colour.</p>
+<pre><code>const example = 'code block';</code></pre>
+```
+
+## Lists
+
+`ul`, `ol` and `dl` are styled without classes. `dt` is bold. To remove bullets and indentation, see [List utilities](/utilities/lists).
+
+```html
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+</ul>
+
+<ol>
+  <li>First step</li>
+  <li>Second step</li>
+</ol>
+
+<dl>
+  <dt>Term</dt>
+  <dd>Description of the term</dd>
+</dl>
 ```

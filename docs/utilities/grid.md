@@ -1,29 +1,8 @@
-# Grid System
+# Grid system
 
-Bullframe CSS uses a 12-column flexbox grid system with responsive breakpoints.
+A 12-column flexbox grid: `.bf-row` holds `.bf-col-1` to `.bf-col-12`, and each number is the column's span in twelfths. Containers are on the [Layout](/layout) page.
 
-## Breakpoints
-
-| Breakpoint | Value  |
-| ---------- | ------ |
-| `xs`       | 0px    |
-| `sm`       | 576px  |
-| `md`       | 768px  |
-| `lg`       | 992px  |
-| `xl`       | 1200px |
-| `xxl`      | 1400px |
-
-## Basic Grid
-
-### Rows
-
-```html
-<div class="bf-row">
-  <!-- Columns go here -->
-</div>
-```
-
-### Columns
+## Rows and columns
 
 ```html
 <div class="bf-row">
@@ -42,11 +21,11 @@ Bullframe CSS uses a 12-column flexbox grid system with responsive breakpoints.
 </div>
 ```
 
-## Responsive Columns
+Put the `bf-col-*` class first in the `class` attribute. The column selector is `[class^='bf-col-']`, so `class="card bf-col-6"` gets the width but not the gutter padding.
 
-There are no per-breakpoint column classes. A column keeps its span at every width, and
-responsiveness comes from a modifier on the **container**: below the breakpoint, every
-column in that container stacks to full width.
+## Responsive columns
+
+There are no per-breakpoint column classes. A column keeps its span at every width; a modifier on the container stacks every column inside it to full width below a breakpoint.
 
 | Container modifier       | Stacks below |
 | ------------------------ | ------------ |
@@ -64,16 +43,11 @@ column in that container stacks to full width.
 </div>
 ```
 
-## Column Classes
+The `--bf-breakpoint-*` tokens are for your own media queries; the grid uses only these three modifiers. See [CSS variables](/variables#breakpoint-tokens).
 
-- `bf-col-1` through `bf-col-12`
+## No gutters
 
-The breakpoint table above documents the `--bf-breakpoint-*` tokens, which exist for your
-own media queries. The grid itself uses only the three container modifiers.
-
-## No Gutters
-
-Remove gutters from rows and columns:
+`.bf-no-gutters` on a row removes the row's negative margins and its direct columns' padding:
 
 ```html
 <div class="bf-row bf-no-gutters">
@@ -81,3 +55,5 @@ Remove gutters from rows and columns:
   <div class="bf-col-6">No gutters</div>
 </div>
 ```
+
+The gutter width is `--bf-spacing-grid-gutter` (1.5rem).

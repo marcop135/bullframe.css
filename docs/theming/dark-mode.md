@@ -1,38 +1,34 @@
-# Dark Mode
+# Dark mode
 
-Bullframe CSS includes built-in dark mode with no JavaScript. System-default builds follow [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme); always-dark builds lock the theme.
+Choose dark mode by build filename; no JavaScript is involved. System-default builds follow [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), always-dark builds stay dark. Classless builds have the same pair: `bullframe-classless-system-default.css` and `bullframe-classless-dark.css`.
 
-## System Default Dark Mode
+## Follow the system setting
 
-The `bullframe-system-default.css` build automatically switches between light and dark themes based on the user's system preference:
+`bullframe-system-default.css` switches between light and dark with the operating system:
 
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-system-default.min.css" integrity="sha384-nHMJWYY0/ALF1uirH1gxfA6vJqhyn/el9nw61zI04dnv4eGFOwdF5G2pTFZChJj/" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-system-default.min.css" integrity="sha384-/xCvTDyTMIPTf/BHIIh20CB4RZeWP5S7BtfVYJZTs4oXo4Sfg1dGmim9KDDFwoxN" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->
 
-This uses the `prefers-color-scheme` media query to detect the user's preference.
+## Always dark
 
-## Always Dark Theme
-
-Use `bullframe-dark.css` for a permanent dark theme:
+`bullframe-dark.css` is dark regardless of the system setting:
 
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.1/dist/css/bullframe-dark.min.css" integrity="sha384-UYVp0OJ9catRvo8ErMkV3SYJGgEiZm5gh1HpOEPUPulPyPmtIwG+6VS7LBNKU02W" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-dark.min.css" integrity="sha384-+8zF6aijwtQLATKB0QLwIoCmiFvf5gr7BIds+eW1kAOs++7fzQZu194rruVXCIZR" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->
 
-## Manual dark mode (advanced)
+## Add a manual toggle
 
-Default path: pick a dark or system-default build by filename. No script.
-
-If you need a runtime toggle on top of the light build, override tokens and set `data-theme` yourself:
+Bullframe has no toggle API. To switch at runtime on top of the light build, set a `data-theme` attribute and override the tokens under it. The values below are the ones the dark builds use:
 
 ```css
 [data-theme='dark'] {
@@ -40,7 +36,7 @@ If you need a runtime toggle on top of the light build, override tokens and set 
   --bf-color-text: rgb(240 240 240);
   --bf-color-link: rgb(77 165 255);
   --bf-color-link-hover: rgb(77 165 255);
-  /* Override other variables as needed */
+  /* add the other tokens you need from CSS variables */
 }
 ```
 
@@ -48,4 +44,4 @@ If you need a runtime toggle on top of the light build, override tokens and set 
 document.documentElement.setAttribute('data-theme', 'dark');
 ```
 
-This is DIY theming, not a built-in Bullframe API. Prefer `bullframe-dark.css` or `bullframe-system-default.css` when a static theme is enough.
+This overrides tokens only; element rules that the dark builds add, such as scrollbars, do not change. See [CSS variables](/variables) for the token list.

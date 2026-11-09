@@ -1,131 +1,77 @@
 # Layout
 
-Bullframe CSS provides a flexible container system and grid layout utilities.
+Containers and the display, flex, float, position, width, visibility and centering classes. They ship in class-based builds and `bullframe-utilities.css`. Columns and rows are on the [Grid system](/utilities/grid) page.
 
 ## Containers
 
-### Standard Container
-
-The `.bf-container` class creates a centered container with a max-width of 1140px:
+`.bf-container` centres content at a max width of 114rem (1140px at the default 62.5% root size) with `--bf-spacing-grid-gutter` side padding. `.bf-container--fluid` keeps the padding without the max width.
 
 ```html
 <div class="bf-container">
   <!-- Your content -->
 </div>
-```
 
-### Fluid Container
-
-Use `.bf-container--fluid` for a full-width container:
-
-```html
 <div class="bf-container--fluid">
   <!-- Your content -->
 </div>
 ```
 
-### Responsive Containers
+To stack columns to full width below a breakpoint, add a `bf-container--break-*` modifier; see [Grid system: responsive columns](/utilities/grid#responsive-columns).
 
-Containers can collapse at specific breakpoints:
+## Display and flex
 
-```html
-<div class="bf-container--break-xs">Collapses at 575px and below</div>
-<div class="bf-container--break-md">Collapses at 991px and below</div>
-<div class="bf-container--break-lg">Collapses at 1199px and below</div>
-```
+| Class                              | Effect                                                    |
+| ---------------------------------- | --------------------------------------------------------- |
+| `.bf-display-block`                | `display: block`                                          |
+| `.bf-display-block-center`         | `display: block`, auto side margins, `text-align: center` |
+| `.bf-display-inline`               | `display: inline`                                         |
+| `.bf-display-inline-block`         | `display: inline-block`                                   |
+| `.bf-display-flex`                 | `display: flex`                                           |
+| `.bf-display-inline-flex`          | `display: inline-flex`                                    |
+| `.bf-display-flex--wrap`           | `flex-wrap: wrap`                                         |
+| `.bf-display-flex--nowrap`         | `flex-wrap: nowrap`                                       |
+| `.bf-display-flex--justify-start`  | `justify-content: flex-start`                             |
+| `.bf-display-flex--justify-center` | `justify-content: center`                                 |
+| `.bf-display-flex--justify-end`    | `justify-content: flex-end`                               |
 
-## Grid System
-
-Bullframe CSS uses a 12-column flexbox grid system.
-
-### Basic Grid
-
-```html
-<div class="bf-row">
-  <div class="bf-col-12">Full width</div>
-</div>
-
-<div class="bf-row">
-  <div class="bf-col-6">Half width</div>
-  <div class="bf-col-6">Half width</div>
-</div>
-
-<div class="bf-row">
-  <div class="bf-col-4">One third</div>
-  <div class="bf-col-4">One third</div>
-  <div class="bf-col-4">One third</div>
-</div>
-```
-
-### Column Classes
-
-Available column classes: `bf-col-1` through `bf-col-12`.
-
-### No Gutters
-
-Remove grid gutters with `.bf-no-gutters`:
+The `--wrap`, `--nowrap` and `--justify-*` classes do not set `display`; combine them with `.bf-display-flex`:
 
 ```html
-<div class="bf-row bf-no-gutters">
-  <div class="bf-col-6">No gutter</div>
-  <div class="bf-col-6">No gutter</div>
-</div>
+<div class="bf-display-flex bf-display-flex--justify-center">Centred row</div>
 ```
 
-## Display Utilities
+## Centering
 
-```html
-<div class="bf-display-block">Block</div>
-<div class="bf-display-inline">Inline</div>
-<div class="bf-display-inline-block">Inline block</div>
-<div class="bf-display-flex">Flex</div>
-<div class="bf-display-inline-flex">Inline flex</div>
-<div class="bf-display-block-center">Block centered</div>
-```
+| Class                            | Effect                                                 |
+| -------------------------------- | ------------------------------------------------------ |
+| `.bf-align-center-flex`          | Flex, centred on both axes, `height: 100vh`            |
+| `.bf-align-center-unknown`       | `position: relative` parent                            |
+| `.bf-align-center-unknown--item` | Absolutely centred child of `.bf-align-center-unknown` |
 
-## Flex Utilities
+## Float and position
 
-```html
-<div class="bf-display-flex--wrap">Flex wrap</div>
-<div class="bf-display-flex--nowrap">Flex nowrap</div>
-<div class="bf-display-flex--justify-start">Justify start</div>
-<div class="bf-display-flex--justify-center">Justify center</div>
-<div class="bf-display-flex--justify-end">Justify end</div>
-```
+| Class                   | Effect                           |
+| ----------------------- | -------------------------------- |
+| `.bf-float-left`        | `float: left`                    |
+| `.bf-float-right`       | `float: right`                   |
+| `.bf-clearfix`          | Contains floated children        |
+| `.bf-position-relative` | `position: relative`             |
+| `.bf-position-fixed`    | `position: fixed`                |
+| `.bf-position-sticky`   | `position: sticky` with `top: 0` |
 
-## Float Utilities
+`.bf-z-index-N` sets `z-index: N` for N from 1 to 9, 10 to 90 in tens, and 100, 200 and 300.
 
-```html
-<div class="bf-float-left">Float left</div>
-<div class="bf-float-right">Float right</div>
-<div class="bf-clearfix">Clear floats</div>
-```
+## Width
 
-## Position Utilities
+`.bf-width-25`, `.bf-width-33`, `.bf-width-50`, `.bf-width-75` and `.bf-width-100` set that percentage width (`-33` is 33.3333%). `.bf-width-auto` sets `width: auto`.
 
-```html
-<div class="bf-position-relative">Relative</div>
-<div class="bf-position-fixed">Fixed</div>
-<div class="bf-position-sticky">Sticky</div>
-```
+## Visibility
 
-## Width Utilities
+| Class           | Effect                                   |
+| --------------- | ---------------------------------------- |
+| `.bf-visible`   | `visibility: visible`                    |
+| `.bf-invisible` | `visibility: hidden`; keeps its space    |
+| `.bf-hide`      | `display: none`                          |
+| `.bf-hidden`    | `display: none` and `visibility: hidden` |
 
-```html
-<div class="bf-width-25">25% width</div>
-<div class="bf-width-33">33% width</div>
-<div class="bf-width-50">50% width</div>
-<div class="bf-width-75">75% width</div>
-<div class="bf-width-100">100% width</div>
-<div class="bf-width-auto">Auto width</div>
-```
-
-## Visibility Utilities
-
-```html
-<div class="bf-visible">Visible</div>
-<div class="bf-invisible">Invisible (takes up space)</div>
-<div class="bf-hidden">Hidden (no space)</div>
-<div class="bf-hide">Hide</div>
-<div class="bf-sr-only">Screen reader only</div>
-```
+To hide content visually but keep it for screen readers, use `.bf-sr-only`; see [Accessibility](/accessibility).

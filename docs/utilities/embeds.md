@@ -2,56 +2,26 @@
 title: Embeds
 ---
 
-# Embed Utilities
+# Embed utilities
 
-Responsive embed utilities for iframes, videos, and other embedded content.
+`.bf-embed-responsive` keeps an embed at a fixed aspect ratio, 16:9 by default, at any width. An `iframe`, `embed`, `object` or `video` inside it, or any element with `.bf-embed-responsive--item`, fills the box.
 
-## Responsive Embed (16:9)
-
-Wrap your embed in a `.bf-embed-responsive` container for a 16:9 aspect ratio by default:
+| Class                        | Effect                                      |
+| ---------------------------- | ------------------------------------------- |
+| `.bf-embed-responsive`       | 16:9 box                                    |
+| `.bf-embed-responsive--4-3`  | 4:3 box; add next to `.bf-embed-responsive` |
+| `.bf-embed-responsive--item` | Makes any element fill the box              |
 
 ```html
 <div class="bf-embed-responsive">
-  <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/<video-id>" title="Video title" allowfullscreen></iframe>
 </div>
-```
 
-## 4:3 Aspect Ratio
-
-Add `.bf-embed-responsive--4-3` for a 4:3 ratio:
-
-```html
 <div class="bf-embed-responsive bf-embed-responsive--4-3">
-  <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" allowfullscreen></iframe>
-</div>
-```
-
-## General Purpose Elements
-
-Use `.bf-embed-responsive--item` on any element to make it behave like an embedded video inside the responsive container:
-
-```html
-<div class="bf-embed-responsive">
   <div class="bf-embed-responsive--item">
     <!-- Custom content -->
   </div>
 </div>
 ```
 
-## Supported Elements
-
-The following elements are automatically made responsive inside `.bf-embed-responsive`:
-
-- `<iframe>`
-- `<embed>`
-- `<object>`
-- `<video>`
-- `.bf-embed-responsive--item`
-
-## Class Reference
-
-| Class                        | Description                                     |
-| ---------------------------- | ----------------------------------------------- |
-| `.bf-embed-responsive`       | Responsive container (16:9 default)             |
-| `.bf-embed-responsive--4-3`  | 4:3 aspect ratio modifier                       |
-| `.bf-embed-responsive--item` | Makes any element fill the responsive container |
+`<video-id>` is the YouTube video ID.

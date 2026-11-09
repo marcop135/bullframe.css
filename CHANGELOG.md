@@ -5,7 +5,16 @@
 - **Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
 - **Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
-## [Unreleased]
+## [7.0.2] - 2026-11-09
+
+### Changed
+
+- Improve the docs: correct breakpoints, form states, print scope and ARIA patterns, and document missing classes ([#132](https://github.com/marcop135/bullframe.css/pull/132)).
+
+### Fixed
+
+- Keep `.bf-disabled` text fields dark and readable when utilities load after a dark build ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
+- Keep kitchen sink build notes readable in dark mode ([#132](https://github.com/marcop135/bullframe.css/pull/132)) ([#131](https://github.com/marcop135/bullframe.css/issues/131)).
 
 ## [7.0.1] - 2026-11-07
 
@@ -21,14 +30,14 @@
 
 ### Changed
 
-- **BREAKING:** name colours by role (`--bf-color-primary`), not hue, in light and dark builds. See [Migration v6 to v7](docs/migration-v7.md) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- BREAKING: name colours by role (`--bf-color-primary`), not hue, in light and dark builds. See [Migration v6 to v7](docs/migration-v7.md) ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Declare light tokens on `:where(:root)`: `:root` overrides win even when `bullframe-utilities.css` loads later ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Docs: rewrite [CSS Variables](docs/variables.md) as role tables and list dark hooks in the API reference ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 - Skills: load in Claude, Cursor, and Codex from one copy and move extra frontmatter under `metadata` ([#111](https://github.com/marcop135/bullframe.css/issues/111)).
 
 ### Removed
 
-- **BREAKING:** hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
+- BREAKING: hue tokens (`--bf-blue`, `--bf-gray-light`, ...), the `--bf-dark-*` set, `--bf-focus-ring-color` ([#118](https://github.com/marcop135/bullframe.css/pull/118)).
 
 ### Fixed
 

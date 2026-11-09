@@ -166,7 +166,7 @@ onMounted(() => {
     <!-- Sidebar pages hide VPFooter, so the privacy link sits under the doc footer. -->
     <template #doc-after>
       <p v-if="frontmatter.sidebar !== false" class="bf-doc-legal">
-        Copyright © 2026 Marco Pontili · <a href="/privacy">Privacy</a>
+        Copyright © 2026 <a href="https://marcopontili.com" title="Marco Pontili" target="_blank" rel="noopener">Marco Pontili</a> · <a href="/privacy">Privacy</a>
       </p>
     </template>
   </Layout>

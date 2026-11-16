@@ -71,4 +71,4 @@ Any docs page is also Markdown: append `.md` to the path, or send `Accept: text/
 
 ## How they stay correct
 
-Skills are generated and tested with the CSS. CI fails if a skill, a shared reference or a docs code block names a class or token missing from `src/css/`, and every HTML example in a skill is validated with the project's accessibility rules. Skills version with the framework: one tag, one changelog, one package.
+Skills are generated and tested with the CSS. CI fails if a skill, a shared reference or a docs code block names a class or token missing from `src/css/`, and every HTML example in a skill is validated with the project's accessibility rules. Skills version with the framework, under the same tag, changelog and package.

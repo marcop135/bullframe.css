@@ -109,7 +109,7 @@ function escapeRegExp(s) {
 
 const cdnSectionMd = `Bullframe is on two CDNs: [jsDelivr](https://www.jsdelivr.com/package/npm/bullframe.css) and [cdnjs](https://cdnjs.com/libraries/bullframe.css). Both serve the same files from npm, so use either one with the same integrity hash.
 
-**Recommended for production:** pin an exact version, point at a published \`.min.css\` file, and add Subresource Integrity plus \`crossorigin\`.
+For production, pin an exact version, point at a published \`.min.css\` file, and add Subresource Integrity plus \`crossorigin\`.
 
 ::: code-group
 
@@ -123,7 +123,7 @@ ${linkTag(defaultFile, defaultIntegrity, { href: cdnjsUrl(defaultFile) })}
 
 :::
 
-**Quick drop-in:** no integrity hash. jsDelivr serves the latest release; cdnjs has no "latest" URL, so its link names a version.
+For a quick drop-in, leave out the integrity hash. jsDelivr serves the latest release; cdnjs has no "latest" URL, so its link names a version.
 
 ::: code-group
 

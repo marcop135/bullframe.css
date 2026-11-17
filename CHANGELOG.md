@@ -9,9 +9,7 @@
 
 ### Changed
 
-- Docs copy: Replace bold lead-in labels in the CDN section of Getting started with plain sentences ([#136](https://github.com/marcop135/bullframe.css/pull/136)) ([#135](https://github.com/marcop135/bullframe.css/issues/135)).
-- Docs copy: Rewrite the one-tag, one-changelog, one-package line in Agent skills as a plain clause ([#136](https://github.com/marcop135/bullframe.css/pull/136)) ([#135](https://github.com/marcop135/bullframe.css/issues/135)).
-- Other copy: Rewrite the llms.txt summary line as full sentences ([#136](https://github.com/marcop135/bullframe.css/pull/136)) ([#135](https://github.com/marcop135/bullframe.css/issues/135)).
+- Docs: drop bold CDN labels, the skills triad, and the llms.txt fragment line ([#136](https://github.com/marcop135/bullframe.css/pull/136)) ([#135](https://github.com/marcop135/bullframe.css/issues/135)).
 
 ## [7.0.2] - 2026-11-09
 

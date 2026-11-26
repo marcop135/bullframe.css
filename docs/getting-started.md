@@ -62,11 +62,11 @@ For production, pin an exact version, point at a published `.min.css` file, and 
 ::: code-group
 
 ```html [jsDelivr]
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe.min.css" integrity="sha384-xFByrRCjhEUwOP1zcoRX/5wbEVVNaIRjPVaOmhO7C2emm8zmdpGHM2+QBrpYVsth" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe.min.css" integrity="sha384-HJtuqd6G8ppu9fzFd7MPLwcpA/fFWtKI9V+lBibY2PZaimFGaqMa9V8wR6jeVuiZ" crossorigin="anonymous" />
 ```
 
 ```html [cdnjs]
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.2/bullframe.min.css" integrity="sha384-xFByrRCjhEUwOP1zcoRX/5wbEVVNaIRjPVaOmhO7C2emm8zmdpGHM2+QBrpYVsth" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.3/bullframe.min.css" integrity="sha384-HJtuqd6G8ppu9fzFd7MPLwcpA/fFWtKI9V+lBibY2PZaimFGaqMa9V8wR6jeVuiZ" crossorigin="anonymous" />
 ```
 
 :::
@@ -80,7 +80,7 @@ For a quick drop-in, leave out the integrity hash. jsDelivr serves the latest re
 ```
 
 ```html [cdnjs]
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.2/bullframe.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bullframe.css/7.0.3/bullframe.min.css" />
 ```
 
 :::
@@ -136,7 +136,7 @@ Download the [v7.0.2 archive](https://github.com/marcop135/bullframe.css/archive
     <meta charset="utf-8" />
     <title>Bullframe CSS Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe.min.css" integrity="sha384-xFByrRCjhEUwOP1zcoRX/5wbEVVNaIRjPVaOmhO7C2emm8zmdpGHM2+QBrpYVsth" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe.min.css" integrity="sha384-HJtuqd6G8ppu9fzFd7MPLwcpA/fFWtKI9V+lBibY2PZaimFGaqMa9V8wR6jeVuiZ" crossorigin="anonymous" />
   </head>
   <body>
     <a class="bf-skip-link" href="#main">Skip to content</a>
@@ -157,7 +157,7 @@ Download the [v7.0.2 archive](https://github.com/marcop135/bullframe.css/archive
     <meta charset="utf-8" />
     <title>Bullframe CSS Classless Starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-classless.min.css" integrity="sha384-AwbDnzNWAm2WQsuZ3QCWzTmQttkjwltBjAZMFki3SNKdNn5hY9srGQD5pX5yXI2W" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe-classless.min.css" integrity="sha384-eXWpvdLANDaBojmCcs9lxyhtXOpgWAwwi3QPefkY1vUGfNhTSsRraNboQkWeCdIi" crossorigin="anonymous" />
     <style>
       body {
         margin-left: auto;

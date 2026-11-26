@@ -1,6 +1,6 @@
 # Bullframe CSS
 
-> Semantic by default. Any stack. Classless when you want it. System dark built in. Accessible defaults. Native CSS, seven builds, ~8 KB gzipped. Zero runtime dependencies. MIT license.
+> Semantic by default. Any stack. Classless when you want it, with system dark mode and accessible defaults built in. Native CSS in seven builds, about 8 KB gzipped, with no runtime dependencies. MIT license.
 
 Site: https://bullframecss.marcopontili.com
 Repo: https://github.com/marcop135/bullframe.css

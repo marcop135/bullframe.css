@@ -5,6 +5,12 @@
 - **Length:** Keep each bullet on one line, max 120 characters (link URLs do not count toward the cap, only the visible text does).
 - **Links:** Add inline markdown links for related PRs, docs, and external references when they help the reader.
 
+## [7.0.3] - 2026-11-26
+
+### Changed
+
+- Docs: drop bold CDN labels, the skills triad, and the llms.txt fragment line ([#136](https://github.com/marcop135/bullframe.css/pull/136)) ([#135](https://github.com/marcop135/bullframe.css/issues/135)).
+
 ## [7.0.2] - 2026-11-09
 
 ### Changed

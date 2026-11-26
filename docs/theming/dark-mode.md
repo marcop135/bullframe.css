@@ -9,7 +9,7 @@ Choose dark mode by build filename; no JavaScript is involved. System-default bu
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-system-default.min.css" integrity="sha384-/xCvTDyTMIPTf/BHIIh20CB4RZeWP5S7BtfVYJZTs4oXo4Sfg1dGmim9KDDFwoxN" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe-system-default.min.css" integrity="sha384-MFi/HTLVjVrk8ZM52qk5I67jc3ZIVep+BwX/qDnxnv31CTBZyrwmR8uz5rrsYSAe" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->
@@ -21,7 +21,7 @@ Choose dark mode by build filename; no JavaScript is involved. System-default bu
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-dark.min.css" integrity="sha384-+8zF6aijwtQLATKB0QLwIoCmiFvf5gr7BIds+eW1kAOs++7fzQZu194rruVXCIZR" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe-dark.min.css" integrity="sha384-5kgvN1LvHqDM23hdIoX/YXlPbycqJaTXLqAOMZuim4LVInEjfXTYU2T3lzciPmry" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->

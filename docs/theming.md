@@ -9,7 +9,7 @@ Pick a theme by loading one build, then adjust it by overriding `--bf-*` tokens.
 <!-- sri:cdn-light:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe.min.css" integrity="sha384-xFByrRCjhEUwOP1zcoRX/5wbEVVNaIRjPVaOmhO7C2emm8zmdpGHM2+QBrpYVsth" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe.min.css" integrity="sha384-HJtuqd6G8ppu9fzFd7MPLwcpA/fFWtKI9V+lBibY2PZaimFGaqMa9V8wR6jeVuiZ" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-light:end -->
@@ -19,7 +19,7 @@ Pick a theme by loading one build, then adjust it by overriding `--bf-*` tokens.
 <!-- sri:cdn-dark:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-dark.min.css" integrity="sha384-+8zF6aijwtQLATKB0QLwIoCmiFvf5gr7BIds+eW1kAOs++7fzQZu194rruVXCIZR" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe-dark.min.css" integrity="sha384-5kgvN1LvHqDM23hdIoX/YXlPbycqJaTXLqAOMZuim4LVInEjfXTYU2T3lzciPmry" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-dark:end -->
@@ -31,7 +31,7 @@ Follows the operating system setting through `prefers-color-scheme`:
 <!-- sri:cdn-system:start -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.2/dist/css/bullframe-system-default.min.css" integrity="sha384-/xCvTDyTMIPTf/BHIIh20CB4RZeWP5S7BtfVYJZTs4oXo4Sfg1dGmim9KDDFwoxN" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bullframe.css@7.0.3/dist/css/bullframe-system-default.min.css" integrity="sha384-MFi/HTLVjVrk8ZM52qk5I67jc3ZIVep+BwX/qDnxnv31CTBZyrwmR8uz5rrsYSAe" crossorigin="anonymous" />
 ```
 
 <!-- sri:cdn-system:end -->
